@@ -1,0 +1,16 @@
+{
+  "schema": "agentcity.zombie-policy-native.v1",
+  "runId": "0f76271b-f9a1-4864-adf5-065a5cc7c948",
+  "status": "fail",
+  "scope": "Owned isolated copy, controlled merchant observer, console-spawned animal positive control; no real user approval, model calls, payments or inventory grants",
+  "pluginSha256": "c63883cf29d4f19eff8d599a1cc37c8fe24656402bbcb8b27abc5818fcc7e13a",
+  "checks": [
+    {
+      "name": "Actual cow visible after console summon",
+      "status": "pass"
+    }
+  ],
+  "cowReply": "Summoned new Cow",
+  "zombieReply": "Summoned new Zombie",
+  "error": "Console must report refused zombie creation"
+}

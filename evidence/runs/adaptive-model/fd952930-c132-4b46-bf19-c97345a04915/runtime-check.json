@@ -1,0 +1,26 @@
+{
+  "schema": "agentcity.adaptive-runtime-check.v1",
+  "at": "2026-11-06T13:12:16.309Z",
+  "pluginSha256": "5faa25d5cbea0af2852d4e760dd918d6ca3abacc48346bfc1567cb44b0d3d4a8",
+  "defaultWorld": "agentcity_mumbai",
+  "survival": true,
+  "workers": [
+    {
+      "name": "CityAgent4",
+      "online": true
+    },
+    {
+      "name": "CityAgent5",
+      "online": true
+    },
+    {
+      "name": "BankSeller",
+      "online": true
+    }
+  ],
+  "isolatedCheck": "evidence/runs/mumbai-city/089c16ae-3e9a-406a-928c-af9d8ab6939b/report.json",
+  "scope": "Read-only native status, Minecraft server-list response and existing worker reconnection checks. No owner impersonation or new objectives.",
+  "newObjectives": 0,
+  "walletTransactions": 0,
+  "status": "pass"
+}

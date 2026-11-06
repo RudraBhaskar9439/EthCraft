@@ -2,7 +2,7 @@ import assert from 'node:assert/strict'
 import { mkdtemp, readFile, writeFile, rm } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
-import { zeroGModel, initializeZeroGBudget, validateZeroGBudget, reserveZeroGRequest, recordZeroGUsage } from '../../backend/src/inference/zero-g-budget.mjs'
+import { zeroGModel, zeroGEconomyModel, initializeZeroGBudget, validateZeroGBudget, reserveZeroGRequest, recordZeroGUsage } from '../../backend/src/inference/zero-g-budget.mjs'
 
 const directory = await mkdtemp(join(tmpdir(), 'agentcity-zero-g-budget-'))
 const budget = { file: join(directory, 'usage.json'), authorizationId: 'five-dollar-fixture', limitUsd: '0.2' }
@@ -39,6 +39,17 @@ try {
   await assert.rejects(reserveZeroGRequest(provider, request, pricing), /reconciliation/)
   assert((await state()).pending[unknown])
   console.log('PASS restart retains possibly charged requests and mismatched usage blocks further calls')
+  const shared={...budget,file:join(directory,'shared-models.json'),limitUsd:'0.5'}
+  await initializeZeroGBudget(shared,'0.1')
+  const oldProvider={...provider,budget:shared},oldPending=await reserveZeroGRequest(oldProvider,request,pricing)
+  const economy={...oldProvider,model:zeroGEconomyModel.model},economyPricing={...zeroGEconomyModel,source:pricing.source,observedAt:new Date().toISOString()}
+  const cheap=await reserveZeroGRequest(economy,{...request,model:economy.model,max_tokens:256},economyPricing)
+  await recordZeroGUsage(economy,cheap,{...receipt,model:economy.model},'fixture-economy',10)
+  const dual=JSON.parse(await readFile(shared.file,'utf8'))
+  assert(dual.pending[oldPending]);assert.equal(dual.spentNanoUsd,100010570);assert.equal(dual.limitNanoUsd,500000000)
+  assert.equal(dual.lastReceipt.conservativeCostEstimate,true)
+  await initializeZeroGBudget(shared);assert.equal(JSON.parse(await readFile(shared.file,'utf8')).spentNanoUsd,dual.spentNanoUsd)
+  console.log('PASS economy and advanced models share a finite ledger without resetting original spending or unknown requests')
 
   const corrupt = { ...budget, file: join(directory, 'corrupt.json') }
   await writeFile(corrupt.file, 'null\n')

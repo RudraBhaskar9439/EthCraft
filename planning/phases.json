@@ -194,7 +194,12 @@
       "backend/src/playable/survival-objectives.mjs",
       "tests/playable/survival.mjs",
       "tests/playable/survival-model-live.mjs",
-      "docs/AGENT_SURVIVAL.md"
+      "docs/AGENT_SURVIVAL.md",
+      "backend/src/playable/agent-shop.mjs",
+      "tests/playable/agent-shop.mjs",
+      "backend/src/playable/adaptive-planner.mjs",
+      "tests/playable/adaptive-planner.mjs",
+      "tests/playable/adaptive-model-live.mjs"
     ],
     "paths_status": "Actual local component paths adopted; canonical live phase approval remains separate."
   },
@@ -301,7 +306,12 @@
       "backend/src/playable/inventory-shop-funding.mjs",
       "tests/playable/inventory-shop-funding.mjs",
       "tests/playable/inventory-shop-runtime.mjs",
-      "tests/playable/mumbai-owner-live.mjs"
+      "tests/playable/mumbai-owner-live.mjs",
+      "backend/src/playable/agent-shop.mjs",
+      "tests/playable/agent-shop.mjs",
+      "backend/src/playable/adaptive-planner.mjs",
+      "tests/playable/adaptive-planner.mjs",
+      "tests/playable/adaptive-model-live.mjs"
     ],
     "paths_status": "Actual local component paths adopted; canonical live phase approval remains separate."
   },

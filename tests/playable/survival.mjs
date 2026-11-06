@@ -7,11 +7,19 @@ import { randomUUID } from 'node:crypto'
 import { fileURLToPath } from 'node:url'
 import { NativeTaskAdapter } from '../../backend/src/playable/task-tools.mjs'
 import { SurvivalTools, validateSurvivalTool } from '../../backend/src/playable/survival-tools.mjs'
-import { SurvivalObjectives, requestSurvivalDecision } from '../../backend/src/playable/survival-objectives.mjs'
+import { SurvivalObjectives, requestSurvivalDecision, survivalPlanningLimits } from '../../backend/src/playable/survival-objectives.mjs'
 
 for (const bad of [{tool:'wallet'}, {tool:'gather',item:'oak_log',count:0}, {tool:'place',item:'stone',position:[1,2]}, {tool:'hunt',animal:'player',count:1}, {tool:'move',position:[0,1,2],command:'/op me'}]) assert.throws(()=>validateSurvivalTool(bad))
 assert.equal(validateSurvivalTool({tool:'craft',item:'wooden_pickaxe',count:1}).item,'wooden_pickaxe')
 console.log('PASS strict Survival tools reject commands, spending, unsupported targets and invalid quantities')
+assert.deepEqual(survivalPlanningLimits({kind:'anthropic',maxTokens:4096}),{maxTokens:4096,maxDecisions:60})
+assert.deepEqual(survivalPlanningLimits({kind:'anthropic',maxTokens:16384}),{maxTokens:16384,maxDecisions:60})
+assert.equal(survivalPlanningLimits({kind:'anthropic',maxTokens:32768}).maxTokens,16384)
+assert.throws(()=>validateSurvivalTool({tool:'purchase',item:'oak_planks',count:33}),/INVALID_SURVIVAL_COUNT/)
+assert.throws(()=>validateSurvivalTool({tool:'purchase',item:'oak_planks',count:4,wallet:'arbitrary'}),/INVALID_SURVIVAL_TOOL/)
+assert.deepEqual(survivalPlanningLimits({kind:'0g',maxTokens:1536}),{maxTokens:512,maxDecisions:20})
+assert.equal(survivalPlanningLimits({kind:'anthropic',maxTokens:1536}).maxTokens,1536)
+console.log('PASS Claude gets the larger planning allowance while 0G and configured provider ceilings stay bounded')
 const navigationBot={entity:{position:null},pathfinder:{movements:{original:true},setMovements(m){this.movements=m}}}
 const navigationTools=new SurvivalTools({rootDirectory:fileURLToPath(new URL('../..',import.meta.url)),slot:{bot:navigationBot},world:{mumbaiAgentBounds:{min:{x:0,y:0,z:0},max:{x:100,y:100,z:100}}},guard:async()=>{}})
 navigationBot.entity.position=new navigationTools.Vec3(10,69,10)
@@ -39,6 +47,14 @@ assert.equal(crafted.produced,4);assert.equal(stock.stick,4);assert.equal(receip
 bot.craft=async()=>{};stock={oak_planks:2};await assert.rejects(tool.execute({tool:'craft',item:'stick',count:4}),/CRAFT_RECEIPT_UNCERTAIN/)
 assert.equal(receipts,1);assert.equal(pending.action,'craft')
 console.log('PASS real recipe batches and inventory deltas guard craft success; unknown effects retain pending intent')
+const delayed=Object.create(SurvivalTools.prototype)
+let delayedPending=null,delayedReceipts=0,delayedRuns=0
+delayed.slot={bot};delayed.guard=async()=>{};delayed.beforeEffect=async value=>{delayedPending=value};delayed.receipt=async()=>{delayedPending=null;delayedReceipts++}
+stock={oak_planks:2};bot.craft=async()=>{delayedRuns++;setTimeout(()=>{stock={stick:4}},250)}
+assert.equal((await delayed.execute({tool:'craft',item:'stick',count:4})).produced,4)
+assert.equal(delayedRuns,1);assert.equal(delayedReceipts,1);assert.equal(delayedPending,null)
+assert.equal(pending.action,'craft','The earlier independent unknown fixture intent remains preserved')
+console.log('PASS delayed inventory acknowledgement is observed without replaying the physical action')
 
 const directory=await mkdtemp(join(tmpdir(),'agentcity-survival-'))
 try {
@@ -69,6 +85,30 @@ try {
   assert.equal(navigationCalls,3);assert.equal(engine.latest(ownerId).status,'paused')
   assert.equal(engine.latest(ownerId).message,'NAVIGATION_BLOCKED_AFTER_THREE_ATTEMPTS')
   console.log('PASS three failed navigation attempts pause paid planning even when the model changes waypoints')
+  slot.bot.player={uuid:randomUUID()}
+  let purchaseCalls=0,purchaseId,planning=0
+  engine.purchase=async input=>{
+    purchaseCalls++
+    if(purchaseId)assert.equal(input.purchaseId,purchaseId)
+    purchaseId=input.purchaseId
+    assert.equal(JSON.parse(await readFile(engine.file,'utf8')).jobs.at(-1).pendingEffect.purchaseId,purchaseId)
+    if(purchaseCalls===1)throw Error('FIXTURE_UNKNOWN_HTTP_OUTCOME')
+    return{purchaseId,item:input.item,count:input.count,delivered:true,paid:true,status:'delivered'}
+  }
+  engine.modelCall=async messages=>{
+    planning++
+    if(planning===1)return{status:'act',message:'Buy the missing planks.',workingPlan:'Buy four planks, then inspect actual delivery.',step:{tool:'purchase',item:'oak_planks',count:4}}
+    assert.equal(JSON.parse(messages.at(-1).content).workingPlan,'Buy four planks, then inspect actual delivery.')
+    return{status:'done',message:'Purchase delivery is observed; ready for owner review.'}
+  }
+  await engine.start({...event,operationId:randomUUID()},'Buy four missing planks for this task.')
+  await engine.running.get(ownerId)
+  assert.equal(engine.latest(ownerId).status,'paused');assert.equal(engine.latest(ownerId).pendingEffect.purchaseId,purchaseId)
+  assert.equal(locked,false);assert.equal(planning,1)
+  await engine.start({...event,operationId:randomUUID()},'resume');await engine.running.get(ownerId)
+  assert.equal(purchaseCalls,2);assert.equal(planning,2);assert.equal(engine.latest(ownerId).pendingEffect,null)
+  assert.equal(engine.latest(ownerId).effects.length,1);assert.equal(engine.latest(ownerId).status,'ready_for_review')
+  console.log('PASS working memory persists and unknown purchase resumes the original saved intent before further model calls, without fabricating native Pay')
   approved=false
   await assert.rejects(engine.start({...event,operationId:randomUUID()},'Collect food.'),/OWNER_CONNECTION_NOT_APPROVED/)
   assert.equal(calls,3)

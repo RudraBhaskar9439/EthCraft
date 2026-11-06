@@ -12,6 +12,7 @@ const originalFetch = globalThis.fetch
 const messages = [{ role: 'system', content: 'Propose a plan; never execute it.' }, { role: 'user', content: 'Inspect my supplies.' }]
 const schema = { type: 'object', properties: { action: { type: 'string' } }, required: ['action'], additionalProperties: false }
 let calls = 0, status = 200, stopReason = 'tool_use', oversized = false, textReply = null
+let adaptiveSupported=true,highEffortSupported=true
 let answer = { kind: 'plan', message: 'Inspect the actual supplies.', steps: [{ action: 'inspect' }] }
 globalThis.fetch = async (url, options) => {
   assert.equal(options.redirect, 'error')
@@ -20,8 +21,8 @@ globalThis.fetch = async (url, options) => {
   if (url.startsWith('https://api.anthropic.com/v1/models/')) {
     const legacy = url.endsWith('/claude-sonnet-4-6'), unavailable = url.endsWith('/claude-fixture-no-mode')
     return new Response(JSON.stringify({ capabilities: { thinking: { types: {
-      disabled: { supported: legacy }, between_tools: { supported: !legacy && !unavailable }
-    } } } }))
+      disabled: { supported: legacy }, between_tools: { supported: !legacy && !unavailable },adaptive:{supported:!legacy&&adaptiveSupported}
+    } },effort:{high:{supported:highEffortSupported}} } }))
   }
   if (url === 'https://api.anthropic.com/v1/messages/count_tokens') return new Response(JSON.stringify({ input_tokens: 100 }))
   calls++
@@ -36,12 +37,13 @@ globalThis.fetch = async (url, options) => {
   assert.match(body.system, /calling return_plan exactly once/)
   assert.equal(body.tool_choice.disable_parallel_tool_use, true)
   assert.equal(body.tools[0].input_schema.type, 'object')
-  assert.equal(body.thinking.type, 'between_tools')
-  assert(body.max_tokens > 0 && body.max_tokens <= 4096)
+  if(body.thinking.type==='adaptive')assert.equal(body.output_config.effort,'high')
+  else assert.equal(body.thinking.type, 'between_tools')
+  assert(body.max_tokens > 0 && body.max_tokens <= 16384)
   assert(body.messages.every(value => ['user', 'assistant'].includes(value.role)))
   assert.equal(typeof body.system, 'string')
   assert(!options.body.includes('sk-ant-'))
-  return new Response(oversized ? 'x'.repeat(65537) : JSON.stringify({
+  return new Response(oversized ? 'x'.repeat(262145) : JSON.stringify({
     id: 'fixture-response', model: body.model, stop_reason: stopReason,
     usage: { input_tokens: 100, output_tokens: 10, cache_read_input_tokens: 0, cache_creation_input_tokens: 0 },
     content: textReply === null ? [{ type: 'tool_use', id: 'fixture-tool', name: 'return_plan', input: answer }] : [{ type: 'text', text: textReply }]
@@ -70,6 +72,15 @@ try {
   await assert.rejects(requestAnthropicPlan(capped, messages, schema, { maxTokens: 1537 }), /INVALID_ANTHROPIC_REQUEST/)
   await assert.rejects(requestAnthropicPlan(capped, messages, schema, { timeoutMs: 60001 }), /INVALID_ANTHROPIC_REQUEST/)
   assert.equal(provider.thinkingMode, 'between_tools')
+  const smart=await loadAgentModelProvider(directory,{provider:'anthropic',...budgetSettings,thinkingMode:'adaptive',effort:'high',maxTokens:16384})
+  assert.equal(smart.thinkingMode,'adaptive');assert.equal(smart.effort,'high');assert.equal(smart.maxTokens,16384)
+  assert.deepEqual(await requestAnthropicPlan(smart,messages,schema),answer)
+  adaptiveSupported=false
+  await assert.rejects(loadAgentModelProvider(directory,{provider:'anthropic',...budgetSettings,thinkingMode:'adaptive'}),/ANTHROPIC_THINKING_MODE_UNAVAILABLE/)
+  adaptiveSupported=true;highEffortSupported=false
+  await assert.rejects(loadAgentModelProvider(directory,{provider:'anthropic',...budgetSettings,thinkingMode:'adaptive',effort:'high'}),/ANTHROPIC_EFFORT_UNAVAILABLE/)
+  highEffortSupported=true
+  console.log('PASS explicit adaptive high-effort planning is capability-checked; unsupported reasoning never silently falls back')
   assert.equal((await loadAgentModelProvider(directory, { provider: 'anthropic', model: 'claude-sonnet-4-6', ...budgetSettings })).thinkingMode, 'disabled')
   await assert.rejects(loadAgentModelProvider(directory, { provider: 'anthropic', model: 'claude-fixture-no-mode', ...budgetSettings }), /ANTHROPIC_BUDGET_MODEL_UNSUPPORTED/)
   const planner = await createIntentPlanner({ runtimeDirectory: join(directory, 'planner'), provider })

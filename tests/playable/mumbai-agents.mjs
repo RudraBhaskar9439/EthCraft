@@ -40,6 +40,8 @@ try {
   assert.throws(() => new PersonalAgents({ rootDirectory, runtimeDirectory, slotModelProviders: { CityAgent4: { kind: '0g', model: 'fixture' } } }), /INVALID_SLOT_MODEL_PROVIDERS/)
   assert.equal(mumbaiAgentCommand(event('0g task build a tower')).event.args, 'task build a tower')
   assert.equal(mumbaiAgentCommand(event(['claude', 'status'])).provider, 'claude')
+  assert.equal(mumbaiAgentCommand(event(['agent', 'status'])).provider,'claude')
+  assert.equal(mumbaiAgentCommand(event(['Agent','review'])).event.action,'agent')
   assert.equal(mumbaiAgentCommand(event('ollama create')), null)
   const naturalBuild = mumbaiAgentCommand(event('claude build a house')).event
   assert.equal(naturalBuild.action, 'agent_task'); assert.equal(naturalBuild.args, 'build a house')

@@ -16,13 +16,14 @@ let paidCalls = 0, priceChanged = false, mode = 'valid'
 globalThis.fetch = async (url, options) => {
   assert.equal(options.redirect, 'error')
   if (url.endsWith('/models')) return Response.json({ data: [{ id: 'glm-4.7', pricing_usd: { prompt: priceChanged ? '0.1' : '0.0000009', completion: '0.0000033' },
-    context_length: 204800, max_completion_tokens: 131072, supported_parameters: ['tools', 'tool_choice'] }] })
+    context_length: 204800, max_completion_tokens: 131072, supported_parameters: ['tools', 'tool_choice'] },
+    {id:'qwen3.5-35b-a3b',pricing_usd:{prompt:'0.000000058333',completion:'0.000000466667'},context_length:262144,supported_parameters:['tools','response_format']}] })
   assert.equal(url, 'https://router-api.0g.ai/v1/chat/completions')
   assert.equal(options.headers.Authorization, 'Bearer sk-fixture-only')
   const request = JSON.parse(options.body)
-  assert.equal(request.max_tokens, 4096)
+  assert.equal(request.max_tokens, request.model==='glm-4.7'?4096:1536)
   assert.deepEqual(request.tools[0].function.parameters, schema)
-  assert.deepEqual(request.tool_choice, { type: 'function', function: { name: 'return_plan' } })
+  assert.deepEqual(request.tool_choice, request.model==='glm-4.7'?{ type: 'function', function: { name: 'return_plan' } }:undefined)
   assert.equal(request.parallel_tool_calls, undefined)
   paidCalls++
   if (mode === 'timeout') throw Error('fixture timeout')
@@ -45,6 +46,10 @@ try {
   const provider = await loadZeroGProvider(directory, { budgetId: budget.authorizationId, budgetUsd: budget.limitUsd, budgetFile: budget.file })
   assert.deepEqual(await requestZeroGPlan(provider, messages, schema), plan)
   assert.equal((await state()).completedRequests, 1)
+  const economy=await loadZeroGProvider(directory,{budgetId:budget.authorizationId,budgetUsd:budget.limitUsd,budgetFile:budget.file,model:'qwen3.5-35b-a3b',maxTokens:1536})
+  assert.deepEqual(await requestZeroGPlan(economy,messages,schema),plan)
+  assert.equal((await state()).completedRequests,2);assert.equal((await state()).lastReceipt.model,economy.model)
+  console.log('PASS economy transport uses its advertised tool capabilities and the same cumulative budget')
   const capped = await loadZeroGProvider(directory, { budgetId: budget.authorizationId, budgetUsd: budget.limitUsd,
     budgetFile: budget.file, maxTokens: 1536, timeoutMs: 60000 })
   assert.equal(capped.maxTokens, 1536)
@@ -64,7 +69,7 @@ try {
     mode = invalid
     await assert.rejects(requestZeroGPlan(provider, messages, schema), /INVALID_ZERO_G_PLAN/)
   }
-  assert.equal((await state()).completedRequests, 3)
+  assert.equal((await state()).completedRequests, 4)
   console.log('PASS changed prices, excess input and unsafe endpoints fail before spending; incomplete/malformed plans never execute')
 
   for (const failure of ['timeout', 'unsupported']) {
@@ -72,7 +77,7 @@ try {
     await assert.rejects(requestZeroGPlan(provider, messages, schema), failure === 'timeout' ? /fixture timeout/ : /ZERO_G_HTTP_400/)
   }
   assert.equal(Object.keys((await state()).pending).length, 2)
-  assert.equal(paidCalls, 5)
+  assert.equal(paidCalls, 6)
   console.log('PASS timeout and unsupported tool errors retain durable reservations without silently retrying or switching providers; no paid calls')
 } finally {
   globalThis.fetch = originalFetch

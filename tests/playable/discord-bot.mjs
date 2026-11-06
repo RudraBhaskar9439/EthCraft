@@ -61,6 +61,8 @@ try{
  assert.deepEqual(commands.find(value=>value.name==='profile').options.find(value=>value.name==='login').choices.map(choice=>choice.value),['local','microsoft'])
  const invite=new URL(discordInvite(settings)),permissions=new PermissionsBitField(BigInt(invite.searchParams.get('permissions')));assert.equal(permissions.has(PermissionsBitField.Flags.Administrator),false);assert.equal(permissions.has(PermissionsBitField.Flags.ManageChannels),false)
  assert.ok(controlIds(agentPanel(slots[0],owners[0].ownerId)).some(id=>id.startsWith('ac:screenshot:')));assert.deepEqual(controlIds(agentPanel(slots[1],owners[0].ownerId)),['ac:work:CityAgent2'])
+ const renamed=agentPanel({...slots[0],provider:'anthropic',ownerName:'CompareClaude'},owners[0].ownerId,{identityOnly:true}).embeds[0].toJSON()
+ assert.match(renamed.title,/Agent/);assert(!renamed.title.includes('Claude'))
  check('command-schema-and-own-versus-foreign-agent-panel-controls')
  const client=fakeClient(),screenshotDirectory=fileURLToPath(new URL('.local/discord-bot-fixture/'+runId+'/',root))
  await mkdir(screenshotDirectory,{recursive:true})

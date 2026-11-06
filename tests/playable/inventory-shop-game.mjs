@@ -105,7 +105,7 @@ async function createFunding(options){
 const config={pool,identity:{getMinecraftOwner:async()=>owner},serverId:'fixture-server',gameSession:async()=>session,native:async(path,input)=>{
   assert.equal(path,'escrow/claim');claimAttempts++
   if(inventoryOpen)throw Error('FIXTURE_OPEN_INVENTORY')
-  claimEffects++;return{claimed:true,item:'oak_planks',count:1,ownerId:ownerId,playerId}
+  claimEffects++;return{claimed:true,item:'oak_planks',count:1,ownerId:ownerId,playerId,...(input.recipientAgentId?{recipientAgentId:input.recipientAgentId}:{})}
 },getOperatorRuntime:async()=>runtime,getManagedWallets:async()=>managed,merchant,createAssets,createFunding}
 const input={playerId,connectionId}
 let created=false
@@ -230,6 +230,30 @@ try{
   assert.throws(()=>validateInventoryGameCall(manifest.worldAssets,row,{...redemption,data:encodeFunctionData({abi:registryAbi,functionName:'requestRedemption',args:[1n,2n,'0x'+'0'.repeat(64)]})}),/METHOD_DENIED/)
   await assert.rejects(assetOptions.wallets.prepare({playerId:ownerId,...approval,limits:{maxGas:600000,maxNativeCostWei:'30000000000000'}}),/EXACT_PAYMENT_CONSENT_REQUIRED/)
   console.log('PASS exact operation IDs, CITY amounts, zero native value and the service-derived keccak redemption claim are enforced; out-of-scope signing is denied')
+  const recipient={slotName:'CityAgent5',playerId:randomUUID(),purchaseId:randomUUID(),goalId:randomUUID()},policyId=randomUUID()
+  let permitted=true
+  game=await createInventoryShopGame({...config,authorizeDelegation:async()=>{
+    if(!permitted)throw Error('FIXTURE_REVOKED')
+    return{recipient,receiptId:recipient.purchaseId,policyId,policyDigest:digest('fixture-policy')}
+  }})
+  const agentQuote=await shop.quote({playerId,connectionId:session.connectionId,item:'oak_planks',count:1})
+  const q=(await pool.query('SELECT * FROM ac_inventory_shop_quotes WHERE quote_id=$1',[agentQuote.quoteId])).rows[0]
+  const agentOrder=await game.openDelegated({quoteId:q.quote_id,principalId:ownerId,playerId,item:q.item,count:q.count,totalBaseUnits:q.total_price,stock:q.stock,expiresAtMs:+new Date(q.expires_at)})
+  const agentInput={playerId,connectionId:session.connectionId,orderId:agentOrder.orderId}
+  assert.equal(await game.latest({playerId,connectionId:session.connectionId}),null,'Agent orders never replace the human collection screen')
+  await assert.rejects(game.confirm({...agentInput,consentNonce:agentOrder.consentNonce,confirmationId:randomUUID()}),/AGENT_POLICY_REQUIRED/)
+  await assert.rejects(game.confirmDelegated(orderInput),/AGENT_POLICY_REQUIRED/)
+  permitted=false;await assert.rejects(game.confirmDelegated(agentInput),/FIXTURE_REVOKED/)
+  assert.equal((await pool.query('SELECT consent FROM ac_inventory_shop_game_orders WHERE order_id=$1',[agentOrder.orderId])).rows[0].consent,null)
+  permitted=true;inventoryOpen=true
+  const delegated=await game.confirmDelegated(agentInput)
+  assert.equal(delegated.paid,true);assert.equal(delegated.deliveryConfirmed,false)
+  const accepted=(await pool.query('SELECT consent FROM ac_inventory_shop_game_orders WHERE order_id=$1',[agentOrder.orderId])).rows[0].consent
+  assert.equal(accepted.approvalSource,'standing-agent-policy');assert.equal(accepted.delegationId,policyId)
+  permitted=false;inventoryOpen=false
+  assert.equal((await game.status(agentInput)).deliveryConfirmed,true,'Revocation preserves delivery of an already paid order')
+  const completedClaims=claimEffects;await game.status(agentInput);assert.equal(claimEffects,completedClaims)
+  console.log('PASS scoped standing consent is distinct from manual Pay; recipient is pinned, human UI excludes agent orders, and revocation preserves paid delivery without duplicate claims')
 }finally{
   await pool.end();if(created)await admin.query('DROP SCHEMA '+schema+' CASCADE');await admin.end()
 }

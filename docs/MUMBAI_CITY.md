@@ -22,7 +22,7 @@ arrival is to the right of the two agent concierge positions.
 - `/museum` visits the preserved calculator world.
 - The five bank NPCs retain Guide, Agent Desk, Job Board, Wallet & Market and
   travel functions. They have distinct profession outfits and seated avatars.
-- `/agent 0g create` and `/agent claude create` create or reconnect your two
+- `/agent 0g create` and `/agent agent create` create or reconnect your two
   agents. Replace `create` with `status`, `inspect`, `capabilities`, `come`,
   `follow`, `wait`, or a bounded natural-language request.
 - Open the Marketplace compass in your inventory, or use `/market`. Choose a
@@ -44,7 +44,7 @@ marker. It does not demolish generated buildings or rebuild player structures
 on every startup. Existing monuments and old arrival access remain intact.
 
 The earlier CityAgent1–3 plots and their controlled owners remain in
-`agentcity_play`. New CityAgent4 (0G) and CityAgent5 (Claude) use separate local
+`agentcity_play`. New CityAgent4 (0G) and CityAgent5 (Agent) use separate local
 manager directories but the same actual authenticated player principal. Each
 manager retains one owner. No fixture owner or wallet is assigned to the player.
 The new orchestrator holds the legacy manager lease, so the earlier recovery or
@@ -150,7 +150,7 @@ preflights the fixed operations top-up in this laptop's original deployment
 journal; `--apply` creates or reconciles that same bounded intent. These are
 operator setup steps. They do not enroll or spend from a customer wallet.
 
-Provider keys stay in their existing private files. The 0G and Claude ledgers
+Provider keys stay in their existing private files. The 0G and advanced-compute ledgers
 retain their caps and all earlier reservations, including the unresolved 0G
 charge. Agent creation and read-only status use no paid inference. Only explicit
 model requests can spend the remaining recorded allowance.

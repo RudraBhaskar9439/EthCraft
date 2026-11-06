@@ -78,10 +78,11 @@ export class PersonalAgents {
   constructor({ rootDirectory, runtimeDirectory, gamePort = 25596, modelProvider = localOllama, slotModelProviders = {},
     botFactory, planner, movementBounds = DEFAULT_BOUNDS, taskRegions = [], taskAdapterFactory,
     playWorld, playSpawn, saleHandler, onTaskResult, onTaskLock, intentModelCall, marketHandler, marketContext,
-    authorizeRemote, screenshotHandler, agentNames = PERSONAL_AGENT_NAMES } = {}) {
+    authorizeRemote, screenshotHandler, agentNames = PERSONAL_AGENT_NAMES, publicModelLabel } = {}) {
     if (!rootDirectory || !runtimeDirectory || gamePort !== 25596) throw Error('LOCAL_AGENT_RUNTIME_REQUIRED')
     if (!Array.isArray(agentNames) || !agentNames.length || new Set(agentNames).size !== agentNames.length || agentNames.some(name => !ALL_NAMES.includes(name))) throw Error('INVALID_PERSONAL_AGENT_NAMES')
     this.names = Object.freeze([...agentNames])
+    this.publicModelLabel=publicModelLabel
     this.root = resolve(rootDirectory); this.runtime = resolve(runtimeDirectory)
     this.file = join(this.runtime, 'personal-agents.json'); this.gamePort = gamePort
     if (!slotModelProviders || Array.isArray(slotModelProviders) || typeof slotModelProviders !== 'object' ||
@@ -356,7 +357,7 @@ export class PersonalAgents {
       const latest = tasks.at(-1)
       const workflow = this.intents.workflow(slot.ownerId)
       const provider = this.providerForSlot(slot)
-      return `${slot.name}: ${slot.bot ? 'online' : 'offline'}, ${slot.mode}. Model ${provider.kind}/${provider.model}.${slot.error ? ' ' + slot.error : ''}${workflow ? ` Workflow ${workflow.status}: ${workflow.index}/${workflow.steps.length}. ${workflow.message}` : ''}${this.taskLocations(slot)}${latest ? ` Latest task ${latest.action}: ${latest.status}, ${latest.completed}/${latest.total}. ${latest.message}` : ''}`
+      return `${slot.name}: ${slot.bot ? 'online' : 'offline'}, ${slot.mode}. Model ${this.publicModelLabel||provider.kind+'/'+provider.model}.${slot.error ? ' ' + slot.error : ''}${workflow ? ` Workflow ${workflow.status}: ${workflow.index}/${workflow.steps.length}. ${workflow.message}` : ''}${this.taskLocations(slot)}${latest ? ` Latest task ${latest.action}: ${latest.status}, ${latest.completed}/${latest.total}. ${latest.message}` : ''}`
     }
     if (request.action === 'wait') { this.stop(slot); if (!request._plan) await this.intents.pause(slot.ownerId); return `${slot.name} stopped and is waiting.` }
     let action = request.action

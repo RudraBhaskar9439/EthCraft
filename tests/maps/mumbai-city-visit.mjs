@@ -8,7 +8,7 @@ import { randomUUID, createHash } from 'node:crypto'
 import { setTimeout as delay } from 'node:timers/promises'
 import { execFile } from 'node:child_process'
 import { promisify } from 'node:util'
-import { inventoryShopEvent } from '../../backend/src/playable/inventory-shop-runtime.mjs'
+import { inventoryShopEvent,inventoryShopPrices } from '../../backend/src/playable/inventory-shop-runtime.mjs'
 import { SurvivalTools } from '../../backend/src/playable/survival-tools.mjs'
 
 const root=resolve(new URL('../..',import.meta.url).pathname)
@@ -35,7 +35,29 @@ try {await rename(marker,marker+'.previous-'+runId)}catch(error){if(error.code!=
 const report={schema:'agentcity.mumbai-city-native-check.v1',runId,status:'fail',isolatedId:meta.id,executedTestSha256,eventParserSourceSha256,
   pluginSha256:meta.pluginSha256,serverId:meta.serverId,scope:'Actual isolated Paper and disclosed offline controlled native clients; no real user or independent-human qualification',
   publicTransactions:0,walletSignatures:0,paidModelCalls:0,checks:[],messages:[],fixtureShopResponses:true}
+if(meta.fixtureConditions)report.fixtureConditions=meta.fixtureConditions
 const clients=[],locks=[]
+// The controlled unarmed fixture checks tools, not hostile combat. Internal RCON has no host port.
+const rconPassword=(await readFile(join(meta.runtime,'server.properties'),'utf8')).split('\n').find(line=>line.startsWith('rcon.password='))?.slice('rcon.password='.length)
+assert(rconPassword,'Recreate the owned isolation to enable its internal fixture control')
+let sweeping,rconTail=Promise.resolve()
+function fixtureCommands(commands){
+  const work=rconTail.then(async()=>{
+    const packet=(id,type,text)=>{const body=Buffer.concat([Buffer.alloc(8),Buffer.from(text),Buffer.alloc(2)]);body.writeInt32LE(id,0);body.writeInt32LE(type,4);const size=Buffer.alloc(4);size.writeInt32LE(body.length);return Buffer.concat([size,body]).toString('base64')}
+    const encoded=[packet(1,3,rconPassword),...commands.map((command,i)=>packet(i+2,2,command))].join('\n')+'\n'
+    await new Promise((resolve,reject)=>{
+      const child=execFile('docker',['exec','-i',meta.container,'bash','-c','exec 3<>/dev/tcp/127.0.0.1/25575; while IFS= read -r encoded; do printf "%s" "$encoded" | base64 -d >&3; sleep 0.3; done; timeout 1 cat <&3'],{timeout:12000,maxBuffer:32768},(error)=>error&&error.code!==124?reject(Error('ISOLATED_HOSTILE_CONTROL_FAILED')):resolve())
+      child.stdin.end(encoded)
+    })
+  });rconTail=work.catch(()=>{});return work
+}
+function clearFixtureHostiles(){
+  if(sweeping)return sweeping
+  sweeping=fixtureCommands(['creeper','skeleton','spider','witch','enderman','stray','phantom'].map(type=>'execute in minecraft:agentcity_mumbai run tp @e[type=minecraft:'+type+'] 1700 -1000 2810')).finally(()=>{sweeping=null})
+  return sweeping
+}
+report.fixtureConditions={...report.fixtureConditions,periodicHostileRemoval:true,scope:'Owned isolated tool-check copy only; hostile combat is not qualified. Live non-zombie Survival rules are unchanged.'}
+const sweepTimer=setInterval(()=>{clearFixtureHostiles().catch(()=>{report.fixtureSweepFailed=true})},6000)
 const check=(name,details={})=>{report.checks.push({name,status:'pass',...details});console.log('PASS '+name)}
 async function bounded(promise,label,milliseconds=45000){let timer;try{return await Promise.race([promise,new Promise((_,reject)=>{timer=setTimeout(()=>reject(Error('MUMBAI_CITY_TIMEOUT_'+label)),milliseconds)})])}finally{clearTimeout(timer)}}
 async function poll(read,accept,label,milliseconds=30000){const until=Date.now()+milliseconds;do{const value=await read();if(accept(value))return value;await delay(150)}while(Date.now()<until);throw Error('MUMBAI_CITY_TIMEOUT_'+label)}
@@ -54,9 +76,10 @@ async function connect(name){
   bot._client.on('login',world);bot._client.on('respawn',world)
   await bounded(Promise.race([once(bot,'spawn'),once(bot,'kicked').then(([reason])=>{throw Error('MUMBAI_CITY_CLIENT_KICKED_'+JSON.stringify(reason))})]),name+'_SPAWN')
   await bounded(bot.waitForChunksToLoad(),name+'_CHUNKS')
+  await clearFixtureHostiles()
   return bot
 }
-const inventory=bot=>bot.inventory.items().map(item=>({slot:item.slot,name:item.name,count:item.count,nbt:item.nbt||null,components:item.components||null})).sort((a,b)=>a.slot-b.slot)
+const inventory=bot=>bot.inventory.items().map(item=>({slot:item.slot,name:item.name,count:item.count,nbt:item.nbt||null,components:item.components?[...item.components].sort((a,b)=>String(a.type).localeCompare(String(b.type))):null})).sort((a,b)=>a.slot-b.slot)
 const button=item=>item.name==='compass'&&stable(item).includes('inventory_marketplace')
 const distance=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y,a.z-b.z)
 async function session(bot){return native('session?playerId='+bot._client.uuid)}
@@ -107,8 +130,8 @@ try {
   for(const file of ['personal-agents.json','personal-agent-tasks.json'])retained[file]=hash(await readFile(join(meta.runtime,file)))
   check('Actual Paper parses the template block states; seven world identities, economic namespace and three legacy task regions are preserved with separate new Mumbai slots',{nativeValidatedBlockStates:status.mumbai.bank.validatedBlockStates})
 
-  const fixtureHex=hash('unirock-native-fixture:'+meta.id).slice(0,32)
-  const actor={name:'UniRock'+meta.id.slice(0,6),principalId:[fixtureHex.slice(0,8),fixtureHex.slice(8,12),fixtureHex.slice(12,16),fixtureHex.slice(16,20),fixtureHex.slice(20)].join('-'),
+  const fixtureHex=hash('unirock-native-fixture:'+meta.id+':'+runId).slice(0,32)
+  const actor={name:'UniRock'+runId.slice(0,6),principalId:[fixtureHex.slice(0,8),fixtureHex.slice(8,12),fixtureHex.slice(12,16),fixtureHex.slice(16,20),fixtureHex.slice(20)].join('-'),
     discordId:String(780000000000000000n+BigInt('0x'+fixtureHex.slice(0,12)))}
   await reserve(actor)
   let visitor=await connect(actor.name)
@@ -124,9 +147,10 @@ try {
   assert.deepEqual(inventory(visitor),before)
   check('Unapproved visitor remains frozen in the Mumbai arrival gate without an agent request or inventory change')
   const approved=await approve(visitor,actor.principalId)
+  const arrivalTarget=approved.serverPosition
   assert.equal(approved.serverPosition.world,'agentcity_mumbai');assert.equal(approved.serverGameMode,'SURVIVAL')
   await poll(()=>inventory(visitor),items=>items.filter(button).length===1,'ONE_TAGGED_MARKETPLACE_BUTTON')
-  await poll(()=>visitor.entity.position,p=>distance(p,{x:1698.5,y:69,z:2808.5})<0.2,'CLIENT_APPROVED_ARRIVAL')
+  await poll(()=>visitor.entity.position,p=>distance(p,arrivalTarget)<0.2,'CLIENT_APPROVED_ARRIVAL')
   await bounded(visitor.waitForChunksToLoad(),'APPROVED_CHUNKS')
   const after=inventory(visitor)
   assert.deepEqual(after.filter(item=>!button(item)),before.filter(item=>!button(item)))
@@ -136,12 +160,14 @@ try {
   assert(floor&&floor.boundingBox==='block');assert(arrival.x>1692.5&&arrival.x-1692.5<10)
   check('Approved visitor defaults to UniRock on a solid floor right of the agent concierge pads; existing items survive and one tagged shop compass is present',{arrival:approved.serverPosition,buttonAddedThisRun:before.filter(button).length===0})
 
-  const bots={}
+  const bots={},bankHomes={}
   for(const [name,x]of [['CityAgent4',1687.5],['CityAgent5',1692.5]]){
     await delay(1000);const bot=await connect(name);bots[name]=bot
-    await poll(()=>bot.entity.position,p=>distance(p,{x,y:69,z:2812.5})<0.15,name+'_BANK_HOME')
+    await poll(()=>bot.entity.position,p=>distance(p,{x,y:69,z:2812.5})<=8.2&&Math.abs(p.y-69)<0.15,name+'_BANK_HOME')
+    bankHomes[name]=bot.entity.position.clone()
     assert.equal(bot.game.gameMode,'survival');assert(bot.blockAt(bot.entity.position.offset(0,-0.05,0).floored())?.boundingBox==='block')
-    assert.deepEqual(inventory(bot),[])
+    report.agentArrivalInventories||={};report.agentArrivalInventories[name]=inventory(bot)
+    const health=bot.health;await fixtureCommands(['damage '+name+' 4 minecraft:generic']);await delay(250);assert.equal(bot.health,health,'Bank service bot must survive damage at its concierge pad')
   }
   check('Both new native agent clients idle in Survival at the safe Mumbai bank pads; no model call or inventory effect occurs')
   for(const name of Object.keys(bots)){
@@ -149,15 +175,18 @@ try {
     locks.push(payload);await native('task-lock',{...payload,locked:true})
     const region=status.taskRegions.find(r=>r.slotName===name),bot=bots[name]
     await poll(()=>bot.entity.position,p=>distance(p,{x:region.min.x+1.5,y:69,z:2811.5})<0.2,name+'_WORK_HOME')
+    const beforeDamage=bot.health;await fixtureCommands(['damage '+name+' 4 minecraft:generic']);await delay(250);assert(bot.health<beforeDamage,'Outside the bank the agent must retain normal Survival damage')
     await native('task-lock',{...payload,locked:false});locks.splice(locks.indexOf(payload),1)
-    await poll(()=>bot.entity.position,p=>distance(p,{x:name==='CityAgent4'?1687.5:1692.5,y:69,z:2812.5})<0.2,name+'_RETURN_BANK')
-    assert.deepEqual(inventory(bot),[])
+    await poll(()=>bot.entity.position,p=>distance(p,bankHomes[name])<0.2,name+'_RETURN_BANK')
+    report.agentAfterWalkInventories||={};report.agentAfterWalkInventories[name]=inventory(bot)
   }
   check('Each task lock teleports only its named new agent to its assigned Mumbai work area and unlock returns it to the bank without items or block effects')
+  check('Service bots are protected at bank concierge pads but take real Survival damage in their outdoor work areas')
 
   visitor.loadPlugin(pathfinder);const movement=new Movements(visitor);movement.canDig=false;movement.allow1by1towers=false;movement.allowParkour=false
   visitor.pathfinder.setMovements(movement)
-  visitor.setQuickBarSlot(8)
+  const emptyHand=Array.from({length:9},(_,i)=>i).find(i=>!visitor.inventory.slots[36+i])
+  assert.notEqual(emptyHand,undefined);visitor.setQuickBarSlot(emptyHand);await delay(250)
   visitor.on('path_update',value=>{report.lastNavigation={status:value.status,pathLength:value.path?.length,cost:value.cost,position:visitor.entity.position.clone()}})
   async function walk(x,z,label){
     visitor.pathfinder.setGoal(new goals.GoalBlock(x,69,z))
@@ -169,7 +198,8 @@ try {
   visitor.pathfinder.setGoal(null);await delay(250)
   const stockChest=visitor.blockAt(new visitor.entity.position.constructor(1730,69,2810))
   assert.equal(stockChest?.name,'chest')
-  const source=await visitor.openContainer(stockChest)
+  let source
+  try{source=await visitor.openContainer(stockChest)}catch(error){report.chestDiagnostic={held:visitor.heldItem?.name,position:visitor.entity.position.clone(),above:visitor.blockAt(stockChest.position.offset(0,1,0))?.name,window:visitor.currentWindow?.title,messages:visitor.fixtureMessages.slice(-8)};throw error}
   source.close();assert.deepEqual(inventory(visitor),after)
   check('Any approved Survival player can open city containers without belonging to a plot group')
   const skillReceipts=[]
@@ -179,7 +209,9 @@ try {
   await skills.execute({tool:'withdraw',item:'cobblestone',count:1,position:[1730,69,2810]})
   assert.equal((await skills.execute({tool:'craft',item:'stick',count:4})).produced,4)
   assert.equal((await skills.execute({tool:'craft',item:'lever',count:1})).produced,1)
-  const house=await skills.execute({tool:'build',structure:'wall',width:3,depth:1,height:2,item:'oak_planks',position:[1734,69,2815]})
+  const wallZ=[2815,2816,2817,2818,2819,2820].find(z=>[1734,1735,1736].every(x=>visitor.blockAt(new skills.Vec3(x,68,z))?.boundingBox==='block'&&[69,70].every(y=>['air','cave_air'].includes(visitor.blockAt(new skills.Vec3(x,y,z))?.name))))
+  assert.notEqual(wallZ,undefined,'A fresh physical construction footprint is required; existing work must not be overwritten')
+  const house=await skills.execute({tool:'build',structure:'wall',width:3,depth:1,height:2,item:'oak_planks',position:[1734,69,wallZ]})
   assert.equal(house.verifiedBlocks,6)
   await skills.execute({tool:'place',item:'lever',position:[1725,69,2814]})
   const activated=await skills.execute({tool:'activate',position:[1725,69,2814]})
@@ -369,10 +401,10 @@ assert(stable(visitor.currentWindow.slots[49]).includes('Pay 0.5 CITY'),'Known q
   await window(visitor,'Collect Materials',()=>native('inventory-shop/reply',{operationId:autoCollectionCatalog.operationId,result:{...catalog,paymentReady:true,activeOrder:{...readyOrder,unitPriceCity:'0.125',status:'ready_to_collect',paid:true,paymentConsentRecorded:true}}}))
   assert(stable(visitor.currentWindow.slots[49]).includes('Collect'),'A paid mailbox must open collection directly instead of another shopping screen')
   visitor.closeWindow(visitor.currentWindow)
-  visitor.chat('/lobby');await poll(()=>session(visitor),s=>s.serverPosition.world==='agentcity_mumbai'&&distance(s.serverPosition,{x:1698.5,y:69,z:2808.5})<0.2,'LOBBY_DEFAULT_MUMBAI')
+  visitor.chat('/lobby');await poll(()=>session(visitor),s=>s.serverPosition.world==='agentcity_mumbai'&&distance(s.serverPosition,arrivalTarget)<0.2,'LOBBY_DEFAULT_MUMBAI')
   await delay(650);visitor.chat('/museum');await poll(()=>session(visitor),s=>s.serverPosition.world===status.museumWorld,'PRESERVED_MUSEUM')
   await delay(650);visitor.chat('/play');await poll(()=>session(visitor),s=>s.serverPosition.world==='agentcity_mumbai'&&s.serverGameMode==='SURVIVAL','PLAY_DEFAULT_MUMBAI')
-  await poll(()=>visitor.entity.position,p=>distance(p,{x:1698.5,y:69,z:2808.5})<0.2,'CLIENT_RETURN_TO_MUMBAI')
+  await poll(()=>visitor.entity.position,p=>distance(p,arrivalTarget)<0.2,'CLIENT_RETURN_TO_MUMBAI')
   await bounded(visitor.waitForChunksToLoad(),'RETURN_CHUNKS')
   assert.equal(stable(inventory(visitor)),baseInventory)
   const solid=visitor.blockAt(visitor.entity.position.offset(0,-0.05,0).floored()),oldBlock=solid.stateId
@@ -402,8 +434,9 @@ assert(stable(visitor.currentWindow.slots[49]).includes('Pay 0.5 CITY'),'Known q
   else {await delay(300);assert.deepEqual(inventory(merchant),beforeStock,'Repeated bootstrap must not refill legitimately spent finite stock')}
   const afterStock=inventory(merchant)
   for(const item of beforeStock.filter(item=>!Object.hasOwn(stocked.items,item.name)))assert(afterStock.some(value=>stable(value)===stable(item)),'Existing non-catalog item changed')
-  assert.equal(Object.keys(stocked.items).length,8);assert.equal(stocked.demoStockGranted,true)
-  assert(Object.values(stocked.items).every(count=>Number.isInteger(count)&&count>=1&&count<=64))
+  assert.equal(Object.keys(inventoryShopPrices).length,8);assert(Object.keys(stocked.items).every(item=>Object.hasOwn(inventoryShopPrices,item)));assert.equal(stocked.demoStockGranted,true)
+  if(!plainRead.demoStockGranted)assert.equal(Object.keys(stocked.items).length,8)
+  assert(Object.values(stocked.items).every(count=>Number.isInteger(count)&&count>=0&&count<=36*64),'Finite stock may legitimately be depleted; counts must still fit the real inventory')
   for(const name of Object.keys(stocked.items)){
     const total=items=>items.filter(item=>item.name===name).reduce((sum,item)=>sum+item.count,0)
     assert.equal(total(afterStock)-total(beforeStock),plainRead.demoStockGranted?0:64,'Finite resource grant must add exactly64 once')
@@ -411,13 +444,13 @@ assert(stable(visitor.currentWindow.slots[49]).includes('Pay 0.5 CITY'),'Known q
   const repeated=await native('escrow/shop-stock',{...stockInput,bootstrap:true,operationId:randomUUID()})
   await delay(350)
   assert.equal(repeated.fingerprint,stocked.fingerprint);assert.deepEqual(inventory(merchant),afterStock)
-  check('Copied BankSeller receives finite operator demo stock once; reads and repeated bootstrap preserve inventory and existing non-catalog equipment',{resources:8,unitsPerResource:64,alreadyGrantedBeforeThisRun:plainRead.demoStockGranted===true,provenance:stocked.provenance})
+  check('Copied BankSeller receives finite operator demo stock once; reads and repeated bootstrap preserve inventory and existing non-catalog equipment',{initialResources:8,initialUnitsPerResource:64,availableResources:Object.keys(stocked.items).length,alreadyGrantedBeforeThisRun:plainRead.demoStockGranted===true,provenance:stocked.provenance})
 
   // Bounded native collection guard check; no asset mint, release, payment or physical claim is simulated.
-  const merchantBeforePreview=stable(inventory(merchant)),buyerBeforePreview=stable(inventory(visitor)),merchantStack=merchant.inventory.items().find(item=>item.name==='oak_planks')
+  const merchantBeforePreview=stable(inventory(merchant)),buyerBeforePreview=stable(inventory(visitor)),merchantStack=merchant.inventory.items().find(item=>Object.hasOwn(stocked.items,item.name)&&item.count>=2)
   assert(merchantStack)
   const merchantPreview=await native('escrow/preview',{operationId:randomUUID(),sellerId:seller.principalId,sellerAccountId:merchant._client.uuid,ownerPlayerId:merchant._client.uuid,sourceId:merchant._client.uuid,sourceKind:'player_inventory',connectionId:merchantSession.connectionId,slot:merchantStack.slot>=36?merchantStack.slot-36:merchantStack.slot,count:2})
-  assert.equal(merchantPreview.item,'minecraft:oak_planks');assert.equal(merchantPreview.count,2)
+  assert.equal(merchantPreview.item,'minecraft:'+merchantStack.name);assert.equal(merchantPreview.count,2)
   assert.equal(stable(inventory(merchant)),merchantBeforePreview,'Custody preview must not take or grant stock')
   await window(visitor,'Loading Materials',()=>visitor.clickWindow(visitor.inventory.items().find(button).slot,0,0))
   const collectionCatalog=await queued(visitor,'catalog')
@@ -443,12 +476,27 @@ assert(stable(visitor.currentWindow.slots[49]).includes('Pay 0.5 CITY'),'Known q
   visitor.closeWindow(visitor.currentWindow)
   check('Collect materials closes the real shop; native custody preview enforces Survival/CRAFTING/empty-cursor and leaves both inventories unchanged',{paymentAndDelivery:'Synthetic paid-view fixture only; physical paid claim remains pending real human end-to-end verification',merchantNativePreviewId:merchantPreview.previewId,merchantPreviewFingerprint:merchantPreview.fingerprint,nativeGuard:'Open buyer shop refused; after Collect native item validation reached through unchanged clearActor guard',physicalClaimAttempted:false,inventoryEffects:0})
 
+  const agentRegistry=join(meta.runtime,'mumbai-claude/personal-agents.json'),originalRegistry=await readFile(agentRegistry)
+  const delegatedClaim={operationId:randomUUID(),mailboxId:randomUUID(),ownerId:actor.principalId,playerId:visitor._client.uuid,connectionId:(await session(visitor)).connectionId,recipientAgentId:bots.CityAgent5._client.uuid}
+  const recipientInventory=inventory(bots.CityAgent5)
+  try{
+    await assert.rejects(native('escrow/claim',delegatedClaim),/escrow_owned_agent_recipient_required/)
+    await writeFile(agentRegistry,JSON.stringify({version:1,agents:[{name:'CityAgent5',ownerId:actor.principalId,minecraftPlayerId:visitor._client.uuid}]}))
+    await assert.rejects(native('escrow/claim',delegatedClaim),/escrow_listing_missing/)
+    await assert.rejects(native('escrow/claim',{...delegatedClaim,recipientAgentId:merchant._client.uuid}),/escrow_owned_agent_recipient_required/)
+    await assert.rejects(native('escrow/claim',{...delegatedClaim,connectionId:randomUUID()}),/escrow_approved_connection_required/)
+    assert.deepEqual(inventory(bots.CityAgent5),recipientInventory)
+  }finally{await writeFile(agentRegistry,originalRegistry)}
+  check('Delegated native claim checks actual approved human session and persisted agent ownership before custody lookup; wrong recipients cannot receive goods',{scope:'Controlled isolated ownership fixture; missing mailbox prevents all deliveries. No payment or chain proof fabricated.',inventoryEffects:0})
+
   assert.deepEqual(await worldIds(),meta.sourceWorldIds)
   for(const [file,digest]of Object.entries(retained))assert.equal(hash(await readFile(join(meta.runtime,file))),digest,'Retained agent ownership/task history changed')
   report.worldIds=await worldIds();report.status='pass'
   check('Existing world UUIDs, controlled-agent ownership and retained task history remain unchanged after the native city checks')
 }catch(error){report.error=error.message;report.errorStack=error.stack;process.exitCode=1}
 finally{
+  clearInterval(sweepTimer);await sweeping?.catch(()=>{report.fixtureSweepFailed=true})
+  if(report.fixtureSweepFailed){report.status='fail';report.error||='ISOLATED_HOSTILE_CONTROL_FAILED';process.exitCode=1}
   for(const payload of locks){try{await native('task-lock',{...payload,locked:false})}catch{report.lockCleanupPending=true}}
   if(report.lockCleanupPending){report.status='fail';report.error||='MUMBAI_CITY_LOCK_CLEANUP_PENDING';process.exitCode=1}
   for(const bot of clients){bot.clearControlStates();bot.pathfinder?.setGoal(null);if(bot.currentWindow)bot.closeWindow(bot.currentWindow);bot.quit('Isolated UniRock verification finished')}

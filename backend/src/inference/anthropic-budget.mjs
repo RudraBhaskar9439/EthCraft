@@ -11,7 +11,7 @@ const prices = {
   'claude-sonnet-4-6': { input: 3000, output: 15000, cacheRead: 300, cache5m: 3750, cache1h: 6000 }
 }
 const count = value => Number.isSafeInteger(value) && value >= 0
-const exhausted = () => Error('Claude API budget exhausted. Existing tasks are preserved; ask the host owner to approve more credit.')
+const exhausted = () => Error('Agent API budget exhausted. Existing tasks are preserved; ask the host owner to approve more credit.')
 
 export function usdToNano(value) {
   const text = String(value)
@@ -89,7 +89,7 @@ export async function reserveAnthropicRequest(provider, body) {
   const ceilingNanoUsd = inputBound * rates.cache1h + max_tokens * rates.output
   if (!count(ceilingNanoUsd) || !ceilingNanoUsd) throw Error('ANTHROPIC_TOKEN_COUNT_INVALID')
   return mutate(provider.budget, (state, budget) => {
-    if (state.blockedReason) throw Error('Claude budget needs operator reconciliation before more requests.')
+    if (state.blockedReason) throw Error('Agent compute budget needs operator reconciliation before more requests.')
     if (validate(state, budget) + ceilingNanoUsd > budget.limitNanoUsd) throw exhausted()
     const id = randomUUID()
     state.pending[id] = { model: provider.model, inputBound, maxTokens: max_tokens, ceilingNanoUsd, createdAt: new Date().toISOString() }
@@ -121,5 +121,5 @@ export async function recordAnthropicUsage(provider, id, body, requestId) {
     delete state.pending[id]
     return true
   })
-  if (!result) throw Error('Claude budget needs operator reconciliation before more requests.')
+  if (!result) throw Error('Agent compute budget needs operator reconciliation before more requests.')
 }

@@ -1,12 +1,12 @@
 import { readFile } from 'node:fs/promises'
 import { join } from 'node:path'
 import { parseEnv } from 'node:util'
-import { zeroGModel, validateZeroGBudget, reserveZeroGRequest, recordZeroGUsage } from './zero-g-budget.mjs'
+import { zeroGModel, zeroGModels, validateZeroGBudget, reserveZeroGRequest, recordZeroGUsage } from './zero-g-budget.mjs'
 
 export const zeroGRouter = Object.freeze({ kind: '0g', baseUrl: 'https://router-api.0g.ai/v1', model: zeroGModel.model })
 
 function validateProvider(provider) {
-  if (provider.kind !== '0g' || provider.baseUrl !== zeroGRouter.baseUrl || provider.model !== zeroGModel.model ||
+  if (provider.kind !== '0g' || provider.baseUrl !== zeroGRouter.baseUrl || !zeroGModels[provider.model] ||
       provider.liveAccess !== true || typeof provider.apiKey !== 'string' || !/^sk-[^\s]+$/.test(provider.apiKey) ||
       (provider.maxTokens !== undefined && (!Number.isInteger(provider.maxTokens) || provider.maxTokens < 1 || provider.maxTokens > 4096)) ||
       (provider.timeoutMs !== undefined && (!Number.isInteger(provider.timeoutMs) || provider.timeoutMs < 1 || provider.timeoutMs > 120000))) {
@@ -24,14 +24,16 @@ async function readBoundedJson(response) {
   return JSON.parse(Buffer.concat(chunks).toString('utf8'))
 }
 
-async function verifyPricing() {
+async function verifyPricing(modelId) {
   const response = await fetch(zeroGRouter.baseUrl + '/models', { redirect: 'error', signal: AbortSignal.timeout(15000) })
   if (!response.ok) throw Error('ZERO_G_CATALOG_HTTP_' + response.status)
-  const model = (await readBoundedJson(response)).data?.find(value => value.id === zeroGModel.model)
-  if (!model || Number(model.pricing_usd?.prompt) !== 0.0000009 || Number(model.pricing_usd?.completion) !== 0.0000033 ||
-      model.context_length !== zeroGModel.contextTokens || model.max_completion_tokens < 4096 ||
-      !['tools', 'tool_choice'].every(value => model.supported_parameters?.includes(value))) throw Error('ZERO_G_PRICE_OR_CAPABILITIES_CHANGED')
-  return { ...zeroGModel, source: zeroGRouter.baseUrl + '/models', observedAt: new Date().toISOString() }
+  const expected=zeroGModels[modelId],standard=modelId===zeroGModel.model
+  const rates=standard?[0.0000009,0.0000033]:[0.000000058333,0.000000466667]
+  const model = (await readBoundedJson(response)).data?.find(value => value.id === modelId)
+  if (!model || Number(model.pricing_usd?.prompt) !== rates[0] || Number(model.pricing_usd?.completion) !== rates[1] ||
+      model.context_length !== expected.contextTokens || (standard?!(model.max_completion_tokens>=4096):model.max_completion_tokens!==undefined&&model.max_completion_tokens<4096) ||
+      !(standard?['tools','tool_choice']:['tools']).every(value=>model.supported_parameters?.includes(value))) throw Error('ZERO_G_PRICE_OR_CAPABILITIES_CHANGED')
+  return {...expected,source:zeroGRouter.baseUrl+'/models',observedAt:new Date().toISOString(),publishedInputUsd:model.pricing_usd.prompt,publishedOutputUsd:model.pricing_usd.completion}
 }
 
 export async function loadZeroGProvider(root, settings = {}) {
@@ -42,7 +44,7 @@ export async function loadZeroGProvider(root, settings = {}) {
     budget: { file: settings.budgetFile || join(root, '.local/inference/zero-g-usage.json'), authorizationId: settings.budgetId, limitUsd: settings.budgetUsd } }
   validateProvider(provider)
   await validateZeroGBudget(provider.budget)
-  await verifyPricing()
+  await verifyPricing(provider.model)
   return provider
 }
 
@@ -56,10 +58,10 @@ export async function requestZeroGPlan(provider, messages, schema, { maxTokens =
   const request = { model: provider.model, max_tokens: maxTokens, stream: false,
     messages: [{ role: 'system', content: 'Return the proposed result by calling return_plan exactly once. This emits data for validation and never executes an action.' }, ...messages],
     tools: [{ type: 'function', function: { name: 'return_plan', description: 'Return a proposed plan for validation; never execute actions.', parameters: schema } }],
-    tool_choice: { type: 'function', function: { name: 'return_plan' } } }
+    ...(provider.model===zeroGModel.model?{tool_choice:{type:'function',function:{name:'return_plan'}}}:{}) }
   // Bound prompt/schema size independently of the provider's much larger context ceiling.
   if (Buffer.byteLength(JSON.stringify(request), 'utf8') > 32000) throw Error('ZERO_G_INPUT_TOO_LARGE')
-  const pricing = await verifyPricing()
+  const pricing = await verifyPricing(provider.model)
   const reservationId = await reserveZeroGRequest(provider, request, pricing)
   const start = Date.now()
   // Failed/lost responses retain their reservation: the provider may already have charged them.

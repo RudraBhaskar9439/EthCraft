@@ -21,6 +21,7 @@ import org.bukkit.World;
 import org.bukkit.WorldCreator;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
+import org.bukkit.entity.Zombie;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -31,6 +32,9 @@ import org.bukkit.event.entity.EntityChangeBlockEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityExplodeEvent;
 import org.bukkit.event.entity.EntityPickupItemEvent;
+import org.bukkit.event.entity.CreatureSpawnEvent;
+import org.bukkit.event.entity.EntityTargetLivingEntityEvent;
+import org.bukkit.event.world.EntitiesLoadEvent;
 import org.bukkit.event.hanging.HangingBreakEvent;
 import org.bukkit.event.inventory.InventoryOpenEvent;
 import org.bukkit.event.player.PlayerChangedWorldEvent;
@@ -128,6 +132,7 @@ final class MumbaiWorld implements Listener {
         catch(Exception error) { throw new IllegalArgumentException("unirock_bank_prepare_failed",error); }
         loaded.setSpawnLocation(result.hubSpawn());
         Bukkit.getPluginManager().registerEvents(result, plugin);
+        loaded.getEntitiesByClass(Zombie.class).forEach(Entity::remove);
         return result;
     }
 
@@ -144,14 +149,22 @@ final class MumbaiWorld implements Listener {
     Map<String,Object> bounds() { return Map.of("min",Map.of("x",config.min.x,"y",world.getMinHeight(),"z",config.min.z),"max",Map.of("x",config.max.x,"y",world.getMaxHeight()-1,"z",config.max.z)); }
     Location hubSpawn() {
         Location target=bank==null?spawn.clone():bank.spawn();
+        return safeNearby(target);
+    }
+    private Location safeNearby(Location target){
         if(walkable(target))return target;
         for(int radius=1;radius<=8;radius++)for(int x=-radius;x<=radius;x++)for(int z=-radius;z<=radius;z++)if(Math.abs(x)==radius||Math.abs(z)==radius){Location candidate=target.clone().add(x,0,z);if(walkable(candidate))return candidate;}
         return target;
     }
+    @EventHandler(priority=EventPriority.HIGHEST,ignoreCancelled=true) public void zombieSpawn(CreatureSpawnEvent event){if(contains(event.getLocation().getWorld())&&event.getEntity() instanceof Zombie)event.setCancelled(true);}
+    @EventHandler public void loadedEntities(EntitiesLoadEvent event){if(contains(event.getWorld()))for(Entity entity:event.getEntities())if(entity instanceof Zombie)entity.remove();}
     private static boolean walkable(Location at){return at.clone().subtract(0,1,0).getBlock().getType().isSolid()&&at.getBlock().isPassable()&&at.clone().add(0,1,0).getBlock().isPassable()&&!at.getBlock().isLiquid();}
     boolean inBank(Location location) { return bank!=null&&bank.contains(location); }
     Location npcLocation(String key) { if(bank==null)throw new IllegalStateException("unirock_bank_unavailable");return bank.npcLocation(key); }
-    Map<String,Location> agentDisplayLocations() { return bank==null?Map.of():bank.agentDisplayLocations(); }
+    Map<String,Location> agentDisplayLocations() { if(bank==null)return Map.of();Map<String,Location> locations=new java.util.LinkedHashMap<>();bank.agentDisplayLocations().forEach((name,at)->locations.put(name,safeNearby(at)));return locations; }
+    private boolean bankService(Entity entity){return entity instanceof Player player&&inBank(player.getLocation())&&(authorizedAgent.test(player)||"BankSeller".equals(player.getName()));}
+    @EventHandler(priority=EventPriority.HIGHEST,ignoreCancelled=true) public void serviceTarget(EntityTargetLivingEntityEvent event){if(contains(event.getEntity().getWorld())&&bankService(event.getTarget()))event.setCancelled(true);}
+    @EventHandler(priority=EventPriority.HIGHEST,ignoreCancelled=true) public void bankExplosion(EntityExplodeEvent event){if(contains(event.getLocation().getWorld()))event.blockList().removeIf(block->inBank(block.getLocation()));}
     void controls(Predicate<Inventory> inventories,Predicate<Entity> npcs,Predicate<Player> agents,Predicate<Player> humans,
                   BiPredicate<Player,Location> containers,BiPredicate<Player,Location> builds) {
         ownedInventory=Objects.requireNonNull(inventories);ownedNpc=Objects.requireNonNull(npcs);authorizedAgent=Objects.requireNonNull(agents);approvedHuman=Objects.requireNonNull(humans);
@@ -193,7 +206,7 @@ final class MumbaiWorld implements Listener {
     @EventHandler(priority=EventPriority.HIGHEST, ignoreCancelled=true) public void enter(PlayerChangedWorldEvent e) { if (contains(e.getPlayer().getWorld())) e.getPlayer().setGameMode(arrivalMode(approvedHuman.test(e.getPlayer()),authorizedAgent.test(e.getPlayer()))); }
     @EventHandler(priority=EventPriority.HIGHEST, ignoreCancelled=true) public void breakBlock(BlockBreakEvent e) { if (contains(e.getBlock().getWorld())&&!workEffect(e.getPlayer(),e.getBlock().getLocation())&&!humanBuild(e.getPlayer(),e.getBlock().getLocation())) e.setCancelled(true); }
     @EventHandler(priority=EventPriority.HIGHEST, ignoreCancelled=true) public void placeBlock(BlockPlaceEvent e) { if (contains(e.getBlock().getWorld())&&!workEffect(e.getPlayer(),e.getBlock().getLocation())&&!humanBuild(e.getPlayer(),e.getBlock().getLocation())) e.setCancelled(true); }
-    @EventHandler(priority=EventPriority.HIGHEST, ignoreCancelled=true) public void damage(EntityDamageEvent e) { if (contains(e.getEntity().getWorld())&&(ownedNpc.test(e.getEntity())||e.getEntity() instanceof Player player&&!approvedHuman.test(player)&&!authorizedAgent.test(player))) e.setCancelled(true); }
+    @EventHandler(priority=EventPriority.HIGHEST, ignoreCancelled=true) public void damage(EntityDamageEvent e) { if (contains(e.getEntity().getWorld())&&(ownedNpc.test(e.getEntity())||bankService(e.getEntity())||e.getEntity() instanceof Player player&&!approvedHuman.test(player)&&!authorizedAgent.test(player))) e.setCancelled(true); }
     @EventHandler(priority=EventPriority.HIGHEST, ignoreCancelled=true) public void pickup(EntityPickupItemEvent e) { if (contains(e.getEntity().getWorld())&&(!(e.getEntity() instanceof Player player)||!workEffect(player,e.getItem().getLocation())&&!humanBuild(player,e.getItem().getLocation()))) e.setCancelled(true); }
     @EventHandler(priority=EventPriority.HIGHEST, ignoreCancelled=true) public void drop(PlayerDropItemEvent e) { if (contains(e.getPlayer().getWorld())&&!workEffect(e.getPlayer(),e.getItemDrop().getLocation())&&!humanBuild(e.getPlayer(),e.getItemDrop().getLocation())) e.setCancelled(true); }
     @EventHandler(priority=EventPriority.HIGHEST, ignoreCancelled=true) public void interact(PlayerInteractEvent e) {

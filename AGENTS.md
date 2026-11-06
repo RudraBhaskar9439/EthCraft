@@ -1,3 +1,26 @@
+## Adaptive compute and public Agent name — user update 6 November 2026
+
+The user renamed the visible advanced worker to Agent and requested a 0G work reviewer plus economy/advanced model orchestration. Use Agent and 0G in current menus, commands, status and Discord panels. Preserve exact API model IDs, provider configuration, historical evidence, legacy command aliases and existing runtime ownership paths. Route routine decisions through the verified 0G economy model; use the configured advanced provider for complex reasoning, failures and bounded correction. Both 0G models and reviews share the existing cumulative $5 ledger, including all old unknown reservations; advanced inference retains the $25 laptop ledger. Never reset either allowance. 0G assessments use actual receipts and fresh observations, remain advisory and cannot accept work, sign payments or authorize wallet spending. Keep one bounded automatic correction cycle and record actual routing and review attempts durably.
+
+## Mumbai zombies — user update 6 November 2026
+
+The user explicitly requested disabling zombies. Remove existing zombies and prevent new zombies/variants in Mumbai, including those loaded from saved chunks. Other Survival mobs and rules remain enabled. A completed UniRock bank is editable Survival construction: preserve changed blocks on restart rather than rebuilding or refusing startup. Keep initial-install and migration guards, world bindings and custody checks. The live restart exposed skeleton/creeper deaths of idle service bots. Keep registered agent/merchant concierge services protected inside UniRock, without disabling outdoor Survival damage or human building. Preserve bank blocks against entity explosions and use nearby safe ground if a concierge pad was edited. This is the bounded service-availability fix, not an all-city invulnerability rule.
+
+## Agent purchasing delegation — user update 6 November 2026
+
+The user explicitly authorized automatic purchases of testnet shop materials
+using the existing Privy game wallet, with no cumulative CITY cap. This replaces
+fresh native Pay confirmation only for correctly scoped delegated agent orders.
+Keep chain 1301, the existing per-order CITY and gas restrictions, real balance
+checks, exact merchant stock, canonical receipts and native delivery journals.
+Bind a durable standing authorization to the actual approved owner, current
+managed wallet, owned agent slots and deployment. Models only propose purchases;
+the receiving policy authorizes them. Never invent a native approval event,
+change old orders, transfer external-wallet assets, auto-mint, auto-top-up or
+swap arbitrary assets. Reconcile the same immutable purchase after failures;
+revoking delegation stops new orders without discarding funded rights. The $25
+Claude inference cap is separate and remains cumulative.
+
 ## Mumbai Survival and objective agents — user update 6 November 2026
 
 The user now explicitly wants normal Survival play throughout Mumbai: all

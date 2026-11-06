@@ -7,8 +7,11 @@ const { readCheckpoint, writeCheckpoint, acquireLocalLease } = checkpoints
 const queues = new Map()
 const count = value => Number.isSafeInteger(value) && value >= 0
 export const zeroGModel = Object.freeze({ model: 'glm-4.7', inputNanoUsd: 900, outputNanoUsd: 3300, contextTokens: 204800 })
-const validPricing = value => value?.model === zeroGModel.model && value.inputNanoUsd === zeroGModel.inputNanoUsd &&
-  value.outputNanoUsd === zeroGModel.outputNanoUsd && value.contextTokens === zeroGModel.contextTokens &&
+// Fractional nanodollar rates are rounded upward to keep the shared ledger conservative.
+export const zeroGEconomyModel = Object.freeze({model:'qwen3.5-35b-a3b',inputNanoUsd:59,outputNanoUsd:467,contextTokens:262144})
+export const zeroGModels = Object.freeze({[zeroGModel.model]:zeroGModel,[zeroGEconomyModel.model]:zeroGEconomyModel})
+const validPricing = value => Boolean(zeroGModels[value?.model]) && value.inputNanoUsd === zeroGModels[value.model].inputNanoUsd &&
+  value.outputNanoUsd === zeroGModels[value.model].outputNanoUsd && value.contextTokens === zeroGModels[value.model].contextTokens &&
   value.source === 'https://router-api.0g.ai/v1/models' && Number.isFinite(Date.parse(value.observedAt))
 
 function usdToNano(value) {
@@ -32,9 +35,9 @@ function validate(state, budget) {
   if (!state || state.version !== 1 || state.authorizationId !== budget.authorizationId || state.limitNanoUsd !== budget.limitNanoUsd ||
       !count(state.spentNanoUsd) || !count(state.completedRequests) || !state.pending || Array.isArray(state.pending) ||
       typeof state.pending !== 'object' || Object.values(state.pending).some(value =>
-        value.model !== zeroGModel.model || !validPricing(value.pricing) || !count(value.ceilingNanoUsd) ||
-        value.inputBound !== zeroGModel.contextTokens || !count(value.maxTokens) || !value.maxTokens || value.maxTokens > 4096 ||
-        value.ceilingNanoUsd !== zeroGModel.contextTokens * zeroGModel.inputNanoUsd + value.maxTokens * zeroGModel.outputNanoUsd)) {
+        !zeroGModels[value.model] || !validPricing(value.pricing) || value.pricing.model!==value.model || !count(value.ceilingNanoUsd) ||
+        value.inputBound !== zeroGModels[value.model].contextTokens || !count(value.maxTokens) || !value.maxTokens || value.maxTokens > 4096 ||
+        value.ceilingNanoUsd !== zeroGModels[value.model].contextTokens * zeroGModels[value.model].inputNanoUsd + value.maxTokens * zeroGModels[value.model].outputNanoUsd)) {
     throw Error('ZERO_G_BUDGET_STATE_INVALID_OR_MISSING')
   }
   const committed = state.spentNanoUsd + Object.values(state.pending).reduce((sum, value) => sum + value.ceilingNanoUsd, 0)
@@ -77,15 +80,15 @@ export async function validateZeroGBudget(budget) {
 }
 
 export async function reserveZeroGRequest(provider, request, pricing) {
-  if (provider.model !== zeroGModel.model || !validPricing(pricing) || Math.abs(Date.now() - Date.parse(pricing.observedAt)) > 60000 || request.model !== provider.model ||
+  if (!zeroGModels[provider.model] || !validPricing(pricing) || pricing.model!==provider.model || Math.abs(Date.now() - Date.parse(pricing.observedAt)) > 60000 || request.model !== provider.model ||
       !count(request.max_tokens) || !request.max_tokens || request.max_tokens > 4096) throw Error('INVALID_ZERO_G_REQUEST_BOUND')
   // Reserve the entire published context, not an optimistic local tokenizer estimate.
-  const ceilingNanoUsd = zeroGModel.contextTokens * pricing.inputNanoUsd + request.max_tokens * pricing.outputNanoUsd
+  const ceilingNanoUsd = pricing.contextTokens * pricing.inputNanoUsd + request.max_tokens * pricing.outputNanoUsd
   return mutate(provider.budget, (state, budget) => {
     if (state.blockedReason) throw Error('0G budget needs operator reconciliation before more requests.')
     if (validate(state, budget) + ceilingNanoUsd > budget.limitNanoUsd) throw Error('0G API budget exhausted; existing tasks are preserved.')
     const id = randomUUID()
-    state.pending[id] = { model: provider.model, inputBound: zeroGModel.contextTokens, maxTokens: request.max_tokens,
+    state.pending[id] = { model: provider.model, inputBound: pricing.contextTokens, maxTokens: request.max_tokens,
       ceilingNanoUsd, pricing, requestSha256: createHash('sha256').update(JSON.stringify(request)).digest('hex'), createdAt: new Date().toISOString() }
     return id
   })
@@ -110,6 +113,7 @@ export async function recordZeroGUsage(provider, id, body, requestId, latencyMs)
     state.spentNanoUsd += costNanoUsd
     state.completedRequests++
     state.lastReceipt = { reservationId: id, responseId: body.id, requestId, model: body.model,
+      ...(pending.model===zeroGEconomyModel.model?{conservativeCostEstimate:true}:{}),
       usage: { prompt_tokens: usage.prompt_tokens, completion_tokens: usage.completion_tokens }, costNanoUsd,
       pricing: pending.pricing, requestSha256: pending.requestSha256, latencyMs, recordedAt: new Date().toISOString() }
     delete state.pending[id]

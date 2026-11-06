@@ -1,0 +1,20 @@
+{
+  "schema": "agentcity.zombie-policy-native.v1",
+  "status": "pass",
+  "scope": "Owned isolated copy; actual visible animal positive control and direct world-entity query. Console summon acknowledgement alone is not evidence. No real users, model calls, payments or inventory grants.",
+  "pluginSha256": "c63883cf29d4f19eff8d599a1cc37c8fe24656402bbcb8b27abc5818fcc7e13a",
+  "checks": [
+    {
+      "name": "Normal animal exists in server query and native client",
+      "status": "pass"
+    },
+    {
+      "name": "Attempted zombie spawn leaves no zombie in actual server or native client",
+      "status": "pass"
+    }
+  ],
+  "cowReply": "Summoned new Cow",
+  "cowPresent": "Test passed. Count: 1",
+  "zombieReply": "Summoned new Zombie",
+  "zombieAbsent": "Test passed"
+}

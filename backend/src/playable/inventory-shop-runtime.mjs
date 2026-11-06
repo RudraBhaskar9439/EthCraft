@@ -7,6 +7,8 @@ import {createBankLaptopRuntime} from '../bank/laptop-runtime.mjs'
 import {createInventoryShop} from './inventory-shop.mjs'
 import {createInventoryShopCheckout} from './inventory-shop-checkout.mjs'
 import {createInventoryShopGame} from './inventory-shop-game.mjs'
+import {createAgentShop} from './agent-shop.mjs'
+import {timingSafeEqual} from 'node:crypto'
 
 const UUID=/^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/i
 const fail=code=>{throw Object.assign(Error(code),{code})}
@@ -78,8 +80,11 @@ export async function openInventoryShopRuntime({rootDirectory,identityRuntime}={
       environment:'UNICHAIN_SEPOLIA_PLAYABLE',chainId:1301,rpcUrl:manifest.rpcUrl,genesisHash:manifest.genesisHash,
       allowedTargets:loaded.settings.allowedTargets,allowBroadcast:true,maxNativeBudgetWei:loaded.settings.maxNativeBudgetWei})
   })().catch(error=>{managedOpening=null;throw error}))
-  const game=inGame?await createInventoryShopGame({...common,native,getOperatorRuntime,getManagedWallets,merchant}):null
+  let agentShop
+  const game=inGame?await createInventoryShopGame({...common,native,getOperatorRuntime,getManagedWallets,merchant,authorizeDelegation:context=>agentShop.authorize(context)}):null
   const shop=await createInventoryShop({...common,readStock,prices:inventoryShopPrices,checkoutMode:inGame?'privy_game':'browser',prepareCheckout:game?game.open:checkout.prepareCheckout})
+  if(game)agentShop=await createAgentShop({root,active,pool:identityRuntime.pool,identity:identityRuntime.service,native,game,shop,getOperatorRuntime})
+  const authenticateAgent=supplied=>{const value=Buffer.from(String(supplied||'')),expected=Buffer.from('Bearer '+token);return value.length===expected.length&&timingSafeEqual(value,expected)}
   const processEvent=async event=>{
     let result
     try{
@@ -122,5 +127,5 @@ export async function openInventoryShopRuntime({rootDirectory,identityRuntime}={
     })()
     return{started:true}
   }
-  return{shop,checkout,game,native,start,readStock,async close(){stopped=true;await loop;await release?.();await opening?.catch(()=>{});await managedOpening?.catch(()=>{});await operator?.close();}}
+  return{shop,checkout,game,agentShop,authenticateAgent,native,start,readStock,async close(){stopped=true;await loop;await release?.();await opening?.catch(()=>{});await managedOpening?.catch(()=>{});await operator?.close();}}
 }

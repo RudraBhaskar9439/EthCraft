@@ -9,12 +9,14 @@ import { loadAgentModelProvider } from '../backend/src/inference/anthropic.mjs'
 import { openDiscordIdentityRuntime } from '../backend/src/discord/runtime.mjs'
 import { SurvivalObjectives } from '../backend/src/playable/survival-objectives.mjs'
 import { SurvivalTools, survivalSkills } from '../backend/src/playable/survival-tools.mjs'
+import {createAdaptivePlanner,create0GReviewer} from '../backend/src/playable/adaptive-planner.mjs'
+import {zeroGEconomyModel} from '../backend/src/inference/zero-g-budget.mjs'
 
 const root = fileURLToPath(new URL('../', import.meta.url))
 const json = async file => JSON.parse(await readFile(file, 'utf8'))
 const UUID = /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/i
 export const mumbaiAgentSlots = Object.freeze({ '0g': 'CityAgent4', claude: 'CityAgent5' })
-const help = 'Use /agent 0g create or /agent claude create, then /agent 0g task <request> or /agent claude task <request>. Status, inspect, follow, come and wait use the same provider prefix.'
+const help = 'Use /agent 0g create or /agent agent create, then /agent 0g task <request> or /agent agent task <request>. Status, inspect, review, follow, come and wait use the same worker prefix.'
 
 // Reconnect persisted ownership only. Idle presence does not require the owner
 // online; task execution still passes the existing approved-session guards.
@@ -46,11 +48,11 @@ export async function restoreExistingMumbaiAgents({ service, identity, serverId 
 export function mumbaiAgentCommand(event) {
   if (event?.action !== 'agent') return null
   const words = (Array.isArray(event.args) ? event.args.join(' ') : String(event.args || '')).trim().split(/\s+/)
-  const provider = words.shift().toLowerCase()
+  const selected = words.shift().toLowerCase(),provider=selected==='agent'?'claude':selected
   if (!Object.hasOwn(mumbaiAgentSlots, provider)) return null
   const request = words.join(' ') || 'status'
-  const explicit = /^(?:create|follow|come|wait|status|inspect|capabilities|release|cancel|screenshot)$/.test(request) || /^task(?:\s|$)/.test(request) ||
-    /^build (?:(?:platform|shelter) )?\d+ \d+(?: [a-z0-9_:]+)?$/.test(request) || /^(?:collect|deliver) [a-z0-9_:]+ \d+$/.test(request)
+  const explicit = /^(?:create|follow|come|wait|status|inspect|review|capabilities|release|cancel|screenshot)$/.test(request) || /^task(?:\s|$)/.test(request) ||
+    /^build (?:(?:platform|shelter) )?\d+ \d+(?: [a-z0-9_:]+)?$/.test(request) || /^(?:collect|deliver) [a-z0-9_:]+ \d+$/.test(request)||request==='purchases off'
   return { provider, event: { ...event, action: explicit ? 'agent' : 'agent_task', args: request } }
 }
 
@@ -79,7 +81,7 @@ export async function waitForMumbaiTaskPosition(slot, region, timeoutMs = 5000) 
   }
 }
 
-export async function createMumbaiAgentService({ rootDirectory, runtimeDirectory, world, providers, identity, api, serverId, botFactory } = {}) {
+export async function createMumbaiAgentService({ rootDirectory, runtimeDirectory, world, providers, identity, api, serverId, botFactory, agentShop,economyProvider,reviewer } = {}) {
   if (world?.available !== true || world.personalAgentCapacity !== 5 || world.initializedTaskPads !== 5 || !world.mumbaiAgentBounds || !world.mumbaiAgentSpawn ||
       !Array.isArray(world.taskRegions) || Object.values(mumbaiAgentSlots).some(name => world.taskRegions.filter(region => region.slotName === name && region.worldName === 'agentcity_mumbai').length !== 1)) {
     throw Error('MUMBAI_AGENT_PLUGIN_UPGRADE_REQUIRED')
@@ -93,7 +95,7 @@ export async function createMumbaiAgentService({ rootDirectory, runtimeDirectory
     for (const [provider, slotName] of Object.entries(mumbaiAgentSlots)) {
       let manager
       manager = await createAgentManager({ rootDirectory, runtimeDirectory: join(runtimeDirectory, 'mumbai-' + provider),
-        agentNames: [slotName], modelProvider: providers[provider], botFactory,
+        agentNames: [slotName], modelProvider: providers[provider], botFactory,publicModelLabel:'adaptive compute',
         playWorld: 'agentcity_mumbai', playSpawn: world.mumbaiAgentSpawn, movementBounds: world.mumbaiAgentBounds,
         taskRegions: world.taskRegions.filter(region => region.slotName === slotName),
         onTaskLock: async (slot, task, state) => {
@@ -105,7 +107,7 @@ export async function createMumbaiAgentService({ rootDirectory, runtimeDirectory
         },
         onTaskResult: async (ownerId, message) => {
           const slot = manager.slots.find(slot => slot.ownerId === ownerId)
-          if (slot?.minecraftPlayerId) await api('notify', { playerId: slot.minecraftPlayerId, message: `${provider}: ${message}`.slice(0, 3000) })
+          if (slot?.minecraftPlayerId) await api('notify', { playerId: slot.minecraftPlayerId, message: `${provider==='claude'?'Agent':'0G'}: ${message}`.replace(/\bclaude\b/gi,'Agent').slice(0, 3000) })
         }
       })
       const connect = manager.ensureBot.bind(manager)
@@ -123,7 +125,9 @@ export async function createMumbaiAgentService({ rootDirectory, runtimeDirectory
         return pending
       }
       managers[provider] = manager
-      if(world.mumbai?.survival===true)objectives[provider]=await new SurvivalObjectives({rootDirectory,manager,world,api}).initialize()
+      if(world.mumbai?.survival===true)objectives[provider]=await new SurvivalObjectives({rootDirectory,manager,world,api,label:provider==='claude'?'Agent':'0G',reviewer,
+        planner:economyProvider?createAdaptivePlanner({economy:economyProvider,advanced:providers[provider],requestModel:(p,m,s)=>manager.intents.requestModel(m,s,p)}):undefined,
+        purchase:agentShop?input=>agentShop('purchase',{...input,provider}):undefined}).initialize()
     }
     return {
       managers,
@@ -131,11 +135,16 @@ export async function createMumbaiAgentService({ rootDirectory, runtimeDirectory
         const route = mumbaiAgentCommand(event)
         if (!route) return help
         const attributed = await approvedMumbaiOwner({ identity, api, serverId }, route.event)
+        if(String(attributed.args).trim()==='purchases off'){
+          if(!agentShop)throw Error('AGENT_PURCHASE_NOT_CONFIGURED')
+          return(await agentShop('revoke',{playerId:attributed.actorPlayerId,connectionId:attributed.connectionId})).message
+        }
         const survival=objectives[route.provider],text=String(attributed.args||'').trim()
         if(survival){
           const command=attributed.action==='agent_task'?'task':text.split(/\s+/)[0]
           if(command==='task')return survival.start(attributed,attributed.action==='agent_task'?text:text.replace(/^task\s*/,''))
           if(command==='capabilities')return 'Survival skills: '+JSON.stringify(survivalSkills)
+          if(command==='review')return survival.reviewLatest(attributed)
           if(command==='status'&&survival.latest(attributed.playerId))return survival.status(attributed.playerId)
           if(['wait','cancel','follow','come','release','build','collect','deliver'].includes(command))await survival.stop(attributed.playerId)
           if(command==='inspect'){
@@ -181,7 +190,16 @@ async function main() {
     return response.json()
   }
   const configuration = await json(join(root, '.local/comparison/providers.json'))
+  const agentShop=async(action,input)=>{
+    const response=await fetch('http://127.0.0.1:8789/api/agent-shop/'+action,{method:'POST',headers:{Authorization:'Bearer '+token,'Content-Type':'application/json'},
+      body:JSON.stringify(input),signal:AbortSignal.timeout(120000)})
+    const result=await response.json()
+    if(!response.ok)throw Error(result.error||'AGENT_SHOP_UNAVAILABLE')
+    return result
+  }
   const providers = { '0g': await loadZeroGProvider(root, configuration.CityAgent2), claude: await loadAgentModelProvider(root, configuration.CityAgent3) }
+  const economyProvider=await loadZeroGProvider(root,{...configuration.CityAgent2,model:zeroGEconomyModel.model,maxTokens:1536})
+  const reviewer=create0GReviewer({provider:{...providers['0g'],maxTokens:3072}})
   const environment = await json(join(root, '.local/backend/environment.json'))
   const pool = new pg.Pool({ connectionString: environment.databaseUrl, max: 3 })
   let identity, service, stopped = false
@@ -190,20 +208,20 @@ async function main() {
   const inFlight = new Map()
   try {
     identity = await openDiscordIdentityRuntime({ rootDirectory: root, pool, pluginApi: api })
-    service = await createMumbaiAgentService({ rootDirectory: root, runtimeDirectory, world: await api('status'), providers, identity: identity.service, api, serverId: active.serverId })
+    service = await createMumbaiAgentService({ rootDirectory: root, runtimeDirectory, world: await api('status'), providers, identity: identity.service, api, serverId: active.serverId,agentShop,economyProvider,reviewer })
     let setup
     try { setup = await json(join(root, '.local/mumbai/agents.json')) } catch (error) { if (error.code !== 'ENOENT') throw error }
     if (setup) {
       if (setup.schema !== 'agentcity.mumbai-agents.v1' || !UUID.test(setup.approvedPlayerId || '') || Object.keys(setup).some(key => !['schema', 'approvedPlayerId'].includes(key))) throw Error('MUMBAI_AGENT_OWNER_CONFIGURATION_INVALID')
       try { await service.createForApprovedPlayer(setup.approvedPlayerId) }
-      catch (error) { if (error.message !== 'MUMBAI_APPROVED_CONNECTION_REQUIRED') throw error; console.log('Mumbai owner is not currently approved online. Approve with /join, then use /agent 0g create and /agent claude create.') }
+      catch (error) { if (error.message !== 'MUMBAI_APPROVED_CONNECTION_REQUIRED') throw error; console.log('Mumbai owner is not currently approved online. Approve with /join, then use /agent 0g create and /agent agent create.') }
     }
     const restore = async () => {
       const result = await restoreExistingMumbaiAgents({ service, identity: identity.service, serverId: active.serverId })
       for (const skipped of result.skipped) console.error(`${skipped.name} idle reconnect skipped: ${skipped.error}`)
     }
     await restore()
-    console.log('Mumbai agents ready: CityAgent4 uses 0G; CityAgent5 uses Claude. Startup makes no planning requests. Existing three agents and budgets are retained.')
+    console.log('Mumbai workers ready: 0G and Agent use adaptive compute with 0G work assessments. Startup makes no planning requests. Existing ownership and budgets are retained.')
     let nativeUnavailable = false
     while (!stopped) {
       try {
@@ -216,7 +234,7 @@ async function main() {
             let message
             try { message = await service.handle(event) }
             catch (error) { message = 'Agent request stopped: ' + (/^[A-Z0-9_]+$/.test(error.code || error.message || '') ? error.code || error.message : 'MUMBAI_AGENT_REQUEST_UNAVAILABLE') }
-            await api('ack', { operationId: event.operationId, message: String(message).slice(0, 3000) })
+            await api('ack', { operationId: event.operationId, message: String(message).replace(/\bclaude\b/gi,'Agent').slice(0, 3000) })
           })().catch(() => console.error('Mumbai agent acknowledgement pending; the queued event will retry.')).finally(() => inFlight.delete(event.operationId))
           inFlight.set(event.operationId, work)
         }

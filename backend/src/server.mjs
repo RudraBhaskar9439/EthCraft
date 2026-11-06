@@ -69,6 +69,19 @@ createServer(async (request, response) => {
   const discordPath=onboardingPage==='/discord/setup'||['/discord/setup','/discord-setup.js','/discord-setup.js.LEGAL.txt','/api/discord/config','/api/discord/complete','/api/discord/wallet'].includes(request.url)
   if (request.headers.host !== `127.0.0.1:${port}` && !(playerPath&&request.headers.host===new URL(playerOrigin).host) && !(discordPath&&request.headers.host===new URL(discordOrigin).host)) { response.writeHead(403).end(); return }
   try {
+    const agentAction=request.url.match(/^\/api\/agent-shop\/(purchase|revoke)$/)
+    if(request.method==='POST'&&agentAction){
+      if(request.headers.origin||request.headers['content-type']!=='application/json'){humanResponse(response,403,{error:'AGENT_SHOP_PRIVATE_CLIENT_REQUIRED'});return}
+      const runtime=await inventoryShop()
+      if(!runtime.authenticateAgent(request.headers.authorization)){humanResponse(response,403,{error:'AGENT_SHOP_PRIVATE_CLIENT_REQUIRED'});return}
+      let size=0;const chunks=[]
+      for await(const chunk of request){size+=chunk.length;if(size>2048){humanResponse(response,413,{error:'AGENT_SHOP_REQUEST_TOO_LARGE'});return}chunks.push(chunk)}
+      try{
+        if(!runtime.agentShop)throw Error('AGENT_SHOP_NOT_ENABLED')
+        humanResponse(response,200,await runtime.agentShop[agentAction[1]](JSON.parse(Buffer.concat(chunks).toString('utf8'))))
+      }catch(error){humanResponse(response,409,{error:/^[A-Z0-9_]+$/.test(error.code||error.message||'')?error.code||error.message:'AGENT_SHOP_UNAVAILABLE'})}
+      return
+    }
     if(request.method==='GET'&&(onboardingPage==='/inventory-shop/checkout'||['/inventory-shop-checkout.js','/inventory-shop-checkout.js.LEGAL.txt'].includes(request.url))){
       response.setHeader('Content-Security-Policy',"default-src 'self'; script-src 'self' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; frame-src https://auth.privy.io https://challenges.cloudflare.com; connect-src 'self' https://auth.privy.io; frame-ancestors 'none'; base-uri 'none'; object-src 'none'")
       const page=onboardingPage==='/inventory-shop/checkout',asset=page?'companion/inventory-shop-checkout.html':'companion/dist/'+request.url.slice(1)

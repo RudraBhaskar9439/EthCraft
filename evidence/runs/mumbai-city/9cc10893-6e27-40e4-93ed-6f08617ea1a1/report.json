@@ -1,0 +1,99 @@
+{
+  "schema": "agentcity.mumbai-city-native-check.v1",
+  "runId": "9cc10893-6e27-40e4-93ed-6f08617ea1a1",
+  "status": "fail",
+  "isolatedId": "f6a707a18d124140b7d98b3210c2acc4",
+  "executedTestSha256": "5b27ff069db6692402bf6a653f876e51afbd310aac5c7c7e619bc5f1fdbb1a87",
+  "eventParserSourceSha256": "df053fc997f707110f3e85be0b39c891bd07c41b136a488ccbd4baab6f1bb181",
+  "pluginSha256": "94030479868f3488cdf1f1784b9c06e7d1fbff1c118b8954d6f3cc5f39f68022",
+  "serverId": "laptop-bank-1ce53d39d114410b90f72599ebae8b07",
+  "scope": "Actual isolated Paper and disclosed offline controlled native clients; no real user or independent-human qualification",
+  "publicTransactions": 0,
+  "walletSignatures": 0,
+  "paidModelCalls": 0,
+  "checks": [
+    {
+      "name": "Installed v1 bank migrated through bound intent/ready journal with archived marker and preserved world UUID",
+      "status": "pass",
+      "previousMarkerSha256": "91b32b2b7bb46f8bac67529745c3215ecd76618f418056cccbbba85982b4fe06",
+      "previousBlueprintSha256": "155deeb4fdb983a76e648570d8be5377ca9897a4748954952968f694ad15915a",
+      "blueprintSha256": "afcf848e9cc3d6a3b5c439702e703b04586197689ef2498cb0f5bff2995a1ab9",
+      "phase": "ready",
+      "worldUuid": "be915875-64ec-4498-ae2a-1a6800dd1e53"
+    },
+    {
+      "name": "Actual Paper parses the template block states; seven world identities, economic namespace and three legacy task regions are preserved with separate new Mumbai slots",
+      "status": "pass",
+      "nativeValidatedBlockStates": 22
+    },
+    {
+      "name": "Unapproved visitor remains frozen in the Mumbai arrival gate without an agent request or inventory change",
+      "status": "pass"
+    },
+    {
+      "name": "Approved visitor defaults to UniRock on a solid floor right of the agent concierge pads; existing items survive and one tagged shop compass is present",
+      "status": "pass",
+      "arrival": {
+        "y": 69,
+        "world": "agentcity_mumbai",
+        "z": 2808.5,
+        "x": 1698.5
+      },
+      "buttonAddedThisRun": true
+    },
+    {
+      "name": "Both new native agent clients idle in Survival at the safe Mumbai bank pads; no model call or inventory effect occurs",
+      "status": "pass"
+    }
+  ],
+  "messages": [],
+  "fixtureShopResponses": true,
+  "bankMigration": {
+    "previousMarkerSha256": "91b32b2b7bb46f8bac67529745c3215ecd76618f418056cccbbba85982b4fe06",
+    "previousBlueprintSha256": "155deeb4fdb983a76e648570d8be5377ca9897a4748954952968f694ad15915a",
+    "blueprintSha256": "afcf848e9cc3d6a3b5c439702e703b04586197689ef2498cb0f5bff2995a1ab9",
+    "phase": "ready",
+    "worldUuid": "be915875-64ec-4498-ae2a-1a6800dd1e53"
+  },
+  "arrivalDiagnostic": {
+    "native": {
+      "y": 69,
+      "world": "agentcity_mumbai",
+      "z": 2808.5,
+      "x": 1698.5
+    },
+    "client": {
+      "x": 1698.5,
+      "y": 69,
+      "z": 2808.5
+    },
+    "floor": {
+      "name": "smooth_quartz",
+      "boundingBox": "block",
+      "position": {
+        "x": 1698,
+        "y": 68,
+        "z": 2808
+      }
+    }
+  },
+  "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   {\n+     components: [],\n+     count: 2,\n+     name: 'string',\n+     nbt: null,\n+     slot: 36\n+   }\n+ ]\n- []\n",
+  "errorStack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   {\n+     components: [],\n+     count: 2,\n+     name: 'string',\n+     nbt: null,\n+     slot: 36\n+   }\n+ ]\n- []\n\n    at file:///Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/maps/mumbai-city-visit.mjs:154:12",
+  "finishedAt": "2026-11-06T10:26:23.029Z",
+  "sources": {
+    "plugin/src/main/java/org/agentcity/paper/UniRockBank.java": "0a7ee8ffe8b049d0b7c27f5cd8504a8facd8c9aa8d4c9eba8c4d54e4c92e4d79",
+    "plugin/src/main/java/org/agentcity/paper/MumbaiWorld.java": "76d824902265716df8696e91ea8a7f66b07010bfabb0ec0a160a71a0f06be3f2",
+    "plugin/src/main/java/org/agentcity/paper/PlayableExperience.java": "181160a3972a36cf8f32e5f18509eee06ff7487e284c181d58bc64eac9d4a362",
+    "plugin/src/main/java/org/agentcity/paper/InventoryMarketplace.java": "9db9fe24e0b565bdb17d5b2d1625f72a69e59cb82f193cb82b531da2971e1af0",
+    "plugin/src/main/java/org/agentcity/paper/AgentTaskProtection.java": "98fc3798f12e50e632376710f48ae06e73b5852c575e75a9c66bd200622f592f",
+    "plugin/src/main/java/org/agentcity/paper/InventoryEscrow.java": "fef29b8173c936fb600c668cbfb52d91cf3f74abc7ffb8f0f97d2d2617e8ceba",
+    "backend/src/playable/inventory-shop-runtime.mjs": "df053fc997f707110f3e85be0b39c891bd07c41b136a488ccbd4baab6f1bb181",
+    "backend/src/playable/survival-tools.mjs": "7810b24a16e13bd01241f163d506c1e3f9435db68ff1f69e4595155055f9dc36",
+    "backend/src/playable/survival-objectives.mjs": "0c75c655acf459f11ebafae1b29426469345902578d5b565391df76017772f9c",
+    "scripts/mumbai_agents.mjs": "a09308227b6651f7716ee6e80b672751de51a69e7ada4a220bf08ee37d57057e",
+    "scripts/laptop_host.py": "50a8e731c58e916a79ebb14ac693e5288ccccb3b8d39614827061986d3563b1b",
+    "scripts/mumbai_city_host.py": "abf6ad65481c2b1e981ab67792a8b422f078e9509c4ed8fa1f4e302124c09f52",
+    "tests/test_mumbai_city_host.py": "f18fdc58c0f1333117312f2e66b9f676fd7922e0d02d0675667865bc224aceaf",
+    "tests/maps/mumbai-city-visit.mjs": "5b27ff069db6692402bf6a653f876e51afbd310aac5c7c7e619bc5f1fdbb1a87"
+  }
+}

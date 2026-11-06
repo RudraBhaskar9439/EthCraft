@@ -131,6 +131,11 @@ def isolate():
     token = secrets.token_urlsafe(48)
     (runtime / 'api-token').write_text(token + '\n')
     (runtime / 'api-token').chmod(0o600)
+    properties = runtime / 'server.properties'
+    controls = {'enable-rcon': 'true', 'rcon.port': '25575', 'rcon.password': secrets.token_urlsafe(32), 'broadcast-rcon-to-ops': 'false'}
+    properties.write_text('\n'.join(line for line in properties.read_text().splitlines() if line.split('=', 1)[0] not in controls)
+                          + '\n' + '\n'.join(key + '=' + value for key, value in controls.items()) + '\n')
+    properties.chmod(0o600)
     shutil.copyfile(JAR, runtime / 'plugins/AgentCity.jar')
     data = {'owner': OWNER, 'id': identifier, 'runtime': str(runtime),
             'container': 'agentcity-mumbai-city-' + identifier[:8], 'javaImage': active['javaImage'],

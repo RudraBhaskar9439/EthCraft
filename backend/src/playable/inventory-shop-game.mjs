@@ -35,7 +35,7 @@ export function validateInventoryGameCall(manifest,row,input){
 }
 
 /** One GUI-confirmed order; signing uses the real user's separately enrolled Privy wallet. */
-export async function createInventoryShopGame({pool,identity,serverId,gameSession,native,getOperatorRuntime,getManagedWallets,merchant,createAssets=createWorldAssets,createFunding=createInventoryGameFunding}={}){
+export async function createInventoryShopGame({pool,identity,serverId,gameSession,native,getOperatorRuntime,getManagedWallets,merchant,authorizeDelegation,createAssets=createWorldAssets,createFunding=createInventoryGameFunding}={}){
   if(!pool?.query||!pool?.connect||typeof identity?.getMinecraftOwner!=='function'||!serverId||[gameSession,native,getOperatorRuntime,getManagedWallets].some(value=>typeof value!=='function')||
     !UUID.test(merchant?.principalId||'')||!UUID.test(merchant?.minecraftPlayerId||'')||merchant.sourceId!==merchant.minecraftPlayerId||merchant.sourceKind!=='player_inventory'||merchant.operatorSuppliedDemo!==true)fail('INVENTORY_SHOP_GAME_CONFIGURATION_REQUIRED')
   await pool.query(`CREATE TABLE IF NOT EXISTS ac_inventory_shop_game_orders(
@@ -127,12 +127,12 @@ export async function createInventoryShopGame({pool,identity,serverId,gameSessio
       paid:row.state.buy?.status==='complete',delivered:Boolean(row.state.delivered),deliveryConfirmed:Boolean(row.state.delivered),
       message:row.state.message||messages[status]||(status==='reverted'?'An original transaction reverted. Keep this order for operator recovery; do not create another payment.':undefined)}
   }
-  async function open(input){
+  async function open(input,agentRecipient){
     const quote=(await pool.query('SELECT * FROM ac_inventory_shop_quotes WHERE quote_id=$1',[input.quoteId])).rows[0]
     if(!quote||quote.principal_id!==input.principalId||quote.player_id!==input.playerId||quote.item!==input.item||quote.count!==input.count||quote.total_price!==input.totalBaseUnits||digest(quote.stock)!==digest(input.stock)||+new Date(quote.expires_at)!==input.expiresAtMs||input.stock?.sourceId!==merchant.sourceId||input.stock.provenance!=='operator_supplied_demo')fail('INVENTORY_SHOP_GAME_IMMUTABLE_QUOTE_REQUIRED')
     const {owner}=await current(quote.player_id,quote.connection_id,quote.principal_id),{manifest}=await runtimeFor(),fees=BigInt(manifest.worldAssets.maxNativeCostWei)
     const perTransaction=fees<GAME_TRANSACTION_CAP?fees:GAME_TRANSACTION_CAP
-    const terms={item:quote.item,count:quote.count,totalBaseUnits:quote.total_price,stock:quote.stock,merchant,manifestDigest:digest(manifest.worldAssets),maxNativeFeeWei:String(perTransaction*3n),perTransactionFeeWei:String(perTransaction)}
+    const terms={item:quote.item,count:quote.count,totalBaseUnits:quote.total_price,stock:quote.stock,merchant,manifestDigest:digest(manifest.worldAssets),maxNativeFeeWei:String(perTransaction*3n),perTransactionFeeWei:String(perTransaction),...(agentRecipient?{agentRecipient}:{})}
     const wallet=await existingWallet(owner)
     await pool.query(`INSERT INTO ac_inventory_shop_game_orders(order_id,quote_id,principal_id,player_id,connection_id,subject_hash,terms,wallet,consent_nonce,expires_at)
       VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) ON CONFLICT(quote_id) DO NOTHING`,[randomUUID(),quote.quote_id,owner.ownerId,quote.player_id,quote.connection_id,hash(owner.privySubject),json(terms),wallet,randomBytes(32).toString('base64url'),quote.expires_at])
@@ -311,8 +311,8 @@ export async function createInventoryShopGame({pool,identity,serverId,gameSessio
       const {session}=await current(row.player_id,input.connectionId,row.principal_id)
       try{
         const receipt=await native('escrow/claim',{operationId:operationId(row.order_id+':claim'),mailboxId:row.state.redeem.terms.backing.nativeListingId,
-          ownerId:row.principal_id,playerId:row.player_id,connectionId:session.connectionId})
-        if(receipt.claimed!==true||!inventoryShopNativeLotMatches(receipt,row.terms)||receipt.ownerId!==row.principal_id||receipt.playerId!==row.player_id)fail('INVENTORY_SHOP_NATIVE_DELIVERY_PENDING')
+          ownerId:row.principal_id,playerId:row.player_id,connectionId:session.connectionId,...(row.terms.agentRecipient?{recipientAgentId:row.terms.agentRecipient.playerId}:{})})
+        if(receipt.claimed!==true||!inventoryShopNativeLotMatches(receipt,row.terms)||receipt.ownerId!==row.principal_id||receipt.playerId!==row.player_id||row.terms.agentRecipient&&receipt.recipientAgentId!==row.terms.agentRecipient.playerId)fail('INVENTORY_SHOP_NATIVE_DELIVERY_PENDING')
         row.state.delivered=true;row.state.deliveryReceipt=receipt;delete row.state.message;await save(row)
       }catch(error){
         // A full inventory or open menu leaves the same paid mailbox claimable.
@@ -322,23 +322,36 @@ export async function createInventoryShopGame({pool,identity,serverId,gameSessio
     }
     return view(row,owner,{connectionId:input.connectionId})
   }
-  async function confirm(input){
+  async function confirm(input,delegatedAuthority){
     let {row,owner}=await order(input)
+    if(Boolean(row.terms.agentRecipient)!==Boolean(delegatedAuthority))fail('INVENTORY_SHOP_AGENT_POLICY_REQUIRED')
     if(!row.consent){
       if(row.state.fundingRequest&&row.state.funding?.status!=='complete')fail('INVENTORY_SHOP_GAME_ORIGINAL_STARTER_GRANT_PENDING')
       if(row.connection_id!==input.connectionId.toLowerCase()||+new Date(row.expires_at)<=Date.now())fail('INVENTORY_SHOP_FRESH_QUOTE_REQUIRED')
-      if(!TOKEN.test(input.consentNonce||'')||input.consentNonce!==row.consent_nonce||!UUID.test(input.confirmationId||''))fail('INVENTORY_SHOP_GAME_EXPLICIT_PAYMENT_CONFIRMATION_REQUIRED')
+      if(!delegatedAuthority&&(!TOKEN.test(input.consentNonce||'')||input.consentNonce!==row.consent_nonce||!UUID.test(input.confirmationId||'')))fail('INVENTORY_SHOP_GAME_EXPLICIT_PAYMENT_CONFIRMATION_REQUIRED')
       await walletFor(row,owner)
       if(!row.wallet)fail('INVENTORY_SHOP_GAME_REAL_PRIVY_WALLET_REQUIRED')
       const balance=await balances(row),fee=BigInt(row.terms.maxNativeFeeWei)
       if(balance.city<BigInt(row.terms.totalBaseUnits)||balance.native<fee||balance.remaining<fee)fail('INVENTORY_SHOP_GAME_INSUFFICIENT_FUNDS')
       const accepted={kind:'privy-game-inventory-purchase',principalId:row.principal_id,termsDigest:digest(row.terms),
-        wallet:row.wallet,consentNonce:row.consent_nonce,confirmationId:input.confirmationId,approvedAtMs:Date.now()}
+        wallet:row.wallet,consentNonce:row.consent_nonce,confirmationId:delegatedAuthority?.receiptId||input.confirmationId,approvedAtMs:Date.now(),...(delegatedAuthority?{approvalSource:'standing-agent-policy',delegationId:delegatedAuthority.policyId,delegationDigest:delegatedAuthority.policyDigest}:{})}
       delete row.state.message
       await pool.query('UPDATE ac_inventory_shop_game_orders SET consent=$2,state=$3 WHERE order_id=$1 AND consent IS NULL',[row.order_id,json(accepted),json(row.state)])
       row=(await pool.query('SELECT * FROM ac_inventory_shop_game_orders WHERE order_id=$1',[row.order_id])).rows[0]
-    }else if(input.consentNonce!==row.consent_nonce)fail('INVENTORY_SHOP_GAME_ORIGINAL_PAYMENT_REQUIRED')
+    }else if(!delegatedAuthority&&input.consentNonce!==row.consent_nonce)fail('INVENTORY_SHOP_GAME_ORIGINAL_PAYMENT_REQUIRED')
     return advance(row,owner,input)
+  }
+  async function openDelegated(input){
+    if(typeof authorizeDelegation!=='function')fail('INVENTORY_SHOP_AGENT_POLICY_REQUIRED')
+    const authority=await authorizeDelegation({phase:'prepare',input})
+    if(!authority?.recipient||!UUID.test(authority.recipient.playerId||''))fail('INVENTORY_SHOP_AGENT_RECIPIENT_REQUIRED')
+    return open(input,authority.recipient)
+  }
+  async function confirmDelegated(input){
+    if(typeof authorizeDelegation!=='function')fail('INVENTORY_SHOP_AGENT_POLICY_REQUIRED')
+    const {row,owner}=await order(input),authority=await authorizeDelegation({phase:'authorize',input,row,owner})
+    if(!UUID.test(authority?.receiptId||'')||!UUID.test(authority?.policyId||'')||authority.recipient?.playerId!==row.terms.agentRecipient?.playerId)fail('INVENTORY_SHOP_AGENT_POLICY_REQUIRED')
+    return confirm(input,authority)
   }
   async function status(input){
     const {row,owner}=await order(input)
@@ -353,6 +366,7 @@ export async function createInventoryShopGame({pool,identity,serverId,gameSessio
     const {owner}=await current(input?.playerId,input?.connectionId)
     const row=(await pool.query(`SELECT * FROM ac_inventory_shop_game_orders
       WHERE principal_id=$1 AND player_id=$2 AND subject_hash=$3
+        AND NOT (terms ? 'agentRecipient')
         AND state->>'delivered' IS DISTINCT FROM 'true'
         AND (consent IS NOT NULL OR state ? 'fundingRequest' OR expires_at>now())
       ORDER BY CASE WHEN consent IS NOT NULL AND state->'redeem'->>'status'='complete' THEN -1 WHEN consent IS NOT NULL THEN 0
@@ -360,5 +374,5 @@ export async function createInventoryShopGame({pool,identity,serverId,gameSessio
         created_at DESC LIMIT 1`,[owner.ownerId,input.playerId.toLowerCase(),hash(owner.privySubject)])).rows[0]
     return row?view(row,owner,{connectionId:input.connectionId,readOnly:true}):null
   }
-  return{open:serialize(open),enroll:serialize(enroll),fund:serialize(fund),confirm:serialize(confirm),status:serialize(status),latest:serialize(latest)}
+  return{open:serialize(open),openDelegated:serialize(openDelegated),confirmDelegated:serialize(confirmDelegated),enroll:serialize(enroll),fund:serialize(fund),confirm:serialize(confirm),status:serialize(status),latest:serialize(latest)}
 }

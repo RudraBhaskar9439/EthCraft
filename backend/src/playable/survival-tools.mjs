@@ -1,5 +1,6 @@
 import { createRequire } from 'node:module'
 import { join } from 'node:path'
+import {readFile} from 'node:fs/promises'
 import { setTimeout as pause } from 'node:timers/promises'
 import { compileTaskPlan, NativeTaskAdapter } from './task-tools.mjs'
 
@@ -14,7 +15,7 @@ const allowed = {
   build: ['structure', 'width', 'depth', 'height', 'item', 'position'],
   place: ['item', 'position'], activate: ['position'], equip: ['item', 'destination'],
   eat: [], smelt: ['item', 'count', 'fuel', 'position'], hunt: ['animal', 'count'],
-  deposit: ['item', 'count', 'position'], withdraw: ['item', 'count', 'position'], observe: []
+  deposit: ['item', 'count', 'position'], withdraw: ['item', 'count', 'position'], observe: [], purchase:['item','count'], blueprint:[]
 }
 export const survivalSkills = Object.freeze({
   move: 'Walk to an observed reachable absolute [x,y,z]; no path digging or free scaffolding.',
@@ -29,13 +30,15 @@ export const survivalSkills = Object.freeze({
   hunt: 'Hunt a nearby cow/pig/chicken/sheep/rabbit for real drops. Never attack players, agents, villagers or pets.',
   deposit: 'Deposit carried items into an observed chest.',
   withdraw: 'Withdraw materials only from this agent’s registered source chest.',
+  purchase: 'Request up to 32 stocked shop materials for this objective. Backend checks standing owner consent and spends existing testnet CITY/gas only; no funding, swaps or wallet selection. Wait for actual delivery. Prefer available source supplies or gathering before buying.',
+  blueprint: 'Read the pinned 144-block calculator material bill and relative placements. Planning data only; placement orientation and a working circuit still require real verification.',
   observe: 'Read health, hunger, inventory, surroundings, recipes and nearby entities. No effects or financial permissions.'
 })
 export function validateSurvivalTool(value) {
   if (!value || typeof value !== 'object' || Array.isArray(value) || !Object.hasOwn(allowed, value.tool) || Object.keys(value).some(k => k !== 'tool' && !allowed[value.tool].includes(k))) throw Error('INVALID_SURVIVAL_TOOL')
   for (const key of ['item', 'fuel']) if (value[key] !== undefined && (typeof value[key] !== 'string' || !/^[a-z][a-z0-9_]{0,63}$/.test(value[key]))) throw Error('INVALID_SURVIVAL_ITEM')
-  if (['gather', 'craft', 'deposit', 'withdraw', 'smelt', 'equip', 'place', 'build'].includes(value.tool) && !value.item) throw Error('SURVIVAL_ITEM_REQUIRED')
-  if (['gather', 'craft', 'deposit', 'withdraw', 'smelt'].includes(value.tool) && (!Number.isSafeInteger(value.count) || value.count < 1 || value.count > (value.tool === 'smelt' ? 16 : 32))) throw Error('INVALID_SURVIVAL_COUNT')
+  if (['purchase','gather', 'craft', 'deposit', 'withdraw', 'smelt', 'equip', 'place', 'build'].includes(value.tool) && !value.item) throw Error('SURVIVAL_ITEM_REQUIRED')
+  if (['purchase','gather', 'craft', 'deposit', 'withdraw', 'smelt'].includes(value.tool) && (!Number.isSafeInteger(value.count) || value.count < 1 || value.count > (value.tool === 'smelt' ? 16 : 32))) throw Error('INVALID_SURVIVAL_COUNT')
   if (value.position !== undefined && (!Array.isArray(value.position) || value.position.length !== 3 || !value.position.every(Number.isSafeInteger))) throw Error('INVALID_SURVIVAL_POSITION')
   if (['move', 'place', 'activate', 'deposit', 'withdraw', 'smelt'].includes(value.tool) && !value.position) throw Error('SURVIVAL_POSITION_REQUIRED')
   if (value.tool === 'build' && (!['house', 'tower', 'bridge', 'wall', 'stairs', 'arch'].includes(value.structure) || ![value.width, value.depth, value.height].every((n, i) => Number.isSafeInteger(n) && n >= 1 && n <= (i === 2 ? 6 : 8)))) throw Error('INVALID_SURVIVAL_BUILD')
@@ -91,8 +94,15 @@ export class SurvivalTools {
   }
   async effect(details, run, verify) {
     await this.guard(); await this.beforeEffect({ ...details, inventoryBefore: inventory(this.bot) })
-    const applied = await run(); await this.guard(); await pause(150)
-    const result = await verify(applied)
+    const applied = await run(); await this.guard()
+    const deadline=Date.now()+3000
+    let result
+    while(true){
+      try{result=await verify(applied);break}catch(error){
+        if(!/RECEIPT_UNCERTAIN$/.test(error.message)||Date.now()>=deadline)throw error
+        await this.guard();await pause(100)
+      }
+    }
     await this.receipt({ ...details, result, inventoryAfter: inventory(this.bot) })
     return result
   }
@@ -120,6 +130,11 @@ export class SurvivalTools {
   async execute(raw) {
     const step = validateSurvivalTool(raw); await this.guard()
     const bot = this.bot, count = () => inventory(bot)[step.item] || 0
+    if(step.tool==='blueprint'){
+      const blueprint=JSON.parse(await readFile(join(this.rootDirectory,'fixtures/blueprints/calculator-v1.json'),'utf8'))
+      return{id:blueprint.id,bounds:blueprint.bounds,materialBill:blueprint.material_bill,placements:blueprint.placements,
+        message:'Relative coordinates and required block states; this does not construct or verify a circuit.'}
+    }
     if (step.tool === 'observe') return this.observe()
     if (step.tool === 'move') return this.move(step.position)
     if (step.tool === 'place') return this.place(step.position, step.item)

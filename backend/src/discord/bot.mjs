@@ -149,11 +149,12 @@ export function identityOnlyInteractionAllowed(interaction) {
 }
 
 export function agentPanel(slot, viewerOwnerId, { identityOnly = false } = {}) {
-  if (identityOnly) return { embeds: [new EmbedBuilder().setColor(0x497ed0).setTitle(`${slot.name}${slot.provider === '0g' ? ' · 0G' : slot.provider === 'anthropic' ? ' · Claude' : ''} · ${slot.ownerName}`)
+  const ownerLabel=slot.ownerName==='CompareClaude'?'CompareAgent':slot.ownerName
+  if (identityOnly) return { embeds: [new EmbedBuilder().setColor(0x497ed0).setTitle(`${slot.name}${slot.provider === '0g' ? ' · 0G' : slot.provider === 'anthropic' ? ' · Agent' : ''} · ${ownerLabel}`)
     .setDescription('Read-only saved status. Agent ownership and the existing Minecraft worker are unchanged.')
     .addFields({ name: 'Latest saved work', value: slot.workflow ? `${slot.workflow.status} · ${slot.workflow.index}/${slot.workflow.steps.length} steps` : slot.tasks?.at(-1)?.status || 'No saved task status.' })], components: [] }
   const own = slot.ownerId === viewerOwnerId, workflow = slot.workflow
-  const embed = new EmbedBuilder().setColor(own ? 0x37a77a : 0x497ed0).setTitle(`${slot.name} · ${slot.ownerName}`)
+  const embed = new EmbedBuilder().setColor(own ? 0x37a77a : 0x497ed0).setTitle(`${slot.name} · ${ownerLabel}`)
     .setDescription(own ? 'Your agent. Chat, check supplies, request an actual world view, or control work while Minecraft is closed.' : 'Another player’s agent. Request work and agree terms before it acts.')
     .addFields({ name: 'State', value: `${slot.connected ? 'Connected' : 'Sleeping'} · ${slot.mode || 'waiting'}` },
       { name: 'Work', value: own && workflow ? `${workflow.status} · ${workflow.index}/${workflow.steps.length} steps` : 'Open a work request for availability.' })

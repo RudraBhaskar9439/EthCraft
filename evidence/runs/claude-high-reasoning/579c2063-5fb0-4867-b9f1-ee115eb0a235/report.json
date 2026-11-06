@@ -1,0 +1,26 @@
+{
+  "schema": "agentcity.claude-high-reasoning-planning-check.v1",
+  "at": "2026-11-06T09:54:51.056Z",
+  "scope": "Real adaptive/high-effort API proposal on disclosed fixture observations; no Minecraft actions or payments.",
+  "minecraftActions": 0,
+  "financialTransactions": 0,
+  "status": "pass",
+  "model": "claude-sonnet-5-5",
+  "thinkingMode": "adaptive",
+  "effort": "high",
+  "limits": {
+    "maxTokens": 4096,
+    "maxDecisions": 60
+  },
+  "validatedStep": {
+    "tool": "withdraw",
+    "item": "oak_planks",
+    "count": 30,
+    "position": [
+      1746,
+      69,
+      2810
+    ]
+  },
+  "check": "Correctly requests the exact 30-block shortfall before a 32-block house; no invented supplies or premature build."
+}

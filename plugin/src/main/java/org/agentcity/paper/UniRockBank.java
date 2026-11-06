@@ -65,8 +65,11 @@ final class UniRockBank {
             world.save();saveMarker(marker,world,hash,"ready");
             plugin.getLogger().info("UniRock prepared as operator scenery only; no inventory or economic stock granted.");
         }
-        for(var entry:plan.entrySet())if(!matches(at(world,entry.getKey()),entry.getValue(),states))throw new IllegalStateException("unirock_owned_build_changed");
-        for(var entry:migrationDelta().entrySet())if(entry.getValue().after()==null&&!at(world,entry.getKey()).getType().isAir())throw new IllegalStateException("unirock_owned_clearance_changed");
+        // A completed Survival bank is editable; preserve changes on restart instead of rebuilding or refusing startup.
+        if(migrating||!"ready".equals(phase)){
+            for(var entry:plan.entrySet())if(!matches(at(world,entry.getKey()),entry.getValue(),states))throw new IllegalStateException("unirock_owned_build_changed");
+            for(var entry:migrationDelta().entrySet())if(entry.getValue().after()==null&&!at(world,entry.getKey()).getType().isAir())throw new IllegalStateException("unirock_owned_clearance_changed");
+        }
         return new UniRockBank(world,descriptors.size()-1);
     }
     record Change(String before,String after) {}

@@ -21,12 +21,28 @@ These laptop addresses are not the teammate's older `bore.pub` server.
 - A separate earlier paid-work run consumed four real oak planks, built the
   fixed 2-by-2 platform and exercised CITY payment/acceptance and receipts.
   The new pool conversion did **not** fund that earlier task.
-- Read-only South Mumbai sightseeing, native walking, entry/return controls
+- Shared South Mumbai Survival editing, native walking, entry/return controls
   and preservation of the original worlds and saved inventories.
 
 The journal's 130 confirmed intents combine historical bank and current
 marketplace operations. They are not 130 new marketplace trades. The testnet
 results do not establish real-money readiness or completion of original phases.
+
+## Adaptive compute update
+
+The local workers now display as **Agent** and **0G**. Economy planning uses
+0G Qwen3.5-35B-A3B; complex reasoning and recovery use advanced compute. A
+GLM-4.7 assessment remains advisory, with one bounded correction cycle. Existing
+$25 advanced and $5 shared 0G ledgers, including unknown reservations, remain.
+Normal workers and the merchant have been restored; the earlier recovery-only
+worker is stopped. See [agent usage](AGENT_SURVIVAL.md) and the
+[real API probe](../evidence/runs/adaptive-model/fd952930-c132-4b46-bf19-c97345a04915/report.json).
+
+The updated plugin passed [16 isolated native checks](../evidence/runs/mumbai-city/089c16ae-3e9a-406a-928c-af9d8ab6939b/report.json)
+before local deployment. These include editable Survival, native shop recovery,
+real crafting/building/redstone tools and protected bank services. The new
+router/reviewer still needs a fresh owner-issued objective in the live game;
+API fixture probes do not prove that journey or arbitrary task capability.
 
 ## Finish the playable demonstration
 
@@ -52,8 +68,8 @@ results do not establish real-money readiness or completion of original phases.
    seconds; 0G baseline planning took 46–59 seconds. Reconcile the unknown 0G
    charge ($0.1893888 reserved, not confirmed spent) before retrying. These narrow
    controlled tests do not establish universal creativity or the original live
-   phase gates. Both agents are idle; the retained recovery worker disables all
-   model calls and must stop before the normal worker starts. Model output cannot
+   phase gates. Both agents were idle in that historical comparison. Normal adaptive workers
+   are now running. Model output cannot
    authorize funds or bypass checks.
 
 ## Before a public production launch

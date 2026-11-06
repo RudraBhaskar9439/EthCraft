@@ -1,0 +1,55 @@
+{
+  "schema": "agentcity.adaptive-compute-probe.v1",
+  "scope": "Real API generation on disclosed fixture observations only",
+  "minecraftActions": 0,
+  "cityTransactions": 0,
+  "checks": [
+    {
+      "status": "pass",
+      "kind": "planning",
+      "route": {
+        "tier": "economy",
+        "reason": "Routine bounded tool selection",
+        "provider": "0g",
+        "model": "qwen3.5-35b-a3b",
+        "maxTokens": 1536,
+        "contextBytes": 4672
+      },
+      "step": {
+        "item": "stick",
+        "count": 4,
+        "tool": "craft"
+      }
+    },
+    {
+      "status": "pass",
+      "kind": "planning",
+      "route": {
+        "tier": "advanced",
+        "reason": "Circuit reasoning and verification",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "maxTokens": 16384,
+        "contextBytes": 4714
+      },
+      "step": {
+        "tool": "blueprint"
+      }
+    },
+    {
+      "status": "pass",
+      "kind": "review",
+      "review": {
+        "issues": [],
+        "summary": "All objective steps are fully evidenced: (1) four sticks were crafted (produced:4, inventoryAfter stick:4), (2) all four sticks were deposited into the destination chest (moved:4, inventoryAfter empty), and (3) the destination chest observation confirms stick:4. No unresolved or omitted effects.",
+        "verdict": "meets_objective",
+        "reviewer": "0G",
+        "model": "glm-4.7",
+        "advisory": true,
+        "evidenceLimited": false
+      }
+    }
+  ],
+  "status": "pass",
+  "finishedAt": "2026-11-06T13:00:14.774Z"
+}

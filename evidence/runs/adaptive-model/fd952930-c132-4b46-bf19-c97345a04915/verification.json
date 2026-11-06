@@ -1,0 +1,41 @@
+{
+  "schema": "agentcity.adaptive-verification.v1",
+  "at": "2026-11-06T13:15:51.978521+00:00",
+  "status": "pass",
+  "scope": "Local extension verification; original phase and independent-human gates are not passed by these checks.",
+  "passed": [
+    "node tests/playable/adaptive-planner.mjs",
+    "node tests/playable/agent-shop.mjs",
+    "node tests/playable/inventory-shop-game.mjs",
+    "node tests/playable/inventory-shop-runtime.mjs",
+    "node tests/playable/survival.mjs",
+    "node tests/playable/mumbai-agents.mjs",
+    "node tests/playable/discord-bot.mjs (13 fixture checks)",
+    "node tests/playable/discord-identity-only.mjs",
+    "node tests/inference/zero-g-budget.mjs",
+    "node tests/inference/zero-g.mjs",
+    "node tests/inference/anthropic-budget.mjs",
+    "node tests/inference/anthropic.mjs",
+    "python3 scripts/check_plan.py",
+    "python3 -m unittest discover -s tests -v (79 tests)",
+    "python3 scripts/build_plugin.py",
+    "node tests/maps/mumbai-city-visit.mjs (16 isolated native checks)",
+    "node tests/playable/adaptive-model-live.mjs --run (real fixture planning and review)",
+    "staged secret scan and git diff --cached --check"
+  ],
+  "exactStagedSnapshotRetest": [
+    "adaptive-planner",
+    "agent-shop",
+    "inventory-shop-game",
+    "inventory-shop-runtime",
+    "zero-g-budget",
+    "zero-g"
+  ],
+  "notEstablished": [
+    "Fresh real-owner game objective using the new router and review",
+    "Universal Survival, arbitrary builds, hostile combat or arbitrary recipes",
+    "Fresh live delegated paid material delivery",
+    "Original independent-human release gates"
+  ],
+  "phaseStatus": "P3 extension remains in progress for original phase qualification; local implementation verified."
+}

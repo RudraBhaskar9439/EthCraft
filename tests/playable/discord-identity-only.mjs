@@ -43,7 +43,7 @@ try {
   await bridge.interaction(interaction('command', 'agents'))
   assert(!JSON.stringify(replies.at(-1)).includes('ac:create'))
   assert.equal(replies.at(-1).components[0].toJSON().components[0].options.length, 5)
-  assert.deepEqual(replies.at(-1).embeds.map(embed => embed.toJSON().title), ['CityAgent4 · 0G · Fixture', 'CityAgent5 · Claude · Fixture'])
+  assert.deepEqual(replies.at(-1).embeds.map(embed => embed.toJSON().title), ['CityAgent4 · 0G · Fixture', 'CityAgent5 · Agent · Fixture'])
   await bridge.interaction(interaction('select', undefined, 'ac:select'))
   assert.deepEqual(replies.at(-1).components, [])
   for (const stale of [interaction('command', 'assets'), interaction('button', undefined, 'ac:bank-confirm:old'), interaction('button', undefined, 'ac:ask:CityAgent2'), interaction('modal', undefined, 'ac:work-submit:CityAgent2')]) {

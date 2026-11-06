@@ -1,0 +1,4709 @@
+{
+  "schema": "agentcity.operator-floor-action.v1",
+  "status": "pass",
+  "operationId": "924d4185-8911-4832-874f-31351fbd5dca",
+  "serverId": "laptop-bank-1ce53d39d114410b90f72599ebae8b07",
+  "container": "agentcity-playable-1ce53d39",
+  "at": "2026-11-06T12:57:42.886918+00:00",
+  "bounds": [
+    "1683 68 2807 1702 68 2813",
+    "1660 68 2812 1722 68 2816",
+    "1723 68 2814 1757 68 2816"
+  ],
+  "material": "minecraft:smooth_quartz",
+  "replaceOnly": "minecraft:air",
+  "responses": [
+    "Successfully filled 26 block(s)",
+    "Successfully filled 4 block(s)",
+    "No blocks were filled"
+  ],
+  "temporaryChunkTicketsRemoved": "Unmarked 14 chunks in minecraft:agentcity_mumbai from [103, 175] to [109, 176] for force loading",
+  "inventoryGrants": 0,
+  "walletTransactions": 0,
+  "world": "agentcity_mumbai",
+  "scope": "One-time operator repair of creeper-damaged arrival flooring; AIR replacement only; observed all pre-existing non-air blocks unchanged",
+  "beforeCells": [
+    {
+      "position": [
+        1683,
+        68,
+        2807
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1683,
+        68,
+        2808
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1683,
+        68,
+        2809
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1683,
+        68,
+        2810
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1683,
+        68,
+        2811
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1683,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1683,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1684,
+        68,
+        2807
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1684,
+        68,
+        2808
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1684,
+        68,
+        2809
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1684,
+        68,
+        2810
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1684,
+        68,
+        2811
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1684,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1684,
+        68,
+        2813
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1685,
+        68,
+        2807
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1685,
+        68,
+        2808
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1685,
+        68,
+        2809
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1685,
+        68,
+        2810
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1685,
+        68,
+        2811
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1685,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1685,
+        68,
+        2813
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1686,
+        68,
+        2807
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1686,
+        68,
+        2808
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1686,
+        68,
+        2809
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1686,
+        68,
+        2810
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1686,
+        68,
+        2811
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1686,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1686,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1687,
+        68,
+        2807
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1687,
+        68,
+        2808
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1687,
+        68,
+        2809
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1687,
+        68,
+        2810
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1687,
+        68,
+        2811
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1687,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1687,
+        68,
+        2813
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1688,
+        68,
+        2807
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1688,
+        68,
+        2808
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1688,
+        68,
+        2809
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1688,
+        68,
+        2810
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1688,
+        68,
+        2811
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1688,
+        68,
+        2812
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1688,
+        68,
+        2813
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1689,
+        68,
+        2807
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1689,
+        68,
+        2808
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1689,
+        68,
+        2809
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1689,
+        68,
+        2810
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1689,
+        68,
+        2811
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1689,
+        68,
+        2812
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1689,
+        68,
+        2813
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1690,
+        68,
+        2807
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1690,
+        68,
+        2808
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1690,
+        68,
+        2809
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1690,
+        68,
+        2810
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1690,
+        68,
+        2811
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1690,
+        68,
+        2812
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1690,
+        68,
+        2813
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1691,
+        68,
+        2807
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1691,
+        68,
+        2808
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1691,
+        68,
+        2809
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1691,
+        68,
+        2810
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1691,
+        68,
+        2811
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1691,
+        68,
+        2812
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1691,
+        68,
+        2813
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1692,
+        68,
+        2807
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1692,
+        68,
+        2808
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1692,
+        68,
+        2809
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1692,
+        68,
+        2810
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1692,
+        68,
+        2811
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1692,
+        68,
+        2812
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1692,
+        68,
+        2813
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1693,
+        68,
+        2807
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1693,
+        68,
+        2808
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1693,
+        68,
+        2809
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1693,
+        68,
+        2810
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1693,
+        68,
+        2811
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1693,
+        68,
+        2812
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1693,
+        68,
+        2813
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1694,
+        68,
+        2807
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1694,
+        68,
+        2808
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1694,
+        68,
+        2809
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1694,
+        68,
+        2810
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1694,
+        68,
+        2811
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1694,
+        68,
+        2812
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1694,
+        68,
+        2813
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1695,
+        68,
+        2807
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1695,
+        68,
+        2808
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1695,
+        68,
+        2809
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1695,
+        68,
+        2810
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1695,
+        68,
+        2811
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1695,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1695,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1696,
+        68,
+        2807
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1696,
+        68,
+        2808
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1696,
+        68,
+        2809
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1696,
+        68,
+        2810
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1696,
+        68,
+        2811
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1696,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1696,
+        68,
+        2813
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1697,
+        68,
+        2807
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1697,
+        68,
+        2808
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1697,
+        68,
+        2809
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1697,
+        68,
+        2810
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1697,
+        68,
+        2811
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1697,
+        68,
+        2812
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1697,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1698,
+        68,
+        2807
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1698,
+        68,
+        2808
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1698,
+        68,
+        2809
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1698,
+        68,
+        2810
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1698,
+        68,
+        2811
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1698,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1698,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1699,
+        68,
+        2807
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1699,
+        68,
+        2808
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1699,
+        68,
+        2809
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1699,
+        68,
+        2810
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1699,
+        68,
+        2811
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1699,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1699,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1700,
+        68,
+        2807
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1700,
+        68,
+        2808
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1700,
+        68,
+        2809
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1700,
+        68,
+        2810
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1700,
+        68,
+        2811
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1700,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1700,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1701,
+        68,
+        2807
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1701,
+        68,
+        2808
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1701,
+        68,
+        2809
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1701,
+        68,
+        2810
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1701,
+        68,
+        2811
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1701,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1701,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1702,
+        68,
+        2807
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1702,
+        68,
+        2808
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1702,
+        68,
+        2809
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1702,
+        68,
+        2810
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1702,
+        68,
+        2811
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1702,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1702,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1660,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1660,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1660,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1660,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1660,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1661,
+        68,
+        2812
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1661,
+        68,
+        2813
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1661,
+        68,
+        2814
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1661,
+        68,
+        2815
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1661,
+        68,
+        2816
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1662,
+        68,
+        2812
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1662,
+        68,
+        2813
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1662,
+        68,
+        2814
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1662,
+        68,
+        2815
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1662,
+        68,
+        2816
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1663,
+        68,
+        2812
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1663,
+        68,
+        2813
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1663,
+        68,
+        2814
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1663,
+        68,
+        2815
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1663,
+        68,
+        2816
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1664,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1664,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1664,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1664,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1664,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1665,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1665,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1665,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1665,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1665,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1666,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1666,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1666,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1666,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1666,
+        68,
+        2816
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1667,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1667,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1667,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1667,
+        68,
+        2815
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1667,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1668,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1668,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1668,
+        68,
+        2814
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1668,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1668,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1669,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1669,
+        68,
+        2813
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1669,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1669,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1669,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1670,
+        68,
+        2812
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1670,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1670,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1670,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1670,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1671,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1671,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1671,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1671,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1671,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1672,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1672,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1672,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1672,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1672,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1673,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1673,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1673,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1673,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1673,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1674,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1674,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1674,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1674,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1674,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1675,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1675,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1675,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1675,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1675,
+        68,
+        2816
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1676,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1676,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1676,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1676,
+        68,
+        2815
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1676,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1677,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1677,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1677,
+        68,
+        2814
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1677,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1677,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1678,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1678,
+        68,
+        2813
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1678,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1678,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1678,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1679,
+        68,
+        2812
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1679,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1679,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1679,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1679,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1680,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1680,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1680,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1680,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1680,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1681,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1681,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1681,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1681,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1681,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1682,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1682,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1682,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1682,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1682,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1683,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1683,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1683,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1684,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1684,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1684,
+        68,
+        2816
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1685,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1685,
+        68,
+        2815
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1685,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1686,
+        68,
+        2814
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1686,
+        68,
+        2815
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1686,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1687,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1687,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1687,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1688,
+        68,
+        2814
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1688,
+        68,
+        2815
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1688,
+        68,
+        2816
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1689,
+        68,
+        2814
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1689,
+        68,
+        2815
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1689,
+        68,
+        2816
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1690,
+        68,
+        2814
+      ],
+      "name": "air",
+      "stateId": 0
+    },
+    {
+      "position": [
+        1690,
+        68,
+        2815
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1690,
+        68,
+        2816
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1691,
+        68,
+        2814
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1691,
+        68,
+        2815
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1691,
+        68,
+        2816
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1692,
+        68,
+        2814
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1692,
+        68,
+        2815
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1692,
+        68,
+        2816
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1693,
+        68,
+        2814
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1693,
+        68,
+        2815
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1693,
+        68,
+        2816
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1694,
+        68,
+        2814
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1694,
+        68,
+        2815
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1694,
+        68,
+        2816
+      ],
+      "name": "cyan_terracotta",
+      "stateId": 11251
+    },
+    {
+      "position": [
+        1695,
+        68,
+        2814
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1695,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1695,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1696,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1696,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1696,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1697,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1697,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1697,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1698,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1698,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1698,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1699,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1699,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1699,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1700,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1700,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1700,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1701,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1701,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1701,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1702,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1702,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1702,
+        68,
+        2816
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1703,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1703,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1703,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1703,
+        68,
+        2815
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1703,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1704,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1704,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1704,
+        68,
+        2814
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1704,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1704,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1705,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1705,
+        68,
+        2813
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1705,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1705,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1705,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1706,
+        68,
+        2812
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1706,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1706,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1706,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1706,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1707,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1707,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1707,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1707,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1707,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1708,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1708,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1708,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1708,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1708,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1709,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1709,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1709,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1709,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1709,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1710,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1710,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1710,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1710,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1710,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1711,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1711,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1711,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1711,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1711,
+        68,
+        2816
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1712,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1712,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1712,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1712,
+        68,
+        2815
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1712,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1713,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1713,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1713,
+        68,
+        2814
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1713,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1713,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1714,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1714,
+        68,
+        2813
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1714,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1714,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1714,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1715,
+        68,
+        2812
+      ],
+      "name": "polished_diorite",
+      "stateId": 5
+    },
+    {
+      "position": [
+        1715,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1715,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1715,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1715,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1716,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1716,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1716,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1716,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1716,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1717,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1717,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1717,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1717,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1717,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1718,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1718,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1718,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1718,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1718,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1719,
+        68,
+        2812
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1719,
+        68,
+        2813
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1719,
+        68,
+        2814
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1719,
+        68,
+        2815
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1719,
+        68,
+        2816
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1720,
+        68,
+        2812
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1720,
+        68,
+        2813
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1720,
+        68,
+        2814
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1720,
+        68,
+        2815
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1720,
+        68,
+        2816
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1721,
+        68,
+        2812
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1721,
+        68,
+        2813
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1721,
+        68,
+        2814
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1721,
+        68,
+        2815
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1721,
+        68,
+        2816
+      ],
+      "name": "polished_blackstone",
+      "stateId": 22040
+    },
+    {
+      "position": [
+        1722,
+        68,
+        2812
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1722,
+        68,
+        2813
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1722,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1722,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1722,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1723,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1723,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1723,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1724,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1724,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1724,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1725,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1725,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1725,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1726,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1726,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1726,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1727,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1727,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1727,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1728,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1728,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1728,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1729,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1729,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1729,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1730,
+        68,
+        2814
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1730,
+        68,
+        2815
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1730,
+        68,
+        2816
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1731,
+        68,
+        2814
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1731,
+        68,
+        2815
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1731,
+        68,
+        2816
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1732,
+        68,
+        2814
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1732,
+        68,
+        2815
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1732,
+        68,
+        2816
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1733,
+        68,
+        2814
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1733,
+        68,
+        2815
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1733,
+        68,
+        2816
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1734,
+        68,
+        2814
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1734,
+        68,
+        2815
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1734,
+        68,
+        2816
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1735,
+        68,
+        2814
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1735,
+        68,
+        2815
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1735,
+        68,
+        2816
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1736,
+        68,
+        2814
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1736,
+        68,
+        2815
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1736,
+        68,
+        2816
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1737,
+        68,
+        2814
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1737,
+        68,
+        2815
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1737,
+        68,
+        2816
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1738,
+        68,
+        2814
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1738,
+        68,
+        2815
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1738,
+        68,
+        2816
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1739,
+        68,
+        2814
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1739,
+        68,
+        2815
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1739,
+        68,
+        2816
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1740,
+        68,
+        2814
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1740,
+        68,
+        2815
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1740,
+        68,
+        2816
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1741,
+        68,
+        2814
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1741,
+        68,
+        2815
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1741,
+        68,
+        2816
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1742,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1742,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1742,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1743,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1743,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1743,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1744,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1744,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1744,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1745,
+        68,
+        2814
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1745,
+        68,
+        2815
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1745,
+        68,
+        2816
+      ],
+      "name": "smooth_quartz",
+      "stateId": 13280
+    },
+    {
+      "position": [
+        1746,
+        68,
+        2814
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1746,
+        68,
+        2815
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1746,
+        68,
+        2816
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1747,
+        68,
+        2814
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1747,
+        68,
+        2815
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1747,
+        68,
+        2816
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1748,
+        68,
+        2814
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1748,
+        68,
+        2815
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1748,
+        68,
+        2816
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1749,
+        68,
+        2814
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1749,
+        68,
+        2815
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1749,
+        68,
+        2816
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1750,
+        68,
+        2814
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1750,
+        68,
+        2815
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1750,
+        68,
+        2816
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1751,
+        68,
+        2814
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1751,
+        68,
+        2815
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1751,
+        68,
+        2816
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1752,
+        68,
+        2814
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1752,
+        68,
+        2815
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1752,
+        68,
+        2816
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1753,
+        68,
+        2814
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1753,
+        68,
+        2815
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1753,
+        68,
+        2816
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1754,
+        68,
+        2814
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1754,
+        68,
+        2815
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1754,
+        68,
+        2816
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1755,
+        68,
+        2814
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1755,
+        68,
+        2815
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1755,
+        68,
+        2816
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1756,
+        68,
+        2814
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1756,
+        68,
+        2815
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1756,
+        68,
+        2816
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1757,
+        68,
+        2814
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1757,
+        68,
+        2815
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    },
+    {
+      "position": [
+        1757,
+        68,
+        2816
+      ],
+      "name": "stone_bricks",
+      "stateId": 7553
+    }
+  ],
+  "verifiedRepairedCells": 30,
+  "verifiedUnchangedCells": 490
+}

@@ -1,0 +1,19 @@
+{
+  "schema": "agentcity.claude-budget-amendment.v1",
+  "at": "2026-11-06T09:54:30.864Z",
+  "previousLimitUsd": "1",
+  "approvedTotalLaptopLimitUsd": "25",
+  "maximumAdditionalAuthorizationUsd": "24",
+  "spentNanoUsdPreserved": 262566000,
+  "completedRequestsPreserved": 24,
+  "pendingRequestsPreserved": 0,
+  "priorLedgerSha256": "b19ec944f76ee83dd446c4762443959d2a79d22017de0bad7dfb283999042a71",
+  "planningProfile": {
+    "maxTokens": 4096,
+    "thinkingMode": "adaptive",
+    "effort": "high",
+    "objectiveDecisionLimit": 60
+  },
+  "zeroGSettingsChanged": false,
+  "apiGenerationCalls": 0
+}

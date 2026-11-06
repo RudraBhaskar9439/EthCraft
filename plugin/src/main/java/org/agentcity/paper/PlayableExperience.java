@@ -342,7 +342,7 @@ public final class PlayableExperience implements Listener {
         }
         if (!AGENTS.contains(player.getName())) {
             player.sendMessage(ChatColor.GOLD + (mumbai!=null?"Welcome to UniRock in Mumbai. The service desks are inside the bank.":"Welcome to the AgentCity lobby."));
-            player.sendMessage(ChatColor.YELLOW + "Use /agent 0g <request> or /agent claude <request>. Your Marketplace compass opens the CITY shop.");
+            player.sendMessage(ChatColor.YELLOW + "Use /agent 0g <request> or /agent agent <request>. Your Marketplace compass opens the CITY shop.");
             player.sendMessage(ChatColor.GRAY + "CITY purchases use testnet tokens and need your wallet confirmation. This local profile is not Microsoft identity verification.");
         }
     }
@@ -505,14 +505,16 @@ public final class PlayableExperience implements Listener {
         } else if (page.equals("agents")) {
             if(mumbai!=null){
                 menu.inventory.setItem(10,item(Material.ENDER_EYE,"Create / reconnect 0G agent","Uses the configured 0G provider and its retained budget."));
-                menu.inventory.setItem(11,item(Material.NETHER_STAR,"Create / reconnect Claude agent","Uses the configured Claude provider and its retained budget."));
+                menu.inventory.setItem(11,item(Material.NETHER_STAR,"Create / reconnect Agent","Adaptive compute uses the existing allowances."));
                 menu.inventory.setItem(12,item(Material.PAPER,"0G status","Read live task status."));
-                menu.inventory.setItem(13,item(Material.PAPER,"Claude status","Read live task status."));
+                menu.inventory.setItem(13,item(Material.PAPER,"Agent status","Read live task status."));
                 menu.inventory.setItem(14,item(Material.BARRIER,"Pause 0G","Stop your own agent."));
-                menu.inventory.setItem(15,item(Material.BARRIER,"Pause Claude","Stop your own agent."));
+                menu.inventory.setItem(15,item(Material.BARRIER,"Pause Agent","Stop your own agent."));
                 menu.inventory.setItem(16,item(Material.CHEST,"0G supplies","Inspect real inventory and stock."));
-                menu.inventory.setItem(17,item(Material.CHEST,"Claude supplies","Inspect real inventory and stock."));
-                menu.inventory.setItem(22,item(Material.WRITABLE_BOOK,"Give a task","/agent 0g <request>","/agent claude <request>"));
+                menu.inventory.setItem(17,item(Material.CHEST,"Agent supplies","Inspect real inventory and stock."));
+                menu.inventory.setItem(20,item(Material.BOOK,"0G assessment of Agent work","Review your latest Agent objective.","Uses the existing 0G compute allowance.","Owner approval remains separate."));
+                menu.inventory.setItem(24,item(Material.BOOK,"0G assessment of 0G work","Review your latest 0G objective.","This is a model assessment, not payment approval."));
+                menu.inventory.setItem(22,item(Material.WRITABLE_BOOK,"Give a task","/agent 0g <request>","/agent agent <request>"));
                 player.openInventory(menu.inventory); return;
             }
             menu.inventory.setItem(10,item(Material.PLAYER_HEAD,"Create my agent","Same request as /agent create"));
@@ -546,18 +548,18 @@ public final class PlayableExperience implements Listener {
         int slot = event.getRawSlot();
         if (menu.page.equals("agents")) {
             if(mumbai!=null){
-                String target=switch(slot){case 10,12,14,16->"0g";case 11,13,15,17->"claude";default->null;};
-                String action=switch(slot){case 10,11->"create";case 12,13->"status";case 14,15->"wait";case 16,17->"inspect";default->null;};
+                String target=switch(slot){case 10,12,14,16,24->"0g";case 11,13,15,17,20->"agent";default->null;};
+                String action=switch(slot){case 10,11->"create";case 12,13->"status";case 14,15->"wait";case 16,17->"inspect";case 20,24->"review";default->null;};
                 if(target!=null){enqueue(player,"agent",List.of(target+" "+action));player.closeInventory();}
-                else if(slot==22){player.closeInventory();player.sendMessage("Use /agent 0g <request> or /agent claude <request>.");}
+                else if(slot==22){player.closeInventory();player.sendMessage("Use /agent 0g <request> or /agent agent <request>.");}
                 return;
             }
             String action = switch(slot) {case 10 -> "agent_create"; case 11 -> "agent_follow"; case 12 -> "agent_come"; case 13 -> "agent_wait"; case 14 -> "agent_status"; case 15 -> "agent_release"; case 16 -> "agent_inspect"; case 17 -> "agent_capabilities"; default -> null;};
             if (action != null) { enqueue(player,action,List.of()); player.closeInventory(); }
             else if (slot == 22) { player.closeInventory(); player.sendMessage("Type /agent <your request> or @agent <request>."); }
         } else if (menu.page.equals("jobs")) {
-            if (slot == 11) { enqueue(player,"agent",List.of("claude capabilities")); player.closeInventory(); }
-            else if (slot == 15) { enqueue(player,"agent",List.of("claude status")); player.closeInventory(); }
+            if (slot == 11) { enqueue(player,"agent",List.of("agent capabilities")); player.closeInventory(); }
+            else if (slot == 15) { enqueue(player,"agent",List.of("agent status")); player.closeInventory(); }
         } else if (menu.page.equals("economy")) {
             if(slot==10||slot==12||slot==16){player.closeInventory();if(inventoryMarket!=null)inventoryMarket.open(player);}
             else if(slot==14){player.closeInventory();player.sendMessage("Only real merchant stock can be bought. Review and confirm the exact CITY amount in your own wallet.");}
@@ -572,7 +574,7 @@ public final class PlayableExperience implements Listener {
     private void help(Player player) {
         if(mumbai!=null){
             player.sendMessage(ChatColor.GOLD+"UniRock Mumbai: /mumbai, /lobby and /play return to the bank. /museum visits the calculator.");
-            player.sendMessage("/agent 0g create | /agent claude create. Then choose status, inspect, capabilities, follow, come, wait, or a task.");
+            player.sendMessage("/agent 0g create | /agent agent create. Then choose status, inspect, capabilities, follow, come, wait, or a task.");
             player.sendMessage("Open your Marketplace compass or /market to choose materials, quantity and CITY total. Your own wallet confirms payment.");
             player.sendMessage("Your agents work in the two plots east of UniRock. The bank and generated city are protected.");
             return;
@@ -605,7 +607,7 @@ public final class PlayableExperience implements Listener {
             case "agent" -> {
                 if (parts.length == 1) { openMenu(player,"agents"); break; }
                 String action = parts[1].toLowerCase(Locale.ROOT);
-                if(mumbai!=null&&Set.of("0g","claude").contains(action)){enqueue(player,"agent",List.of(String.join(" ",Arrays.copyOfRange(parts,1,parts.length))));break;}
+                if(mumbai!=null&&Set.of("0g","agent","claude").contains(action)){enqueue(player,"agent",List.of(String.join(" ",Arrays.copyOfRange(parts,1,parts.length))));break;}
                 if (Set.of("create","follow","come","wait","status","inspect","capabilities","release").contains(action) && parts.length == 2) enqueue(player,"agent_"+action,List.of());
                 else if (action.equals("task") && parts.length >= 3) enqueue(player,"agent_task",List.of(String.join(" ",Arrays.copyOfRange(parts,2,parts.length))));
                 else if (action.equals("build") && parts.length>=4 && (parts[2].matches("[0-9]+") || parts.length>=5 && Set.of("platform","shelter").contains(parts[2]) && parts[3].matches("[0-9]+"))) enqueue(player,"agent_build",Arrays.asList(Arrays.copyOfRange(parts,2,parts.length)));
@@ -613,7 +615,7 @@ public final class PlayableExperience implements Listener {
                 else if (Set.of("collect","deliver").contains(action) && parts.length==4 && parts[3].matches("[0-9]+")) enqueue(player,"agent_"+action,Arrays.asList(Arrays.copyOfRange(parts,2,parts.length)));
                 else enqueue(player,"agent_task",List.of(String.join(" ",Arrays.copyOfRange(parts,1,parts.length))));
             }
-            case "jobs" -> { if (parts.length == 1) {if(mumbai!=null)enqueue(player,"agent",List.of("claude capabilities"));else enqueue(player,"jobs",List.of());} else player.sendMessage("Use /jobs."); }
+            case "jobs" -> { if (parts.length == 1) {if(mumbai!=null)enqueue(player,"agent",List.of("agent capabilities"));else enqueue(player,"jobs",List.of());} else player.sendMessage("Use /jobs."); }
             case "wallet" -> { if(mumbai!=null)player.sendMessage("Open /market and review a purchase to connect your own wallet. Game login never grants spending permission.");else if(parts.length==1) enqueue(player,"crypto_wallet",List.of()); }
             case "balance" -> { if(mumbai!=null)player.sendMessage("Review your actual CITY balance in your connected wallet on Unichain Sepolia. /market opens the inventory shop.");else if(parts.length==1) enqueue(player,"crypto_wallet",List.of()); }
             case "bazaar" -> {

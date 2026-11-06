@@ -257,10 +257,13 @@ final class InventoryEscrow implements Listener {
     Map<String,Object> mailbox(Map<String,Object> input){ready();String owner=uuid(input,"ownerId");return Map.of("ownerId",owner,"entries",vaults.values().stream().filter(v->owner.equals(v.get("ownerId"))&&"assigned".equals(v.get("state"))).map(this::vaultView).toList());}
     Map<String,Object> claim(Map<String,Object> input)throws Exception {
         ready();Map<String,Object> request=new LinkedHashMap<>();for(String key:List.of("operationId","mailboxId","ownerId","playerId","connectionId"))request.put(key,uuid(input,key));
-        Map<String,Object> prior=known(request,List.of("operationId","mailboxId","ownerId","playerId"));if(prior!=null)return prior;
+        if(input.containsKey("recipientAgentId"))request.put("recipientAgentId",uuid(input,"recipientAgentId"));
+        Map<String,Object> prior=known(request,List.of("operationId","mailboxId","ownerId","playerId","recipientAgentId"));if(prior!=null)return prior;
         String owner=(String)request.get("ownerId"),playerId=(String)request.get("playerId");registeredOwner(owner,playerId);approved(owner,playerId,(String)request.get("connectionId"));
+        Player actor=Bukkit.getPlayer(UUID.fromString(playerId));
+        if(request.get("recipientAgentId") instanceof String recipient){Player agent=Bukkit.getPlayer(UUID.fromString(recipient));if(agent==null||!experience.survivalOwner(actor,agent.getName(),owner))throw new IllegalArgumentException("escrow_owned_agent_recipient_required");actor=agent;}
         Map<String,Object> vault=copy(listing((String)request.get("mailboxId")));if(!"assigned".equals(vault.get("state"))||!owner.equals(vault.get("ownerId")))throw new IllegalArgumentException("escrow_mailbox_owner_or_state");
-        Player actor=Bukkit.getPlayer(UUID.fromString(playerId));clearActor(actor);ItemStack[] before=inventory(actor),after=inventory(actor);ItemStack stack=decode((String)vault.get("stackBytes"))[0];int remaining=stack.getAmount();
+        clearActor(actor);ItemStack[] before=inventory(actor),after=inventory(actor);ItemStack stack=decode((String)vault.get("stackBytes"))[0];int remaining=stack.getAmount();
         for(int i=0;i<actor.getInventory().getStorageContents().length&&remaining>0;i++)if(after[i]!=null&&after[i].isSimilar(stack)){int take=Math.min(remaining,after[i].getMaxStackSize()-after[i].getAmount());after[i].setAmount(after[i].getAmount()+take);remaining-=take;}
         for(int i=0;i<actor.getInventory().getStorageContents().length&&remaining>0;i++)if(after[i]==null||after[i].getType().isAir()){int take=Math.min(remaining,stack.getMaxStackSize());after[i]=stack.clone();after[i].setAmount(take);remaining-=take;}
         if(remaining!=0)throw new IllegalArgumentException("escrow_mailbox_inventory_full");vault.put("state","claimed");request.put("kind","claim");for(String key:List.of("listingId","custodyId","fingerprint","item","count"))request.put(key,vault.get(key));return inventoryEffect(request,actor,before,after,vault);
