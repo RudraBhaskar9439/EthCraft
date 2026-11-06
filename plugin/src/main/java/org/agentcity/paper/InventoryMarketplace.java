@@ -102,6 +102,7 @@ public final class InventoryMarketplace implements Listener {
             Map<String,Object> currentChoice=Map.of("item",text(snapshot,"item"),"unitPriceCity",text(snapshot,"unitPriceCity"),"available",0);
             for(Object entry:entries)if(entry instanceof Map<?,?> item&&Objects.equals(item.get("item"),snapshot.get("item"))){@SuppressWarnings("unchecked") Map<String,Object> found=(Map<String,Object>)item;currentChoice=found;break;}
             Map<String,Object> choice=currentChoice;
+            if("ready_to_collect".equals(snapshot.get("status"))&&Boolean.TRUE.equals(snapshot.get("paid"))){gameCheckout(player,snapshot,snapshot,choice);return;}
             menu.inventory.setItem(40,icon(Material.CLOCK,"Resume My Purchase","Check the original purchase and its delivery.","Order: "+text(snapshot,"orderId"),"This does not authorize a new payment."));
             menu.resume=()->request(player,"status",Map.of("orderId",text(snapshot,"orderId")),reply->gameCheckout(player,reply,snapshot,choice));
         }

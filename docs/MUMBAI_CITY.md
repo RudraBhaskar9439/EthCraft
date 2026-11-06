@@ -201,3 +201,21 @@ solid gold block on the right explicitly requests **1 test CITY + 0.0001 test
 ETH**; funding does not buy the items. A request rejected before entering the
 native queue can be confirmed again after checking status. An uncertain Fund
 or Pay result remains status-only to prevent duplicate submission.
+
+A purchase with confirmed redemption now takes priority over newer processing
+orders. Opening `/market` goes directly to **Collect Materials** for that paid
+mailbox. Collection freshly checks the original redemption proofs, then uses
+the same native claim ID; it does not replay completed mint/list/buy checks or
+create another payment. Unverified or reorganized redemption still blocks
+delivery. An interrupted second order keeps its own original receipts.
+Completed starter grants are not reprocessed during purchase status checks.
+Current balances and fresh redemption proofs still guard payment and delivery.
+
+On 6 November 2026, the actual approved owner confirmed collecting one oak
+plank purchased for 0.01 test CITY. The retained order records confirmed buy
+and redemption plus the exact native inventory claim receipt. Evidence:
+`evidence/runs/inventory-game-privy/22ed3783-77a1-4c1f-838b-b65e4885200d/native-delivery.json`.
+The bank and generated scenery remain protected. Owned, unlocked work-plot
+interiors accept building: CityAgent4 uses X 1732–1741 / Z 2812–2821, and
+CityAgent5 uses X 1748–1757 / Z 2812–2821, both Y 69–76. This single-owner
+purchase check does not qualify the original independent-human release gates.

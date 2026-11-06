@@ -47,6 +47,9 @@ function preview(action,input,terms){
   const shown={operationId:input.operationId,action,status:'preview',expiresAtMs:Date.now()+300000,terms,termsDigest:digest(terms),tokenId:action==='mint'?'1':input.tokenId}
   operations.set(input.operationId,structuredClone(shown));return shown
 }
+const stageChecks=[]
+let rejectRedemptionProof=false
+let fundingConfirmCalls=0
 async function createAssets(options){
   assetOptions=options;assetsCreated++
   return{
@@ -57,6 +60,8 @@ async function createAssets(options){
     status:async({operationId})=>structuredClone(operations.get(operationId)),
     confirm:async request=>{
       const shown=operations.get(request.operationId)
+      stageChecks.push(shown.action)
+      if(shown.action==='redeem'&&shown.status==='complete'&&rejectRedemptionProof)throw Error('FIXTURE_CANONICAL_REORG')
       assert.equal(await options.authorize({...request,action:shown.action}),true)
       if(shown.status==='complete')return structuredClone(shown)
       if(shown.action==='mint')mints++
@@ -86,6 +91,7 @@ async function createFunding(options){
     return structuredClone(grant)
   }
   return{preview:async({principalId})=>{fundingPreviews++;return shown(principalId)},confirm:async request=>{
+    fundingConfirmCalls++
     await shown(request.principalId)
     if(!grant.consented){
       const accepted=await options.authorize({kind:'privy-game-starter-grant',...request,operationId:grant.operationId,...grant.terms})
@@ -147,7 +153,9 @@ try{
   const funded=await game.status(orderInput)
   assert.equal(funded.starterGrant.status,'complete');assert.equal(funded.status,'ready');assert.equal(funded.paymentConsentRecorded,false)
   assert.notEqual(funded.consentNonce,enrolled.consentNonce);assert.equal(fundingCityEffects,1);assert.equal(fundingNativeEffects,1)
+  const completedFundingCalls=fundingConfirmCalls
   const fundedAgain=await game.status(orderInput)
+  assert.equal(fundingConfirmCalls,completedFundingCalls,'Status must not reprocess an already completed starter grant')
   assert.equal(fundedAgain.consentNonce,funded.consentNonce);assert.equal(fundingCityEffects,1);assert.equal(fundingNativeEffects,1)
   assert.equal(mints,0);assert.equal(prepared.size,0)
   await assert.rejects(game.confirm(pay),/EXPLICIT_PAYMENT_CONFIRMATION_REQUIRED/)
@@ -178,12 +186,23 @@ try{
   assert.equal(claimEffects,0);assert.equal(claimAttempts,1)
   const paidLookup=await game.latest({...input,connectionId:session.connectionId})
   assert.equal(paidLookup.orderId,opened.orderId);assert.equal(paidLookup.paid,true)
+  const newerConsentedOrder=randomUUID()
+  await pool.query(`INSERT INTO ac_inventory_shop_game_orders(order_id,quote_id,principal_id,player_id,connection_id,subject_hash,terms,wallet,consent_nonce,consent,expires_at)
+    SELECT $2,$3,principal_id,player_id,connection_id,subject_hash,terms,wallet,consent_nonce,consent,expires_at FROM ac_inventory_shop_game_orders WHERE order_id=$1`,[opened.orderId,newerConsentedOrder,randomUUID()])
+  assert.equal((await game.latest({...input,connectionId:session.connectionId})).orderId,opened.orderId,'An item ready to collect takes priority over a newer processing purchase')
+  await pool.query('DELETE FROM ac_inventory_shop_game_orders WHERE order_id=$1',[newerConsentedOrder])
   assert.equal(prepared.size,3);assert.equal(broadcasts.size,3);assert.equal(claimAttempts,1)
   await assert.rejects(game.fund(freshPay),/PAYMENT_ALREADY_AUTHORIZED/)
   console.log('PASS restart resumes the original exact three managed-wallet calls with reduced gas caps; an open menu never claims delivery')
 
   inventoryOpen=false
+  stageChecks.length=0
+  rejectRedemptionProof=true
+  await assert.rejects(game.status(orderInput),/FIXTURE_CANONICAL_REORG/)
+  assert.equal(claimEffects,0,'Collection must refuse an invalidated redemption proof')
+  rejectRedemptionProof=false;stageChecks.length=0
   const delivered=await game.status(orderInput)
+  assert.deepEqual(stageChecks,['redeem'],'Collection must freshly verify redemption without replaying earlier completed purchase stages')
   assert.equal(delivered.status,'delivered');assert.equal(delivered.deliveryConfirmed,true);assert.equal(claimEffects,1)
   await game.status(orderInput)
   assert.equal(claimEffects,1);assert.equal(broadcasts.size,3);assert.equal(mints,1);assert.equal(lists,1)

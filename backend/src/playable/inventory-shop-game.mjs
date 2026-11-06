@@ -278,31 +278,34 @@ export async function createInventoryShopGame({pool,identity,serverId,gameSessio
       digest(row.consent.wallet)!==digest(row.wallet)||row.terms.manifestDigest!==digest(manifest.worldAssets))fail('INVENTORY_SHOP_GAME_EXACT_PAYMENT_CONSENT_REQUIRED')
     const api=await services(),merchantId=merchant.principalId
     const scoped=method=>consent.run({row,connectionId:input.connectionId},method)
-    if(!row.state.mint){
-      const selection=row.terms.stock.selections?.[row.terms.item]
-      if(!Number.isInteger(selection)||selection<0||selection>35)fail('INVENTORY_SHOP_MERCHANT_STOCK_SLOT_REQUIRED')
-      row.state.mint=await scoped(()=>api.previewMint({principalId:merchantId,operationId:'inventory-shop-game:'+row.order_id+':mint',
-        kind:'item',sourceKind:'player_inventory',selection,count:row.terms.count}))
-      if(!inventoryShopNativeLotMatches(row.state.mint.terms.nativePreview,row.terms))fail('INVENTORY_SHOP_EXACT_MERCHANT_ITEM_REQUIRED')
-      await save(row)
+    // A canonical finalized redemption commits the preceding purchase history.
+    if(row.state.redeem?.status!=='complete'){
+      if(!row.state.mint){
+        const selection=row.terms.stock.selections?.[row.terms.item]
+        if(!Number.isInteger(selection)||selection<0||selection>35)fail('INVENTORY_SHOP_MERCHANT_STOCK_SLOT_REQUIRED')
+        row.state.mint=await scoped(()=>api.previewMint({principalId:merchantId,operationId:'inventory-shop-game:'+row.order_id+':mint',
+          kind:'item',sourceKind:'player_inventory',selection,count:row.terms.count}))
+        if(!inventoryShopNativeLotMatches(row.state.mint.terms.nativePreview,row.terms))fail('INVENTORY_SHOP_EXACT_MERCHANT_ITEM_REQUIRED')
+        await save(row)
+      }
+      row.state.mint=await stage(row,input,merchantId,row.state.mint);await save(row)
+      if(row.state.mint.status!=='complete')return view(row,owner,{connectionId:input.connectionId})
+      if(!row.state.list){
+        row.state.list=await scoped(()=>api.previewList({principalId:merchantId,operationId:'inventory-shop-game:'+row.order_id+':list',
+          tokenId:row.state.mint.tokenId,priceBaseUnits:row.terms.totalBaseUnits,expiry:Math.floor(+new Date(row.expires_at)/1000)+3600}));await save(row)
+      }
+      row.state.list=await stage(row,input,merchantId,row.state.list);await save(row)
+      if(row.state.list.status!=='complete')return view(row,owner,{connectionId:input.connectionId})
+      if(!row.state.buy){
+        row.state.buy=await scoped(()=>api.previewBuy({principalId:row.principal_id,operationId:'inventory-shop-game:'+row.order_id+':buy',tokenId:row.state.mint.tokenId}))
+        if(String(row.state.buy.terms.listing.price)!==row.terms.totalBaseUnits||lower(row.state.buy.terms.listing.seller)!==lower(merchant.walletAddress))fail('INVENTORY_SHOP_EXACT_LISTED_PRICE_REQUIRED')
+        await save(row)
+      }
+      row.state.buy=await stage(row,input,row.principal_id,row.state.buy);await save(row)
+      if(row.state.buy.status!=='complete')return view(row,owner,{connectionId:input.connectionId})
+      row.state.redeem=await scoped(()=>inventoryShopRecoveryPreview(api,row.principal_id,row,'redeem','game-redeem',save,
+        operationId=>api.previewRedeem({principalId:row.principal_id,operationId,tokenId:row.state.mint.tokenId})))
     }
-    row.state.mint=await stage(row,input,merchantId,row.state.mint);await save(row)
-    if(row.state.mint.status!=='complete')return view(row,owner,{connectionId:input.connectionId})
-    if(!row.state.list){
-      row.state.list=await scoped(()=>api.previewList({principalId:merchantId,operationId:'inventory-shop-game:'+row.order_id+':list',
-        tokenId:row.state.mint.tokenId,priceBaseUnits:row.terms.totalBaseUnits,expiry:Math.floor(+new Date(row.expires_at)/1000)+3600}));await save(row)
-    }
-    row.state.list=await stage(row,input,merchantId,row.state.list);await save(row)
-    if(row.state.list.status!=='complete')return view(row,owner,{connectionId:input.connectionId})
-    if(!row.state.buy){
-      row.state.buy=await scoped(()=>api.previewBuy({principalId:row.principal_id,operationId:'inventory-shop-game:'+row.order_id+':buy',tokenId:row.state.mint.tokenId}))
-      if(String(row.state.buy.terms.listing.price)!==row.terms.totalBaseUnits||lower(row.state.buy.terms.listing.seller)!==lower(merchant.walletAddress))fail('INVENTORY_SHOP_EXACT_LISTED_PRICE_REQUIRED')
-      await save(row)
-    }
-    row.state.buy=await stage(row,input,row.principal_id,row.state.buy);await save(row)
-    if(row.state.buy.status!=='complete')return view(row,owner,{connectionId:input.connectionId})
-    row.state.redeem=await scoped(()=>inventoryShopRecoveryPreview(api,row.principal_id,row,'redeem','game-redeem',save,
-      operationId=>api.previewRedeem({principalId:row.principal_id,operationId,tokenId:row.state.mint.tokenId})))
     row.state.redeem=await stage(row,input,row.principal_id,row.state.redeem);await save(row)
     if(row.state.redeem.status==='complete'&&!row.state.delivered){
       const {session}=await current(row.player_id,input.connectionId,row.principal_id)
@@ -339,7 +342,7 @@ export async function createInventoryShopGame({pool,identity,serverId,gameSessio
   }
   async function status(input){
     const {row,owner}=await order(input)
-    if(row.state.fundingRequest){
+    if(row.state.fundingRequest&&row.state.funding?.status!=='complete'){
       await settleFunding(row,owner,input)
       if(row.state.funding?.status!=='complete')return view(row,owner,{connectionId:input.connectionId})
     }
@@ -352,7 +355,7 @@ export async function createInventoryShopGame({pool,identity,serverId,gameSessio
       WHERE principal_id=$1 AND player_id=$2 AND subject_hash=$3
         AND state->>'delivered' IS DISTINCT FROM 'true'
         AND (consent IS NOT NULL OR state ? 'fundingRequest' OR expires_at>now())
-      ORDER BY CASE WHEN consent IS NOT NULL THEN 0
+      ORDER BY CASE WHEN consent IS NOT NULL AND state->'redeem'->>'status'='complete' THEN -1 WHEN consent IS NOT NULL THEN 0
         WHEN state ? 'fundingRequest' AND state->'funding'->>'status' IS DISTINCT FROM 'complete' THEN 1 ELSE 2 END,
         created_at DESC LIMIT 1`,[owner.ownerId,input.playerId.toLowerCase(),hash(owner.privySubject)])).rows[0]
     return row?view(row,owner,{connectionId:input.connectionId,readOnly:true}):null

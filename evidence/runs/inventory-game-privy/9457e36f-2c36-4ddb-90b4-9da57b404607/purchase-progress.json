@@ -1,0 +1,58 @@
+{
+  "schema": "agentcity.real-game-purchase-progress.v1",
+  "at": "2026-11-06T07:06:09.637Z",
+  "orderDigest": "551b13a837fd1d99188353c789b36bd5d371f9dd54c9e1583ee3839b9f4938da",
+  "item": "oak_planks",
+  "count": 1,
+  "totalBaseUnits": "10000000000000000",
+  "actualUserPaymentConsent": true,
+  "starterFundingStatus": "complete",
+  "buyStatus": "complete",
+  "redemptionStatus": "complete",
+  "receiptChecks": [
+    {
+      "step": "request-redemption",
+      "hash": "0xa9330ecb8a5d1ec9d6df2765dfd40480395a1b496dc06b9434a9196906807bf3",
+      "successful": true,
+      "canonical": true,
+      "blockNumber": "67096123",
+      "confirmations": "216"
+    },
+    {
+      "step": "finalize-redemption",
+      "hash": "0x6176a6739e1ae3d8e22e6a895b9b893df0b70db5dc4d3e750f0babb02c626ab3",
+      "successful": true,
+      "canonical": true,
+      "blockNumber": "67096164",
+      "confirmations": "175"
+    },
+    {
+      "step": "buy",
+      "hash": "0xcc9d75f0eb2b07c582a3a5bb6a9594ee8395393707ddefb5b825b609e69d4597",
+      "successful": true,
+      "canonical": true,
+      "blockNumber": "67095754",
+      "confirmations": "585"
+    },
+    {
+      "step": "city-approval",
+      "hash": "0x82937e4d542c83e9b4aec4e9349231addd20e033591fc94f121febcda85049b4",
+      "successful": true,
+      "canonical": true,
+      "blockNumber": "67095643",
+      "confirmations": "696"
+    }
+  ],
+  "mailboxEntryCount": 1,
+  "matchingMailboxEntries": [
+    {
+      "item": "minecraft:oak_planks",
+      "count": 1,
+      "state": "assigned"
+    }
+  ],
+  "delivered": false,
+  "deliveryReceiptPresent": false,
+  "walletSignaturesInitiatedByThisCheck": 0,
+  "transactionsInitiatedByThisCheck": 0
+}

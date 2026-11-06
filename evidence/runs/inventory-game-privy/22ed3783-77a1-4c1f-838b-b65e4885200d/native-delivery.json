@@ -1,0 +1,37 @@
+{
+  "schema": "agentcity.real-game-native-delivery.v1",
+  "at": "2026-11-06T07:38:58.251Z",
+  "orderDigest": "551b13a837fd1d99188353c789b36bd5d371f9dd54c9e1583ee3839b9f4938da",
+  "item": "oak_planks",
+  "count": 1,
+  "totalBaseUnits": "10000000000000000",
+  "paymentConsentRecorded": true,
+  "buyConfirmed": true,
+  "redemptionConfirmed": true,
+  "delivered": true,
+  "nativeReceipt": {
+    "claimed": true,
+    "item": "minecraft:oak_planks",
+    "count": 1
+  },
+  "ownerConfirmedCollectionInChat": true,
+  "plotOwnership": {
+    "CityAgent4": true,
+    "CityAgent5": true
+  },
+  "currentConnectionApproved": true,
+  "currentWorld": "agentcity_mumbai",
+  "currentPosition": {
+    "z": 2793.9060469404285,
+    "world": "agentcity_mumbai",
+    "y": 69,
+    "x": 1689.1001011402025
+  },
+  "observation": "Player is in the protected bank area; purchased blocks are usable within owned unlocked Mumbai work plots.",
+  "transactionsInitiatedByThisCheck": 0,
+  "currentPlotLocks": {
+    "CityAgent4": false,
+    "CityAgent5": false
+  },
+  "placementInOwnedPlot": "pending player check"
+}

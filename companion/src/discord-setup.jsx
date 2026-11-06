@@ -44,7 +44,7 @@ function Setup({ walletSetupAvailable = true }) {
       sessionStorage.removeItem('agentcity-discord-setup')
       setVerified(true); setMessage(walletSetupAvailable
         ? 'Account connected. Return to Discord and use /profile to choose your game name and login route, then /agents to create or open your agent.'
-        : 'Account connected. Return to Discord and use /profile to choose your game name and login route, then /join to approve your Minecraft connection. Wallet setup is unavailable in this session.')
+        : 'Account connected. Return to Discord and use /profile to choose your game name and login route, then /join to approve your Minecraft connection. Game wallet setup and shopping are available inside Minecraft with /market after /join approval.')
     } catch (error) { setMessage(error.message) } finally { setBusy(false) }
   }
   async function openWallet() {
@@ -59,7 +59,7 @@ function Setup({ walletSetupAvailable = true }) {
       <button disabled={!ready || busy || !linked || !challenge || verified} onClick={finish}>{verified ? 'Account connected' : 'Finish Discord setup'}</button>
       {verified && (walletSetupAvailable
         ? <button disabled={busy} onClick={openWallet}>Create or view my managed test wallet</button>
-        : <p>Wallet setup is unavailable in this session. Return to Discord to approve your Minecraft connection.</p>)}
+        : <p>This page links your Discord identity only. Join Minecraft, approve that connection with Discord /join, then use /market in Minecraft to create or use your game wallet.</p>)}
       {wallet && <p>Unichain Sepolia · <code>{wallet.address}</code><br/>Testnet wallet; transactions need separate authorization.</p>}
       <button className="secondary" disabled={busy} onClick={() => logout()}>Sign out</button></> : <>
       <button disabled={!ready || busy} onClick={() => login({ loginMethods: ['discord'] })}>New player · continue with Discord</button>

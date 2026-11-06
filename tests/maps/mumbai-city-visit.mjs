@@ -343,6 +343,11 @@ assert(stable(visitor.currentWindow.slots[49]).includes('Pay 0.5 CITY'),'Known q
   assert.equal(stable(inventory(visitor)),baseInventory)
   check('Native inventory shop completes Privy wallet disclosure, explicit enrollment, exact-price consent, same-order recovery after an actual reconnect and guarded delivery receipt without browser navigation',{source:'Labelled isolated GUI fixtures only; no actual wallet enrollment, token payment or resource delivery',selectedCount:4,displayedTotalCity:'0.5',confirmationRequests:1,starterGrantRequests:1,statusRecovery:'Same order after ambiguous confirmation, insufficient funds and pending delivery; no repeat confirmation',delivery:'Receipt fixture requires paid and canonical deliveryConfirmed; actual inventory remains unchanged'})
 
+  await window(visitor,'Loading Materials',()=>visitor.chat('/market'))
+  const autoCollectionCatalog=await queued(visitor,'catalog')
+  await window(visitor,'Collect Materials',()=>native('inventory-shop/reply',{operationId:autoCollectionCatalog.operationId,result:{...catalog,paymentReady:true,activeOrder:{...readyOrder,unitPriceCity:'0.125',status:'ready_to_collect',paid:true,paymentConsentRecorded:true}}}))
+  assert(stable(visitor.currentWindow.slots[49]).includes('Collect'),'A paid mailbox must open collection directly instead of another shopping screen')
+  visitor.closeWindow(visitor.currentWindow)
   visitor.chat('/lobby');await poll(()=>session(visitor),s=>s.serverPosition.world==='agentcity_mumbai'&&distance(s.serverPosition,{x:1698.5,y:69,z:2808.5})<0.2,'LOBBY_DEFAULT_MUMBAI')
   await delay(650);visitor.chat('/museum');await poll(()=>session(visitor),s=>s.serverPosition.world===status.museumWorld,'PRESERVED_MUSEUM')
   await delay(650);visitor.chat('/play');await poll(()=>session(visitor),s=>s.serverPosition.world==='agentcity_mumbai'&&s.serverGameMode==='SURVIVAL','PLAY_DEFAULT_MUMBAI')

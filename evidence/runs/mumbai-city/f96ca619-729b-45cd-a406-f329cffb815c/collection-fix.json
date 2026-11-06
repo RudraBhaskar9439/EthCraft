@@ -1,0 +1,35 @@
+{
+  "schema": "agentcity.paid-collection-fix.v1",
+  "qualification": "report.json",
+  "isolatedNativeChecks": 13,
+  "tests": {
+    "inventory-shop-game": "pass",
+    "inventory-game-funding": "pass",
+    "inventory-shop": "pass",
+    "native-mumbai-city": "pass",
+    "changed-files-secret-scan": "pass"
+  },
+  "regressionBeforeFix": {
+    "command": "node tests/playable/inventory-shop-game.mjs",
+    "exitCode": 1,
+    "assertion": "An item ready to collect takes priority over a newer processing purchase"
+  },
+  "securityCheck": "Invalidated redemption proof refuses native collection; completed collection rechecks redemption only.",
+  "liveUpgrade": {
+    "running": true,
+    "allSevenWorldIdsPreserved": true,
+    "backup": "4dc4e4abb9274f569bd93604e0ef1d67"
+  },
+  "actualPlayerDelivery": "pending genuine in-game collection",
+  "sourceSha256": {
+    "backend/src/playable/inventory-shop-game.mjs": "c7b46ba1da7950fe60f30371def4e84dda1a9b231e17478ae488176dd45f8804",
+    "plugin/src/main/java/org/agentcity/paper/InventoryMarketplace.java": "9db9fe24e0b565bdb17d5b2d1625f72a69e59cb82f193cb82b531da2971e1af0",
+    "tests/playable/inventory-shop-game.mjs": "d5f0e908cb94c1fee0497c43b36221cf8418834dc05b3c565aafb51dbd631458"
+  },
+  "completedFundingRegression": {
+    "failedBeforeFix": true,
+    "assertion": "Status must not reprocess an already completed starter grant",
+    "passedAfterFix": true
+  },
+  "backendReloadedAfterCompletedFundingFix": true
+}
