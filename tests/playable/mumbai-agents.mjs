@@ -39,6 +39,9 @@ try {
   for (const agentNames of [[], ['CityAgent4', 'CityAgent4'], ['Anyone']]) assert.throws(() => new PersonalAgents({ rootDirectory, runtimeDirectory, agentNames }), /INVALID_PERSONAL_AGENT_NAMES/)
   assert.throws(() => new PersonalAgents({ rootDirectory, runtimeDirectory, slotModelProviders: { CityAgent4: { kind: '0g', model: 'fixture' } } }), /INVALID_SLOT_MODEL_PROVIDERS/)
   assert.equal(mumbaiAgentCommand(event('0g task build a tower')).event.args, 'task build a tower')
+  for (const [phrase, command] of [['mere peeche aao','follow'],['मेरे पीछे आओ','follow'],['idhar aao','come'],['रुको','wait']]) {
+    assert.equal(mumbaiAgentCommand(event('0g ' + phrase)).event.args, command)
+  }
   assert.equal(mumbaiAgentCommand(event(['claude', 'status'])).provider, 'claude')
   assert.equal(mumbaiAgentCommand(event(['agent', 'status'])).provider,'claude')
   assert.equal(mumbaiAgentCommand(event(['Agent','review'])).event.action,'agent')

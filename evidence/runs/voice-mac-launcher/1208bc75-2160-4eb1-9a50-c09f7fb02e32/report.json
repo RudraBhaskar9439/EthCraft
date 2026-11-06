@@ -1,0 +1,23 @@
+{
+  "status": "repair_installed_human_permission_and_microphone_test_pending",
+  "observedFailure": "Voice Chat reported unsupported launcher: NOT_DETERMINED; no OS permission request had occurred.",
+  "change": "Signed native bootstrap requests AVFoundation microphone permission as the owned local TLauncher app, then launches the unchanged Java launcher.",
+  "checks": {
+    "nativeCompile": "pass",
+    "signedAppVerification": "pass",
+    "nativeBundleMetadataAndJavaResourceCheck": "pass",
+    "pythonTests": 82,
+    "planningIntegrity": "pass"
+  },
+  "clientExecutableSha256": "256dd06947ae57c839dda2e1d068d77ed7794bdb5d0bf9f6491208154dff3e2c",
+  "gameDataChanged": false,
+  "privacyDatabaseModified": false,
+  "permissionChecksBypassed": false,
+  "apiRequests": 0,
+  "pending": [
+    "User reopens TLauncher from Applications",
+    "User grants normal macOS microphone permission",
+    "Voice Chat microphone and actual in-game audio/control test"
+  ],
+  "originalPhaseGates": "Still unqualified; local installation checks do not prove microphone acceptance."
+}

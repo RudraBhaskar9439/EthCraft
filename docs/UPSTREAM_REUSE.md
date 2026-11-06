@@ -1,5 +1,10 @@
 # Official upstream repositories and reuse
 
+The local voice extension uses pinned Simple Voice Chat Bukkit/Fabric 2.6.27
+artifacts and its compile-only API. Upstream is All Rights Reserved; local
+downloads are excluded from Git. See [VOICE.md](VOICE.md) and
+`config/voice-dependencies.json` for installation, provenance and limits.
+
 ## Player-facing tunnel additions, 31 October 2026
 
 Use official [cloudflared 2026.10.3](https://github.com/cloudflare/cloudflared/releases/tag/2026.10.3)

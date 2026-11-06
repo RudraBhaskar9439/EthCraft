@@ -55,6 +55,7 @@ public final class AgentCityPlugin extends JavaPlugin implements Listener, PlotP
     private String apiToken;
     private HttpServer http;
     private PlayableExperience playable;
+    private VoiceBridge voiceBridge;
     private InventorySales inventorySales;
     private InventoryEscrow inventoryEscrow;
     private PropertyProtection properties;
@@ -115,7 +116,7 @@ public final class AgentCityPlugin extends JavaPlugin implements Listener, PlotP
             http=HttpServer.create(new java.net.InetSocketAddress("0.0.0.0",25578),32);
             httpExecutor=new ThreadPoolExecutor(2,2,0,TimeUnit.SECONDS,new ArrayBlockingQueue<>(32),new ThreadPoolExecutor.AbortPolicy());
             http.setExecutor(httpExecutor);http.createContext("/",this::request);http.start();
-            if(Boolean.getBoolean("agentcity.playable")){inventorySales=new InventorySales(this);playable=new PlayableExperience(this,world,min,max);playable.start();inventoryEscrow=new InventoryEscrow(this,playable);taskProtection=new AgentTaskProtection(this,playable);getServer().getPluginManager().registerEvents(taskProtection,this);if(propertyEnabled()){properties=new PropertyProtection(this,playable);playable.bindProperties(properties);}}
+            if(Boolean.getBoolean("agentcity.playable")){inventorySales=new InventorySales(this);playable=new PlayableExperience(this,world,min,max);playable.start();if(Files.isRegularFile(getDataFolder().toPath().resolve("voice-local.json"))){Map<String,Object> voiceConfig=StrictJson.object(Files.readString(getDataFolder().toPath().resolve("voice-local.json")));if(Boolean.TRUE.equals(voiceConfig.get("enabled")))voiceBridge=new VoiceBridge(this,playable);}inventoryEscrow=new InventoryEscrow(this,playable);taskProtection=new AgentTaskProtection(this,playable);getServer().getPluginManager().registerEvents(taskProtection,this);if(propertyEnabled()){properties=new PropertyProtection(this,playable);playable.bindProperties(properties);}}
             Bukkit.getScheduler().runTaskTimer(this,this::expireArms,1,1);
             getLogger().info("Local non-token AgentCity boundary active; control port must be published on host loopback only.");
         }catch(Exception e){disabled=true;getLogger().severe("AgentCity startup failed closed: "+e.getMessage());getServer().shutdown();}
@@ -178,6 +179,18 @@ public final class AgentCityPlugin extends JavaPlugin implements Listener, PlotP
     private void request(HttpExchange request) {
         try {
             if(!constant(apiToken,request.getRequestHeaders().getFirst("Authorization"),"Bearer ")){respond(request,401,Map.of("code","AUTHENTICATION"));return;}
+            if(request.getRequestURI().getPath().startsWith("/playable/voice/")){
+                if(voiceBridge==null){respond(request,200,Map.of("available",false,"enrolled",List.of(),"pending",List.of()));return;}
+                String action=request.getRequestURI().getPath().substring("/playable/voice/".length());
+                if(!Set.of("status","clip","reply","ack").contains(action)||!request.getRequestMethod().equals(Set.of("status","clip").contains(action)?"GET":"POST"))throw new IllegalArgumentException("voice_route");
+                byte[] body=request.getRequestBody().readNBytes(4194305);if(body.length>4194304)throw new IllegalArgumentException("voice_payload_size");
+                Map<String,Object> input=body.length==0?Map.of():StrictJson.object(new String(body,StandardCharsets.UTF_8));
+                String query=Objects.requireNonNullElse(request.getRequestURI().getRawQuery(),"");
+                if(action.equals("clip")&&!query.matches("operationId=[a-fA-F0-9-]{36}"))throw new IllegalArgumentException("voice_clip_id");
+                CompletableFuture<Map<String,Object>> result=new CompletableFuture<>();
+                Bukkit.getScheduler().runTask(this,()->{try{result.complete(switch(action){case "clip"->voiceBridge.clip(UUID.fromString(query.substring(12)));case "reply"->voiceBridge.reply(input);case "ack"->voiceBridge.ack(UUID.fromString((String)input.get("operationId")));default->voiceBridge.status();});}catch(Exception error){result.completeExceptionally(error);}});
+                respond(request,200,result.get(10,TimeUnit.SECONDS));return;
+            }
             if(properties!=null&&request.getRequestURI().getPath().startsWith("/playable/property/")){
                 String action=request.getRequestURI().getPath().substring("/playable/property/".length());
                 if(!Set.of("configure","apply","invalidate","status","catalog","preview","visit","freeze").contains(action)||!(request.getRequestMethod().equals("POST")||Set.of("status","catalog").contains(action)&&request.getRequestMethod().equals("GET"))){respond(request,404,Map.of("code","NOT_FOUND"));return;}
@@ -471,6 +484,10 @@ public final class AgentCityPlugin extends JavaPlugin implements Listener, PlotP
     @Override public boolean onCommand(CommandSender sender,org.bukkit.command.Command command,String label,String[] args){if(sender instanceof Player player&&registered(player)&&args.length==1&&args[0].equals("session"))session(player);return true;}
     private boolean allowedPlugin(String name){
         if(name.equals("AgentCity"))return true;
+        if(name.equals("voicechat")&&Boolean.getBoolean("agentcity.playable")&&Files.isRegularFile(getDataFolder().toPath().resolve("voice-local.json"))){
+            var loaded=getServer().getPluginManager().getPlugin(name);
+            try{return loaded!=null&&loaded.getDescription().getVersion().equals("2.6.27")&&"b2fab978bfd891576d6d2417b2886228493db30e9ffd81ad4f7b97af3a3cd13e".equals(sha(Files.readAllBytes(getDataFolder().toPath().toAbsolutePath().normalize().getParent().resolve("voicechat.jar"))));}catch(Exception error){return false;}
+        }
         if(!Boolean.getBoolean("agentcity.localFixture")&&!propertyEnabled())return false;
         if(Boolean.getBoolean("agentcity.localFixture")&&(name.equals("AgentCityWorldFixture")||name.equals("AgentCityMaintainedNativeProbe")))return true;
         if(Boolean.getBoolean("agentcity.localFixture")&&Bukkit.getMinecraftVersion().equals("26.3")&&(name.equals("ViaVersion")||name.equals("ViaBackwards"))){
@@ -496,5 +513,5 @@ public final class AgentCityPlugin extends JavaPlugin implements Listener, PlotP
     private static long number(Map<String,Object> map,String key){if(!(map.get(key) instanceof Long value))throw new IllegalArgumentException("integer_required:"+key);return value;}
     private static int[] position(Object value){List<Object> a=list(value);if(a.size()!=3)throw new IllegalArgumentException("position");int[] out=new int[3];for(int i=0;i<3;i++){if(!(a.get(i) instanceof Long n)||n< -1000000||n>1000000)throw new IllegalArgumentException("coordinate");out[i]=(int)(long)(Long)a.get(i);}return out;}
     private static Material item(Material block){return switch(block){case REDSTONE_WIRE->Material.REDSTONE;case REDSTONE_WALL_TORCH->Material.REDSTONE_TORCH;case WALL_TORCH->Material.TORCH;default->block;};}
-    @Override public void onDisable(){disabled=true;if(properties!=null)properties.close();if(inventoryEscrow!=null)inventoryEscrow.close();if(playable!=null)playable.close();if(http!=null)http.stop(0);if(httpExecutor!=null)httpExecutor.shutdownNow();reports.shutdown();if(engine!=null)try{engine.close();}catch(Exception e){getLogger().severe("Journal close failed: "+e.getMessage());}}
+    @Override public void onDisable(){disabled=true;if(voiceBridge!=null)voiceBridge.close();if(properties!=null)properties.close();if(inventoryEscrow!=null)inventoryEscrow.close();if(playable!=null)playable.close();if(http!=null)http.stop(0);if(httpExecutor!=null)httpExecutor.shutdownNow();reports.shutdown();if(engine!=null)try{engine.close();}catch(Exception e){getLogger().severe("Journal close failed: "+e.getMessage());}}
 }

@@ -300,6 +300,23 @@
       ],
       "observation_date": "2026-10-29",
       "revision_status": "Candidate data origin only; not physically validated or a release dependency lock"
+    },
+    {
+      "name": "henkelmax/simple-voice-chat",
+      "url": "https://github.com/henkelmax/simple-voice-chat",
+      "verified_revision": "e5f05e6e5def2e6ac7b32b3d3e797950abf32086",
+      "license": "Copyright (c) Max Henkel - All Rights Reserved; upstream binaries downloaded only for local use, not redistributed",
+      "role": "Private in-game push-to-talk capture and owner-targeted audio playback",
+      "use_mode": "Pinned Bukkit and Fabric 2.6.27 artifacts with hashes in config/voice-dependencies.json; compile-only API 2.6.27. Separate EthCraft voice bridge and opaque loopback UDP transport.",
+      "phase": "P2 P3 P4",
+      "limitations": "Local offline-mode server only. Requires matching Fabric client, microphone permission, explicit PTT key binding and actual human acceptance. No upstream binaries or implementation sources copied into the published checkout.",
+      "source": [
+        "https://github.com/henkelmax/simple-voice-chat/blob/e5f05e6e5def2e6ac7b32b3d3e797950abf32086/license",
+        "https://modrinth.com/plugin/simple-voice-chat",
+        "https://maven.maxhenkel.de/repository/public/de/maxhenkel/voicechat/voicechat-api/2.6.27/"
+      ],
+      "observation_date": "2026-11-07",
+      "revision_status": "Observed source for controls/license; runtime artifacts pinned separately by cryptographic digest"
     }
   ],
   "important_findings": [

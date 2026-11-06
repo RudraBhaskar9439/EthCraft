@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "voicechatVersion": "2.6.27",
+  "minecraftClient": "1.21.11",
+  "fabricLoader": "0.20.1",
+  "fabricInstaller": "1.1.2",
+  "license": "Upstream Simple Voice Chat: All Rights Reserved. Downloaded from the official Modrinth release for local use; binaries are not committed.",
+  "artifacts": [
+    {
+      "version": "bukkit-2.6.27",
+      "file": "voicechat-bukkit-2.6.27.jar",
+      "url": "https://cdn.modrinth.com/data/9eGKb6K1/versions/3Br8wxJY/voicechat-bukkit-2.6.27.jar",
+      "sha256": "b2fab978bfd891576d6d2417b2886228493db30e9ffd81ad4f7b97af3a3cd13e",
+      "sha512": "9d55c64e79289da87b6c51295124477b4061f5820bd68370c1f6b82137c7ca19d5db7bc05828f12091f23c6ddf1b328b8c5018d4df85fa7c3ddacc6f8f114abe",
+      "loaders": [
+        "bukkit",
+        "folia",
+        "paper",
+        "purpur",
+        "spigot"
+      ]
+    },
+    {
+      "version": "fabric-1.21.11-2.6.27",
+      "file": "voicechat-fabric-1.21.11-2.6.27.jar",
+      "url": "https://cdn.modrinth.com/data/9eGKb6K1/versions/arpQQSyx/voicechat-fabric-1.21.11-2.6.27.jar",
+      "sha256": "a03e28287ca1a54e26466a3614237371200b9f10c20c62f90b533a7fab881191",
+      "sha512": "d20183ff6de8248ed7d55492bf3e620fd9531fa1eebcf2992c72e3b530a72fc459499fa6ed7feeb09be845ad5b70f175445690bb8ee5eec182ada564b429e36a",
+      "loaders": [
+        "fabric"
+      ]
+    },
+    {
+      "version": "installer-1.1.2",
+      "file": "fabric-installer-1.1.2.jar",
+      "url": "https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.1.2/fabric-installer-1.1.2.jar",
+      "sha256": "61e035bf7bf70153e127440ce34de47c9036f0a2d0c65d1529454bd35ceefe4f",
+      "license": "Apache-2.0",
+      "checksumSource": "https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.1.2/fabric-installer-1.1.2.jar.sha256"
+    }
+  ]
+}

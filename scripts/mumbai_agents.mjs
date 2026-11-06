@@ -11,6 +11,7 @@ import { SurvivalObjectives } from '../backend/src/playable/survival-objectives.
 import { SurvivalTools, survivalSkills } from '../backend/src/playable/survival-tools.mjs'
 import {createAdaptivePlanner,create0GReviewer} from '../backend/src/playable/adaptive-planner.mjs'
 import {zeroGEconomyModel} from '../backend/src/inference/zero-g-budget.mjs'
+import {openVoiceRuntime} from '../backend/src/playable/voice.mjs'
 import { openTaskBoard, safeError as arkivError } from '../backend/src/arkiv/runtime.mjs'
 import { WorkOrders } from '../backend/src/arkiv/work-orders.mjs'
 
@@ -54,7 +55,10 @@ export function mumbaiAgentCommand(event) {
   if (!Object.hasOwn(mumbaiAgentSlots, provider)) return null
   let request = words.join(' ') || 'status'
   const spoken=request.replace(/^task\s+/i,'').replace(/^(?:please|can you|could you)\s+/i,'').replace(/(?:\s+please)?[.!?]*$/,'').trim().toLowerCase()
-  if(/^(?:follow(?: me)?|start following me)$/.test(spoken))request='follow'
+  if(/^(?:mere (?:piche|peeche) (?:aao|chalo)|mere saath (?:aao|chalo)|मेरे (?:पीछे|साथ) (?:आओ|चलो))$/.test(spoken))request='follow'
+  else if(/^(?:idhar aao|yahan aao|यहाँ आओ|यहां आओ|इधर आओ)$/.test(spoken))request='come'
+  else if(/^(?:ruk jao|ruko|रुक जाओ|रुको)$/.test(spoken))request='wait'
+  else if(/^(?:follow(?: me)?|start following me)$/.test(spoken))request='follow'
   else if(/^(?:come(?: here| to me| over here)?|(?:move|walk) (?:here|to me))$/.test(spoken))request='come'
   else if(/^(?:stop(?: moving| following(?: me)?)?|wait(?: here)?|stay(?: here)?|pause(?: (?:work|task))?)$/.test(spoken))request='wait'
   else if(/^(?:status|what are you doing)$/.test(spoken))request='status'
@@ -88,7 +92,7 @@ export async function waitForMumbaiTaskPosition(slot, region, timeoutMs = 5000) 
   }
 }
 
-export async function createMumbaiAgentService({ rootDirectory, runtimeDirectory, world, providers, identity, api, serverId, botFactory, agentShop,economyProvider,reviewer,taskBoard } = {}) {
+export async function createMumbaiAgentService({ rootDirectory, runtimeDirectory, world, providers, identity, api, serverId, botFactory, agentShop,economyProvider,reviewer,taskBoard,onVoiceNotice } = {}) {
   if (world?.available !== true || world.personalAgentCapacity !== 5 || world.initializedTaskPads !== 5 || !world.mumbaiAgentBounds || !world.mumbaiAgentSpawn ||
       !Array.isArray(world.taskRegions) || Object.values(mumbaiAgentSlots).some(name => world.taskRegions.filter(region => region.slotName === name && region.worldName === 'agentcity_mumbai').length !== 1)) {
     throw Error('MUMBAI_AGENT_PLUGIN_UPGRADE_REQUIRED')
@@ -133,7 +137,7 @@ export async function createMumbaiAgentService({ rootDirectory, runtimeDirectory
       }
       managers[provider] = manager
       if(world.mumbai?.survival===true)objectives[provider]=await new SurvivalObjectives({rootDirectory,manager,world,api,label:provider==='claude'?'Agent':'0G',reviewer,
-        onProgress:job=>taskBoard?.onProgress(provider,job),
+        onProgress:job=>{taskBoard?.onProgress(provider,job);if(onVoiceNotice&&job)onVoiceNotice({playerId:job.playerId,worker:provider==='claude'?'agent':'0g',job}).catch(()=>{})},
         planner:economyProvider?createAdaptivePlanner({economy:economyProvider,advanced:providers[provider],requestModel:(p,m,s)=>manager.intents.requestModel(m,s,p)}):undefined,
         purchase:agentShop?input=>agentShop('purchase',{...input,provider}):undefined}).initialize()
     }
@@ -239,14 +243,15 @@ async function main() {
   const reviewer=create0GReviewer({provider:{...providers['0g'],maxTokens:3072}})
   const environment = await json(join(root, '.local/backend/environment.json'))
   const pool = new pg.Pool({ connectionString: environment.databaseUrl, max: 3 })
-  let identity, service, taskBoard, stopped = false
+  let identity, service, taskBoard, voice, stopped = false
   const stop = () => { stopped = true; for (const manager of Object.values(service?.managers || {})) for (const slot of manager.slots) manager.stop(slot, 'Mumbai agent host is stopping.') }
   process.once('SIGINT', stop); process.once('SIGTERM', stop)
   const inFlight = new Map()
   try {
     identity = await openDiscordIdentityRuntime({ rootDirectory: root, pool, pluginApi: api })
     try { taskBoard = await openTaskBoard(root,{writer:true}) } catch (error) { console.warn('Arkiv task board waiting:',arkivError(error)) }
-    service = await createMumbaiAgentService({ rootDirectory: root, runtimeDirectory, world: await api('status'), providers, identity: identity.service, api, serverId: active.serverId,agentShop,economyProvider,reviewer,taskBoard })
+    service = await createMumbaiAgentService({ rootDirectory: root, runtimeDirectory, world: await api('status'), providers, identity: identity.service, api, serverId: active.serverId,agentShop,economyProvider,reviewer,taskBoard,onVoiceNotice:input=>voice?.notice(input)||Promise.resolve() })
+    voice=await openVoiceRuntime({root,api,identity:identity.service,serverId:active.serverId,provider:providers['0g'],dispatch:event=>service.handle(event)})
     let setup
     try { setup = await json(join(root, '.local/mumbai/agents.json')) } catch (error) { if (error.code !== 'ENOENT') throw error }
     if (setup) {
@@ -262,6 +267,7 @@ async function main() {
     console.log('Mumbai workers ready: 0G and Agent use adaptive compute with 0G work assessments. Startup makes no planning requests. Existing ownership and budgets are retained.')
     let nativeUnavailable = false
     while (!stopped) {
+      if(voice)await voice.poll().catch(()=>{})
       try {
         const wasUnavailable = nativeUnavailable
         const { events } = await api('events'); nativeUnavailable = false
@@ -279,7 +285,7 @@ async function main() {
       } catch { if (!nativeUnavailable) console.error('Mumbai native service unavailable; requests remain queued.'); nativeUnavailable = true }
       await new Promise(resolve => setTimeout(resolve, 500))
     }
-  } finally { await Promise.allSettled(inFlight.values()); await service?.close(); await taskBoard?.close(); await identity?.close(); await pool.end() }
+  } finally { await Promise.allSettled(inFlight.values()); await voice?.close(); await service?.close(); await taskBoard?.close(); await identity?.close(); await pool.end() }
 }
 
 if (resolve(process.argv[1] || '') === fileURLToPath(import.meta.url)) main().catch(error => { console.error(/^[A-Z0-9_]+$/.test(error.code || error.message || '') ? error.code || error.message : 'MUMBAI_AGENT_STARTUP_FAILED'); process.exitCode = 1 })

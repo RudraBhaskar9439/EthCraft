@@ -3,8 +3,11 @@ version: 0.1.0
 main: org.agentcity.paper.AgentCityPlugin
 api-version: '1.21.11'
 description: Protected AgentCity world with on-chain testnet economy
-softdepend: [WorldEdit, WorldGuard]
+softdepend: [WorldEdit, WorldGuard, voicechat]
 commands:
+  voice:
+    description: Private push-to-talk agent control
+    usage: /voice <0g|agent|off|status>
   agentcity:
     description: Request the local fixture session credential
     usage: /agentcity session

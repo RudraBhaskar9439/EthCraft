@@ -24,6 +24,11 @@
       "sha256": "e0ce67d870ad1fef8a40dd9d7926360caf3bb44722438545d6b20b55f82a0c91",
       "license": "GPL-3.0-or-later",
       "licenseUrl": "https://github.com/EngineHub/WorldEdit/blob/7.4.6/LICENSE.txt"
+    },
+    {
+      "file": "voicechat-api-2.6.27.jar",
+      "url": "https://maven.maxhenkel.de/repository/public/de/maxhenkel/voicechat/voicechat-api/2.6.27/voicechat-api-2.6.27.jar",
+      "sha256": "d827114efa4913c2727e8ec92ef4b1473a93a47452f5b05a72e6a3cbacda22ed"
     }
   ],
   "qualification": "Actual isolated Paper26.3-231 / Java25 native gear and WorldGuard integration verified with explicitly synthetic private-adapter chain proofs; no independent-human or production qualification claim.",

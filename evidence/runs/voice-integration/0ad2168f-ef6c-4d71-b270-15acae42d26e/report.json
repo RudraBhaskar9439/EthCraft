@@ -1,0 +1,43 @@
+{
+  "status": "implemented_and_deployed_human_voice_acceptance_pending",
+  "scope": "Local 0G STT, existing owner-validated agent service and tools, 0G TTS, private Minecraft voice transport; original phase gates remain unqualified",
+  "pluginSha256": "7b028e427b9a4c945ab006eec586ab45bd8fbf6e88f2aa56ce7464a628fd526d",
+  "allSevenWorldIdsPreserved": true,
+  "deploymentNamespacePreserved": true,
+  "tests": {
+    "pythonPlanningAndDeploymentTests": {
+      "passed": 80
+    },
+    "planningIntegrity": "pass; 19 upstreams",
+    "pluginCompilation": "pass",
+    "sharedBudget": "pass",
+    "speechFormatPriceAndBudgetGuards": "pass",
+    "voiceTurnAuthorityDeduplicationAndCompletionOrder": "pass",
+    "mumbaiCommandsAndHindiMovement": "pass",
+    "actualDockerUdpRelay": "pass",
+    "isolatedPaperVoiceAndApprovalGuards": "pass",
+    "actual0GTwoVoicesAndTranscription": "pass"
+  },
+  "humanChecksPending": [
+    "Fabric microphone input",
+    "Private audible reply in Minecraft",
+    "Spoken agent movement",
+    "Hindi/Hinglish microphone recognition"
+  ],
+  "budgets": {
+    "zeroGCumulativeUsd": 5,
+    "advancedCumulativeUsd": 25,
+    "voiceProbeConservativeUsd": 0.003046,
+    "oldUnknownReservationsRetained": 4
+  },
+  "correctedDuringVerification": [
+    "Initial isolated startup rejected new voice plugin; added exact version and SHA256 allowlist before deployment.",
+    "Native fixture corrected to use isolated-port client settings and unique synthetic Discord registrations.",
+    "Completion speech follows acceptance audio, including a worker selected by spoken name.",
+    "Existing rollback test caught an indentation regression in the added preparation hook; fixed and added dependency-restoration-before-restart coverage."
+  ],
+  "evidence": [
+    "evidence/runs/voice-native/c6ffbe84-07f2-4eea-93ce-73ea71253556/report.json",
+    "evidence/runs/voice-provider/d2d141ad-f007-476f-ba07-2cb706f2cf45/report.json"
+  ]
+}

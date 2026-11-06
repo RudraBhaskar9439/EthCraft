@@ -103,7 +103,7 @@ def ready(runtime, port, config, server_id, container):
     raise RuntimeError('mumbai_city_native_startup_not_ready')
 
 
-def isolate():
+def isolate(prepare=None):
     active, actual, source, config, ids = inputs()
     if ISOLATED.exists():
         previous = load(ISOLATED)
@@ -137,6 +137,7 @@ def isolate():
                           + '\n' + '\n'.join(key + '=' + value for key, value in controls.items()) + '\n')
     properties.chmod(0o600)
     shutil.copyfile(JAR, runtime / 'plugins/AgentCity.jar')
+    if prepare is not None: prepare(runtime)
     data = {'owner': OWNER, 'id': identifier, 'runtime': str(runtime),
             'container': 'agentcity-mumbai-city-' + identifier[:8], 'javaImage': active['javaImage'],
             'serverId': active['serverId'], 'worldUuid': config['worldUuid'], 'sourceContainer': active['container'],
@@ -176,7 +177,7 @@ def qualification():
     return isolated
 
 
-def upgrade():
+def upgrade(prepare=None, rollback_prepare=None):
     isolated = qualification()
     active, actual, runtime, config, ids = inputs()
     require(sha(laptop.ACTIVE) == isolated['sourceActiveSha256'] and ids == isolated['sourceWorldIds']
@@ -201,6 +202,7 @@ def upgrade():
             'newPluginSha256': sha(JAR), 'worldUuid': config['worldUuid']})
         changed = True
         shutil.copyfile(JAR, runtime / 'plugins/AgentCity.jar')
+        if prepare is not None: prepare(runtime)
         updated = {**active, 'pluginSha256': sha(JAR)}
         write(laptop.ACTIVE, updated)
         if running:
@@ -240,6 +242,8 @@ def upgrade():
                 write(laptop.ACTIVE, {**updated, 'recoveryRequired': True, 'recoveryBackup': str(backup)})
                 raise RuntimeError('mumbai_city_forward_recovery_required_candidate_retained_' + str(backup)) from error
             shutil.copyfile(backup / 'native/plugins/AgentCity.jar', runtime / 'plugins/AgentCity.jar')
+            if rollback_prepare is not None:
+                rollback_prepare(runtime)
             laptop.ACTIVE.write_bytes(original_active)
             laptop.ACTIVE.chmod(0o600)
         mumbai.resume(active, running, actors)

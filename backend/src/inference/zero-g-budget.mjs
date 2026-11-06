@@ -10,6 +10,15 @@ export const zeroGModel = Object.freeze({ model: 'glm-4.7', inputNanoUsd: 900, o
 // Fractional nanodollar rates are rounded upward to keep the shared ledger conservative.
 export const zeroGEconomyModel = Object.freeze({model:'qwen3.5-35b-a3b',inputNanoUsd:59,outputNanoUsd:467,contextTokens:262144})
 export const zeroGModels = Object.freeze({[zeroGModel.model]:zeroGModel,[zeroGEconomyModel.model]:zeroGEconomyModel})
+export const zeroGSpeechModels = Object.freeze({
+  'whisper-large-v3': { unit: 'second', unitNanoUsd: 130000, maxUnits: 12 },
+  'minimax-speech-2.8-turbo': { unit: 'character', unitNanoUsd: 108000, maxUnits: 2000 }
+})
+const validAudio = value => value.kind === 'audio' && Boolean(zeroGSpeechModels[value.model]) &&
+  count(value.units) && value.units > 0 && value.units <= zeroGSpeechModels[value.model].maxUnits &&
+  value.unit === zeroGSpeechModels[value.model].unit && value.unitNanoUsd === zeroGSpeechModels[value.model].unitNanoUsd &&
+  value.ceilingNanoUsd === value.units * value.unitNanoUsd && value.source === 'https://router-api.0g.ai/v1/models' &&
+  Number.isFinite(Date.parse(value.observedAt)) && /^[a-f0-9]{64}$/.test(value.requestSha256 || '')
 const validPricing = value => Boolean(zeroGModels[value?.model]) && value.inputNanoUsd === zeroGModels[value.model].inputNanoUsd &&
   value.outputNanoUsd === zeroGModels[value.model].outputNanoUsd && value.contextTokens === zeroGModels[value.model].contextTokens &&
   value.source === 'https://router-api.0g.ai/v1/models' && Number.isFinite(Date.parse(value.observedAt))
@@ -35,7 +44,7 @@ function validate(state, budget) {
   if (!state || state.version !== 1 || state.authorizationId !== budget.authorizationId || state.limitNanoUsd !== budget.limitNanoUsd ||
       !count(state.spentNanoUsd) || !count(state.completedRequests) || !state.pending || Array.isArray(state.pending) ||
       typeof state.pending !== 'object' || Object.values(state.pending).some(value =>
-        !zeroGModels[value.model] || !validPricing(value.pricing) || value.pricing.model!==value.model || !count(value.ceilingNanoUsd) ||
+        value.kind === 'audio' ? !validAudio(value) : !zeroGModels[value.model] || !validPricing(value.pricing) || value.pricing.model!==value.model || !count(value.ceilingNanoUsd) ||
         value.inputBound !== zeroGModels[value.model].contextTokens || !count(value.maxTokens) || !value.maxTokens || value.maxTokens > 4096 ||
         value.ceilingNanoUsd !== zeroGModels[value.model].contextTokens * zeroGModels[value.model].inputNanoUsd + value.maxTokens * zeroGModels[value.model].outputNanoUsd)) {
     throw Error('ZERO_G_BUDGET_STATE_INVALID_OR_MISSING')
@@ -77,6 +86,31 @@ export async function initializeZeroGBudget(configuration, initialSpentUsd = '0'
 
 export async function validateZeroGBudget(budget) {
   await mutate(budget, () => {}, false)
+}
+
+export async function reserveZeroGAudio(provider, model, units, requestSha256, pricing) {
+  const spec = zeroGSpeechModels[model]
+  const reservation = { kind: 'audio', model, units, ...spec, source: pricing?.source,
+    observedAt: pricing?.observedAt, requestSha256, ceilingNanoUsd: units * spec?.unitNanoUsd }
+  if (!validAudio(reservation) || Math.abs(Date.now() - Date.parse(reservation.observedAt)) > 60000 || pricing.unitNanoUsd !== spec.unitNanoUsd) throw Error('INVALID_ZERO_G_AUDIO_BOUND')
+  return mutate(provider.budget, (state, budget) => {
+    if (state.blockedReason) throw Error('0G budget needs operator reconciliation before more requests.')
+    if (validate(state, budget) + reservation.ceilingNanoUsd > budget.limitNanoUsd) throw Error('0G API budget exhausted; existing tasks are preserved.')
+    const id = randomUUID(); state.pending[id] = { ...reservation, createdAt: new Date().toISOString() }; return id
+  })
+}
+
+export async function recordZeroGAudio(provider, id, providerRequestId) {
+  return mutate(provider.budget, state => {
+    const pending = state.pending[id]
+    if (!validAudio(pending || {})) throw Error('ZERO_G_AUDIO_REQUEST_NOT_PENDING')
+    // Charge the reserved duration/UTF-8 byte ceiling locally; unknown calls remain reserved.
+    state.spentNanoUsd += pending.ceilingNanoUsd; state.completedRequests++
+    state.lastReceipt = { model: pending.model, requestId: providerRequestId || null,
+      costNanoUsd: pending.ceilingNanoUsd, conservativeCostEstimate: true, units: pending.units,
+      unit: pending.unit, requestSha256: pending.requestSha256, recordedAt: new Date().toISOString() }
+    delete state.pending[id]; return state.lastReceipt
+  })
 }
 
 export async function reserveZeroGRequest(provider, request, pricing) {

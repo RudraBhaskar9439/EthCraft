@@ -102,7 +102,10 @@ class MumbaiCityHostTests(unittest.TestCase):
     def test_failed_upgrade_keeps_v2_plugin_and_stops_if_bank_marker_migrated(self):
         self.check_failed_upgrade(marker_migrated=True)
 
-    def check_failed_upgrade(self, marker_migrated):
+    def test_failed_prepared_upgrade_restores_dependencies_before_restart(self):
+        self.check_failed_upgrade(marker_migrated=False, with_dependencies=True)
+
+    def check_failed_upgrade(self, marker_migrated, with_dependencies=False):
         with tempfile.TemporaryDirectory() as directory:
             base = Path(directory)
             runtime = base / 'native'
@@ -126,6 +129,19 @@ class MumbaiCityHostTests(unittest.TestCase):
             isolated = {'id': '1' * 32, 'sourceActiveSha256': host.sha(active_file),
                         'sourceWorldIds': ids, 'sourceMumbaiConfigSha256': host.sha(config)}
             actual = {'Id': 'fixture-container', 'State': {'Running': True}}
+            dependency = runtime / 'plugins/voice-fixture.jar'
+
+            def prepare(target):
+                self.assertEqual(target, runtime)
+                dependency.write_bytes(b'fixture dependency')
+
+            def rollback_prepare(target):
+                self.assertEqual(target, runtime)
+                self.assertTrue(dependency.is_file())
+                dependency.unlink()
+
+            def resume_check(*_):
+                self.assertFalse(dependency.exists())
 
             def refuse_candidate(*_):
                 world.write_text('candidate fixture blocks retained for reconciliation')
@@ -143,7 +159,11 @@ class MumbaiCityHostTests(unittest.TestCase):
                     patch.object(host.ops, 'backup', return_value=base / 'private-db-backup') as database_backup, \
                     patch.object(host.laptop.managed, 'inspect_container', return_value=actual), patch.object(host.laptop, 'run'):
                 with self.assertRaisesRegex(RuntimeError, 'forward_recovery_required' if marker_migrated else 'fixture candidate not ready'):
-                    host.upgrade()
+                    if with_dependencies:
+                        resume.side_effect = resume_check
+                        host.upgrade(prepare=prepare, rollback_prepare=rollback_prepare)
+                    else:
+                        host.upgrade()
                 self.assertEqual(plugin.read_bytes(), b'candidate fixture plugin' if marker_migrated else b'original fixture plugin')
                 if marker_migrated:
                     self.assertTrue(json.loads(active_file.read_text())['recoveryRequired'])

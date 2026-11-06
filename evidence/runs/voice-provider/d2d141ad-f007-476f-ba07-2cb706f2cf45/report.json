@@ -1,0 +1,39 @@
+{
+  "status": "pass",
+  "inferenceOnly": true,
+  "gameActions": 0,
+  "before": {
+    "limitNanoUsd": 5000000000,
+    "spentNanoUsd": 120690704,
+    "pendingIds": [
+      "15526603-7b13-4667-8c28-6134e3617890",
+      "acce0909-037f-41a1-baf0-1ad34165c690",
+      "f0baa625-fc37-4b50-9b7c-55087dd57165",
+      "fce21071-92ad-4cdf-b57e-da4b1fa2f0d1"
+    ]
+  },
+  "checks": [
+    {
+      "name": "0G MiniMax voice to Whisper transcription",
+      "status": "pass",
+      "transcript": "Follow me.",
+      "elapsedMs": 9034,
+      "playbackSamples": 44583,
+      "audioSha256": "011a7b4e94c9f1a26fdd06be1a4913a7638c6a80b59db1b7109dca113851fbea"
+    },
+    {
+      "name": "Distinct Agent voice produces valid Minecraft playback PCM",
+      "status": "pass"
+    }
+  ],
+  "after": {
+    "limitNanoUsd": 5000000000,
+    "spentNanoUsd": 123736704,
+    "pendingIds": [
+      "15526603-7b13-4667-8c28-6134e3617890",
+      "acce0909-037f-41a1-baf0-1ad34165c690",
+      "f0baa625-fc37-4b50-9b7c-55087dd57165",
+      "fce21071-92ad-4cdf-b57e-da4b1fa2f0d1"
+    ]
+  }
+}
