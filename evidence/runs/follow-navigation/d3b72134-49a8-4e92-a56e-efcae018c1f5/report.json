@@ -1,0 +1,83 @@
+{
+  "schema": "agentcity.follow-navigation-check.v1",
+  "at": "2026-11-06T14:54:02.565840+00:00",
+  "scope": "Shared movement-controller handoff regression and observed real authorized follow recovery; full mixed-terrain route remains unqualified.",
+  "controllerRegression": "pass",
+  "rootCause": "Survival pause queues mineflayer-pathfinder.stop(); assigning a follow goal immediately then consumes that deferred stop and clears the new goal, while slot.mode remains follow.",
+  "fix": "Immediately clear the previous movement controller before assigning follow/come; prefer cardinal routes, honor the one-block drop limit for water and increase liquid route cost.",
+  "testsPassed": [
+    "node tests/playable/agents.mjs (deferred old stop regression included)",
+    "node tests/playable/mumbai-agents.mjs",
+    "node tests/playable/remote-agents.mjs",
+    "git diff --check"
+  ],
+  "observedAuthorizedRecovery": {
+    "before": {
+      "name": "CityAgent4",
+      "mode": "follow",
+      "position": {
+        "x": 1687.5,
+        "y": 69,
+        "z": 2812.5
+      },
+      "goal": "GoalFollow",
+      "ownerVisible": true
+    },
+    "after": {
+      "name": "CityAgent4",
+      "mode": "follow",
+      "position": {
+        "x": 1687.4997598670407,
+        "y": 65.61350080000001,
+        "z": 2789.307910943778
+      },
+      "inWater": false
+    },
+    "horizontalBlocksMoved": 23.192089057465083,
+    "note": "Actual prior approved follow intent was repaired in the existing worker; no synthetic owner approval, inventory grants or transactions."
+  },
+  "laterTerrainFinding": "The first route stalled at shallow water after a deep drop. Safer route settings were subsequently applied; this is not proof of unrestricted swimming.",
+  "liveSettings": [
+    {
+      "provider": "0g",
+      "agents": [
+        {
+          "name": "CityAgent4",
+          "mode": "wait",
+          "position": {
+            "x": 1730.329522748783,
+            "y": 69,
+            "z": 2811.5191949729615
+          },
+          "moving": false,
+          "deepWaterDrops": false
+        }
+      ]
+    },
+    {
+      "provider": "claude",
+      "agents": [
+        {
+          "name": "CityAgent5",
+          "mode": "wait",
+          "position": {
+            "x": 1692.5,
+            "y": 69,
+            "z": 2812.5
+          },
+          "moving": false,
+          "deepWaterDrops": false
+        }
+      ]
+    }
+  ],
+  "currentOwnerTask": "A newer actual Minecraft /agent 0g handoff request started the stick-crafting objective; it was not interrupted for another follow test.",
+  "fullFollowRoute": "pending after current owner task",
+  "modelCalls": 0,
+  "walletTransactions": 0,
+  "phaseStatus": "Original P3 and independent-human qualification remain open.",
+  "sources": {
+    "backend/src/playable/agents.mjs": "c27e9c060f256bf60963d6651e4caf3674425c97bdb73c50c5182146862a6297",
+    "tests/playable/agents.mjs": "90c486bb70168d1f517b5141696fa1035be491d39f6b2fe9810fa8ce98af42d7"
+  }
+}

@@ -1,0 +1,2 @@
+PASS idle recovery reconnects only an existing canonical provider slot; unowned, renamed and wrong-owner slots stay disconnected, and offline owners still cannot task
+PASS two provider-specific Mumbai managers retain canonical owner and native spelling, reject stale/unapproved connections, fence legacy worker and preserve its records; no model requests

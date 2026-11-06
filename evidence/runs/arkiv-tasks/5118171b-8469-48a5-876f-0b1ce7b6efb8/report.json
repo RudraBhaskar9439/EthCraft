@@ -1,0 +1,58 @@
+{
+  "schema": "ethcraft.arkiv-native-handoff.v1",
+  "runId": "5118171b-8469-48a5-876f-0b1ce7b6efb8",
+  "status": "pass",
+  "verifiedAt": "2026-11-06T14:56:12.280Z",
+  "chainId": 7794095,
+  "server": "85f700ee06a3208b76d02f3aef30c330aca35dddab2daa1074f5281db9e3d501",
+  "publisher": "0x5a262B9621eD0F00Fe776bb85084E9561cF18608",
+  "scope": "Actual owner used native publish, board and 0G handoff commands. Runtime state and independent Rabdi reads were checked. No approval or game action was fabricated.",
+  "source": {
+    "job": "29fd5b5e-7a90-45ea-9aeb-d2abca92b20d",
+    "status": "handed_off",
+    "entityKey": "0x358495b4ac6eed3e4851fa536e77d201ce0e505030a0212a82b8e8e713fa3947",
+    "transactionHash": "0xc4b3266293cf444e9c96388ebfbff631a6a5054cf347607b445c342f879d6355",
+    "steps": 4,
+    "receipts": 3
+  },
+  "target": {
+    "job": "0e35ae94-ec76-44f6-8643-aa96701a3416",
+    "statusAtVerification": "running",
+    "rootTask": "29fd5b5e-7a90-45ea-9aeb-d2abca92b20d",
+    "entityKey": "0x9ffe58e358f9dc1eb65a6a3529d4020aa7f5d4f728eeacbf9721216311c2d724",
+    "predecessor": "0x358495b4ac6eed3e4851fa536e77d201ce0e505030a0212a82b8e8e713fa3947",
+    "freshObservation": true,
+    "pendingEffect": false
+  },
+  "checks": {
+    "privateObjectiveRetained": true,
+    "sameApprovedOwner": true,
+    "samePlayer": true,
+    "sourceResumeFenced": true,
+    "actualArkivRead": true,
+    "receiptCommitmentMatches": true,
+    "userConfirmedNativeResponse": true,
+    "visibleBoardRead": true
+  },
+  "offlineChecks": "evidence/runs/arkiv-tasks/e6669461-91f9-4d1f-b078-effb6539c067/checks.json",
+  "controlledTestnetQualification": "evidence/runs/arkiv-tasks/ac436129-3359-4fe5-8aff-3e27aba0be5d/report.json",
+  "sourceHashes": {
+    "backend/src/arkiv/tasks.mjs": "8ba24b9967a0519c0090e35621f72f8c04ce3560535d0a9dd2dc5c8ff0ffc70b",
+    "backend/src/arkiv/runtime.mjs": "4441dd2f963ca2683f220d9b60466e2a25fa2d37b333ff8ef4bb66b790b2e342",
+    "backend/src/server.mjs": "118065f647418832ac5d13e056307c23a4dd9c38fc69e86f8b8a222613ff07e1",
+    "backend/src/playable/survival-objectives.mjs": "58dc216300670465851e80250f903baa98f36d685fa5ee1c2db2834489faade3",
+    "scripts/mumbai_agents.mjs": "b08c6faabe167309785a5c7ff5ba7ddb9921ef62fd212fd26a0767953db80748",
+    "scripts/arkiv_tasks.mjs": "c628851ad63e54a82cc0996639c320cbbec2690723b82ed470c615110c177be3",
+    "tests/discovery/task-board.mjs": "d9605e30a2cf638cca1fed828a368c0cbeff42cfae5908a0c0b0ea8889f59bfc",
+    "backend/src/web/arkiv.html": "24bd5476399345a4790c2d9430f1b7c0f75c5d46a98bd98fe65fa473ef109a6d",
+    "backend/src/web/arkiv.mjs": "cd304b9710bb603e8a43c6b3d32d46be65e576d039dc2741afa0d06bb14824ed",
+    "backend/src/web/arkiv.css": "0ecf819b13874ee5ba3f26e48c47f4e967a2b47bf45e4adb8a285f24bff1ec9f",
+    "backend/package.json": "f6cf4ee6c03c6dc8718c62e9af096c3453d6d1d2de291a1aecda82c2ea3d1fe7",
+    "backend/package-lock.json": "c0bcf4e6a7ee0b7949614930e5949d05b42eac39f16650c1ce421767ff73f048"
+  },
+  "limits": [
+    "Handoff acceptance and data flow verified; target task completion and owner acceptance are not established by this report.",
+    "Runtime publisher is trusted, not independent game inspection.",
+    "Canonical P4/release gates, public licensed submission and from-scratch eligibility remain unresolved."
+  ]
+}

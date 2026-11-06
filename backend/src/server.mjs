@@ -9,6 +9,7 @@ import { handleHumanSession } from './workflow/human-session.mjs'
 import { openPlayerWalletAuth, playerWalletPublicConfig } from './playable/wallet-http-runtime.mjs'
 import { openDiscordIdentityRuntime, discordPublicConfig } from './discord/runtime.mjs'
 import { openInventoryShopRuntime } from './playable/inventory-shop-runtime.mjs'
+import { openTaskBoard, safeError as arkivError } from './arkiv/runtime.mjs'
 
 const root = new URL('../../', import.meta.url)
 const port = Number(process.env.AGENTCITY_LOCAL_PORT || 8789)
@@ -23,6 +24,8 @@ let walletRuntime
 let playerWalletRuntime
 let discordRuntime
 let inventoryRuntime
+let taskBoardRuntime
+const taskBoard = async () => taskBoardRuntime || (taskBoardRuntime = openTaskBoard(fileURLToPath(root)).catch(error => { taskBoardRuntime = null; throw error }))
 const inventoryShop=async()=>inventoryRuntime||(inventoryRuntime=discordIdentity().then(identityRuntime=>openInventoryShopRuntime({rootDirectory:fileURLToPath(root),identityRuntime})).catch(error=>{inventoryRuntime=null;throw error}))
 const discordIdentity=async()=>{
   if(!discordRuntime)discordRuntime=openDiscordIdentityRuntime().catch(error=>{discordRuntime=null;throw error})
@@ -50,6 +53,8 @@ const commands = {
   '/api/public-resume': ['scripts/resume_local_settlement.mjs', '--public-testnet']
 }
 const assets = {
+  '/arkiv.mjs': ['backend/src/web/arkiv.mjs', 'text/javascript; charset=utf-8'],
+  '/arkiv.css': ['backend/src/web/arkiv.css', 'text/css; charset=utf-8'],
   '/console.mjs': ['backend/src/web/console.mjs', 'text/javascript; charset=utf-8'],
   '/console.css': ['backend/src/web/console.css', 'text/css; charset=utf-8']
 }
@@ -69,6 +74,20 @@ createServer(async (request, response) => {
   const discordPath=onboardingPage==='/discord/setup'||['/discord/setup','/discord-setup.js','/discord-setup.js.LEGAL.txt','/api/discord/config','/api/discord/complete','/api/discord/wallet'].includes(request.url)
   if (request.headers.host !== `127.0.0.1:${port}` && !(playerPath&&request.headers.host===new URL(playerOrigin).host) && !(discordPath&&request.headers.host===new URL(discordOrigin).host)) { response.writeHead(403).end(); return }
   try {
+    if (request.method === 'GET' && request.url === '/arkiv') {
+      response.setHeader('Content-Type','text/html; charset=utf-8')
+      response.end(await readFile(new URL('backend/src/web/arkiv.html',root))); return
+    }
+    if (request.method === 'GET' && request.url.split('?')[0] === '/api/arkiv/tasks') {
+      try {
+        const parameters = new URL(request.url,origin).searchParams
+        if ([...parameters.keys()].some(k => !['provider','status','offset'].includes(k) || parameters.getAll(k).length !== 1)) throw Error('ARKIV_QUERY_INVALID')
+        const filters = Object.fromEntries(parameters)
+        if (filters.offset !== undefined) filters.offset = Number(filters.offset)
+        humanResponse(response,200,await (await taskBoard()).list(filters))
+      } catch (error) { humanResponse(response,503,{error:arkivError(error),source:'unavailable',records:[]}) }
+      return
+    }
     const agentAction=request.url.match(/^\/api\/agent-shop\/(purchase|revoke)$/)
     if(request.method==='POST'&&agentAction){
       if(request.headers.origin||request.headers['content-type']!=='application/json'){humanResponse(response,403,{error:'AGENT_SHOP_PRIVATE_CLIENT_REQUIRED'});return}

@@ -1,0 +1,9 @@
+# How Arkiv affects the product
+
+1. **Queryable schema:** owner + deployment + provider queries populate a visible board. Job and root-task identifiers connect progress without publishing player identifiers. Revision ordering separates current rows in a page from older history.
+2. **Ownership:** the dedicated runtime publisher owns its observations; the reader rejects another wallet publishing under the same schema tag. This is runtime provenance, not individual player ownership or independent inspection.
+3. **Expiry:** seven-day records disappear from discovery when expired. The UI does not present absence as a failed task or loss of paid rights. Durable local work and financial journals outlive them.
+4. **User-visible reads:** `/agent <worker> board`, the HTML task board and standalone CLI read Rabdi. Owner-requested handoff reads the specific published source entity again before starting the other worker.
+5. **Recovery:** signed bytes and immutable snapshot intent are saved before sending. The same operation is reconciled after an uncertain response. Typed payloads, confirmed engine events and readback must agree before publication is reported successful.
+
+Use `README.md` for the demo and query; evidence reports retain actual transaction hashes and entity keys. Controlled data-fixture tests establish real Arkiv writes/reads, not native owner approval. The [separate live owner test](../evidence/runs/arkiv-tasks/5118171b-8469-48a5-876f-0b1ce7b6efb8/report.json) verifies publication of four actual observed steps and three local effect receipts, a native 0G handoff, matching private objective/owner and a fresh target-world observation. It does not establish target-task completion or owner acceptance. The existing signed-agreement/labor-settlement system is not newly claimed as functioning Mumbai paid labor by these progress records.

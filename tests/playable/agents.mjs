@@ -18,7 +18,7 @@ const factory = async options => {
   bot.carriedItems = []
   bot.inventory = { items: () => bot.carriedItems, slots: [] }
   bot.players = Object.fromEntries(Object.entries(people).map(([name, uuid]) => [name, { uuid, entity: { position: { x: 35, y: 81, z: 4 } } }]))
-  bot.goals = []; bot.pathfinder = { setGoal: (goal, dynamic) => bot.goals.push({ goal, dynamic }) }
+  bot.goals = []; bot.pathfinder = { stop(){bot.pendingNavigationStop=true}, setGoal(goal,dynamic){if(bot.pendingNavigationStop){bot.pendingNavigationStop=false;goal=null}bot.goals.push({goal,dynamic})} }
   bot.clearControlStates = () => { bot.controlsCleared = (bot.controlsCleared || 0) + 1 }
   bot.quit = () => bot.emit('end')
   bot._client = new EventEmitter()
@@ -68,6 +68,10 @@ try {
   assert.match(await manager.handle(event('Ruddy', 'agent_follow')), /follow you/)
   assert.equal(bots[0].goals.at(-1).dynamic, true)
   assert.equal(bots[0].goals.at(-1).goal.entity, bots[0].players.Ruddy.entity)
+  bots[0].pathfinder.stop()
+  assert.match(await manager.handle(event('Ruddy','agent_follow')),/follow you/)
+  assert.equal(bots[0].pendingNavigationStop,false)
+  assert.equal(bots[0].goals.at(-1).goal.entity,bots[0].players.Ruddy.entity,'A deferred old stop must not erase the new follow goal')
   bots[0].emit('physicsTick')
   assert.equal(bots[0].lastPacket.packet, 'tick_end')
   assert.match(await manager.handle(event('Ruddy', 'agent', ['come'])), /come to you/)

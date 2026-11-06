@@ -1,0 +1,1 @@
+PASS typed public projection and privacy; owner-filtered, latest-state reads; immutable receipt recovery and duplicate suppression; approved command routing; pending-effect and wrong-owner handoff rejection; chain-read handoff and idempotent retry; shared context reaches the real objective loop and source resume is fenced

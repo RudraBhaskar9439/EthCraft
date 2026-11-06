@@ -182,3 +182,22 @@ Keep secrets out of commits, prompts and public evidence. Keep issuer, publisher
 ## Checks
 
 Run python3 -m unittest discover -s tests -v and python3 scripts/check_plan.py for planning infrastructure changes. These checks do not pass any product phase. Follow the actual plugin, bot, contract, real-service and recovery checks in docs/TESTING.md when those components are implemented.
+## Arkiv task progress — user update 6 November 2026
+
+The user subsequently requested a public judge-facing Arkiv demo. The read-only
+viewer and extracted MIT-licensed Arkiv component may be public at
+RudraBhaskar9439/EthCraft-Arkiv. Keep the full EthCraft repository private. Public
+hosting must expose only existing public progress reads, without wallet keys,
+Discord credentials, local files, native game control or signing endpoints.
+
+The user authorized the best-fit Arkiv integration in this project and funded
+the dedicated publisher on Rabdi. Add opt-in typed progress snapshots, a visible
+Arkiv-backed task board and owner-requested cross-provider handoffs. Keep private
+objectives, identities, reasoning, wallet permissions and native journals local.
+Records are runtime-attested, expiring coordination data, never execution or
+financial authority. Reconcile the same signed publication after uncertainty;
+do not replace it. Preserve the earlier Tiramisu route and its evidence. This
+extension does not pass independent-human, paid-labor or canonical phase gates.
+Keep the private EthCraft repository private. From-scratch prize eligibility is
+unresolved because earlier project-specific code/assets are present; document
+that fact rather than claiming a new feature or repository removes the issue.

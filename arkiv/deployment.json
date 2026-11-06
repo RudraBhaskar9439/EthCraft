@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "server": "85f700ee06a3208b76d02f3aef30c330aca35dddab2daa1074f5281db9e3d501",
+  "publisher": "0x5a262B9621eD0F00Fe776bb85084E9561cF18608",
+  "chainId": 7794095,
+  "rpc": "https://rpc.rabdi.db-chain.testnet.arkiv.network",
+  "schema": "ethcraft.task-progress.v1"
+}

@@ -11,6 +11,7 @@ import { SurvivalObjectives } from '../backend/src/playable/survival-objectives.
 import { SurvivalTools, survivalSkills } from '../backend/src/playable/survival-tools.mjs'
 import {createAdaptivePlanner,create0GReviewer} from '../backend/src/playable/adaptive-planner.mjs'
 import {zeroGEconomyModel} from '../backend/src/inference/zero-g-budget.mjs'
+import { openTaskBoard, safeError as arkivError } from '../backend/src/arkiv/runtime.mjs'
 
 const root = fileURLToPath(new URL('../', import.meta.url))
 const json = async file => JSON.parse(await readFile(file, 'utf8'))
@@ -57,7 +58,7 @@ export function mumbaiAgentCommand(event) {
   else if(/^(?:stop(?: moving| following(?: me)?)?|wait(?: here)?|stay(?: here)?|pause(?: (?:work|task))?)$/.test(spoken))request='wait'
   else if(/^(?:status|what are you doing)$/.test(spoken))request='status'
   const explicit = /^(?:create|follow|come|wait|status|inspect|review|capabilities|release|cancel|screenshot)$/.test(request) || /^task(?:\s|$)/.test(request) ||
-    /^build (?:(?:platform|shelter) )?\d+ \d+(?: [a-z0-9_:]+)?$/.test(request) || /^(?:collect|deliver) [a-z0-9_:]+ \d+$/.test(request)||request==='purchases off'
+    /^build (?:(?:platform|shelter) )?\d+ \d+(?: [a-z0-9_:]+)?$/.test(request) || /^(?:collect|deliver) [a-z0-9_:]+ \d+$/.test(request)||request==='purchases off' || /^(?:board|publish|unshare)$/.test(request) || /^handoff [0-9a-f-]{36}$/i.test(request)
   return { provider, event: { ...event, action: explicit ? 'agent' : 'agent_task', args: request } }
 }
 
@@ -86,7 +87,7 @@ export async function waitForMumbaiTaskPosition(slot, region, timeoutMs = 5000) 
   }
 }
 
-export async function createMumbaiAgentService({ rootDirectory, runtimeDirectory, world, providers, identity, api, serverId, botFactory, agentShop,economyProvider,reviewer } = {}) {
+export async function createMumbaiAgentService({ rootDirectory, runtimeDirectory, world, providers, identity, api, serverId, botFactory, agentShop,economyProvider,reviewer,taskBoard } = {}) {
   if (world?.available !== true || world.personalAgentCapacity !== 5 || world.initializedTaskPads !== 5 || !world.mumbaiAgentBounds || !world.mumbaiAgentSpawn ||
       !Array.isArray(world.taskRegions) || Object.values(mumbaiAgentSlots).some(name => world.taskRegions.filter(region => region.slotName === name && region.worldName === 'agentcity_mumbai').length !== 1)) {
     throw Error('MUMBAI_AGENT_PLUGIN_UPGRADE_REQUIRED')
@@ -131,6 +132,7 @@ export async function createMumbaiAgentService({ rootDirectory, runtimeDirectory
       }
       managers[provider] = manager
       if(world.mumbai?.survival===true)objectives[provider]=await new SurvivalObjectives({rootDirectory,manager,world,api,label:provider==='claude'?'Agent':'0G',reviewer,
+        onProgress:job=>taskBoard?.onProgress(provider,job),
         planner:economyProvider?createAdaptivePlanner({economy:economyProvider,advanced:providers[provider],requestModel:(p,m,s)=>manager.intents.requestModel(m,s,p)}):undefined,
         purchase:agentShop?input=>agentShop('purchase',{...input,provider}):undefined}).initialize()
     }
@@ -147,7 +149,19 @@ export async function createMumbaiAgentService({ rootDirectory, runtimeDirectory
         const survival=objectives[route.provider],text=String(attributed.args||'').trim()
         if(survival){
           const command=attributed.action==='agent_task'?'task':text.split(/\s+/)[0]
-          if(command==='task')return survival.start(attributed,attributed.action==='agent_task'?text:text.replace(/^task\s*/,''))
+          if (['board','publish','unshare','handoff'].includes(command)) {
+          if (!taskBoard) return 'Arkiv task board is unavailable. Existing tasks and materials are preserved.'
+          try {
+            if (command === 'board') {
+              const page = await taskBoard.list()
+              return page.records.length ? page.records.slice(0,8).map(r => r.provider+' '+r.job+' '+r.status+'; '+r.facts.completedSteps+' observed steps').join('\n')+'\nFull board: http://127.0.0.1:8789/arkiv' : 'No shared tasks on Arkiv yet. Use /agent '+(route.provider==='claude'?'agent':'0g')+' publish to share action facts and block positions (not your prompt).'
+            }
+            if (command === 'publish') return await taskBoard.share(route.provider,survival,attributed.playerId)
+            if (command === 'unshare') return await taskBoard.unshare(survival,attributed.playerId)
+            return await taskBoard.handoff({provider:route.provider,objectives,event:attributed,jobId:text.split(/\s+/)[1]})
+          } catch (error) { return 'Arkiv is waiting: '+arkivError(error)+'. Local task history is retained; no action or payment is repeated.' }
+        }
+        if(command==='task')return survival.start(attributed,attributed.action==='agent_task'?text:text.replace(/^task\s*/,''))
           if(command==='capabilities')return 'Survival skills: '+JSON.stringify(survivalSkills)
           if(command==='review')return survival.reviewLatest(attributed)
           const slot=managers[route.provider].slots.find(s=>s.ownerId===attributed.playerId)
@@ -213,13 +227,14 @@ async function main() {
   const reviewer=create0GReviewer({provider:{...providers['0g'],maxTokens:3072}})
   const environment = await json(join(root, '.local/backend/environment.json'))
   const pool = new pg.Pool({ connectionString: environment.databaseUrl, max: 3 })
-  let identity, service, stopped = false
+  let identity, service, taskBoard, stopped = false
   const stop = () => { stopped = true; for (const manager of Object.values(service?.managers || {})) for (const slot of manager.slots) manager.stop(slot, 'Mumbai agent host is stopping.') }
   process.once('SIGINT', stop); process.once('SIGTERM', stop)
   const inFlight = new Map()
   try {
     identity = await openDiscordIdentityRuntime({ rootDirectory: root, pool, pluginApi: api })
-    service = await createMumbaiAgentService({ rootDirectory: root, runtimeDirectory, world: await api('status'), providers, identity: identity.service, api, serverId: active.serverId,agentShop,economyProvider,reviewer })
+    try { taskBoard = await openTaskBoard(root,{writer:true}) } catch (error) { console.warn('Arkiv task board waiting:',arkivError(error)) }
+    service = await createMumbaiAgentService({ rootDirectory: root, runtimeDirectory, world: await api('status'), providers, identity: identity.service, api, serverId: active.serverId,agentShop,economyProvider,reviewer,taskBoard })
     let setup
     try { setup = await json(join(root, '.local/mumbai/agents.json')) } catch (error) { if (error.code !== 'ENOENT') throw error }
     if (setup) {
@@ -252,7 +267,7 @@ async function main() {
       } catch { if (!nativeUnavailable) console.error('Mumbai native service unavailable; requests remain queued.'); nativeUnavailable = true }
       await new Promise(resolve => setTimeout(resolve, 500))
     }
-  } finally { await Promise.allSettled(inFlight.values()); await service?.close(); await identity?.close(); await pool.end() }
+  } finally { await Promise.allSettled(inFlight.values()); await service?.close(); await taskBoard?.close(); await identity?.close(); await pool.end() }
 }
 
 if (resolve(process.argv[1] || '') === fileURLToPath(import.meta.url)) main().catch(error => { console.error(/^[A-Z0-9_]+$/.test(error.code || error.message || '') ? error.code || error.message : 'MUMBAI_AGENT_STARTUP_FAILED'); process.exitCode = 1 })

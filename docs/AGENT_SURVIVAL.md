@@ -1,5 +1,9 @@
 # Mumbai Survival and objective agents
 
+Shared Arkiv progress, the task board and safe provider handoff commands are
+documented in [the Arkiv integration guide](../arkiv/README.md). Sharing is opt-in;
+no Arkiv record grants a tool or wallet permission.
+
 Mumbai now runs Survival rather than the protected sightseeing mode. Every
 Discord-approved player may mine, build and use ordinary containers throughout
 the mapped city. There is no work-plot membership requirement. Existing worlds,

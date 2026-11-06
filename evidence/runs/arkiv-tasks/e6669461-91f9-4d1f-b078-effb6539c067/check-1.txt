@@ -1,0 +1,12 @@
+PASS strict Survival tools reject commands, spending, unsupported targets and invalid quantities
+PASS Claude gets the larger planning allowance while 0G and configured provider ceilings stay bounded
+PASS Survival movement uses calibrated cardinal walking, disables diagonal clipping and restores prior movements
+PASS empty-inventory movement uses only its current objective; unrelated crafting examples never enter the prompt
+PASS 0G tool selection uses flat required arguments and cannot change the selected tool through extra fields
+PASS real recipe batches and inventory deltas guard craft success; unknown effects retain pending intent
+PASS delayed inventory acknowledgement is observed without replaying the physical action
+PASS objective loop replans from a real tool failure, records evidence, reaches review and deduplicates original requests
+PASS three failed navigation attempts pause paid planning even when the model changes waypoints
+PASS working memory persists and unknown purchase resumes the original saved intent before further model calls, without fabricating native Pay
+PASS a delayed old planner reply cannot execute tools, overwrite pause status or stop newer direct movement
+PASS owner logout blocks inference/effects; interrupted intent survives restart and cannot be automatically replayed

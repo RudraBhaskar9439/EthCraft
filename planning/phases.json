@@ -311,7 +311,14 @@
       "tests/playable/agent-shop.mjs",
       "backend/src/playable/adaptive-planner.mjs",
       "tests/playable/adaptive-planner.mjs",
-      "tests/playable/adaptive-model-live.mjs"
+      "tests/playable/adaptive-model-live.mjs",
+      "backend/src/arkiv/",
+      "backend/src/web/arkiv.html",
+      "backend/src/web/arkiv.mjs",
+      "backend/src/web/arkiv.css",
+      "scripts/arkiv_tasks.mjs",
+      "arkiv/",
+      "tests/discovery/task-board.mjs"
     ],
     "paths_status": "Actual local component paths adopted; canonical live phase approval remains separate."
   },

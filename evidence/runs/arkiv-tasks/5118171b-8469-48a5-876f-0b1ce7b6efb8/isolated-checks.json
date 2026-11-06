@@ -1,0 +1,27 @@
+{
+  "status": "pass",
+  "setupCorrection": "Linked the existing compatibility test dependencies; no live configuration copied.",
+  "checks": [
+    {
+      "command": [
+        "node",
+        "tests/discovery/task-board.mjs"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "tests/playable/mumbai-agents.mjs"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "node",
+        "tests/playable/survival.mjs"
+      ],
+      "exitCode": 0
+    }
+  ]
+}

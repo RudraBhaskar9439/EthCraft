@@ -174,7 +174,14 @@
     "tests/playable/agent-shop.mjs",
     "backend/src/playable/adaptive-planner.mjs",
     "tests/playable/adaptive-planner.mjs",
-      "tests/playable/adaptive-model-live.mjs"
+    "tests/playable/adaptive-model-live.mjs",
+    "backend/src/arkiv/",
+    "backend/src/web/arkiv.html",
+    "backend/src/web/arkiv.mjs",
+    "backend/src/web/arkiv.css",
+    "scripts/arkiv_tasks.mjs",
+    "arkiv/",
+    "tests/discovery/task-board.mjs"
   ],
   "rule": "Use this common scope plus each phase implementation_paths. Add shared interfaces and actual build/dependency locations before adoption. Changes reopen affected evidence; no path list independently proves all transitive dependencies."
 }

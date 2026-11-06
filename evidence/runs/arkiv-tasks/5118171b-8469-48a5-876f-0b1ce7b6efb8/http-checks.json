@@ -1,0 +1,33 @@
+{
+  "status": "pass",
+  "scope": "Actual local backend HTTP reads and receiving boundary",
+  "checks": [
+    {
+      "path": "/arkiv",
+      "status": 200
+    },
+    {
+      "path": "/arkiv.mjs",
+      "status": 200
+    },
+    {
+      "path": "/arkiv.css",
+      "status": 200
+    },
+    {
+      "path": "/api/arkiv/tasks?provider=claude",
+      "status": 200,
+      "chainId": 7794095,
+      "source": "live-arkiv"
+    },
+    {
+      "path": "/api/arkiv/tasks?provider=administrator",
+      "status": 503,
+      "rejected": true
+    },
+    {
+      "path": "/api/arkiv/tasks",
+      "foreignHostStatus": 403
+    }
+  ]
+}

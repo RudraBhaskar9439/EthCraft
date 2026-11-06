@@ -1,0 +1,12 @@
+{
+  "schema": "ethcraft.arkiv-qualification.v1",
+  "runId": "cfa03410-1f80-43ed-aaf7-a61b3ffa3cb6",
+  "chainId": 7794095,
+  "publisher": "0x5a262B9621eD0F00Fe776bb85084E9561cF18608",
+  "server": "85f700ee06a3208b76d02f3aef30c330aca35dddab2daa1074f5281db9e3d501",
+  "startedAt": "2026-11-06T14:27:40.094Z",
+  "status": "failed",
+  "scope": "Controlled public data fixture; no Minecraft action, inference call, human approval or payment.",
+  "receipts": [],
+  "error": "ARKIV_RPC_UNAVAILABLE"
+}

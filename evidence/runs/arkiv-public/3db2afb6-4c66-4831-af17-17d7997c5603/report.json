@@ -1,0 +1,73 @@
+{
+  "schema": "ethcraft.arkiv-public-deployment.v1",
+  "runId": "3db2afb6-4c66-4831-af17-17d7997c5603",
+  "status": "pass",
+  "verifiedAt": "2026-11-06T16:21:00.932203+00:00",
+  "publicUrl": "https://ethcraft-arkiv.quiet-buddy-9104.chatgpt.site",
+  "repository": "https://github.com/RudraBhaskar9439/EthCraft-Arkiv",
+  "repositoryPublic": true,
+  "publicSourceCommit": "ca09412c894c99ea3d499fd91e132bce4eadfc9d",
+  "siteProjectId": "appgprj_6aedf59a7fd081918e43e738212d9d35",
+  "siteVersion": "appgprj_6aedf59a7fd081918e43e738212d9d35~appgver_a8cba146c94881918a1c6c90d2c45f00",
+  "deploymentId": "appgdep_6aedfd1e4e9481919168cc63da9f87b6",
+  "siteAudience": "public",
+  "nativeDeploymentStatus": "succeeded",
+  "httpChecks": [
+    {
+      "path": "/",
+      "method": "GET",
+      "status": 200,
+      "anonymous": true,
+      "cookiesSent": false,
+      "authorizationSent": false
+    },
+    {
+      "path": "/api/tasks",
+      "method": "GET",
+      "status": 200,
+      "anonymous": true,
+      "cookiesSent": false,
+      "authorizationSent": false,
+      "blockNumber": "298052",
+      "realStages": 2
+    },
+    {
+      "path": "/api/entity?key=0x358495b4ac6eed3e4851fa536e77d201ce0e505030a0212a82b8e8e713fa3947",
+      "method": "GET",
+      "status": 200,
+      "anonymous": true,
+      "cookiesSent": false,
+      "authorizationSent": false
+    },
+    {
+      "path": "/api/tasks",
+      "method": "POST",
+      "status": 405,
+      "anonymous": true,
+      "cookiesSent": false,
+      "authorizationSent": false
+    },
+    {
+      "path": "/api/tasks?provider=admin",
+      "method": "GET",
+      "status": 400,
+      "anonymous": true,
+      "cookiesSent": false,
+      "authorizationSent": false
+    }
+  ],
+  "browserVerified": true,
+  "publicUnitTests": {
+    "passed": 2,
+    "failed": 0
+  },
+  "artifactValidation": "valid ESM default.fetch",
+  "publicSourceCredentialScan": "pass",
+  "scope": "Public read-only Rabdi query and record viewer. No game-control or wallet-signing endpoints. Public source includes operator-only publisher and native handoff adapter. Existing game repository remains private.",
+  "limits": [
+    "Seven-day entities can expire or be deleted.",
+    "The runtime publisher attests to game observations; no independent acceptance is claimed.",
+    "Public extraction and hosting do not establish Build-from-Scratch eligibility.",
+    "Hosting edge rejects the default Python User-Agent; browser and anonymous HTTP with browser User-Agent were verified."
+  ]
+}

@@ -444,6 +444,7 @@ export class PersonalAgents {
       const result = await this.saleHandler({ ...request, action: 'sell', createdAtMs: request.createdAtMs }, { inventoryPlayerId, item, count: proposed.count })
       return request._workflow ? result : result && typeof result === 'object' ? String(result.message || 'Sale awaits reconciliation.') : result
     }
+    this.stop(slot)
     const generation = slot.generation
     if (!request.remoteRequest) { slot.remoteExecution = false; slot.remoteContext = null; slot.remoteProof = null; slot.remoteAction = null }
     if (action === 'follow') bot.pathfinder.setGoal(this.goals.follow(player.entity), true)
@@ -579,6 +580,7 @@ export class PersonalAgents {
           const movements = new Movements(bot)
           movements.canDig = false; movements.allow1by1towers = false; movements.allowParkour = false
           movements.canOpenDoors = false; movements.scafoldingBlocks = []; movements.maxDropDown = 1
+          movements.getMoveDiagonal = () => {}; movements.infiniteLiquidDropdownDistance = false; movements.liquidCost = 10
           movements.exclusionAreasBreak.push(() => Infinity); movements.exclusionAreasPlace.push(() => Infinity)
           movements.exclusionAreasStep.push(block => this.allowed({ x: block.position.x, y: block.position.y + 1, z: block.position.z }) ? 0 : Infinity)
           bot.pathfinder.setMovements(movements)

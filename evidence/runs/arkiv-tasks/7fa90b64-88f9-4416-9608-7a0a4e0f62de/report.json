@@ -1,0 +1,80 @@
+{
+  "schema": "ethcraft.arkiv-qualification.v1",
+  "runId": "7fa90b64-88f9-4416-9608-7a0a4e0f62de",
+  "chainId": 7794095,
+  "publisher": "0x5a262B9621eD0F00Fe776bb85084E9561cF18608",
+  "server": "85f700ee06a3208b76d02f3aef30c330aca35dddab2daa1074f5281db9e3d501",
+  "startedAt": "2026-11-06T14:29:57.905Z",
+  "status": "pass",
+  "scope": "Controlled public data fixture; no Minecraft action, inference call, human approval or payment.",
+  "receipts": [
+    {
+      "server": "85f700ee06a3208b76d02f3aef30c330aca35dddab2daa1074f5281db9e3d501",
+      "task": "ed8f5f85-b6ca-4fa4-9ee5-d27d09954822",
+      "job": "ed8f5f85-b6ca-4fa4-9ee5-d27d09954822",
+      "provider": "claude",
+      "status": "paused",
+      "facts": {
+        "version": 1,
+        "fixture": true,
+        "completedSteps": 1,
+        "failedSteps": 0,
+        "pendingEffect": false,
+        "actions": [
+          {
+            "tool": "craft",
+            "item": "stick",
+            "count": 4,
+            "produced": 4
+          }
+        ],
+        "predecessor": null
+      },
+      "entityKey": "0x362a5de03a01e7045557bff3be915cbb0c0b7197c6218a728fa147759081c6b1",
+      "revision": 2,
+      "expiresAtBlock": "597218",
+      "owner": "0x5a262B9621eD0F00Fe776bb85084E9561cF18608",
+      "attestation": "Host-observed progress; not independent inspection or payment authority.",
+      "transactionHash": "0x3bf06439ee71e42d8ca8c56ca555be3de1f0be9a722d34bad7f3e78a8f0f1ce8"
+    },
+    {
+      "server": "85f700ee06a3208b76d02f3aef30c330aca35dddab2daa1074f5281db9e3d501",
+      "task": "ed8f5f85-b6ca-4fa4-9ee5-d27d09954822",
+      "job": "bf68d859-d546-40f5-97fe-b58adbe441e9",
+      "provider": "0g",
+      "status": "paused",
+      "facts": {
+        "version": 1,
+        "fixture": true,
+        "completedSteps": 1,
+        "failedSteps": 0,
+        "pendingEffect": false,
+        "actions": [
+          {
+            "tool": "deposit",
+            "item": "stick",
+            "count": 4,
+            "moved": 4
+          }
+        ],
+        "predecessor": "0x362a5de03a01e7045557bff3be915cbb0c0b7197c6218a728fa147759081c6b1"
+      },
+      "entityKey": "0x2bcf6be12e37196f53109d426f9b6619243afd1a5fe7b67439c9071a81e6e64e",
+      "revision": 3,
+      "expiresAtBlock": "597221",
+      "owner": "0x5a262B9621eD0F00Fe776bb85084E9561cF18608",
+      "attestation": "Host-observed progress; not independent inspection or payment authority.",
+      "transactionHash": "0xa76b9c7acea666e08a637187e1751bf036ed818cf481335f74d22ca86a06b92f"
+    }
+  ],
+  "checks": [
+    "Rabdi chain identity",
+    "SDK 1.0.1 create and canonical receipt",
+    "independent SDK entity and filtered board read",
+    "same snapshot reuses its original transaction",
+    "linked provider snapshots carry typed facts",
+    "fixture disclosure and private prompt omission"
+  ],
+  "nativeOwnerHandoff": "not_tested",
+  "completedAt": "2026-11-06T14:30:12.614Z"
+}

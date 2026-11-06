@@ -1,0 +1,58 @@
+{
+  "schema": "ethcraft.arkiv-release-checks.v1",
+  "runId": "e6669461-91f9-4d1f-b078-effb6539c067",
+  "status": "pass",
+  "checks": [
+    {
+      "command": [
+        "node",
+        "tests/discovery/task-board.mjs"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-11-06T14:53:05.033415+00:00",
+      "log": "evidence/runs/arkiv-tasks/e6669461-91f9-4d1f-b078-effb6539c067/check-0.txt"
+    },
+    {
+      "command": [
+        "node",
+        "tests/playable/survival.mjs"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-11-06T14:53:05.033589+00:00",
+      "log": "evidence/runs/arkiv-tasks/e6669461-91f9-4d1f-b078-effb6539c067/check-1.txt"
+    },
+    {
+      "command": [
+        "node",
+        "tests/playable/mumbai-agents.mjs"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-11-06T14:53:05.033659+00:00",
+      "log": "evidence/runs/arkiv-tasks/e6669461-91f9-4d1f-b078-effb6539c067/check-2.txt"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_plan.py"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-11-06T14:53:05.035452+00:00",
+      "log": "evidence/runs/arkiv-tasks/e6669461-91f9-4d1f-b078-effb6539c067/check-3.txt"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-11-06T14:53:05.035772+00:00",
+      "log": "evidence/runs/arkiv-tasks/e6669461-91f9-4d1f-b078-effb6539c067/check-4.txt"
+    }
+  ],
+  "scope": "Offline receiving-boundary and agent regressions; planning checks do not pass product phases. Real chain and owner proof recorded separately."
+}

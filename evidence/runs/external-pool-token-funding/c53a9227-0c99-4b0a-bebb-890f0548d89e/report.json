@@ -1,0 +1,43 @@
+{
+  "status": "pass",
+  "verifiedAt": "2026-11-06T16:53:38.449Z",
+  "scope": "Explicitly requested one-time funding of both pool tokens at the supplied external address, from existing controlled project test balances. Not swap volume, earned income, LP provision or game-wallet relinking.",
+  "chainId": 1301,
+  "recipient": "0xd1dcaaff9356d5a42f2ee6f90179c4509386a83f",
+  "source": "0xb25898f5e4907e6925741b10dea46f351104a0e4",
+  "tokens": {
+    "CITY": {
+      "address": "0x13431952927c79004fc2fc5aab576752552fea12",
+      "amount": "1000000000000000000",
+      "decimals": 18
+    },
+    "tUSDC": {
+      "address": "0x9caa79a2b1e4420e45f0cf3bd47a90770136b3a4",
+      "amount": "1000000",
+      "decimals": 6
+    }
+  },
+  "balancesAfter": {
+    "CITY": "1000000000000000000",
+    "tUSDC": "1000000"
+  },
+  "transactions": [
+    {
+      "asset": "CITY",
+      "transactionHash": "0x1eca4cdb780507a6c3098e0bf739ac5e5c8ea75b4e772f7b1e22b0dc549fe7ad",
+      "blockNumber": "67131579",
+      "status": "confirmed"
+    },
+    {
+      "asset": "tUSDC",
+      "transactionHash": "0x6a6adf7faf0aed44ecccb2ddc4600c8e8578a37646bcc42675a9880642b96563",
+      "blockNumber": "67131586",
+      "status": "confirmed"
+    }
+  ],
+  "durableIntentRows": 2,
+  "tokensMinted": 0,
+  "lpDeposits": 0,
+  "gameWalletRelinked": false,
+  "sharedBudgetReset": false
+}

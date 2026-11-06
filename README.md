@@ -1,5 +1,18 @@
 # AgentCity
 
+## EthCraft Arkiv task progress — 6 November 2026
+
+The [public Arkiv demo](https://ethcraft-arkiv.quiet-buddy-9104.chatgpt.site) shows real worker progress and Agent-to-0G handoffs without a login or local backend. Its [public source component](https://github.com/RudraBhaskar9439/EthCraft-Arkiv) includes the SDK reader, durable publisher and handoff adapter. The original [local task board](http://127.0.0.1:8789/arkiv) remains available. [Setup, commands and track documentation](arkiv/README.md) include the verified owner test. Current Mumbai behavior follows [Survival and objective agents](docs/AGENT_SURVIVAL.md), superseding the earlier sightseeing restrictions below.
+
+Rabdi chain **7794095**; entity writer **0x5a262B9621eD0F00Fe776bb85084E9561cF18608**. Query the committed deployment namespace without the game or backend:
+
+```sh
+npm ci --prefix backend --ignore-scripts
+node scripts/arkiv_tasks.mjs --query
+```
+
+AI assisted this integration's research, code, tests and documentation. Earlier project code/assets are retained and disclosed. The extracted Arkiv component is public and MIT licensed; the full game remains private. Build-from-Scratch eligibility is still unresolved because this is an existing project; see the [eligibility notes](arkiv/README.md).
+
 The [South Mumbai sightseeing world](docs/MUMBAI_WORLD.md) adds a separate,
 read-only geographic recreation with `/mumbai` and `/lobby` return. Existing
 gameplay, player inventory and marketplace identities remain separate.
