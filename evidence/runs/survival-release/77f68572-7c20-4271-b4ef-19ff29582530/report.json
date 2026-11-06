@@ -1,0 +1,39 @@
+{
+  "schema": "agentcity.mumbai-survival-release.v1",
+  "at": "2026-11-06T08:43:56.632765+00:00",
+  "nativeQualification": "evidence/runs/mumbai-city/19898139-840b-45ce-a76d-822709e1b76a/report.json",
+  "nativeChecks": 14,
+  "status": "implemented_and_locally_qualified_owner_objective_pending",
+  "tests": {
+    "survival-tool-and-objective-fixtures": "pass",
+    "mumbai-owner-routing-fixtures": "pass",
+    "planning-integrity": "pass",
+    "python-infrastructure": {
+      "passed": 79
+    }
+  },
+  "actualProviderProbes": {
+    "0g": "evidence/runs/survival-model/0aefc068-368a-4b26-8187-5309ee48b6af/report.json",
+    "claude": "evidence/runs/survival-model/724454a2-1f1c-4f53-bbdb-ff9fc9adcf67/report.json"
+  },
+  "constructionObservation": "evidence/runs/mumbai-city/09bf1de0-4fff-4da0-9338-ff93d978583a/house-observation.json",
+  "qualificationFailuresRetained": [
+    "99049fb6-db25-4c4c-90e2-007a4880dd14",
+    "7b65b4f9-e62b-493a-87a5-b643e9f9e40b",
+    "09bf1de0-4fff-4da0-9338-ff93d978583a"
+  ],
+  "upgradeBackup": "6095dd8aa25146a3a872ade148eaa657",
+  "ownerIssuedLiveObjectives": "Awaiting actual player reconnect and Discord approval; no fake owner events or wallet signatures generated.",
+  "unverified": [
+    "Actual owner-driven joint inference/tool execution",
+    "Food hunting and smelting in the maintained city",
+    "Complex redstone circuits and large custom builds"
+  ],
+  "sourceSha256": {
+    "backend/src/playable/survival-tools.mjs": "3d5df17164dfdc38f2c8625db25ba1c146fb916215bf20212aaf1732131f8196",
+    "backend/src/playable/survival-objectives.mjs": "d76975fbf6bc60aa49e1916d962593670122bef602c4ca3b1fa7a953d122da92",
+    "scripts/mumbai_agents.mjs": "acfd7feef52b8bc18430d578ca54d2deed37a3abb74a4179726593bb2b3de5c7",
+    "plugin/src/main/java/org/agentcity/paper/MumbaiWorld.java": "76d824902265716df8696e91ea8a7f66b07010bfabb0ec0a160a71a0f06be3f2",
+    "plugin/src/main/java/org/agentcity/paper/AgentTaskProtection.java": "98fc3798f12e50e632376710f48ae06e73b5852c575e75a9c66bd200622f592f"
+  }
+}

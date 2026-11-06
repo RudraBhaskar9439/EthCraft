@@ -189,7 +189,12 @@
       "tests/playable/discord-identity-only.mjs",
       "tests/playable/discord-setup-ui.mjs",
       "scripts/mumbai_agents.mjs",
-      "tests/playable/mumbai-agents.mjs"
+      "tests/playable/mumbai-agents.mjs",
+      "backend/src/playable/survival-tools.mjs",
+      "backend/src/playable/survival-objectives.mjs",
+      "tests/playable/survival.mjs",
+      "tests/playable/survival-model-live.mjs",
+      "docs/AGENT_SURVIVAL.md"
     ],
     "paths_status": "Actual local component paths adopted; canonical live phase approval remains separate."
   },

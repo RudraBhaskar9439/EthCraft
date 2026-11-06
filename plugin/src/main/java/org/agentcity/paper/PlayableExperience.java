@@ -386,7 +386,7 @@ public final class PlayableExperience implements Listener {
     }
 
     private boolean inHub(Location location) {
-        return location.getWorld().equals(lobbyWorld) || mumbai!=null&&mumbai.inBank(location);
+        return location.getWorld().equals(lobbyWorld);
     }
 
     private Location lobbyLocation() { return mumbai!=null?mumbai.hubSpawn():new Location(lobbyWorld,44.5,81,4.5,90,0); }
@@ -406,6 +406,7 @@ public final class PlayableExperience implements Listener {
         }catch(IOException|RuntimeException error){return false;}
         return false;
     }
+    boolean survivalOwner(Player player,String slot,String principal){return player!=null&&mumbai!=null&&MUMBAI_AGENTS.contains(slot)&&discordAccess!=null&&!discordAccess.isPending(player)&&Objects.equals(principal,discordAccess.enrich(player,connections.get(player.getUniqueId())).get("principalId"))&&ownsMumbai(player,Map.of("slotName",slot));}
     @SuppressWarnings("unchecked") private boolean ownsMumbaiContainer(Player player,Location location){
         if(mumbai==null||!mumbai.contains(location.getWorld()))return false;
         for(Map<String,Object> region:taskRegions())if(MUMBAI_AGENTS.contains(region.get("slotName"))){
@@ -725,7 +726,7 @@ public final class PlayableExperience implements Listener {
         if (mumbai != null) {
             value.put("mumbai", mumbai.status()); value.put("defaultWorld",MumbaiWorld.NAME);
             value.put("mumbaiAgentSpawn",Map.of("x",1698.5,"y",69,"z",2815.5));
-            value.put("mumbaiAgentBounds",Map.of("min",Map.of("x",1660,"y",69,"z",2798),"max",Map.of("x",1758,"y",90,"z",2855)));
+            value.put("mumbaiAgentBounds",mumbai.bounds());
         }
         value.put("playSpawn",Map.of("x",playX+0.5,"y",playY,"z",playZ+0.5));
         value.put("taskBounds",Map.of("min",Map.of("x",playX-48,"y",playY,"z",playZ-48),"max",Map.of("x",playX+48,"y",playY+20,"z",playZ+48)));

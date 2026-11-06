@@ -1,0 +1,24 @@
+{
+  "scope": "Read-only independent native client observation of the house built in a failed full qualification run. This does not mark the whole run passed.",
+  "totalObservedOakPlanks": 32,
+  "layers": [
+    {
+      "y": 69,
+      "count": 9
+    },
+    {
+      "y": 70,
+      "count": 7
+    },
+    {
+      "y": 71,
+      "count": 7
+    },
+    {
+      "y": 72,
+      "count": 9
+    }
+  ],
+  "expectedHouseBlocks": 32,
+  "sourceSha256": "820f161b2acb15ff6c74df59f4ba73eef2a2d6fcba2c75e2dbdc37918d897585"
+}

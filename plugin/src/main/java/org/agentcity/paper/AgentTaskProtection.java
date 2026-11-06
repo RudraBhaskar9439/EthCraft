@@ -34,7 +34,7 @@ final class AgentTaskProtection implements Listener {
         if(Files.exists(stateFile))for(var entry:StrictJson.object(Files.readString(stateFile)).entrySet())locks.put(entry.getKey(),(Map<String,Object>)entry.getValue());
     }
     void remoteGrant(Map<String,Object> value)throws Exception{remoteGrants.update(value);}
-    private boolean active(Player player,String effect){return remoteGrants.allows(locks.get(player.getName()),player.getName(),effect);}
+    private boolean active(Player player,String effect){Map<String,Object> lock=locks.get(player.getName());if(lock!=null&&Boolean.TRUE.equals(lock.get("survival"))&&!experience.survivalOwner(Bukkit.getPlayer(UUID.fromString((String)lock.get("ownerPlayerId"))),player.getName(),(String)lock.get("ownerId")))return false;return remoteGrants.allows(lock,player.getName(),effect);}
     private void persist() throws Exception {
         Path temporary=stateFile.resolveSibling("task-region-locks.tmp");
         try(FileChannel file=FileChannel.open(temporary,StandardOpenOption.CREATE,StandardOpenOption.TRUNCATE_EXISTING,StandardOpenOption.WRITE)){
@@ -57,12 +57,27 @@ final class AgentTaskProtection implements Listener {
             }else{
                 String gameOwner=input.get("ownerPlayerId") instanceof String actual?UUID.fromString(actual).toString():owner;
                 if(Bukkit.getPlayer(UUID.fromString(gameOwner))==null)throw new IllegalArgumentException("task_owner_offline");
-                locks.put(slot,Map.of("taskId",task,"ownerId",owner));
+                if(Boolean.TRUE.equals(input.get("survival"))){
+                    if(!experience.survivalOwner(Bukkit.getPlayer(UUID.fromString(gameOwner)),slot,owner))throw new IllegalArgumentException("survival_owner_required");
+                    locks.put(slot,Map.of("taskId",task,"ownerId",owner,"survival",true,"ownerPlayerId",gameOwner,"bounds",survivalBounds(input.get("bounds"))));
+                }else locks.put(slot,Map.of("taskId",task,"ownerId",owner));
             }
         }else locks.remove(slot);
         try { persist(); }
         catch(Exception error){if(previous==null)locks.remove(slot);else locks.put(slot,previous);throw error;}
-        experience.positionTaskAgent(slot,Boolean.TRUE.equals(input.get("locked")));
+        if(!Boolean.TRUE.equals(input.get("survival"))&&!(previous!=null&&Boolean.TRUE.equals(previous.get("survival"))))experience.positionTaskAgent(slot,Boolean.TRUE.equals(input.get("locked")));
+    }
+    @SuppressWarnings("unchecked") private static boolean within(Location position,Map<String,Object> bounds){
+        Map<String,Object> min=(Map<String,Object>)bounds.get("min"),max=(Map<String,Object>)bounds.get("max");int[] values={position.getBlockX(),position.getBlockY(),position.getBlockZ()};int i=0;
+        for(String axis:List.of("x","y","z")){int n=values[i++];if(n<((Number)min.get(axis)).intValue()||n>((Number)max.get(axis)).intValue())return false;}return true;
+    }
+    @SuppressWarnings("unchecked") private Map<String,Object> survivalBounds(Object raw){
+        if(!(raw instanceof Map<?,?> value)||!value.keySet().equals(Set.of("min","max")))throw new IllegalArgumentException("survival_bounds_required");
+        Map<String,Object> area=(Map<String,Object>)experience.status().get("mumbaiAgentBounds");
+        for(String axis:List.of("x","y","z")){
+            if(!(value.get("min") instanceof Map<?,?> min)||!(value.get("max") instanceof Map<?,?> max)||!min.keySet().equals(Set.of("x","y","z"))||!max.keySet().equals(Set.of("x","y","z"))||!(min.get(axis) instanceof Number lo)||!(max.get(axis) instanceof Number hi)||lo.doubleValue()!=lo.intValue()||hi.doubleValue()!=hi.intValue()||lo.intValue()>hi.intValue()||hi.intValue()-lo.intValue()>(axis.equals("y")?32:96)||lo.intValue()<((Number)((Map<?,?>)area.get("min")).get(axis)).intValue()||hi.intValue()>((Number)((Map<?,?>)area.get("max")).get(axis)).intValue())throw new IllegalArgumentException("survival_bounds_invalid");
+        }
+        return Map.copyOf((Map<String,Object>)value);
     }
     private boolean agent(Player player){return PlayableExperience.AGENTS.contains(player.getName());}
     @SuppressWarnings("unchecked") private Map<String,Object> region(Player player){
@@ -73,6 +88,8 @@ final class AgentTaskProtection implements Listener {
         return null;
     }
     @SuppressWarnings("unchecked") private boolean inside(Player player,Location position){
+        Map<String,Object> lock=locks.get(player.getName());
+        if(lock!=null&&Boolean.TRUE.equals(lock.get("survival")))return player.getWorld().getName().equals("agentcity_mumbai")&&within(position,(Map<String,Object>)lock.get("bounds"));
         Map<String,Object> region=region(player);if(region==null)return false;
         if(!player.getWorld().equals(position.getWorld()))return false;
         Map<String,Object> min=(Map<String,Object>)region.get("min"),max=(Map<String,Object>)region.get("max");
@@ -87,6 +104,7 @@ final class AgentTaskProtection implements Listener {
         if(agent(event.getPlayer())?(!active(event.getPlayer(),"dig")||!inside(event.getPlayer(),event.getBlock().getLocation())||accessStrip(event.getPlayer(),event.getBlock().getLocation())):lockedAt(event.getBlock().getLocation()))event.setCancelled(true);
     }
     @SuppressWarnings("unchecked") private boolean accessStrip(Player player,Location location){
+        if(Boolean.TRUE.equals(locks.getOrDefault(player.getName(),Map.of()).get("survival")))return false;
         Map<String,Object> region=region(player);if(region==null)return true;
         Map<String,Object> min=(Map<String,Object>)region.get("min");
         // Both fixed chests sit on this strip. Keep stock and the native entry
@@ -97,6 +115,7 @@ final class AgentTaskProtection implements Listener {
     @SuppressWarnings("unchecked") private boolean allowedInventory(Player player,Inventory inventory){
         if(!active(player,"open"))return false;
         Location location=inventory.getLocation();
+        if(Boolean.TRUE.equals(locks.getOrDefault(player.getName(),Map.of()).get("survival")))return inside(player,location==null?player.getLocation():location);
         // Some Bukkit workbench inventories expose no block location. The native
         // block-interaction guard below still checks the actual clicked table.
         if(inventory.getType()==InventoryType.WORKBENCH)return inside(player,location==null?player.getLocation():location);
@@ -146,6 +165,7 @@ final class AgentTaskProtection implements Listener {
         if(!(status.get("taskRegions") instanceof List<?> list))return false;
         for(Object value:list){Map<String,Object> region=(Map<String,Object>)value;if(!locks.containsKey((String)region.get("slotName"))
             ||!location.getWorld().getName().equals(region.getOrDefault("worldName",status.get("playWorld"))))continue;
+            Map<String,Object> locked=locks.get((String)region.get("slotName"));if(Boolean.TRUE.equals(locked.get("survival"))){if(location.getWorld().getName().equals("agentcity_mumbai")&&within(location,(Map<String,Object>)locked.get("bounds")))return true;continue;}
             Map<String,Object> min=(Map<String,Object>)region.get("min"),max=(Map<String,Object>)region.get("max");int[] xyz={location.getBlockX(),location.getBlockY(),location.getBlockZ()};int i=0;boolean inside=true;
             for(String axis:List.of("x","y","z")){if(xyz[i]<((Number)min.get(axis)).intValue()||xyz[i]>((Number)max.get(axis)).intValue())inside=false;i++;}if(inside)return true;
         }return false;

@@ -1,0 +1,265 @@
+{
+  "schema": "agentcity.recorded-owner-objective-recovery.v1",
+  "scope": "Resume only the original actual-owner goal after navigation repair and explicit laptop budget amendment. No new owner event, goal, material grant or wallet approval.",
+  "financialTransactions": 0,
+  "status": "ready_for_review",
+  "decisions": 17,
+  "message": "Tool evidence shows the objective is satisfied: 2 oak planks withdrawn from the source chest, 4 sticks crafted (produced 4), and 4 sticks deposited into the destination chest at [1746,69,2812]. Inventory is now empty. Requesting owner review.",
+  "pendingEffect": false,
+  "originalGoalUnchanged": true,
+  "history": [
+    {
+      "step": {
+        "tool": "move",
+        "position": [
+          1746,
+          69,
+          2811
+        ]
+      },
+      "error": "PATH_TIMEOUT",
+      "at": "2026-11-06T08:57:33.804Z"
+    },
+    {
+      "step": {
+        "tool": "move",
+        "position": [
+          1736,
+          69,
+          2811
+        ]
+      },
+      "error": "PATH_TIMEOUT",
+      "at": "2026-11-06T08:57:57.801Z"
+    },
+    {
+      "step": {
+        "tool": "move",
+        "position": [
+          1731,
+          69,
+          2811
+        ]
+      },
+      "error": "PATH_TIMEOUT",
+      "at": "2026-11-06T08:58:21.749Z"
+    },
+    {
+      "step": {
+        "tool": "move",
+        "position": [
+          1729,
+          69,
+          2811
+        ]
+      },
+      "error": "PATH_TIMEOUT",
+      "at": "2026-11-06T08:58:46.398Z"
+    },
+    {
+      "step": {
+        "tool": "move",
+        "position": [
+          1729,
+          69,
+          2812
+        ]
+      },
+      "error": "PATH_TIMEOUT",
+      "at": "2026-11-06T08:59:10.651Z"
+    },
+    {
+      "step": {
+        "tool": "move",
+        "position": [
+          1745,
+          69,
+          2810
+        ]
+      },
+      "error": "PATH_TIMEOUT",
+      "at": "2026-11-06T08:59:35.599Z"
+    },
+    {
+      "step": {
+        "tool": "move",
+        "position": [
+          1732,
+          69,
+          2813
+        ]
+      },
+      "error": "PATH_TIMEOUT",
+      "at": "2026-11-06T09:00:00.197Z"
+    },
+    {
+      "step": {
+        "tool": "withdraw",
+        "item": "oak_planks",
+        "count": 2,
+        "position": [
+          1746,
+          69,
+          2810
+        ]
+      },
+      "error": "PATH_TIMEOUT",
+      "at": "2026-11-06T09:00:24.701Z"
+    },
+    {
+      "step": {
+        "tool": "move",
+        "position": [
+          1726,
+          69,
+          2812
+        ]
+      },
+      "error": "PATH_TIMEOUT",
+      "at": "2026-11-06T09:00:49.150Z"
+    },
+    {
+      "step": {
+        "tool": "move",
+        "position": [
+          1730,
+          69,
+          2811
+        ]
+      },
+      "error": "PATH_TIMEOUT",
+      "at": "2026-11-06T09:01:13.349Z"
+    },
+    {
+      "step": {
+        "tool": "move",
+        "position": [
+          1745,
+          69,
+          2810
+        ]
+      },
+      "result": {
+        "position": [
+          1744,
+          69,
+          2809
+        ]
+      },
+      "at": "2026-11-06T09:21:20.501Z"
+    },
+    {
+      "step": {
+        "tool": "withdraw",
+        "item": "oak_planks",
+        "count": 2,
+        "position": [
+          1746,
+          69,
+          2810
+        ]
+      },
+      "result": {
+        "item": "oak_planks",
+        "moved": 2,
+        "destination": [
+          1746,
+          69,
+          2810
+        ]
+      },
+      "at": "2026-11-06T09:21:25.011Z"
+    },
+    {
+      "step": {
+        "tool": "craft",
+        "item": "stick",
+        "count": 4
+      },
+      "result": {
+        "item": "stick",
+        "produced": 4
+      },
+      "at": "2026-11-06T09:21:28.817Z"
+    },
+    {
+      "step": {
+        "tool": "deposit",
+        "item": "stick",
+        "count": 4,
+        "position": [
+          1746,
+          69,
+          2812
+        ]
+      },
+      "result": {
+        "item": "stick",
+        "moved": 4,
+        "destination": [
+          1746,
+          69,
+          2812
+        ]
+      },
+      "at": "2026-11-06T09:21:34.114Z"
+    }
+  ],
+  "effects": [
+    {
+      "action": "withdraw",
+      "item": "oak_planks",
+      "count": 2,
+      "position": [
+        1746,
+        69,
+        2810
+      ],
+      "result": {
+        "item": "oak_planks",
+        "moved": 2,
+        "destination": [
+          1746,
+          69,
+          2810
+        ]
+      },
+      "inventoryAfter": {
+        "oak_planks": 2
+      }
+    },
+    {
+      "action": "craft",
+      "item": "stick",
+      "batches": 1,
+      "output": 4,
+      "result": {
+        "item": "stick",
+        "produced": 4
+      },
+      "inventoryAfter": {
+        "stick": 4
+      }
+    },
+    {
+      "action": "deposit",
+      "item": "stick",
+      "count": 4,
+      "position": [
+        1746,
+        69,
+        2812
+      ],
+      "result": {
+        "item": "stick",
+        "moved": 4,
+        "destination": [
+          1746,
+          69,
+          2812
+        ]
+      },
+      "inventoryAfter": {}
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "agentcity.survival-provider-probe.v1",
+  "scope": "Real provider inference on disclosed fixture observations; no actual world effects",
+  "checks": [
+    {
+      "provider": "claude",
+      "model": "claude-sonnet-5-5",
+      "status": "pass",
+      "elapsedMs": 3371,
+      "validatedStep": {
+        "tool": "craft",
+        "item": "stick",
+        "count": 4
+      }
+    }
+  ],
+  "minecraftActions": 0,
+  "financialTransactions": 0,
+  "status": "pass"
+}

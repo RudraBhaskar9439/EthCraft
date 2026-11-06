@@ -1,0 +1,26 @@
+{
+  "schema": "agentcity.survival-provider-probe.v1",
+  "scope": "Real provider inference on disclosed fixture observations; no actual world effects",
+  "checks": [
+    {
+      "provider": "0g",
+      "status": "fail",
+      "code": "INVALID_SURVIVAL_TOOL",
+      "elapsedMs": 19389
+    },
+    {
+      "provider": "claude",
+      "model": "claude-sonnet-5-5",
+      "status": "pass",
+      "elapsedMs": 3711,
+      "validatedStep": {
+        "tool": "craft",
+        "item": "stick",
+        "count": 4
+      }
+    }
+  ],
+  "minecraftActions": 0,
+  "financialTransactions": 0,
+  "status": "fail"
+}

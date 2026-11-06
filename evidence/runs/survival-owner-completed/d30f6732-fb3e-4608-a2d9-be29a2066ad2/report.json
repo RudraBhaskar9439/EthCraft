@@ -1,0 +1,177 @@
+{
+  "schema": "agentcity.actual-owner-survival-task-comparison.v1",
+  "at": "2026-11-06T09:23:44.812587+00:00",
+  "status": "pass",
+  "scope": "Actual approved local owner and both real provider-specific agents; real source withdrawal, vanilla crafting and destination delivery. This is not an independent-human release gate or a fair latency/model-quality benchmark.",
+  "trials": [
+    {
+      "provider": "0g",
+      "slot": "CityAgent4",
+      "status": "pass",
+      "finalState": "ready_for_review",
+      "originalOwnerGoalDigest": "1d6df96606adc5fcbaeb0ae5f0723422ca326932740c7844fbb0ec091be4dba7",
+      "decisionsIncludingHistoricalFailedAttempts": 5,
+      "effects": [
+        {
+          "action": "withdraw",
+          "item": "oak_planks",
+          "count": 2,
+          "position": [
+            1730,
+            69,
+            2810
+          ],
+          "result": {
+            "item": "oak_planks",
+            "moved": 2,
+            "destination": [
+              1730,
+              69,
+              2810
+            ]
+          },
+          "inventoryAfter": {
+            "oak_planks": 2
+          }
+        },
+        {
+          "action": "craft",
+          "item": "stick",
+          "batches": 1,
+          "output": 4,
+          "result": {
+            "item": "stick",
+            "produced": 4
+          },
+          "inventoryAfter": {
+            "stick": 4
+          }
+        },
+        {
+          "action": "deposit",
+          "item": "stick",
+          "count": 4,
+          "position": [
+            1730,
+            69,
+            2812
+          ],
+          "result": {
+            "item": "stick",
+            "moved": 4,
+            "destination": [
+              1730,
+              69,
+              2812
+            ]
+          },
+          "inventoryAfter": {}
+        }
+      ],
+      "operatorRecovery": false,
+      "context": "Actual owner-issued native goal after the navigation repair.",
+      "destination": [
+        1730,
+        69,
+        2812
+      ]
+    },
+    {
+      "provider": "claude",
+      "slot": "CityAgent5",
+      "status": "pass",
+      "finalState": "ready_for_review",
+      "originalOwnerGoalDigest": "b06cdbb693b2f25c0f38cb0cc608508a909ec92c797a961fe5cdea2566c68146",
+      "decisionsIncludingHistoricalFailedAttempts": 17,
+      "effects": [
+        {
+          "action": "withdraw",
+          "item": "oak_planks",
+          "count": 2,
+          "position": [
+            1746,
+            69,
+            2810
+          ],
+          "result": {
+            "item": "oak_planks",
+            "moved": 2,
+            "destination": [
+              1746,
+              69,
+              2810
+            ]
+          },
+          "inventoryAfter": {
+            "oak_planks": 2
+          }
+        },
+        {
+          "action": "craft",
+          "item": "stick",
+          "batches": 1,
+          "output": 4,
+          "result": {
+            "item": "stick",
+            "produced": 4
+          },
+          "inventoryAfter": {
+            "stick": 4
+          }
+        },
+        {
+          "action": "deposit",
+          "item": "stick",
+          "count": 4,
+          "position": [
+            1746,
+            69,
+            2812
+          ],
+          "result": {
+            "item": "stick",
+            "moved": 4,
+            "destination": [
+              1746,
+              69,
+              2812
+            ]
+          },
+          "inventoryAfter": {}
+        }
+      ],
+      "operatorRecovery": true,
+      "context": "Original native owner goal; Claude resumed by operator after navigation repair and explicitly approved budget amendment.",
+      "destination": [
+        1746,
+        69,
+        2812
+      ]
+    }
+  ],
+  "claudeBudget": {
+    "limitNanoUsd": 1000000000,
+    "spentNanoUsd": 262566000,
+    "completedRequests": 24,
+    "pendingRequests": 0
+  },
+  "zeroGBudget": {
+    "limitNanoUsd": 5000000000,
+    "spentNanoUsd": 60153900,
+    "completedRequests": 24,
+    "historicalPendingRequestsRetained": 4
+  },
+  "citySpent": 0,
+  "financialTransactions": 0,
+  "materialsGranted": 0,
+  "broaderUnverified": [
+    "Food hunting and smelting",
+    "Complex redstone systems",
+    "Large creative builds"
+  ],
+  "sourceSha256": {
+    "backend/src/playable/survival-tools.mjs": "979889ef08eccdb2a511ba6e7afb1a6cf1c2091d08a57bae1111326e0e1db341",
+    "backend/src/playable/survival-objectives.mjs": "06b59808bfbffd7779772165670802945d171219061a6b44e8b721259ea8a258",
+    "scripts/mumbai_agents.mjs": "acfd7feef52b8bc18430d578ca54d2deed37a3abb74a4179726593bb2b3de5c7"
+  }
+}

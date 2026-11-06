@@ -1,0 +1,135 @@
+{
+  "schema": "agentcity.recorded-owner-objective-recovery.v1",
+  "scope": "Operator resumes only the original actual-owner goal after a verified navigation fix. No new owner event, new goal, item grants or wallet approvals are fabricated.",
+  "financialTransactions": 0,
+  "status": "paused",
+  "decisions": 12,
+  "message": "Claude API budget exhausted. Existing tasks are preserved; ask the host owner to approve more credit.",
+  "pendingEffect": false,
+  "originalGoalUnchanged": true,
+  "history": [
+    {
+      "step": {
+        "tool": "move",
+        "position": [
+          1746,
+          69,
+          2811
+        ]
+      },
+      "error": "PATH_TIMEOUT",
+      "at": "2026-11-06T08:57:33.804Z"
+    },
+    {
+      "step": {
+        "tool": "move",
+        "position": [
+          1736,
+          69,
+          2811
+        ]
+      },
+      "error": "PATH_TIMEOUT",
+      "at": "2026-11-06T08:57:57.801Z"
+    },
+    {
+      "step": {
+        "tool": "move",
+        "position": [
+          1731,
+          69,
+          2811
+        ]
+      },
+      "error": "PATH_TIMEOUT",
+      "at": "2026-11-06T08:58:21.749Z"
+    },
+    {
+      "step": {
+        "tool": "move",
+        "position": [
+          1729,
+          69,
+          2811
+        ]
+      },
+      "error": "PATH_TIMEOUT",
+      "at": "2026-11-06T08:58:46.398Z"
+    },
+    {
+      "step": {
+        "tool": "move",
+        "position": [
+          1729,
+          69,
+          2812
+        ]
+      },
+      "error": "PATH_TIMEOUT",
+      "at": "2026-11-06T08:59:10.651Z"
+    },
+    {
+      "step": {
+        "tool": "move",
+        "position": [
+          1745,
+          69,
+          2810
+        ]
+      },
+      "error": "PATH_TIMEOUT",
+      "at": "2026-11-06T08:59:35.599Z"
+    },
+    {
+      "step": {
+        "tool": "move",
+        "position": [
+          1732,
+          69,
+          2813
+        ]
+      },
+      "error": "PATH_TIMEOUT",
+      "at": "2026-11-06T09:00:00.197Z"
+    },
+    {
+      "step": {
+        "tool": "withdraw",
+        "item": "oak_planks",
+        "count": 2,
+        "position": [
+          1746,
+          69,
+          2810
+        ]
+      },
+      "error": "PATH_TIMEOUT",
+      "at": "2026-11-06T09:00:24.701Z"
+    },
+    {
+      "step": {
+        "tool": "move",
+        "position": [
+          1726,
+          69,
+          2812
+        ]
+      },
+      "error": "PATH_TIMEOUT",
+      "at": "2026-11-06T09:00:49.150Z"
+    },
+    {
+      "step": {
+        "tool": "move",
+        "position": [
+          1730,
+          69,
+          2811
+        ]
+      },
+      "error": "PATH_TIMEOUT",
+      "at": "2026-11-06T09:01:13.349Z"
+    }
+  ],
+  "effects": []
+}

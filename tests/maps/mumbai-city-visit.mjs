@@ -9,6 +9,7 @@ import { setTimeout as delay } from 'node:timers/promises'
 import { execFile } from 'node:child_process'
 import { promisify } from 'node:util'
 import { inventoryShopEvent } from '../../backend/src/playable/inventory-shop-runtime.mjs'
+import { SurvivalTools } from '../../backend/src/playable/survival-tools.mjs'
 
 const root=resolve(new URL('../..',import.meta.url).pathname)
 assert.equal(process.argv.length,2,'This check only accepts the owned isolated Mumbai-city descriptor')
@@ -80,7 +81,7 @@ try {
   const status=await native('status'),properties=await native('property/status',{})
   assert.equal(status.available,true);assert.equal(status.defaultWorld,'agentcity_mumbai')
   assert.equal(status.mumbai.worldUuid,meta.worldUuid);assert.equal(status.mumbai.bank.name,'UniRock')
-  assert.equal(status.mumbai.bank.templateVersion,2);
+  assert.equal(status.mumbai.bank.templateVersion,2);assert.equal(status.mumbai.readOnly,false);assert.equal(status.mumbai.survival,true);
   const bankPath=join(meta.runtime,'plugins/AgentCity'),bankMarker=await json(join(bankPath,'unirock-bank.json')),
     bankPreviousBytes=await readFile(join(bankPath,'unirock-bank-v1.json')),bankPrevious=JSON.parse(bankPreviousBytes),bankMigration=await json(join(bankPath,'unirock-bank-migration-v1-v2.json'))
   assert.equal(bankPrevious.schema,'agentcity.unirock-bank.v1');assert.equal(bankPrevious.phase,'ready')
@@ -167,9 +168,29 @@ try {
   for(const [x,z]of [[1721,2815],[1725,2815],[1725,2809],[1730,2809]])await walk(x,z,'PUBLIC_ROUTE_'+x+'_'+z)
   visitor.pathfinder.setGoal(null);await delay(250)
   const stockChest=visitor.blockAt(new visitor.entity.position.constructor(1730,69,2810))
-  assert.equal(stockChest?.name,'chest');await visitor.activateBlock(stockChest);await delay(700)
-  assert.equal(visitor.currentWindow,null);assert.deepEqual(inventory(visitor),after)
-  check('An approved visitor without child-agent ownership cannot open another agent source chest or take its demo stock')
+  assert.equal(stockChest?.name,'chest')
+  const source=await visitor.openContainer(stockChest)
+  source.close();assert.deepEqual(inventory(visitor),after)
+  check('Any approved Survival player can open city containers without belonging to a plot group')
+  const skillReceipts=[]
+  const skills=new SurvivalTools({rootDirectory:root,manager:{taskRegions:status.taskRegions},slot:{name:'CityAgent4',bot:visitor},world:status,
+    guard:async()=>{assert.equal((await session(visitor)).pendingAuthentication,false)},beforeEffect:async d=>{report.pendingSurvivalEffect=d},receipt:async r=>{skillReceipts.push(r);report.pendingSurvivalEffect=null;report.survivalReceipts=skillReceipts}})
+  await skills.execute({tool:'withdraw',item:'oak_planks',count:8,position:[1730,69,2810]})
+  await skills.execute({tool:'withdraw',item:'cobblestone',count:1,position:[1730,69,2810]})
+  assert.equal((await skills.execute({tool:'craft',item:'stick',count:4})).produced,4)
+  assert.equal((await skills.execute({tool:'craft',item:'lever',count:1})).produced,1)
+  const house=await skills.execute({tool:'build',structure:'wall',width:3,depth:1,height:2,item:'oak_planks',position:[1734,69,2815]})
+  assert.equal(house.verifiedBlocks,6)
+  await skills.execute({tool:'place',item:'lever',position:[1725,69,2814]})
+  const activated=await skills.execute({tool:'activate',position:[1725,69,2814]})
+  assert.equal(activated.properties.powered,true)
+  const lever=visitor.blockAt(new visitor.entity.position.constructor(1725,69,2814))
+  await visitor.dig(lever,true);await skills.move([1725,69,2814],0)
+  await poll(()=>visitor.inventory.items().find(i=>i.name==='lever'),Boolean,'SURVIVAL_LEVER_PICKUP')
+  await skills.execute({tool:'deposit',item:'lever',count:1,position:[1730,69,2810]})
+  await skills.execute({tool:'deposit',item:'stick',count:3,position:[1730,69,2810]})
+  assert.deepEqual(inventory(visitor),after)
+  check('Actual Survival tools withdraw finite supplies, craft sticks and lever, build a verified six-block wall and toggle real redstone power',{actor:'isolated approved native player, not agent authority qualification',house,verifiedToolReceipts:skillReceipts.length})
 
   const npcs=()=>Object.values(visitor.entities).filter(entity=>entity.name==='villager')
   const roles=['Guide','Agent Desk','Job Board','Wallet & Market','Play']
@@ -356,24 +377,16 @@ assert(stable(visitor.currentWindow.slots[49]).includes('Pay 0.5 CITY'),'Known q
   assert.equal(stable(inventory(visitor)),baseInventory)
   const solid=visitor.blockAt(visitor.entity.position.offset(0,-0.05,0).floored()),oldBlock=solid.stateId
   const digMilliseconds=visitor.digTime(solid)
-  report.sceneryDiagnostic={block:solid.name,position:solid.position,digMilliseconds,client:visitor.entity.position.clone(),native:(await session(visitor)).serverPosition}
-  assert(Number.isFinite(digMilliseconds)&&digMilliseconds>0&&digMilliseconds<=30000,'A real breakable scenery block is required')
-  const dig=visitor.dig(solid,true).catch(()=>{})
-  await delay(digMilliseconds+700);visitor.stopDigging();await Promise.race([dig,delay(250)])
-  const observed=bots.CityAgent4.blockAt(solid.position),nativeAfterDig=await session(visitor)
-  report.sceneryDiagnostic.after={clientStateId:visitor.blockAt(solid.position)?.stateId,observerStateId:observed?.stateId,nativePosition:nativeAfterDig.serverPosition}
-  assert.equal(observed?.stateId,oldBlock,'Independent client must still observe the native scenery block')
-  assert(nativeAfterDig.serverPosition.y>=68.95,'Native visitor must remain supported by the protected bank floor')
+  assert(Number.isFinite(digMilliseconds)&&digMilliseconds>0&&digMilliseconds<=30000)
+  await visitor.dig(solid,true)
+  await poll(()=>bots.CityAgent4.blockAt(solid.position)?.name,name=>name==='air','SURVIVAL_CITY_BLOCK_BROKEN')
+  assert.notEqual(bots.CityAgent4.blockAt(solid.position)?.stateId,oldBlock)
   assert.equal(stable(inventory(visitor)),baseInventory)
-  // Mineflayer predicts local air after dig completion; a fresh native chunk is the authoritative check.
-  visitor.chat('/museum');const revisited=await poll(()=>session(visitor),s=>s.serverPosition.world===status.museumWorld,'SCENERY_REFRESH_MUSEUM')
-  await poll(()=>visitor.entity.position,p=>distance(p,revisited.serverPosition)<0.2,'CLIENT_REFRESH_MUSEUM')
-  await delay(650);visitor.chat('/play');await poll(()=>session(visitor),s=>s.serverPosition.world==='agentcity_mumbai','SCENERY_REFRESH_MUMBAI')
-  await poll(()=>visitor.entity.position,p=>distance(p,{x:1698.5,y:69,z:2808.5})<0.2,'CLIENT_REFRESH_MUMBAI')
-  await bounded(visitor.waitForChunksToLoad(),'SCENERY_FRESH_CHUNKS')
-  assert.equal(visitor.blockAt(solid.position)?.stateId,oldBlock,'Fresh server chunk must retain the protected scenery')
-  assert.equal(stable(inventory(visitor)),baseInventory)
-  check('Lobby and play return to Mumbai, museum remains accessible, and protected scenery/inventory survive a full dig attempt verified by an independent observer and fresh native chunks',{attemptedDigMilliseconds:digMilliseconds+700})
+  await delay(650);visitor.chat('/museum');await poll(()=>session(visitor),s=>s.serverPosition.world===status.museumWorld,'SURVIVAL_MUSEUM_RETURN')
+  await delay(650);visitor.chat('/play');await poll(()=>session(visitor),s=>s.serverPosition.world==='agentcity_mumbai','SURVIVAL_CITY_RETURN')
+  await bounded(visitor.waitForChunksToLoad(),'SURVIVAL_FRESH_CHUNKS')
+  assert.equal(visitor.blockAt(solid.position)?.name,'air','Mining persists in fresh native chunks')
+  check('Mumbai is editable Survival: real city mining persists, while museum access and inventory custody remain intact',{attemptedDigMilliseconds:digMilliseconds,readOnly:status.mumbai.readOnly})
 
   const roster=await json(join(meta.runtime,'laptop-fixture-actors.json')),seller=roster.actors.find(a=>a.name==='BankSeller')
   assert(seller,'Copied controlled seller is required for the finite merchant-stock check')
@@ -440,7 +453,7 @@ finally{
   if(report.lockCleanupPending){report.status='fail';report.error||='MUMBAI_CITY_LOCK_CLEANUP_PENDING';process.exitCode=1}
   for(const bot of clients){bot.clearControlStates();bot.pathfinder?.setGoal(null);if(bot.currentWindow)bot.closeWindow(bot.currentWindow);bot.quit('Isolated UniRock verification finished')}
   report.finishedAt=new Date().toISOString()
-  for(const path of ['plugin/src/main/java/org/agentcity/paper/UniRockBank.java','plugin/src/main/java/org/agentcity/paper/MumbaiWorld.java','plugin/src/main/java/org/agentcity/paper/PlayableExperience.java','plugin/src/main/java/org/agentcity/paper/InventoryMarketplace.java','plugin/src/main/java/org/agentcity/paper/AgentTaskProtection.java','plugin/src/main/java/org/agentcity/paper/InventoryEscrow.java','backend/src/playable/inventory-shop-runtime.mjs','scripts/laptop_host.py','scripts/mumbai_city_host.py','tests/test_mumbai_city_host.py','tests/maps/mumbai-city-visit.mjs']){
+  for(const path of ['plugin/src/main/java/org/agentcity/paper/UniRockBank.java','plugin/src/main/java/org/agentcity/paper/MumbaiWorld.java','plugin/src/main/java/org/agentcity/paper/PlayableExperience.java','plugin/src/main/java/org/agentcity/paper/InventoryMarketplace.java','plugin/src/main/java/org/agentcity/paper/AgentTaskProtection.java','plugin/src/main/java/org/agentcity/paper/InventoryEscrow.java','backend/src/playable/inventory-shop-runtime.mjs','backend/src/playable/survival-tools.mjs','backend/src/playable/survival-objectives.mjs','scripts/mumbai_agents.mjs','scripts/laptop_host.py','scripts/mumbai_city_host.py','tests/test_mumbai_city_host.py','tests/maps/mumbai-city-visit.mjs']){
     report.sources||={};report.sources[path]=path==='tests/maps/mumbai-city-visit.mjs'?executedTestSha256:path==='backend/src/playable/inventory-shop-runtime.mjs'?eventParserSourceSha256:hash(await readFile(join(root,path)))
   }
   const reportPath=join(directory,'report.json'),bytes=JSON.stringify(report,null,2)+'\n'

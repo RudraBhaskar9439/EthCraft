@@ -1,0 +1,22 @@
+{
+  "schema": "agentcity.survival-provider-probe.v1",
+  "scope": "Real provider inference on disclosed fixture observations; no actual world effects",
+  "checks": [
+    {
+      "provider": "0g",
+      "status": "fail",
+      "code": "MODEL_CHANGED_EXACT_CRAFT_OBJECTIVE",
+      "elapsedMs": 25692,
+      "proposedDecision": {
+        "message": "Craft 4 sticks from 2 oak planks using the vanilla 2-plank recipe (no crafting table needed).",
+        "status": "act",
+        "step": {
+          "tool": "observe"
+        }
+      }
+    }
+  ],
+  "minecraftActions": 0,
+  "financialTransactions": 0,
+  "status": "fail"
+}

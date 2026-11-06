@@ -1,0 +1,19 @@
+{
+  "schema": "agentcity.owner-navigation-check.v1",
+  "scope": "Operator recovery of the actual recorded owner task: navigation only, no materials, model requests or financial effects.",
+  "modelCalls": 0,
+  "materialEffects": 0,
+  "start": [
+    1692.5,
+    69,
+    2812.5
+  ],
+  "result": {
+    "position": [
+      1745,
+      69,
+      2809
+    ]
+  },
+  "status": "pass"
+}

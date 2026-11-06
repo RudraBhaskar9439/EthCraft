@@ -3,8 +3,10 @@
 The 6 November 2026 city extension makes the existing Mumbai world the main
 AgentCity destination. It preserves the original world UUIDs, calculator museum,
 three legacy agent owners, inventories, contracts, budgets and operation history.
-The generated city remains protected scenery. A new owned waterfront district
-contains UniRock, its service desks and two bounded agent work plots.
+Mumbai now supports shared Survival play across the mapped city. UniRock,
+its service desks and the two starter work plots remain in place; plot ownership
+is no longer a human building or mining requirement. See [AGENT_SURVIVAL.md](AGENT_SURVIVAL.md)
+for the current objective-driven agent tools and limits.
 
 This is a laptop testnet pilot. The original phase gates and public deployment
 qualification do not pass because the city or its user interface works.
@@ -57,12 +59,13 @@ plot checks still constrain effects. The two new plots receive a disclosed,
 one-time local demo grant of 128 oak planks and 64 cobblestone each. These grants
 are not token backing or purchased stock.
 
-Approved players use Survival mode so real inventory custody can operate.
-Scenery extraction, bank damage, arbitrary generated-container access and
-unapproved movement remain blocked. An authenticated owner may use the fixed
-source/destination chests and build in the unlocked interior of their own work
-plots. Foundations and access strips remain protected. An inventory screen does
-not grant custody, wallet or agent authority.
+All Discord-approved players may build, mine, open ordinary city containers and
+collect drops throughout Mumbai. Normal damage, mobs, crop growth, weather and
+day/night cycles are enabled. The login gate, financial custody, museum and
+short locks around active agent operations keep their separate safeguards.
+City scenery is not automatically merchant stock or token backing. Removing a
+spawn-floor block chooses a nearby safe arrival without rebuilding the city.
+An inventory screen never grants wallet or agent authority.
 
 ## Marketplace and wallets
 
@@ -219,3 +222,9 @@ The bank and generated scenery remain protected. Owned, unlocked work-plot
 interiors accept building: CityAgent4 uses X 1732–1741 / Z 2812–2821, and
 CityAgent5 uses X 1748–1757 / Z 2812–2821, both Y 69–76. This single-owner
 purchase check does not qualify the original independent-human release gates.
+
+The shared Survival revision supersedes the older sightseeing and human
+plot-only restrictions recorded above. Qualification: 14 native checks in
+`evidence/runs/mumbai-city/19898139-840b-45ce-a76d-822709e1b76a/`. The new
+agent objective loop is separate from the existing legacy workflows and keeps
+its own durable action history and pending-effect recovery records.

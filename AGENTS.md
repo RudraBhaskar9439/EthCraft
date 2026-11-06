@@ -1,3 +1,19 @@
+## Mumbai Survival and objective agents — user update 6 November 2026
+
+The user now explicitly wants normal Survival play throughout Mumbai: all
+Discord-approved players may build, mine, use containers and gather resources
+across the map, without plot-owner restrictions. This supersedes the earlier
+scenery-only and human work-plot restrictions. Preserve existing world UUIDs,
+player inventories, financial custody, receipts and task journals. Do not reset
+or regenerate the city. Keep login approval and short locks around active agent
+work; generated scenery is not automatically merchant stock or token backing.
+Extend both Mumbai agents with observed, bounded Survival skills and an
+objective-driven feedback loop. Keep actual tool results authoritative, preserve
+unknown-effect operations for reconciliation, stop on owner logout/cancel and
+honor the existing inference budgets. Models cannot authorize wallet spending.
+Test actual city editing and representative agent skills, and state unverified
+capabilities honestly. Qualify plugin changes on an isolated world copy first.
+
 # AgentCity repository instructions
 
 ## In-game Privy checkout approved 6 November 2026

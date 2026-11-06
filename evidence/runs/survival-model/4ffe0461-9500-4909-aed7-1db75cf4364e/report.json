@@ -1,0 +1,23 @@
+{
+  "schema": "agentcity.survival-provider-probe.v1",
+  "scope": "Real provider inference on disclosed fixture observations; no actual world effects",
+  "checks": [
+    {
+      "provider": "0g",
+      "status": "fail",
+      "code": "INVALID_SURVIVAL_TOOL",
+      "elapsedMs": 23531,
+      "proposedDecision": {
+        "message": "I have 2 oak planks in inventory and the stick recipe is available. In vanilla Minecraft, 2 planks craft into 4 sticks in the 2x2 inventory grid (no crafting table needed). I will craft 4 sticks, consuming both oak planks.",
+        "status": "act",
+        "step": {
+          "tool": "craft",
+          "width": 1
+        }
+      }
+    }
+  ],
+  "minecraftActions": 0,
+  "financialTransactions": 0,
+  "status": "fail"
+}

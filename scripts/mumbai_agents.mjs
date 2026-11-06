@@ -7,6 +7,8 @@ import { createAgentManager } from '../backend/src/playable/agents.mjs'
 import { loadZeroGProvider } from '../backend/src/inference/zero-g.mjs'
 import { loadAgentModelProvider } from '../backend/src/inference/anthropic.mjs'
 import { openDiscordIdentityRuntime } from '../backend/src/discord/runtime.mjs'
+import { SurvivalObjectives } from '../backend/src/playable/survival-objectives.mjs'
+import { SurvivalTools, survivalSkills } from '../backend/src/playable/survival-tools.mjs'
 
 const root = fileURLToPath(new URL('../', import.meta.url))
 const json = async file => JSON.parse(await readFile(file, 'utf8'))
@@ -84,7 +86,7 @@ export async function createMumbaiAgentService({ rootDirectory, runtimeDirectory
   }
   if (providers?.['0g']?.kind !== '0g' || providers?.claude?.kind !== 'anthropic') throw Error('MUMBAI_BOTH_HOSTED_PROVIDERS_REQUIRED')
   const release = await checkpoints.acquireLocalLease('personal-agents:' + resolve(runtimeDirectory))
-  const managers = {}
+  const managers = {}, objectives = {}
   const connectionGap = botFactory ? 0 : 4500
   let connectionTail = Promise.resolve(), nextConnectionAt = Date.now() + connectionGap
   try {
@@ -121,6 +123,7 @@ export async function createMumbaiAgentService({ rootDirectory, runtimeDirectory
         return pending
       }
       managers[provider] = manager
+      if(world.mumbai?.survival===true)objectives[provider]=await new SurvivalObjectives({rootDirectory,manager,world,api}).initialize()
     }
     return {
       managers,
@@ -128,6 +131,21 @@ export async function createMumbaiAgentService({ rootDirectory, runtimeDirectory
         const route = mumbaiAgentCommand(event)
         if (!route) return help
         const attributed = await approvedMumbaiOwner({ identity, api, serverId }, route.event)
+        const survival=objectives[route.provider],text=String(attributed.args||'').trim()
+        if(survival){
+          const command=attributed.action==='agent_task'?'task':text.split(/\s+/)[0]
+          if(command==='task')return survival.start(attributed,attributed.action==='agent_task'?text:text.replace(/^task\s*/,''))
+          if(command==='capabilities')return 'Survival skills: '+JSON.stringify(survivalSkills)
+          if(command==='status'&&survival.latest(attributed.playerId))return survival.status(attributed.playerId)
+          if(['wait','cancel','follow','come','release','build','collect','deliver'].includes(command))await survival.stop(attributed.playerId)
+          if(command==='inspect'){
+            const manager=managers[route.provider],slot=manager.slots.find(s=>s.ownerId===attributed.playerId&&s.minecraftPlayerId===attributed.actorPlayerId)
+            if(!slot)return 'Create your agent first.'
+            await manager.ensureBot(slot)
+            const tools=new SurvivalTools({rootDirectory,manager,slot,world,guard:()=>survival.owner(slot,attributed.connectionId)})
+            return JSON.stringify(await tools.observe())
+          }
+        }
         return managers[route.provider].handle(attributed)
       },
       async createForApprovedPlayer(playerId) {
@@ -144,9 +162,9 @@ export async function createMumbaiAgentService({ rootDirectory, runtimeDirectory
           await api('notify', { playerId, message: response })
         }
       },
-      async close() { await Promise.allSettled(Object.values(managers).map(manager => manager.close())); await release() }
+      async close() { await Promise.allSettled(Object.values(objectives).map(o=>o.close()));await Promise.allSettled(Object.values(managers).map(manager => manager.close())); await release() }
     }
-  } catch (error) { await Promise.allSettled(Object.values(managers).map(manager => manager.close())); await release(); throw error }
+  } catch (error) { await Promise.allSettled(Object.values(objectives).map(o=>o.close()));await Promise.allSettled(Object.values(managers).map(manager => manager.close())); await release(); throw error }
 }
 
 async function main() {

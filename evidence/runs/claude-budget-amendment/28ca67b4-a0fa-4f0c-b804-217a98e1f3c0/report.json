@@ -1,0 +1,13 @@
+{
+  "schema": "agentcity.claude-budget-amendment.v1",
+  "at": "2026-11-06T09:18:04.382Z",
+  "previousLimitUsd": "0.25",
+  "approvedLimitUsd": "1",
+  "maximumAdditionalAuthorizationUsd": "0.75",
+  "spentNanoUsdPreserved": 209944000,
+  "completedRequestsPreserved": 19,
+  "pendingRequestsPreserved": 0,
+  "priorLedgerSha256": "504d605fb01291a4a0f156cf9352f228118e21424a714562c0a49a6029c3d88a",
+  "actualApiCalls": 0,
+  "oldHostingComputerAllowanceUnchanged": true
+}

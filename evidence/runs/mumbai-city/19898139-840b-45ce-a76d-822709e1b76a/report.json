@@ -1,0 +1,940 @@
+{
+  "schema": "agentcity.mumbai-city-native-check.v1",
+  "runId": "19898139-840b-45ce-a76d-822709e1b76a",
+  "status": "pass",
+  "isolatedId": "24b7c64e7ce944bf8f9e3fb2ee34b93d",
+  "executedTestSha256": "28145057517dd85c9529403538991ebcd5df9b4dac40a3fd53f6f7beed28babe",
+  "eventParserSourceSha256": "6a9852720d4e3c4e4c057f0fdd109a0c9e25e4e0e8d706aa329fa8d666027f90",
+  "pluginSha256": "4f805ccb020f063a20006a41ea044151a3f50d95db49f2a93ad8208f5dce20a9",
+  "serverId": "laptop-bank-1ce53d39d114410b90f72599ebae8b07",
+  "scope": "Actual isolated Paper and disclosed offline controlled native clients; no real user or independent-human qualification",
+  "publicTransactions": 0,
+  "walletSignatures": 0,
+  "paidModelCalls": 0,
+  "checks": [
+    {
+      "name": "Installed v1 bank migrated through bound intent/ready journal with archived marker and preserved world UUID",
+      "status": "pass",
+      "previousMarkerSha256": "91b32b2b7bb46f8bac67529745c3215ecd76618f418056cccbbba85982b4fe06",
+      "previousBlueprintSha256": "155deeb4fdb983a76e648570d8be5377ca9897a4748954952968f694ad15915a",
+      "blueprintSha256": "afcf848e9cc3d6a3b5c439702e703b04586197689ef2498cb0f5bff2995a1ab9",
+      "phase": "ready",
+      "worldUuid": "be915875-64ec-4498-ae2a-1a6800dd1e53"
+    },
+    {
+      "name": "Actual Paper parses the template block states; seven world identities, economic namespace and three legacy task regions are preserved with separate new Mumbai slots",
+      "status": "pass",
+      "nativeValidatedBlockStates": 22
+    },
+    {
+      "name": "Unapproved visitor remains frozen in the Mumbai arrival gate without an agent request or inventory change",
+      "status": "pass"
+    },
+    {
+      "name": "Approved visitor defaults to UniRock on a solid floor right of the agent concierge pads; existing items survive and one tagged shop compass is present",
+      "status": "pass",
+      "arrival": {
+        "x": 1698.5,
+        "z": 2808.5,
+        "world": "agentcity_mumbai",
+        "y": 69
+      },
+      "buttonAddedThisRun": true
+    },
+    {
+      "name": "Both new native agent clients idle in Survival at the safe Mumbai bank pads; no model call or inventory effect occurs",
+      "status": "pass"
+    },
+    {
+      "name": "Each task lock teleports only its named new agent to its assigned Mumbai work area and unlock returns it to the bank without items or block effects",
+      "status": "pass"
+    },
+    {
+      "name": "Any approved Survival player can open city containers without belonging to a plot group",
+      "status": "pass"
+    },
+    {
+      "name": "Actual Survival tools withdraw finite supplies, craft sticks and lever, build a verified six-block wall and toggle real redstone power",
+      "status": "pass",
+      "actor": "isolated approved native player, not agent authority qualification",
+      "house": {
+        "structure": "wall",
+        "origin": [
+          1734,
+          69,
+          2815
+        ],
+        "verifiedBlocks": 6,
+        "consumed": 6
+      },
+      "verifiedToolReceipts": 14
+    },
+    {
+      "name": "UniRock has its actual quartz and gold facade and five distinct seated professional NPCs; each real service menu opens without taking menu items",
+      "status": "pass",
+      "roles": [
+        "Guide",
+        "Agent Desk",
+        "Job Board",
+        "Wallet & Market",
+        "Play"
+      ],
+      "professions": [
+        9,
+        13,
+        3,
+        4,
+        1
+      ],
+      "seated": 5
+    },
+    {
+      "name": "Native inventory shop completes Privy wallet disclosure, explicit enrollment, exact-price consent, same-order recovery after an actual reconnect and guarded delivery receipt without browser navigation",
+      "status": "pass",
+      "source": "Labelled isolated GUI fixtures only; no actual wallet enrollment, token payment or resource delivery",
+      "selectedCount": 4,
+      "displayedTotalCity": "0.5",
+      "confirmationRequests": 1,
+      "starterGrantRequests": 1,
+      "statusRecovery": "Same order after ambiguous confirmation, insufficient funds and pending delivery; no repeat confirmation",
+      "delivery": "Receipt fixture requires paid and canonical deliveryConfirmed; actual inventory remains unchanged"
+    },
+    {
+      "name": "Mumbai is editable Survival: real city mining persists, while museum access and inventory custody remain intact",
+      "status": "pass",
+      "attemptedDigMilliseconds": 10000,
+      "readOnly": false
+    },
+    {
+      "name": "Copied BankSeller receives finite operator demo stock once; reads and repeated bootstrap preserve inventory and existing non-catalog equipment",
+      "status": "pass",
+      "resources": 8,
+      "unitsPerResource": 64,
+      "alreadyGrantedBeforeThisRun": true,
+      "provenance": "operator_supplied_demo"
+    },
+    {
+      "name": "Collect materials closes the real shop; native custody preview enforces Survival/CRAFTING/empty-cursor and leaves both inventories unchanged",
+      "status": "pass",
+      "paymentAndDelivery": "Synthetic paid-view fixture only; physical paid claim remains pending real human end-to-end verification",
+      "merchantNativePreviewId": "efc04f7f-ddec-4672-93fb-7cd051d239a8",
+      "merchantPreviewFingerprint": "df3d84b65fa1f58522390c51bdc6c8821db0d1da84318e7c842b7a74f4b427f9",
+      "nativeGuard": "Open buyer shop refused; after Collect native item validation reached through unchanged clearActor guard",
+      "physicalClaimAttempted": false,
+      "inventoryEffects": 0
+    },
+    {
+      "name": "Existing world UUIDs, controlled-agent ownership and retained task history remain unchanged after the native city checks",
+      "status": "pass"
+    }
+  ],
+  "messages": [],
+  "fixtureShopResponses": true,
+  "bankMigration": {
+    "previousMarkerSha256": "91b32b2b7bb46f8bac67529745c3215ecd76618f418056cccbbba85982b4fe06",
+    "previousBlueprintSha256": "155deeb4fdb983a76e648570d8be5377ca9897a4748954952968f694ad15915a",
+    "blueprintSha256": "afcf848e9cc3d6a3b5c439702e703b04586197689ef2498cb0f5bff2995a1ab9",
+    "phase": "ready",
+    "worldUuid": "be915875-64ec-4498-ae2a-1a6800dd1e53"
+  },
+  "arrivalDiagnostic": {
+    "native": {
+      "x": 1698.5,
+      "z": 2808.5,
+      "world": "agentcity_mumbai",
+      "y": 69
+    },
+    "client": {
+      "x": 1698.5,
+      "y": 69,
+      "z": 2808.5
+    },
+    "floor": {
+      "name": "smooth_quartz",
+      "boundingBox": "block",
+      "position": {
+        "x": 1698,
+        "y": 68,
+        "z": 2808
+      }
+    }
+  },
+  "lastNavigation": {
+    "status": "success",
+    "pathLength": 11,
+    "cost": 11,
+    "position": {
+      "x": 1702.1585548587743,
+      "y": 69,
+      "z": 2845.500475977156
+    }
+  },
+  "pendingSurvivalEffect": null,
+  "survivalReceipts": [
+    {
+      "action": "withdraw",
+      "item": "oak_planks",
+      "count": 8,
+      "position": [
+        1730,
+        69,
+        2810
+      ],
+      "result": {
+        "item": "oak_planks",
+        "moved": 8,
+        "destination": [
+          1730,
+          69,
+          2810
+        ]
+      },
+      "inventoryAfter": {
+        "oak_planks": 8,
+        "compass": 1
+      }
+    },
+    {
+      "action": "withdraw",
+      "item": "cobblestone",
+      "count": 1,
+      "position": [
+        1730,
+        69,
+        2810
+      ],
+      "result": {
+        "item": "cobblestone",
+        "moved": 1,
+        "destination": [
+          1730,
+          69,
+          2810
+        ]
+      },
+      "inventoryAfter": {
+        "oak_planks": 8,
+        "cobblestone": 1,
+        "compass": 1
+      }
+    },
+    {
+      "action": "craft",
+      "item": "stick",
+      "batches": 1,
+      "output": 4,
+      "result": {
+        "item": "stick",
+        "produced": 4
+      },
+      "inventoryAfter": {
+        "oak_planks": 6,
+        "cobblestone": 1,
+        "stick": 4,
+        "compass": 1
+      }
+    },
+    {
+      "action": "craft",
+      "item": "lever",
+      "batches": 1,
+      "output": 1,
+      "result": {
+        "item": "lever",
+        "produced": 1
+      },
+      "inventoryAfter": {
+        "oak_planks": 6,
+        "stick": 3,
+        "lever": 1,
+        "compass": 1
+      }
+    },
+    {
+      "action": "place",
+      "item": "oak_planks",
+      "position": [
+        1734,
+        69,
+        2815
+      ],
+      "result": {
+        "position": [
+          1734,
+          69,
+          2815
+        ],
+        "block": "oak_planks",
+        "consumed": 1
+      },
+      "inventoryAfter": {
+        "stick": 3,
+        "lever": 1,
+        "compass": 1,
+        "oak_planks": 5
+      }
+    },
+    {
+      "action": "place",
+      "item": "oak_planks",
+      "position": [
+        1735,
+        69,
+        2815
+      ],
+      "result": {
+        "position": [
+          1735,
+          69,
+          2815
+        ],
+        "block": "oak_planks",
+        "consumed": 1
+      },
+      "inventoryAfter": {
+        "stick": 3,
+        "lever": 1,
+        "compass": 1,
+        "oak_planks": 4
+      }
+    },
+    {
+      "action": "place",
+      "item": "oak_planks",
+      "position": [
+        1736,
+        69,
+        2815
+      ],
+      "result": {
+        "position": [
+          1736,
+          69,
+          2815
+        ],
+        "block": "oak_planks",
+        "consumed": 1
+      },
+      "inventoryAfter": {
+        "stick": 3,
+        "lever": 1,
+        "compass": 1,
+        "oak_planks": 3
+      }
+    },
+    {
+      "action": "place",
+      "item": "oak_planks",
+      "position": [
+        1734,
+        70,
+        2815
+      ],
+      "result": {
+        "position": [
+          1734,
+          70,
+          2815
+        ],
+        "block": "oak_planks",
+        "consumed": 1
+      },
+      "inventoryAfter": {
+        "stick": 3,
+        "lever": 1,
+        "compass": 1,
+        "oak_planks": 2
+      }
+    },
+    {
+      "action": "place",
+      "item": "oak_planks",
+      "position": [
+        1735,
+        70,
+        2815
+      ],
+      "result": {
+        "position": [
+          1735,
+          70,
+          2815
+        ],
+        "block": "oak_planks",
+        "consumed": 1
+      },
+      "inventoryAfter": {
+        "stick": 3,
+        "lever": 1,
+        "compass": 1,
+        "oak_planks": 1
+      }
+    },
+    {
+      "action": "place",
+      "item": "oak_planks",
+      "position": [
+        1736,
+        70,
+        2815
+      ],
+      "result": {
+        "position": [
+          1736,
+          70,
+          2815
+        ],
+        "block": "oak_planks",
+        "consumed": 1
+      },
+      "inventoryAfter": {
+        "stick": 3,
+        "lever": 1,
+        "compass": 1
+      }
+    },
+    {
+      "action": "place",
+      "item": "lever",
+      "position": [
+        1725,
+        69,
+        2814
+      ],
+      "result": {
+        "block": "lever",
+        "properties": {
+          "powered": false,
+          "facing": "west",
+          "face": "floor"
+        },
+        "position": [
+          1725,
+          69,
+          2814
+        ],
+        "consumed": 1
+      },
+      "inventoryAfter": {
+        "stick": 3,
+        "compass": 1
+      }
+    },
+    {
+      "action": "activate",
+      "position": [
+        1725,
+        69,
+        2814
+      ],
+      "blockBefore": {
+        "powered": false,
+        "facing": "west",
+        "face": "floor"
+      },
+      "result": {
+        "block": "lever",
+        "properties": {
+          "powered": true,
+          "facing": "west",
+          "face": "floor"
+        }
+      },
+      "inventoryAfter": {
+        "stick": 3,
+        "compass": 1
+      }
+    },
+    {
+      "action": "deposit",
+      "item": "lever",
+      "count": 1,
+      "position": [
+        1730,
+        69,
+        2810
+      ],
+      "result": {
+        "item": "lever",
+        "moved": 1,
+        "destination": [
+          1730,
+          69,
+          2810
+        ]
+      },
+      "inventoryAfter": {
+        "stick": 3,
+        "compass": 1
+      }
+    },
+    {
+      "action": "deposit",
+      "item": "stick",
+      "count": 3,
+      "position": [
+        1730,
+        69,
+        2810
+      ],
+      "result": {
+        "item": "stick",
+        "moved": 3,
+        "destination": [
+          1730,
+          69,
+          2810
+        ]
+      },
+      "inventoryAfter": {
+        "compass": 1
+      }
+    }
+  ],
+  "menuHistory": [
+    {
+      "expected": "Guide",
+      "actual": "{\"type\":\"string\",\"value\":\"AgentCity: Guide\"}"
+    },
+    {
+      "expected": "Agent Desk",
+      "actual": "{\"type\":\"string\",\"value\":\"AgentCity: Agent Desk\"}"
+    },
+    {
+      "expected": "Job Board",
+      "actual": "{\"type\":\"string\",\"value\":\"AgentCity: Job Board\"}"
+    },
+    {
+      "expected": "Wallet & Market",
+      "actual": "{\"type\":\"string\",\"value\":\"AgentCity: Wallet & Market\"}"
+    },
+    {
+      "expected": "Play",
+      "actual": "{\"type\":\"string\",\"value\":\"AgentCity: Play\"}"
+    },
+    {
+      "expected": "Loading Materials",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Loading Materials\"}"
+    },
+    {
+      "expected": "Choose Item",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 1 / 4  Choose Item\"}"
+    },
+    {
+      "expected": "Choose Quantity",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 2 / 4  Choose Quantity\"}"
+    },
+    {
+      "expected": "Choose Quantity",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 2 / 4  Choose Quantity\"}"
+    },
+    {
+      "expected": "Choose Quantity",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 2 / 4  Choose Quantity\"}"
+    },
+    {
+      "expected": "Choose Quantity",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 2 / 4  Choose Quantity\"}"
+    },
+    {
+      "expected": "Checking Your Order",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Checking Your Order\"}"
+    },
+    {
+      "expected": "Review Order",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 3 / 4  Review Order\"}"
+    },
+    {
+      "expected": "Choose Quantity",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 2 / 4  Choose Quantity\"}"
+    },
+    {
+      "expected": "Checking Your Order",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Checking Your Order\"}"
+    },
+    {
+      "expected": "Review Order",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 3 / 4  Review Order\"}"
+    },
+    {
+      "expected": "Checking Your Order",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Checking Your Order\"}"
+    },
+    {
+      "expected": "Review Order",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 3 / 4  Review Order\"}"
+    },
+    {
+      "expected": "Preparing Checkout",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Preparing Checkout\"}"
+    },
+    {
+      "expected": "Review Expired",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Review Expired\"}"
+    },
+    {
+      "expected": "Checking Your Order",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Checking Your Order\"}"
+    },
+    {
+      "expected": "Review Order",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 3 / 4  Review Order\"}"
+    },
+    {
+      "expected": "Preparing Checkout",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Preparing Checkout\"}"
+    },
+    {
+      "expected": "Review Expired",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 4 / 4  Review Expired\"}"
+    },
+    {
+      "expected": "Checking Your Order",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Checking Your Order\"}"
+    },
+    {
+      "expected": "Review Order",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 3 / 4  Review Order\"}"
+    },
+    {
+      "expected": "Preparing Checkout",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Preparing Checkout\"}"
+    },
+    {
+      "expected": "Create Game Wallet",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 4 / 4  Create Game Wallet\"}"
+    },
+    {
+      "expected": "Creating Game Wallet",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Creating Game Wallet\"}"
+    },
+    {
+      "expected": "Add CITY to Game Wallet",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 4 / 4  Add CITY to Game Wallet\"}"
+    },
+    {
+      "expected": "Check Purchase",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Check Purchase\"}"
+    },
+    {
+      "expected": "Checking Purchase",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Checking Purchase\"}"
+    },
+    {
+      "expected": "Add CITY to Game Wallet",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 4 / 4  Add CITY to Game Wallet\"}"
+    },
+    {
+      "expected": "Funding Game Wallet",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Funding Game Wallet\"}"
+    },
+    {
+      "expected": "Check Purchase",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Check Purchase\"}"
+    },
+    {
+      "expected": "Checking Purchase",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Checking Purchase\"}"
+    },
+    {
+      "expected": "Funding Pending",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 4 / 4  Funding Pending\"}"
+    },
+    {
+      "expected": "Checking Purchase",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Checking Purchase\"}"
+    },
+    {
+      "expected": "Confirm Purchase",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 4 / 4  Confirm Purchase\"}"
+    },
+    {
+      "expected": "How Shopping Works",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | How Shopping Works\"}"
+    },
+    {
+      "expected": "Confirm Purchase",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 4 / 4  Confirm Purchase\"}"
+    },
+    {
+      "expected": "Check Purchase",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Check Purchase\"}"
+    },
+    {
+      "expected": "Checking Purchase",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Checking Purchase\"}"
+    },
+    {
+      "expected": "Confirm Purchase",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 4 / 4  Confirm Purchase\"}"
+    },
+    {
+      "expected": "Submitting Purchase",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Submitting Purchase\"}"
+    },
+    {
+      "expected": "Check Purchase",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Check Purchase\"}"
+    },
+    {
+      "expected": "Checking Purchase",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Checking Purchase\"}"
+    },
+    {
+      "expected": "Add CITY to Game Wallet",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 4 / 4  Add CITY to Game Wallet\"}"
+    },
+    {
+      "expected": "Checking Purchase",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Checking Purchase\"}"
+    },
+    {
+      "expected": "Check Purchase",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 4 / 4  Check Purchase\"}"
+    },
+    {
+      "expected": "Checking Purchase",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Checking Purchase\"}"
+    },
+    {
+      "expected": "Check Purchase",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 4 / 4  Check Purchase\"}"
+    },
+    {
+      "expected": "Loading Materials",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Loading Materials\"}"
+    },
+    {
+      "expected": "Choose Item",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 1 / 4  Choose Item\"}"
+    },
+    {
+      "expected": "Checking Purchase",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Checking Purchase\"}"
+    },
+    {
+      "expected": "Check Purchase",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Check Purchase\"}"
+    },
+    {
+      "expected": "Checking Purchase",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Checking Purchase\"}"
+    },
+    {
+      "expected": "Check Purchase",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 4 / 4  Check Purchase\"}"
+    },
+    {
+      "expected": "Checking Purchase",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Checking Purchase\"}"
+    },
+    {
+      "expected": "Check Purchase",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 4 / 4  Check Purchase\"}"
+    },
+    {
+      "expected": "Checking Purchase",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Checking Purchase\"}"
+    },
+    {
+      "expected": "Collect Materials",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 4 / 4  Collect Materials\"}"
+    },
+    {
+      "expected": "Purchase Complete",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 4 / 4  Purchase Complete\"}"
+    },
+    {
+      "expected": "Loading Materials",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Loading Materials\"}"
+    },
+    {
+      "expected": "Collect Materials",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 4 / 4  Collect Materials\"}"
+    },
+    {
+      "expected": "Loading Materials",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Loading Materials\"}"
+    },
+    {
+      "expected": "Choose Item",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 1 / 4  Choose Item\"}"
+    },
+    {
+      "expected": "Choose Quantity",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 2 / 4  Choose Quantity\"}"
+    },
+    {
+      "expected": "Choose Quantity",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 2 / 4  Choose Quantity\"}"
+    },
+    {
+      "expected": "Checking Your Order",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Checking Your Order\"}"
+    },
+    {
+      "expected": "Review Order",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 3 / 4  Review Order\"}"
+    },
+    {
+      "expected": "Preparing Checkout",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | Preparing Checkout\"}"
+    },
+    {
+      "expected": "Collect Materials",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 4 / 4  Collect Materials\"}"
+    },
+    {
+      "expected": "Collect Materials",
+      "actual": "{\"type\":\"string\",\"value\":\"UniRock | 4 / 4  Collect Materials\"}"
+    }
+  ],
+  "shopWireActions": [
+    {
+      "action": "catalog",
+      "operationId": "c87f26a7-23c1-42b3-b480-b9c2bdf5f528"
+    },
+    {
+      "action": "quote",
+      "operationId": "9b94e166-4cce-4a81-aed7-15809397ebb3"
+    },
+    {
+      "action": "quote",
+      "operationId": "2c2868b9-7ea7-400f-a16b-7fe48849fbbc"
+    },
+    {
+      "action": "quote",
+      "operationId": "0583a7a8-a1fb-4e6c-879a-eb404a3eb910"
+    },
+    {
+      "action": "checkout",
+      "operationId": "dc3687e7-c87d-446a-9838-92c5cd634056"
+    },
+    {
+      "action": "quote",
+      "operationId": "c550379f-0652-4d13-b7e6-03dd18aa9bb7"
+    },
+    {
+      "action": "checkout",
+      "operationId": "f6fe11c9-18bf-48db-82fa-1fdd8dadce48"
+    },
+    {
+      "action": "quote",
+      "operationId": "3f1b8e66-c361-439c-85bb-1fb5b508a3cc"
+    },
+    {
+      "action": "checkout",
+      "operationId": "60152662-0043-4676-b22e-f6477de520b9"
+    },
+    {
+      "action": "enroll",
+      "operationId": "5e7d3a26-279f-40fb-9761-3523acbed793"
+    },
+    {
+      "action": "status",
+      "operationId": "31b451da-129d-4477-8eac-b3ce17ffe020"
+    },
+    {
+      "action": "fund",
+      "operationId": "93e45677-9f1a-49da-bbc1-819324f2d00b"
+    },
+    {
+      "action": "status",
+      "operationId": "97ba1df1-872d-4f12-b3bb-551861a870e7"
+    },
+    {
+      "action": "status",
+      "operationId": "82a6acf7-d638-4b7b-902f-36403753ccd7"
+    },
+    {
+      "action": "status",
+      "operationId": "41f78e8a-5bb8-4413-b2f3-06ca9a646b54"
+    },
+    {
+      "action": "confirm",
+      "operationId": "9c138006-7458-48a5-a6f1-7107e22f411a"
+    },
+    {
+      "action": "status",
+      "operationId": "bc2e99b7-80b4-43e7-a39e-5774196589e9"
+    },
+    {
+      "action": "status",
+      "operationId": "18c507eb-ff27-496d-b42f-18cf66ed7531"
+    },
+    {
+      "action": "status",
+      "operationId": "50e7c9f6-275f-4a6b-b8e6-025ae74b064d"
+    },
+    {
+      "action": "catalog",
+      "operationId": "2e62f50a-b859-4eae-937f-e1345439f919"
+    },
+    {
+      "action": "status",
+      "operationId": "b954ff6f-3a79-4725-916b-bc770f188761"
+    },
+    {
+      "action": "status",
+      "operationId": "e007788a-1936-4eab-8019-603637e65320"
+    },
+    {
+      "action": "status",
+      "operationId": "b24756ab-7102-4447-8f14-46c1769e4314"
+    },
+    {
+      "action": "status",
+      "operationId": "9a73aeb8-db0e-498f-9306-5397ac9c1e45"
+    },
+    {
+      "action": "status",
+      "operationId": "e98ff51f-ce55-447f-88e2-6a323ca09ffb"
+    },
+    {
+      "action": "catalog",
+      "operationId": "ab9975d1-bca8-4fd4-968f-51b50c18ce93"
+    },
+    {
+      "action": "catalog",
+      "operationId": "7f6daf83-0dee-4464-b0bb-59b53a096fb3"
+    },
+    {
+      "action": "quote",
+      "operationId": "32e4c1e7-9ce6-4850-a23a-f4719ce69ec8"
+    },
+    {
+      "action": "checkout",
+      "operationId": "0a045989-3d11-4510-928f-89f813ea4b67"
+    },
+    {
+      "action": "status",
+      "operationId": "37a70773-4228-4265-91f2-dec38574a54d"
+    }
+  ],
+  "worldIds": {
+    "agentcity_laptop_bank/dimensions/minecraft/agentcity_estates/data/paper/metadata.dat": "56872012-26f5-48d3-ba50-761a895093cd",
+    "agentcity_laptop_bank/dimensions/minecraft/agentcity_lobby/data/paper/metadata.dat": "b58ce3c8-e107-4379-8ed7-259bed82a53f",
+    "agentcity_laptop_bank/dimensions/minecraft/agentcity_mumbai/data/paper/metadata.dat": "be915875-64ec-4498-ae2a-1a6800dd1e53",
+    "agentcity_laptop_bank/dimensions/minecraft/agentcity_play/data/paper/metadata.dat": "0f4accec-78fe-4578-821b-e9c4b14772c5",
+    "agentcity_laptop_bank/dimensions/minecraft/overworld/data/paper/metadata.dat": "45f82089-4a4a-42ed-a660-801b8ef613f9",
+    "agentcity_laptop_bank/dimensions/minecraft/the_end/data/paper/metadata.dat": "56d31e84-9f30-4826-ae27-822643d1c3c4",
+    "agentcity_laptop_bank/dimensions/minecraft/the_nether/data/paper/metadata.dat": "0140a91b-2202-4535-adb9-3740e48d6527"
+  },
+  "finishedAt": "2026-11-06T08:37:27.511Z",
+  "sources": {
+    "plugin/src/main/java/org/agentcity/paper/UniRockBank.java": "0a7ee8ffe8b049d0b7c27f5cd8504a8facd8c9aa8d4c9eba8c4d54e4c92e4d79",
+    "plugin/src/main/java/org/agentcity/paper/MumbaiWorld.java": "76d824902265716df8696e91ea8a7f66b07010bfabb0ec0a160a71a0f06be3f2",
+    "plugin/src/main/java/org/agentcity/paper/PlayableExperience.java": "181160a3972a36cf8f32e5f18509eee06ff7487e284c181d58bc64eac9d4a362",
+    "plugin/src/main/java/org/agentcity/paper/InventoryMarketplace.java": "9db9fe24e0b565bdb17d5b2d1625f72a69e59cb82f193cb82b531da2971e1af0",
+    "plugin/src/main/java/org/agentcity/paper/AgentTaskProtection.java": "98fc3798f12e50e632376710f48ae06e73b5852c575e75a9c66bd200622f592f",
+    "plugin/src/main/java/org/agentcity/paper/InventoryEscrow.java": "a495aecbfc29e1c9f88c12dfd6590415c4ff3d0b363becb2b87eecda7959d41e",
+    "backend/src/playable/inventory-shop-runtime.mjs": "6a9852720d4e3c4e4c057f0fdd109a0c9e25e4e0e8d706aa329fa8d666027f90",
+    "backend/src/playable/survival-tools.mjs": "3d5df17164dfdc38f2c8625db25ba1c146fb916215bf20212aaf1732131f8196",
+    "backend/src/playable/survival-objectives.mjs": "d76975fbf6bc60aa49e1916d962593670122bef602c4ca3b1fa7a953d122da92",
+    "scripts/mumbai_agents.mjs": "acfd7feef52b8bc18430d578ca54d2deed37a3abb74a4179726593bb2b3de5c7",
+    "scripts/laptop_host.py": "50a8e731c58e916a79ebb14ac693e5288ccccb3b8d39614827061986d3563b1b",
+    "scripts/mumbai_city_host.py": "abf6ad65481c2b1e981ab67792a8b422f078e9509c4ed8fa1f4e302124c09f52",
+    "tests/test_mumbai_city_host.py": "f18fdc58c0f1333117312f2e66b9f676fd7922e0d02d0675667865bc224aceaf",
+    "tests/maps/mumbai-city-visit.mjs": "28145057517dd85c9529403538991ebcd5df9b4dac40a3fd53f6f7beed28babe"
+  }
+}

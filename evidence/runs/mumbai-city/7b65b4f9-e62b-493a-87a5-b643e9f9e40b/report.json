@@ -1,0 +1,117 @@
+{
+  "schema": "agentcity.mumbai-city-native-check.v1",
+  "runId": "7b65b4f9-e62b-493a-87a5-b643e9f9e40b",
+  "status": "fail",
+  "isolatedId": "9daafecbc42341c8b9ccb9e32379997f",
+  "executedTestSha256": "6ac25472bf52ec8e01f11d93169cd36b16f980444aff6e10d7082f7ba267431f",
+  "eventParserSourceSha256": "6a9852720d4e3c4e4c057f0fdd109a0c9e25e4e0e8d706aa329fa8d666027f90",
+  "pluginSha256": "cb7a565496002268139138f8d8d5992b3837714a6b1bc7c88112c0215deeda44",
+  "serverId": "laptop-bank-1ce53d39d114410b90f72599ebae8b07",
+  "scope": "Actual isolated Paper and disclosed offline controlled native clients; no real user or independent-human qualification",
+  "publicTransactions": 0,
+  "walletSignatures": 0,
+  "paidModelCalls": 0,
+  "checks": [
+    {
+      "name": "Installed v1 bank migrated through bound intent/ready journal with archived marker and preserved world UUID",
+      "status": "pass",
+      "previousMarkerSha256": "91b32b2b7bb46f8bac67529745c3215ecd76618f418056cccbbba85982b4fe06",
+      "previousBlueprintSha256": "155deeb4fdb983a76e648570d8be5377ca9897a4748954952968f694ad15915a",
+      "blueprintSha256": "afcf848e9cc3d6a3b5c439702e703b04586197689ef2498cb0f5bff2995a1ab9",
+      "phase": "ready",
+      "worldUuid": "be915875-64ec-4498-ae2a-1a6800dd1e53"
+    },
+    {
+      "name": "Actual Paper parses the template block states; seven world identities, economic namespace and three legacy task regions are preserved with separate new Mumbai slots",
+      "status": "pass",
+      "nativeValidatedBlockStates": 22
+    },
+    {
+      "name": "Unapproved visitor remains frozen in the Mumbai arrival gate without an agent request or inventory change",
+      "status": "pass"
+    },
+    {
+      "name": "Approved visitor defaults to UniRock on a solid floor right of the agent concierge pads; existing items survive and one tagged shop compass is present",
+      "status": "pass",
+      "arrival": {
+        "x": 1698.5,
+        "y": 69,
+        "world": "agentcity_mumbai",
+        "z": 2808.5
+      },
+      "buttonAddedThisRun": false
+    },
+    {
+      "name": "Both new native agent clients idle in Survival at the safe Mumbai bank pads; no model call or inventory effect occurs",
+      "status": "pass"
+    },
+    {
+      "name": "Each task lock teleports only its named new agent to its assigned Mumbai work area and unlock returns it to the bank without items or block effects",
+      "status": "pass"
+    },
+    {
+      "name": "Any approved Survival player can open city containers without belonging to a plot group",
+      "status": "pass"
+    }
+  ],
+  "messages": [],
+  "fixtureShopResponses": true,
+  "bankMigration": {
+    "previousMarkerSha256": "91b32b2b7bb46f8bac67529745c3215ecd76618f418056cccbbba85982b4fe06",
+    "previousBlueprintSha256": "155deeb4fdb983a76e648570d8be5377ca9897a4748954952968f694ad15915a",
+    "blueprintSha256": "afcf848e9cc3d6a3b5c439702e703b04586197689ef2498cb0f5bff2995a1ab9",
+    "phase": "ready",
+    "worldUuid": "be915875-64ec-4498-ae2a-1a6800dd1e53"
+  },
+  "arrivalDiagnostic": {
+    "native": {
+      "x": 1698.5,
+      "y": 69,
+      "world": "agentcity_mumbai",
+      "z": 2808.5
+    },
+    "client": {
+      "x": 1698.5,
+      "y": 69,
+      "z": 2808.5
+    },
+    "floor": {
+      "name": "smooth_quartz",
+      "boundingBox": "block",
+      "position": {
+        "x": 1698,
+        "y": 68,
+        "z": 2808
+      }
+    }
+  },
+  "lastNavigation": {
+    "status": "success",
+    "pathLength": 5,
+    "cost": 5,
+    "position": {
+      "x": 1725.5,
+      "y": 69,
+      "z": 2809.7910995490342
+    }
+  },
+  "error": "Registered task chests are invalid.",
+  "errorStack": "Error: Registered task chests are invalid.\n    at compileTaskPlan (file:///Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/backend/src/playable/task-tools.mjs:35:138)\n    at SurvivalTools.execute (file:///Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/backend/src/playable/survival-tools.mjs:177:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async file:///Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/maps/mumbai-city-visit.mjs:183:15",
+  "finishedAt": "2026-11-06T08:21:22.484Z",
+  "sources": {
+    "plugin/src/main/java/org/agentcity/paper/UniRockBank.java": "0a7ee8ffe8b049d0b7c27f5cd8504a8facd8c9aa8d4c9eba8c4d54e4c92e4d79",
+    "plugin/src/main/java/org/agentcity/paper/MumbaiWorld.java": "36858ae9f84736cd59c572f1c3442b3f521a02e876ce5a7f9745976d22e40af0",
+    "plugin/src/main/java/org/agentcity/paper/PlayableExperience.java": "181160a3972a36cf8f32e5f18509eee06ff7487e284c181d58bc64eac9d4a362",
+    "plugin/src/main/java/org/agentcity/paper/InventoryMarketplace.java": "9db9fe24e0b565bdb17d5b2d1625f72a69e59cb82f193cb82b531da2971e1af0",
+    "plugin/src/main/java/org/agentcity/paper/AgentTaskProtection.java": "98fc3798f12e50e632376710f48ae06e73b5852c575e75a9c66bd200622f592f",
+    "plugin/src/main/java/org/agentcity/paper/InventoryEscrow.java": "a495aecbfc29e1c9f88c12dfd6590415c4ff3d0b363becb2b87eecda7959d41e",
+    "backend/src/playable/inventory-shop-runtime.mjs": "6a9852720d4e3c4e4c057f0fdd109a0c9e25e4e0e8d706aa329fa8d666027f90",
+    "backend/src/playable/survival-tools.mjs": "851698f4b3cc19c61570f0d1ebcc391f5c20b473d45d7b7a705843c867a0616e",
+    "backend/src/playable/survival-objectives.mjs": "d9678c50c18513d0d00aa641b5338d58aa4ff738e073043eb9a2af6132a6dab8",
+    "scripts/mumbai_agents.mjs": "acfd7feef52b8bc18430d578ca54d2deed37a3abb74a4179726593bb2b3de5c7",
+    "scripts/laptop_host.py": "50a8e731c58e916a79ebb14ac693e5288ccccb3b8d39614827061986d3563b1b",
+    "scripts/mumbai_city_host.py": "abf6ad65481c2b1e981ab67792a8b422f078e9509c4ed8fa1f4e302124c09f52",
+    "tests/test_mumbai_city_host.py": "f18fdc58c0f1333117312f2e66b9f676fd7922e0d02d0675667865bc224aceaf",
+    "tests/maps/mumbai-city-visit.mjs": "6ac25472bf52ec8e01f11d93169cd36b16f980444aff6e10d7082f7ba267431f"
+  }
+}
