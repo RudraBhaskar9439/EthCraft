@@ -17,11 +17,11 @@ try{
   const economy=await loadZeroGProvider(base,{...settings.CityAgent2,model:'qwen3.5-35b-a3b',maxTokens:1536})
   const advanced=await loadAgentModelProvider(base,settings.CityAgent3),judge=await loadZeroGProvider(base,{...settings.CityAgent2,maxTokens:3072})
   const planner=createAdaptivePlanner({economy,advanced})
-  for(const [goal,expected,tier]of [['Craft four sticks from the two carried oak planks. Do not gather.','craft','economy'],['Create a working redstone calculator. First read the pinned blueprint; do not invent circuitry or supplies.','blueprint','advanced']]){
-    const observation={fixture:true,health:20,hunger:20,inventory:{oak_planks:2},nearby:[],crafting:['stick'],position:[1748,69,2812]}
+  for(const [goal,expected,tier]of [['Craft four sticks from the two carried oak planks. Do not gather.','craft','economy'],['Walk to [1740,69,2812]. Do not craft or gather.','move','economy'],['Create a working redstone calculator. First read the pinned blueprint; do not invent circuitry or supplies.','blueprint','advanced']]){
+    const observation={fixture:true,health:20,hunger:20,inventory:expected==='move'?{}:{oak_planks:2},nearby:[],crafting:expected==='move'?[]:['stick'],position:[1748,69,2812]}
     const job={goal,history:[],effects:[],decisions:1}
     const result=await planner({job,observation,messages:[{role:'system',content:survivalSystem},{role:'user',content:JSON.stringify({objective:goal,observation,skills:survivalSkills,recentResults:[]})}]})
-    const step=validateSurvivalTool(result.decision.step);assert.equal(step.tool,expected);assert.equal(result.route.tier,tier)
+    const step=validateSurvivalTool(result.decision.step);assert.equal(step.tool,expected);assert.equal(result.route.tier,tier);if(expected==='move')assert.deepEqual(step.position,[1740,69,2812])
     report.checks.push({status:'pass',kind:'planning',route:result.route,step});console.log('PASS '+tier+' model returned the exact requested fixture tool')
   }
   const job={goal:'Craft four sticks and deposit all four into the destination chest.',history:[],effects:[

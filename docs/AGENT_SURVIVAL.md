@@ -233,3 +233,14 @@ custom creature spawns and restart do not restore roaming mobs. Survival mode,
 blocks and inventories remain unchanged. Hunting cannot supply food while this
 user-requested mode is active. The isolated check is
 `node tests/maps/mumbai-mob-free.mjs`.
+
+
+## Natural movement requests
+
+Use `/agent 0g follow me` or `/agent agent follow me`. `come here`, `walk to me`,
+`stop following me`, and `wait here` also work; polite phrasing and a `task`
+prefix are accepted for these direct controls. They use observed player movement
+without model inference or building materials. Compound objectives still use the
+planner. Only the current goal and its observations enter planning; no unrelated
+crafting example is inserted. New direct movement pauses the previous objective,
+waits for an active tool to finish safely, and preserves unresolved effects.

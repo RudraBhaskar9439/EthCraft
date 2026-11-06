@@ -1,0 +1,94 @@
+{
+  "schema": "ethcraft.investments-check.v1",
+  "status": "pass",
+  "scope": "Isolated contract VM, PostgreSQL and injected provider fixtures; public read-only/Privy configuration/native GUI verification reported separately. No new player LP investment signed.",
+  "results": [
+    {
+      "command": [
+        "node",
+        "tests/investments/v4.mjs"
+      ],
+      "startedAt": "2026-11-06T13:45:28.026Z",
+      "status": "pass",
+      "stdout": "PASS investment v4 SDK math, bounded calls, recipient, fee growth, approvals and API route filtering (fixtures; zero public transactions)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "tests/investments/service.mjs"
+      ],
+      "startedAt": "2026-11-06T13:45:28.432Z",
+      "status": "pass",
+      "stdout": "PASS preview/status/invalid consent/shop-only policy cannot authorize investments\nPASS restart after lost signing reply resumes the same seven immutable stages without duplicate signatures or deposits\nPASS canonicality is rechecked before reporting success; reorganization stops advancement\nPASS live owner/session checks and database immutability protect retained funds and terms\nPASS stale reference and expired consent fail without spending\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "tests/investments/privy.mjs"
+      ],
+      "startedAt": "2026-11-06T13:45:28.852Z",
+      "status": "pass",
+      "stdout": "PASS exact opt-in dual delegation preserves original wallet/shop scope, rejects changed signers and cannot provision another wallet (fixtures only)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "tests/playable/testnet-wallets.mjs"
+      ],
+      "startedAt": "2026-11-06T13:45:29.217Z",
+      "status": "pass",
+      "stdout": "PASS explicit local fixture wallets bind stably to players and separate roles without exporting keys\nPASS exact request nonce and signed bytes persist before broadcast; retries and owner checks retain the same intent\nPASS actual local broadcast and canonical receipt reconciliation replay the original transaction hash\nPASS lost provider reply retains its exact unsigned transaction and nonce before signing and broadcasting once\nPASS mainnet unapproved recipients value spending and silent local custody fallback are refused\nPASS official Privy SDK-shaped fixture pins offline owner and scoped delegate rejects owner runtime keys and broad delegates\nPASS policy templates separate bounded player approve/swap from recipient-restricted treasury transfer and reject mainnet\nPASS explicit treasury policy expansion preserves wallet address audits pinned versions replays once and refuses unresolved payouts\nPASS operator account provisioning requires exact owned UUID app enrollment and unexpired persisted verified human session\n{\"status\":\"pass\",\"checks\":9,\"evidence\":\"file:///Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/evidence/runs/playable-testnet-wallets/cec3f2a9-e833-4f9f-8c51-d964416fe85b/\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "tests/playable/inventory-shop-game.mjs"
+      ],
+      "startedAt": "2026-11-06T13:45:30.339Z",
+      "status": "pass",
+      "stdout": "PASS order/status are bound to the current approved Minecraft/Privy owner; no implicit enrollment, signing or escrow\nPASS insufficient CITY/gas records no Pay consent and permits only a separately explicit starter grant\nPASS ambiguous Fund resumes the original grant only; one-time nonce rotation requires a fresh Pay click\nPASS restart resumes the original exact three managed-wallet calls with reduced gas caps; an open menu never claims delivery\nPASS reconnect lookup recovers the original consented order ahead of newer untouched orders without writes/signing/grants; delivered and untouched expired orders are excluded\nPASS only an exact native delivery receipt completes an order; duplicate status, changed wallet bindings and consent reset remain safe\nPASS exact operation IDs, CITY amounts, zero native value and the service-derived keccak redemption claim are enforced; out-of-scope signing is denied\nPASS scoped standing consent is distinct from manual Pay; recipient is pinned, human UI excludes agent orders, and revocation preserves paid delivery without duplicate claims\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "tests/playable/inventory-shop.mjs"
+      ],
+      "startedAt": "2026-11-06T13:45:30.780Z",
+      "status": "pass",
+      "stdout": "PASS actual-stock catalog and exact quantity pricing; missing payment adapter never charges or claims delivery\nPASS unsupported quantity, insufficient real stock, caller price spoof and unapproved or changed connection are refused\nPASS Privy game checkout preserves its exact owner-bound order without a browser URL or payment claim\nPASS injected checkout retains original owner-bound wallet link on retry; it never reports payment success\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "forge",
+        "test",
+        "--root",
+        "contracts",
+        "--match-contract",
+        "MarketplaceInvestmentsTest",
+        "--json"
+      ],
+      "startedAt": "2026-11-06T13:45:30.925Z",
+      "status": "pass",
+      "stdout": "{\"/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/contracts/MarketplaceInvestments.t.sol:MarketplaceInvestmentsTest\":{\"duration\":\"10ms 647µs 83ns\",\"test_results\":{\"testBootstrapCannotBeFabricatedInSameBlock()\":{\"status\":\"Success\",\"reason\":null,\"counterexample\":null,\"logs\":[],\"decoded_logs\":[],\"kind\":{\"Unit\":{\"gas\":326233}},\"traces\":[],\"labeled_addresses\":{},\"duration\":\"1ms 55µs 958ns\",\"breakpoints\":{},\"gas_snapshots\":{}},\"testEffectivePriceIncludesFeesAndMarketFeeHasNoUserTiers()\":{\"status\":\"Success\",\"reason\":null,\"counterexample\":null,\"logs\":[],\"decoded_logs\":[],\"kind\":{\"Unit\":{\"gas\":592082}},\"traces\":[],\"labeled_addresses\":{},\"duration\":\"1ms 804µs 541ns\",\"breakpoints\":{},\"gas_snapshots\":{}},\"testLiquidityLossResetsCoverageAndPriceImpactIsBounded()\":{\"status\":\"Success\",\"reason\":null,\"counterexample\":null,\"logs\":[],\"decoded_logs\":[],\"kind\":{\"Unit\":{\"gas\":661684}},\"traces\":[],\"labeled_addresses\":{},\"duration\":\"1ms 443µs 250ns\",\"breakpoints\":{},\"gas_snapshots\":{}},\"testObservationRingRemainsBoundedWithRealPoolState()\":{\"status\":\"Success\",\"reason\":null,\"counterexample\":null,\"logs\":[],\"decoded_logs\":[],\"kind\":{\"Unit\":{\"gas\":2166281}},\"traces\":[],\"labeled_addresses\":{},\"duration\":\"1ms 976µs 167ns\",\"breakpoints\":{},\"gas_snapshots\":{}},\"testOfficialQuoteAndBothDecimalDirectionsMatchActualExecution()\":{\"status\":\"Success\",\"reason\":null,\"counterexample\":null,\"logs\":[],\"decoded_logs\":[],\"kind\":{\"Unit\":{\"gas\":530690}},\"traces\":[],\"labeled_addresses\":{},\"duration\":\"1ms 366µs 334ns\",\"breakpoints\":{},\"gas_snapshots\":{}},\"testPositionOwnerMinimumOutputsAndDeadlineAreOnchain()\":{\"status\":\"Success\",\"reason\":null,\"counterexample\":null,\"logs\":[],\"decoded_logs\":[],\"kind\":{\"Unit\":{\"gas\":4708899}},\"traces\":[],\"labeled_addresses\":{},\"duration\":\"320µs 625ns\",\"breakpoints\":{},\"gas_snapshots\":{}},\"testRealPositionManagerMintIncreaseFeesAndFullExitWhilePaused()\":{\"status\":\"Success\",\"reason\":null,\"counterexample\":null,\"logs\":[],\"decoded_logs\":[],\"kind\":{\"Unit\":{\"gas\":5073180}},\"traces\":[],\"labeled_addresses\":{},\"duration\":\"1ms 696µs 292ns\",\"breakpoints\":{},\"gas_snapshots\":{}},\"testRouterAuthorityPauseAndHealthKeepLPWithdrawalAvailable()\":{\"status\":\"Success\",\"reason\":null,\"counterexample\":null,\"logs\":[],\"decoded_logs\":[],\"kind\":{\"Unit\":{\"gas\":994972}},\"traces\":[],\"labeled_addresses\":{},\"duration\":\"1ms 327µs 750ns\",\"breakpoints\":{},\"gas_snapshots\":{}},\"testSandwichFrontLegBeyondImpactLimitCannotMovePoolOrSpend()\":{\"status\":\"Success\",\"reason\":null,\"counterexample\":null,\"logs\":[],\"decoded_logs\":[],\"kind\":{\"Unit\":{\"gas\":341051}},\"traces\":[],\"labeled_addresses\":{},\"duration\":\"1ms 46µs 709ns\",\"breakpoints\":{},\"gas_snapshots\":{}},\"testSizeAndPerBlockCapsRevertWithoutChangingBalancesOrHistory()\":{\"status\":\"Success\",\"reason\":null,\"counterexample\":null,\"logs\":[],\"decoded_logs\":[],\"kind\":{\"Unit\":{\"gas\":615887}},\"traces\":[],\"labeled_addresses\":{},\"duration\":\"1ms 643µs 708ns\",\"breakpoints\":{},\"gas_snapshots\":{}},\"testStaleAnchorsFailClosedAndCheckpointRestoresAFullWindow()\":{\"status\":\"Success\",\"reason\":null,\"counterexample\":null,\"logs\":[],\"decoded_logs\":[],\"kind\":{\"Unit\":{\"gas\":342194}},\"traces\":[],\"labeled_addresses\":{},\"duration\":\"1ms 260µs 584ns\",\"breakpoints\":{},\"gas_snapshots\":{}},\"testTimeWeightedTicksUseRealElapsedTimeAndFloorNegativeMeans()\":{\"status\":\"Success\",\"reason\":null,\"counterexample\":null,\"logs\":[],\"decoded_logs\":[],\"kind\":{\"Unit\":{\"gas\":266808}},\"traces\":[],\"labeled_addresses\":{},\"duration\":\"302µs 625ns\",\"breakpoints\":{},\"gas_snapshots\":{}}},\"warnings\":[]}}\n",
+      "stderr": ""
+    }
+  ],
+  "sources": {
+    "backend/src/investments/v4.mjs": "4c1e8e80e4e6168629c2e50e2b9657ac6fa55e2fb970acbf4d0e77151fcac95f",
+    "backend/src/investments/service.mjs": "8146ae0832d7e9b129a749ef6cfc54636a5cdb3d3e8da7c4843f8637741d05b4",
+    "backend/src/investments/uniswap-api.mjs": "06d40d26e8b1d73ae54775cb322f857f6b289d07560f45ea05fef77745ae8e83",
+    "backend/src/investments/runtime.mjs": "5b3feb1b292b382441cb8cd619c6487e953cb419c164c678e063b9bd91cc36b8",
+    "backend/src/investments/policy.mjs": "dca6171056a3546fcd82356c32fba409123c7a542fd27ad7e261deb5cfdc8181",
+    "backend/src/investments/swaps.mjs": "7d4e344da4747aca8189c28935bab10754eee7a23a1cbb2070f4dfd9dac38cd6",
+    "backend/src/playable/testnet-wallets.mjs": "683de5e1968e971fbde910698024186ab4e0002f0e81a27be1afbf0b49fae050",
+    "backend/src/playable/inventory-shop-runtime.mjs": "564854603ca531e6e14b108d762ec3c29d5117a3e88ada7447fded7b2aacbe7c",
+    "plugin/src/main/java/org/agentcity/paper/InvestmentMenu.java": "38f0b5a4d4cdfddcd738c923e6f5b3d6b0b740adbc021edb0739b2108815c202",
+    "plugin/src/main/java/org/agentcity/paper/PlayableExperience.java": "939375ec23e4dd538e16d8202bfe5f4a707a93ea5e57474ffa425f3fa864f281"
+  }
+}

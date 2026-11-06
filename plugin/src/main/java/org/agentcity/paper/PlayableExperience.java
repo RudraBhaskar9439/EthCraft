@@ -40,6 +40,7 @@ public final class PlayableExperience implements Listener {
     private World lobbyWorld, playWorld;
     private MumbaiWorld mumbai;
     private InventoryMarketplace inventoryMarket;
+    private InvestmentMenu investments;
     private boolean mumbaiPadsInitialized;
     private final Set<UUID> cityArrivals = new HashSet<>();
     private DiscordGameAccess discordAccess;
@@ -96,7 +97,10 @@ public final class PlayableExperience implements Listener {
                 && !AGENTS.contains(player.getName()), player -> connections.get(player.getUniqueId()),
                 (player,action,fields) -> enqueue(player,"inventory_shop",List.of(action,JSON.toJson(fields))));
             inventoryMarket.start();
-            if (mumbai != null) mumbai.controls(inventory -> inventory.getHolder() instanceof Menu || InventoryMarketplace.owns(inventory),
+            investments=new InvestmentMenu(plugin,player -> discordAccess!=null&&!discordAccess.isPending(player)&&!AGENTS.contains(player.getName()),
+                player -> connections.get(player.getUniqueId()),(player,action,fields)->enqueue(player,"inventory_shop",List.of(action,JSON.toJson(fields))));
+            investments.start();
+            if (mumbai != null) mumbai.controls(inventory -> inventory.getHolder() instanceof Menu || InventoryMarketplace.owns(inventory) || InvestmentMenu.owns(inventory),
                 this::isProtectedNpc, player -> MUMBAI_AGENTS.contains(player.getName()),
                 player -> discordAccess!=null&&!discordAccess.isPending(player)&&!AGENTS.contains(player.getName()),
                 this::ownsMumbaiContainer,this::ownsMumbaiBuild);
@@ -234,6 +238,7 @@ public final class PlayableExperience implements Listener {
 
     public synchronized void close() {
         if(inventoryMarket!=null)inventoryMarket.close();
+        if(investments!=null)investments.close();
         if(discordAccess!=null)discordAccess.close();
         HandlerList.unregisterAll(this);
         try { persist(); } catch (IOException error) { plugin.getLogger().severe("Playable state could not be saved: " + error.getClass().getSimpleName()); }
@@ -530,6 +535,7 @@ public final class PlayableExperience implements Listener {
             menu.inventory.setItem(11,item(Material.WRITABLE_BOOK,"Supported task catalog","Same request as /jobs","Paid job contracts are not enabled."));
             menu.inventory.setItem(15,item(Material.PAPER,"Current agent task status","Same request as /agent status"));
         } else if(page.equals("economy")) {
+            menu.inventory.setItem(22,item(Material.BEACON,"Optional LP investments","Open /invest for CITY / tUSDC liquidity.","Separate confirmation for every investment.","Test tokens only. LP principal can lose value."));
             menu.inventory.setItem(10,item(Material.CHEST,"Open CITY marketplace","Stocked materials, quantity and total price.","Self-custody confirmation; Unichain Sepolia only."));
             menu.inventory.setItem(12,item(Material.GOLD_INGOT,"USDC / CITY pool","CITY purchases use the guarded testnet market.","Wallet approval is separate from game login."));
             menu.inventory.setItem(14,item(Material.BOOK,"Protected native stock","The shop never extracts the city scenery.","A payment proposal is not delivered stock."));
@@ -561,7 +567,8 @@ public final class PlayableExperience implements Listener {
             if (slot == 11) { enqueue(player,"agent",List.of("agent capabilities")); player.closeInventory(); }
             else if (slot == 15) { enqueue(player,"agent",List.of("agent status")); player.closeInventory(); }
         } else if (menu.page.equals("economy")) {
-            if(slot==10||slot==12||slot==16){player.closeInventory();if(inventoryMarket!=null)inventoryMarket.open(player);}
+            if(slot==22){player.closeInventory();if(investments!=null)investments.open(player);}
+            else if(slot==10||slot==12||slot==16){player.closeInventory();if(inventoryMarket!=null)inventoryMarket.open(player);}
             else if(slot==14){player.closeInventory();player.sendMessage("Only real merchant stock can be bought. Review and confirm the exact CITY amount in your own wallet.");}
         } else if (menu.page.equals("guide")) {
             if(slot==10) travel(player,"play"); else if(slot==22) travel(player,"museum"); else if(slot==24&&mumbai!=null) travel(player,"mumbai"); else { player.closeInventory(); help(player); }
@@ -592,10 +599,11 @@ public final class PlayableExperience implements Listener {
         if(discordAccess!=null&&discordAccess.isPending(player)){player.sendMessage("Approve this connection in Discord to play.");return true;}
         String[] parts = raw.trim().replaceFirst("^/", "").split("\\s+");
         String command = parts[0].toLowerCase(Locale.ROOT);
-        if (!Set.of("agent","jobs","wallet","balance","pay","accept","play","lobby","museum","mumbai","sell","market","swap","bazaar","estate","assets").contains(command)) return false;
+        if (!Set.of("agent","jobs","wallet","balance","pay","accept","play","lobby","museum","mumbai","sell","market","swap","bazaar","estate","assets","invest").contains(command)) return false;
         if ((!player.getWorld().equals(world) && !player.getWorld().equals(lobbyWorld) && !player.getWorld().equals(playWorld)&&!player.getWorld().getName().equals(PropertyProtection.WORLD)&&(mumbai==null||!mumbai.contains(player.getWorld()))) || AGENTS.contains(player.getName()) || FIXTURES.contains(player.getName())) { player.sendMessage("Player actions are available to local human players in AgentCity worlds."); return true; }
         if (raw.length() > 1000) { player.sendMessage("That request is too long."); return true; }
         switch(command) {
+            case "invest" -> { if(investments!=null)investments.command(player,parts); }
             case "estate" -> {
                 if(properties==null){player.sendMessage("The estate world is not enabled on this host.");break;}
                 if(parts.length==1||parts.length==2&&parts[1].equalsIgnoreCase("ownership"))enqueue(player,"estate",List.of("ownership"));
@@ -684,6 +692,7 @@ public final class PlayableExperience implements Listener {
         if(!(input.get("result") instanceof Map<?,?> result))throw new IllegalArgumentException("inventory_shop_result_required");
         @SuppressWarnings("unchecked") Map<String,Object> value=(Map<String,Object>)result;
         boolean shown=inventoryMarket!=null&&inventoryMarket.complete(id,value);
+        if(!shown&&investments!=null)shown=investments.complete(id,value);
         acknowledge(id,shown?"Marketplace updated.":"Marketplace request finished; reopen /market to continue.");
         return Map.of("ok",true,"shown",shown);
     }

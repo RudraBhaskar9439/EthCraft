@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-11-06T13:50:56.104Z",
+  "chainId": 1301,
+  "actions": [
+    "SWAP",
+    "LP"
+  ],
+  "protocols": [
+    "V2",
+    "V3",
+    "V4"
+  ],
+  "cityPoolApiIndexed": false,
+  "cityLpRoute": "Existing official PositionManager with official SDK liquidity math",
+  "blockNumber": "67120626",
+  "poolId": "0x1417774f1f970721329cfb44701537d8bb36296d05a18810cb3771705e590897",
+  "tick": -276321,
+  "activeLiquidity": "10000000000000000",
+  "signedTransactions": 0,
+  "protectedApiSubmissionVerified": false,
+  "blockers": [
+    "No external API pools approved or protected submission verified."
+  ],
+  "positions": [
+    {
+      "tokenId": "21",
+      "owner": "0xb25898f5e4907e6925741b10dea46f351104a0e4",
+      "liquidity": "10000000000000000",
+      "inRange": true,
+      "fees": [
+        "0",
+        "6221"
+      ]
+    }
+  ],
+  "apiRoutes": [
+    {
+      "protocol": "V3",
+      "result": "INVEST_UNISWAP_NO_ROUTE",
+      "executable": false
+    },
+    {
+      "protocol": "V4",
+      "result": "INVEST_UNISWAP_NO_ROUTE",
+      "executable": false
+    }
+  ],
+  "investmentDelegateConfigured": true
+}

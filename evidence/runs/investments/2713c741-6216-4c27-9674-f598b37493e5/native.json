@@ -1,0 +1,28 @@
+{
+  "status": "pass",
+  "scope": "Actual isolated native GUI with synthetic backend replies. No live wallet/payment, independent user or chain lifecycle qualification.",
+  "checks": [
+    {
+      "name": "investment actions are unavailable before native Discord approval",
+      "status": "pass"
+    },
+    {
+      "name": "deposit stays optional; all review pages precede the separate confirmation button",
+      "status": "pass"
+    },
+    {
+      "name": "native consent binds the exact operation; recovery uses status and shows specific blockers",
+      "status": "pass"
+    },
+    {
+      "name": "an unfunded review remains readable and has no confirmation button",
+      "status": "pass"
+    },
+    {
+      "name": "existing marketplace menu remains available alongside investments",
+      "status": "pass"
+    }
+  ],
+  "publicTransactions": 0,
+  "walletSignatures": 0
+}

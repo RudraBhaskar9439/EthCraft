@@ -50,7 +50,12 @@ export function mumbaiAgentCommand(event) {
   const words = (Array.isArray(event.args) ? event.args.join(' ') : String(event.args || '')).trim().split(/\s+/)
   const selected = words.shift().toLowerCase(),provider=selected==='agent'?'claude':selected
   if (!Object.hasOwn(mumbaiAgentSlots, provider)) return null
-  const request = words.join(' ') || 'status'
+  let request = words.join(' ') || 'status'
+  const spoken=request.replace(/^task\s+/i,'').replace(/^(?:please|can you|could you)\s+/i,'').replace(/(?:\s+please)?[.!?]*$/,'').trim().toLowerCase()
+  if(/^(?:follow(?: me)?|start following me)$/.test(spoken))request='follow'
+  else if(/^(?:come(?: here| to me| over here)?|(?:move|walk) (?:here|to me))$/.test(spoken))request='come'
+  else if(/^(?:stop(?: moving| following(?: me)?)?|wait(?: here)?|stay(?: here)?|pause(?: (?:work|task))?)$/.test(spoken))request='wait'
+  else if(/^(?:status|what are you doing)$/.test(spoken))request='status'
   const explicit = /^(?:create|follow|come|wait|status|inspect|review|capabilities|release|cancel|screenshot)$/.test(request) || /^task(?:\s|$)/.test(request) ||
     /^build (?:(?:platform|shelter) )?\d+ \d+(?: [a-z0-9_:]+)?$/.test(request) || /^(?:collect|deliver) [a-z0-9_:]+ \d+$/.test(request)||request==='purchases off'
   return { provider, event: { ...event, action: explicit ? 'agent' : 'agent_task', args: request } }
@@ -145,8 +150,14 @@ export async function createMumbaiAgentService({ rootDirectory, runtimeDirectory
           if(command==='task')return survival.start(attributed,attributed.action==='agent_task'?text:text.replace(/^task\s*/,''))
           if(command==='capabilities')return 'Survival skills: '+JSON.stringify(survivalSkills)
           if(command==='review')return survival.reviewLatest(attributed)
-          if(command==='status'&&survival.latest(attributed.playerId))return survival.status(attributed.playerId)
-          if(['wait','cancel','follow','come','release','build','collect','deliver'].includes(command))await survival.stop(attributed.playerId)
+          const slot=managers[route.provider].slots.find(s=>s.ownerId===attributed.playerId)
+          if(command==='status'&&survival.latest(attributed.playerId)&&!['follow','come'].includes(slot?.mode))return survival.status(attributed.playerId)
+          if(['wait','cancel','follow','come','release','build','collect','deliver'].includes(command)){
+            await survival.stop(attributed.playerId)
+            const job=survival.latest(attributed.playerId)
+            if(job?.activeLock)await survival.running.get(attributed.playerId)
+            if(['follow','come'].includes(command)&&job?.pendingEffect)return 'The previous tool effect needs reconciliation before moving. Its materials and receipts are preserved.'
+          }
           if(command==='inspect'){
             const manager=managers[route.provider],slot=manager.slots.find(s=>s.ownerId===attributed.playerId&&s.minecraftPlayerId===attributed.actorPlayerId)
             if(!slot)return 'Create your agent first.'

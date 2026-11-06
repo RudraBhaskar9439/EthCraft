@@ -43,6 +43,11 @@ try {
   assert.equal(mumbaiAgentCommand(event(['agent', 'status'])).provider,'claude')
   assert.equal(mumbaiAgentCommand(event(['Agent','review'])).event.action,'agent')
   assert.equal(mumbaiAgentCommand(event('ollama create')), null)
+  for(const prefix of ['0g','agent'])for(const [phrase,command]of [['follow me','follow'],['Please follow me!','follow'],['task follow me','follow'],['come here','come'],['Can you walk to me please?','come'],['stop following me','wait'],['wait here','wait'],['what are you doing','status']]){
+    const parsed=mumbaiAgentCommand(event(prefix+' '+phrase)).event
+    assert.equal(parsed.action,'agent');assert.equal(parsed.args,command)
+  }
+  assert.equal(mumbaiAgentCommand(event('0g build a house then follow me')).event.action,'agent_task')
   const naturalBuild = mumbaiAgentCommand(event('claude build a house')).event
   assert.equal(naturalBuild.action, 'agent_task'); assert.equal(naturalBuild.args, 'build a house')
   const numericBuild = mumbaiAgentCommand(event('claude build platform 3 3 oak_planks')).event
@@ -94,6 +99,26 @@ try {
     assert.equal(slots[0].provider, providers[provider].kind); assert.equal(slots[0].connected, true)
     assert(!JSON.stringify(slots).includes('fixture-secret'))
     assert.match(await service.handle(event(provider + ' status')), new RegExp(name))
+  }
+  for(const prefix of ['0g','agent']){
+    const manager=service.managers[prefix==='agent'?'claude':prefix]
+    manager.goals={follow:()=>({fixture:'follow'}),near:()=>({fixture:'come'})}
+    manager.intents.requestModel=async()=>{throw Error('MOVEMENT_MUST_NOT_CALL_A_MODEL')}
+    const savedOwner=manager.intents.owner(principalId),old=savedOwner.workflow
+    const steps=[{action:'build',structure:'platform',width:2,depth:2,item:'oak_planks'}]
+    savedOwner.workflow={id:'saved-workflow-fixture',status:'paused',index:0,steps,receipts:[{message:'Preserved earlier observation.'}]}
+    assert.match(await service.handle(event(prefix+' follow me')),/will follow you/)
+    assert.equal(savedOwner.workflow.status,'paused');assert.equal(savedOwner.workflow.index,0)
+    assert.deepEqual(savedOwner.workflow.steps,steps);assert.equal(savedOwner.workflow.receipts.length,1)
+    assert.equal(manager.slots[0].mode,'follow')
+    assert.match(await service.handle(event(prefix+' come here')),/will come to you/)
+    assert.equal(manager.slots[0].mode,'come')
+    assert.match(await service.handle(event(prefix+' wait here')),/stopped and is waiting/)
+    const unfinished=manager.tools.unfinished.bind(manager.tools)
+    manager.tools.unfinished=()=>({status:'paused',pending:{effect:'unknown'}})
+    assert.match(await service.handle(event(prefix+' follow me')),/reconciled before moving/)
+    assert.equal(manager.slots[0].mode,'wait')
+    manager.tools.unfinished=unfinished;savedOwner.workflow=old
   }
   assert(calls.every(call => !/financial|wallet|remote-grant/.test(call.path)))
   assert.equal(bots.length, 2)

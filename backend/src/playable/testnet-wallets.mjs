@@ -123,7 +123,7 @@ export function buildPrivyMarketPolicies(manifest, treasuryRecipients = []) {
 
 export function createPrivyManagedProvider({ appId, appSecret, authorizationPrivateKey, ownerPublicKey,
   delegateAuthorizationPrivateKey, delegatePublicKey, delegateQuorumId, ownerQuorumId,
-  policyId, policySha256, allowedTargets, rolePolicies = {}, client: suppliedClient } = {}) {
+  policyId, policySha256, allowedTargets, rolePolicies = {}, walletBinding, walletBindings = {}, client: suppliedClient } = {}) {
   if (authorizationPrivateKey !== undefined) throw Error('OFFLINE_OWNER_KEY_FORBIDDEN_IN_WALLET_RUNTIME')
   if (![appId, appSecret, delegateAuthorizationPrivateKey, delegatePublicKey, delegateQuorumId, ownerQuorumId, ownerPublicKey, policyId].every(value => typeof value === 'string' && value.length > 0) ||
       !/^[a-f0-9]{64}$/.test(policySha256 || '') || !Array.isArray(allowedTargets) || !allowedTargets.length ||
@@ -166,11 +166,15 @@ export function createPrivyManagedProvider({ appId, appSecret, authorizationPriv
     return context.policyId
   }
   function validateWallet(wallet, externalId, expectedPolicyId) {
+    const binding=walletBindings[externalId]||walletBinding
+    const signers = binding?.additionalSigners || [{signer_id:delegateQuorumId,override_policy_ids:[expectedPolicyId]}]
+    if(binding && (!binding.policyId || signers.length!==2 ||
+      !signers.some(s=>s.signer_id===delegateQuorumId&&s.override_policy_ids?.length===1&&s.override_policy_ids[0]===expectedPolicyId) ||
+      new Set(signers.map(s=>s.signer_id)).size!==2)) throw Error('PRIVY_EXACT_INVESTMENT_DELEGATION_REQUIRED')
     if (!wallet || !ADDRESS.test(wallet.address) || wallet.chain_type !== 'ethereum' || wallet.external_id !== externalId ||
-        !Array.isArray(wallet.policy_ids) || wallet.policy_ids.length !== 1 || wallet.policy_ids[0] !== expectedPolicyId ||
-        wallet.owner_id !== ownerQuorumId || wallet.additional_signers?.length !== 1 ||
-        wallet.additional_signers[0].signer_id !== delegateQuorumId || wallet.additional_signers[0].override_policy_ids?.length !== 1 ||
-        wallet.additional_signers[0].override_policy_ids[0] !== expectedPolicyId || wallet.exported_at != null) throw Error('PRIVY_WALLET_BINDING_CHANGED')
+        !Array.isArray(wallet.policy_ids) || wallet.policy_ids.length !== 1 || wallet.policy_ids[0] !== (binding?.policyId||expectedPolicyId) ||
+        wallet.owner_id !== ownerQuorumId || !Array.isArray(wallet.additional_signers) ||
+        !isDeepStrictEqual(sorted(wallet.additional_signers.map(s=>({signer_id:s.signer_id,override_policy_ids:s.override_policy_ids}))),sorted(signers)) || wallet.exported_at != null) throw Error('PRIVY_WALLET_BINDING_CHANGED')
     return { address: wallet.address.toLowerCase(), accountId: wallet.id, externalId, policyId: expectedPolicyId }
   }
   return {
@@ -187,6 +191,7 @@ export function createPrivyManagedProvider({ appId, appSecret, authorizationPriv
       try { wallet = await sdk.wallets().get('ext_wal_' + externalId) }
       catch (error) {
         if (error.status !== 404) throw Error('PRIVY_WALLET_LOOKUP_FAILED')
+        if(walletBindings[externalId]||walletBinding) throw Error('PRIVY_EXISTING_INVESTMENT_WALLET_REQUIRED')
         try {
           wallet = await sdk.wallets().create({ chain_type: 'ethereum', external_id: externalId,
             display_name: 'AgentCity testnet wallet', owner_id: ownerQuorumId,
@@ -234,7 +239,8 @@ export async function loadPrivySettings(rootDirectory = ROOT, { requireProvider 
   const provider = createPrivyManagedProvider({ appId: settings.appId, appSecret: credentials.appSecret,
     delegateAuthorizationPrivateKey: credentials.delegateAuthorizationPrivateKey, delegatePublicKey: credentials.delegatePublicKey,
     delegateQuorumId: settings.delegateQuorumId, ownerQuorumId: settings.ownerQuorumId, ownerPublicKey: credentials.ownerPublicKey,
-    policyId: settings.policyId, policySha256: settings.policySha256, allowedTargets: settings.allowedTargets, rolePolicies: settings.rolePolicies })
+    policyId: settings.policyId, policySha256: settings.policySha256, allowedTargets: settings.allowedTargets, rolePolicies: settings.rolePolicies,
+    walletBinding: settings.walletBinding, walletBindings: settings.walletBindings })
   return { settings, credentials, provider }
 }
 

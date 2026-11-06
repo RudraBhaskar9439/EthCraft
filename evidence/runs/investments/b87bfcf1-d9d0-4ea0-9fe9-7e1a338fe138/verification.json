@@ -1,0 +1,46 @@
+{
+  "status": "pass",
+  "checkedAt": "2026-11-06T13:55:37.432Z",
+  "scope": "Final source checks; PostgreSQL/provider fixtures, zero public wallet transactions. Contract and native results are separate linked reports.",
+  "sources": {
+    "backend/src/investments/v4.mjs": "51bed5faf976f61aef7e24df05705ddad712be471afd46ad58fccba7efd0159a",
+    "backend/src/investments/service.mjs": "919bc42df6b0719e36602ec7d684789735bd87c8fe5ade55b55a6286cdbbd897",
+    "backend/src/investments/uniswap-api.mjs": "06d40d26e8b1d73ae54775cb322f857f6b289d07560f45ea05fef77745ae8e83",
+    "backend/src/investments/runtime.mjs": "69f87edaf7345fd8589936c5cba087b4b58145d8282f4c0c190540357c41279f",
+    "backend/src/investments/policy.mjs": "dca6171056a3546fcd82356c32fba409123c7a542fd27ad7e261deb5cfdc8181",
+    "backend/src/investments/swaps.mjs": "7d4e344da4747aca8189c28935bab10754eee7a23a1cbb2070f4dfd9dac38cd6",
+    "backend/src/playable/testnet-wallets.mjs": "683de5e1968e971fbde910698024186ab4e0002f0e81a27be1afbf0b49fae050",
+    "backend/src/playable/inventory-shop-runtime.mjs": "564854603ca531e6e14b108d762ec3c29d5117a3e88ada7447fded7b2aacbe7c",
+    "plugin/src/main/java/org/agentcity/paper/InvestmentMenu.java": "38f0b5a4d4cdfddcd738c923e6f5b3d6b0b740adbc021edb0739b2108815c202",
+    "plugin/src/main/java/org/agentcity/paper/PlayableExperience.java": "939375ec23e4dd538e16d8202bfe5f4a707a93ea5e57474ffa425f3fa864f281"
+  },
+  "results": [
+    {
+      "command": [
+        "node",
+        "tests/investments/v4.mjs"
+      ],
+      "status": "pass",
+      "stdout": "PASS investment v4 SDK math, bounded calls, recipient, fee growth, approvals and API route filtering (fixtures; zero public transactions)\n"
+    },
+    {
+      "command": [
+        "node",
+        "tests/investments/service.mjs"
+      ],
+      "status": "pass",
+      "stdout": "PASS preview/status/invalid consent/shop-only policy cannot authorize investments\nPASS restart after lost signing reply resumes the same seven immutable stages without duplicate signatures or deposits\nPASS retained signed receipts remain readable when fresh signing permission is unavailable\nPASS canonicality is rechecked before reporting success; reorganization stops advancement\nPASS live owner/session checks and database immutability protect retained funds and terms\nPASS stale reference and expired consent fail without spending\n"
+    },
+    {
+      "command": [
+        "node",
+        "tests/investments/privy.mjs"
+      ],
+      "status": "pass",
+      "stdout": "PASS exact opt-in dual delegation preserves original wallet/shop scope, rejects changed signers and cannot provision another wallet (fixtures only)\n"
+    }
+  ],
+  "contractAndRegressions": "evidence/runs/investments/00d2c901-8bd4-46d7-a3df-ba2057872c41/verification.json",
+  "nativeUi": "evidence/runs/investments/2713c741-6216-4c27-9674-f598b37493e5/native.json",
+  "nativeMumbai": "evidence/runs/mumbai-city/4e0e483b-68da-4526-abc2-3369b20247d6/report.json"
+}

@@ -363,7 +363,11 @@ export class PersonalAgents {
     let action = request.action
     let proposed = { action }
     const activeWorkflow = this.intents.workflow(slot.ownerId)
-    if (!request._workflow && ['build', 'deliver', 'collect', 'sell', 'follow', 'come'].includes(action) && activeWorkflow && activeWorkflow.status !== 'complete') return 'Your saved workflow still has unfinished steps. Resume it or ask for its progress before starting different work.'
+    if(!request._workflow&&['follow','come'].includes(action)){
+      if(this.tools.unfinished(slot.ownerId))return 'The current material task needs to finish or be reconciled before moving. Its progress and receipts are preserved.'
+      await this.intents.pause(slot.ownerId,'Paused for movement; saved steps and receipts are preserved.')
+    }
+    if (!request._workflow && ['build', 'deliver', 'collect', 'sell'].includes(action) && activeWorkflow && activeWorkflow.status !== 'complete') return 'Your saved workflow still has unfinished steps. Resume it or ask for its progress before starting different work.'
     if (request._plan) { proposed = planValue(request._plan); action = proposed.action }
     else if (['build', 'deliver', 'collect', 'sell'].includes(action)) { proposed = explicitTask(action, request.args); action = proposed.action }
     if (action === 'task') {

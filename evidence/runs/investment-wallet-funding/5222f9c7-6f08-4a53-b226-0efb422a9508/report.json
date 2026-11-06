@@ -1,0 +1,37 @@
+{
+  "schema": "ethcraft.testnet-wallet-funding.v1",
+  "status": "pass",
+  "verifiedAt": "2026-11-06T14:44:27.198Z",
+  "scope": "User-requested one-time funding from existing controlled project test balances. Not LP investment, swap volume, earned revenue or player wallet authorization.",
+  "chainId": 1301,
+  "recipient": "0xd8b3356d12ab30f19fed75dbae82603b4150d45a",
+  "testUsdcToken": "0x9caa79a2b1e4420e45f0cf3bd47a90770136b3a4",
+  "transferred": {
+    "usdc": "10000",
+    "native": "150791793001374"
+  },
+  "balancesAfter": {
+    "usdc": "10000",
+    "native": "250000000000000"
+  },
+  "transactions": [
+    {
+      "asset": "usdc",
+      "transactionHash": "0xc7f62bb529a31dbb17da0c6a2550be8ea39d93e9daa2e655693120a347dadd5a",
+      "status": "confirmed",
+      "blockNumber": "67123827"
+    },
+    {
+      "asset": "native",
+      "transactionHash": "0xd3537858a5929f0c2fbede697d559814a3ce6c6177e9fe9d2a5a41f8271f0f6e",
+      "status": "confirmed",
+      "blockNumber": "67123834"
+    }
+  ],
+  "durableIntentRows": 2,
+  "sharedNativeBudgetWei": "4000000000000000",
+  "budgetReset": false,
+  "tokensMinted": 0,
+  "lpDeposits": 0,
+  "playerWalletSignatures": 0
+}

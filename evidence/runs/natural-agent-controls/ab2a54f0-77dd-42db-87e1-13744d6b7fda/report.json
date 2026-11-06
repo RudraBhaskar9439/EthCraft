@@ -1,0 +1,38 @@
+{
+  "schema": "agentcity.natural-controls-check.v1",
+  "at": "2026-11-06T14:19:40.041123+00:00",
+  "scope": "Fixture controller/engine tests and real API planning on labelled observations; real owner movement remains a separate check.",
+  "status": "pass",
+  "rootCauses": [
+    "Natural follow text entered the general objective planner",
+    "Unrelated hard-coded stick examples contaminated current-goal prompts",
+    "Legacy paused workflow rejected direct movement before follower dispatch"
+  ],
+  "passed": [
+    "Natural follow/come/wait variants reach both managers without model calls",
+    "Paused workflow steps, progress and receipts remain unchanged while movement is permitted",
+    "Unfinished receiving-tool operations still refuse movement",
+    "Empty-inventory movement planning contains only the current objective",
+    "A delayed stopped planner cannot act or stop a newer movement controller",
+    "Resuming an objective stops the manual follower first",
+    "node tests/playable/mumbai-agents.mjs",
+    "node tests/playable/agents.mjs",
+    "node tests/playable/intent-planner.mjs",
+    "node tests/playable/survival.mjs",
+    "node tests/playable/adaptive-planner.mjs",
+    "python3 scripts/check_plan.py",
+    "node tests/playable/remote-agents.mjs"
+  ],
+  "realApiProbe": "evidence/runs/adaptive-model/bf63384f-ef16-456e-879d-3d43669e3b9c/report.json",
+  "liveOwnerCheck": "Pending confirmation after the saved-workflow fix; earlier owner attempt exposed the legacy guard.",
+  "modelCallCountForDirectMovement": 0,
+  "walletTransactions": 0,
+  "sources": {
+    "backend/src/playable/agents.mjs": "7e1efa3236bac8a7b229916c1dfff63fe8af4fc260ef2f00e809aaa611055889",
+    "backend/src/playable/survival-objectives.mjs": "8283187928de8594eedc40ed88a1807ff54680c943f2599b15a47a72d9c1ae65",
+    "scripts/mumbai_agents.mjs": "850626f7aa4f4a8720218250c3f128ae519a80a3eb60b353f235722c94c03045",
+    "tests/playable/mumbai-agents.mjs": "1d603fe83e8ec324cf48f581401d4d72a72e4ea97f6749cb1892ee472c500ba2",
+    "tests/playable/survival.mjs": "69665f46b117d6d52e58ed20b7f9b8bfdd95decd4632180b0e40d40b45ce3e7b"
+  },
+  "phaseStatus": "P3 local extension; original phase/independent-human gates remain unqualified."
+}

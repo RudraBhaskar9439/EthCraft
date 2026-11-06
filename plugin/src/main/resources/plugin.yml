@@ -41,5 +41,8 @@ commands:
     description: Find on-chain item listing in Discord Assets
   market:
     description: Testnet wallet and Uniswap swaps
+  invest:
+    description: Optional test-token liquidity and investment swaps inside UniRock
+    usage: /invest
   swap:
     description: Preview, confirm or reconcile a testnet Uniswap swap

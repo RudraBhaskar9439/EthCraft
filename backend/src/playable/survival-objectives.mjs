@@ -26,7 +26,7 @@ export async function requestSurvivalDecision(request,messages,providerKind){
   // This provider misdecodes nested tool unions; select a tool, then require its flat arguments.
   const schema={type:'object',additionalProperties:false,required:['status','message','tool'],properties:{status:survivalDecisionSchema.properties.status,message:survivalDecisionSchema.properties.message,workingPlan:survivalDecisionSchema.properties.workingPlan,tool:{type:'string',enum:['none',...Object.keys(stepFields)]}}}
   const context=messages.at(-1).content
-  const selected=await request([{role:'system',content:survivalSystem+' Select the tool by its name only. Its arguments will be requested separately. Use tool:none for done or blocked.'},{role:'user',content:'Craft four sticks from two carried oak planks.'},{role:'assistant',content:'{"status":"act","message":"Craft four sticks.","tool":"craft"}'},{role:'user',content:context}],schema)
+  const selected=await request([{role:'system',content:(messages[0]?.role==='system'?messages[0].content:survivalSystem)+' Select the tool by its name only. Its arguments will be requested separately. Use tool:none for done or blocked. Follow the current owner objective exactly. Movement requires no crafting materials.'},{role:'user',content:context}],schema)
   if(!selected||!['act','done','blocked'].includes(selected.status)||typeof selected.message!=='string'||selected.message.length>500||!['none',...Object.keys(stepFields)].includes(selected.tool)||Object.keys(selected).some(k=>!['status','message','tool','workingPlan'].includes(k))||selected.workingPlan!==undefined&&(typeof selected.workingPlan!=='string'||selected.workingPlan.length>2000))throw Error('INVALID_SURVIVAL_TOOL_SELECTION')
   if(selected.status!=='act')return{status:selected.status,message:selected.message}
   const branch=survivalDecisionSchema.properties.step.anyOf.find(b=>b.properties.tool.enum[0]===selected.tool)
@@ -93,11 +93,11 @@ export class SurvivalObjectives {
       job.connectionId = event.connectionId; job.status = 'running'; job.decisions = 0
     } else {
       if (job?.status === 'running' || job?.pendingEffect || this.manager.tools.unfinished(slot.ownerId)) return 'Pause or reconcile the current objective/task before starting another.'
-      this.manager.stop(slot)
       job = { id: randomUUID(), operationId: event.operationId, ownerId: slot.ownerId, playerId: slot.minecraftPlayerId, goal: text, connectionId: event.connectionId,
         status: 'running', decisions: 0, history: [], effects: [], pendingEffect: null, message: 'Observing the world and planning the next action.', createdAt: new Date().toISOString() }
       this.state.jobs.push(job)
     }
+    this.manager.stop(slot)
     await this.save(); this.drive(slot, job)
     return (this.label||slot.name) + ' accepted: ' + job.goal + '. It will report observed progress. Use wait to pause; task resume continues a safe paused objective.'
   }
@@ -152,7 +152,7 @@ export class SurvivalObjectives {
   }
   drive(slot, job) {
     if (this.running.has(slot.ownerId)) return this.running.get(slot.ownerId)
-    const provider=this.manager.providerForSlot?.(slot),limits=survivalPlanningLimits(provider)
+    const provider=this.manager.providerForSlot?.(slot),limits=survivalPlanningLimits(provider),generation=slot.generation
     const work = (async () => {
       let ownerValid = true, checking = false, locked = null
       const guard = async () => { if (this.closed || job.status !== 'running' || !ownerValid) throw Error('OBJECTIVE_STOPPED'); await this.owner(slot, job.connectionId) }
@@ -172,8 +172,6 @@ export class SurvivalObjectives {
           job.lastObservation = observation; job.decisions++; await this.save()
           const messages = [
             { role: 'system', content: survivalSystem },
-            { role: 'user', content: 'I carry two oak planks. Craft four sticks.' },
-            { role: 'assistant', content: '{"status":"act","message":"Craft four sticks from the two carried planks.","step":{"tool":"craft","item":"stick","count":4}}' },
             { role: 'user', content: JSON.stringify({ objective: job.goal, skills: survivalSkills, observation, workingPlan:job.workingPlan,
               observedHistory:job.history.slice(-40).map(h=>({step:h.step,error:h.error,at:h.at,result:h.result?.id==='calculator-v1'?{id:h.result.id,materialBill:h.result.materialBill}:h.result})),
               recentResults:job.history.slice(-6), operatorRecovery: job.operatorRecoveryNotes, remainingDecisions: limits.maxDecisions - job.decisions }) }
@@ -234,10 +232,11 @@ export class SurvivalObjectives {
         }
         if (job.status === 'running') { job.status = 'paused'; job.message = 'Reached '+limits.maxDecisions+' decisions. Inspect the observed progress, then task resume if needed.'; await this.save(); await this.notify(slot, job.message) }
       } catch (error) {
+        if(error.message==='OBJECTIVE_STOPPED'&&job.status!=='running')return
         job.status = 'paused'; job.message = (job.pendingEffect ? 'Effect outcome needs reconciliation; no automatic retry. ' : '') + String(error.message).slice(0, 500)
         await this.save(); await this.notify(slot, job.message).catch(() => {})
       } finally {
-        clearInterval(timer); slot.bot?.pathfinder?.stop(); slot.bot?.clearControlStates?.()
+        clearInterval(timer); if(slot.generation===generation){slot.bot?.pathfinder?.stop(); slot.bot?.clearControlStates?.()}
         if (locked && !job.pendingEffect) { try { await this.api('task-lock', { ...locked, locked: false }) } catch { job.message += ' Task unlock pending.'; await this.save() } }
       }
     })().finally(() => this.running.delete(slot.ownerId))

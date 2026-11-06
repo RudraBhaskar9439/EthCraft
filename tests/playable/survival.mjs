@@ -36,6 +36,17 @@ const selected=await requestSurvivalDecision(async(_messages,schema)=>{selectedC
 assert.deepEqual(selected.step,{tool:'craft',item:'stick',count:4});assert.equal(selectedCalls,2)
 let injection=0
 await assert.rejects(requestSurvivalDecision(async()=>++injection===1?{status:'act',message:'Craft.',tool:'craft'}:{tool:'gather',item:'oak_log',count:1},[{role:'user',content:'Craft.'}],'0g'),/INVALID_SURVIVAL_ARGUMENTS/)
+let moveCalls=0
+const movementContext=JSON.stringify({objective:'Walk to [1740,69,2812].',observation:{inventory:{},position:[1735,69,2812]}})
+const movement=await requestSurvivalDecision(async(messages,schema)=>{
+  moveCalls++
+  assert.equal(messages.length,2);assert(!messages.some(m=>m.role==='assistant'))
+  assert(!messages.some(m=>m.content.includes('Craft four sticks')))
+  assert(messages[1].content.includes('Walk to [1740,69,2812]'))
+  return moveCalls===1?{status:'act',message:'Walk to the requested position.',tool:'move'}:{position:[1740,69,2812]}
+},[{role:'system',content:'Only the current objective has authority.'},{role:'user',content:movementContext}],'0g')
+assert.deepEqual(movement.step,{tool:'move',position:[1740,69,2812]});assert.equal(moveCalls,2)
+console.log('PASS empty-inventory movement uses only its current objective; unrelated crafting examples never enter the prompt')
 console.log('PASS 0G tool selection uses flat required arguments and cannot change the selected tool through extra fields')
 
 const tool=Object.create(SurvivalTools.prototype)
@@ -61,7 +72,7 @@ try {
   const ownerId=randomUUID(),playerId=randomUUID(),connectionId=randomUUID()
   const slot={name:'CityAgent5',ownerId,minecraftPlayerId:playerId,bot:{pathfinder:{stop(){}},clearControlStates(){}}}
   let approved=true,calls=0,locked=false
-  const manager={runtime:directory,names:['CityAgent5'],slots:[slot],taskRegions:[{slotName:'CityAgent5',origin:[10,69,10]}],tools:{unfinished:()=>null},ensureBot:async()=>slot.bot,inPlayWorld:()=>true,stop(){}}
+  const manager={runtime:directory,names:['CityAgent5'],slots:[slot],taskRegions:[{slotName:'CityAgent5',origin:[10,69,10]}],tools:{unfinished:()=>null},ensureBot:async()=>slot.bot,inPlayWorld:()=>true,stop(slot){slot.generation=(slot.generation||0)+1;slot.mode='wait'}}
   slot.bot.entity={position:{x:10,y:69,z:10}}
   const api=async(path,input)=>{if(path.startsWith('session?'))return{online:true,pendingAuthentication:!approved,principalId:ownerId,connectionId,serverPosition:{world:'agentcity_mumbai'}};if(path==='task-lock')locked=input.locked;return{}}
   const world={mumbaiAgentBounds:{min:{x:0,y:0,z:0},max:{x:100,y:200,z:100}}}
@@ -109,6 +120,25 @@ try {
   assert.equal(purchaseCalls,2);assert.equal(planning,2);assert.equal(engine.latest(ownerId).pendingEffect,null)
   assert.equal(engine.latest(ownerId).effects.length,1);assert.equal(engine.latest(ownerId).status,'ready_for_review')
   console.log('PASS working memory persists and unknown purchase resumes the original saved intent before further model calls, without fabricating native Pay')
+  let releasePlan,modelStarted,stops=0
+  const started=new Promise(resolve=>{modelStarted=resolve})
+  slot.generation=0;slot.bot.pathfinder={stop(){stops++}}
+  engine.modelCall=async messages=>{
+    assert.equal(messages.length,2);assert.equal(JSON.parse(messages[1].content).objective,'Walk to [20,69,20].')
+    modelStarted();await new Promise(resolve=>{releasePlan=resolve})
+    return{status:'act',message:'Walk now.',step:{tool:'move',position:[20,69,20]}}
+  }
+  engine.toolsFactory=({guard})=>({observe:async()=>{await guard();return{inventory:{}}},execute:async()=>{throw Error('CANCELLED_PLANNER_MUST_NOT_ACT')}})
+  await engine.start({...event,operationId:randomUUID()},'Walk to [20,69,20].');await started
+  await engine.stop(ownerId);slot.generation++;slot.mode='follow'
+  const stopsBeforeReply=stops;releasePlan();await engine.running.get(ownerId)
+  assert.equal(stops,stopsBeforeReply);assert.equal(slot.mode,'follow')
+  assert.equal(engine.latest(ownerId).message,'Paused by owner.')
+  console.log('PASS a delayed old planner reply cannot execute tools, overwrite pause status or stop newer direct movement')
+  engine.modelCall=async()=>({status:'blocked',message:'Movement handoff fixture complete.'})
+  await engine.start({...event,operationId:randomUUID()},'resume');await engine.running.get(ownerId)
+  assert.equal(slot.mode,'wait','Resuming an objective stops the manual follow controller first')
+
   approved=false
   await assert.rejects(engine.start({...event,operationId:randomUUID()},'Collect food.'),/OWNER_CONNECTION_NOT_APPROVED/)
   assert.equal(calls,3)

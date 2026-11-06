@@ -1,0 +1,44 @@
+{
+  "scope": "Real isolated PostgreSQL and owned Anvil18559; explicit in-memory fixture signing provider and mocked Privy SDK API shape. No live provider wallet/signature, production qualification, public transaction or human-key proof.",
+  "status": "pass",
+  "checks": [
+    {
+      "name": "explicit local fixture wallets bind stably to players and separate roles without exporting keys",
+      "status": "pass"
+    },
+    {
+      "name": "exact request nonce and signed bytes persist before broadcast; retries and owner checks retain the same intent",
+      "status": "pass"
+    },
+    {
+      "name": "actual local broadcast and canonical receipt reconciliation replay the original transaction hash",
+      "status": "pass"
+    },
+    {
+      "name": "lost provider reply retains its exact unsigned transaction and nonce before signing and broadcasting once",
+      "status": "pass"
+    },
+    {
+      "name": "mainnet unapproved recipients value spending and silent local custody fallback are refused",
+      "status": "pass"
+    },
+    {
+      "name": "official Privy SDK-shaped fixture pins offline owner and scoped delegate rejects owner runtime keys and broad delegates",
+      "status": "pass"
+    },
+    {
+      "name": "policy templates separate bounded player approve/swap from recipient-restricted treasury transfer and reject mainnet",
+      "status": "pass"
+    },
+    {
+      "name": "explicit treasury policy expansion preserves wallet address audits pinned versions replays once and refuses unresolved payouts",
+      "status": "pass"
+    },
+    {
+      "name": "operator account provisioning requires exact owned UUID app enrollment and unexpired persisted verified human session",
+      "status": "pass"
+    }
+  ],
+  "publicTransactions": 0,
+  "localTransactions": 2
+}

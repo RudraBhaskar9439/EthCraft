@@ -1,0 +1,75 @@
+{
+  "schema": "agentcity.adaptive-compute-probe.v1",
+  "scope": "Real API generation on disclosed fixture observations only",
+  "minecraftActions": 0,
+  "cityTransactions": 0,
+  "checks": [
+    {
+      "status": "pass",
+      "kind": "planning",
+      "route": {
+        "tier": "economy",
+        "reason": "Routine bounded tool selection",
+        "provider": "0g",
+        "model": "qwen3.5-35b-a3b",
+        "maxTokens": 1536,
+        "contextBytes": 4672
+      },
+      "step": {
+        "item": "stick",
+        "count": 4,
+        "tool": "craft"
+      }
+    },
+    {
+      "status": "pass",
+      "kind": "planning",
+      "route": {
+        "tier": "economy",
+        "reason": "Routine bounded tool selection",
+        "provider": "0g",
+        "model": "qwen3.5-35b-a3b",
+        "maxTokens": 1536,
+        "contextBytes": 4629
+      },
+      "step": {
+        "position": [
+          1740,
+          69,
+          2812
+        ],
+        "tool": "move"
+      }
+    },
+    {
+      "status": "pass",
+      "kind": "planning",
+      "route": {
+        "tier": "advanced",
+        "reason": "Circuit reasoning and verification",
+        "provider": "anthropic",
+        "model": "claude-sonnet-5-5",
+        "maxTokens": 16384,
+        "contextBytes": 4714
+      },
+      "step": {
+        "tool": "blueprint"
+      }
+    },
+    {
+      "status": "pass",
+      "kind": "review",
+      "review": {
+        "issues": [],
+        "summary": "The agent crafted 4 sticks (receipt confirms 4 produced) and deposited all 4 into the destination chest (receipt confirms 4 moved to [1746,69,2812]). The destination chest now contains exactly 4 sticks, inventory is empty, and there are no unresolved or omitted effects. Objective fully satisfied.",
+        "verdict": "meets_objective",
+        "reviewer": "0G",
+        "model": "glm-4.7",
+        "advisory": true,
+        "evidenceLimited": false
+      }
+    }
+  ],
+  "status": "pass",
+  "finishedAt": "2026-11-06T14:13:15.628Z"
+}

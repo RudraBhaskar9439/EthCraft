@@ -1,0 +1,34 @@
+{
+  "status": "pass",
+  "checkedAt": "2026-11-06T14:27:12.485Z",
+  "scope": "Deterministic keeper scheduler tests plus real existing Unichain Sepolia checkpoint/reference reads and live Micro preview. No player wallet signature or investment.",
+  "unitStdout": "PASS keeper continues beyond twelve samples, owns one lease, and stops without overlapping publication\nPASS transient errors and pending receipts retry the receiving publisher without fabricating readiness\nPASS exhausted gas budget stops the keeper without resets or replacement transactions\nPASS an existing manual warm-up retains ownership until its lease is released\n",
+  "sources": {
+    "backend/src/bank/pool-observation-keeper.mjs": "e03a7c0feefc1068434a00417de076ccecf6969f775da9ca9aa4ef71518bcf76",
+    "backend/src/playable/inventory-shop-runtime.mjs": "bba8a67ecdc3a2509daf79d0409c0c6d1ca17850793aab4d24710bcf74a00f2f",
+    "tests/bank/pool-observation-keeper.mjs": "7c962ce06cd7dc3e570f1035a8287b0c32fb7020be0a0c922ff520af0e38d5f4"
+  },
+  "live": {
+    "keeperStatus": "running",
+    "checkpointTransaction": "0xf5955f86e161c130021fdb286113a71897459da8920455371086b4058ccb1a91",
+    "checkpointCanonical": true,
+    "referenceReady": true,
+    "meanTick": -276321,
+    "anchorAgeSeconds": "337",
+    "blockNumber": "67122802",
+    "preview": {
+      "checkedAt": "2026-11-06T14:24:29.576Z",
+      "status": "preview",
+      "canConfirm": false,
+      "blocker": "Needs 0.01 tUSDC; balance 0.",
+      "realTransaction": false,
+      "referenceNotReady": false,
+      "walletSignatures": 0
+    }
+  },
+  "unchangedProtections": {
+    "windowSeconds": 300,
+    "maximumReferenceAgeSeconds": 600,
+    "budgetReset": false
+  }
+}

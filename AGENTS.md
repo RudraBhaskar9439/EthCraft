@@ -1,3 +1,7 @@
+## Natural movement and current-goal prompts — user update 6 November 2026
+
+Treat follow me, come here and stop/wait variants as direct observed movement controls for both Mumbai workers, without model inference or material requirements. Do not inject an unrelated crafting example into the active planning prompt. Preserve the exact current objective, real observations and owner guards. Movement may pause an older saved workflow without replacing its steps or receipts; unresolved receiving-tool tasks remain fenced. A delayed cancelled planner must not execute tools, overwrite the pause message or stop a newer movement controller.
+
 ## Mob-free local play — user update 6 November 2026
 
 The user requested removing all roaming mobs before testing. Disable natural creature spawning across this local playable server and remove loaded creatures without drops, while preserving the five registered bank/lobby service NPCs, player entities, agents, the merchant, inventories and city blocks. Keep Survival mode; do not use Peaceful difficulty or grant resources. Hunting is unavailable while this mode is active.
