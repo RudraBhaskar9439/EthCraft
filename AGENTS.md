@@ -1,3 +1,7 @@
+## Mob-free local play — user update 6 November 2026
+
+The user requested removing all roaming mobs before testing. Disable natural creature spawning across this local playable server and remove loaded creatures without drops, while preserving the five registered bank/lobby service NPCs, player entities, agents, the merchant, inventories and city blocks. Keep Survival mode; do not use Peaceful difficulty or grant resources. Hunting is unavailable while this mode is active.
+
 ## Adaptive compute and public Agent name — user update 6 November 2026
 
 The user renamed the visible advanced worker to Agent and requested a 0G work reviewer plus economy/advanced model orchestration. Use Agent and 0G in current menus, commands, status and Discord panels. Preserve exact API model IDs, provider configuration, historical evidence, legacy command aliases and existing runtime ownership paths. Route routine decisions through the verified 0G economy model; use the configured advanced provider for complex reasoning, failures and bounded correction. Both 0G models and reviews share the existing cumulative $5 ledger, including all old unknown reservations; advanced inference retains the $25 laptop ledger. Never reset either allowance. 0G assessments use actual receipts and fresh observations, remain advisory and cannot accept work, sign payments or authorize wallet spending. Keep one bounded automatic correction cycle and record actual routing and review attempts durably.

@@ -222,3 +222,14 @@ budget. Per-request routing and assessment attempts are durably recorded.
 Focused checks: `node tests/playable/adaptive-planner.mjs`. The explicit
 `node tests/playable/adaptive-model-live.mjs --run` probe uses real APIs on
 labelled fixture observations; it executes no game actions or purchases.
+
+
+## Mob-free testing
+
+The local playable server removes roaming creatures without drops and disables
+natural creature spawning in all loaded worlds. Registered bank/lobby service
+NPCs, players, agents, the merchant and armor-stand seats remain. Chunk loading,
+custom creature spawns and restart do not restore roaming mobs. Survival mode,
+blocks and inventories remain unchanged. Hunting cannot supply food while this
+user-requested mode is active. The isolated check is
+`node tests/maps/mumbai-mob-free.mjs`.

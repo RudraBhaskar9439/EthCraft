@@ -119,7 +119,7 @@ final class MumbaiWorld implements Listener {
         loaded.setPVP(false);
         loaded.setGameRule(GameRule.DO_DAYLIGHT_CYCLE, true);
         loaded.setGameRule(GameRule.DO_WEATHER_CYCLE, true);
-        loaded.setGameRule(GameRule.DO_MOB_SPAWNING, true);
+        loaded.setGameRule(GameRule.DO_MOB_SPAWNING, false);
         loaded.setGameRule(GameRule.MOB_GRIEFING, true);
         loaded.setGameRule(GameRule.DO_FIRE_TICK, true);
         loaded.setGameRule(GameRule.DO_TILE_DROPS, true);
@@ -130,9 +130,12 @@ final class MumbaiWorld implements Listener {
         try { result.bank=UniRockBank.prepare(plugin,loaded); }
         catch(IOException error) { throw error; }
         catch(Exception error) { throw new IllegalArgumentException("unirock_bank_prepare_failed",error); }
+        // Load saved concierge entities before ensureNpcs reconciles their identities.
+        for(String key:List.of("guide","agents","jobs","economy","play"))result.npcLocation(key).getChunk().load();
         loaded.setSpawnLocation(result.hubSpawn());
         Bukkit.getPluginManager().registerEvents(result, plugin);
         loaded.getEntitiesByClass(Zombie.class).forEach(Entity::remove);
+        MobFreePlay.install(plugin);
         return result;
     }
 
@@ -200,7 +203,7 @@ final class MumbaiWorld implements Listener {
     Map<String,Object> status() {
         Location at=hubSpawn();
         return Map.of("ready",true,"world",NAME,"worldUuid",world.getUID().toString(),"readOnly",false,"survival",true,"bounds",bounds(),
-            "spawn",List.of(at.getBlockX(),at.getBlockY(),at.getBlockZ()),"command","/mumbai","bank",bank.status());
+            "spawn",List.of(at.getBlockX(),at.getBlockY(),at.getBlockZ()),"command","/mumbai","bank",bank.status(),"mobControl",MobFreePlay.status());
     }
 
     @EventHandler(priority=EventPriority.HIGHEST, ignoreCancelled=true) public void enter(PlayerChangedWorldEvent e) { if (contains(e.getPlayer().getWorld())) e.getPlayer().setGameMode(arrivalMode(approvedHuman.test(e.getPlayer()),authorizedAgent.test(e.getPlayer()))); }

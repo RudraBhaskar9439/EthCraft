@@ -1,0 +1,113 @@
+{
+  "schema": "agentcity.mumbai-mob-free-check.v1",
+  "status": "pass",
+  "isolatedId": "dab618938fb0445aac3fb2484b1ed358",
+  "pluginSha256": "82cda599a36e81414e42547c1227d934be26f0ead017a5920217b2112eb88cdf",
+  "serverId": "laptop-bank-1ce53d39d114410b90f72599ebae8b07",
+  "worldIds": {
+    "agentcity_laptop_bank/dimensions/minecraft/agentcity_estates/data/paper/metadata.dat": "56872012-26f5-48d3-ba50-761a895093cd",
+    "agentcity_laptop_bank/dimensions/minecraft/agentcity_lobby/data/paper/metadata.dat": "b58ce3c8-e107-4379-8ed7-259bed82a53f",
+    "agentcity_laptop_bank/dimensions/minecraft/agentcity_mumbai/data/paper/metadata.dat": "be915875-64ec-4498-ae2a-1a6800dd1e53",
+    "agentcity_laptop_bank/dimensions/minecraft/agentcity_play/data/paper/metadata.dat": "0f4accec-78fe-4578-821b-e9c4b14772c5",
+    "agentcity_laptop_bank/dimensions/minecraft/overworld/data/paper/metadata.dat": "45f82089-4a4a-42ed-a660-801b8ef613f9",
+    "agentcity_laptop_bank/dimensions/minecraft/the_end/data/paper/metadata.dat": "56d31e84-9f30-4826-ae27-822643d1c3c4",
+    "agentcity_laptop_bank/dimensions/minecraft/the_nether/data/paper/metadata.dat": "0140a91b-2202-4535-adb9-3740e48d6527"
+  },
+  "scope": "Actual owned isolated copy; roaming creatures disabled, service NPCs preserved. No real owner or independent-human qualification.",
+  "checks": [
+    {
+      "name": "All loaded worlds have no roaming creatures or natural spawning; five actual Mumbai service NPCs remain in Survival",
+      "status": "pass"
+    },
+    {
+      "name": "Both actually summoned passive and hostile creatures are removed without inventory grants",
+      "status": "pass"
+    },
+    {
+      "name": "Restart retains mob-free rules, five service NPCs and all seven world identities",
+      "status": "pass"
+    }
+  ],
+  "paidModelCalls": 0,
+  "walletSignatures": 0,
+  "publicTransactions": 0,
+  "fixtureConditions": {
+    "forcedBankChunks": "1660 2793 1722 2854",
+    "scope": "Owned isolated copy only; no player client is used"
+  },
+  "lastObserved": {
+    "agentcity_lobby": {
+      "roamingMobs": 0,
+      "serviceNpcs": 0,
+      "naturalSpawning": false
+    },
+    "agentcity_laptop_bank_the_end": {
+      "roamingMobs": 0,
+      "serviceNpcs": 0,
+      "naturalSpawning": false
+    },
+    "agentcity_play": {
+      "roamingMobs": 0,
+      "serviceNpcs": 0,
+      "naturalSpawning": false
+    },
+    "agentcity_mumbai": {
+      "roamingMobs": 0,
+      "serviceNpcs": 5,
+      "naturalSpawning": false
+    },
+    "agentcity_laptop_bank": {
+      "roamingMobs": 0,
+      "serviceNpcs": 0,
+      "naturalSpawning": false
+    },
+    "agentcity_laptop_bank_nether": {
+      "roamingMobs": 0,
+      "serviceNpcs": 0,
+      "naturalSpawning": false
+    },
+    "agentcity_estates": {
+      "roamingMobs": 0,
+      "serviceNpcs": 0,
+      "naturalSpawning": false
+    }
+  },
+  "initial": {
+    "agentcity_laptop_bank_the_end": {
+      "roamingMobs": 0,
+      "serviceNpcs": 0,
+      "naturalSpawning": false
+    },
+    "agentcity_play": {
+      "roamingMobs": 0,
+      "serviceNpcs": 0,
+      "naturalSpawning": false
+    },
+    "agentcity_mumbai": {
+      "roamingMobs": 0,
+      "serviceNpcs": 5,
+      "naturalSpawning": false
+    },
+    "agentcity_laptop_bank": {
+      "roamingMobs": 0,
+      "serviceNpcs": 0,
+      "naturalSpawning": false
+    },
+    "agentcity_laptop_bank_nether": {
+      "roamingMobs": 0,
+      "serviceNpcs": 0,
+      "naturalSpawning": false
+    },
+    "agentcity_estates": {
+      "roamingMobs": 0,
+      "serviceNpcs": 0,
+      "naturalSpawning": false
+    },
+    "agentcity_lobby": {
+      "roamingMobs": 0,
+      "serviceNpcs": 0,
+      "naturalSpawning": false
+    }
+  },
+  "finishedAt": "2026-11-06T13:26:41.763Z"
+}

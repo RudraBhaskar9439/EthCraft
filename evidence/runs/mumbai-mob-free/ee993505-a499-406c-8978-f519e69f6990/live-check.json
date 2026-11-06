@@ -1,0 +1,44 @@
+{
+  "schema": "agentcity.mob-free-live-check.v1",
+  "at": "2026-11-06T13:27:51.079Z",
+  "pluginSha256": "82cda599a36e81414e42547c1227d934be26f0ead017a5920217b2112eb88cdf",
+  "status": "pass",
+  "scope": "Read-only live native status; no player impersonation, item grants or transactions",
+  "worlds": {
+    "agentcity_laptop_bank_nether": {
+      "serviceNpcs": 0,
+      "roamingMobs": 0,
+      "naturalSpawning": false
+    },
+    "agentcity_laptop_bank": {
+      "serviceNpcs": 0,
+      "roamingMobs": 0,
+      "naturalSpawning": false
+    },
+    "agentcity_mumbai": {
+      "serviceNpcs": 5,
+      "roamingMobs": 0,
+      "naturalSpawning": false
+    },
+    "agentcity_play": {
+      "serviceNpcs": 0,
+      "roamingMobs": 0,
+      "naturalSpawning": false
+    },
+    "agentcity_laptop_bank_the_end": {
+      "serviceNpcs": 0,
+      "roamingMobs": 0,
+      "naturalSpawning": false
+    },
+    "agentcity_lobby": {
+      "serviceNpcs": 0,
+      "roamingMobs": 0,
+      "naturalSpawning": false
+    },
+    "agentcity_estates": {
+      "serviceNpcs": 0,
+      "roamingMobs": 0,
+      "naturalSpawning": false
+    }
+  }
+}
