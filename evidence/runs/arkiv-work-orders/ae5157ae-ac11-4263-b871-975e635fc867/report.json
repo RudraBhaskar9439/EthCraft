@@ -1,0 +1,320 @@
+{
+  "schema": "ethcraft.arkiv-work-orders-public-check.v1",
+  "runId": "ae5157ae-ac11-4263-b871-975e635fc867",
+  "status": "pass",
+  "scope": "Real Rabdi publications of an actual isolated native test. Controlled owner and scripted planner; no live-player or independent-human qualification.",
+  "nativeProof": "evidence/runs/arkiv-work-orders-native/b865ea55-a6ca-4b0d-a05b-c9fc1ff9a87a/report.json",
+  "nativeProofSha256": "a33ef2bbfb15d921a44fa086f4959662ee36fdc59ee03092b88b3e25cf98aab4",
+  "receipts": [
+    {
+      "recordType": "work-order",
+      "server": "85f700ee06a3208b76d02f3aef30c330aca35dddab2daa1074f5281db9e3d501",
+      "order": "865cf50c-cd6d-4903-ad43-1b8cd95f1f9a",
+      "kind": "craft_delivery",
+      "item": "stick",
+      "status": "open",
+      "stage": 0,
+      "deadline": 1793989082109,
+      "data": {
+        "version": 1,
+        "spec": {
+          "version": 1,
+          "id": "865cf50c-cd6d-4903-ad43-1b8cd95f1f9a",
+          "kind": "craft_delivery",
+          "item": "stick",
+          "count": 4,
+          "input": {
+            "item": "oak_planks",
+            "count": 2
+          },
+          "stages": [
+            {
+              "worker": "claude",
+              "action": "supply",
+              "item": "oak_planks",
+              "count": 2,
+              "source": {
+                "slot": "CityAgent5",
+                "role": "sourceChest",
+                "position": [
+                  1746,
+                  69,
+                  2810
+                ]
+              },
+              "destination": {
+                "slot": "CityAgent4",
+                "role": "sourceChest",
+                "position": [
+                  1730,
+                  69,
+                  2810
+                ]
+              }
+            },
+            {
+              "worker": "0g",
+              "action": "craft_delivery",
+              "item": "stick",
+              "count": 4,
+              "source": {
+                "slot": "CityAgent4",
+                "role": "sourceChest",
+                "position": [
+                  1730,
+                  69,
+                  2810
+                ]
+              },
+              "destination": {
+                "slot": "CityAgent4",
+                "role": "destinationChest",
+                "position": [
+                  1730,
+                  69,
+                  2812
+                ]
+              }
+            }
+          ],
+          "createdAt": 1793985482109,
+          "deadline": 1793989082109
+        },
+        "specDigest": "0x6d36ca762697b804450cbae0b1bf2dcefd38774ba41fe2916fd2fcb339957aa2",
+        "verifications": [],
+        "claim": null,
+        "fixture": true
+      },
+      "entityKey": "0xc2e7d7a1235f4215484a218675bf5c9decc082c477b2c719ed8b476db456e37f",
+      "revision": 15,
+      "owner": "0x5a262B9621eD0F00Fe776bb85084E9561cF18608",
+      "expiresAtBlock": "602409",
+      "transactionHash": "0xedbdd445ce3a9b1abc634de214108e9202c32873170c1423c09d537f50ecc52c"
+    },
+    {
+      "recordType": "work-order",
+      "server": "85f700ee06a3208b76d02f3aef30c330aca35dddab2daa1074f5281db9e3d501",
+      "order": "865cf50c-cd6d-4903-ad43-1b8cd95f1f9a",
+      "kind": "craft_delivery",
+      "item": "stick",
+      "status": "awaiting_handoff",
+      "stage": 1,
+      "deadline": 1793989082109,
+      "data": {
+        "version": 1,
+        "spec": {
+          "version": 1,
+          "id": "865cf50c-cd6d-4903-ad43-1b8cd95f1f9a",
+          "kind": "craft_delivery",
+          "item": "stick",
+          "count": 4,
+          "input": {
+            "item": "oak_planks",
+            "count": 2
+          },
+          "stages": [
+            {
+              "worker": "claude",
+              "action": "supply",
+              "item": "oak_planks",
+              "count": 2,
+              "source": {
+                "slot": "CityAgent5",
+                "role": "sourceChest",
+                "position": [
+                  1746,
+                  69,
+                  2810
+                ]
+              },
+              "destination": {
+                "slot": "CityAgent4",
+                "role": "sourceChest",
+                "position": [
+                  1730,
+                  69,
+                  2810
+                ]
+              }
+            },
+            {
+              "worker": "0g",
+              "action": "craft_delivery",
+              "item": "stick",
+              "count": 4,
+              "source": {
+                "slot": "CityAgent4",
+                "role": "sourceChest",
+                "position": [
+                  1730,
+                  69,
+                  2810
+                ]
+              },
+              "destination": {
+                "slot": "CityAgent4",
+                "role": "destinationChest",
+                "position": [
+                  1730,
+                  69,
+                  2812
+                ]
+              }
+            }
+          ],
+          "createdAt": 1793985482109,
+          "deadline": 1793989082109
+        },
+        "specDigest": "0x6d36ca762697b804450cbae0b1bf2dcefd38774ba41fe2916fd2fcb339957aa2",
+        "verifications": [
+          {
+            "stage": 0,
+            "worker": "claude",
+            "item": "oak_planks",
+            "count": 2,
+            "job": "045fd854-5065-484a-9361-22404def18bd",
+            "observedAt": 1793985497845,
+            "worldUuid": "be915875-64ec-4498-ae2a-1a6800dd1e53",
+            "evidenceDigest": "0x9619cbf40763f1115e4183c60a8cd35a57609f6d3d41c110a09091b2e2f523ba",
+            "receiptDigest": "0x9b760fc741478f9e11f1fe36e2b7ffe3bf69c2449b406e3abc0b9c9b27881cbd",
+            "sourceBefore": 2,
+            "sourceAfter": 0,
+            "destinationBefore": 0,
+            "destinationAfter": 2
+          }
+        ],
+        "claim": null,
+        "fixture": true
+      },
+      "entityKey": "0x9f9d942599bc28f0f9b1934251381d699c01eab6549bf6dde480aed12e54ba93",
+      "revision": 16,
+      "owner": "0x5a262B9621eD0F00Fe776bb85084E9561cF18608",
+      "expiresAtBlock": "602412",
+      "transactionHash": "0xa552f3ce31d22b695217d84a11c1e614b19bfef98bb16753da8edb6c30a6e4de"
+    },
+    {
+      "recordType": "work-order",
+      "server": "85f700ee06a3208b76d02f3aef30c330aca35dddab2daa1074f5281db9e3d501",
+      "order": "865cf50c-cd6d-4903-ad43-1b8cd95f1f9a",
+      "kind": "craft_delivery",
+      "item": "stick",
+      "status": "completed",
+      "stage": 2,
+      "deadline": 1793989082109,
+      "data": {
+        "version": 1,
+        "spec": {
+          "version": 1,
+          "id": "865cf50c-cd6d-4903-ad43-1b8cd95f1f9a",
+          "kind": "craft_delivery",
+          "item": "stick",
+          "count": 4,
+          "input": {
+            "item": "oak_planks",
+            "count": 2
+          },
+          "stages": [
+            {
+              "worker": "claude",
+              "action": "supply",
+              "item": "oak_planks",
+              "count": 2,
+              "source": {
+                "slot": "CityAgent5",
+                "role": "sourceChest",
+                "position": [
+                  1746,
+                  69,
+                  2810
+                ]
+              },
+              "destination": {
+                "slot": "CityAgent4",
+                "role": "sourceChest",
+                "position": [
+                  1730,
+                  69,
+                  2810
+                ]
+              }
+            },
+            {
+              "worker": "0g",
+              "action": "craft_delivery",
+              "item": "stick",
+              "count": 4,
+              "source": {
+                "slot": "CityAgent4",
+                "role": "sourceChest",
+                "position": [
+                  1730,
+                  69,
+                  2810
+                ]
+              },
+              "destination": {
+                "slot": "CityAgent4",
+                "role": "destinationChest",
+                "position": [
+                  1730,
+                  69,
+                  2812
+                ]
+              }
+            }
+          ],
+          "createdAt": 1793985482109,
+          "deadline": 1793989082109
+        },
+        "specDigest": "0x6d36ca762697b804450cbae0b1bf2dcefd38774ba41fe2916fd2fcb339957aa2",
+        "verifications": [
+          {
+            "stage": 0,
+            "worker": "claude",
+            "item": "oak_planks",
+            "count": 2,
+            "job": "045fd854-5065-484a-9361-22404def18bd",
+            "observedAt": 1793985497845,
+            "worldUuid": "be915875-64ec-4498-ae2a-1a6800dd1e53",
+            "evidenceDigest": "0x9619cbf40763f1115e4183c60a8cd35a57609f6d3d41c110a09091b2e2f523ba",
+            "receiptDigest": "0x9b760fc741478f9e11f1fe36e2b7ffe3bf69c2449b406e3abc0b9c9b27881cbd",
+            "sourceBefore": 2,
+            "sourceAfter": 0,
+            "destinationBefore": 0,
+            "destinationAfter": 2
+          },
+          {
+            "stage": 1,
+            "worker": "0g",
+            "item": "stick",
+            "count": 4,
+            "job": "53c51d67-6927-4579-9212-e5a662131181",
+            "observedAt": 1793985509902,
+            "worldUuid": "be915875-64ec-4498-ae2a-1a6800dd1e53",
+            "evidenceDigest": "0x7fae399dc310d2a72e375466a0695ab95e5adcaf885d8d7a3925c4edd415f919",
+            "receiptDigest": "0x291e231bdceddeecbc93c3b103a9421eee01d47efdcc0e0a1bda8be562ea4fd6",
+            "sourceBefore": 2,
+            "sourceAfter": 0,
+            "destinationBefore": 0,
+            "destinationAfter": 4
+          }
+        ],
+        "claim": null,
+        "fixture": true
+      },
+      "entityKey": "0x88af9bfd577fb9be610933a48dc4128775f4d349509aa83f5b06980543dba6e0",
+      "revision": 17,
+      "owner": "0x5a262B9621eD0F00Fe776bb85084E9561cF18608",
+      "expiresAtBlock": "602417",
+      "transactionHash": "0xad23e4041b186364b40e738c0e87ef0325a5ff2aca158b8645e622dcf693f6ad"
+    }
+  ],
+  "checks": [
+    "Actual SDK WorkOrder create and canonical receipt",
+    "Three immutable stage snapshots",
+    "Repeated publication reuses identical transaction",
+    "Second client reads complete specification and two server attestations",
+    "Indexed kind/item query returns latest revision"
+  ],
+  "completedAt": "2026-11-06T17:23:27.293Z"
+}

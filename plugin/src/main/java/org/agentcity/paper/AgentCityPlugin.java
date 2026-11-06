@@ -205,6 +205,11 @@ public final class AgentCityPlugin extends JavaPlugin implements Listener, PlotP
                 Bukkit.getScheduler().runTask(this,()->{try{session.complete(playable.connection(playerId));}catch(Exception e){session.completeExceptionally(e);}});
                 respond(request,200,session.get(10,TimeUnit.SECONDS));return;
             }
+            if(playable!=null&&request.getRequestURI().getPath().equals("/playable/work-observe")&&request.getRequestMethod().equals("POST")){
+                byte[] body=request.getRequestBody().readNBytes(2049);if(body.length>2048)throw new IllegalArgumentException("payload_size");Map<String,Object> input=StrictJson.object(new String(body,StandardCharsets.UTF_8));
+                CompletableFuture<Map<String,Object>> observation=new CompletableFuture<>();Bukkit.getScheduler().runTask(this,()->{try{observation.complete(playable.workObservation(input));}catch(Exception error){observation.completeExceptionally(error);}});
+                respond(request,200,observation.get(10,TimeUnit.SECONDS));return;
+            }
             if(taskProtection!=null&&request.getRequestURI().getPath().equals("/playable/remote-grant")&&request.getRequestMethod().equals("POST")){
                 byte[] body=request.getRequestBody().readNBytes(4097);if(body.length>4096)throw new IllegalArgumentException("payload_size");Map<String,Object> value=StrictJson.object(new String(body,StandardCharsets.UTF_8));
                 CompletableFuture<Boolean> changed=new CompletableFuture<>();Bukkit.getScheduler().runTask(this,()->{try{taskProtection.remoteGrant(value);changed.complete(true);}catch(Exception e){changed.completeExceptionally(e);}});

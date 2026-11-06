@@ -6,6 +6,78 @@ The intended track fit is [Build on Arkiv](https://ethglobal.com/events/mumbai/p
 
 ## Use in Minecraft
 
+### Structured work orders: discovery, remaining work and server checks
+
+The upgraded path publishes `ethcraft.work-orders.v1`. It is an exact material
+workflow, separate from the older free-text objective handoff below.
+
+1. Approve the current Minecraft connection with Discord `/join`. Both registered
+   workers must belong to that approved principal, be online in Mumbai and idle.
+2. Put **two oak planks** in Agent's registered source chest, **1746, 69, 2810**.
+3. Run `/agent agent order create craft_delivery stick 4`. This opts the exact
+   specification, item quantities, registered chest positions and stage checks
+   into public storage. No private objective, player identity or execution token
+   is published. Copy the returned order ID.
+4. Run `/agent agent order discover`, then `/agent agent order claim <order ID>`.
+   Agent reads the confirmed Arkiv specification, withdraws the two planks and
+   deposits them in 0G's source chest at **1730, 69, 2810**.
+5. Wait for **Supply stage passed server inventory checks**, then run
+   `/agent 0g order discover` and `/agent 0g order claim <order ID>`.
+   0G reads the same specification and the verified first stage from Arkiv. Its
+   objective includes only withdrawal, crafting four sticks and deposit in its
+   destination chest at **1730, 69, 2812**. It cannot repeat stage one.
+6. Inspect `/agent 0g order status <order ID>` and the public **Work orders** board.
+   Two passed server checks mark completion; the owner still reviews the result.
+
+`delivery <item> <count>` transfers an exact item through the two workers.
+`craft_delivery` supports stick, oak_planks and stone_bricks, in complete recipe
+batches, with at most 32 output items. Stage tools are restricted to observe,
+bounded movement, exact withdrawals/deposits and the specified recipe. Work orders
+never authorize purchases, CITY spending or arbitrary builds. One unexpired order
+per owner; one private active claim; one-hour execution deadline. Use
+`/agent <worker> order cancel <order ID>` to cancel safely. A paused stage resumes
+with the same `order claim` command, preserving receipts and operation identity.
+Unknown physical effects block resume and cancellation until operator reconciliation.
+
+Server verification reads both workers and all four registered chests on Paper's
+main thread through an authenticated private observer. Source decrease, destination
+increase, craft/transfer receipts and unchanged agent inventory totals must agree.
+Exact work orders run through a bounded native skill, using the pinned Arkiv
+specification and saved receipts to choose only the remaining withdrawal, craft
+and deposit. They do not ask a model to guess recipe steps or workstation moves.
+Each step gets fresh source/destination counts and passes the same receiving
+guards. Supported recipes use inventory crafting. Ordinary free-form objectives
+still use hosted model planning. Execution provenance records the native skill
+separately from earlier model requests; this is not a model-comparison result.
+The public proof exposes counts and hashes, not raw inventories or native receipts.
+This is a **trusted Minecraft-server attestation**, not an independent Minecraft
+oracle. Arkiv's indexed query discovers work; it is not an atomic distributed lock.
+The private server owns authorization, claim fencing and all effects. Restarts and
+publication timeouts preserve the same physical operation and signed transaction.
+
+Read independently with the public component:
+
+```sh
+node scripts/query.mjs --orders
+node scripts/query.mjs <work-order-entity-key>
+```
+
+The website supports `GET /api/orders?kind=craft_delivery&item=stick` and entity
+lookup for both schemas. Latest-state reconstruction paginates up to 500 snapshots;
+larger results explicitly fail instead of silently showing stale orders. Execution
+deadlines and seven-day entity retention are different and both remain visible.
+
+Focused checks: `node tests/discovery/work-orders.mjs` (offline fixtures) and
+`node tests/maps/arkiv-work-orders.mjs` (owned isolated Paper copy only). The native
+check uses a controlled offline principal, two real Minecraft workers, exactly two
+fixture planks and scripted decisions. It does not use real models, owner approval,
+payments or public writes. `node scripts/arkiv_work_orders.mjs --native-demo` may
+publish that already-verified test as labelled Rabdi fixtures, using the existing
+publisher lease, journal and gas bounds. It must not run beside another writer.
+The [actual owner-driven run](../evidence/runs/arkiv-work-orders-live/b11cca47-d76f-4615-8000-938dc2e57aff/report.json) now passed both server checks. Order `1d745953-2095-48de-a716-7ac2fe849392` supplied two planks, then crafted and delivered four sticks. A separate SDK client and anonymous public API read the completed non-fixture entity `0x2d636f165eb985b5b4944d6a5ae2e6e1c48acb6e8d8114b0d447c046caff234b`. The initial model planner proposed out-of-stage movement; its rejection and retries are retained. The final target resumed through the exact receipt-driven skill, preserving its single two-plank withdrawal. This is real coordinated work and recovery, not a clean model comparison. Owner acceptance and independent-human qualification remain separate.
+
+The [isolated native run](../evidence/runs/arkiv-work-orders-native/b865ea55-a6ca-4b0d-a05b-c9fc1ff9a87a/report.json) passed both material stages. The [real Rabdi check](../evidence/runs/arkiv-work-orders/ae5157ae-ac11-4263-b871-975e635fc867/report.json) confirmed all three immutable fixture snapshots and independent readback. Final fixture entity: `0x88af9bfd577fb9be610933a48dc4128775f4d349509aa83f5b06980543dba6e0`. These are labelled controlled test records, hidden by default on the public board.
+
 Keep Minecraft connected and approve the actual connection with Discord `/join`.
 
 ```text

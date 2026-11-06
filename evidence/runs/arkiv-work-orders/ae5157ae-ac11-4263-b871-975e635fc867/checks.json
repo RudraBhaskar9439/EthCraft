@@ -1,0 +1,97 @@
+{
+  "schema": "ethcraft.arkiv-work-orders-release-checks.v1",
+  "recordedAt": "2026-11-06T17:36:54.521465+00:00",
+  "checks": [
+    {
+      "command": "node tests/discovery/work-orders.mjs",
+      "status": "pass"
+    },
+    {
+      "command": "node tests/discovery/task-board.mjs",
+      "status": "pass"
+    },
+    {
+      "command": "node tests/playable/survival.mjs",
+      "status": "pass"
+    },
+    {
+      "command": "node tests/playable/mumbai-agents.mjs",
+      "status": "pass"
+    },
+    {
+      "command": "node tests/maps/arkiv-work-orders.mjs",
+      "status": "pass",
+      "scope": "Actual isolated Paper with controlled offline owner and scripted planner"
+    },
+    {
+      "command": "node scripts/arkiv_work_orders.mjs --native-demo",
+      "status": "pass",
+      "scope": "Actual Rabdi create, receipts, immutable retry and independent query"
+    },
+    {
+      "command": "python3 -m unittest discover -s tests -q",
+      "status": "pass",
+      "tests": 79,
+      "scope": "Planning infrastructure only"
+    },
+    {
+      "command": "python3 scripts/check_plan.py",
+      "status": "pass",
+      "scope": "Planning infrastructure only"
+    },
+    {
+      "command": "public component: npm test",
+      "status": "pass",
+      "tests": 3
+    },
+    {
+      "command": "public component: npm run build + node scripts/validate-artifact.mjs",
+      "status": "pass"
+    }
+  ],
+  "livePluginUpgrade": {
+    "status": "pass",
+    "sevenWorldIdsPreserved": true,
+    "backup": ".local/mumbai-city/backups/c8c81a013f6a43cfb87ba36f5d7a1ca9"
+  },
+  "liveOwnerWorkOrder": {
+    "orderId": "1d745953-2095-48de-a716-7ac2fe849392",
+    "create": "Actual user command, in-game screenshot, private owner journal and confirmed public entity agree",
+    "entityKey": "0x6fb5aab7031cb4cf198ecba3c595f4352bc752110b8c0baf4fbcaf38bf0bf07e",
+    "status": "open",
+    "verifiedStages": 0,
+    "execution": "Pending actual owner claim; no effect or model completion claimed"
+  },
+  "independentHuman": "not qualified",
+  "canonicalPhase": "P4 integration extension verified locally; canonical gate remains unqualified",
+  "prizeEligibility": "unresolved existing-project reuse without Continuity admission",
+  "discordRecovery": {
+    "cause": "Unhandled Discord WebSocket opening handshake timeout terminated the old worker",
+    "fix": "Single local supervised worker, private lock, 15 second failure restart",
+    "checks": [
+      {
+        "command": "node tests/playable/discord-identity-only.mjs",
+        "status": "pass"
+      },
+      {
+        "command": "python3 -m py_compile scripts/local_discord_supervisor.py",
+        "status": "pass"
+      },
+      {
+        "command": "Duplicate supervisor attempt",
+        "status": "pass",
+        "expected": "LOCAL_DISCORD_SUPERVISOR_ALREADY_RUNNING"
+      }
+    ],
+    "liveUserJoin": "Actual user reported Approved successfully after fresh /join"
+  },
+  "publicDeployment": {
+    "url": "https://ethcraft-arkiv.quiet-buddy-9104.chatgpt.site",
+    "projectId": "appgprj_6aedf59a7fd081918e43e738212d9d35",
+    "versionId": "appgprj_6aedf59a7fd081918e43e738212d9d35~appgver_877e9f1db3208191acfeb11a19f0b8ef",
+    "deploymentId": "appgdep_6aee0f9d3e608191859bdd642e274b2c",
+    "sourceCommit": "0429285f59c2ed9b7b95fae5adadcc8379885a80",
+    "status": "succeeded",
+    "browserCheck": "Public page reads actual owner order with 0/2 stages and exposes both structured stages; no login used"
+  }
+}

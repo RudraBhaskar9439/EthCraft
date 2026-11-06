@@ -3,7 +3,9 @@ MIT License
 Copyright (c) 2026 EthCraft contributors
 
 This license applies only to newly authored backend/src/arkiv/*,
-backend/src/web/arkiv.*, scripts/arkiv_tasks.mjs, tests/discovery/task-board.mjs,
+backend/src/web/arkiv*, scripts/arkiv_tasks.mjs, scripts/arkiv_work_orders.mjs,
+tests/discovery/task-board.mjs, tests/discovery/work-orders.mjs,
+tests/maps/arkiv-work-orders.mjs,
 and the documentation and manifest in arkiv/. It does not relicense the rest
 of EthCraft, earlier AgentCity work, map assets or third-party dependencies.
 

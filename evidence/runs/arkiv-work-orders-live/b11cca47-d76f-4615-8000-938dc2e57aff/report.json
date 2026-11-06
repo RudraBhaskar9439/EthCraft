@@ -1,0 +1,440 @@
+{
+  "schema": "ethcraft.live-work-order-check.v1",
+  "recordedAt": "2026-11-06T17:58:08.033Z",
+  "scope": "Actual player-issued create and stage claims, live hosted inference and real native material effects. No synthetic real-owner commands, payments or independent-human qualification.",
+  "status": "pass",
+  "orderId": "1d745953-2095-48de-a716-7ac2fe849392",
+  "sourceStage": {
+    "status": "pass",
+    "arkivEntity": "0x71947b8b6f0f8bcef994c99be92b0f272e0cfe788c4727ed6250ce4d0dce02f0",
+    "proof": {
+      "stage": 0,
+      "worker": "claude",
+      "item": "oak_planks",
+      "count": 2,
+      "job": "ad8f9760-db71-4ffd-85dc-ff39b9d289b4",
+      "observedAt": 1793987339523,
+      "worldUuid": "be915875-64ec-4498-ae2a-1a6800dd1e53",
+      "evidenceDigest": "0x739fc9136d4fd2efc8b293d1592e57dc4175fa19e522338ad19defcfc686e307",
+      "receiptDigest": "0x9b760fc741478f9e11f1fe36e2b7ffe3bf69c2449b406e3abc0b9c9b27881cbd",
+      "sourceBefore": 117,
+      "sourceAfter": 115,
+      "destinationBefore": 124,
+      "destinationAfter": 126
+    },
+    "independentRead": true
+  },
+  "targetStage": {
+    "status": "pass",
+    "arkivEntity": "0x2d636f165eb985b5b4944d6a5ae2e6e1c48acb6e8d8114b0d447c046caff234b",
+    "proof": {
+      "stage": 1,
+      "worker": "0g",
+      "item": "stick",
+      "count": 4,
+      "job": "37ac6672-0a95-41c9-8aff-eaad5af19483",
+      "observedAt": 1793988489603,
+      "worldUuid": "be915875-64ec-4498-ae2a-1a6800dd1e53",
+      "evidenceDigest": "0x1f6c12f4ba098487be0bca27f5ebe30fe8bf6b841e456e0349fe5c631421dd4d",
+      "receiptDigest": "0x291e231bdceddeecbc93c3b103a9421eee01d47efdcc0e0a1bda8be562ea4fd6",
+      "sourceBefore": 126,
+      "sourceAfter": 124,
+      "destinationBefore": 8,
+      "destinationAfter": 12
+    },
+    "duplicateWithdrawal": false,
+    "withdrawalReceipts": 1,
+    "withdrawnPlanks": 2
+  },
+  "recovery": {
+    "cause": "Planning omitted chest counts, then a model proposed out-of-stage movement. Exact rejected coordinates were not retained.",
+    "fix": "Fresh authenticated native source/destination counts, last status context and inventory-crafting instruction. Same durable stage and successful withdrawal preserved.",
+    "checks": [
+      "node tests/discovery/work-orders.mjs PASS",
+      "node tests/discovery/task-board.mjs PASS",
+      "node tests/playable/survival.mjs PASS"
+    ],
+    "finalFix": "Pinned structured work-order skill derives remaining effects from known receipts. Free-form model planning remains separate. Exact skill made no new inference request and preserved the earlier withdrawal."
+  },
+  "finalOwnerAcceptance": "Owner review remains required; server completion is not independent inspection.",
+  "canonicalP4": "unqualified",
+  "completedAt": "2026-11-06T18:09:17.421Z",
+  "priorAttempt": {
+    "status": "paused",
+    "message": "WORK_ORDER_MOVE_OUTSIDE_STAGE",
+    "observedSteps": [
+      {
+        "step": {
+          "position": [
+            1730,
+            69,
+            2810
+          ],
+          "tool": "move"
+        },
+        "at": "2026-11-06T17:51:01.610Z"
+      },
+      {
+        "step": {
+          "position": [
+            1730,
+            69,
+            2810
+          ],
+          "tool": "move"
+        },
+        "at": "2026-11-06T17:51:23.013Z"
+      },
+      {
+        "step": {
+          "tool": "observe"
+        },
+        "at": "2026-11-06T17:51:33.917Z"
+      },
+      {
+        "step": {
+          "tool": "observe"
+        },
+        "at": "2026-11-06T17:52:09.391Z"
+      },
+      {
+        "step": {
+          "item": "oak_planks",
+          "count": 2,
+          "position": [
+            1730,
+            69,
+            2810
+          ],
+          "tool": "withdraw"
+        },
+        "at": "2026-11-06T17:52:31.972Z",
+        "moved": 2
+      }
+    ],
+    "repeatedObserveCalls": 2,
+    "knownEffects": [
+      {
+        "action": "withdraw",
+        "item": "oak_planks",
+        "count": 2
+      }
+    ],
+    "pendingEffect": false
+  },
+  "jobs": {
+    "claude": {
+      "job": "ad8f9760-db71-4ffd-85dc-ff39b9d289b4",
+      "status": "ready_for_review",
+      "pendingEffect": false,
+      "effects": [
+        {
+          "action": "withdraw",
+          "item": "oak_planks",
+          "count": 2
+        },
+        {
+          "action": "deposit",
+          "item": "oak_planks",
+          "count": 2
+        }
+      ],
+      "execution": [
+        {
+          "tier": "advanced",
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "at": "2026-11-06T17:47:02.772Z"
+        },
+        {
+          "tier": "economy",
+          "provider": "0g",
+          "model": "qwen3.5-35b-a3b",
+          "at": "2026-11-06T17:47:18.759Z"
+        },
+        {
+          "tier": "economy",
+          "provider": "0g",
+          "model": "qwen3.5-35b-a3b",
+          "at": "2026-11-06T17:47:43.916Z"
+        },
+        {
+          "tier": "advanced",
+          "provider": "anthropic",
+          "model": "claude-sonnet-5-5",
+          "at": "2026-11-06T17:48:06.701Z"
+        },
+        {
+          "tier": "economy",
+          "provider": "0g",
+          "model": "qwen3.5-35b-a3b",
+          "at": "2026-11-06T17:48:12.138Z"
+        },
+        {
+          "tier": "economy",
+          "provider": "0g",
+          "model": "qwen3.5-35b-a3b",
+          "at": "2026-11-06T17:48:36.264Z"
+        }
+      ],
+      "stageVerification": true
+    },
+    "0g": {
+      "job": "37ac6672-0a95-41c9-8aff-eaad5af19483",
+      "status": "ready_for_review",
+      "pendingEffect": false,
+      "effects": [
+        {
+          "action": "withdraw",
+          "item": "oak_planks",
+          "count": 2
+        },
+        {
+          "action": "craft",
+          "item": "stick",
+          "produced": 4
+        },
+        {
+          "action": "deposit",
+          "item": "stick",
+          "count": 4
+        }
+      ],
+      "execution": [
+        {
+          "tier": "advanced",
+          "provider": "0g",
+          "model": "glm-4.7",
+          "at": "2026-11-06T17:50:14.131Z"
+        },
+        {
+          "tier": "economy",
+          "provider": "0g",
+          "model": "qwen3.5-35b-a3b",
+          "at": "2026-11-06T17:51:02.213Z"
+        },
+        {
+          "tier": "economy",
+          "provider": "0g",
+          "model": "qwen3.5-35b-a3b",
+          "at": "2026-11-06T17:51:23.605Z"
+        },
+        {
+          "tier": "advanced",
+          "provider": "0g",
+          "model": "glm-4.7",
+          "at": "2026-11-06T17:51:34.416Z"
+        },
+        {
+          "tier": "economy",
+          "provider": "0g",
+          "model": "qwen3.5-35b-a3b",
+          "at": "2026-11-06T17:52:09.863Z"
+        },
+        {
+          "tier": "economy",
+          "provider": "0g",
+          "model": "qwen3.5-35b-a3b",
+          "at": "2026-11-06T17:52:32.526Z"
+        },
+        {
+          "tier": "economy",
+          "provider": "0g",
+          "model": "qwen3.5-35b-a3b",
+          "at": "2026-11-06T18:02:15.987Z"
+        },
+        {
+          "tier": "work_order_skill",
+          "provider": "native-tools",
+          "model": null,
+          "at": "2026-11-06T18:07:59.342Z"
+        },
+        {
+          "tier": "work_order_skill",
+          "provider": "native-tools",
+          "model": null,
+          "at": "2026-11-06T18:08:00.676Z"
+        }
+      ],
+      "stageVerification": true
+    }
+  },
+  "publicRecord": {
+    "recordType": "work-order",
+    "server": "85f700ee06a3208b76d02f3aef30c330aca35dddab2daa1074f5281db9e3d501",
+    "order": "1d745953-2095-48de-a716-7ac2fe849392",
+    "kind": "craft_delivery",
+    "item": "stick",
+    "status": "completed",
+    "stage": 2,
+    "deadline": 1793989887944,
+    "data": {
+      "version": 1,
+      "spec": {
+        "version": 1,
+        "id": "1d745953-2095-48de-a716-7ac2fe849392",
+        "kind": "craft_delivery",
+        "item": "stick",
+        "count": 4,
+        "input": {
+          "item": "oak_planks",
+          "count": 2
+        },
+        "stages": [
+          {
+            "worker": "claude",
+            "action": "supply",
+            "item": "oak_planks",
+            "count": 2,
+            "source": {
+              "slot": "CityAgent5",
+              "role": "sourceChest",
+              "position": [
+                1746,
+                69,
+                2810
+              ]
+            },
+            "destination": {
+              "slot": "CityAgent4",
+              "role": "sourceChest",
+              "position": [
+                1730,
+                69,
+                2810
+              ]
+            }
+          },
+          {
+            "worker": "0g",
+            "action": "craft_delivery",
+            "item": "stick",
+            "count": 4,
+            "source": {
+              "slot": "CityAgent4",
+              "role": "sourceChest",
+              "position": [
+                1730,
+                69,
+                2810
+              ]
+            },
+            "destination": {
+              "slot": "CityAgent4",
+              "role": "destinationChest",
+              "position": [
+                1730,
+                69,
+                2812
+              ]
+            }
+          }
+        ],
+        "createdAt": 1793986287944,
+        "deadline": 1793989887944
+      },
+      "specDigest": "0x2c69a856d7ef59b8d0cb76605c76b739f62210a376ea067e659cd14affd30b92",
+      "verifications": [
+        {
+          "stage": 0,
+          "worker": "claude",
+          "item": "oak_planks",
+          "count": 2,
+          "job": "ad8f9760-db71-4ffd-85dc-ff39b9d289b4",
+          "observedAt": 1793987339523,
+          "worldUuid": "be915875-64ec-4498-ae2a-1a6800dd1e53",
+          "evidenceDigest": "0x739fc9136d4fd2efc8b293d1592e57dc4175fa19e522338ad19defcfc686e307",
+          "receiptDigest": "0x9b760fc741478f9e11f1fe36e2b7ffe3bf69c2449b406e3abc0b9c9b27881cbd",
+          "sourceBefore": 117,
+          "sourceAfter": 115,
+          "destinationBefore": 124,
+          "destinationAfter": 126
+        },
+        {
+          "stage": 1,
+          "worker": "0g",
+          "item": "stick",
+          "count": 4,
+          "job": "37ac6672-0a95-41c9-8aff-eaad5af19483",
+          "observedAt": 1793988489603,
+          "worldUuid": "be915875-64ec-4498-ae2a-1a6800dd1e53",
+          "evidenceDigest": "0x1f6c12f4ba098487be0bca27f5ebe30fe8bf6b841e456e0349fe5c631421dd4d",
+          "receiptDigest": "0x291e231bdceddeecbc93c3b103a9421eee01d47efdcc0e0a1bda8be562ea4fd6",
+          "sourceBefore": 126,
+          "sourceAfter": 124,
+          "destinationBefore": 8,
+          "destinationAfter": 12
+        }
+      ],
+      "claim": null,
+      "fixture": false
+    },
+    "entityKey": "0x2d636f165eb985b5b4944d6a5ae2e6e1c48acb6e8d8114b0d447c046caff234b",
+    "revision": 38,
+    "owner": "0x5a262B9621eD0F00Fe776bb85084E9561cF18608",
+    "expiresAtBlock": "603765"
+  },
+  "independentRead": {
+    "chainId": 7794095,
+    "entity": true,
+    "indexedQuery": true,
+    "blockNumber": "301394"
+  },
+  "publications": [
+    {
+      "revision": 18,
+      "status": "open",
+      "stage": 0,
+      "entityKey": "0x6fb5aab7031cb4cf198ecba3c595f4352bc752110b8c0baf4fbcaf38bf0bf07e",
+      "transactionHash": "0x4d1baba1d0d05647ebe92cf7d51193ed5aa4f6a2462f77be1aaf412be9bb9979"
+    },
+    {
+      "revision": 19,
+      "status": "working",
+      "stage": 0,
+      "entityKey": "0xa624ca1e2dc937f2bdb6871f03426f872a90b7ee2e3dcb50a957daf616e2f5c6",
+      "transactionHash": "0xc511825d7cd606cc301851d25727a3d39959d33538574a7737795e745feaf17f"
+    },
+    {
+      "revision": 26,
+      "status": "awaiting_handoff",
+      "stage": 1,
+      "entityKey": "0x71947b8b6f0f8bcef994c99be92b0f272e0cfe788c4727ed6250ce4d0dce02f0",
+      "transactionHash": "0xc74a52f83399af193f39f94f6c1f6f81dfe66428d5e0c8615615987a079238b6"
+    },
+    {
+      "revision": 28,
+      "status": "working",
+      "stage": 1,
+      "entityKey": "0x8b6ff3d946e30f1134882f61bccf221e5ecedd66bd626a57c49f6846a73195cd",
+      "transactionHash": "0x8f0e4488eac41f026119ea32b671ee495b0745ac8fc667188bcd1e6b885ed3e1"
+    },
+    {
+      "revision": 35,
+      "status": "paused",
+      "stage": 1,
+      "entityKey": "0x82958415e82284bcfc3990bf49fe607c5ed996163313a06f828b204b4530e3f8",
+      "transactionHash": "0x181cbe0a4a1b3ffa530cb72d1afa9874138387bc0759a624c4975683e2609638"
+    },
+    {
+      "revision": 38,
+      "status": "completed",
+      "stage": 2,
+      "entityKey": "0x2d636f165eb985b5b4944d6a5ae2e6e1c48acb6e8d8114b0d447c046caff234b",
+      "transactionHash": "0x2f911c2996d6672173a7a01c3b3c4bc287c8bca3a7443a4dec4de28505813e57"
+    }
+  ],
+  "verificationSourceCommit": "1b89867c185398b7f7f45693abff3cb648f417d6",
+  "publicDeployment": {
+    "url": "https://ethcraft-arkiv.quiet-buddy-9104.chatgpt.site",
+    "projectId": "appgprj_6aedf59a7fd081918e43e738212d9d35",
+    "versionId": "appgprj_6aedf59a7fd081918e43e738212d9d35~appgver_0fd7fabc3ab88191b3d1b4a5065c12bd",
+    "deploymentId": "appgdep_6aee18a3726081918255cf9952309100",
+    "sourceCommit": "32c8d7c21cc63c1247fd7278e0ada3e334dbadff",
+    "status": "succeeded",
+    "anonymousHtmlStatus": 200,
+    "anonymousIndexedQueryStatus": 200,
+    "verifiedStages": 2,
+    "browserRefresh": "Browser control unavailable; no fresh visual QA claimed"
+  }
+}

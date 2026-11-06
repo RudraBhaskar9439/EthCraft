@@ -103,7 +103,8 @@ export class TaskPublisher {
   }
   async save() { await checkpoints.writeCheckpoint(this.file,this.state) }
   publish(record) {
-    validateProgress(record,this.reader.server)
+    const validate = this.reader.validate || validateProgress
+    validate(record,this.reader.server)
     const work = this.tail.then(() => this.perform(record))
     this.tail = work.catch(() => {})
     return work
@@ -140,7 +141,8 @@ export class TaskPublisher {
       return ordinary.request(request)
     } },{ retryCount: 0 })
     const wallet = createWalletClient({ account: this.account, chain: this.reader.client.chain, transport })
-    const result = await wallet.createEntity(TaskProgress,{
+    const definition=this.reader.definition?.(record,BigInt(entry.revision))
+    const result = await wallet.createEntity(definition?.schema||TaskProgress,definition?.values||{
       server: record.server, task: record.task, job: record.job, provider: record.provider, status: record.status,
       revision: u64(BigInt(entry.revision)), facts: bytes(stringToHex(JSON.stringify(record.facts)))
     },{ expiration: ExpirationTime.fromDays(7), flags: { readonly: true } })
@@ -164,8 +166,8 @@ export class TaskPublisher {
     }
     if (keys.length !== 1) throw Error('ARKIV_RECEIPT_ENTITY_REQUIRED')
     const found = await this.reader.get(keys[0])
-    const {server,task,job,provider,status,facts} = found
-    if (digest({server,task,job,provider,status,facts}) !== entry.fingerprint || found.revision !== entry.revision) throw Error('ARKIV_RECEIPT_CONTENT_MISMATCH')
+    const original=this.reader.recordOf?this.reader.recordOf(found):Object.fromEntries(['server','task','job','provider','status','facts'].map(k=>[k,found[k]]))
+    if (digest(original) !== entry.fingerprint || found.revision !== entry.revision) throw Error('ARKIV_RECEIPT_CONTENT_MISMATCH')
     entry.entityKey = keys[0]; entry.status = 'confirmed'; entry.confirmedAt = new Date().toISOString(); await this.save()
     return { ...found, transactionHash: entry.transactionHash }
   }

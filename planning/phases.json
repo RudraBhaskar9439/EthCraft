@@ -318,7 +318,12 @@
       "backend/src/web/arkiv.css",
       "scripts/arkiv_tasks.mjs",
       "arkiv/",
-      "tests/discovery/task-board.mjs"
+      "tests/discovery/task-board.mjs",
+      "backend/src/web/arkiv-orders.mjs",
+      "tests/discovery/work-orders.mjs",
+      "tests/maps/arkiv-work-orders.mjs",
+      "scripts/arkiv_work_orders.mjs",
+      "scripts/local_discord_supervisor.py"
     ],
     "paths_status": "Actual local component paths adopted; canonical live phase approval remains separate."
   },

@@ -184,6 +184,15 @@ Keep secrets out of commits, prompts and public evidence. Keep issuer, publisher
 Run python3 -m unittest discover -s tests -v and python3 scripts/check_plan.py for planning infrastructure changes. These checks do not pass any product phase. Follow the actual plugin, bot, contract, real-service and recovery checks in docs/TESTING.md when those components are implemented.
 ## Arkiv task progress — user update 6 November 2026
 
+The subsequent requested upgrade adds public structured two-stage work orders,
+fresh Arkiv reads for remaining-stage claims and server-attested completion.
+Keep private approved-owner authorization and durable execution fences separate
+from public claim metadata. Only exact registered-chest delivery and bounded
+recipes are supported initially; no work-order payments or purchases. Native
+inventory deltas and known tool receipts must match before a stage advances.
+Qualify the observer on an isolated world before live deployment. Label controlled
+native/planner fixtures and preserve prize-eligibility and human-testing limits.
+
 The user subsequently requested a public judge-facing Arkiv demo. The read-only
 viewer and extracted MIT-licensed Arkiv component may be public at
 RudraBhaskar9439/EthCraft-Arkiv. Keep the full EthCraft repository private. Public

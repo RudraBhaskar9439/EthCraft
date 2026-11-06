@@ -54,6 +54,7 @@ const commands = {
 }
 const assets = {
   '/arkiv.mjs': ['backend/src/web/arkiv.mjs', 'text/javascript; charset=utf-8'],
+  '/arkiv-orders.mjs': ['backend/src/web/arkiv-orders.mjs', 'text/javascript; charset=utf-8'],
   '/arkiv.css': ['backend/src/web/arkiv.css', 'text/css; charset=utf-8'],
   '/console.mjs': ['backend/src/web/console.mjs', 'text/javascript; charset=utf-8'],
   '/console.css': ['backend/src/web/console.css', 'text/css; charset=utf-8']
@@ -77,6 +78,14 @@ createServer(async (request, response) => {
     if (request.method === 'GET' && request.url === '/arkiv') {
       response.setHeader('Content-Type','text/html; charset=utf-8')
       response.end(await readFile(new URL('backend/src/web/arkiv.html',root))); return
+    }
+    if (request.method === 'GET' && request.url.split('?')[0] === '/api/arkiv/orders') {
+      try {
+        const parameters=new URL(request.url,origin).searchParams
+        if([...parameters.keys()].some(k=>!['kind','item'].includes(k)||parameters.getAll(k).length!==1))throw Error('WORK_ORDER_QUERY_INVALID')
+        humanResponse(response,200,await (await taskBoard()).orders.list(Object.fromEntries(parameters)))
+      } catch(error){humanResponse(response,503,{error:arkivError(error),source:'unavailable',records:[]})}
+      return
     }
     if (request.method === 'GET' && request.url.split('?')[0] === '/api/arkiv/tasks') {
       try {

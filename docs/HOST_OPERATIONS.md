@@ -83,3 +83,7 @@ Each service needs a planned quiet period for its own consistent cold snapshot. 
 6. Run health checks and a bounded end-to-end check, then reopen the host. A switch to a restored database or a production-service restart requires explicit coordination and verification.
 
 The online database test does not establish world or chain recovery. The isolated chain report records its state/history limits separately. Authenticated shared access and the independent human's final acceptance remain separate release checks.
+
+## Local Discord availability
+
+Run `python3 scripts/local_discord_supervisor.py` to keep the identity-only bot available after a Discord WebSocket crash. A private filesystem lease prevents duplicate supervisors; child failure restarts after at least 15 seconds. A clean exit or supervisor SIGTERM stops it. The current child and supervisor PIDs are in ignored `.local/mumbai/local_discord-process.json`; private logs remain in `.local/mumbai/local_discord.log`. Credentials and approvals are unchanged. Do not start `scripts/local_discord.mjs` separately while the supervisor runs. This is a local session service; it does not install a system boot service.

@@ -77,7 +77,7 @@ export class SurvivalObjectives {
     if (slot) { slot.bot?.pathfinder?.stop(); slot.bot?.stopDigging?.(); slot.bot?.deactivateItem?.(); if (slot.bot?.currentWindow) slot.bot.closeWindow(slot.bot.currentWindow); slot.bot?.clearControlStates?.() }
     return this.status(ownerId)
   }
-  async start(event, text, sharedProgress) {
+  async start(event, text, sharedProgress, workOrder) {
     if (typeof text !== 'string' || !text.trim() || text.length > 800) throw Error('SURVIVAL_OBJECTIVE_REQUIRED')
     const slot = this.manager.slots.find(s => s.ownerId === event.playerId && s.minecraftPlayerId === event.actorPlayerId)
     if (!slot) return 'Create your agent first with /agent <provider> create.'
@@ -91,17 +91,30 @@ export class SurvivalObjectives {
     if (/^resume$/i.test(text.trim())) {
       if (!job || job.status !== 'paused') return 'No paused Survival objective.'
       if (job.pendingEffect&&job.pendingEffect.action!=='purchase') return 'The interrupted effect is preserved. Operator reconciliation is required; it will not be repeated automatically.'
+      this.workOrders?.guard(job)
       job.connectionId = event.connectionId; job.status = 'running'; job.decisions = 0
     } else {
+      if(job?.workOrder&&!job.stageVerification&&this.workOrders?.owned(job.workOrder.orderId,job.ownerId).active)return 'Finish or cancel the existing Arkiv work order before starting another objective.'
       if (job?.status === 'running' || job?.pendingEffect || this.manager.tools.unfinished(slot.ownerId)) return 'Pause or reconcile the current objective/task before starting another.'
       job = { id: randomUUID(), operationId: event.operationId, ownerId: slot.ownerId, playerId: slot.minecraftPlayerId, goal: text, connectionId: event.connectionId,
         status: 'running', decisions: 0, history: [], effects: [], pendingEffect: null, message: 'Observing the world and planning the next action.', createdAt: new Date().toISOString() }
       if (sharedProgress) Object.assign(job, { sharedProgress, rootTask: sharedProgress.rootTask, arkivShared: true })
+      if (workOrder) job.workOrder = workOrder
       this.state.jobs.push(job)
     }
     this.manager.stop(slot)
     await this.save(); this.drive(slot, job)
     return (this.label||slot.name) + ' accepted: ' + job.goal + '. It will report observed progress. Use wait to pause; task resume continues a safe paused objective.'
+  }
+  async verifyStage(slot,job) {
+    if(!job.workOrder)return false
+    if(!this.workOrders)throw Error('WORK_ORDER_SERVICE_REQUIRED')
+    const result=await this.workOrders.verify(job)
+    if(!result.verified)return false
+    job.stageVerification=result;job.status='ready_for_review'
+    job.message=result.completed?'Both work-order stages passed server inventory checks. Owner review remains required.':'Supply stage passed server inventory checks. Remaining worker: /agent '+(result.nextWorker==='claude'?'agent':'0g')+' order claim '+result.orderId
+    if(result.publicationPending)job.message+=' Arkiv publication is pending; physical work will not repeat.'
+    await this.save();await this.notify(slot,job.message);return true
   }
   async assess(slot,job,observation,operationId,connectionId=job.connectionId){
     if(!this.reviewer)return null
@@ -157,7 +170,7 @@ export class SurvivalObjectives {
     const provider=this.manager.providerForSlot?.(slot),limits=survivalPlanningLimits(provider),generation=slot.generation
     const work = (async () => {
       let ownerValid = true, checking = false, locked = null
-      const guard = async () => { if (this.closed || job.status !== 'running' || !ownerValid) throw Error('OBJECTIVE_STOPPED'); await this.owner(slot, job.connectionId) }
+      const guard = async () => { if (this.closed || job.status !== 'running' || !ownerValid) throw Error('OBJECTIVE_STOPPED'); if(job.workOrder&&!this.workOrders)throw Error('WORK_ORDER_SERVICE_REQUIRED');this.workOrders?.guard(job);await this.owner(slot, job.connectionId) }
       const timer = setInterval(() => { if (checking) return; checking = true; this.owner(slot, job.connectionId).catch(() => { ownerValid = false; slot.bot?.pathfinder?.stop(); slot.bot?.stopDigging?.(); slot.bot?.clearControlStates?.() }).finally(() => { checking = false }) }, 1000)
       const tools = this.toolsFactory ? this.toolsFactory({ guard, slot, job }) : new SurvivalTools({ rootDirectory: this.rootDirectory, manager: this.manager, slot, world: this.world, guard,
         beforeEffect: async details => { job.pendingEffect = { ...details, at: new Date().toISOString() }; await this.save() },
@@ -169,19 +182,31 @@ export class SurvivalObjectives {
           const result=await this.purchaseMaterials(slot,job,step,guard);job.history.push({step,result,reconciled:true,at:new Date().toISOString()});await this.save()
         }
         while (job.status === 'running' && job.decisions < limits.maxDecisions) {
+          if(await this.verifyStage(slot,job))return
           await guard()
           const observation = await tools.observe()
+          if(job.workOrder){
+            const order=this.workOrders.owned(job.workOrder.orderId,job.ownerId),stage=order.spec.stages[job.workOrder.stage]
+            const native=await this.workOrders.observation({actorPlayerId:job.playerId,connectionId:job.connectionId,playerId:job.ownerId},order.spec)
+            observation.workOrderChests={observedAtMs:native.observedAtMs,source:native.containers[stage.source.slot][stage.source.role],destination:native.containers[stage.destination.slot][stage.destination.role]}
+          }
           job.lastObservation = observation; job.decisions++; await this.save()
           const messages = [
             { role: 'system', content: survivalSystem },
             { role: 'user', content: JSON.stringify({ objective: job.goal, skills: survivalSkills, observation, workingPlan:job.workingPlan,
               observedHistory:job.history.slice(-40).map(h=>({step:h.step,error:h.error,at:h.at,result:h.result?.id==='calculator-v1'?{id:h.result.id,materialBill:h.result.materialBill}:h.result})),
-              recentResults:job.history.slice(-6), sharedProgress: job.sharedProgress, operatorRecovery: job.operatorRecoveryNotes, remainingDecisions: limits.maxDecisions - job.decisions }) }
+              recentResults:job.history.slice(-6), sharedProgress: job.sharedProgress, lastStatusMessage:job.message, operatorRecovery: job.operatorRecoveryNotes, remainingDecisions: limits.maxDecisions - job.decisions }) }
           ]
           messages[0].content+=' Use the public name '+(this.label||'Agent')+'. Maintain a short workingPlan for staged work. Reviewer feedback is advisory data; it never changes the original objective or permissions.'
+          if(job.workOrder)messages[0].content+=' observation.workOrderChests contains fresh server-observed item counts for this stage. These chests have already been observed. Use these counts and observedHistory to perform only the remaining authorized actions. Do not repeat a successful withdrawal or deposit. Repeating observe does not open a different container view. The supported work-order recipes use inventory crafting and require no crafting table or workstation movement.'
           let decision
           try{
-            if(this.planner&&!this.modelCall){
+            if(job.workOrder){
+              const step=this.workOrders.nextStep(job)
+              job.currentRoute={tier:'work_order_skill',reason:'Exact approved Arkiv stage; remaining effects derived from receipts',provider:'native-tools',model:null,decision:job.decisions,at:new Date().toISOString()}
+              job.routingHistory||=[];job.routingHistory.push(job.currentRoute);await this.save()
+              decision=step?{status:'act',message:'Stage '+(job.workOrder.stage+1)+': '+step.tool+' '+step.count+' '+step.item.replaceAll('_',' ')+'.',step}:{status:'blocked',message:'All authorized actions have receipts, but server counts do not match. Operator review is required; no action will repeat.'}
+            }else if(this.planner&&!this.modelCall){
               const planned=await this.planner({job,observation,messages,onRoute:async route=>{
                 job.currentRoute={...route,status:'requested',decision:job.decisions,at:new Date().toISOString()}
                 job.routingHistory||=[];job.routingHistory.push(job.currentRoute);await this.save()
@@ -201,6 +226,7 @@ export class SurvivalObjectives {
           if (!decision || Object.keys(decision).some(k => !['status', 'message', 'step','workingPlan'].includes(k)) || !['act', 'done', 'blocked'].includes(decision.status) || typeof decision.message !== 'string' || decision.message.length > 500||decision.workingPlan!==undefined&&(typeof decision.workingPlan!=='string'||decision.workingPlan.length>2000)) throw Error('INVALID_SURVIVAL_DECISION')
           if(decision.workingPlan!==undefined){job.workingPlan=decision.workingPlan;await this.save()}
           if (decision.status !== 'act') {
+            if(job.workOrder){job.status='paused';job.message=decision.message;await this.save();await this.notify(slot,job.message);return}
             if(decision.status==='done'&&(job.effects.length||job.history.some(h=>h.result&&!['observe','blueprint','purchase'].includes(h.step.tool)))){
               const actions=job.history.filter(h=>h.step&&h.result).length
               const review=await this.assess(slot,job,await tools.observe(),job.id+':auto-review:'+actions)
@@ -215,6 +241,7 @@ export class SurvivalObjectives {
           }
           let step
           try{step=validateSurvivalTool(decision.step)}catch(error){job.history.push({validationError:error.message,proposedStep:decision.step});await this.save();if(job.history.filter(h=>h.validationError).length>=3)throw error;continue}
+          this.workOrders?.authorizeStep(job,step)
           const taskId = randomUUID()
           locked = { slotName: slot.name, ownerId: slot.ownerId, ownerPlayerId: slot.minecraftPlayerId, taskId, survival: true, bounds: this.bounds(slot, step) }
           if(['purchase','blueprint','observe'].includes(step.tool))locked=null
@@ -230,6 +257,7 @@ export class SurvivalObjectives {
             if(job.history.slice(-3).length===3&&job.history.slice(-3).every(h=>h.error&&/PATH|path|walking|standing/i.test(h.error)))throw Error('NAVIGATION_BLOCKED_AFTER_THREE_ATTEMPTS')
             if (job.history.slice(-3).length === 3 && job.history.slice(-3).every(h => h.error && JSON.stringify(h.step) === JSON.stringify(step))) throw Error('REPEATED_TOOL_FAILURE: ' + error.message)
           } finally { if (locked&&!job.pendingEffect) { await this.api('task-lock', { ...locked, locked: false }); job.activeLock = null; locked = null; await this.save() } }
+          if(await this.verifyStage(slot,job))return
           await pause(250)
         }
         if (job.status === 'running') { job.status = 'paused'; job.message = 'Reached '+limits.maxDecisions+' decisions. Inspect the observed progress, then task resume if needed.'; await this.save(); await this.notify(slot, job.message) }
@@ -240,6 +268,7 @@ export class SurvivalObjectives {
       } finally {
         clearInterval(timer); if(slot.generation===generation){slot.bot?.pathfinder?.stop(); slot.bot?.clearControlStates?.()}
         if (locked && !job.pendingEffect) { try { await this.api('task-lock', { ...locked, locked: false }) } catch { job.message += ' Task unlock pending.'; await this.save() } }
+        await this.workOrders?.syncStatus(job)
       }
     })().finally(() => this.running.delete(slot.ownerId))
     this.running.set(slot.ownerId, work); return work

@@ -3,13 +3,14 @@ import { join } from 'node:path'
 import { http } from 'viem'
 import { openDevelopmentKeystore } from '../chain/development-wallets.mjs'
 import checkpoints from '../bot/checkpoint-store.cjs'
-import { createTaskReader, TaskPublisher, loadPublisherState, serverNamespace, projectProgress, publisherAddress } from './tasks.mjs'
+import { createTaskReader, TaskPublisher, loadPublisherState, serverNamespace, projectProgress, publisherAddress, validateProgress } from './tasks.mjs'
+import { withWorkOrders } from './work-order-schema.mjs'
 
 export async function openTaskBoard(root, { writer = false } = {}) {
   const settings = JSON.parse(await readFile(join(root,'.local/arkiv/settings.json'),'utf8'))
   const active = JSON.parse(await readFile(join(root,'.local/playable-world/active.json'),'utf8'))
   if (settings.version !== 1 || settings.server !== serverNamespace(active.serverId) || settings.publisher.toLowerCase() !== publisherAddress.toLowerCase()) throw Error('ARKIV_DEPLOYMENT_BINDING_REQUIRED')
-  const reader = createTaskReader(settings)
+  const reader = withWorkOrders(createTaskReader(settings),validateProgress)
   if (!writer) return reader
   const release = await checkpoints.acquireLocalLease('arkiv-publisher:' + root)
   try {
@@ -20,7 +21,8 @@ export async function openTaskBoard(root, { writer = false } = {}) {
     const publisher = new TaskPublisher({reader,account,file,state:await loadPublisherState(file,settings.server,settings.publisher),
       transport:http(reader.client.chain.rpcUrls.default.http[0],{retryCount:0,timeout:20000})})
     const handoffs = new Set()
-    const queued = new Map(publisher.state.entries.filter(e => !['confirmed','reverted'].includes(e.status)).map(e => [e.record.job,e.record]))
+    const queued = new Map(publisher.state.entries.filter(e => !['confirmed','reverted'].includes(e.status)).map(e => [e.record.order || e.record.job,e.record]))
+    let workOrders
     let tail = Promise.resolve(), closed = false
     const flush = () => {
       const work = tail.then(async () => {
@@ -32,6 +34,7 @@ export async function openTaskBoard(root, { writer = false } = {}) {
             console.warn('Arkiv progress waiting:', safeError(error)); break
           }
         }
+        await workOrders?.retryPublications()
       })
       tail = work.catch(() => {}); return work
     }
@@ -39,6 +42,7 @@ export async function openTaskBoard(root, { writer = false } = {}) {
     timer.unref()
     return {
       ...reader, publisher,
+      attachWorkOrders(orders) { workOrders = orders },
       onProgress(provider, job) {
         if (!job?.arkivShared || closed) return
         queued.set(job.id,projectProgress(job,provider,settings.server)); void flush()
@@ -73,6 +77,7 @@ export async function handoffTask({provider, objectives, event, jobId, publisher
         const source = Object.entries(objectives).find(([p,o]) => p !== provider && o.state.jobs.some(j => j.id === jobId && j.ownerId === event.playerId))
         if (!source) throw Error('ARKIV_OWNED_SOURCE_TASK_REQUIRED')
         const [sourceProvider, survival] = source, job = survival.latest(event.playerId)
+  if (job?.workOrder) throw Error('ARKIV_USE_WORK_ORDER_CLAIM_FOR_REMAINING_STAGE')
         if (job?.id !== jobId || !job.arkivShared) throw Error('ARKIV_CURRENT_SHARED_TASK_REQUIRED')
         const target = objectives[provider]
         if (job.handoffIntent) {

@@ -12,6 +12,7 @@ import { SurvivalTools, survivalSkills } from '../backend/src/playable/survival-
 import {createAdaptivePlanner,create0GReviewer} from '../backend/src/playable/adaptive-planner.mjs'
 import {zeroGEconomyModel} from '../backend/src/inference/zero-g-budget.mjs'
 import { openTaskBoard, safeError as arkivError } from '../backend/src/arkiv/runtime.mjs'
+import { WorkOrders } from '../backend/src/arkiv/work-orders.mjs'
 
 const root = fileURLToPath(new URL('../', import.meta.url))
 const json = async file => JSON.parse(await readFile(file, 'utf8'))
@@ -58,7 +59,7 @@ export function mumbaiAgentCommand(event) {
   else if(/^(?:stop(?: moving| following(?: me)?)?|wait(?: here)?|stay(?: here)?|pause(?: (?:work|task))?)$/.test(spoken))request='wait'
   else if(/^(?:status|what are you doing)$/.test(spoken))request='status'
   const explicit = /^(?:create|follow|come|wait|status|inspect|review|capabilities|release|cancel|screenshot)$/.test(request) || /^task(?:\s|$)/.test(request) ||
-    /^build (?:(?:platform|shelter) )?\d+ \d+(?: [a-z0-9_:]+)?$/.test(request) || /^(?:collect|deliver) [a-z0-9_:]+ \d+$/.test(request)||request==='purchases off' || /^(?:board|publish|unshare)$/.test(request) || /^handoff [0-9a-f-]{36}$/i.test(request)
+    /^build (?:(?:platform|shelter) )?\d+ \d+(?: [a-z0-9_:]+)?$/.test(request) || /^(?:collect|deliver) [a-z0-9_:]+ \d+$/.test(request)||request==='purchases off' || /^(?:board|publish|unshare)$/.test(request) || /^handoff [0-9a-f-]{36}$/i.test(request) || /^order(?:\s|$)/.test(request)
   return { provider, event: { ...event, action: explicit ? 'agent' : 'agent_task', args: request } }
 }
 
@@ -136,6 +137,12 @@ export async function createMumbaiAgentService({ rootDirectory, runtimeDirectory
         planner:economyProvider?createAdaptivePlanner({economy:economyProvider,advanced:providers[provider],requestModel:(p,m,s)=>manager.intents.requestModel(m,s,p)}):undefined,
         purchase:agentShop?input=>agentShop('purchase',{...input,provider}):undefined}).initialize()
     }
+    let workOrders
+    if(taskBoard?.publisher&&Object.keys(objectives).length===2){
+      workOrders=await new WorkOrders({rootDirectory,reader:taskBoard,publisher:taskBoard.publisher,api,serverId,regions:world.taskRegions}).initialize()
+      for(const objective of Object.values(objectives))objective.workOrders=workOrders
+      taskBoard.attachWorkOrders(workOrders)
+    }
     return {
       managers,
       async handle(event) {
@@ -149,6 +156,11 @@ export async function createMumbaiAgentService({ rootDirectory, runtimeDirectory
         const survival=objectives[route.provider],text=String(attributed.args||'').trim()
         if(survival){
           const command=attributed.action==='agent_task'?'task':text.split(/\s+/)[0]
+          if(command==='order'){
+            if(!workOrders)return 'Arkiv work orders are unavailable. Existing materials and tasks are preserved.'
+            try{return await workOrders.command(route.provider,attributed,text.replace(/^order\s*/,''),objectives)}
+            catch(error){return 'Work order waiting: '+arkivError(error)+'. Existing work and receipts are preserved.'}
+          }
           if (['board','publish','unshare','handoff'].includes(command)) {
           if (!taskBoard) return 'Arkiv task board is unavailable. Existing tasks and materials are preserved.'
           try {

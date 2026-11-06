@@ -713,6 +713,36 @@ public final class PlayableExperience implements Listener {
         if(discordAccess!=null)value.putAll(discordAccess.enrich(player,connection));
         return Collections.unmodifiableMap(value);
     }
+
+    /** Bounded main-thread observation; no inventory, world or authority changes. */
+    public Map<String,Object> workObservation(Map<String,Object> input) {
+        if(!Bukkit.isPrimaryThread())throw new IllegalStateException("work_observation_main_thread");
+        if(!input.keySet().equals(Set.of("playerId","connectionId","ownerId","items"))||mumbai==null||properties==null)throw new IllegalArgumentException("work_observation_fields");
+        UUID id=UUID.fromString((String)input.get("playerId"));Player owner=Bukkit.getPlayer(id);String principal=UUID.fromString((String)input.get("ownerId")).toString();
+        if(!Objects.equals(connections.get(id),input.get("connectionId"))||!survivalOwner(owner,"CityAgent4",principal)||!survivalOwner(owner,"CityAgent5",principal))throw new IllegalArgumentException("work_observation_owner_required");
+        if(!(input.get("items") instanceof List<?> raw)||raw.isEmpty()||raw.size()>2)throw new IllegalArgumentException("work_observation_items");
+        Map<String,Material> materials=new LinkedHashMap<>();
+        for(Object value:raw){if(!(value instanceof String name)||!name.matches("[a-z][a-z0-9_]{0,63}"))throw new IllegalArgumentException("work_observation_item");Material material=Material.matchMaterial(name);if(material==null||!material.isItem()||materials.putIfAbsent(name,material)!=null)throw new IllegalArgumentException("work_observation_item");}
+        Map<String,Object> containers=new LinkedHashMap<>(),agents=new LinkedHashMap<>();
+        for(Map<String,Object> region:taskRegions()){
+            String slot=(String)region.get("slotName");if(!MUMBAI_AGENTS.contains(slot))continue;
+            Player actor=Bukkit.getPlayerExact(slot);if(actor==null||!mumbai.world().equals(actor.getWorld()))throw new IllegalStateException("work_observation_agent_offline");
+            agents.put(slot,workCounts(actor.getInventory(),materials));Map<String,Object> chests=new LinkedHashMap<>();
+            for(String role:List.of("sourceChest","destinationChest")){
+                List<?> xyz=(List<?>)region.get(role);int x=((Number)xyz.get(0)).intValue(),y=((Number)xyz.get(1)).intValue(),z=((Number)xyz.get(2)).intValue();
+                if(!mumbai.world().isChunkLoaded(x>>4,z>>4))throw new IllegalStateException("work_observation_chunk_unloaded");
+                org.bukkit.block.BlockState state=mumbai.world().getBlockAt(x,y,z).getState();
+                if(!(state instanceof org.bukkit.block.Container container))throw new IllegalStateException("work_observation_chest_missing");
+                Inventory inventory=state instanceof Chest chest?chest.getBlockInventory():container.getInventory();
+                chests.put(role,Map.of("position",xyz,"items",workCounts(inventory,materials)));
+            }
+            containers.put(slot,chests);
+        }
+        return Map.of("version",1,"serverId",properties.status().get("serverNamespace"),"worldUuid",mumbai.world().getUID().toString(),"observedAtMs",System.currentTimeMillis(),"containers",containers,"agents",agents);
+    }
+    private static Map<String,Integer> workCounts(Inventory inventory,Map<String,Material> materials){
+        Map<String,Integer> counts=new LinkedHashMap<>();for(var entry:materials.entrySet()){int count=0;for(ItemStack item:inventory.getContents())if(item!=null&&item.getType()==entry.getValue())count+=item.getAmount();counts.put(entry.getKey(),count);}return counts;
+    }
     public DiscordGameAccess discordAccess(){if(!Bukkit.isPrimaryThread())throw new IllegalStateException("discord_access_main_thread");return discordAccess;}
 
     public synchronized void acknowledge(String operationId,String message) {

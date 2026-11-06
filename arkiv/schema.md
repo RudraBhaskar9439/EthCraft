@@ -19,3 +19,15 @@ Each entity is owned by the dedicated publisher wallet in `deployment.json`; pla
 Historical snapshots are append-only in this application. SDK filtering uses owner, server and optionally provider, ordered by revision; status is filtered after selecting the latest job revision in the returned page. Each page covers at most 100 rows, including schema mismatches reported by the SDK. An explicit next offset exposes older history rather than silently claiming an exhaustive current snapshot.
 
 Local objectives, native journals, signed transaction intents, identities, financial permissions, prompts and working plans remain private. Entity deletion or expiry never removes local receipts, grants a wallet capability or reverses item delivery.
+# Work-order schema
+
+`ethcraft.work-orders.v1` indexes `server`, `orderId`, `kind`, `item`, `status`,
+`stage`, `deadline` and `revision`. `orderId` avoids Arkiv's reserved keyword
+`order`; decoded application records expose it as `order`.
+`data` holds a strictly validated versioned specification, canonical spec digest,
+zero to two server verifications, advisory public claim metadata and fixture flag.
+Every publication is an immutable seven-day snapshot. The owner-approved private
+spec digest cannot be replaced by an external record. Public claims carry no fence,
+owner identity or financial authority. Each verification includes worker, job,
+item/count, world UUID, observation time, source/destination counts and evidence/
+receipt digests. Raw inventories and receipts remain private.

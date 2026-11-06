@@ -1,3 +1,4 @@
+import {loadWorkOrders} from '/arkiv-orders.mjs'
 const byId=id=>document.getElementById(id)
 const tasks=byId('tasks'),network=byId('network'),refresh=byId('refresh'),older=byId('older'),provider=byId('provider')
 let offset=0,nextOffset=null
@@ -18,6 +19,7 @@ function card(record){
   e.append(details);return e
 }
 async function load(next=false){
+  void loadWorkOrders('/api/arkiv/orders')
   refresh.disabled=true;older.disabled=true;network.textContent='Reading Arkiv…'
   try{
     const query=new URLSearchParams({offset:String(next?nextOffset:0)});if(provider.value)query.set('provider',provider.value)
