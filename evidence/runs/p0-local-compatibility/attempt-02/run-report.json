@@ -1,0 +1,49 @@
+{
+  "purpose": "isolated physical compatibility spike only",
+  "started_at": "2026-10-29T12:52:55.880238+00:00",
+  "versions": {
+    "purpose": "isolated_non_token_fixture",
+    "bind": "127.0.0.1",
+    "port": 25576,
+    "minecraft": "1.21.11",
+    "paper": {
+      "build": 132,
+      "support": "UNSUPPORTED",
+      "support_ended": "2026-06-15",
+      "sha256": "5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba",
+      "url": "https://fill-data.papermc.io/v1/objects/5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba/paper-1.21.11-132.jar"
+    },
+    "java_image": "eclipse-temurin@sha256:5d90b26c0784ccf55af55f97cbcf7f3969c66a06299c93bdc72649219942a48f",
+    "mineflayer": "4.39.0",
+    "pathfinder": "2.4.5",
+    "authentication": "offline_fixture_only",
+    "independent_human_participants": 0,
+    "token_integration": false,
+    "production_supported": false
+  },
+  "independent_humans": 0,
+  "full_phase_gate_passed": false,
+  "steps": [
+    {
+      "step": "bootstrap",
+      "status": "pass",
+      "container": "708521b95ef985e25b9ccbf7f5749efaa43a36e9e59188bf6271ed8cb2912908"
+    },
+    {
+      "step": "compile_fixture_plugin",
+      "status": "pass"
+    },
+    {
+      "step": "fixture",
+      "status": "pass",
+      "container": "77902582e5abab082fbdf2ca67b8140f89aca014f43db47275de5277106e11fc"
+    }
+  ],
+  "java_runtime": "openjdk version \"21.0.12.1\" 2026-08-18 LTS\nOpenJDK Runtime Environment Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS)\nOpenJDK 64-Bit Server VM Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS, mixed mode, sharing)",
+  "node_runtime": "v26.3.1",
+  "actual_paper_sha256": "5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba",
+  "fixture_plugin_sha256": "9e35c60e4500113738b4188bb88fb38e9a14299fc37d9356e2f3d258db269b84",
+  "status": "fail",
+  "error": "node failed (1): {\"schema\":\"agentcity.p0.compatibility.v1\",\"status\":\"failed\",\"started_at\":\"2026-10-29T12:53:13.307Z\",\"environment\":{\"host\":\"127.0.0.1\",\"port\":25576,\"version\":\"1.21.11\",\"auth\":\"offline\"},\"identities\":\"FixtureBuilder and FixtureObserver are both agent-controlled test fixtures, not independent humans or licensed-account proof.\",\"steps\":[],\"error\":{\"name\":\"Error\",\"message\":\"FixtureObserver: kicked: \\\"Connection throttled! Please wait before reconnecting.\\\"\"},\"finished_at\":\"2026-10-29T12:53:13.427Z\"}\n",
+  "finished_at": "2026-10-29T12:53:15.278013+00:00"
+}

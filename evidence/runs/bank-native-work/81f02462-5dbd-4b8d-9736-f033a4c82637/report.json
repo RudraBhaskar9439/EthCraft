@@ -1,0 +1,17 @@
+{
+  "runId": "81f02462-5dbd-4b8d-9736-f033a4c82637",
+  "status": "pass",
+  "recordedAt": "2026-11-05T13:19:38.250Z",
+  "scope": "Unpaid native work preflight only; no blockchain transaction or physical agent action.",
+  "checks": [
+    "Unpaid work cannot start or build",
+    "Changed quoted amount refused",
+    "Forged work terms refused"
+  ],
+  "paidModelCalls": 0,
+  "publicTransactions": 0,
+  "sources": {
+    "backend/src/bank/native-work.mjs": "cf4829051b03cf37f0c7136aea7c06027d57cdb6dab88045273171d1fa86b625",
+    "tests/bank/native-work.mjs": "b7c838b4fa393eea2bdf11fa85131674001fb39e883d66bfd07d4d59f37a6c03"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "status": "fail",
+  "scope": "Actual isolated restored Minecraft world; internal materials only",
+  "checks": [
+    "fresh server observations preserve all 144 structural block states, empty stock and durable revision 144"
+  ],
+  "error": {
+    "type": "AssertionError",
+    "message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'RECONCILIATION_REQUIRED'\n- 'APPLIED'\n"
+  }
+}

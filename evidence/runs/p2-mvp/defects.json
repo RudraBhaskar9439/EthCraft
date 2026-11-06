@@ -1,0 +1,154 @@
+[
+  {
+    "id": "P2-D001",
+    "status": "resolved",
+    "problem": "Fractional navigation stances in the pinned access manifest are rejected by the existing strict integer-only JSON reader during plugin startup.",
+    "retained_failure": "evidence/runs/p2-construction/agentcity-construction-d8b84b0d/run-report.json",
+    "resolution": "Use integer block goals; the existing adapter already floors goals before pathfinding. Verify in a new complete run.",
+    "verified_by": "evidence/runs/p2-construction/agentcity-construction-e927afd4/final-server.log: plugin startup succeeded"
+  },
+  {
+    "id": "P2-D002",
+    "status": "resolved",
+    "problem": "New test fixture used a plugin name outside the existing local fixture whitelist. Found during startup review; no production authority expansion is needed.",
+    "retained_source": "evidence/runs/p2-construction/agentcity-construction-d8b84b0d/source/tests/construction/fixture/plugin.yml",
+    "resolution": "Use the existing permitted local fixture name; subsequent e927afd4 startup succeeded.",
+    "verified_by": "evidence/runs/p2-construction/agentcity-construction-e927afd4/final-server.log: plugin startup succeeded"
+  },
+  {
+    "id": "P2-D003",
+    "status": "resolved",
+    "problem": "Test clients connected faster than the existing four-second Bukkit same-IP admission limit, rejecting the requester before spawn.",
+    "retained_failure": "evidence/runs/p2-construction/agentcity-construction-e927afd4/run-report.json",
+    "resolution": "Reuse the earlier harness 4.2-second connection spacing and retain actual kick reasons; verify a fresh run.",
+    "verified_by": "evidence/runs/p2-construction/agentcity-construction-db0f8c2e/initial-client.json: all scoped actors connected and three physical checks passed"
+  },
+  {
+    "id": "P2-D004",
+    "status": "resolved",
+    "problem": "Deferred pathfinder.stop after an obstructed route can cancel the next valid navigation request.",
+    "retained_failure": "evidence/runs/p2-construction/agentcity-construction-db0f8c2e/initial-client.json",
+    "resolution": "Cancel the old goal immediately, await its settlement, and clear movement controls before returning the blocked result. Verify subsequent real navigation and construction.",
+    "verified_by": "evidence/runs/p2-construction/agentcity-construction-5da7227e/initial-client.json: blocked route followed by successful stock access and five guard refusals"
+  },
+  {
+    "id": "P2-D005",
+    "status": "resolved",
+    "problem": "Test assertion expected explicit null for a status field Gson omits when empty.",
+    "retained_failure": "evidence/runs/p2-construction/agentcity-construction-0fb216db/initial-client.json",
+    "resolution": "Normalize the optional pendingOperation field without weakening the no-pending-operation requirement.",
+    "verified_by": "evidence/runs/p2-construction/agentcity-construction-5da7227e/initial-client.json: live authority checks passed"
+  },
+  {
+    "id": "P2-D006",
+    "status": "resolved",
+    "problem": "Reading the closed/default inventory view during a live chest transfer can miss actual player slot updates.",
+    "retained_failure": "evidence/runs/p2-construction/agentcity-construction-5da7227e/initial-client.json",
+    "resolution": "Read the active window player inventory; preserve pending receipt and verify live full construction.",
+    "verified_by": "evidence/runs/p2-construction/agentcity-construction-ab7ab1f5/initial-client.json: all materials retrieved and12 actual placements completed; reconnect retained132items"
+  },
+  {
+    "id": "P2-D007",
+    "status": "resolved",
+    "problem": "Whole-plot planning attempted circuit shortcuts and side-entry to the uncalibrated access staircase; clean construction stopped safely.",
+    "retained_failures": [
+      "evidence/runs/p2-construction/agentcity-construction-10fbdd4e/initial-client.json",
+      "evidence/runs/p2-construction/agentcity-construction-1a6b9afd/resume-client.json",
+      "evidence/runs/p2-construction/agentcity-construction-8a125056/resume-client.json"
+    ],
+    "resolution": "Fixed outer lanes, calibrated half-step stairs and declared entry/landing routes pass live traversal and the composed complete construction.",
+    "development_resolution_note": "Use the fixed outer route, P1-style half steps and declared entry/landing waypoints. Require actual live access and full construction evidence; a bridge collision was not proven.",
+    "verified_by": [
+      "evidence/runs/p2-construction/agentcity-continuation-53847de4/run-report.json",
+      "evidence/runs/p2-construction/agentcity-continuation-53847de4/resume-client.json",
+      "evidence/runs/p2-construction/agentcity-construction-40ed141a/run-report.json"
+    ]
+  },
+  {
+    "id": "P2-D008",
+    "status": "resolved",
+    "problem": "Pinned pathfinder support-block drop counter1 rejects cardinal half-step descent.",
+    "resolution": "The pinned support-block counter is calibrated to 2. Focused route-model checks and actual ascent/descent pass; no universal fall guarantee is claimed.",
+    "development_resolution_note": "Calibrate support counter2 for the declared route; pinned-library checks verify all reverse segments and their actual surface-height drops. Live descent still required.",
+    "verified_by": [
+      "evidence/runs/p2-construction/agentcity-continuation-53847de4/run-report.json",
+      "evidence/runs/p2-construction/agentcity-continuation-53847de4/resume-client.json",
+      "evidence/runs/p2-construction/agentcity-construction-40ed141a/run-report.json"
+    ]
+  },
+  {
+    "id": "P2-D009",
+    "status": "resolved",
+    "problem": "Goal floor matching accepted an airborne arrival and began the next descent before landing.",
+    "retained_failure": "evidence/runs/p2-construction/agentcity-construction-9e26a924/initial-client.json",
+    "resolution": "Navigation requires grounded arrival at the requested full-block height within its original deadline. Actual traversal and subsequent construction pass.",
+    "development_resolution_note": "Require grounded arrival at actual requested full-block height within the original total navigation deadline.",
+    "verified_by": [
+      "evidence/runs/p2-construction/agentcity-continuation-53847de4/run-report.json",
+      "evidence/runs/p2-construction/agentcity-continuation-53847de4/resume-client.json",
+      "evidence/runs/p2-construction/agentcity-construction-40ed141a/run-report.json"
+    ]
+  },
+  {
+    "id": "P2-D010",
+    "status": "resolved",
+    "problem": "Forced local yaw was not sent before the native oriented placement packet; the Paper boundary canceled a repeater facing EAST when WEST was required.",
+    "retained_failure": "evidence/runs/p2-construction/agentcity-construction-fc509151/resume-client.json",
+    "resolution": "A bounded real physics/network tick flush precedes oriented native placement. Repeaters are physically observed with their approved facing in the completed structure.",
+    "development_resolution_note": "Wait for one bounded actual physics/network tick after forced yaw before native placement. The following run passed the repeater and reached49 placements; complete-build verification remains pending.",
+    "verified_by": [
+      "evidence/runs/p2-construction/agentcity-continuation-53847de4/run-report.json",
+      "evidence/runs/p2-construction/agentcity-continuation-53847de4/resume-client.json"
+    ]
+  },
+  {
+    "id": "P2-D011",
+    "status": "resolved",
+    "problem": "The pinned server places floor levers opposite the horizontal player heading. The first floor lever was SOUTH while the blueprint default requires NORTH, so Paper canceled it without consuming an item.",
+    "retained_failure": "evidence/runs/p2-construction/agentcity-construction-9e47cccc/resume-client.json",
+    "resolution": "Floor-lever heading is reversed before the tick flush. The floor lever was physically placed with the required orientation; complete structure and all 16 electrical rows pass.",
+    "development_resolution_note": "Use the opposite horizontal heading for floor levers and retain the bounded orientation tick flush. Focused adapter regression passes; actual complete-build verification remains pending.",
+    "verified_by": [
+      "evidence/runs/p2-construction/agentcity-continuation-53847de4/run-report.json",
+      "evidence/runs/p2-construction/agentcity-continuation-53847de4/resume-client.json"
+    ]
+  },
+  {
+    "id": "P2-D012",
+    "status": "resolved",
+    "problem": "The adapter excludes repeater and redstone-wire references, leaving four supported stone placements and three dependent placements unfinished after137 actual placements.",
+    "retained_failure": "evidence/runs/p2-construction/agentcity-construction-5b3f8a44/run-report.json",
+    "resolution": "Solid references retain priority; repeater/wire references are bounded sneaking fallbacks behind the exact receiving authority. Seven remaining placements consumed their seven real carried items in the preserved world.",
+    "development_resolution_note": "Investigate narrow native click references and sneaking. Continue the same persisted world only after observing exact retained blocks, carried items and stock; no restoration or material injection is allowed.",
+    "verified_by": [
+      "evidence/runs/p2-construction/agentcity-continuation-53847de4/run-report.json",
+      "evidence/runs/p2-construction/agentcity-continuation-53847de4/resume-client.json",
+      "evidence/runs/p2-construction/agentcity-continuation-88033ad1/resume-client.json"
+    ]
+  },
+  {
+    "id": "P2-D013",
+    "status": "resolved",
+    "problem": "A valid sneaking thin-reference click reached the server, but denying block interaction with default item use produced no BlockPlaceEvent. The operation reconciled as not applied, preserving all137 blocks and7 carried items.",
+    "retained_failure": "evidence/runs/p2-construction/agentcity-continuation-48ecbd0d/run-report.json",
+    "resolution": "Pinned block-use DENY prevented item placement. The final exact-arm branch requires sneaking, Survival and matching held material, uses DEFAULT block interaction and explicit item ALLOW, and retains final native state/consumption checks. An unsneaked click is refused; seven valid placements and unchanged circuit orientations are physically verified.",
+    "development_resolution_note": "Pinned server bytecode confirms block-interaction DENY returns before item placement, including when item use is ALLOW. Use DEFAULT block interaction and explicit item ALLOW only for the exact valid arm, Survival actor, matching held material and actual sneaking. Sneaking suppresses repeater activation; BlockPlaceEvent still validates target, state and material effects. Actual continuation verification remains pending.",
+    "verified_by": [
+      "evidence/runs/p2-construction/agentcity-continuation-53847de4/run-report.json",
+      "evidence/runs/p2-construction/agentcity-continuation-53847de4/resume-client.json",
+      "evidence/runs/p2-construction/agentcity-continuation-88033ad1/resume-client.json"
+    ]
+  },
+  {
+    "id": "P2-D014",
+    "status": "resolved",
+    "problem": "The harness submitted INSPECT immediately after the final worker command and received HTTP429 from the existing two-command-per-second receiver limit. All144 actual placements and exact material consumption had already passed; no inspection ran.",
+    "retained_failure": "evidence/runs/p2-construction/agentcity-continuation-88033ad1/run-report.json",
+    "resolution": "The harness honors command spacing before INSPECT. The same completed world restarted with 144 receipts, revision 144 and empty stock/inventory, placed zero new blocks, and passed the real 16-row inspection.",
+    "development_resolution_note": "Honor the existing command spacing before INSPECT. Restart and observe the same completed world with144 receipts, revision144 and empty stock/inventory, then run the real16-row inspection; no rebuild or stock restoration.",
+    "verified_by": [
+      "evidence/runs/p2-construction/agentcity-continuation-53847de4/run-report.json",
+      "evidence/runs/p2-construction/agentcity-continuation-53847de4/resume-client.json"
+    ]
+  }
+]

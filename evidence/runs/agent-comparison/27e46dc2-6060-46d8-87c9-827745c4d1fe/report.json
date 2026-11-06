@@ -1,0 +1,909 @@
+{
+  "schema": "agentcity.agent-comparison-run.v1",
+  "runId": "27e46dc2-6060-46d8-87c9-827745c4d1fe",
+  "recordedAt": "2026-11-05T19:25:40.840551+00:00",
+  "startedAt": "2026-11-05T19:01:43.775Z",
+  "completedAt": "2026-11-05T19:14:51.144Z",
+  "status": "partial",
+  "sourceCommitExecuted": "2902643",
+  "privateSourceSha256": "cea3349f374814ba75f87e602b0ffa20159c9b99433a28002c2337c16281c834",
+  "disclosure": "Two operator-controlled owner fixtures, not independent humans or Discord/Privy identity proofs. Actual hosted model proposals and native Minecraft effects. No blockchain or marketplace actions.",
+  "models": {
+    "CityAgent2": {
+      "provider": "0g",
+      "model": "glm-4.7"
+    },
+    "CityAgent3": {
+      "provider": "anthropic",
+      "model": "claude-sonnet-5-5"
+    }
+  },
+  "maxOutputTokens": 1536,
+  "requestTimeoutMs": 120000,
+  "nativeTaskTimeoutMs": 240000,
+  "trials": [
+    {
+      "trial": "delivery",
+      "slotName": "CityAgent2",
+      "prompt": "Inspect my actual supplies, deliver exactly six cobblestone from my registered source chest to my registered destination chest, then inspect supplies again. Do nothing else.",
+      "startedAt": "2026-11-05T19:02:02.961Z",
+      "status": "complete",
+      "passed": true,
+      "checks": {
+        "sourceDecreasedBySix": true,
+        "destinationIncreasedBySix": true,
+        "inventoryConserved": true,
+        "oakUnchanged": true,
+        "nativeTasksReconciled": true,
+        "receivingReceiptsPresent": true
+      },
+      "apiCostUsd": 0.0034272,
+      "durationMs": 51164,
+      "before": {
+        "observedAt": "2026-11-05T19:02:04.109Z",
+        "inventory": {},
+        "source": {
+          "oak_planks": 128,
+          "cobblestone": 64
+        },
+        "destination": {},
+        "bounds": {
+          "min": [
+            -47,
+            64,
+            2
+          ],
+          "max": [
+            -36,
+            71,
+            13
+          ],
+          "origin": [
+            -45,
+            64,
+            4
+          ]
+        }
+      },
+      "after": {
+        "observedAt": "2026-11-05T19:02:56.770Z",
+        "inventory": {},
+        "source": {
+          "oak_planks": 128,
+          "cobblestone": 58
+        },
+        "destination": {
+          "cobblestone": 6
+        },
+        "bounds": {
+          "min": [
+            -47,
+            64,
+            2
+          ],
+          "max": [
+            -36,
+            71,
+            13
+          ],
+          "origin": [
+            -45,
+            64,
+            4
+          ]
+        }
+      },
+      "planning": {
+        "latencyMs": 46411,
+        "proposal": {
+          "kind": "plan",
+          "message": "I can inspect supplies, deliver six cobblestone, then inspect again to confirm.",
+          "steps": [
+            {
+              "action": "inspect"
+            },
+            {
+              "action": "deliver",
+              "count": 6,
+              "item": "cobblestone"
+            },
+            {
+              "action": "inspect"
+            }
+          ]
+        }
+      },
+      "nativeTasks": [
+        {
+          "id": "81c3643c-9886-4213-9edc-7639899979e8",
+          "operationId": "29221d9b-2c00-4209-affc-9c7072bbb681:step:1",
+          "action": "deliver",
+          "status": "complete",
+          "placements": 0,
+          "receiptCount": 2,
+          "receiptsSha256": "530b974193e9aacc2c3d41bfb467ea28a80d2ba8a6aa8ac6a873b77e30f62091",
+          "pendingKind": null
+        }
+      ],
+      "lastReturnedUsageReceipt": {
+        "model": "glm-4.7",
+        "responseId": "202611060302073c3d6ed837014bed",
+        "requestId": "4401fdcae1697e76, ddce5b1c-bffd-4aa3-92e1-2e8f508e8d9a",
+        "requestSha256": "d25c0b34ca7f0f914614556fb06504cd22a1cd39ed00d5305ab83249cb6621d8",
+        "costNanoUsd": 3427200,
+        "latencyMs": 44349,
+        "recordedAt": "2026-11-05T19:02:50.729Z",
+        "usage": {
+          "prompt_tokens": 3456,
+          "completion_tokens": 96
+        },
+        "pricing": {
+          "model": "glm-4.7",
+          "inputNanoUsd": 900,
+          "outputNanoUsd": 3300,
+          "contextTokens": 204800,
+          "source": "https://router-api.0g.ai/v1/models",
+          "observedAt": "2026-11-05T19:02:06.358Z"
+        }
+      }
+    },
+    {
+      "trial": "delivery",
+      "slotName": "CityAgent3",
+      "prompt": "Inspect my actual supplies, deliver exactly six cobblestone from my registered source chest to my registered destination chest, then inspect supplies again. Do nothing else.",
+      "startedAt": "2026-11-05T19:02:56.810Z",
+      "status": "complete",
+      "passed": true,
+      "checks": {
+        "sourceDecreasedBySix": true,
+        "destinationIncreasedBySix": true,
+        "inventoryConserved": true,
+        "oakUnchanged": true,
+        "nativeTasksReconciled": true,
+        "receivingReceiptsPresent": true
+      },
+      "apiCostUsd": 0.013396,
+      "durationMs": 8061,
+      "before": {
+        "observedAt": "2026-11-05T19:02:58.337Z",
+        "inventory": {},
+        "source": {
+          "oak_planks": 128,
+          "cobblestone": 64
+        },
+        "destination": {},
+        "bounds": {
+          "min": [
+            7,
+            64,
+            26
+          ],
+          "max": [
+            18,
+            71,
+            37
+          ],
+          "origin": [
+            9,
+            64,
+            28
+          ]
+        }
+      },
+      "after": {
+        "observedAt": "2026-11-05T19:03:08.005Z",
+        "inventory": {},
+        "source": {
+          "oak_planks": 128,
+          "cobblestone": 58
+        },
+        "destination": {
+          "cobblestone": 6
+        },
+        "bounds": {
+          "min": [
+            7,
+            64,
+            26
+          ],
+          "max": [
+            18,
+            71,
+            37
+          ],
+          "origin": [
+            9,
+            64,
+            28
+          ]
+        }
+      },
+      "planning": {
+        "latencyMs": 3101,
+        "proposal": {
+          "kind": "plan",
+          "message": "I can inspect supplies, deliver six cobblestone from source to destination, then inspect again.",
+          "steps": [
+            {
+              "action": "inspect"
+            },
+            {
+              "action": "deliver",
+              "item": "cobblestone",
+              "count": 6
+            },
+            {
+              "action": "inspect"
+            }
+          ]
+        }
+      },
+      "nativeTasks": [
+        {
+          "id": "a3eca1b2-920d-4c33-b8f7-64798d206abf",
+          "operationId": "6066c11f-9173-4937-8afc-9bdd0c65e2f9:step:1",
+          "action": "deliver",
+          "status": "complete",
+          "placements": 0,
+          "receiptCount": 2,
+          "receiptsSha256": "42205535c527cfbd57ce06b68cf89fe2d916cc4996d85d94e5dc67021a24d274",
+          "pendingKind": null
+        }
+      ],
+      "lastReturnedUsageReceipt": {
+        "model": "claude-sonnet-5-5",
+        "responseId": "msg_011CgkJMSH4ihxkH9jJTu4Bo",
+        "requestId": "req_011CgkJMRtkVrL74mr4CSoNV",
+        "costNanoUsd": 13396000,
+        "recordedAt": "2026-11-05T19:03:01.673Z",
+        "usage": {
+          "input_tokens": 5703,
+          "output_tokens": 199,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        }
+      }
+    },
+    {
+      "trial": "arch",
+      "slotName": "CityAgent2",
+      "prompt": "Build one cobblestone arch at relative offset [0,0,0] in my own plot. It must be exactly three blocks wide, one block deep and three blocks high: two full-height end pillars and a top connecting block. Keep the two central cells below the top open. Use exactly seven cobblestone. Do nothing else.",
+      "startedAt": "2026-11-05T19:03:08.058Z",
+      "status": "complete",
+      "passed": true,
+      "checks": {
+        "sevenExpectedBlocks": true,
+        "centralOpeningClear": true,
+        "exactlySevenMaterials": true,
+        "exactlySevenPlacements": true,
+        "nativeTasksReconciled": true,
+        "receivingReceiptsPresent": true,
+        "nativePlacementReceipts": true
+      },
+      "apiCostUsd": 0.0040761,
+      "durationMs": 153343,
+      "before": {
+        "observedAt": "2026-11-05T19:03:09.577Z",
+        "inventory": {},
+        "source": {
+          "oak_planks": 128,
+          "cobblestone": 58
+        },
+        "destination": {
+          "cobblestone": 6
+        },
+        "bounds": {
+          "min": [
+            -47,
+            64,
+            2
+          ],
+          "max": [
+            -36,
+            71,
+            13
+          ],
+          "origin": [
+            -45,
+            64,
+            4
+          ]
+        }
+      },
+      "after": {
+        "observedAt": "2026-11-05T19:05:45.054Z",
+        "inventory": {},
+        "source": {
+          "oak_planks": 128,
+          "cobblestone": 51
+        },
+        "destination": {
+          "cobblestone": 6
+        },
+        "bounds": {
+          "min": [
+            -47,
+            64,
+            2
+          ],
+          "max": [
+            -36,
+            71,
+            13
+          ],
+          "origin": [
+            -45,
+            64,
+            4
+          ]
+        }
+      },
+      "cells": {
+        "0,0,0": "cobblestone",
+        "0,1,0": "cobblestone",
+        "0,2,0": "cobblestone",
+        "1,0,0": "air",
+        "1,1,0": "air",
+        "1,2,0": "cobblestone",
+        "2,0,0": "cobblestone",
+        "2,1,0": "cobblestone",
+        "2,2,0": "cobblestone"
+      },
+      "planning": {
+        "latencyMs": 58959,
+        "proposal": {
+          "kind": "plan",
+          "message": "I can build the requested arch using the native arch compiler, which produces exactly two full-height pillars and a top beam with an open center for 3x1x3 dimensions — seven cobblestone total.",
+          "steps": [
+            {
+              "action": "build_structure",
+              "depth": 1,
+              "height": 3,
+              "material": "cobblestone",
+              "offset": [
+                0,
+                0,
+                0
+              ],
+              "structure": "arch",
+              "width": 3
+            }
+          ]
+        }
+      },
+      "nativeTasks": [
+        {
+          "id": "11263d0a-4635-4915-8b92-0ba057de1b64",
+          "operationId": "25f37ae8-6ac6-41b6-9e5c-7352ff6bd446:step:0",
+          "action": "build_structure",
+          "status": "complete",
+          "placements": 7,
+          "receiptCount": 8,
+          "receiptsSha256": "1d2d3b6d07f6ee74b620e36ef52c4d933c905ea3a380540021b25d14ec56e306",
+          "pendingKind": null
+        }
+      ],
+      "lastReturnedUsageReceipt": {
+        "model": "glm-4.7",
+        "responseId": "20261106030312e0a995a5aba7409e",
+        "requestId": "7cce2ba87cf9647b, 27d646ff-05e1-43cb-a510-6a182fb0986c",
+        "requestSha256": "f9cabb40679cb3f9d50c90f9ef996599ee00bd88c44d4b757bfc20e685b4c83b",
+        "costNanoUsd": 4076100,
+        "latencyMs": 56473,
+        "recordedAt": "2026-11-05T19:04:08.767Z",
+        "usage": {
+          "prompt_tokens": 3715,
+          "completion_tokens": 222
+        },
+        "pricing": {
+          "model": "glm-4.7",
+          "inputNanoUsd": 900,
+          "outputNanoUsd": 3300,
+          "contextTokens": 204800,
+          "source": "https://router-api.0g.ai/v1/models",
+          "observedAt": "2026-11-05T19:03:12.278Z"
+        }
+      }
+    },
+    {
+      "trial": "arch",
+      "slotName": "CityAgent3",
+      "prompt": "Build one cobblestone arch at relative offset [0,0,0] in my own plot. It must be exactly three blocks wide, one block deep and three blocks high: two full-height end pillars and a top connecting block. Keep the two central cells below the top open. Use exactly seven cobblestone. Do nothing else.",
+      "startedAt": "2026-11-05T19:05:45.112Z",
+      "status": "complete",
+      "passed": true,
+      "checks": {
+        "sevenExpectedBlocks": true,
+        "centralOpeningClear": true,
+        "exactlySevenMaterials": true,
+        "exactlySevenPlacements": true,
+        "nativeTasksReconciled": true,
+        "receivingReceiptsPresent": true,
+        "nativePlacementReceipts": true
+      },
+      "apiCostUsd": 0.015746000000000003,
+      "durationMs": 99038,
+      "before": {
+        "observedAt": "2026-11-05T19:05:46.167Z",
+        "inventory": {},
+        "source": {
+          "oak_planks": 128,
+          "cobblestone": 58
+        },
+        "destination": {
+          "cobblestone": 6
+        },
+        "bounds": {
+          "min": [
+            7,
+            64,
+            26
+          ],
+          "max": [
+            18,
+            71,
+            37
+          ],
+          "origin": [
+            9,
+            64,
+            28
+          ]
+        }
+      },
+      "after": {
+        "observedAt": "2026-11-05T19:07:27.314Z",
+        "inventory": {},
+        "source": {
+          "oak_planks": 128,
+          "cobblestone": 51
+        },
+        "destination": {
+          "cobblestone": 6
+        },
+        "bounds": {
+          "min": [
+            7,
+            64,
+            26
+          ],
+          "max": [
+            18,
+            71,
+            37
+          ],
+          "origin": [
+            9,
+            64,
+            28
+          ]
+        }
+      },
+      "cells": {
+        "0,0,0": "cobblestone",
+        "0,1,0": "cobblestone",
+        "0,2,0": "cobblestone",
+        "1,0,0": "air",
+        "1,1,0": "air",
+        "1,2,0": "cobblestone",
+        "2,0,0": "cobblestone",
+        "2,1,0": "cobblestone",
+        "2,2,0": "cobblestone"
+      },
+      "planning": {
+        "latencyMs": 4417,
+        "proposal": {
+          "kind": "plan",
+          "message": "I can build the 3-wide, 1-deep, 3-high cobblestone arch at offset [0,0,0], which uses seven cobblestone from real materials.",
+          "steps": [
+            {
+              "action": "build_structure",
+              "structure": "arch",
+              "width": 3,
+              "depth": 1,
+              "height": 3,
+              "material": "cobblestone",
+              "offset": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      },
+      "nativeTasks": [
+        {
+          "id": "8368e897-3a41-4dd4-84c6-fb7c6c3a4b8a",
+          "operationId": "fcb3fb62-c619-4043-a248-b199ed23b7cc:step:0",
+          "action": "build_structure",
+          "status": "complete",
+          "placements": 7,
+          "receiptCount": 8,
+          "receiptsSha256": "a9a51a2cbffee344a7739da9765c05746027e9eb0ee77bea719df1e2192b15a8",
+          "pendingKind": null
+        }
+      ],
+      "lastReturnedUsageReceipt": {
+        "model": "claude-sonnet-5-5",
+        "responseId": "msg_011CgkJZoW6pcvD2NotZM1FE",
+        "requestId": "req_011CgkJZoMg1dg3Z2NV9oqPK",
+        "costNanoUsd": 15746000,
+        "recordedAt": "2026-11-05T19:05:50.782Z",
+        "usage": {
+          "input_tokens": 6038,
+          "output_tokens": 367,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        }
+      }
+    },
+    {
+      "trial": "bench",
+      "slotName": "CityAgent2",
+      "prompt": "Build an original oak_planks bench at relative offset [0,0,4] in my own plot, bounded by four blocks wide, two blocks deep and three blocks high, using at most fourteen blocks. Include a four-block-wide raised seat at relative y=1 and z=0, end legs at x=0 and x=3 in both depth rows at y=0, two back posts at x=0 and x=3 at y=1,z=1, and a full-width top rail at y=2,z=1. Keep the two middle back cells at y=1,z=1 open. Use a custom blueprint, not a named house, wall or platform. Do nothing else.",
+      "startedAt": "2026-11-05T19:07:27.378Z",
+      "status": "failed",
+      "passed": false,
+      "checks": {
+        "raisedSeat": false,
+        "endLegs": false,
+        "backPosts": false,
+        "topRail": false,
+        "openBack": true,
+        "boundedMaterialUse": false,
+        "nativeTasksReconciled": true,
+        "receivingReceiptsPresent": false,
+        "nativePlacementReceipts": true
+      },
+      "apiCostUsd": 0.0048513,
+      "durationMs": 192431,
+      "error": "COMPARISON_CONSTRAINT_FAILED_PRESERVE_BUILD_AND_RECEIPTS",
+      "before": {
+        "observedAt": "2026-11-05T19:07:28.903Z",
+        "inventory": {},
+        "source": {
+          "oak_planks": 128,
+          "cobblestone": 51
+        },
+        "destination": {
+          "cobblestone": 6
+        },
+        "bounds": {
+          "min": [
+            -47,
+            64,
+            2
+          ],
+          "max": [
+            -36,
+            71,
+            13
+          ],
+          "origin": [
+            -45,
+            64,
+            4
+          ]
+        }
+      },
+      "after": {
+        "observedAt": "2026-11-05T19:10:42.549Z",
+        "inventory": {},
+        "source": {
+          "oak_planks": 128,
+          "cobblestone": 51
+        },
+        "destination": {
+          "cobblestone": 6
+        },
+        "bounds": {
+          "min": [
+            -47,
+            64,
+            2
+          ],
+          "max": [
+            -36,
+            71,
+            13
+          ],
+          "origin": [
+            -45,
+            64,
+            4
+          ]
+        }
+      },
+      "cells": {
+        "0,0,0": "air",
+        "0,0,1": "air",
+        "0,1,0": "air",
+        "0,1,1": "air",
+        "0,2,0": "air",
+        "0,2,1": "air",
+        "1,0,0": "air",
+        "1,0,1": "air",
+        "1,1,0": "air",
+        "1,1,1": "air",
+        "1,2,0": "air",
+        "1,2,1": "air",
+        "2,0,0": "air",
+        "2,0,1": "air",
+        "2,1,0": "air",
+        "2,1,1": "air",
+        "2,2,0": "air",
+        "2,2,1": "air",
+        "3,0,0": "air",
+        "3,0,1": "air",
+        "3,1,0": "air",
+        "3,1,1": "air",
+        "3,2,0": "air",
+        "3,2,1": "air"
+      },
+      "planning": {
+        "latencyMs": 192236,
+        "error": "The operation was aborted due to timeout"
+      },
+      "nativeTasks": [],
+      "failureClassification": "0G geometry response timed out at the 120-second request bound. No bench blueprint or native bench effect was returned. Original runner reported a generic constraint failure using a retained earlier workflow; this classification retains that original failure and corrects its explanation.",
+      "lastReturnedUsageReceipt": {
+        "model": "glm-4.7",
+        "responseId": "202611060307311e49c05aa957461b",
+        "requestId": "edef4ae43cffa349, 3407a056-daa4-4c23-985c-a6aa2f510860",
+        "requestSha256": "b9e53d5899dd883cd707491336693c84a1cb9b75095e0e97c60a13531340f719",
+        "costNanoUsd": 4851300,
+        "latencyMs": 69409,
+        "recordedAt": "2026-11-05T19:08:40.301Z",
+        "usage": {
+          "prompt_tokens": 3865,
+          "completion_tokens": 416
+        },
+        "pricing": {
+          "model": "glm-4.7",
+          "inputNanoUsd": 900,
+          "outputNanoUsd": 3300,
+          "contextTokens": 204800,
+          "source": "https://router-api.0g.ai/v1/models",
+          "observedAt": "2026-11-05T19:07:30.879Z"
+        }
+      }
+    },
+    {
+      "trial": "bench",
+      "slotName": "CityAgent3",
+      "prompt": "Build an original oak_planks bench at relative offset [0,0,4] in my own plot, bounded by four blocks wide, two blocks deep and three blocks high, using at most fourteen blocks. Include a four-block-wide raised seat at relative y=1 and z=0, end legs at x=0 and x=3 in both depth rows at y=0, two back posts at x=0 and x=3 at y=1,z=1, and a full-width top rail at y=2,z=1. Keep the two middle back cells at y=1,z=1 open. Use a custom blueprint, not a named house, wall or platform. Do nothing else.",
+      "startedAt": "2026-11-05T19:10:42.623Z",
+      "status": "failed",
+      "passed": false,
+      "apiCostUsd": 0.025085999999999997,
+      "durationMs": 246939,
+      "error": "COMPARISON_TASK_TIMEOUT_PRESERVE_FOR_RECONCILIATION",
+      "before": {
+        "observedAt": "2026-11-05T19:10:44.121Z",
+        "inventory": {},
+        "source": {
+          "oak_planks": 128,
+          "cobblestone": 51
+        },
+        "destination": {
+          "cobblestone": 6
+        },
+        "bounds": {
+          "min": [
+            7,
+            64,
+            26
+          ],
+          "max": [
+            18,
+            71,
+            37
+          ],
+          "origin": [
+            9,
+            64,
+            28
+          ]
+        }
+      },
+      "planning": {
+        "latencyMs": 6520,
+        "proposal": {
+          "kind": "plan",
+          "message": "I can request a bounded custom oak_planks bench build at the given offset; the designer will resolve the exact cells.",
+          "steps": [
+            {
+              "material": "oak_planks",
+              "width": 4,
+              "depth": 2,
+              "height": 3,
+              "offset": [
+                0,
+                0,
+                4
+              ],
+              "parts": [
+                {
+                  "min": [
+                    0,
+                    1,
+                    0
+                  ],
+                  "max": [
+                    3,
+                    1,
+                    0
+                  ]
+                },
+                {
+                  "min": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "max": [
+                    0,
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "min": [
+                    3,
+                    0,
+                    0
+                  ],
+                  "max": [
+                    3,
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "min": [
+                    0,
+                    1,
+                    1
+                  ],
+                  "max": [
+                    0,
+                    1,
+                    1
+                  ]
+                },
+                {
+                  "min": [
+                    3,
+                    1,
+                    1
+                  ],
+                  "max": [
+                    3,
+                    1,
+                    1
+                  ]
+                },
+                {
+                  "min": [
+                    0,
+                    2,
+                    1
+                  ],
+                  "max": [
+                    3,
+                    2,
+                    1
+                  ]
+                }
+              ],
+              "voids": [
+                {
+                  "min": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "max": [
+                    2,
+                    1,
+                    1
+                  ]
+                }
+              ],
+              "action": "build_structure"
+            }
+          ]
+        }
+      },
+      "nativeTasks": [
+        {
+          "id": "e0dbefbb-0f53-4f7d-9d3e-1d5890c38ee4",
+          "operationId": "de56ab72-e772-4d70-865e-77c6aa773216:step:0",
+          "action": "build_structure",
+          "status": "running",
+          "placements": 14,
+          "receiptCount": 5,
+          "receiptsSha256": "0666561cc0823c556de4460546a7b71e300681eaa11a7f63f4c91aa73317633e",
+          "pendingKind": "place"
+        }
+      ],
+      "failureClassification": "Valid Claude geometry returned; native walking stalled beside placed legs and exceeded the 240-second task deadline. Recovery is a separate run.",
+      "lastReturnedUsageReceipt": {
+        "model": "claude-sonnet-5-5",
+        "responseId": "msg_011CgkJx1iSHKKGySDRUjAAM",
+        "requestId": "req_011CgkJx1aFWNJaFitp5qcQy",
+        "costNanoUsd": 8690000,
+        "recordedAt": "2026-11-05T19:10:50.852Z",
+        "usage": {
+          "input_tokens": 2800,
+          "output_tokens": 309,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        }
+      }
+    }
+  ],
+  "budgets": {
+    "0g": {
+      "limitUsd": 5,
+      "knownTokenCostEstimateUsd": 0.0123546,
+      "completedRequests": 3,
+      "pendingReservationCount": 1,
+      "reservedUnknownChargeUsd": 0.1893888,
+      "uncommittedAllowanceUsd": 4.7982566
+    },
+    "anthropic": {
+      "limitUsd": 0.25,
+      "knownTokenCostEstimateUsd": 0.054228,
+      "completedRequests": 4,
+      "pendingReservationCount": 0,
+      "reservedUnknownChargeUsd": 0,
+      "uncommittedAllowanceUsd": 0.195772
+    }
+  },
+  "limitations": [
+    "Three matched requests per configured model, not a universal creativity benchmark.",
+    "Standard 0G Router mode; no TEE or inference attestation claimed.",
+    "Costs use returned token usage and published prices; the timed-out 0G charge remains unknown and conservatively reserved.",
+    "Controlled fixtures do not count as independent humans or original phase approval.",
+    "Intermediate request receipts within a multi-request planning trial are not all retained.",
+    "No new blockchain transactions or changes to original worlds/inventories were authorized by this comparison."
+  ],
+  "lastReturnedUsageReceipts": {
+    "CityAgent2": {
+      "model": "glm-4.7",
+      "responseId": "202611060307311e49c05aa957461b",
+      "requestId": "edef4ae43cffa349, 3407a056-daa4-4c23-985c-a6aa2f510860",
+      "requestSha256": "b9e53d5899dd883cd707491336693c84a1cb9b75095e0e97c60a13531340f719",
+      "costNanoUsd": 4851300,
+      "latencyMs": 69409,
+      "recordedAt": "2026-11-05T19:08:40.301Z",
+      "usage": {
+        "prompt_tokens": 3865,
+        "completion_tokens": 416
+      },
+      "pricing": {
+        "model": "glm-4.7",
+        "inputNanoUsd": 900,
+        "outputNanoUsd": 3300,
+        "contextTokens": 204800,
+        "source": "https://router-api.0g.ai/v1/models",
+        "observedAt": "2026-11-05T19:07:30.879Z"
+      }
+    },
+    "CityAgent3": {
+      "model": "claude-sonnet-5-5",
+      "responseId": "msg_011CgkJx1iSHKKGySDRUjAAM",
+      "requestId": "req_011CgkJx1aFWNJaFitp5qcQy",
+      "costNanoUsd": 8690000,
+      "recordedAt": "2026-11-05T19:10:50.852Z",
+      "usage": {
+        "input_tokens": 2800,
+        "output_tokens": 309,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0
+      }
+    }
+  }
+}

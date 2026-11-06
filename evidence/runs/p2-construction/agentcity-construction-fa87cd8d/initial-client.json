@@ -1,0 +1,133 @@
+{
+  "schema": "agentcity.p2.construction-client.v1",
+  "phase": "initial",
+  "status": "pass",
+  "started_at": "2026-10-29T18:40:09.240Z",
+  "independent_humans": 0,
+  "scripted_roles": true,
+  "checks": [
+    {
+      "name": "fixed-access-waypoint-7,0,7",
+      "goal_relative": [
+        7,
+        0,
+        7
+      ],
+      "actual_server_position": [
+        -4.5,
+        81,
+        3.499999999998657
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:40:24.741Z"
+    },
+    {
+      "name": "fixed-access-waypoint-13,3,7",
+      "goal_relative": [
+        13,
+        3,
+        7
+      ],
+      "actual_server_position": [
+        1.3360893280785469,
+        84,
+        3.4999999999978364
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:40:25.967Z"
+    },
+    {
+      "name": "fixed-access-waypoint-19,6,7",
+      "goal_relative": [
+        19,
+        6,
+        7
+      ],
+      "actual_server_position": [
+        7.5,
+        87,
+        3.4999999999970157
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:40:27.456Z"
+    },
+    {
+      "name": "fixed-access-waypoint-25,9,7",
+      "goal_relative": [
+        25,
+        9,
+        7
+      ],
+      "actual_server_position": [
+        13.336089328078547,
+        90,
+        3.499999999996195
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:40:28.687Z"
+    },
+    {
+      "name": "fixed-access-waypoint-19,6,7",
+      "goal_relative": [
+        19,
+        6,
+        7
+      ],
+      "actual_server_position": [
+        7.5,
+        87,
+        3.4999999999963594
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:40:30.474Z"
+    },
+    {
+      "name": "fixed-access-waypoint-13,3,7",
+      "goal_relative": [
+        13,
+        3,
+        7
+      ],
+      "actual_server_position": [
+        1.6397381687870745,
+        84,
+        3.499999999996536
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:40:32.220Z"
+    },
+    {
+      "name": "fixed-access-waypoint-7,0,7",
+      "goal_relative": [
+        7,
+        0,
+        7
+      ],
+      "actual_server_position": [
+        -4.522437825362822,
+        81,
+        3.601311480806204
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:40:34.221Z"
+    },
+    {
+      "name": "access-only-calibration-preserves-all144-stock-and-empty-circuit",
+      "stock": {
+        "minecraft:lever": 4,
+        "minecraft:redstone": 19,
+        "minecraft:redstone_lamp": 3,
+        "minecraft:redstone_torch": 37,
+        "minecraft:repeater": 16,
+        "minecraft:stone_bricks": 65
+      },
+      "placements": 0,
+      "revision": 0,
+      "status": "pass",
+      "at": "2026-10-29T18:40:34.285Z"
+    }
+  ],
+  "live0GVerified": false,
+  "spending": 0,
+  "finished_at": "2026-10-29T18:40:34.787Z"
+}

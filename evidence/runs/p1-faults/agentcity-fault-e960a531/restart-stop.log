@@ -1,0 +1,86 @@
+Starting org.bukkit.craftbukkit.Main
+[15:42:01 INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.12.1+1-LTS; Eclipse Adoptium Temurin-21.0.12.1+1) on Linux 6.12.76-linuxkit (aarch64)
+[15:42:01 INFO]: [bootstrap] Loading Paper 1.21.11-132-ver/1.21.11@c5eb079 (2026-05-11T11:43:09Z) for Minecraft 1.21.11
+[15:42:01 INFO]: [PluginInitializerManager] Initializing plugins...
+[15:42:01 INFO]: [PluginInitializerManager] Initialized 2 plugins
+[15:42:01 INFO]: [PluginInitializerManager] Bukkit plugins (2):
+ - AgentCity (0.1.0), AgentCityWorldFixture (0.1.0)
+[15:42:02 INFO]: [ReobfServer] Remapping server...
+[15:42:06 INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[15:42:06 INFO]: Found new data pack file/bukkit, loading it automatically
+[15:42:06 INFO]: Found new data pack paper, loading it automatically
+[15:42:07 INFO]: No existing world data, creating new world
+[15:42:07 ERROR]: No key layers in MapLike[{}]
+[15:42:07 INFO]: Loaded 1470 recipes
+[15:42:07 INFO]: Loaded 1584 advancements
+[15:42:07 INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Initialising converters for DataConverter...
+[15:42:08 INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Finished initialising converters for DataConverter in 387.8ms
+[15:42:08 INFO]: Starting minecraft server version 1.21.11
+[15:42:08 INFO]: Loading properties
+[15:42:08 INFO]: This server is running Paper version 1.21.11-132-ver/1.21.11@c5eb079 (2026-05-11T11:43:09Z) (Implementing API version 1.21.11-R0.1-SNAPSHOT)
+[15:42:08 INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[15:42:08 INFO]: Server Ping Player Sample Count: 12
+[15:42:08 INFO]: Using 4 threads for Netty based IO
+[15:42:08 INFO]: [ReobfServer] Done remapping server in 6750ms.
+[15:42:09 INFO]: [MoonriseCommon] Paper is using 1 worker threads, 1 I/O threads
+[15:42:09 INFO]: Default game type: SURVIVAL
+[15:42:09 INFO]: Generating keypair
+[15:42:09 INFO]: Starting Minecraft server on *:25565
+[15:42:09 INFO]: Paper: Using libdeflate (Linux aarch64) compression from Velocity.
+[15:42:09 INFO]: Paper: Using OpenSSL 3.x.x (Linux aarch64) cipher from Velocity.
+[15:42:09 INFO]: [AgentCityWorldFixture] Loading server plugin AgentCityWorldFixture v0.1.0
+[15:42:09 INFO]: [AgentCity] Loading server plugin AgentCity v0.1.0
+[15:42:09 WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[15:42:09 WARN]: The server will make no attempt to authenticate usernames. Beware.
+[15:42:09 WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[15:42:09 WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[15:42:09 INFO]: Preparing level "agentcity-fault-e960a531"
+[15:42:09 ERROR]: No key layers in MapLike[{}]
+[15:42:09 INFO]: Selecting spawn point for world 'minecraft:overworld'...
+[15:42:09 ERROR]: No key layers in MapLike[{}]
+[15:42:09 INFO]: Selecting spawn point for world 'minecraft:the_nether'...
+[15:42:10 ERROR]: No key layers in MapLike[{}]
+[15:42:10 INFO]: Selecting spawn point for world 'minecraft:the_end'...
+[15:42:10 INFO]: Loading 0 persistent chunks for world 'minecraft:overworld'...
+[15:42:10 INFO]: Preparing spawn area: 100%
+[15:42:10 INFO]: Prepared spawn area in 993 ms
+[15:42:10 INFO]: Loading 0 persistent chunks for world 'minecraft:the_nether'...
+[15:42:10 INFO]: Preparing spawn area: 100%
+[15:42:10 INFO]: Prepared spawn area in 698 ms
+[15:42:10 INFO]: Loading 0 persistent chunks for world 'minecraft:the_end'...
+[15:42:10 INFO]: Preparing spawn area: 100%
+[15:42:10 INFO]: Prepared spawn area in 171 ms
+[15:42:10 INFO]: Done preparing level "agentcity-fault-e960a531" (1.146s)
+[15:42:10 INFO]: [AgentCityWorldFixture] Enabling AgentCityWorldFixture v0.1.0
+[15:42:10 WARN]: A manual (plugin-induced) save has been detected while server is configured to auto-save. This may affect performance.
+[15:42:10 INFO]: [AgentCity] Enabling AgentCity v0.1.0
+[15:42:11 INFO]: [AgentCity] Local non-token AgentCity boundary active; control port must be published on host loopback only.
+[15:42:11 INFO]: [spark] Starting background profiler...
+[15:42:11 INFO]: Running delayed init tasks
+[15:42:11 INFO]: Done (10.085s)! For help, type "help"
+[15:42:11 INFO]: *************************************************************************************
+[15:42:11 INFO]: This is the first time you're starting this server.
+[15:42:11 INFO]: It's recommended you read our 'Getting Started' documentation for guidance.
+[15:42:11 INFO]: View this and more helpful information here: https://docs.papermc.io/paper/next-steps
+[15:42:11 INFO]: *************************************************************************************
+[15:42:11 WARN]: *************************************************************************************
+[15:42:11 WARN]: You are running the latest build for your Minecraft version (1.21.11)
+[15:42:11 WARN]: However, you are 6 release(s) behind the latest stable release (26.3)!
+[15:42:11 WARN]: It is recommended that you update as soon as possible
+[15:42:11 WARN]: https://papermc.io/downloads/paper
+[15:42:11 WARN]: *************************************************************************************
+[15:42:11 INFO]: UUID of player WorldBuilder is 43a86a2e-ba2e-350a-a576-a65b67aa87d1
+[15:42:12 INFO]: WorldBuilder joined the game
+[15:42:12 INFO]: WorldBuilder[/172.17.0.1:59806] logged in with entity id 1 at ([agentcity-fault-e960a531]-14.5, 81.0, 3.5)
+[15:42:16 INFO]: UUID of player WorldRequester is a56f0418-1cf4-3f1e-a0ab-9b34ba31f192
+[15:42:16 INFO]: WorldRequester joined the game
+[15:42:16 INFO]: WorldRequester[/172.17.0.1:57532] logged in with entity id 2 at ([agentcity-fault-e960a531]-12.5, 81.0, -6.5)
+[15:42:16 INFO]: WorldRequester has made the advancement [Hot Stuff]
+[15:42:20 INFO]: UUID of player WorldInspector is 563add28-410b-350e-9001-a9be4cc7bd00
+[15:42:20 INFO]: WorldInspector joined the game
+[15:42:20 INFO]: WorldInspector[/172.17.0.1:57538] logged in with entity id 3 at ([agentcity-fault-e960a531]12.5, 81.0, 5.5)
+[15:42:24 INFO]: UUID of player WorldStranger is 3febf1ac-21e5-394e-bb24-e8731e755afa
+[15:42:24 INFO]: WorldStranger joined the game
+[15:42:24 INFO]: WorldStranger[/172.17.0.1:61542] logged in with entity id 4 at ([agentcity-fault-e960a531]12.5, 81.0, -6.5)
+[15:42:24 INFO]: WorldStranger has made the advancement [Stone Age]
+2026-10-29T15:42:01.285123922Z ServerMain WARN Advanced terminal features are not available in this environment

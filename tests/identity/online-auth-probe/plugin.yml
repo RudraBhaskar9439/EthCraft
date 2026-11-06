@@ -1,0 +1,8 @@
+name: AgentCityOnlineAuth
+version: 0.1.0
+main: org.agentcity.authprobe.AgentCityOnlineAuth
+api-version: '1.21.11'
+commands:
+  walletlink:
+    description: Request an identity-only link for this authenticated login
+    usage: /walletlink PUBLIC_WALLET_ADDRESS

@@ -1,0 +1,1 @@
+{"status":"fail","server":"26.3-231-8a170a3 (MC: 26.3)","error":"java.lang.NoSuchMethodError: \u0027net.minecraft.world.level.block.state.BlockState org.bukkit.craftbukkit.block.CraftBlock.getNMS()\u0027","outside_plot_probe_restored":true}

@@ -1,0 +1,34 @@
+{
+  "scope": "Actual in-game Game Coins transfer between two disclosed Mineflayer fixtures; no agents created, real wallets, blockchain action or independently verified people",
+  "players": [
+    "PlayTester",
+    "PlayReceiver"
+  ],
+  "status": "fail",
+  "independentHumansVerified": 0,
+  "publicTransactions": 0,
+  "startedAt": "2026-10-31T06:21:51.960Z",
+  "checks": [],
+  "commands": [
+    {
+      "player": "PlayTester",
+      "command": "/wallet",
+      "replies": [
+        "Your wallet contains internal Game Coins only; no cryptocurrency or cash-out.",
+        "Request queued: balance (7e83e631).",
+        "PlayTester: 100 Game Coins available, 0 held. | Game Coins exist only on this server and have no real-world value. | Recent starter grant: +100 Game Coins."
+      ]
+    },
+    {
+      "player": "PlayReceiver",
+      "command": "/wallet",
+      "replies": [
+        "Your wallet contains internal Game Coins only; no cryptocurrency or cash-out.",
+        "Request queued: balance (61ba1c9d).",
+        "Welcome! You received your one-time 100 Game Coins starter grant. | Game Coins exist only on this server and have no real-world value. | Recent starter grant: +100 Game Coins."
+      ]
+    }
+  ],
+  "error": "PlayReceiver timed out waiting for reply to /wallet",
+  "finishedAt": "2026-10-31T06:22:34.367Z"
+}

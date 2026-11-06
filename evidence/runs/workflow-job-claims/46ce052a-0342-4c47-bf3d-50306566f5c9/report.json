@@ -1,0 +1,8 @@
+{
+  "status": "pass",
+  "checks": [
+    "a job-scoped worker cannot claim the older other job",
+    "existing unscoped workers retain their queue behavior"
+  ],
+  "externalTransactions": 0
+}

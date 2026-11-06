@@ -1,0 +1,352 @@
+{
+  "schema": "agentcity.independent.local-readiness-review.v1",
+  "reviewed_at": "2026-10-29T13:43:56.720327+00:00",
+  "reviewer": {
+    "identity": "/root/p0_platform_prereqs",
+    "kind": "AI peer reviewer separate from the root implementer",
+    "independent_human_participant": false
+  },
+  "decision": "approved",
+  "scope": "Approved local non-token Phase 0 technical readiness and entry preparation for local Phase 1 only.",
+  "source_context": {
+    "git_commit": "03ee715d5657333c78daa483391bc43a0e184040",
+    "pre_migration_reference_commit": "1830c77db5c6dd0cabe7d29d51d52211363b6bf7",
+    "review_binding": "Approval is limited to the exact reviewed file SHA-256 map. Later relevant changes require renewed review. Root must bind final evidence/P0.json to this source release and review artifact; this review alone does not mark a phase ready."
+  },
+  "reviewed_file_sha256": {
+    "AGENTS.md": "4b289d84e77fc8374e5d8e17e36128be1eb488a5d5f3a4172ea6aa75dc0b5749",
+    "README.md": "3fd5c43987459cecf7c74a613b10b54d123bdabd4b8693b6285fc43361bd979f",
+    "config/p0-policy.json": "5ccc40514792b3e8079685716b5f616bfe58dad04151b74404bf79205c60e2aa",
+    "docs/DECISIONS.md": "3063ed3d182cced9e4fc98fbcc117c5441b8430ff73ffc937ba81c2bddf6c8ed",
+    "docs/IMPLEMENTATION_PLAN.md": "258eff9b84cd6b90f12857279dad0615741e62a099166d8415028ac505a61e16",
+    "docs/P0_CHECKPOINT.md": "d53e8046e9b771a80f5a9aec3bb8b5cb74966d458a575470f247e03435e68977",
+    "docs/P0_POLICY_BASELINE.md": "3a51096f508e7f5c9c2c4aefe00e2fdb74889e1c5cff30f7b8420bca01a513cf",
+    "docs/RESEARCH_PROTOCOL.md": "63fdfa67bc5ffbc6c2073393dcd8d083ea1067bee6e15e1da820a0ad95e8f4f7",
+    "docs/TESTING.md": "cf6ae2f1b9357b0d54799035f87aef44ec788a7ef8a0f69bbaa89b7e96e15983",
+    "docs/UPSTREAM_REUSE.md": "87b8fb74e40012b90bcdea21b6333f66d4f7cdb00d584ec9a73432b9ca8bd7b7",
+    "evidence/P4.json": "bf8fe01af744a6cdf67c94eda79f7ebbf94d08401891f3a83bfa85cfab4bc9ac",
+    "evidence/P5.json": "51636ada1d68d1e73cc0170b6a698716d4ff16c4554d517c6c05f3cf265ab7ed",
+    "evidence/runs/p0-local-compatibility/attempt-01/run-report.json": "419d8d86573932e11d2c2be677eb9c4a2ba5e2204518bd7d0037fca1305bce51",
+    "evidence/runs/p0-local-compatibility/attempt-02/run-report.json": "a77a32940eb8e5858cd0c55458d5ee6258ada5158a885fa8ed6c9cdf0cf01aaa",
+    "evidence/runs/p0-local-compatibility/attempt-03/run-report.json": "65a0d12a8cd626abc08963d8a42f8e2e892a2854c7da1e9214ff6d6db722acdf",
+    "evidence/runs/p0-local-compatibility/attempt-04/run-report.json": "ccd376a40fad85463afd8b0ae1d32c85d5af3ba848618589dfa6cf9e3900981a",
+    "evidence/runs/p0-local-compatibility/attempt-05/run-report.json": "66c815c98227380539b55dd0582d87147cb5a932e7b1f4ff23527fbbd06360a7",
+    "evidence/runs/p0-local-compatibility/attempt-06/probe-report.json": "95978a0c0b7e7081cf4b0b5b6b331e5256013148e2f3610e5690e127144ddc09",
+    "evidence/runs/p0-local-compatibility/attempt-06/run-report.json": "415a32062472397060da64e414869a2ecf255e8bf4b34ef0370c98a470e480e5",
+    "evidence/runs/p0-local-compatibility/attempts.json": "6a3d76c3ddfbcb8a5eac44ae4ab3fad6bb945f56ec234d3c493d55b96d05ad80",
+    "evidence/runs/p0-local-compatibility/environment.json": "a286d8fb12c66632acfdba56c8c8e5fd48b0e48cb29a6f11186c016a749fc618",
+    "evidence/runs/p0-local-compatibility/npm-audit.json": "f60cb9b772c82079bcae12da32661bac61b3568ee5579ae698a212c2eae0bbbc",
+    "evidence/runs/p0-local-compatibility/readiness-assessment.json": "f1f3c5cb4e0c14e86081cdca02e28096a6aaa85f5f7bf9e401f25f3d62256762",
+    "evidence/runs/p0-local-compatibility/unit-tests.json": "8dfab044db40d54d27c82c19f89b8eeaeb84b5b3cb1d09d749cf50151eb69a38",
+    "evidence/runs/p0-local-compatibility/upstream-compatibility-research.json": "36fc4609dbf3b8fe3bdced1c75dc7db06f0ce4e8a57db9cf6a9c014edc2f991c",
+    "fixtures/candidates/redstone-compiler/LICENSE": "61feb77f116e6e3a9a505863a9388749d3413df7ec0aef41927c7b9da7b0a083",
+    "fixtures/candidates/redstone-compiler/calculator-candidate-v1.json": "d14cc0956831efeb68df4b9aba588e946bbd3b546d6a2d37be02194378b1922b",
+    "fixtures/candidates/redstone-compiler/calculator-tests-candidate-v1.json": "8ec4afb0f561370cf74fc686a3683a01c6d0758fe6f0c15e33c8e1b5926e5897",
+    "fixtures/policy/authority.json": "0d9be53f124480de53f77ee6e84eb4cb7cff303bea8081d5b4cbba33421b786d",
+    "fixtures/policy/transitions.json": "2497603144aa1de01021386664698743b47fbe7b648e9df69f4a8b3874775a81",
+    "planning/gate-migration-2026-10-29.json": "e60961c36e0bdeae3a4a7afe8828c4b521c477513547e4cfe27bbdbef9c191c1",
+    "planning/phases.json": "278939891023300e468b628c30f6aa9b456ea5da71fa0413059888c369964a72",
+    "planning/scope.json": "14bd8e3de782e51c8cf839e4d323a208a246ade49a5a12f5dca1215b1f6560b5",
+    "planning/summary.json": "af0ada7102e1223dfe17b369f6f95e56dc486ea7bc4098993415b7a623cc6b16",
+    "planning/upstreams.json": "473584224ebf19aa058c8062d5c9006979754c64cc4aaabefb102294865d46ba",
+    "planning/verification.json": "55fc49c07026c7a148e03fd01f986a31e01b602bc981c7707584bbb11ce03654",
+    "tests/compatibility/package-lock.json": "644d0168c7bd3d406eeb489e55469fdf2f0e70fe40debcdbe18c9f0b1a1fa915",
+    "tests/compatibility/package.json": "f495f1b08d7579a45ee9ae7ec7758cdebfc6cb4fc5ed10928c01f42cdcb0dfbd",
+    "tests/compatibility/plugin/CompatibilityPlugin.java": "998df25cdd39d05f4e9d694e29e392c2a66560df7d7811125b0c94746bae8bf8",
+    "tests/compatibility/plugin/plugin.yml": "7442cd56b0615fe88610db2e1d5afe1624cd9d97e31e5bd9d34dc9b61cdf9701",
+    "tests/compatibility/probe.cjs": "499e795686211c65aef35140549632f26561f4dbb5be9d28f741bba30e44695e",
+    "tests/compatibility/run.py": "9854d303a4158b268fd6c54d630927195705693af06c2268a0a970fd6f403889",
+    "tests/compatibility/versions.json": "f9ee9617748df8545cadd5469d383b11f68ec43af6c9181d4259fcd1bb913502",
+    "tests/test_candidate_manifest.py": "3b0f5625f696d1a033fa0f8f3a4585a562dd6edd8d9c509ce902b7e67322ceb5",
+    "tests/test_compatibility_safety.py": "38ca2d593041071db0dbbca654660c2f8dfbb6d94b053ac3f23936afcfe28c95",
+    "tests/test_policy_baseline.py": "64fc96eb92903b479c3d919d64120499a13f81d787543edf6cbcb72ee9e3a983"
+  },
+  "findings": [
+    {
+      "severity": "information",
+      "code": "REQUIREMENTS_PRESERVED",
+      "detail": "All 257 prior semantic requirements independently match the pre-migration committed source after excluding scheduling identifiers. Mapping is complete and bijective."
+    },
+    {
+      "severity": "information",
+      "code": "DEFERRED_GATES_REMAIN_BLOCKED",
+      "detail": "Actual independent participants are mandatory in blocked P4-029; actual token-platform suitability and funded-chain preflight remain mandatory in blocked P5-024/P5-025."
+    },
+    {
+      "severity": "information",
+      "code": "REAL_BOUNDED_COMPATIBILITY",
+      "detail": "Retained attempt 06 reports seven passing real Paper/plugin/Mineflayer assertion groups. Five failed setup/probe attempts remain retained. No world rerun was performed by this reviewer."
+    },
+    {
+      "severity": "information",
+      "code": "HISTORICAL_FIXTURE_ONLY",
+      "detail": "Paper 1.21.11 build 132 is explicitly vendor-unsupported. Approval covers observed isolated historical compatibility, not current maintenance, production security or authenticated account support. The recorded moderate npm advisory remains a disclosed adoption limit."
+    },
+    {
+      "severity": "information",
+      "code": "CANDIDATE_NOT_FUNCTIONAL_PROOF",
+      "detail": "The 144-placement MIT data candidate, including three proposed lamps, is complete for P0 review only. It remains candidate_unvalidated, ineligible for funded agreements and without physical calculator results. Actual 16/256, fault/repair and timing evidence remains P1."
+    },
+    {
+      "severity": "information",
+      "code": "POLICY_ORACLES_ONLY",
+      "detail": "Default-deny authority, lifecycle, expiry, ownership, lock/finality and workload rules are adopted engineering oracles. The retained 49 passing infrastructure/schema/policy tests do not establish future runtime guards, measured targets, participant consent or chain behavior."
+    }
+  ],
+  "blocking_findings": [],
+  "case_reviews": [
+    {
+      "case_id": "P0-001",
+      "origin_case_id": "P0-002",
+      "area": "Version compatibility",
+      "decision": "approved",
+      "scope": "bounded local Phase 0 technical readiness",
+      "required_subcases_reviewed": 7,
+      "passed_subcases_retained": 7,
+      "evidence_paths_reviewed": [
+        "tests/compatibility/versions.json",
+        "evidence/runs/p0-local-compatibility/attempt-06/run-report.json",
+        "evidence/runs/p0-local-compatibility/attempt-06/probe-report.json",
+        "evidence/runs/p0-local-compatibility/environment.json"
+      ],
+      "finding": "Actual Paper/plugin/Mineflayer assertions pass in the isolated historical local fixture. This is not maintained production support."
+    },
+    {
+      "case_id": "P0-002",
+      "origin_case_id": "P0-003",
+      "area": "Blueprint definition",
+      "decision": "approved",
+      "scope": "bounded local Phase 0 technical readiness",
+      "required_subcases_reviewed": 3,
+      "passed_subcases_retained": 3,
+      "evidence_paths_reviewed": [
+        "fixtures/candidates/redstone-compiler/calculator-candidate-v1.json",
+        "fixtures/candidates/redstone-compiler/calculator-tests-candidate-v1.json",
+        "fixtures/candidates/redstone-compiler/LICENSE",
+        "evidence/runs/p0-local-compatibility/unit-tests.json"
+      ],
+      "finding": "Complete candidate data, transformed coordinates, material counts, source hashes and expected-input manifest pass static review/tests. Physical calculator validity remains P1."
+    },
+    {
+      "case_id": "P0-003",
+      "origin_case_id": "P0-005",
+      "area": "Authority boundaries",
+      "decision": "approved",
+      "scope": "bounded local Phase 0 technical readiness",
+      "required_subcases_reviewed": 1,
+      "passed_subcases_retained": 1,
+      "evidence_paths_reviewed": [
+        "fixtures/policy/authority.json",
+        "config/p0-policy.json",
+        "docs/P0_POLICY_BASELINE.md",
+        "evidence/runs/p0-local-compatibility/unit-tests.json"
+      ],
+      "finding": "Versioned default-deny role/action matrix and critical privilege-separation properties are adopted as oracles, not runtime enforcement."
+    },
+    {
+      "case_id": "P0-004",
+      "origin_case_id": "P0-006",
+      "area": "Verification configuration",
+      "decision": "approved",
+      "scope": "bounded local Phase 0 technical readiness",
+      "required_subcases_reviewed": 1,
+      "passed_subcases_retained": 1,
+      "evidence_paths_reviewed": [
+        "config/p0-policy.json",
+        "docs/P0_POLICY_BASELINE.md",
+        "evidence/runs/p0-local-compatibility/unit-tests.json"
+      ],
+      "finding": "Reset/settle candidates, hazard refusal model, retry budgets, fault schedule, expiry and observation targets are explicit. P1 and later phases measure/implement them."
+    },
+    {
+      "case_id": "P0-005",
+      "origin_case_id": "P0-007",
+      "area": "Policy adoption",
+      "decision": "approved",
+      "scope": "bounded local Phase 0 technical readiness",
+      "required_subcases_reviewed": 1,
+      "passed_subcases_retained": 1,
+      "evidence_paths_reviewed": [
+        "config/p0-policy.json",
+        "docs/P0_POLICY_BASELINE.md",
+        "evidence/runs/p0-local-compatibility/unit-tests.json"
+      ],
+      "finding": "Current-link uniqueness, relinking consent and immutable prior funded rights are explicit; actual participant consent remains later."
+    },
+    {
+      "case_id": "P0-006",
+      "origin_case_id": "P0-008",
+      "area": "Expiry policy",
+      "decision": "approved",
+      "scope": "bounded local Phase 0 technical readiness",
+      "required_subcases_reviewed": 1,
+      "passed_subcases_retained": 1,
+      "evidence_paths_reviewed": [
+        "config/p0-policy.json",
+        "docs/P0_POLICY_BASELINE.md",
+        "evidence/runs/p0-local-compatibility/unit-tests.json"
+      ],
+      "finding": "Every declared authority clock uses explicit units and half-open validity with equality expired; fixed work/review/absolute deadlines cannot reset on outage or resubmission. Boundary oracles pass."
+    },
+    {
+      "case_id": "P0-007",
+      "origin_case_id": "P0-009",
+      "area": "Resource ownership policy",
+      "decision": "approved",
+      "scope": "bounded local Phase 0 technical readiness",
+      "required_subcases_reviewed": 1,
+      "passed_subcases_retained": 1,
+      "evidence_paths_reviewed": [
+        "config/p0-policy.json",
+        "docs/P0_POLICY_BASELINE.md",
+        "evidence/runs/p0-local-compatibility/unit-tests.json"
+      ],
+      "finding": "Each purchased/resource/reward class has a separate owner and terminal treatment; future parties must approve actual terms before funding."
+    },
+    {
+      "case_id": "P0-008",
+      "origin_case_id": "P0-010",
+      "area": "Inspection evidence lifecycle",
+      "decision": "approved",
+      "scope": "bounded local Phase 0 technical readiness",
+      "required_subcases_reviewed": 1,
+      "passed_subcases_retained": 1,
+      "evidence_paths_reviewed": [
+        "config/p0-policy.json",
+        "docs/P0_POLICY_BASELINE.md",
+        "evidence/runs/p0-local-compatibility/unit-tests.json"
+      ],
+      "finding": "Signed context, immutable pass revision, no early unlock, usable-pass/pending-acceptance protection and canonical release rules are explicit; direct-call enforcement is tested in P8."
+    },
+    {
+      "case_id": "P0-009",
+      "origin_case_id": "P0-011",
+      "area": "Token and allocation policy",
+      "decision": "approved",
+      "scope": "bounded local Phase 0 technical readiness",
+      "required_subcases_reviewed": 1,
+      "passed_subcases_retained": 1,
+      "evidence_paths_reviewed": [
+        "config/p0-policy.json",
+        "docs/P0_POLICY_BASELINE.md",
+        "evidence/runs/p0-local-compatibility/unit-tests.json"
+      ],
+      "finding": "Integer scaling, whole-kit issuance/redemption, retained fractions, UI-one/contract-up-to-eight allocations, exact funding and zero/duplicate recipient rules are defined; no balances or deployments are asserted."
+    },
+    {
+      "case_id": "P0-010",
+      "origin_case_id": "P0-012",
+      "area": "Canonical state and capability matrices",
+      "decision": "approved",
+      "scope": "bounded local Phase 0 technical readiness",
+      "required_subcases_reviewed": 196,
+      "passed_subcases_retained": 196,
+      "evidence_paths_reviewed": [
+        "fixtures/policy/transitions.json",
+        "fixtures/policy/authority.json",
+        "evidence/runs/p0-local-compatibility/unit-tests.json"
+      ],
+      "finding": "All fourteen-state ordered pairs have an explicit policy outcome, with allowed transition actor/guard references and default denial. Tests verify normative fixtures, not future workflow execution."
+    },
+    {
+      "case_id": "P0-011",
+      "origin_case_id": "P0-014",
+      "area": "Chain finality and loss response",
+      "decision": "approved",
+      "scope": "bounded local Phase 0 technical readiness",
+      "required_subcases_reviewed": 1,
+      "passed_subcases_retained": 1,
+      "evidence_paths_reviewed": [
+        "config/p0-policy.json",
+        "docs/P0_POLICY_BASELINE.md",
+        "evidence/runs/p0-local-compatibility/unit-tests.json"
+      ],
+      "finding": "Future delivery requires twelve canonical confirmations plus a finalized source block; unsupported evidence fails closed. Deep reorganization preserves obligations and requires explicit remediation, with no automatic compensation authority. Actual network preflight remains P5."
+    },
+    {
+      "case_id": "P0-012",
+      "origin_case_id": "P0-015",
+      "area": "Recovery and workload targets",
+      "decision": "approved",
+      "scope": "bounded local Phase 0 technical readiness",
+      "required_subcases_reviewed": 1,
+      "passed_subcases_retained": 1,
+      "evidence_paths_reviewed": [
+        "config/p0-policy.json",
+        "docs/P0_POLICY_BASELINE.md",
+        "evidence/runs/p0-local-compatibility/unit-tests.json"
+      ],
+      "finding": "Single-job limits, payload/queue/disk thresholds, response/tick targets and backup/restore criteria are explicit targets; measured success is not claimed."
+    },
+    {
+      "case_id": "P0-013",
+      "origin_case_id": "P0-016",
+      "area": "Cancellation and minimum settlement surface",
+      "decision": "approved",
+      "scope": "bounded local Phase 0 technical readiness",
+      "required_subcases_reviewed": 1,
+      "passed_subcases_retained": 1,
+      "evidence_paths_reviewed": [
+        "config/p0-policy.json",
+        "docs/P0_POLICY_BASELINE.md",
+        "evidence/runs/p0-local-compatibility/unit-tests.json"
+      ],
+      "finding": "Supported funded terminal paths are acceptance or timeout refund, fixed entitlements remain immutable, and requester refusal can leave work unpaid. No unsupported cancellation/team UI is implied."
+    },
+    {
+      "case_id": "P0-014",
+      "origin_case_id": "P0-017",
+      "area": "Research preregistration",
+      "decision": "approved",
+      "scope": "bounded local Phase 0 technical readiness",
+      "required_subcases_reviewed": 1,
+      "passed_subcases_retained": 1,
+      "evidence_paths_reviewed": [
+        "docs/RESEARCH_PROTOCOL.md",
+        "config/p0-policy.json",
+        "evidence/runs/p0-local-compatibility/unit-tests.json"
+      ],
+      "finding": "E1 to E8 protocol, controlled/held-out scenarios, pilot-based trials, privacy and honest negative/null results are documented before comparative outcomes. No experiments are claimed complete."
+    },
+    {
+      "case_id": "P0-015",
+      "origin_case_id": "P0-018",
+      "area": "Upstream reuse review",
+      "decision": "approved",
+      "scope": "bounded local Phase 0 technical readiness",
+      "required_subcases_reviewed": 1,
+      "passed_subcases_retained": 1,
+      "evidence_paths_reviewed": [
+        "planning/upstreams.json",
+        "docs/UPSTREAM_REUSE.md",
+        "tests/compatibility/package-lock.json",
+        "tests/compatibility/versions.json",
+        "evidence/runs/p0-local-compatibility/upstream-compatibility-research.json",
+        "evidence/runs/p0-local-compatibility/npm-audit.json"
+      ],
+      "finding": "Eighteen upstreams have declared roles and license/revision observations; direct spike dependencies and Java are pinned, unknown-license starters remain reference-only, and historical support/audit limitations are retained."
+    }
+  ],
+  "checks_performed": [
+    "Read all 15 P0 scenarios and their proposed evidence mappings.",
+    "Independently compared every migrated semantic requirement with the pre-migration Git commit and its stored hash.",
+    "Verified all mapped evidence files exist and recorded current source/readiness hashes match actual bytes.",
+    "Reviewed current policy matrices, boundary/lock/ownership/finality targets, candidate metadata and tests, compatibility runner/probe and retained live run reports.",
+    "Confirmed all five failed attempts remain and the last run reports seven passed groups.",
+    "Confirmed deferred integration records remain blocked and P1/P2 are not claimed passed."
+  ],
+  "not_approved": [
+    "independent human participation or paid-account ownership",
+    "token-platform permission or any private/testnet exemption",
+    "funded-chain deployments balances or signing authority",
+    "runtime application enforcement and measured performance targets",
+    "functional calculator or staged bot workflow completion",
+    "maintained vendor-supported public or production deployment",
+    "P1 or P2 gate completion"
+  ],
+  "limitations": [
+    "Review used retained live and unit evidence; the reviewer did not rerun the world or re-execute the unit suite.",
+    "A hash establishes content identity, not honest server custody or observations.",
+    "Final source-commit and artifact binding must be recorded by the root before claiming the P0 gate is ready."
+  ]
+}

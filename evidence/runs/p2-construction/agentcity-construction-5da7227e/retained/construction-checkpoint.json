@@ -1,0 +1,94 @@
+{
+  "schema": "agentcity.construction-checkpoint.v1",
+  "binding": {
+    "serverId": "local-inspection-server",
+    "jobId": "agentcity-construction-5da7227e",
+    "agreementVersion": 1,
+    "actorId": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+    "blueprintSha256": "c8704765464a574ec4c797ad78d5294cc167007f66a0abfebd742e0b06711c49",
+    "semanticSha256": "dd49b27812caf0572d9838bfdd134e013247c3d5f2fc228f1b76d3146b9d9d54",
+    "origin": [
+      -12,
+      81,
+      -4
+    ],
+    "constructionAccessSha256": "de8daa6231ef8b7054b5c1c0ca44314fe4cb343f84550b6cc16d00916e843be5"
+  },
+  "completed": [],
+  "receipts": [
+    {
+      "operationId": "cb1529b3-c2f4-4f59-9860-0f83a34257a9",
+      "action": "WITHDRAW",
+      "revision": 0,
+      "item": "minecraft:stone_bricks",
+      "count": 64,
+      "target": null
+    },
+    {
+      "operationId": "bd8c4e3f-8c9a-4284-a12d-76f5679b375a",
+      "action": "WITHDRAW",
+      "revision": 0,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": null
+    },
+    {
+      "operationId": "c094c9c7-9fe8-4c94-b5bc-623429895db7",
+      "action": "WITHDRAW",
+      "revision": 0,
+      "item": "minecraft:lever",
+      "count": 4,
+      "target": null
+    },
+    {
+      "operationId": "8c905c4f-45b1-438d-a3ae-30465cf9a63c",
+      "action": "WITHDRAW",
+      "revision": 0,
+      "item": "minecraft:repeater",
+      "count": 16,
+      "target": null
+    },
+    {
+      "operationId": "8de70419-5841-4191-a387-2f7529040108",
+      "action": "WITHDRAW",
+      "revision": 0,
+      "item": "minecraft:redstone_torch",
+      "count": 37,
+      "target": null
+    }
+  ],
+  "stages": [],
+  "pending": {
+    "command": {
+      "operationId": "fed61c5e-297f-4165-a1a1-0fccc7e2e2de",
+      "serverId": "local-inspection-server",
+      "jobId": "agentcity-construction-5da7227e",
+      "agreementVersion": 1,
+      "actorId": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+      "expectedRevision": 0,
+      "authorizationReference": "local-boundary-authorization",
+      "expiresAtMs": 1793296298795,
+      "action": "WITHDRAW",
+      "params": {
+        "item": "minecraft:redstone",
+        "count": 19
+      }
+    },
+    "beforeInventory": {
+      "minecraft:stone_bricks": 65,
+      "minecraft:lever": 4,
+      "minecraft:repeater": 16,
+      "minecraft:redstone_torch": 37
+    },
+    "item": null,
+    "target": null,
+    "beforeBlock": null,
+    "state": null
+  },
+  "inventory": {
+    "minecraft:stone_bricks": 65,
+    "minecraft:lever": 4,
+    "minecraft:repeater": 16,
+    "minecraft:redstone_torch": 37
+  }
+}

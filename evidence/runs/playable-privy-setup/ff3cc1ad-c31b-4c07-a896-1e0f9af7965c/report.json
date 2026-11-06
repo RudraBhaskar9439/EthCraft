@@ -1,0 +1,60 @@
+{
+  "schema": "agentcity.playable-privy-setup.v1",
+  "recordedAt": "2026-10-31T09:05:23.372Z",
+  "status": "pass",
+  "scope": "Actual provider API authentication, SDK-generated P256 authorization key, and restricted player policy configuration; no managed player signing or production qualification",
+  "sdk": "@privy-io/node@0.37.0",
+  "actualApiAuthenticationVerified": true,
+  "authorizationKeyStoredPrivately": true,
+  "manifestSha256": "d4764d1adea43c717fd579248bb839c6ea4fc8360caed84a23882490e13d84a8",
+  "policy": {
+    "id": "pyil3yzu5jinniuunt5bljgh",
+    "sha256": "5ae68d1cb9afd7cc18136650d2209918e37490533ea3e0da2645830d85818180",
+    "allowedTargets": [
+      "0x85ded2dece45ba255565fb6f4a83430ee3eeeac4",
+      "0x789dab2f22f0161401523ebe858ce88a3b14fae8",
+      "0x83ea7c33c6787e80ad6a0a78c66eb36ee355344d"
+    ]
+  },
+  "allowBroadcast": false,
+  "playerWalletsCreated": 0,
+  "treasuryWalletCreated": false,
+  "publicTransactions": 0,
+  "attemptHistory": [
+    {
+      "attempt": 1,
+      "status": "fail",
+      "httpStatus": 400,
+      "reason": "Unqualified calldata parameter fields"
+    },
+    {
+      "attempt": 2,
+      "status": "fail",
+      "httpStatus": 400,
+      "reason": "Repeat diagnostic of unqualified calldata fields"
+    },
+    {
+      "attempt": 3,
+      "status": "fail",
+      "reason": "CREATED_PROVIDER_POLICY_CHANGED",
+      "diagnosis": "Provider checksummed addresses; strict fingerprint refused activation"
+    },
+    {
+      "attempt": 4,
+      "status": "fail",
+      "reason": "EXISTING_PROVIDER_POLICY_CONFLICT",
+      "diagnosis": "Confirmed checksum-only public address differences"
+    },
+    {
+      "attempt": 5,
+      "status": "pass",
+      "reason": "Canonical Ethereum address case matches exact policy semantics; existing policy reused"
+    }
+  ],
+  "pending": [
+    "Actual human cryptographic login/enrollment and managed wallet creation",
+    "Recipient-restricted managed treasury creation and finite funding",
+    "Actual managed player approval/swap with canonical receipts",
+    "Provider dashboard export/access configuration review"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "scope": "Actual PostgreSQL lock transitions with a scripted canonical-outcome verifier; actual EVM acceptance/claim are covered by the local E2E flow.",
+  "checks": [
+    "unknown acceptance stays locked even after pass expiry",
+    "confirmed revert clears only the acceptance attempt while a pass remains usable",
+    "expired pass releases after independently confirmed acceptance revert"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "scope": "Real isolated PostgreSQL; plugin-attributed player events are fixtures, no real wallets or Minecraft payment proof",
+  "status": "pass",
+  "checks": [
+    {
+      "name": "one-time starter grants and durable join retries",
+      "status": "pass"
+    },
+    {
+      "name": "payment preview does not spend and another player cannot confirm",
+      "status": "pass"
+    },
+    {
+      "name": "confirmed transfer conserves coins and repeated confirmations pay zero extra",
+      "status": "pass"
+    },
+    {
+      "name": "immutable operation binding, whole positive amounts and overdraft checks",
+      "status": "pass"
+    },
+    {
+      "name": "confirmation rechecks available funds and no unsupported paid jobs are invented",
+      "status": "pass"
+    }
+  ],
+  "schema": "game_economy_test_a5a384276c054a478a141f4fad3b3f4f",
+  "publicTransactions": 0
+}

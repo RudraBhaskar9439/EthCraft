@@ -1,0 +1,155 @@
+{
+  "status": "pass",
+  "scope": "New faucet-funded Unichain Sepolia CITY/GEM pool with official v4 liquidity and quote; no player swap claimed",
+  "manifest": {
+    "schema": "agentcity.playable-market.v1",
+    "environment": "UNICHAIN_SEPOLIA_PLAYABLE",
+    "chainId": 1301,
+    "rpcUrl": "https://sepolia.unichain.org",
+    "genesisHash": "0xb7fe0bc9f98ca03294ca0094ff9374cc3e64130b6ec85850d6e260191f48bfe7",
+    "poolManager": "0x9cb26a7183b2f4515945dc52cb4195b0d2d06c95",
+    "quoter": "0xb2b34025a07af3925313b6b46f8046ee8ffba30b",
+    "router": "0x85ded2dece45ba255565fb6f4a83430ee3eeeac4",
+    "tokens": {
+      "CITY": {
+        "address": "0x789dab2f22f0161401523ebe858ce88a3b14fae8",
+        "decimals": 18
+      },
+      "GEM": {
+        "address": "0x83ea7c33c6787e80ad6a0a78c66eb36ee355344d",
+        "decimals": 18
+      }
+    },
+    "poolKey": {
+      "currency0": "0x789dab2f22f0161401523ebe858ce88a3b14fae8",
+      "currency1": "0x83ea7c33c6787e80ad6a0a78c66eb36ee355344d",
+      "fee": 3000,
+      "tickSpacing": 60,
+      "hooks": "0x0000000000000000000000000000000000000000"
+    },
+    "codeHashes": {
+      "poolManager": "0x2566e42d45723eef05d7253a7b7c140a6da61992594525fc66d06b4a973b5d0b",
+      "quoter": "0x7fd1ee3f8e9172cb587fd1c8a190271615ca7e5d4c874ee3f4bd46ceb8c334da",
+      "router": "0x537fc7ca31f68e92727b1caf98c96e81a75f5569fad2cbda9cb752a0ab0eb39e",
+      "CITY": "0xf9eebf13f96d7b246e30cadd39bbfcf908086d15fdb328ac522e52fa71fb2821",
+      "GEM": "0xf9eebf13f96d7b246e30cadd39bbfcf908086d15fdb328ac522e52fa71fb2821"
+    },
+    "maxInputBaseUnits": "100000000000000000000",
+    "maxNativeCostWei": "2000000000000000",
+    "official": {
+      "PoolManager": {
+        "address": "0x9cb26a7183b2f4515945dc52cb4195b0d2d06c95",
+        "codeHash": "0x2566e42d45723eef05d7253a7b7c140a6da61992594525fc66d06b4a973b5d0b",
+        "sourceRef": "77d52a7"
+      },
+      "PositionManager": {
+        "address": "0x12a98709bb5d0641d61458f85dcafbe17ac2d05c",
+        "codeHash": "0xb2c86861af8fd6940106d15098ac04383d121b388044878a0d7d9117535f6885",
+        "sourceRef": "77d52a7"
+      },
+      "Permit2": {
+        "address": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+        "codeHash": "0x6df9d9804d74bce5ad57c8145936ec9cdb3d91a655da68b9b1b1c4ea8e001433",
+        "sourceRef": "permit2@1.0.0"
+      },
+      "V4Quoter": {
+        "address": "0xb2b34025a07af3925313b6b46f8046ee8ffba30b",
+        "codeHash": "0x7fd1ee3f8e9172cb587fd1c8a190271615ca7e5d4c874ee3f4bd46ceb8c334da",
+        "sourceRef": "77d52a7"
+      }
+    },
+    "sourceHashes": {
+      "contracts/src/PlayableMarketToken.sol": "264f6f933e1e2b376708e53d37723d436893bbb34199d75e304e5e706ac74ddd",
+      "contracts/src/PlayableMarketRouter.sol": "ce5ce6247d197fc58ecaac63f93b1ed166a0322a0860e107f01ad29102947c38",
+      "contracts/package-lock.json": "80312c2b2b961d9094131a38097f043c67d14731a186ba7d91894cea527ebb8c",
+      "contracts/out/PlayableMarketToken.sol/PlayableMarketToken.json": "b0af40b2f2250b1623a539ab0cadd4d4913c5c0288bcbaf51840a10f3561e7f6",
+      "contracts/out/PlayableMarketRouter.sol/PlayableMarketRouter.json": "97235a8d273cc337a6cd6f3ae64863d7e049b9598f0fe3dd0a6f8eac698661be"
+    },
+    "developer": "0x5cAEC1fD260Ad8bB747A3984752D7943BcDc4A54",
+    "issuer": "0x38A0E8e276c9D4EeB8dE2bB2f438a0814fD54448",
+    "positionManager": "0x12a98709bb5d0641d61458f85dcafbe17ac2d05c",
+    "permit2": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+    "gameCoinsBacked": false,
+    "minecraftInventoryBacked": false,
+    "confirmations": 2,
+    "deploymentRunId": "a8248484-c129-4325-b593-159a9d713506"
+  },
+  "operations": {
+    "fund-new-issuer": {
+      "id": "17a25ec6-04b9-4922-b277-5672c16a2f60",
+      "hash": "0x72b01a573e728612aadbdecaf367c419c42dd3a11e37ba2a22caf41702d3e9df",
+      "blockNumber": "66584653",
+      "gasUsed": "21000"
+    },
+    "deploy-CITY": {
+      "id": "117b2b0a-5fac-488c-94ab-1d62374f4925",
+      "hash": "0xa2cd7b0e96648d4ab77d0d6d1b0452f7780bdc8f0dbc21114d9760dbb5c43338",
+      "blockNumber": "66584660",
+      "gasUsed": "793213"
+    },
+    "deploy-GEM": {
+      "id": "320f2a6a-fde5-4836-a91d-cbea0f672531",
+      "hash": "0xee3b5d8de064b6829d3b77d61233ac53c28d7e778ae803bfc377af560c58b01a",
+      "blockNumber": "66584668",
+      "gasUsed": "793214"
+    },
+    "initialize-dedicated-pool": {
+      "id": "24f607e3-03ec-481c-a5ed-821723b47ec3",
+      "hash": "0xeea607a11b6f24789d977bc474efb17c6367267998b132e986f24c73d965d722",
+      "blockNumber": "66584677",
+      "gasUsed": "51532"
+    },
+    "deploy-fixed-router": {
+      "id": "821ab2a9-54ed-4d70-8f7c-60e769d3970e",
+      "hash": "0x9e579cea9c3260770c43ead18a6bb5248198e8072b9d3aeaf1bb3833b1ea8681",
+      "blockNumber": "66584685",
+      "gasUsed": "748388"
+    },
+    "mint-finite-CITY": {
+      "id": "ae64e0b3-fadb-4646-add3-34a3c98396e2",
+      "hash": "0xe55efe41d9d5f066916875d0f8ede43fa3d9ce7d8c711f14c4edae678be9fbd1",
+      "blockNumber": "66584693",
+      "gasUsed": "70560"
+    },
+    "mint-finite-GEM": {
+      "id": "fcda6f12-76b2-45de-8f64-b0f528191b07",
+      "hash": "0x1a1290acc6a0f275dc2317612d1c38bc964b2c8f4a2d13403e8994d0cd6d248e",
+      "blockNumber": "66584701",
+      "gasUsed": "70560"
+    },
+    "approve-permit2-0x789dab2f22f0161401523ebe858ce88a3b14fae8": {
+      "id": "847b4940-99b7-443b-ad45-e809dc981a52",
+      "hash": "0x4c8f8a1b20b7a67a6c9cca31d26ccbbce2055918e8b18a3d35331531465f4dd4",
+      "blockNumber": "66584709",
+      "gasUsed": "45943"
+    },
+    "approve-position-0x789dab2f22f0161401523ebe858ce88a3b14fae8": {
+      "id": "0c6d6df3-9d95-4006-8a29-7e04010d3e46",
+      "hash": "0x73736bf82e0248b256ef7795fb91d2f891ab86263789b50004206d852675f9b4",
+      "blockNumber": "66584717",
+      "gasUsed": "47650"
+    },
+    "approve-permit2-0x83ea7c33c6787e80ad6a0a78c66eb36ee355344d": {
+      "id": "3712bf3b-e8f5-49e6-8fb3-d79866a42c2c",
+      "hash": "0x9566357aebc2b65be8648e249c5b862c90697826c1a0a63fa015e6d99a8504b5",
+      "blockNumber": "66584724",
+      "gasUsed": "45943"
+    },
+    "approve-position-0x83ea7c33c6787e80ad6a0a78c66eb36ee355344d": {
+      "id": "74c64159-b0dc-4f1b-a968-ed20932348bc",
+      "hash": "0x5f5720ef7da4418741fd69aa060724d7f71b02b63e27600c15fe87d37b204a0a",
+      "blockNumber": "66584732",
+      "gasUsed": "47650"
+    },
+    "seed-official-position": {
+      "id": "cd0b9e04-0f23-4867-855d-d20bd77493cd",
+      "hash": "0x5c736307ac2ba4777d8369c2922ab52d3f88c2dfacc17a81f901474ebfdcba29",
+      "blockNumber": "66584739",
+      "gasUsed": "432541"
+    }
+  },
+  "maximumReservedNativeWei": "8000000000000000",
+  "actualQuoteAmountOut": "996900609009281774",
+  "realMoneySpentUsd": 0,
+  "independentHumans": 0
+}

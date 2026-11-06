@@ -1,0 +1,291 @@
+{
+  "status": "local_feature_checkpoint_with_model_limitations",
+  "sourceRelease": "7a73098b04b0b410d4438c988cb00afa93447910",
+  "canonicalPhase": "P0",
+  "canonicalGate": "blocked",
+  "canonicalGateReasons": [
+    "Implementation scope changed since approved release; affected evidence and review need renewal.",
+    "P0-015 existing docs/UPSTREAM_REUSE.md artifact hash mismatch."
+  ],
+  "currentWork": "User-authorized local playable agent expansion, separate from canonical phase advancement.",
+  "implemented": [
+    "Parameterized house/tower/bridge/wall/stairs/arch tools and bounded custom geometry receiver.",
+    "Inventory-first native construction, ingredient-backed recipe crafting, own-plot harvesting with observed pickups, carried-item delivery and fresh supply inspection.",
+    "Durable original operation IDs and exact block/inventory/chest reconciliation; protected old builds, foundations, chests and access strips.",
+    "Accepted physical work continues beyond owner entity range while the bound owner remains online; task starts and financial actions keep their checks."
+  ],
+  "verification": {
+    "live": {
+      "path": "evidence/runs/playable-autonomy/0d3bb0ee-863b-40e8-af97-2bcf144a3b22/report.json",
+      "status": "pass",
+      "checks": 8,
+      "sourceBefore": {
+        "oak_planks": 72,
+        "cobblestone": 50
+      },
+      "sourceAfter": {
+        "oak_planks": 63,
+        "cobblestone": 50
+      },
+      "destinationBefore": {
+        "cobblestone": 6
+      },
+      "destinationAfter": {
+        "cobblestone": 6,
+        "stick": 4
+      },
+      "retainedBlocks": 200,
+      "emptyFixtureAgentReleased": true
+    },
+    "focusedFixtureGroups": {
+      "planner": 13,
+      "agents": 5,
+      "legacyTasks": 7,
+      "newTaskTools": 6
+    },
+    "planning": {
+      "unitTests": 56,
+      "checkPlan": "pass",
+      "productPhaseApproval": false
+    },
+    "pluginCompile": {
+      "status": "pass",
+      "installedSha256": "e6982d05c2b7b36e38c6686adf9babb17cb8f8b630671cf397a854a953cbbdb9"
+    }
+  },
+  "modelLimits": [
+    "Arbitrary free-form geometry is unqualified; failed original model designs remain retained.",
+    "The no-thickness arch sample failed its declared one-block-depth oracle; the model selected depth two. The live request states width, height, thickness and origin explicitly.",
+    "Isolated named-house and gather/craft/deliver language samples passed on the preceding simplified tool interface; the final live proof separately checks explicit dimensions and the compound material request."
+  ],
+  "unrun": [
+    "Actual owner leaving entity range during physical work (focused fixture only).",
+    "Renewed original calculator phase approval and live 0G, independent-human and platform release gates.",
+    "Tools/combat/farming/smelting, unrestricted exploration and arbitrary redstone are not implemented.",
+    "Managed-player inventory-to-CITY and human-confirmed managed swap remain separate pending end-to-end checks.",
+    "Prior production image was not rebuilt or qualified for this source update."
+  ],
+  "financialEffectsThisWork": {
+    "publicTransactions": 0,
+    "realMoneySpent": 0
+  },
+  "artifacts": [
+    {
+      "path": "evidence/runs/playable-autonomy/0d3bb0ee-863b-40e8-af97-2bcf144a3b22/report.json",
+      "sha256": "1ec32dc51c7676bfcc16d7e5436d6c83bc872499ca379144f1f2092bfcb4fc6c",
+      "status": "pass",
+      "scope": "Disclosed TaskTester fixture: direct inspection and explicit-dimension natural-language arch, native gathering, 2-plank/4-stick crafting and carried-item delivery; no grants/resets/wallet actions"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy/2cfe5ecd-3358-426e-b63d-fc1be0c72195/report.json",
+      "sha256": "e362ec635e2536862912c76cfaf8e433a8f925989bd8a66f3ed0417b94810305",
+      "status": "fail",
+      "scope": "Disclosed TaskTester fixture: natural-language inspection/custom arch, native gathering, 2-plank/4-stick crafting and carried-item delivery; no grants/resets/wallet actions"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy/34c6cbfb-ea2d-4705-a2fd-159aafa2b52a/report.json",
+      "sha256": "c7acc9380389a63bafc657f3f89cbe7fe48b3e3702c49e3c70813548219b656d",
+      "status": "fail",
+      "scope": "Disclosed TaskTester fixture: natural-language inspection/custom arch, native gathering, 2-plank/4-stick crafting and carried-item delivery; no grants/resets/wallet actions"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy/435c2ae3-948b-40fa-8d1b-00410ca06020/report.json",
+      "sha256": "4395dc899f9a0840945d0d099b15bce257850d634245381fba2e73330395aa40",
+      "status": "fail",
+      "scope": "Disclosed TaskTester fixture: natural-language inspection/custom arch, native gathering, 2-plank/4-stick crafting and carried-item delivery; no grants/resets/wallet actions"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy/a22ba35e-d102-49c6-b0ff-1007d2c4514e/report.json",
+      "sha256": "8fe289c13252722fad33f30a421b73db8ba9758e1504deccdb818e6c0022e0b5",
+      "status": "fail",
+      "scope": "Interrupted disclosed TaskTester observer preflight; no native task or material transfer reached"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy/da58c3a6-6686-4004-b197-fad828182e00/report.json",
+      "sha256": "cb1ade576f27970d115024ef2c3205019d5e06d51e612ed8b32b360d7e112bda",
+      "status": "fail",
+      "scope": "Disclosed TaskTester fixture: natural-language inspection/custom arch, native gathering, 2-plank/4-stick crafting and carried-item delivery; no grants/resets/wallet actions"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-tools/33211142-6f22-4d5f-9697-7b2aba34876f/gather/personal-agent-tasks.json",
+      "sha256": "502d326a613735b36df12f6c8484d0a05bb9d99689a86f0ad12fe87322f1b078",
+      "status": "fixture_snapshot",
+      "scope": "Disclosed native-effect fixture journal; not a live Minecraft result"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-tools/33211142-6f22-4d5f-9697-7b2aba34876f/inspect/personal-agent-tasks.json",
+      "sha256": "afcde32d036a97aa41fabb2f20645acd485f33a28ef6b1e10d75d6a68d83dc3b",
+      "status": "fixture_snapshot",
+      "scope": "Disclosed native-effect fixture journal; not a live Minecraft result"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-tools/33211142-6f22-4d5f-9697-7b2aba34876f/mixed/personal-agent-tasks.json",
+      "sha256": "dd327fa2e19a8396d8ac7bc8661462ed8a36f823476d10f2b74d38aeb1e289e3",
+      "status": "fixture_snapshot",
+      "scope": "Disclosed native-effect fixture journal; not a live Minecraft result"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-tools/33211142-6f22-4d5f-9697-7b2aba34876f/report.json",
+      "sha256": "172f0e051db373271a1763d0e9eb5b852b254b550c371557a01ddb60742bcb95",
+      "status": "pass",
+      "scope": "Focused disclosed native-effect fixtures; no live Minecraft, human participation, wallet or chain claims"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-tools/965c19c3-dc46-4254-93b4-8b67d8525e40/gather/personal-agent-tasks.json",
+      "sha256": "c2919019b33141bb644772aac9edaf846b61dd8c1fa97b656363a2ec937dd850",
+      "status": "fixture_snapshot",
+      "scope": "Disclosed native-effect fixture journal; not a live Minecraft result"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-tools/965c19c3-dc46-4254-93b4-8b67d8525e40/inspect/personal-agent-tasks.json",
+      "sha256": "43654fa64bd622d9246b300aecd6181bcd545de3b765b0ffd0c7b74a2e8165cb",
+      "status": "fixture_snapshot",
+      "scope": "Disclosed native-effect fixture journal; not a live Minecraft result"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-tools/965c19c3-dc46-4254-93b4-8b67d8525e40/mixed/personal-agent-tasks.json",
+      "sha256": "448d0845043a849609d8fb1ef7480534f0a0fee5a6a0f96c3a30236eee4de291",
+      "status": "fixture_snapshot",
+      "scope": "Disclosed native-effect fixture journal; not a live Minecraft result"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-tools/965c19c3-dc46-4254-93b4-8b67d8525e40/report.json",
+      "sha256": "8d28f810ea02e1d3fc023b51dd5ba7b50d9d8b377cf8dcb35d6d3270cfc4e8f7",
+      "status": "pass",
+      "scope": "Five focused disclosed native-effect fixtures; no live Minecraft, human participation, wallet or chain claims"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-tools/9668fb01-4d3b-41d9-8f1f-6deee41ccb2c/gather/personal-agent-tasks.json",
+      "sha256": "58c3af0d378b306883c0e67400c81a948f7a69c40dc86bf8c2e19662aa002bf7",
+      "status": "fixture_snapshot",
+      "scope": "Disclosed native-effect fixture journal; not a live Minecraft result"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-tools/9668fb01-4d3b-41d9-8f1f-6deee41ccb2c/inspect/personal-agent-tasks.json",
+      "sha256": "c2848e53ee61955174422077815bb937c12d32d0e8f44fc8d8181a26a7dc2401",
+      "status": "fixture_snapshot",
+      "scope": "Disclosed native-effect fixture journal; not a live Minecraft result"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-tools/9668fb01-4d3b-41d9-8f1f-6deee41ccb2c/mixed/personal-agent-tasks.json",
+      "sha256": "f90a44f5228c84d3a63a2cd22979df89521d0eb1325d37bf255fc07a4dceb633",
+      "status": "fixture_snapshot",
+      "scope": "Disclosed native-effect fixture journal; not a live Minecraft result"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-tools/9668fb01-4d3b-41d9-8f1f-6deee41ccb2c/occupied-opening/personal-agent-tasks.json",
+      "sha256": "728e181aa1bc6833240f202937975758335ca00206ecfeae8b83324a515098a8",
+      "status": "fixture_snapshot",
+      "scope": "Disclosed native-effect fixture journal; not a live Minecraft result"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-tools/9668fb01-4d3b-41d9-8f1f-6deee41ccb2c/report.json",
+      "sha256": "b0f9d7ab24fcfb21f6a5d8f68fac00e984deb2ee743bed0de76d4c8dacd111fb",
+      "status": "pass",
+      "scope": "Focused disclosed native-effect fixtures; no live Minecraft, human participation, wallet or chain claims"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-tools/bc392884-a869-4ae1-b0d0-d5d8fdaa6a6c/gather/personal-agent-tasks.json",
+      "sha256": "716f3143b9c1dc9a1b650234ecb54a86fce354b346eb3995667ac1c696b38a52",
+      "status": "fixture_snapshot",
+      "scope": "Disclosed native-effect fixture journal; not a live Minecraft result"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-tools/bc392884-a869-4ae1-b0d0-d5d8fdaa6a6c/inspect/personal-agent-tasks.json",
+      "sha256": "bd738b0bb4fc499391583db34f0e228f70ecae84b9b1a952e01fce24acd22367",
+      "status": "fixture_snapshot",
+      "scope": "Disclosed native-effect fixture journal; not a live Minecraft result"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-tools/bc392884-a869-4ae1-b0d0-d5d8fdaa6a6c/mixed/personal-agent-tasks.json",
+      "sha256": "16b0d35fb13160de398117df423f6ecd244586ac904af211340d923cf5e88aeb",
+      "status": "fixture_snapshot",
+      "scope": "Disclosed native-effect fixture journal; not a live Minecraft result"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-tools/bc392884-a869-4ae1-b0d0-d5d8fdaa6a6c/report.json",
+      "sha256": "15c56259f3cb413a5fecddce276ddcdc61711cf6af3ac388beea1fcb4342b4b7",
+      "status": "pass",
+      "scope": "Focused disclosed native-effect fixtures; no live Minecraft, human participation, wallet or chain claims"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-tools/f6bb3bc6-23ca-4642-9bc8-97cbf0960ab0/gather/personal-agent-tasks.json",
+      "sha256": "3aa94ae7f81d4d8887d46a14c748d131254bacdb50ae769ec1d5fa1f77fd7678",
+      "status": "fixture_snapshot",
+      "scope": "Disclosed native-effect fixture journal; not a live Minecraft result"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-tools/f6bb3bc6-23ca-4642-9bc8-97cbf0960ab0/inspect/personal-agent-tasks.json",
+      "sha256": "5bb66cfd6820da7507e02c557b74599cca9e51ab066ddd6836443a3e11f7199f",
+      "status": "fixture_snapshot",
+      "scope": "Disclosed native-effect fixture journal; not a live Minecraft result"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-tools/f6bb3bc6-23ca-4642-9bc8-97cbf0960ab0/mixed/personal-agent-tasks.json",
+      "sha256": "22b7462feef82913ff3e13c3b23b0bc756b7c6ac3c3daa83590262752fa94e58",
+      "status": "fixture_snapshot",
+      "scope": "Disclosed native-effect fixture journal; not a live Minecraft result"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-tools/f6bb3bc6-23ca-4642-9bc8-97cbf0960ab0/occupied-opening/personal-agent-tasks.json",
+      "sha256": "eb63ccf31a12147963abaf9283f29256027164f6a65f3f688968a23c0587bb2a",
+      "status": "fixture_snapshot",
+      "scope": "Disclosed native-effect fixture journal; not a live Minecraft result"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-tools/f6bb3bc6-23ca-4642-9bc8-97cbf0960ab0/occupied-procedural-arch/personal-agent-tasks.json",
+      "sha256": "85e80509c6e42d38a3b81253f0f94289b56ba32545f17aa0230a3e0d4cb52a13",
+      "status": "fixture_snapshot",
+      "scope": "Disclosed native-effect fixture journal; not a live Minecraft result"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-tools/f6bb3bc6-23ca-4642-9bc8-97cbf0960ab0/report.json",
+      "sha256": "4bf7ab40666ce575d98fd2d1375e119e4a635b2d05de008132f67f9f21ade05b",
+      "status": "pass",
+      "scope": "Focused disclosed native-effect fixtures; no live Minecraft, human participation, wallet or chain claims"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-language/3f5cfcb2-461a-40c3-8150-842d6c051cfc/report.json",
+      "sha256": "a4e042040a5a410c57eef0e0357a316f76fa8c2bc7093a95284458882fa428d5",
+      "status": "fail",
+      "scope": "Actual local Ollama diverse structure design and material preparation language only; no native construction, gathering, crafting or human proof"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-language/5f7346ec-eaf3-44ce-9446-e4e5292ffdd0/report.json",
+      "sha256": "57b6e7885bb81118cbf29aeadd09dba57f7cc90868b79318bef4dd7aa0678874",
+      "status": "fail",
+      "scope": "Actual local Ollama diverse structure design and material preparation language only; no native construction, gathering, crafting or human proof"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-language/606eca8a-cafb-4923-8d07-08666fb9808b/report.json",
+      "sha256": "a4e042040a5a410c57eef0e0357a316f76fa8c2bc7093a95284458882fa428d5",
+      "status": "fail",
+      "scope": "Actual local Ollama diverse structure design and material preparation language only; no native construction, gathering, crafting or human proof"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-language/964a668f-ef4b-4337-a883-1369c488d10a/report.json",
+      "sha256": "35f4124b3692145183ca1f750070bb8a4b8f0e2e5d805eeab542a5adbe1ceeb8",
+      "status": "fail",
+      "scope": "Actual local Ollama diverse structure design and material preparation language only; no native construction, gathering, crafting or human proof"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-language/ae190ac0-b708-420a-ac9e-4ae48b5c8800/report.json",
+      "sha256": "f7668422eedb2e2e7259e77224c7e48e0839b83e09cbea7bae970dd501832070",
+      "status": "fail",
+      "scope": "Actual local Ollama diverse structure design and material preparation language only; no native construction, gathering, crafting or human proof"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-language/c0379e4d-349a-4e4e-a77d-efbe3993713d/report.json",
+      "sha256": "889b40cb25b4c6ffb58f23974df489647641bde5ac50e561298eb651b5431e93",
+      "status": "fail",
+      "scope": "Actual local Ollama diverse structure design and material preparation language only; no native construction, gathering, crafting or human proof"
+    },
+    {
+      "path": "evidence/runs/playable-autonomy-language/c452d112-c3c8-421b-81cb-aca7cb40a558/report.json",
+      "sha256": "ce2cd320e885d0a30074fafa4dbb0c52128c50bc0fb21017a99a8d0652b52da6",
+      "status": "fail",
+      "scope": "Actual local Ollama diverse structure design and material preparation language only; no native construction, gathering, crafting or human proof"
+    }
+  ],
+  "nextStep": "Human acceptance of the explicit-dimension building and material workflow in the local play world; keep arbitrary design quality and production qualification separate."
+}

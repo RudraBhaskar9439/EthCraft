@@ -1,0 +1,15 @@
+﻿{
+    "observedAt":  "2026-10-31T13:40:07.7317967Z",
+    "method":  "read-only local Playit IPC v2 get_state",
+    "agentVersion":  "1.1.0",
+    "state":  "running",
+    "publicHostname":  "domination-uid.tun.ply.gg",
+    "publicPort":  31628,
+    "actualDestination":  "127.0.0.1:25565",
+    "requiredDestination":  "127.0.0.1:8796",
+    "disabled":  false,
+    "pendingTunnelCount":  0,
+    "result":  "mapping_mismatch",
+    "configurationChanges":  0,
+    "secretsCaptured":  false
+}

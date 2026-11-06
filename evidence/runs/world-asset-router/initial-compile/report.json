@@ -1,0 +1,11 @@
+{
+  "status": "fail",
+  "scope": "Initial Solidity compile only; no deployment, swap, wallet or native effects",
+  "command": "forge test --root contracts --out ../.local/world-router-out --cache-path ../.local/world-router-cache --match-contract WorldAssetSwapRouterTest --match-test testWorld -vv",
+  "errors": [
+    "Solidity parser rejected comma-separated variable declarations in WorldAssetSwapRouter.sol and WorldAssetSwapRouter.t.sol",
+    "A concurrently written WorldAssetMarket.sol also contained a transient comma-separated declaration; owning agent notified"
+  ],
+  "publicTransactions": 0,
+  "productionWorldMutations": 0
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "agentcity.inventory-game-review-window.v1",
+  "status": "pass",
+  "scope": "Isolated PostgreSQL quote timing and expiry checks; no financial action.",
+  "observedIssue": "Two customer reviews expired during first wallet setup and guided funding steps. No funding consent or transfer was recorded.",
+  "newReviewWindowSeconds": 600,
+  "existingExpiredReviewsUnchanged": true,
+  "expiredCheckoutStillRefused": true,
+  "focusedTests": [
+    "inventory-shop.mjs passed",
+    "inventory-shop-game.mjs passed"
+  ],
+  "sourceHashes": {
+    "backend/src/playable/inventory-shop.mjs": "bd8adc35d84dcdf4b146c4081ea7ec10838bb418b13dd3ead1612daa62de4cc4",
+    "tests/playable/inventory-shop.mjs": "f654a6eb467246ba5d138e6bc407c2f40aed2183713c56e48f0fb4a335d686f7"
+  },
+  "publicTransactions": 0
+}

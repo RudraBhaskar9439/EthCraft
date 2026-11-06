@@ -1,0 +1,37 @@
+{
+  "schema": "agentcity.p1.candidate-run.v1",
+  "status": "pass",
+  "name": "agentcity-p1-8b8f3235",
+  "started_at": "2026-10-29T14:02:43.155454+00:00",
+  "manifest_sha256": "cfe525e6be3c3e16d0867f6b4cdab57acd9f8b62f2d72eebbe830c6cfaaa8a93",
+  "sources": {
+    "fixtures/candidates/redstone-compiler/calculator-candidate-v1.json": "d14cc0956831efeb68df4b9aba588e946bbd3b546d6a2d37be02194378b1922b",
+    "fixtures/candidates/redstone-compiler/calculator-tests-candidate-v1.json": "8ec4afb0f561370cf74fc686a3683a01c6d0758fe6f0c15e33c8e1b5926e5897",
+    "tests/world/plugin/CandidatePlugin.java": "d99145cbba1783406b4e063a8a3aa7bb75053ca02d01f0a49e041db4abc4bf0b",
+    "tests/world/observe.cjs": "6888db73b7708e67975632f061159e032bb811cca4c08bfe4f6c13fca031273a"
+  },
+  "runtime_lock": {
+    "purpose": "isolated_non_token_fixture",
+    "bind": "127.0.0.1",
+    "port": 25576,
+    "minecraft": "1.21.11",
+    "paper": {
+      "build": 132,
+      "support": "UNSUPPORTED",
+      "support_ended": "2026-06-15",
+      "sha256": "5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba",
+      "url": "https://fill-data.papermc.io/v1/objects/5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba/paper-1.21.11-132.jar"
+    },
+    "java_image": "eclipse-temurin@sha256:5d90b26c0784ccf55af55f97cbcf7f3969c66a06299c93bdc72649219942a48f",
+    "mineflayer": "4.39.0",
+    "pathfinder": "2.4.5",
+    "authentication": "offline_fixture_only",
+    "independent_human_participants": 0,
+    "token_integration": false,
+    "production_supported": false
+  },
+  "independent_humans": 0,
+  "full_phase_gate_passed": false,
+  "plugin_sha256": "f45c0b932ed772de2bb4bdaf2a080917e7cd85f5598cc85d551ea00c1a40c838",
+  "finished_at": "2026-10-29T14:05:46.369846+00:00"
+}

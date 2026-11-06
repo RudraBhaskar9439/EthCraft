@@ -1,0 +1,14 @@
+{
+    "observedAt":  "2026-10-31T13:36:37.6777019Z",
+    "source":  "https://dns.google/resolve",
+    "srv":  {
+                "query":  "_minecraft._tcp.domination-uid.tun.ply.gg",
+                "weight":  1,
+                "priority":  1,
+                "port":  31628,
+                "target":  "domination-uid.tun.ply.gg"
+            },
+    "ipv4":  "147.185.221.20",
+    "transportResult":  "TCP ECONNRESET before server-list response; no LoginStart sent",
+    "windowsSystemResolver":  "timed out"
+}

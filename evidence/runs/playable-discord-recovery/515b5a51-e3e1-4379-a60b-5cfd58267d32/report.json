@@ -1,0 +1,71 @@
+{
+  "status": "pass",
+  "scope": "Read-only path diagnosis/native stock observation and empty-agent release after the original offline wall completed; NO repeated build or item transfer",
+  "authentication": "Explicit synthetic trusted authorization callback; no live Discord identity claim",
+  "independentHumansVerified": 0,
+  "publicTransactions": 0,
+  "checks": [
+    {
+      "name": "fresh-native-stock-observed-through-clear-cardinal-east-north-west-route-without-repeating-effects",
+      "status": "pass",
+      "sourceCobblestone": 46,
+      "sourceOakPlanks": 63
+    },
+    {
+      "name": "empty-agent-released-original-eleven-completed-tasks-and-five-wall-receipts-unchanged-requester-stays-offline",
+      "status": "pass"
+    }
+  ],
+  "initialObservation": {
+    "position": [
+      -44.76238298995791,
+      64,
+      8.318896503850524
+    ],
+    "health": 20,
+    "food": 20,
+    "blocks": [
+      {
+        "position": [
+          -45,
+          63,
+          8
+        ],
+        "name": "stone"
+      },
+      {
+        "position": [
+          -45,
+          64,
+          8
+        ],
+        "name": "air"
+      },
+      {
+        "position": [
+          -45,
+          65,
+          8
+        ],
+        "name": "air"
+      },
+      {
+        "position": [
+          -46,
+          64,
+          8
+        ],
+        "name": "air"
+      },
+      {
+        "position": [
+          -45,
+          64,
+          7
+        ],
+        "name": "oak_planks"
+      }
+    ]
+  },
+  "finishedAt": "2026-10-31T12:35:56.443Z"
+}

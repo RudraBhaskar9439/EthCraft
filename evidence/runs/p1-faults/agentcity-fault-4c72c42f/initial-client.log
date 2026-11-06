@@ -1,0 +1,6 @@
+{"step":"recovery_real_stock_withdrawal"}
+{"step":"server_confirmed_recovery_route"}
+{"step":"server_confirmed_recovery_route"}
+{"step":"server_confirmed_recovery_route"}
+{"step":"sealed_process_cut_point_proved_before_halt"}
+{"status":"pass","scenario":"crash-before-intent"}

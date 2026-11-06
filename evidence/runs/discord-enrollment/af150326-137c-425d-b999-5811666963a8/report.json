@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "observedAt": "2026-10-31T15:01:29.919Z",
+  "scope": "Read-only durable receipts from actual primary-user Discord setup and Minecraft join; not an independently controlled second participant",
+  "playerName": "Ruddy2",
+  "verifiedDiscordPrivyPrincipal": true,
+  "existingManagedWallet": "0x1a2f1d1e98a52c3a5b17e641c47a4fbd1472c726",
+  "canonicalOwnerDiffersFromMinecraftUuid": true,
+  "actualNativeJoinApproved": true,
+  "agentName": "CityAgent2",
+  "originalRuddyAgentAndWalletPreserved": true,
+  "providerWritesByThisCheck": 0,
+  "signatures": 0,
+  "publicTransactions": 0,
+  "currentOnlineSessionNotRequiredForHistoricalReceipt": true,
+  "independentHumanAcceptance": false
+}

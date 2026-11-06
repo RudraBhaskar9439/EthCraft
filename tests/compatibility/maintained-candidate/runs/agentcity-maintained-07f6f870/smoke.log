@@ -1,0 +1,2 @@
+{"status":"pass","checks":5}
+{"candidateClientProfile":"1.21.11-tick-end-at-physics-cadence","counts":[{"player":"WorldBuilder","physicsTickBoundaries":674},{"player":"WorldRequester","physicsTickBoundaries":570},{"player":"WorldInspector","physicsTickBoundaries":464}]}

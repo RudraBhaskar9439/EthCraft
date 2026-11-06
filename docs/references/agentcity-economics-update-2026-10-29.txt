@@ -1,0 +1,833 @@
+<aside>
+🏛️
+
+**The economic thesis:** AgentCity’s economy should help a community turn resources, human effort and agent computation into projects people value. Uniswap v4 can provide programmable exchange for suitable resource claims. Hooks can make a designated market respond to reported world conditions; they cannot create inventory, guarantee redemption or determine what a community ought to value.
+
+</aside>
+
+**Scope:** A research-backed design study of world economics, market structure, treasury management and Uniswap v4 hooks. **Reviewed:** October 29, 2026.
+
+**Status:** Proposed mechanisms, not deployed guarantees. Numerical examples are hypothetical calculations with stated assumptions, not observed prices, actual 0G tariffs or forecasts. Recommendations below are design judgments. The literature provides foundations and constraints; it does not validate AgentCity’s economy.
+
+**Related project documents:** ‣ and AgentCity — Research Paper: Agent Coordination, Resource Markets & System Logic.
+
+# 1. Thinking like the town’s treasurer
+
+Imagine being responsible for the finances of a growing AgentCity settlement.
+
+A railway needs iron. Farmers need transport. Builders want materials delivered predictably. Some players enjoy gathering; others hire agents while they work on designs. Agents consume compute, tools wear out, and the warehouse can process only so many deliveries at once.
+
+Your first question is whether the town can reliably organize this work.
+
+You need to know what the town owns, what it owes, which promises can be fulfilled, who provides trading capital and where losses land when something goes wrong. A busy exchange can conceal a broken warehouse. A rising commodity price can signal useful demand, manipulation or a declining currency. An agent with substantial revenue may still cost its operator more to run than it earns.
+
+This document takes that treasury perspective. It treats the world as a production system, the warehouse as a custodian, jobs as agreements, liquidity pools as trading venues, and compute as an operating expense.
+
+The objective is **more worthwhile cooperation per unit of player effort and system cost**. Trading volume, token prices and inference usage are supporting measurements.
+
+## 1.1 Two deployment contexts must remain distinct
+
+The cooperative world can use a closed server economy: ordinary accounts, server balances, barter and job agreements.
+
+An externally transferable token and Uniswap market is a separate proposed extension. Minecraft’s published guidelines require permitted in-game virtual currencies to have no real-world value or cash-out and restrict specified play-to-earn and external-ownership integrations. Those constraints materially affect a resource-token design. Optional participation or a testnet label does not establish permission. Minecraft Usage Guidelines.
+
+Consequently, the market designs here are economic and technical research proposals, contingent on a compatible deployment. A closed game ledger and a permissionless external market do not have equivalent transferability, enforcement or platform implications.
+
+The player-facing premise remains: people can participate manually and use agents by choice. Holding an external asset is not the proposed admission requirement.
+
+# 2. What actually exists in this economy?
+
+Confusing money, materials and claims is the fastest way to design an insolvent world.
+
+## 2.1 The main economic objects
+
+| Object | Definition | Example | What it does not establish |
+| --- | --- | --- | --- |
+| Physical game resource | An item or state controlled by the server | An iron ingot in a protected chest | That a token holder has a claim to it |
+| Productive asset | Something that can help produce future output | A farm, workshop or useful agent skill | Guaranteed future income |
+| Labor service | A commitment to perform specified work | Deliver materials; build a bridge | Fungibility with every other job |
+| World currency, C | A proposed unit for quoting and settling in-world obligations | A job pays 100 C | A dollar peg or redeemability for external money |
+| Resource claim, R | A proposed transferable entitlement to defined inventory | One R redeemable for one eligible iron ingot | A fixed price in C |
+| Compute balance | Funds or credits usable under a compute provider’s rules | An operator’s inference budget | In-world money or completed work |
+| Escrow | Assets reserved under an agreement | A requester’s funded reward | New money or earned worker revenue |
+| LP position | A claim on a trading strategy’s remaining assets and fees | Capital supplied to an R/C pool | A guaranteed return or a warehouse guarantee |
+| Treasury reserve | Unencumbered assets available for disclosed public purposes | Operating funds or repair materials | Permission to spend items backing other people’s claims |
+
+C and R are notation for this design study. They are not existing AgentCity assets. The initial design does not require a separate governance token.
+
+## 2.2 Prices answer different questions
+
+**The spot price** is the marginal trading price in a particular venue. It does not tell you what a large order will cost.
+
+**The execution price** is total consideration paid divided by the quantity actually received, including the applicable trading charges.
+
+**The delivered price** adds redemption, transport, delay and access costs. Iron at the north warehouse may be less useful to a southern settlement.
+
+**The production cost** is what a supplier gives up to create and deliver another unit. It includes relevant tools, time, compute and risk.
+
+**The reservation price** is the minimum a seller will accept or maximum a buyer will pay. A player may enjoy mining and accept a different reward from an operator funding a fleet.
+
+**The shadow price** is an internal estimate of an otherwise unpriced resource, such as an hour of supervision. It helps compare plans; it is not an executable exchange rate.
+
+These prices can differ without indicating a malfunction. A liquid resource claim and an urgent delivered item are different economic services.
+
+# 3. Where value comes from
+
+## 3.1 Utility precedes financial activity
+
+A railway has value because people want to use it, build it, display it or participate in creating it. Iron demand follows from that purpose. A market helps organize inputs; tokenizing the inputs does not create the underlying desire.
+
+Research on virtual economies treats markets, institutions and money as tools for analyzing deliberately designed scarcity. The publisher’s description of Lehdonvirta and Castronova’s *Virtual Economies: Design and Analysis* provides a useful framing; this document does not claim to reproduce or review the full book. MIT Press, 2014.
+
+Castronova’s earlier work also emphasizes an unusual feature of games: participants can value constraints themselves. Removing every difficult activity can therefore reduce the experience people came for. This is a conceptual warning, not a prediction of AgentCity player behavior. On Virtual Economies, 2002.
+
+**AgentCity’s implication:** economic efficiency must be evaluated alongside enjoyment, agency and contribution.
+
+## 3.2 Production, transformation and consumption
+
+A simple chain is:
+
+**Player project → demand for inputs → production or gathering → transport → construction → useful world change.**
+
+Some items are transformed into other items; others are consumed, lost or tied up in long-lived builds. An ingot placed into a structure has not necessarily disappeared from the world, but it is no longer immediately available as a trading input.
+
+For each resource, track available stock separately from production capacity and committed stock. A huge farm that is unloaded, inaccessible or out of supplies is not the same as a chest full of deliverable goods.
+
+A proposed resource accounting identity is:
+
+**Closing available stock = opening available stock + usable inflows − consumption − losses − new commitments + released commitments.**
+
+Definitions must prevent the same event appearing twice. Transferring an item between two owned chests is not new world production.
+
+## 3.3 What remains scarce when agents get better?
+
+Automation can lower the cost of some goods. Scarcity can move to other parts of the chain:
+
+- Delivery capacity and server processing time.
+- Convenient locations, access permissions and protected infrastructure.
+- Reliable execution under deadlines.
+- Human attention, taste, leadership and willingness to supervise.
+- Compute budgets and robust agent tooling.
+- Unusual resources or exploration opportunities under the server’s particular world rules.
+
+Resource scarcity depends on generation rules, farms, accessible territory and server settings. It should not be described as permanently fixed merely because a material is difficult to obtain today.
+
+Suppose a new farm doubles wheat output while bread demand barely changes. Wheat prices may fall. That can make food more affordable and farming less profitable at the same time. Keeping every producer’s historical income intact would require someone else to fund it.
+
+The town should support adaptation and meaningful roles rather than promise that every activity will always earn the same amount.
+
+## 3.4 Productivity does not guarantee shared prosperity
+
+An agent fleet can create more output while concentrating income or controlling important infrastructure. Human players may gain cheap supplies yet lose opportunities they enjoyed.
+
+The relevant questions include who owns productive capacity, who can enter markets, whether common areas remain accessible and whether newcomers can contribute without external wealth.
+
+Possible community responses include public projects, shared infrastructure, newcomer access and clearly separated competition categories. These are governance choices with costs. They are not automatic consequences of a token or a hook.
+
+# 4. Money, issuance and the city’s budget
+
+## 4.1 What anchors C?
+
+A useful world currency needs reasons for participants to accept it: other players quote in it, useful services accept it, or the server offers disclosed uses for it. None of these implies a stable dollar value.
+
+For an initial closed economy, a controlled server ledger is simpler than promising an external peg. Publish how balances enter and leave circulation, who may change those rules and what existing holders are entitled to.
+
+A fixed supply alone does not establish stable purchasing power. A fixed-price server shop can anchor some exchange relationships only while its rules, inventory and buying budget remain credible.
+
+A compute peg would add a separate redemption promise: someone must continuously supply a defined amount of eligible computation for each unit. Changing models, tariffs, credit expiry and availability make “one C equals some AI” inadequate as a specification.
+
+**Proposed starting policy:** C is an accounting and exchange unit with explicit issuance rules. Resource claims have defined material redemption. Compute is budgeted separately.
+
+## 4.2 Faucets, sinks and transfers
+
+| Event | Money-supply effect under the proposed definitions |
+| --- | --- |
+| Server creates a 100 C reward from nothing | Faucet: +100 C |
+| Treasury pays 100 C from its existing balance | Transfer; total issued C unchanged |
+| Player pays another player 100 C | Transfer |
+| A job locks 100 C in escrow | Transfer into restricted custody; not a burn |
+| Escrow releases a reward or returns a refund | Transfer out of custody |
+| A fee is permanently burned | Sink |
+| A fee is paid to LPs or the treasury | Transfer, even if temporarily idle |
+| Iron is deposited and iron claims are issued | More resource claims, not automatically more C |
+| An item is destroyed | Material sink, not automatically a currency sink |
+
+Track total issued currency, spendable balances and escrowed balances separately. A fall in active spending can occur without a reduction in total supply.
+
+A useful supply reconciliation is:
+
+**Closing issued C = opening issued C + newly issued C − permanently retired C.**
+
+This is an accounting identity. It does not predict inflation.
+
+## 4.3 Inflation and relative-price changes
+
+Use a defined basket to measure purchasing power rather than watching one token chart.
+
+For illustration, an initial basket contains 100 wheat at 0.10 C, 20 iron at 2 C and one standard delivery service at 10 C. Its cost is 60 C.
+
+Later, wheat costs 0.08 C, iron 1 C and delivery 12 C. The same basket costs 40 C: a one-third decline. Delivery became more expensive even though the basket became cheaper.
+
+Actual measurement needs consistent quality, locations, quantities and sampling. A server update changing item usefulness should be annotated rather than hidden inside an index.
+
+Inflation risk can arise if currency spending grows faster than desired goods and services, but preferences, idle balances and production responses also matter. Do not claim a mechanical one-to-one relation between issuance and prices.
+
+## 4.4 The treasury cannot spend the same reserve twice
+
+The city’s budget should distinguish operating funds, public-project funds, liquidity capital and inventory owed to claim holders.
+
+A warehouse’s backing stock is restricted custody. Selling it to pay compute bills creates a shortfall unless the liabilities are simultaneously and validly extinguished.
+
+The treasury should publish a conservative operating runway using assets it can actually spend. Marking its own illiquid currency at an optimistic last-trade price does not establish that it can pay external hosting or compute bills.
+
+If an operator subsidizes the world, record that subsidy explicitly. Early subsidies can help a pilot; concealing them makes the economy look more self-sustaining than it is.
+
+# 5. Choose a market for the thing being exchanged
+
+A town does not need one universal market mechanism.
+
+## 5.1 Standard commodities versus promises
+
+| Economic need | Suitable starting mechanism | Why |
+| --- | --- | --- |
+| Small, predictable starter supplies | Disclosed fixed-price shop with limited stock and budget | Easy to understand; avoids requiring an LP at launch |
+| Bulk commodity order | Requests for quotes or a bounded auction | Suppliers can account for quantity, destination and delivery time |
+| Repeated exchange of identical backed claims | An AMM, if liquidity and integration justify it | Continuous executable exchange without matching each order manually |
+| Unique construction or crafting job | Bids and an explicit agreement | Quality, ownership, prerequisites and deadlines vary |
+| Exploration or information | Private delivery and an acceptance procedure | Public disclosure can destroy information’s commercial value |
+| Public infrastructure | Treasury procurement, grants or voluntary pooled funding | Benefits may extend beyond the direct buyer |
+| A timed competition | Defined event budget and published scoring | Prevents pretending prizes are ordinary recurring demand |
+
+A claim redeemable for one standard ingot at one defined service is potentially fungible. “Build something impressive” is not.
+
+An ERC-20-style resource claim also needs a precise unit. If tokens permit fractions but delivery requires whole items, specify minimum redemption and aggregation rules. Token divisibility does not make half an ingot deliverable.
+
+## 5.2 Location and quality create different goods
+
+If R can be redeemed only at the north warehouse, its price includes that limitation. A south-town buyer may pay transport separately. Making R redeemable everywhere instead creates a logistics obligation for the issuer.
+
+Do not use a single interchangeable claim for different qualities, origins or delivery promises unless the issuer genuinely makes holders whole across those differences.
+
+For example, an enchanted sword’s attributes matter. It belongs in a detailed offer or a standardized class with exact specifications, not a generic ingot pool.
+
+## 5.3 A hub currency reduces fragmentation, not risk
+
+With many resource pairs, direct markets for every combination multiply capital requirements. Quoting selected resources against C can concentrate activity in fewer pools.
+
+A wheat-to-iron route can then pass through C. That may add fees and price impact, and it exposes both markets to changes in C’s purchasing power.
+
+Start with the resources people actually trade. Ten shallow pools are not automatically a better economy than one useful pool and a reliable job board.
+
+# 6. Labor, agents and the cost of useful work
+
+## 6.1 A job price is more than a resource quote
+
+A supplier’s quote can include:
+
+**Inputs + execution effort + tool wear + supervision + compute + delivery + expected failure cost + margin.**
+
+Some costs are denominated in C, some in materials and some in an external compute or hosting unit. Keep those ledgers separate unless there is a lawful, executable conversion route. An internal valuation is an estimate, not cash the operator can withdraw.
+
+A fixed reward makes efficiency valuable to the worker. Cost reimbursement can support uncertain work but needs authorized limits and evidence. A hybrid agreement can reimburse specified inputs up to a cap and pay a fixed labor fee for accepted output.
+
+There is no universally correct pricing model. The agreement should state who bears failed attempts, excess material use and price changes.
+
+## 6.2 Reliability belongs in a bid
+
+Consider a hypothetical job paying 100 C only on success. Suppose the worker estimates a 90% success probability and 75 C of expected costs across success and failure outcomes.
+
+Expected contribution before additional penalties and overhead is:
+
+**0.90 × 100 − 75 = 15 C.**
+
+At the same assumptions, a break-even reward is about 83.33 C. Underestimating supervision or repeated failures can eliminate that margin.
+
+This is a simple decision model, not a calibrated AgentCity forecast. Shared failures, changing world conditions and disputes can make the probability estimate unreliable.
+
+Reputation can help a requester compare offers, but the server should record measurable evidence: supported task type, completion history, interventions and disputed outcomes. A single public score can hide important differences.
+
+## 6.3 Compute is a cost center
+
+0G’s Router documentation describes access to model providers and a shared billing balance distinct from Direct provider subaccounts. AgentCity must meter the actual integration it uses. A balance in one account path should not be assumed to fund another. 0G Router, Deposits and billing.
+
+An agent operator should measure compute per accepted outcome, failed outcome and human-assisted recovery. Model calls should occur where decisions need updating, with reliable tools doing routine execution.
+
+If iAI credits are used, confirm their supported access path, expiry and actual consumption in that integration. Credit ownership is not itself useful output, and this document does not assume iAI automatically pays Router bills.
+
+Paying a worker proportionally to raw inference use rewards consumption. Better terms are a fixed accepted-result reward or capped reimbursement of authorized compute plus a separately defined service reward.
+
+## 6.4 Cooperation should not become a race to spend
+
+If larger fleets win every public competition because they use more concurrent agents or more compute, the event is measuring access to capacity as well as skill.
+
+Separate open-capacity events from equal-budget events. Report human interventions and tool availability. Let communities reserve activities where manual play is part of the purpose.
+
+This is a market-design choice: the world can support efficient supply while preserving areas where human participation remains intrinsically valuable.
+
+## 6.5 Decision models as procurement managers
+
+An agent can compare the full delivered cost of three plans: buy claims and redeem, request a supplier quote, or gather the inputs directly. It should consider deadline, reliability, remaining budget and human intervention as well as the displayed price.
+
+A useful decision might be to postpone procurement when the pool is shallow or to choose a slightly dearer supplier with a credible delivery record. The benefit is adaptation to changing conditions, which should be compared against simple rule-based procurement.
+
+The model proposes. Deterministic controls enforce spending, permitted destinations and agreement terms. It should not receive authority to mint currency, spend backing reserves or change the pool’s fee policy merely because it predicts a better outcome.
+
+## 6.6 Small trades and external operating costs
+
+Network fees, reporting, signing, monitoring and custody all have costs. For very small jobs, those costs can exceed the value participants place on the task.
+
+Batching settlement or maintaining server balances may reduce overhead but introduces custody, reconciliation and withdrawal obligations. Sponsoring fees shifts costs to the operator; it does not remove them.
+
+Track cost per useful outcome under the chosen architecture. A market requiring constant subsidy should have an explicit sponsor and budget.
+
+# 7. The warehouse: the economy’s most important balance sheet
+
+Before trading resource claims, specify the promise behind them.
+
+**Proposed promise:** one R is an entitlement to one eligible iron ingot, redeemable through a specified warehouse service under published delivery terms. R is not a promise of a fixed number of C.
+
+## 7.1 The backing invariant
+
+Use these quantities for one resource class:
+
+- **W:** eligible physical units in controlled custody.
+- **O:** outstanding resource claims, wherever they are held.
+- **B:** physical units owed on accepted redemptions whose claims were burned but not yet delivered.
+- **E:** any additional separately owed physical units not already included in O or B.
+
+The minimum solvency condition is:
+
+**W ≥ O + B + E.**
+
+Extra stock above those obligations is the physical buffer. The units backing existing claims cannot also count as a free treasury reserve.
+
+O includes tokens held by users, LP positions, contracts and the treasury. A token in a pool remains outstanding. Moving it into an AMM does not create a second claim or remove its backing requirement.
+
+## 7.2 Follow one inventory cycle
+
+Assume no other obligations and no buffer.
+
+| Event | W: physical stock | O: outstanding R | B: pending delivery | Explanation |
+| --- | --- | --- | --- | --- |
+| Opening state | 1,000 | 1,000 | 0 | Exactly backed |
+| Supplier deposits 200 ingots; 200 R issued after confirmation | 1,200 | 1,200 | 0 | Assets and obligations grow together |
+| Some R changes hands through a swap | 1,200 | 1,200 | 0 | Ownership changes; backing does not |
+| Holder redeems and burns 300 R | 1,200 | 900 | 300 | The obligation changes form |
+| Warehouse delivers those 300 ingots | 900 | 900 | 0 | Physical stock and delivery obligation fall together |
+
+**Burning a claim does not make its reserved material free before delivery.** Forgetting B would let the issuer spend material it still owes.
+
+## 7.3 Deposits and redemption are asynchronous
+
+A blockchain transaction cannot atomically move an item inside a Minecraft server. The system needs a recoverable workflow.
+
+For a deposit: remove or lock the accepted items in protected custody, create a unique durable receipt, confirm the corresponding issuance once, and reconcile unfinished operations.
+
+For a redemption: accept the claim under a unique identifier, prevent reuse, retain a durable delivery obligation, then deliver through an idempotent server action. A retry must not deliver twice.
+
+If a delivery cannot complete, the obligation remains. Any cancellation or restoration of tokens must cancel the matching delivery claim exactly once under the agreed policy.
+
+World rollbacks are particularly serious: restored inventory must not coexist with already issued claims for the same deposit. Freeze affected operations, reconcile the two histories and disclose any deficit before resuming.
+
+## 7.4 Solvency is different from service speed
+
+A warehouse can be fully backed but unable to deliver promptly because of an outage or queue. That is a service-capacity problem.
+
+A warehouse missing the items it owes has a solvency problem. Raising a swap fee does not create the missing inventory.
+
+A published inventory report also depends on the truth of its source. A signed server report authenticates the reporter; it does not independently prove the contents of a chest. The custody and verification trust model remains central.
+
+# 8. How a resource pool actually prices trades
+
+## 8.1 A readable teaching model
+
+For intuition, consider a constant-product pool with:
+
+**x = 10,000 R; y = 20,000 C; x × y = k.**
+
+The opening marginal price is y/x = 2 C per R. The constant-product mechanism and fee treatment have a primary reference in the Uniswap v2 whitepaper. Actual v4 pools normally use concentrated liquidity; this simplified model is not a production v4 quote. Uniswap v2 whitepaper.
+
+With an assumed 0.30% input fee, C input a buys:
+
+**R output = x × [a × (1 − 0.003)] ÷ [y + a × (1 − 0.003)].**
+
+The following calculations assume a single isolated trade from the same opening state, no other fees, no gas, no tick boundaries and continuous quantities.
+
+| C spent | R received | Average C per R | Approximate post-trade marginal C per R |
+| --- | --- | --- | --- |
+| 100 | 49.603 | 2.0160 | 2.0200 |
+| 1,000 | 474.830 | 2.1060 | 2.2047 |
+| 5,000 | 1,995.197 | 2.5060 | 3.1231 |
+
+A 1,000 C buyer does not receive 500 R. Their own order moves through the pricing curve.
+
+**Price impact** is the effect of the order against available liquidity. **Execution slippage** is the difference caused by conditions changing between quote and execution. Both matter, but they are different.
+
+For the 1,000 C example, a hypothetical 1% tolerance against the quoted output gives a minimum output of about 470.081 R. It does not remove the price impact already included in the quote.
+
+## 8.2 More warehouse stock is not more pool depth
+
+Suppose farmers add 5,000 ingots to a warehouse and receive 5,000 newly backed claims. Nothing changes in the R/C pool until someone trades, adds liquidity or executes another defined operation.
+
+Minting claims increases available claim supply. Selling them increases R in the pool and removes C, generally lowering the quoted R price along the curve. Adding balanced liquidity increases depth without intending a price move.
+
+A state report that says “production rose” does not itself transfer assets into the pool.
+
+Likewise, burning R outside the pool reduces outstanding claims but does not automatically alter that pool’s reserves. Redemption may later influence demand and trading behavior.
+
+## 8.3 Arbitrage requires a real route
+
+If R is expensive relative to the cost of sourcing and depositing an ingot, a supplier may gather inventory, issue backed R and sell it. If R is cheap, a buyer may acquire claims, redeem them and use or resell the material.
+
+This connection is limited by deposit permissions, transport, fees, queues, minimum quantities, world access and actual counterparties. Without a reachable alternative market, there is no external “correct price” that arbitrage must enforce.
+
+One R redeeming for one ingot is a quantity relationship. It does not fix the ingot’s price in C or any external currency.
+
+## 8.4 Concentrated liquidity changes the capital problem
+
+Uniswap v3 introduced liquidity allocated to price ranges; v4 retains that basic mechanism. It can concentrate depth near current prices, but liquidity outside the active price region does not support current trading. Concentrated liquidity documentation.
+
+A position can become entirely one asset when price leaves its range, and it stops earning swap fees while inactive. Uniswap v3 whitepaper.
+
+For a young world, a very narrow range may look efficient until an update or production shock moves the market beyond it. Evaluate depth at several trade sizes and stressed prices. Total value deposited is an incomplete measure of usable liquidity.
+
+# 9. Who finances liquidity—and who absorbs losses?
+
+A liquidity provider supplies assets so others can trade immediately. The supplier of iron and the supplier of trading capital can be different people.
+
+## 9.1 Fees are compensation for taking risk
+
+An LP bears price exposure, changes in asset composition, adverse selection, contract risk and any failure of the underlying resource claim. Fees may or may not compensate for those risks.
+
+A town-sponsored pool is a public subsidy if expected fees do not cover its costs. That can be a deliberate choice, but the budget should describe it honestly.
+
+“Users paid fees” does not imply “LPs made a profit.” Nor does a positive return in C prove an increase in purchasing power if C itself became less valuable.
+
+## 9.2 A simple LP loss example
+
+Consider a fee-free constant-product position starting with 1,000 R and 2,000 C. At an initial R price of 2 C, it is worth 4,000 C.
+
+Now suppose the market price of R falls to 1 C and arbitrage rebalances the position.
+
+| Portfolio | R held | C held | Value at 1 C per R |
+| --- | --- | --- | --- |
+| Keep the original assets without LP activity | 1,000 | 2,000 | 3,000 C |
+| Constant-product LP after adjustment | About 1,414.214 | About 1,414.214 | About 2,828.427 C |
+
+The LP holds more of the asset that fell in price. It has about 171.573 C less than the unchanged holdings benchmark, a 5.72% shortfall. Fees and other costs are excluded.
+
+The 1,000 C decline in the holdings benchmark is ordinary exposure to the resource price. The additional shortfall arises from the LP strategy. These are different components of the result.
+
+This is an illustrative constant-product calculation, not a forecast for a particular v4 range.
+
+## 9.3 Better-informed traders can extract value
+
+Milionis, Moallemi, Roughgarden and Zhang analyze AMM returns and loss-versus-rebalancing: stale AMM quotes can be traded against by better-informed arbitrageurs. Their framework distinguishes market exposure from microstructural fees and losses. Its assumptions should not be treated as a calibrated model of a thin game-resource market. Automated Market Making and Loss-Versus-Rebalancing.
+
+In AgentCity, a participant may learn that a major farm has failed before a state update reaches the chain. They can trade before less-informed participants respond. A slow registry or a stale fixed fee does not neutralize this information advantage.
+
+Publishing useful data promptly and using bounded risk controls can help. No hook should be advertised as eliminating all informed trading or LP losses.
+
+## 9.4 An outage policy has a distributional effect
+
+Suppose redemption fails.
+
+If the hook blocks purchases of R but permits sales, existing holders can sell questionable claims into the pool. LPs absorb those claims and lose C. This preserves an exit route for sellers at LP expense.
+
+If both swap directions stop, LPs are less exposed to new swaps, but users lose that trading venue. Other venues may remain open.
+
+If liquidity withdrawals remain possible, LPs can remove their current asset mix. That is not a promise that the removed R can be redeemed or that the LP recovers its original C.
+
+**Proposed initial policy:** pause both swap directions in the designated pool on a critical stale or insolvency state; leave ordinary liquidity withdrawal available through the designed path. Treat claim redemption and its recovery queue separately. Publish this policy before anyone deposits liquidity.
+
+Directional exit policies can be explored later, with explicit LP consent and a clear account of who bears the loss.
+
+## 9.5 A reserve fund is not unlimited insurance
+
+A separately funded reserve might cover narrowly defined operational losses. It needs a funding source, maximum coverage, eligibility rules, payout priority and a deficit procedure.
+
+A treasury fee paid in C does not necessarily purchase replacement resources after a shock. A reserve concentrated in its own resource claim is particularly weak protection against failure of that claim.
+
+Do not guarantee par redemption from an uncapitalized insurance promise. Measure eligible claims against the actual resources available to cover them.
+
+# 10. Uniswap v4 hooks: the exact boundary
+
+## 10.1 What the protocol provides
+
+Hooks are external contracts associated with a v4 pool. They can run around initialization, swaps, liquidity modifications and donations. The hook is selected at pool creation; one hook contract can serve multiple pools. Permissions are encoded in the hook’s address. Uniswap v4 hooks.
+
+For AgentCity, that means a rule can execute when someone directly uses the designated pool, including through another interface. A rule implemented only in the game’s website cannot provide the same pool-level enforcement.
+
+Each pool has one hook contract, so a design needing several features must combine or deliberately compose those features. They do not arrive as a stack of independently attached plugins.
+
+## 10.2 Translating game state into market behavior
+
+The proposed path is:
+
+**Observed world event → durable server accounting → authorized state report → onchain registry → hook checks → permitted pool operation.**
+
+The report could identify the world, resource class and issuer, and include a monotonically increasing sequence, observation time, expiry, operating status and a reference to inventory reconciliation.
+
+The hook reads the registry. It does not call Minecraft, read a chest or run an LLM during the swap.
+
+A proposed report rule should reject unauthorized publishers, replayed sequence numbers, mismatched assets and invalid validity intervals. A maximum permitted report age matters as well as a declared expiry: an operator should not be able to make a very old observation appear fresh by choosing a long expiry.
+
+These are AgentCity design requirements, not features Uniswap supplies automatically. The registry’s truth still depends on the game-state reporting and custody model.
+
+## 10.3 The hook is a policy boundary, not a world oracle
+
+A signed report proves that an authorized key made a statement. Onchain publication does not prove the server statement is correct.
+
+Likewise, a warehouse checksum can help compare histories without establishing that every referenced item is currently available. Stronger assurances require corresponding custody controls, monitoring, evidence and a defined trust model.
+
+State freshness also has a cost. Very short expiry can halt markets during normal network delays. Long expiry gives stale information more time to influence trading. Choose the policy from measured update latency, trade sizes and acceptable exposure.
+
+# 11. What hooks make possible for AgentCity
+
+The protocol capabilities below are documented. The specific world policies are proposed applications requiring implementation and evaluation.
+
+## 11.1 A market that refuses stale service information
+
+**Problem:** someone buys a redemption claim while the market is relying on an old service report.
+
+**Proposed mechanism:** a pre-swap check reads the relevant report and rejects the swap if required freshness or health conditions fail.
+
+**Example:** the warehouse reporter stops updating. Once the permitted age is exceeded, the designated R/C pool rejects further swaps under its published halt policy.
+
+**Economic benefit:** a buyer cannot bypass that pool’s state check by opening a different frontend.
+
+**Limit:** transactions before expiry still face an information gap. Other pools and transfers remain outside this policy unless separately constrained. Honest reporting and adequate backing remain necessary.
+
+This is the clearest initial hook use case because it enforces a specific condition at the point of exchange.
+
+## 11.2 Fees that respond to measured risk
+
+Uniswap v4 supports dynamic LP swap fees, including per-swap or periodic adjustments. Dynamic LP fees, protocol fees and custom hook fees are distinct categories. A dynamic-fee pool must be configured accordingly; a fee policy needs more than returning an arbitrary number from a standard static pool. Dynamic fees, Fee categories.
+
+**Proposed application:** use a bounded, published schedule while reports remain valid.
+
+| Illustrative state | Illustrative LP fee | Proposed treatment |
+| --- | --- | --- |
+| Normal operations | 0.30% | Ordinary trading |
+| Elevated observed trading volatility | 0.60% | More compensation for risk-bearing capital |
+| Temporary operational uncertainty within permitted limits | 1.00% | Limited trading under disclosed risk |
+| Critical stale report or backing deficit | No fee quote | Halt under the defined policy |
+
+These values are invented starting points for simulation, not recommendations established by empirical data.
+
+A higher fee can discourage trades and compensate LPs; it cannot repair a deficit. It can also make useful procurement expensive, reduce volume or divert trading elsewhere.
+
+Avoid charging more merely because the warehouse contains fewer units. Legitimate redemptions can shrink assets and matching obligations together without reducing backing quality. Separate solvency, delivery capacity and trading volatility.
+
+## 11.3 Bounded trade flow
+
+**Problem:** a shallow market can be moved dramatically, or an operational service may need to limit new exposure.
+
+**Proposed mechanism:** enforce a disclosed maximum trade amount or cumulative volume for the designated pool. Account for actual executed amounts and handle both exact-input and exact-output orders correctly.
+
+**Example:** cap net new R purchases over a defined interval while a service is degraded, if the policy specifically uses that directional mode.
+
+**Limit:** per-wallet limits invite identity splitting. A per-pool global limit can be exhausted by hostile traders and cannot control unrelated venues. Swap limits also do not replace redemption-capacity management.
+
+When a risk is specifically a delivery queue, the redemption service may be the better place to enforce capacity. A trade is a transfer of an existing claim, not necessarily a new obligation.
+
+## 11.4 An explicitly funded public-service levy
+
+Custom accounting lets hooks alter settlement deltas, including implementing a separate hook fee. It can also support custom pricing or wrapping logic. These mechanisms require correct accounting and settlement; they are not free asset creation. Custom accounting.
+
+**Proposed application:** a small, disclosed levy funds warehouse operations or public infrastructure.
+
+The quote must show the complete cost. A dynamic LP fee compensates LPs; it does not automatically fund the treasury. A hook levy paid to the treasury is a transfer unless permanently burned.
+
+Set a governance cap and identify the recipient. Do not advertise a treasury levy as LP revenue or as insurance unless coverage is separately funded and specified.
+
+## 11.5 Slow procurement for large projects
+
+Uniswap Labs has published a TWAMM hook example illustrating long-duration orders split over time. This establishes a design precedent, not a drop-in guarantee for AgentCity’s current deployment. Uniswap v4 TWAMM hook.
+
+**Proposed application:** a town authorizes a gradual purchase of materials for a week-long project instead of submitting one large immediate order.
+
+The order needs a budget, duration, limit conditions, cancellation, freshness rules and a way to advance or settle its state. A hook does not wake itself up when the clock changes; execution requires transactions or an accompanying automation mechanism.
+
+Spreading a purchase can help when supply or liquidity replenishes between executions. In a static isolated fee-free constant-product pool, splitting the same net one-way purchase does not eliminate its aggregate price impact. Market conditions can also worsen during the schedule.
+
+Distinguish TWAMM order execution from a TWAP price observation. One trades; the other measures.
+
+## 11.6 Limit orders and supplier execution rules
+
+A supplier may want to sell resource claims only above a minimum price, or a builder may want to buy only below a ceiling.
+
+The v4 whitepaper describes hooks as a route to advanced order mechanics and custom oracle designs. Implementing these requires order custody, execution, cancellation and settlement logic in addition to a callback. Uniswap v4 whitepaper.
+
+For an early economy, an RFQ can be easier to understand than deploying a complex onchain order system. A quoted limit price also does not guarantee anyone will supply the other side.
+
+## 11.7 Custom curves and a finite dealer
+
+A sophisticated design could quote claims using a custom accounting curve or route against explicitly funded issuer inventory.
+
+This changes the business model: someone becomes a dealer whose inventory and currency can be exhausted. A fixed offer to sell at 2 C and buy at 1.9 C requires both physical claim backing and enough C to honor eligible buybacks.
+
+It is not a perpetual price peg. It needs finite limits, a refresh policy and a disclosed response when capital is depleted.
+
+The strongest initial application is an ordinary market with a narrowly scoped guard. A custom curve should follow evidence that the ordinary pricing mechanism fails a concrete need.
+
+## 11.8 Agent authorization at procurement time
+
+An agent’s owner might authorize purchases for one job, up to a maximum amount, until an expiry.
+
+A procurement contract can enforce that authorization before calling a pool. A hook is useful if the designated pool itself must require valid authorization regardless of the route used.
+
+Identity handling is nontrivial: the immediate caller can be a router, not the player. Untrusted request data is not proof of authority. Authentication needs the correct signer, domain, nonce, scope and replay protection.
+
+This is an optional market policy. It should not turn ordinary manual participation into a requirement to own an external asset, and it should not be used to pretend that a wallet is a unique human.
+
+## 11.9 Liquidity policies and withdrawal rights
+
+Hooks can inspect liquidity operations. That could support permissioned launch capital or disclosed liquidity-management rules.
+
+The economic danger is trapping providers when the system is in trouble. If the design permits withdrawal restrictions, they must be disclosed before funds enter, with a clear purpose and recovery path.
+
+The recommended initial pause policy should not block normal removal merely because swaps are halted. Providers still receive the current position assets; withdrawal is not a treasury-funded guarantee of their entry value.
+
+## 11.10 Programmable pricing observations
+
+A custom oracle could record suitable observations for reporting or bounded execution checks.
+
+It cannot manufacture an independent reference price from the same manipulated pool. A short-lived spot jump should not set collateral values, unlimited public rewards or guaranteed treasury buybacks.
+
+Use adequate observation history, meaningful liquidity checks and independent evidence where available. If no robust reference exists, explicitly operate without leveraged lending or promises that require one.
+
+# 12. What belongs outside the hook
+
+| Responsibility | Primary module | Why a hook is insufficient |
+| --- | --- | --- |
+| Verify an item exists in the game | Server and custody controls | The hook cannot inspect the world |
+| Prevent duplicate inventory issuance | Deposit journal and claim issuer | A swap does not validate every historical mint |
+| Preserve burn-to-delivery obligations | Redemption ledger and queue | Completion occurs outside chain execution |
+| Assess a commissioned build | Task verifier and agreed review procedure | Exchange price is not evidence of workmanship |
+| Decide who receives a team reward | Job agreement and settlement | Trading activity does not attribute creative contribution |
+| Plan a task or choose suppliers | Decision model and orchestration | Inference is an offchain planning service |
+| Publish discoverable services | Shared record layer and clients | A pool callback is not a job directory |
+| Enforce world-wide transfer rules | Token design and all relevant venues | A hook governs its associated pool operations |
+| Cover losses | Capitalized reserve and payout rules | A fee parameter is not an insurance asset |
+| Resolve platform compatibility | Deployment and product design | A hook cannot grant permission to use Minecraft |
+
+## 12.1 Atomic financial settlement has a boundary
+
+V4 flash accounting tracks net token deltas and requires settlement within the relevant transaction flow. It can reduce transfer overhead across compatible onchain operations. It does not make a Minecraft delivery, Arkiv update or external compute call part of the same atomic transaction. Flash accounting.
+
+A multi-resource onchain purchase can therefore succeed while a later in-game delivery needs recovery. The product must represent that intermediate obligation.
+
+## 12.2 One chain is a design choice, not an assumption
+
+Choose a verified v4 deployment and the exact contract addresses for that network. Official deployment documentation explicitly warns against assuming addresses match across chains. V4 deployments.
+
+Using 0G inference does not establish that the resource pool, escrow and Arkiv records share a chain. Any cross-chain funds or messages add latency, finality and failure risks. Avoid introducing a bridge merely to make a diagram look unified.
+
+## 12.3 Hooks do not eliminate transaction-ordering risk
+
+Ethereum’s documentation describes sandwich trading and other forms of MEV that can worsen execution. A programmed hook is not a general exemption from those incentives. Ethereum MEV documentation.
+
+Use bounded quotes, appropriate execution routes, clear cancellation and disclosure of remaining risks. Large public procurement orders and scheduled state updates can reveal valuable information.
+
+The server operator can also possess market-sensitive information. Publish update procedures and access controls so the system does not quietly reward privileged early trading.
+
+# 13. Financing a growing civilization
+
+A commodity exchange handles immediate trades. A town also needs ways to fund work before its benefits arrive.
+
+## 13.1 Public works
+
+A bridge can benefit people who never paid the builder. Relying only on individual purchases may underfund it.
+
+Possible mechanisms include voluntary contributions, a town budget, capped matching grants or disclosed user charges. Each changes who pays and who benefits. A pool levy is one funding source, not evidence that the bridge is worth building.
+
+Approve a public project against a defined scope and budget. Record the accepted result and maintenance obligation. Separate construction funding from a perpetual revenue promise.
+
+## 13.2 Working capital and advances
+
+A capable worker may lack materials. A requester can supply inputs directly or fund a restricted procurement account, reducing the worker’s need to borrow.
+
+An advance paid freely to a supplier creates counterparty risk. Prefer milestone releases, limited exposure and recoverable materials where practical. Requiring large worker bonds can reduce losses while excluding newcomers; that trade-off should be explicit.
+
+Automated agents need the same discipline. A convincing model response is not collateral.
+
+## 13.3 Renting productive capacity
+
+Players may offer workshop access, storage, transport capacity or a managed agent service for a period.
+
+An agreement should state capacity, permitted use, availability, damage responsibility and what happens to unfinished work at expiry. Charging for access to something the operator can revoke makes the operator’s reliability part of the price.
+
+A rental does not require tokenizing ownership of the underlying infrastructure.
+
+## 13.4 Future delivery is a different liability
+
+A farmer may promise 1,000 wheat next week. That is a forward delivery agreement exposed to production failure. It should not be issued as an immediately redeemable warehouse claim unless the corresponding inventory is already reserved.
+
+Future-production commitments need maturity, quantity, settlement, collateral or loss-allocation rules, and possibly a verification-based dispute process.
+
+A hook could participate in a market for standardized instruments, but the production risk and settlement system would still need to exist. Treating hoped-for harvests as current reserves creates hidden leverage.
+
+## 13.5 Lending and leverage should follow reliable spot markets
+
+Using a thin resource pool’s spot price to value collateral is an easy route to manipulated loans and public losses.
+
+Before lending, the world would need robust price observations, conservative collateral valuation, liquidation capacity, exposure limits and a funded response to bad debt. These are substantial additional systems.
+
+The recommended first economy uses funded jobs, fully backed spot claims and capped procurement. Debt markets and derivatives are later research questions, not requirements for a compelling civilization.
+
+# 14. One project, all the money movements
+
+Consider a hypothetical construction job with a 1,000 C spending authorization.
+
+The player permits up to 500 C for materials, 280 C for accepted labor and 30 C for delivery, leaving 190 C unallocated contingency. All amounts remain within the single 1,000 C cap.
+
+Use the teaching pool from Section 8. The project needs exactly 150 R. With the assumed 0.30% fee, the required input is approximately:
+
+**20,000 × 150 ÷ [(10,000 − 150) × 0.997] = 305.485 C.**
+
+Production implementation would use a current quote, explicit limits and appropriate rounding.
+
+| Stage | Economic event | What must remain true |
+| --- | --- | --- |
+| Authorization | 1,000 C reserved for the job | This is custody, not currency issuance |
+| Discovery | Agent compares suppliers and venues | Offers are attributable and terms cannot silently change after agreement |
+| Preflight | Current quote and relevant state checked | A frontend check does not replace pool enforcement |
+| Purchase | About 305.485 C exchanged for 150 R | Maximum input respected; underlying claims remain backed |
+| Redemption | 150 R extinguished into a 150-unit delivery obligation | Pending obligation retained until delivery |
+| Logistics | 30 C paid for accepted transport | Destination and delivery criteria checked |
+| Construction | 280 C labor reward released on agreed acceptance | Verified facts and subjective review remain distinct |
+| Close | About 384.515 C of unused authorization returned | Spent materials are not falsely represented as refundable cash |
+
+Total project spending is about 615.485 C. The swap includes about 0.916 C of the assumed LP input fee; do not add that fee again.
+
+The builder might allocate 60 C and 40 C of the 280 C labor reward to two authorized subworkers. The remaining 180 C is a gross remainder before its other expenses. It is not automatically profit.
+
+Subworker commitments come from the same funded allowance. They do not create another 100 C of spending authority.
+
+Compute and hosting expenses stay in the operator’s separate ledger. Without an executable conversion from C, a positive in-world balance does not prove the operator can pay those bills.
+
+If the build fails after material purchase, the agreement determines ownership of materials, partial rewards and cancellation. The system cannot promise the entire initial budget back after irreversible authorized spending.
+
+Arkiv can help independently publish profiles, offers and job references through its queryable data entities. Those records are discovery and history, not proof of inventory or a replacement for canonical funded terms. Expiring listings must not erase settlement rights. Arkiv fundamentals.
+
+# 15. Stress-testing the world
+
+| Shock | Likely economic channel | Proposed response | Remaining cost or limitation |
+| --- | --- | --- | --- |
+| Automated farms sharply increase supply | Commodity prices and producer margins may fall | Observe output, inventories and demand; support new useful projects | Historical producer income cannot be guaranteed without subsidy |
+| Large C grants arrive without matching demand or output | Purchasing power and spending patterns may change | Publish issuance, track a basket and limit experimental grants | The price response is not mechanically predictable |
+| A warehouse loses backing stock | Claims exceed eligible assets | Freeze affected issuance and trading under policy; reconcile and disclose deficit | Capital or an agreed loss allocation is required |
+| A fully backed warehouse goes offline | Redemption delay and uncertainty | Preserve claim obligations; apply disclosed freshness policy | A pause does not deliver items |
+| A world rollback restores already tokenized items | Duplicate economic claims can arise | Halt affected flows, reconcile receipts and inventory history | Server trust and recovery capability remain essential |
+| A major project buys into thin liquidity | Large price impact and expensive execution | RFQ, staged execution or more funded liquidity | No technique guarantees the old price |
+| LPs withdraw after a shock | Usable market depth falls | Disclose depth and finite treasury support | Unlimited liquidity cannot be promised |
+| Operator trades on unpublished incident information | Other participants face adverse selection | Controlled access, prompt updates and reviewable procedures | Enforcement still depends on governance and evidence |
+| Agents create fake jobs or self-trades for rewards | Metrics and subsidy budgets are exploited | Avoid volume-based payouts; require useful funded outcomes and exposure limits | Identity and collusion remain difficult |
+| Newcomers cannot compete with large fleets | Participation and control concentrate | Shared infrastructure, accessible jobs and separate competition categories | Fairness rules may trade off against maximum output |
+| Resource scarcity changes after an update | Existing prices and strategies become obsolete | Version policies, announce changes and stress-test obligations | Existing capital can still lose value |
+| Compute prices or availability worsen | Agent margins and reliability deteriorate | Stop under budget limits, switch only to tested alternatives, re-quote future jobs | Cheap in-game materials do not pay external compute costs |
+
+A useful stress test asks two questions: **what stops, and who still owes what?**
+
+“Pause the system” is incomplete if escrow cannot refund, burned claims disappear or users cannot determine whether delivery will resume.
+
+# 16. The city’s economic dashboard
+
+CCP’s published EVE economic reporting offers a useful operational precedent for observing production and money flows. Its November 2024 report also explicitly discloses missing faucet/sink data and a corrected calculation. The relevant lesson is to publish definitions and corrections, not to assume AgentCity will reproduce EVE’s economy. EVE Monthly Economic Report, November 2024.
+
+A proposed AgentCity dashboard should answer the following.
+
+| Area | Metrics | What they help diagnose |
+| --- | --- | --- |
+| Money | Issued C, new issuance, burns, treasury, escrow and spendable balances | Reconcile currency changes and restricted funds |
+| Resources | Production, usable stock, consumption, losses and committed inventory | Distinguish scarcity from logistics |
+| Claim backing | W, O, B, E, buffers and reconciliation age | Detect over-issuance and unresolved deliveries |
+| Market quality | Quotes for fixed order sizes, spreads, realized execution and active liquidity | Measure whether a market is usable |
+| LP outcomes | Fees, asset composition, mark-to-market result and comparison benchmarks | Avoid presenting gross fees as profit |
+| Work | Completion, partial acceptance, disputes, delay and repeat customers | Measure useful service delivery |
+| Agents | Compute per accepted result, failures, supervision and budget overruns | Identify whether automation is economically helpful |
+| Distribution | Concentration of production, contracts and access; newcomer participation | Detect power concentration and exclusion |
+| Player value | Voluntary repeat use, understanding, perceived control and project completion | Keep economic activity connected to the game |
+
+Do not sum the value of iron, rails and the final railway and call all three new final output. Choose final-output accounting or a consistent value-added approach to avoid double counting.
+
+Do not treat self-trades, repeated inventory transfers, token issuance and new productive output as interchangeable activity.
+
+A policy change should be logged with its expected effect and later reviewed against evidence. If a fee increase reduces useful trade without improving risk-adjusted outcomes, change it.
+
+# 17. Recommended economic architecture and sequence
+
+## 17.1 Begin with funded cooperation
+
+Start with a small, comprehensible set of supported jobs, a controlled accounting unit, explicit budgets and verifiable delivery. Keep manual participation fully usable.
+
+Measure whether users need continuous exchange, whether prices vary meaningfully and whether there is enough two-sided interest to justify a pool.
+
+## 17.2 Add custody before expanding financial promises
+
+Implement deposit receipts, protected backing, pending-redemption accounting and recovery from duplicate events or rollbacks.
+
+Demonstrate that a crash between burn and delivery preserves the obligation. Demonstrate that duplicate issuance is rejected. These are more fundamental than a complex fee strategy.
+
+## 17.3 Add one narrowly useful hook
+
+For a compatible research deployment, begin with one resource pool and a fresh-state check, a clear symmetric halt policy and an ordinary liquidity withdrawal path.
+
+Demonstrate that a direct transaction through a different interface still encounters the designated pool’s rule. Also demonstrate that another unrelated pool is outside that rule. Both facts are necessary to understand the scope.
+
+Keep fee settings simple until there is evidence supporting a dynamic policy.
+
+## 17.4 Expand only against measured needs
+
+| Proposed extension | Evidence to require first |
+| --- | --- |
+| Dynamic risk fees | Measured risk changes and comparison against a fixed-fee baseline |
+| Treasury hook levy | A real operating budget and evidence users accept the additional cost |
+| Gradual procurement | Large useful orders and replenishing market conditions |
+| Additional resource pools | Repeated demand and sustainable liquidity per market |
+| Independent shared-market records | A second operator or client actually discovering and publishing services |
+| Reserve coverage | Real capitalization and a tested payout procedure |
+| Forward delivery or lending | Reliable spot accounting, robust risk measurement and explicit default handling |
+
+The system should earn its complexity. Each additional mechanism creates a new promise or a new way for an old promise to fail.
+
+# 18. The financial thesis in one page
+
+AgentCity’s economy starts with projects people want to complete. Those projects create demand for materials, labor, coordination and computation.
+
+Standardized, backed material claims can improve exchange where enough participants want them. Bespoke services need explicit agreements and outcome assessment. Compute belongs in operating costs. A treasury funds common infrastructure only from assets it is entitled to spend.
+
+Uniswap v4 gives a particular market programmable execution boundaries. Hooks can enforce fresh reports, apply disclosed risk fees, support advanced orders and direct defined charges. The surrounding system must still establish truth, custody, funding, recovery and legitimacy.
+
+The strongest version of AgentCity is a world where participants can answer:
+
+**What am I buying? What do I own? Who owes me delivery? What can my agent spend? What happens if it fails? Who bears a market loss?**
+
+When those answers are clear, prices can become useful coordination signals. When they are unclear, more trading creates more exposure to misunderstanding.
+
+# Research and source register
+
+This is a selected literature and official-documentation review. No live AgentCity market dataset or calibrated economy model exists in this document. Calculations are the author’s hypothetical examples. Protocol documentation establishes available primitives; the proposed world policies require implementation and testing.
+
+| Source | What it supports here |
+| --- | --- |
+| Castronova — On Virtual Economies | Virtual-world economics and the value of designed constraints |
+| Lehdonvirta and Castronova — Virtual Economies, publisher description | Markets, institutions and money as virtual-economy design tools; full book not reviewed |
+| Uniswap v2 whitepaper | Constant-product foundation for teaching calculations |
+| Uniswap v3 whitepaper | Range liquidity and one-sided out-of-range positions |
+| Uniswap concentrated liquidity | Current v3/v4 liquidity concepts |
+| AMM returns and loss-versus-rebalancing | Market exposure, fees and adverse selection |
+| Uniswap v4 whitepaper | Programmable pool architecture and advanced design scope |
+| V4 hooks | Lifecycle callbacks and pool association |
+| V4 dynamic fees | Variable LP fees |
+| Fee categories | LP, protocol and hook fee distinctions |
+| Custom accounting | Settlement deltas and custom fee/curve primitives |
+| TWAMM hook example | Historical precedent for gradual onchain execution |
+| Flash accounting | Net onchain settlement and its transaction boundary |
+| V4 deployments | Network-specific integration requirements |
+| Ethereum MEV | Transaction-ordering and sandwich risk |
+| 0G Router and billing | Actual compute access and account separation |
+| Arkiv fundamentals | Queryable shared records and expiration |
+| EVE economic report | An operational reporting precedent and disclosure of data corrections |
+| Minecraft Usage Guidelines | Material platform constraints on deployment |

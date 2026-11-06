@@ -1,0 +1,142 @@
+{
+  "status": "fail",
+  "scope": "Same-task shelter recovery: preserve16 observed cells and38 carried planks; no new withdrawal or reset",
+  "independentHumansVerified": 0,
+  "publicTransactions": 0,
+  "startedAt": "2026-10-31T07:39:08.813Z",
+  "checks": [
+    {
+      "name": "original-task-withdrawal-and-pending-placement-preserved",
+      "status": "pass",
+      "completedBeforeResume": 16,
+      "originalSourcePlanksBefore": 124,
+      "recordedSourcePlanksAfterWithdrawal": 74,
+      "recordedCarriedPlanks": 38
+    }
+  ],
+  "originalTaskId": "c3d00d00-5e1b-4531-b1fa-829c8c975b8d",
+  "originalPendingId": "8c07681b-1d3a-4796-9b9c-6604a6a79e6c:place:16",
+  "retainedCompleted": 16,
+  "retainedExpectedCarriedPlanks": 38,
+  "observerParkedAwayFromBuild": {
+    "x": -36.568689761500295,
+    "y": 64,
+    "z": 12.375885797858418
+  },
+  "taskFailure": {
+    "message": "Task paused. Rejoin your play area and repeat the same request to resume.",
+    "pending": {
+      "id": "8c07681b-1d3a-4796-9b9c-6604a6a79e6c:place:16",
+      "kind": "place",
+      "position": [
+        -45,
+        65,
+        4
+      ],
+      "item": "oak_planks",
+      "count": 1,
+      "before": {
+        "inventory": {
+          "oak_planks": 38
+        },
+        "block": "air"
+      },
+      "after": {
+        "inventory": {
+          "oak_planks": 37
+        },
+        "block": "oak_planks"
+      }
+    },
+    "lastPlacement": {
+      "target": [
+        -45,
+        65,
+        4
+      ],
+      "attempts": [
+        {
+          "feet": [
+            -45,
+            64,
+            2
+          ],
+          "from": [
+            -40.69857787079967,
+            64,
+            4.330197944381802
+          ],
+          "result": "No safe walking path to the task target."
+        },
+        {
+          "feet": [
+            -43,
+            64,
+            2
+          ],
+          "from": [
+            -40.69857787079967,
+            64,
+            4.330197944381802
+          ],
+          "result": "No safe walking path to the task target."
+        },
+        {
+          "feet": [
+            -47,
+            64,
+            6
+          ],
+          "from": [
+            -40.69857787079967,
+            64,
+            4.330197944381802
+          ],
+          "result": "No safe walking path to the task target."
+        },
+        {
+          "feet": [
+            -43,
+            65,
+            4
+          ],
+          "from": [
+            -40.69857787079967,
+            64,
+            4.330197944381802
+          ],
+          "result": "No safe walking path to the task target."
+        },
+        {
+          "feet": [
+            -47,
+            65,
+            4
+          ],
+          "from": [
+            -40.69857787079967,
+            64,
+            4.330197944381802
+          ],
+          "result": "The goal was changed before it could be completed!"
+        },
+        {
+          "feet": [
+            -45,
+            65,
+            6
+          ],
+          "from": [
+            -40.69857787079967,
+            64,
+            4.330197944381802
+          ],
+          "result": "Task paused. Rejoin your play area and repeat the same request to resume."
+        }
+      ]
+    }
+  },
+  "error": "Task paused. Rejoin your play area and repeat the same request to resume.",
+  "finishedAt": "2026-10-31T07:41:25.088Z",
+  "lastWorldName": "minecraft:agentcity_play"
+}

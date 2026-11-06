@@ -1,0 +1,331 @@
+{
+  "schema": "agentcity.candidate.physical-summary.v1",
+  "status": "diagnostic_experiments_complete",
+  "full_phase_gate_passed": false,
+  "independent_humans": 0,
+  "phase_acceptance_claimed": false,
+  "experiments": {
+    "native_click": {
+      "run": "evidence/runs/p1-candidate/agentcity-p1-8b8f3235",
+      "inspection_status": "pass",
+      "observed_rows": 16,
+      "elapsed_ms": 165593,
+      "suites": [
+        {
+          "name": "normal",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16
+        }
+      ],
+      "bindings": {
+        "server-result.json": "fd639a68d747b1167caf24e3a55c92716117a8534073d811118df2540581bccd",
+        "client-result.json": "0ed7638ae62a611762abfdea70254d831ebcf7cc5145f3edef753c717dafa067",
+        "run-report.json": "5fa4aa05b7927b865a1480d6afae3aefc249ed92e89bcd1293922aae08e79c1b",
+        "AgentCityCandidateFixture.jar": "f45c0b932ed772de2bb4bdaf2a080917e7cd85f5598cc85d551ea00c1a40c838"
+      }
+    },
+    "native_engine_equivalence": {
+      "run": "evidence/runs/p1-candidate/agentcity-p1-742a03c3",
+      "inspection_status": "pass",
+      "observed_rows": 16,
+      "elapsed_ms": 79689,
+      "suites": [
+        {
+          "name": "normal",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16
+        }
+      ],
+      "bindings": {
+        "server-result.json": "b433aa1a766560a7b3e5bef7282253eda47488a811df45a774e5c179c6f3df4d",
+        "client-result.json": "48b9fd689b9bc292be74292988a27b401359fc4310e01c5cc54f4654e2ceabf0",
+        "run-report.json": "8a56e207c30965fd2c4494372c17867fbcb2df640585a1e242b8f05b5798bb8e",
+        "AgentCityCandidateFixture.jar": "a86ee2d6bad42bcfe53fb6648817a935c72c29c1eb94fad57039914b60c78096"
+      }
+    },
+    "fault_restoration_final_spacing": {
+      "run": "evidence/runs/p1-candidate/agentcity-p1-8fcbe672",
+      "inspection_status": "pass",
+      "observed_rows": 48,
+      "elapsed_ms": 289745,
+      "suites": [
+        {
+          "name": "normal",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16,
+          "elapsed_ms": 91249
+        },
+        {
+          "name": "carry_fault",
+          "fixture_revision": 2,
+          "case_count": 16,
+          "arithmetic_pass_count": 10,
+          "elapsed_ms": 92947
+        },
+        {
+          "name": "restored",
+          "fixture_revision": 3,
+          "case_count": 16,
+          "arithmetic_pass_count": 16,
+          "elapsed_ms": 92748
+        }
+      ],
+      "bindings": {
+        "server-result.json": "8b4418a4cad0e4d01f3e2070d3be0a025d86e1ef0b993a6d57e5783d8af69941",
+        "client-result.json": "fdc8aba6d8494b9e3cf59f48cf41304e149640fdffa158d8e41dc057a0de81af",
+        "run-report.json": "81d814430173f8b7032f9863bfcccfd37febb0b7cbe21b70ca1a476437c8f644",
+        "AgentCityCandidateFixture.jar": "309f204f738d484c11651bba14acc6968230d36277377e1c0e9555c96600d3a9"
+      }
+    },
+    "all_source_target_transitions": {
+      "run": "evidence/runs/p1-candidate/agentcity-p1-c0083d46",
+      "inspection_status": "pass",
+      "observed_rows": 256,
+      "elapsed_ms": 1502182,
+      "suites": [
+        {
+          "name": "transitions-from-0-0",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16,
+          "elapsed_ms": 91152
+        },
+        {
+          "name": "transitions-from-0-1",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16,
+          "elapsed_ms": 92947
+        },
+        {
+          "name": "transitions-from-0-2",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16,
+          "elapsed_ms": 93000
+        },
+        {
+          "name": "transitions-from-0-3",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16,
+          "elapsed_ms": 93000
+        },
+        {
+          "name": "transitions-from-1-0",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16,
+          "elapsed_ms": 92701
+        },
+        {
+          "name": "transitions-from-1-1",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16,
+          "elapsed_ms": 92599
+        },
+        {
+          "name": "transitions-from-1-2",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16,
+          "elapsed_ms": 92900
+        },
+        {
+          "name": "transitions-from-1-3",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16,
+          "elapsed_ms": 92549
+        },
+        {
+          "name": "transitions-from-2-0",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16,
+          "elapsed_ms": 92901
+        },
+        {
+          "name": "transitions-from-2-1",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16,
+          "elapsed_ms": 92750
+        },
+        {
+          "name": "transitions-from-2-2",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16,
+          "elapsed_ms": 92852
+        },
+        {
+          "name": "transitions-from-2-3",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16,
+          "elapsed_ms": 92650
+        },
+        {
+          "name": "transitions-from-3-0",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16,
+          "elapsed_ms": 92749
+        },
+        {
+          "name": "transitions-from-3-1",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16,
+          "elapsed_ms": 92499
+        },
+        {
+          "name": "transitions-from-3-2",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16,
+          "elapsed_ms": 92799
+        },
+        {
+          "name": "transitions-from-3-3",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16,
+          "elapsed_ms": 92852
+        }
+      ],
+      "bindings": {
+        "server-result.json": "9a128a67341fd13bf9747a764e65c4d129042952dc94542867395e185c14df55",
+        "client-result.json": "58028cd9fa15d6fc31b643e7106d2e9fbfdafd18e8754b6c55e467d58a5c9833",
+        "run-report.json": "f6e635cc269574eea208ee2956a0911e30373ec07d4bf3b0e032b041d829b093",
+        "AgentCityCandidateFixture.jar": "8d124f4733f8ece28a780cacaeeafdf8a1af4f0d3be93b5867b6fd6934d1a771"
+      },
+      "unique_source_target_pairs": 256,
+      "max_case_ms": 7154,
+      "max_suite_ms": 93000
+    },
+    "four_orders_normal": {
+      "run": "evidence/runs/p1-candidate/agentcity-p1-3592f6e8",
+      "inspection_status": "pass",
+      "observed_rows": 64,
+      "elapsed_ms": 383882,
+      "suites": [
+        {
+          "name": "normal",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16,
+          "elapsed_ms": 91298
+        },
+        {
+          "name": "descending",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16,
+          "elapsed_ms": 94649
+        },
+        {
+          "name": "alternating",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16,
+          "elapsed_ms": 92349
+        },
+        {
+          "name": "seeded-20261029",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16,
+          "elapsed_ms": 92299
+        }
+      ],
+      "bindings": {
+        "server-result.json": "622813789d35844ef7a41a35eeee558bec06b090522e2331404132b1962319a0",
+        "client-result.json": "a10dbd8a66819c75981ca570343faafa4d12decbdf634420e64982b6c7123966",
+        "run-report.json": "d6244295cbd229295b32fa90a1ba7fbcd5b1e81f7049527ad8de0b7276f75df6",
+        "AgentCityCandidateFixture.jar": "5427dc5171fa3b9994f34d334ab32cbdf2976c0dc2afbfc5065c51e74289cdc1"
+      }
+    },
+    "four_orders_candidate_75ms_lag": {
+      "run": "evidence/runs/p1-candidate/agentcity-p1-9416352e",
+      "inspection_status": "pass",
+      "observed_rows": 64,
+      "elapsed_ms": 600784,
+      "suites": [
+        {
+          "name": "normal",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16,
+          "elapsed_ms": 143191
+        },
+        {
+          "name": "descending",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16,
+          "elapsed_ms": 148067
+        },
+        {
+          "name": "alternating",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16,
+          "elapsed_ms": 144412
+        },
+        {
+          "name": "seeded-20261029",
+          "fixture_revision": 1,
+          "case_count": 16,
+          "arithmetic_pass_count": 16,
+          "elapsed_ms": 144104
+        }
+      ],
+      "bindings": {
+        "server-result.json": "34e7297b4022a9ad6002924140ff4fece4a6e60634fb0303e91c5a63e6832ebd",
+        "client-result.json": "faa03f48f74d151bdf70e07201aceb4c9d166022388088efb7e3556f4638eb5f",
+        "run-report.json": "0752b63142c85e2f4914f6b7ba57913abfb3061d87cc9aa7cbfcd7c5a8d851ab",
+        "AgentCityCandidateFixture.jar": "79dad2049f662fb652b4a5a670d40e8eb2f33b46ceb9ecd268c7b96d556b4988"
+      },
+      "injected_delay_calls": 7606,
+      "minimum_injected_delay_ns": 75025084,
+      "maximum_injected_delay_ns": 289086625
+    },
+    "excessive_delay": {
+      "run": "evidence/runs/p1-candidate/agentcity-p1-09e7b43b",
+      "inspection_status": "incomplete",
+      "observed_rows": 1,
+      "elapsed_ms": 31557,
+      "suites": [
+        {
+          "name": "normal",
+          "fixture_revision": 1,
+          "case_count": 1,
+          "arithmetic_pass_count": 0
+        }
+      ],
+      "bindings": {
+        "server-result.json": "aa53916d9cfc7b48355ee58b7a449df53cf496cd3aa935121114408fd8725221",
+        "client-result.json": "e355e631ca3c42d39f570193c0383f0de5e3969de124c97155e11920569dd094",
+        "run-report.json": "764bffb98599634c8b25853cd9802f294e4c51348ac9393ee4d16846793c0c1a",
+        "AgentCityCandidateFixture.jar": "ded4cdcf1e4661f91e682238e23c262aa8e932f48e840b2c92562a55b496f77f"
+      },
+      "incomplete_reason": "candidate_case_or_suite_wall_timeout",
+      "late_case_ms": 20230
+    }
+  },
+  "limits": [
+    "Candidate electrical diagnostics only; no production permission, stock, durable-lock or1003-variant acceptance claim.",
+    "Final blueprint/test/timing/plugin bindings and reapproved P0 are required before acceptance.",
+    "Multi-order trials warm up3/3 then0/0 once per run, not before each order.",
+    "75ms-per-tick delay is an unadopted candidate profile.",
+    "Observer fixtures do not prove survival construction, navigation, licensed accounts or independent humans.",
+    "Initial click/engine equivalence predates the final500ms interaction spacing."
+  ],
+  "retained_failed_and_superseded_attempts": "Every attempt remains under evidence/runs/p1-candidate; diagnosis/termination notes explain intentional supersession and injection failures."
+}

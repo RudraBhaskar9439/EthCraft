@@ -1,0 +1,9 @@
+{
+  "status": "fail",
+  "stage": "runtime creation",
+  "at": "2026-11-05T16:12:58.687226+00:00",
+  "error": "ENOENT: absolute manifestFile joined to rootDirectory doubled the path",
+  "fix": "Pass repository-relative manifestFile supported by the runtime",
+  "signedTransactions": 0,
+  "nativeMutations": 0
+}

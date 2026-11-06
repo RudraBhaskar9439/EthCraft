@@ -1,0 +1,180 @@
+[17:55:07] [ServerMain/INFO]: [bootstrap] Running Java 25 (OpenJDK 64-Bit Server VM 25.0.5+8-LTS; Eclipse Adoptium Temurin-25.0.5+8) on Linux 6.12.76-linuxkit (aarch64)
+[17:55:07] [ServerMain/INFO]: [bootstrap] Loading Paper 26.3-231-main@8a170a3 (2026-10-30T01:53:29Z) for Minecraft 26.3
+[17:55:07] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[17:55:07] [ServerMain/INFO]: [PluginInitializerManager] Initialized 6 plugins
+[17:55:07] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (6):
+ - AgentCity (0.1.0), AgentCityWorldFixture (1.0), ViaBackwards (5.12.2), ViaVersion (5.12.2), WorldEdit (7.4.6+7648-00664b0), WorldGuard (7.0.20+2410-0b6c3f1)
+[17:55:09] [DataConverter MCTypeRegistry init thread/INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Initialising converters for DataConverter...
+[17:55:09] [ServerMain/INFO]: [com.destroystokyo.paper.profile.PaperServicesDiscoveryService] Environment: Environment[discoveryUrl=https://discovery.minecraftservices.com/minecraft/client, name=PROD]
+[17:55:10] [DataConverter MCTypeRegistry init thread/INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Finished initialising converters for DataConverter in 693.5ms
+[17:55:11] [Worker-Main-1/INFO]: Loaded 1866 advancements
+[17:55:11] [Server thread/INFO]: Starting minecraft server version 26.3
+[17:55:11] [Server thread/INFO]: Loading properties
+[17:55:11] [Server thread/INFO]: This server is running Paper version 26.3-231-main@8a170a3 (2026-10-30T01:53:29Z) (Implementing API version 26.3.build.231-stable)
+[17:55:11] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[17:55:11] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[17:55:11] [Server thread/INFO]: Using 4 threads for Netty based IO
+[17:55:12] [Server thread/INFO]: [MoonriseCommon] Paper is using 1 worker threads, 1 I/O threads
+[17:55:12] [Server thread/INFO]: Default game type: SURVIVAL
+[17:55:12] [Server thread/INFO]: Generating keypair
+[17:55:12] [Server thread/INFO]: Starting Minecraft server on *:25565
+[17:55:12] [Server thread/INFO]: Paper: Using libdeflate (Linux aarch64) compression from Velocity.
+[17:55:12] [Server thread/INFO]: Paper: Using OpenSSL 3.x.x (Linux aarch64) cipher from Velocity.
+[17:55:12] [Server thread/INFO]: [WorldEdit] Loading server plugin WorldEdit v7.4.6+7648-00664b0
+[17:55:12] [Server thread/INFO]: Got request to register class com.sk89q.worldedit.bukkit.BukkitServerInterface with WorldEdit [com.sk89q.worldedit.extension.platform.PlatformManager@25a00c50]
+[17:55:12] [Server thread/INFO]: [ViaVersion] Loading server plugin ViaVersion v5.12.2
+[17:55:12] [Server thread/INFO]: [ViaVersion] ViaVersion 5.12.2 is now loaded. Registering protocol transformers and injecting...
+[17:55:13] [Server thread/INFO]: [ViaBackwards] Loading translations...
+[17:55:13] [Server thread/INFO]: [ViaBackwards] Registering protocols...
+[17:55:13] [Server thread/INFO]: [WorldGuard] Loading server plugin WorldGuard v7.0.20+2410-0b6c3f1
+[17:55:13] [Server thread/INFO]: [ViaBackwards] Loading server plugin ViaBackwards v5.12.2
+[17:55:13] [Server thread/INFO]: [AgentCityWorldFixture] Loading server plugin AgentCityWorldFixture v1.0
+[17:55:13] [Server thread/INFO]: [AgentCity] Loading server plugin AgentCity v0.1.0
+[17:55:13] [Server thread/INFO]: [WorldEdit] Enabling WorldEdit v7.4.6+7648-00664b0
+[17:55:13] [Server thread/INFO]: Registering commands with com.sk89q.worldedit.bukkit.BukkitServerInterface
+[17:55:13] [Server thread/INFO]: WEPIF: Using the Bukkit Permissions API.
+[17:55:13] [Server thread/INFO]: Using com.sk89q.worldedit.bukkit.adapter.impl.v26_3.PaperweightAdapter as the Bukkit adapter
+[17:55:13] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[17:55:13] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[17:55:13] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[17:55:13] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[17:55:13] [Server thread/INFO]: Preparing level "agentcity_laptop_bank"
+[17:55:14] [Server thread/INFO]: Loading 0 persistent chunks for level 'minecraft:overworld'...
+[17:55:14] [Server thread/INFO]: Prepared spawn area in 1 ms
+[17:55:14] [Server thread/INFO]: Loading 0 persistent chunks for level 'minecraft:the_nether'...
+[17:55:14] [Server thread/INFO]: Prepared spawn area in 1 ms
+[17:55:14] [Server thread/INFO]: Loading 0 persistent chunks for level 'minecraft:the_end'...
+[17:55:14] [Server thread/INFO]: Prepared spawn area in 1 ms
+[17:55:14] [Server thread/INFO]: Done preparing level "agentcity_laptop_bank" (0.277s)
+[17:55:14] [Server thread/INFO]: [ViaVersion] Enabling ViaVersion v5.12.2
+[17:55:14] [Server thread/INFO]: [ViaVersion] ViaVersion detected server version: 26.3 (777)
+[17:55:14] [Server thread/WARN]: [ViaVersion] The Vanilla protocol of Minecraft 1.20.5-1.21.4 is easily exploitable. If you don't need to support these versions, consider adding them to block-versions in the ViaVersion config: "1.20.5-1.20.6", "1.21-1.21.1", "1.21.2-1.21.3", "1.21.4"
+[17:55:14] [Server thread/INFO]: [WorldGuard] Enabling WorldGuard v7.0.20+2410-0b6c3f1
+[17:55:14] [Server thread/INFO]: [WorldGuard] (agentcity_laptop_bank) TNT ignition is PERMITTED.
+[17:55:14] [Server thread/INFO]: [WorldGuard] (agentcity_laptop_bank) Lighters are PERMITTED.
+[17:55:14] [Server thread/INFO]: [WorldGuard] (agentcity_laptop_bank) Lava fire is PERMITTED.
+[17:55:14] [Server thread/INFO]: [WorldGuard] (agentcity_laptop_bank) Fire spread is UNRESTRICTED.
+[17:55:14] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'agentcity_laptop_bank'
+[17:55:14] [Server thread/INFO]: [WorldGuard] (agentcity_laptop_bank_nether) TNT ignition is PERMITTED.
+[17:55:14] [Server thread/INFO]: [WorldGuard] (agentcity_laptop_bank_nether) Lighters are PERMITTED.
+[17:55:14] [Server thread/INFO]: [WorldGuard] (agentcity_laptop_bank_nether) Lava fire is PERMITTED.
+[17:55:14] [Server thread/INFO]: [WorldGuard] (agentcity_laptop_bank_nether) Fire spread is UNRESTRICTED.
+[17:55:14] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'agentcity_laptop_bank_nether'
+[17:55:14] [Server thread/INFO]: [WorldGuard] (agentcity_laptop_bank_the_end) TNT ignition is PERMITTED.
+[17:55:14] [Server thread/INFO]: [WorldGuard] (agentcity_laptop_bank_the_end) Lighters are PERMITTED.
+[17:55:14] [Server thread/INFO]: [WorldGuard] (agentcity_laptop_bank_the_end) Lava fire is PERMITTED.
+[17:55:14] [Server thread/INFO]: [WorldGuard] (agentcity_laptop_bank_the_end) Fire spread is UNRESTRICTED.
+[17:55:14] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'agentcity_laptop_bank_the_end'
+[17:55:14] [Server thread/INFO]: [WorldGuard] Loading region data...
+[17:55:14] [Server thread/INFO]: [ViaBackwards] Enabling ViaBackwards v5.12.2
+[17:55:14] [Server thread/INFO]: [AgentCityWorldFixture] Enabling AgentCityWorldFixture v1.0
+[17:55:14] [Server thread/INFO]: [AgentCity] Enabling AgentCity v0.1.0
+[17:55:14] [Server thread/INFO]: Loading 36 persistent chunks for level 'minecraft:agentcity_lobby'...
+[17:55:14] [Server thread/INFO]: Preparing spawn area: 21%
+[17:55:15] [Server thread/INFO]: Prepared spawn area in 158 ms
+[17:55:15] [Server thread/INFO]: [WorldGuard] (agentcity_lobby) TNT ignition is PERMITTED.
+[17:55:15] [Server thread/INFO]: [WorldGuard] (agentcity_lobby) Lighters are PERMITTED.
+[17:55:15] [Server thread/INFO]: [WorldGuard] (agentcity_lobby) Lava fire is PERMITTED.
+[17:55:15] [Server thread/INFO]: [WorldGuard] (agentcity_lobby) Fire spread is UNRESTRICTED.
+[17:55:15] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'agentcity_lobby'
+[17:55:15] [Server thread/INFO]: Loading 0 persistent chunks for level 'minecraft:agentcity_play'...
+[17:55:15] [Server thread/INFO]: Prepared spawn area in 1 ms
+[17:55:15] [Server thread/INFO]: [WorldGuard] (agentcity_play) TNT ignition is PERMITTED.
+[17:55:15] [Server thread/INFO]: [WorldGuard] (agentcity_play) Lighters are PERMITTED.
+[17:55:15] [Server thread/INFO]: [WorldGuard] (agentcity_play) Lava fire is PERMITTED.
+[17:55:15] [Server thread/INFO]: [WorldGuard] (agentcity_play) Fire spread is UNRESTRICTED.
+[17:55:15] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'agentcity_play'
+[17:55:15] [Server thread/INFO]: [LegacyCraftBukkitWorldMigration] Starting legacy CraftBukkit import for world 'agentcity_mumbai' (minecraft:agentcity_mumbai)
+[17:55:15] [Server thread/INFO]: [WorldMigrationSupport] Migrating world directory from ./agentcity_mumbai/region to ./agentcity_laptop_bank/dimensions/minecraft/agentcity_mumbai/region
+[17:55:15] [Server thread/INFO]: Starting upgrade for world "agentcity_mumbai"
+[17:55:15] [Server thread/INFO]: Upgrading progress: 0%
+[17:55:15] [Server thread/INFO]: File system capabilities: FileSystemCapabilities[atomicMove=true, hardLinks=true]
+[17:55:15] [Server thread/INFO]: Applying file structure changes for world "agentcity_mumbai"
+[17:55:15] [Server thread/INFO]: Moving new hardlinked world to top level
+[17:55:15] [Server thread/INFO]: Start cleanup
+[17:55:15] [Server thread/INFO]: Moving out old world folder
+[17:55:15] [Server thread/INFO]: Moving in new world folder
+[17:55:15] [Server thread/INFO]: Done applying file structure changes for world "agentcity_mumbai". Cleaning up outdated data...
+[17:55:15] [Server thread/INFO]: Upgrade done for world "agentcity_mumbai"
+[17:55:15] [Server thread/INFO]: [LegacyCraftBukkitWorldMigration] Completed legacy CraftBukkit import for world 'agentcity_mumbai' (minecraft:agentcity_mumbai)
+[17:55:15] [Server thread/INFO]: Loading 0 persistent chunks for level 'minecraft:agentcity_mumbai'...
+[17:55:15] [Server thread/INFO]: Prepared spawn area in 1 ms
+[17:55:15] [Server thread/INFO]: [WorldGuard] Default configuration file written: config_world.yml
+[17:55:15] [Server thread/INFO]: [WorldGuard] Default configuration file written: blacklist.txt
+[17:55:15] [Server thread/INFO]: [WorldGuard] (agentcity_mumbai) TNT ignition is PERMITTED.
+[17:55:15] [Server thread/INFO]: [WorldGuard] (agentcity_mumbai) Lighters are PERMITTED.
+[17:55:15] [Server thread/INFO]: [WorldGuard] (agentcity_mumbai) Lava fire is PERMITTED.
+[17:55:15] [Server thread/INFO]: [WorldGuard] (agentcity_mumbai) Fire spread is UNRESTRICTED.
+[17:55:15] [Server thread/INFO]: [WorldGuard] Loaded configuration for world 'agentcity_mumbai'
+[17:55:15] [Server thread/ERROR]: [AgentCity] Playable initialization cause: IllegalArgumentException:mumbai_safe_spawn_required
+[17:55:15] [Server thread/ERROR]: [AgentCity] AgentCity startup failed closed: playable_start_failed
+[17:55:15] [Server thread/INFO]: [spark] Starting background profiler...
+[17:55:16] [Server thread/INFO]: Saving chunks for level 'ServerLevel[agentcity_laptop_bank]'/minecraft:overworld
+[17:55:16] [Server thread/INFO]: Saving chunks for level 'ServerLevel[agentcity_laptop_bank]'/minecraft:the_nether
+[17:55:16] [Server thread/INFO]: Saving chunks for level 'ServerLevel[agentcity_laptop_bank]'/minecraft:the_end
+[17:55:16] [Server thread/INFO]: Saving chunks for level 'ServerLevel[agentcity_laptop_bank]'/minecraft:agentcity_lobby
+[17:55:16] [Server thread/INFO]: Saving chunks for level 'ServerLevel[agentcity_laptop_bank]'/minecraft:agentcity_play
+[17:55:16] [Server thread/INFO]: Saving chunks for level 'ServerLevel[agentcity_laptop_bank]'/minecraft:agentcity_mumbai
+[17:55:16] [Server thread/INFO]: Running delayed init tasks
+[17:55:16] [Server thread/INFO]: Done (8.803s)! For help, type "help"
+[17:55:16] [Server thread/INFO]: Stopping server
+[17:55:16] [Craft Scheduler Thread - 2 - ViaVersion/INFO]: [ViaVersion] Finished mapping loading, shutting down loader executor.
+[17:55:16] [Server thread/INFO]: [AgentCity] Disabling AgentCity v0.1.0
+[17:55:16] [Server thread/INFO]: [AgentCityWorldFixture] Disabling AgentCityWorldFixture v1.0
+[17:55:16] [Server thread/INFO]: [ViaBackwards] Disabling ViaBackwards v5.12.2
+[17:55:16] [Server thread/INFO]: [WorldGuard] Disabling WorldGuard v7.0.20+2410-0b6c3f1
+[17:55:16] [Server thread/INFO]: [WorldGuard] Shutting down executor and cancelling any pending tasks...
+[17:55:16] [Server thread/INFO]: [ViaVersion] Disabling ViaVersion v5.12.2
+[17:55:16] [Server thread/INFO]: [ViaVersion] ViaVersion has been disabled; uninjected the platform and shut down the scheduler.
+[17:55:16] [Server thread/INFO]: [WorldEdit] Disabling WorldEdit v7.4.6+7648-00664b0
+[17:55:16] [Server thread/INFO]: Unregistering com.sk89q.worldedit.bukkit.BukkitServerInterface from WorldEdit
+[17:55:16] [Paper Async Task Handler Thread - 1/INFO]: *** Currently you are 11 builds behind ***
+[17:55:16] [Paper Async Task Handler Thread - 1/INFO]: *** It is highly recommended to download the latest build from https://papermc.io/downloads/paper ***
+[17:55:16] [Server thread/INFO]: Saving players
+[17:55:16] [Server thread/INFO]: Saving worlds
+[17:55:16] [Server thread/INFO]: Saving chunks for level 'ServerLevel[agentcity_laptop_bank]'/minecraft:overworld
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'minecraft:overworld'
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'minecraft:overworld'
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'minecraft:overworld'
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 1 entity chunks, 0 poi chunks in world 'minecraft:overworld' in 0.00s
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'minecraft:overworld'
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'minecraft:overworld'
+[17:55:16] [Server thread/INFO]: Saving chunks for level 'ServerLevel[agentcity_laptop_bank]'/minecraft:the_nether
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'minecraft:the_nether'
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'minecraft:the_nether'
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'minecraft:the_nether'
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 0 entity chunks, 0 poi chunks in world 'minecraft:the_nether' in 0.00s
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'minecraft:the_nether'
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'minecraft:the_nether'
+[17:55:16] [Server thread/INFO]: Saving chunks for level 'ServerLevel[agentcity_laptop_bank]'/minecraft:the_end
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'minecraft:the_end'
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'minecraft:the_end'
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'minecraft:the_end'
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 0 entity chunks, 0 poi chunks in world 'minecraft:the_end' in 0.00s
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'minecraft:the_end'
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'minecraft:the_end'
+[17:55:16] [Server thread/INFO]: Saving chunks for level 'ServerLevel[agentcity_laptop_bank]'/minecraft:agentcity_lobby
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'minecraft:agentcity_lobby'
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'minecraft:agentcity_lobby'
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'minecraft:agentcity_lobby'
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 9 entity chunks, 0 poi chunks in world 'minecraft:agentcity_lobby' in 0.00s
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'minecraft:agentcity_lobby'
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'minecraft:agentcity_lobby'
+[17:55:16] [Server thread/INFO]: Saving chunks for level 'ServerLevel[agentcity_laptop_bank]'/minecraft:agentcity_play
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'minecraft:agentcity_play'
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'minecraft:agentcity_play'
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'minecraft:agentcity_play'
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 0 entity chunks, 0 poi chunks in world 'minecraft:agentcity_play' in 0.00s
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'minecraft:agentcity_play'
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'minecraft:agentcity_play'
+[17:55:16] [Server thread/INFO]: Saving chunks for level 'ServerLevel[agentcity_laptop_bank]'/minecraft:agentcity_mumbai
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'minecraft:agentcity_mumbai'
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'minecraft:agentcity_mumbai'
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'minecraft:agentcity_mumbai'
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 1 entity chunks, 0 poi chunks in world 'minecraft:agentcity_mumbai' in 0.00s
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'minecraft:agentcity_mumbai'
+[17:55:16] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'minecraft:agentcity_mumbai'
+[17:55:16] [Server thread/INFO]: Waiting for all RegionFile I/O tasks to complete...
+[17:55:16] [Server thread/INFO]: All RegionFile I/O tasks to complete
+[17:55:16] [Server thread/INFO]: [MoonriseCommon] Awaiting termination of worker pool for up to 60s...
+[17:55:16] [Server thread/INFO]: [MoonriseCommon] Awaiting termination of I/O pool for up to 60s...

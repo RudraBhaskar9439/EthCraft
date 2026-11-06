@@ -1,0 +1,12 @@
+{
+  "status": "failed_attempt_retained",
+  "recorded_on": "2026-10-29",
+  "actual_blocker": "A valid reachable Survival placement was suppressed before BlockPlaceEvent. The armed PlayerInteractEvent was cancelled=true,use_block=DENY,use_item=ALLOW.",
+  "invalid_preliminary_claims": [
+    "creative_native_placement_prevented",
+    "creative_placement_refused_before_mutation"
+  ],
+  "reason": "The same partial block-use denial also suppressed Survival placement, and no actual canceled native_place event was observed for Creative mode. It does not prove the Creative-specific guard.",
+  "required_harness_fix": "Only actual canceled native place/break/bucket events, or interactions with both use-block and use-item denied, qualify as native refusal evidence.",
+  "preserved": "Original failed reports/source/event logs are unchanged. No gate approval is claimed."
+}

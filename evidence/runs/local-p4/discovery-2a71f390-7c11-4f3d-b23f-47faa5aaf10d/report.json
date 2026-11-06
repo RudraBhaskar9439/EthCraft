@@ -1,0 +1,54 @@
+{
+  "schema": "agentcity.local-p4.discovery.v1",
+  "runId": "discovery-2a71f390-7c11-4f3d-b23f-47faa5aaf10d",
+  "status": "pass",
+  "checks": [
+    {
+      "name": "actual-sdk-profile-job-offer-publication-and-owner-verified-selection",
+      "status": "pass",
+      "entities": {
+        "profile": "0xb112babec9c3ff79a8ac069c3d3bf64f886033c9a86dbe4271ccc132c0e8d685",
+        "job": "0x24f9ee602eb80e8dc2ff3a2bfe9147f8eef6be1b188cfce9a6c0c3c1e02ee366",
+        "offer": "0xdd350da92aeb093e031022319fae5c304a3f4038f2833a7406867f60d9376b1b"
+      },
+      "separateWalletOwners": true,
+      "independentHumans": 0
+    },
+    {
+      "name": "known-identical-publication-reuses-retained-entity",
+      "status": "pass"
+    },
+    {
+      "name": "wrong-signature-and-actual-arkiv-owner-spoof-refused",
+      "status": "pass",
+      "untrustedEntity": "0x2f5bcdf64347a7b8c9afaf011efa60667e7db16ad0993ee40bf27017f47c38fa"
+    },
+    {
+      "name": "signed-expiry-equality-refused-with-retained-records-preserved",
+      "status": "pass"
+    },
+    {
+      "name": "newer-signed-withdrawal-blocks-stale-offer-selection",
+      "status": "pass"
+    },
+    {
+      "name": "separate-postgresql-fixture-adapter-explicitly-labelled",
+      "status": "pass"
+    }
+  ],
+  "independentHumans": 0,
+  "localArkivNode": "http://127.0.0.1:8557",
+  "publicArkivVerified": false,
+  "startedAt": "2026-10-30T07:16:49.735Z",
+  "entities": {
+    "profile": "0xb112babec9c3ff79a8ac069c3d3bf64f886033c9a86dbe4271ccc132c0e8d685",
+    "job": "0x24f9ee602eb80e8dc2ff3a2bfe9147f8eef6be1b188cfce9a6c0c3c1e02ee366",
+    "offer": "0xdd350da92aeb093e031022319fae5c304a3f4038f2833a7406867f60d9376b1b"
+  },
+  "transactions": [
+    "0xdd5a04523cf68ea73541d345d8e97b4cf11c8ce3fc49d68793182b4b4249ed7c",
+    "0x56e5105d137fba294ea320cee417aa5213f9cff16a6fab605204046b4cc81f80",
+    "0xbdec0c10a036ba61c5a8ce233987e6f19c4ce40a23dc10b42d9086406bf60729"
+  ],
+  "finishedAt": "2026-10-30T07:17:10.664Z"
+}

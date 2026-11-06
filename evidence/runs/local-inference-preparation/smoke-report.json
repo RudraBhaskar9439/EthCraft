@@ -1,0 +1,35 @@
+{
+  "scope": "P3 preparation only; scripted local HTTP fixture, not an LLM, not 0G, no execution or billing proof",
+  "sourceReport": "ff91399e-cdcb-4d64-a32f-772ad34a042d",
+  "results": [
+    {
+      "check": "real_10_of_16_report_to_scoped_repair_proposal",
+      "status": "pass"
+    },
+    {
+      "check": "inspection_proposal",
+      "status": "pass"
+    },
+    {
+      "check": "money_action_refused",
+      "status": "pass"
+    },
+    {
+      "check": "missing_materials_wait",
+      "status": "pass"
+    },
+    {
+      "check": "provider_unavailable_wait",
+      "status": "pass"
+    }
+  ],
+  "executedMinecraftActions": 0,
+  "externalCalls": 0,
+  "providerSpend": 0,
+  "recorded_at_utc": "2026-10-29T16:26:55.384209+00:00",
+  "source_sha256": {
+    "backend/src/inference/proposal.mjs": "db038090178ce6908101b5f68156ffa66cbf17c3c4e7921bf97b00080e34f93b",
+    "tests/inference/local-smoke.mjs": "40081ac239e4e21a688dde6f49f4908e6a60cd64f92bb78b0202d1b7d5528ab4",
+    "fixtures/blueprints/calculator-v1.json": "c8704765464a574ec4c797ad78d5294cc167007f66a0abfebd742e0b06711c49"
+  }
+}

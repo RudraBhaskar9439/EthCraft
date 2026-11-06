@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="agentcity-capability" content="{{BANK_CAPABILITY}}">
+  <title>AgentCity Testnet Bank</title>
+  <link rel="stylesheet" href="/bank.css">
+  <script type="module" src="/bank.mjs"></script>
+</head>
+<body>
+  <header><div><span class="eyebrow">AGENTCITY</span><h1>Your world. Your working capital.</h1>
+    <p>Exchange test tokens, trade deposited items, and borrow against equipment.</p></div>
+    <div class="account"><label for="actor">Operator test wallet</label><select id="actor"></select><button id="refresh" type="button">Refresh</button></div>
+  </header>
+  <aside class="disclosure">Unichain Sepolia testnet. tUSDC is a mock token with no dollar backing. These wallets belong to this local demonstration, not separate human participants. This interface is hosted only on this laptop.</aside>
+  <div id="notice" role="status" aria-live="polite">Loading your testnet account…</div>
+  <section class="balances" aria-label="Wallet balances"><div><span>CITY</span><strong id="balance-city">—</strong></div><div><span>Mock USDC</span><strong id="balance-usdc">—</strong></div><div><span>GEM</span><strong id="balance-gem">—</strong></div><div><span>Test ETH for gas</span><strong id="balance-eth">—</strong></div></section>
+  <nav aria-label="Bank sections"><a href="#assets">Items</a><a href="#exchange">Exchange</a><a href="#loans">Loans</a><a href="#work">Agent work</a><a href="#receipts">Activity</a></nav>
+  <main>
+    <section id="assets"><div class="section-heading"><div><span class="eyebrow">BACKED BY ACTUAL INVENTORY</span><h2>Deposited items</h2></div><button data-action="register_item" type="button">Deposit held equipment</button></div>
+      <p>Depositing removes the exact item from usable inventory. Equipment pledged to a loan stays locked until the contract permits its release.</p>
+      <div id="asset-list" class="records"></div>
+      <div class="forms two">
+        <form data-action="list_item"><h3>Sell an item</h3><label>Registered item<select name="tokenId" data-source="owned-items" required></select></label><label>Total price in CITY<input name="price" value="18" inputmode="decimal" required></label><button>Review listing</button></form>
+        <form data-action="checkout"><h3>Buy with another token</h3><label>Listed item<select name="tokenId" data-source="listings" required></select></label><label>Pay with<select name="tokenIn"><option>USDC</option><option>GEM</option><option>CITY</option></select></label><label>Maximum token spend<input name="maximum" value="25" inputmode="decimal" required></label><button>Review purchase</button><p class="small">Currency conversion and item ownership settle together. Minecraft redemption happens afterward. Gas is separate.</p></form>
+      </div>
+    </section>
+    <section id="exchange"><span class="eyebrow">UNISWAP V4</span><h2>Receive the amount you need</h2><p>Get an exact output while protecting your maximum input. CITY-to-USDC exits remain available when world health pauses CITY purchases.</p>
+      <form data-action="swap" class="exchange-form"><label>Pay with<select name="tokenIn"><option>GEM</option><option>USDC</option><option>CITY</option></select></label><label>Receive<select name="tokenOut"><option>CITY</option><option>USDC</option><option>GEM</option></select></label><label>Exact amount<input name="amount" value="5" inputmode="decimal" required></label><label>Maximum input<input name="maximum" value="8" inputmode="decimal" required></label><button>Get quote</button></form>
+      <p id="market-health" class="small"></p><button id="publish-health" class="secondary" type="button">Refresh verified world health</button>
+    </section>
+    <section id="loans"><span class="eyebrow">COLLATERAL STAYS IN CUSTODY</span><h2>Loans and auctions</h2><p>A funded lender reserves the principal before you borrow. Repayment releases a claim to the same item. An auction can leave a lender loss.</p>
+      <div id="loan-list" class="records"></div>
+      <details id="lender-tools"><summary>Create a funded offer</summary><form data-action="offer" class="forms two"><label>Borrower<select name="borrowerId" data-source="borrowers" required></select></label><label>Collateral item<select name="tokenId" data-source="all-items" required></select></label><label>Lender reference value in tUSDC<input name="valuation" value="100" inputmode="decimal" required></label><label>Principal in tUSDC<input name="principal" value="10" inputmode="decimal" required></label><label>Total repayment in tUSDC<input name="repayment" value="10.01" inputmode="decimal" required></label><label>Term<select name="term"><option value="86400">24 hours</option><option value="60">60 seconds — short test loan</option></select></label><label>Grace period<select name="grace"><option value="3600">1 hour</option><option value="60">60 seconds — short test</option></select></label><label>Auction duration<select name="auctionDuration"><option value="3600">1 hour</option><option value="180">3 minutes — short test</option></select></label><label>Auction reserve in tUSDC<input name="auctionReserve" value="1" inputmode="decimal" required></label><button>Review and reserve funds</button></form></details>
+      <form data-action="bid" class="inline-form"><label>Auction<select name="loanId" data-source="auctions" required></select></label><label>Your bid in tUSDC<input name="amount" value="12" inputmode="decimal" required></label><button>Review bid</button></form>
+      <div class="history"><h3>Observed repayment history</h3><p id="history-summary">Loading…</p><p class="small">This is wallet activity, not a human credit score. Small or related-party test loans do not prove creditworthiness.</p><button data-action="withdraw" type="button">Review withdrawal of auction credits</button></div>
+    </section>
+    <section id="work"><span class="eyebrow">FUNDS BEFORE EXECUTION</span><h2>Commission agent work</h2><p>Reserve a fixed CITY payment for an approved native task. An inspector verifies the actual result, then the requester accepts payment release.</p>
+      <form data-action="fund_work" class="forms two"><label>Worker<select name="workerId" data-source="workers" required></select></label><label>Task<select name="task"><option value="platform">Build a 2 by 2 oak platform in the registered work area</option></select></label><label>Payment in CITY<input name="amount" value="2" inputmode="decimal" required></label><button>Review funded task</button></form>
+      <div id="work-list" class="records"></div><p class="small">Timely completed work keeps its review period. Refund and acceptance are mutually exclusive. Payment is fixed and requires the requester’s acceptance.</p>
+    </section>
+    <section id="receipts"><h2>Activity and receipts</h2><div id="operation-list" class="records"></div><details><summary>Deployment details</summary><pre id="deployment"></pre></details></section>
+  </main>
+  <dialog id="review"><form method="dialog"><button class="close" value="cancel" aria-label="Close review">×</button></form><span class="eyebrow">REVIEW BEFORE CONFIRMING</span><h2 id="review-title">Review testnet operation</h2><p id="review-message"></p><dl id="review-terms"></dl><p class="disclosure">You are authorizing the selected operator test wallet. Blockchain gas is additional. Confirm only the displayed terms.</p><details><summary>Exact terms and evidence</summary><pre id="review-details"></pre></details><div class="dialog-actions"><button id="confirm" type="button">Confirm these terms</button><button id="cancel" type="button" class="secondary">Cancel review</button></div></dialog>
+  <footer>AgentCity laptop testnet prototype. Loan capital, LP liquidity and work escrow are accounted separately.</footer>
+</body>
+</html>

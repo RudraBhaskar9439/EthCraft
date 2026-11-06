@@ -1,0 +1,2 @@
+{"status":"fail","checks":3,"error":{"name":"AssertionError","message":"The protection plugin must record refusal of the actual native dig, including when its bounded refusal ring is full."}}
+{"candidateClientProfile":"1.21.11-tick-end-at-physics-cadence","counts":[{"player":"WorldBuilder","physicsTickBoundaries":678},{"player":"WorldRequester","physicsTickBoundaries":574},{"player":"WorldInspector","physicsTickBoundaries":467}]}

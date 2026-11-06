@@ -1,0 +1,73 @@
+{
+  "scope": "Executed main-plugin bytecode equality, independent of ZIP timestamps and manifest source newline formatting",
+  "class_count": 37,
+  "class_sha256": {
+    "org/agentcity/core/Command$Action.class": "71ae743bb0d3cfad3136a1311ed469ac88bf139a979a1620103c22ab6ece5dbc",
+    "org/agentcity/core/Command.class": "66eff513c00050fffe11acc906eb560db2ae53171f93dae62330bcf63e097e5e",
+    "org/agentcity/core/DurableJournal$SpaceProbe.class": "c1f1400bec9bd310009d1256d538e966ae89fe57721dc53c15efa0a196428e8b",
+    "org/agentcity/core/DurableJournal.class": "f709845ba86dbfd3eb7d810b4ed3ec9eb60bc84030ba765045f28d0356da49c6",
+    "org/agentcity/core/InspectionReport$CaseResult.class": "d432d1af69391c5b5d7a73d5a7637258078efd2d8efdde70ca36f65f982181b7",
+    "org/agentcity/core/InspectionReport.class": "9aaafee2431e18ec33378b8b19eeeb1b3ff01f4db3dcfa104e63645199908d75",
+    "org/agentcity/core/JobEngine$1.class": "7d3224a1858469dcf7065e044c25da0ecab8f2e88256fc9cb5761173147166b9",
+    "org/agentcity/core/JobEngine$Bounds.class": "1cfc936fc1606ccfc87b34ef358c56d560a2fd34d947d31ead9dd368e91d4d07",
+    "org/agentcity/core/JobEngine$CollisionAudit.class": "536354b2af5c10a14e136415064fe54046844b39db2bb896625e109146c4021d",
+    "org/agentcity/core/JobEngine$Config.class": "3c4ba83f373fc3e07c6a7b287383af470d4ea8e4b3c331aafc2a6f3a9043e95b",
+    "org/agentcity/core/JobEngine$LockMode.class": "2edd08e10c6ebc550d423343aec53417066b562955c48f59e199687672803f05",
+    "org/agentcity/core/JobEngine$ObligationMode.class": "65b0b8aff7b543bcc172f23efa5c155083761c9ac35519376149d3aa9a07faa5",
+    "org/agentcity/core/JobEngine$Operation.class": "98e8b46e24ca7cb6cfaeee98813fa121e27763eee604d4c0f2b24218fe05407e",
+    "org/agentcity/core/JobEngine$Result.class": "6cf8a4e7fce82e5892db0c59193d8de48d5e31afb1e305937ce61a417ac6cbd2",
+    "org/agentcity/core/JobEngine$Role.class": "e36ac89afd57314f2e755b94d78f64c10aa1c27205f4e708aba7f96f581b1d76",
+    "org/agentcity/core/JobEngine$State.class": "02a12e8ba6e3a158540614c51b24e671e1a0bb598422fdd7f0dbf1b561bd8d76",
+    "org/agentcity/core/JobEngine$Status.class": "cec98637cfafa34a78ebd30c9a26f53b3b1e514bf1b7e2120b52d3975b67a960",
+    "org/agentcity/core/JobEngine.class": "b1431c30f1257c1cb7d4823a3bf4bda93f8bddaa1f57a5f619e24c94e180356a",
+    "org/agentcity/paper/AgentCityPlugin$1.class": "cf73ed68821b9091e30c2a4e295ee90f1325206782cfee55dbc9f0d70cf2e141",
+    "org/agentcity/paper/AgentCityPlugin$Arm.class": "84eb53df70c72a91dcd0f4377ae7daf6b5def19e575ff4938a10bf13238282ec",
+    "org/agentcity/paper/AgentCityPlugin.class": "4bb0a58de9957be67f0c3e8735c0bb7072ac26009c65567a7acb23767f87eac2",
+    "org/agentcity/paper/CalculatorInspector$1.class": "221fc6539c134a441358662e4406bd209cb56e94be686b0a59bb25076190916d",
+    "org/agentcity/paper/CalculatorInspector$2.class": "faac31d142f506be751b98e90e62be21e54231428dd73ef6bc4018b509c7e8a2",
+    "org/agentcity/paper/CalculatorInspector$Context.class": "666304cd44444f28cd67df39cc8dbd3b82ab1dfa691f4506e0eb2552d6a3f3d5",
+    "org/agentcity/paper/CalculatorInspector$Port.class": "ca7a0fd610e0132e0cf36f89c0f6d60754337ac2d0aaa210d3fc9bee7ca9aafd",
+    "org/agentcity/paper/CalculatorInspector$Report.class": "1655877362062a5f3fb17c956aeeb85c22a6653238880c1ca51d3fd41ac21535",
+    "org/agentcity/paper/CalculatorInspector$Row.class": "78017051655cc7e2d14a1b736d5b22821d536c8b2e9504f1d0988886a63d0422",
+    "org/agentcity/paper/CalculatorInspector$Sample.class": "1372504b3c719cbdd7dbd53c0151a87d141cff9cc79f0fcb2abc758afd89c762",
+    "org/agentcity/paper/CalculatorInspector$Transition.class": "21b7b40a414af49b044e88fb459bbd5236171b777c63a70c924a93fc4ebb54f8",
+    "org/agentcity/paper/CalculatorInspector.class": "55eb28d2afdc03a8a764d816b67ffb414f3029711dcfb1cbb499817d0058ce66",
+    "org/agentcity/paper/NativeLever.class": "c1b77a046b2ddbc24f682a979859e096c1cdd688dad1d8c45b311e1c9571a14f",
+    "org/agentcity/paper/PlotProtection$Authority.class": "c4e41736437ff81e089e1ae8c0c1ba3c8b131671f0909df7827674c10bc70838",
+    "org/agentcity/paper/PlotProtection.class": "b8f257c14e1f06725d6518d8556b927fe24c2f451941906a69cf3608aeab8359",
+    "org/agentcity/paper/StrictJson$1.class": "8e346bf1ad128e6c2554e6924de85587e6e2e6c03dc59dd8fdfd9ea3bd3bebc5",
+    "org/agentcity/paper/StrictJson.class": "2190f732b62c3177124caa2072513ea4702efd0943ef0e7a4eff47425442b92c",
+    "org/agentcity/paper/WorldProjection$Snapshot.class": "aa2d8513f1bd8b421cee381c4dcc8feb86c96a6bc622325e77ae14de01705931",
+    "org/agentcity/paper/WorldProjection.class": "e20072edaaf0e5a50c5a091a5384fc1b9ab27c4a83609f3eb1b221680ac5016d"
+  },
+  "lifecycle_jar": {
+    "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/integrity-artifacts/AgentCity.jar",
+    "sha256": "68e4cd79306b2405ba1822ee4b713f6351983bc65f20f7548ec937c60dac077b"
+  },
+  "current_built_jar_sha256": "9b2e7821f4dcdfb1900b1f09b0c8b5c783fa5830f5c5871955c63ae0ff71c426",
+  "four_recovery_jars": [
+    {
+      "path": "evidence/runs/p1-faults/agentcity-fault-4c72c42f/AgentCity.jar",
+      "sha256": "f8a9ea1a1ad022f0049d2f1777abac76acb79ec8f76b29a8dbbbd761d8aae03b"
+    },
+    {
+      "path": "evidence/runs/p1-faults/agentcity-fault-407399bc/AgentCity.jar",
+      "sha256": "44ee1b17506738e43ab9a6403fad4e504bfdef4f83e4452bbd35da1d2baaf26d"
+    },
+    {
+      "path": "evidence/runs/p1-faults/agentcity-fault-e960a531/AgentCity.jar",
+      "sha256": "983a55f56c8094d7f4c999d5cc727aabfa0d5276f9c200794d2f5e221a12ce8b"
+    },
+    {
+      "path": "evidence/runs/p1-faults/agentcity-fault-02dde173/AgentCity.jar",
+      "sha256": "c6ba2cf6de2b3f119b0ba23dfd02c54b8f26280b1183ba4ab149c6caf1a4ed9e"
+    }
+  ],
+  "all_37_class_entries_identical": true,
+  "original_lifecycle_wrapper_status": "fail",
+  "original_status_preserved": true,
+  "peer_integrity_resolution": {
+    "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/integrity-resolution.json",
+    "sha256": "a2af4b33ce9074e288ac09a9e5a92e7b84089c381e39778a688a85e9ddcc1e92"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "agentcity-p0-compatibility",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Loopback-only Paper and Mineflayer fixture probe; no independent participant proof",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "probe": "node probe.cjs"
+  },
+  "dependencies": {
+    "mineflayer": "4.39.0",
+    "mineflayer-pathfinder": "2.4.5"
+  }
+}

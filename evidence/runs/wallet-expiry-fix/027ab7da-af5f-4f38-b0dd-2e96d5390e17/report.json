@@ -1,0 +1,25 @@
+{
+  "status": "pass",
+  "recordedAt": "2026-10-30T13:38:25.932703+00:00",
+  "scope": "Reported expired-signing UI bug; no human signature or blockchain transaction submitted by these checks.",
+  "checks": [
+    "At the exact expiry boundary, pending approval becomes expired; recorded approvals remain recorded.",
+    "An expired request is rejected before any wallet provider call.",
+    "Actual expired request in Brave shows disabled connect, consent and sign controls.",
+    "Expiry feedback is beside the controls and the fresh-approval link returns to local setup.",
+    "Seven focused signature/handoff checks and wallet HTTP boundaries pass."
+  ],
+  "browserRequestId": "37eea195-2d47-4122-9ea5-f8db5bc2db99",
+  "browserScreenshotDeliverable": "AgentCity_Expired_Approval_Fix.png",
+  "browserScreenshotSha256": "bf1341b978a8ee1174c4af0e6b5fbe0d5cc59b248ff7bdb787acf595422a4a2c",
+  "signatureFixture": {
+    "path": "tests/identity/runs/handoff-dad210a0-3dbc-41fe-979c-1b26ba0857eb/report.json",
+    "sha256": "cd9046852fae627038859459a47eb7a3377d467d8f17bec059982eb05964a95d"
+  },
+  "sources": {
+    "backend/src/web/wallet.mjs": "fb32119d9fff1dd2fb8d21cc3b3028fd26237db2d497a80c498be833fa76533d",
+    "backend/src/web/wallet.html": "e2f5a888da5820635b9665020fa7c31404cf51f0dfc4e1a5ec11dd3b50be80d5",
+    "backend/src/web/wallet.css": "62561d5229d3527c392154c570d2ef11fb0408cdefead46d2700b0959ac2bfe4",
+    "tests/identity/wallet-expiry.mjs": "e35bd9a17c4769607a9c1dbe8c8b887047e5ef9135458db26377ecbee6da6a12"
+  }
+}

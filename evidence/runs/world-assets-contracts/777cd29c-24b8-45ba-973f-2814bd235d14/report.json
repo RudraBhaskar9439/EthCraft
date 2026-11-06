@@ -1,0 +1,15 @@
+{
+  "status": "fail",
+  "stage": "actual Foundry Solidity compilation",
+  "testsExecuted": 0,
+  "errors": [
+    "tests/contracts/WorldAssets.t.sol:123 Expected semicolon but got comma",
+    "contracts/src/WorldAssetMarket.sol:62 Expected semicolon but got comma"
+  ],
+  "scope": "Isolated EVM tests only; no deployment or live native proof",
+  "sources": {
+    "contracts/src/WorldAssetRegistry.sol": "394a1159fcd1c06d589e84f46502987e402346ce3dbec69ed217d7d498245ce5",
+    "contracts/src/WorldAssetMarket.sol": "df3a6f4172e4fbb677a0ae10af4a26be98181c8dc0b029a33507267c0e8fe236",
+    "tests/contracts/WorldAssets.t.sol": "0cad907c978d77f5e4f0a064c5ee6336e4d8f262bb079cf4e42674db9006b744"
+  }
+}

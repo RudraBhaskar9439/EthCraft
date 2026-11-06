@@ -1,0 +1,1745 @@
+{
+  "status": "fail",
+  "runId": "2cfe5ecd-3358-426e-b63d-fc1be0c72195",
+  "scope": "Disclosed TaskTester fixture: natural-language inspection/custom arch, native gathering, 2-plank/4-stick crafting and carried-item delivery; no grants/resets/wallet actions",
+  "checks": [
+    {
+      "name": "existing-owner-and-task-history-preflight",
+      "status": "pass",
+      "ruddyAgent": "CityAgent1",
+      "fixtureSlot": "CityAgent2",
+      "retainedTasks": 6,
+      "execute": true
+    },
+    {
+      "name": "unused-arch-and-resource-cells-retained-shelter-and-real-stock-preflight",
+      "status": "pass",
+      "retainedBlocks": 200,
+      "existingPlanks": 72
+    }
+  ],
+  "independentHumansVerified": 0,
+  "publicTransactions": 0,
+  "preflight": {
+    "ruddyAgent": "CityAgent1",
+    "fixtureSlot": "CityAgent2",
+    "retainedTasks": 6,
+    "execute": true
+  },
+  "region": {
+    "origin": [
+      -45,
+      64,
+      4
+    ],
+    "sourceChest": [
+      -47,
+      64,
+      2
+    ],
+    "min": {
+      "x": -47,
+      "y": 64,
+      "z": 2
+    },
+    "destinationChest": [
+      -47,
+      64,
+      4
+    ],
+    "max": {
+      "x": -36,
+      "y": 71,
+      "z": 13
+    },
+    "slotName": "CityAgent2"
+  },
+  "lastNavigation": {
+    "label": "Unused resource cell approach",
+    "target": [
+      -38,
+      64,
+      8
+    ],
+    "range": 2,
+    "from": [
+      -37.31239422603715,
+      64,
+      9.625820073917666
+    ],
+    "startedAt": "2026-10-31T11:03:30.115Z",
+    "arrived": [
+      -37.31239422603715,
+      64,
+      9.625820073917666
+    ]
+  },
+  "retainedBlocks": [
+    {
+      "position": [
+        -47,
+        63,
+        2
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -47,
+        63,
+        3
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -47,
+        63,
+        4
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -47,
+        63,
+        5
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -47,
+        63,
+        6
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -47,
+        63,
+        7
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -47,
+        63,
+        8
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -47,
+        63,
+        9
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -47,
+        63,
+        10
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -47,
+        63,
+        11
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -47,
+        63,
+        12
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -47,
+        63,
+        13
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -47,
+        64,
+        2
+      ],
+      "material": "chest"
+    },
+    {
+      "position": [
+        -47,
+        64,
+        4
+      ],
+      "material": "chest"
+    },
+    {
+      "position": [
+        -46,
+        63,
+        2
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -46,
+        63,
+        3
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -46,
+        63,
+        4
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -46,
+        63,
+        5
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -46,
+        63,
+        6
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -46,
+        63,
+        7
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -46,
+        63,
+        8
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -46,
+        63,
+        9
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -46,
+        63,
+        10
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -46,
+        63,
+        11
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -46,
+        63,
+        12
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -46,
+        63,
+        13
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -45,
+        63,
+        2
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -45,
+        63,
+        3
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -45,
+        63,
+        4
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -45,
+        63,
+        5
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -45,
+        63,
+        6
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -45,
+        63,
+        7
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -45,
+        63,
+        8
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -45,
+        63,
+        9
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -45,
+        63,
+        10
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -45,
+        63,
+        11
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -45,
+        63,
+        12
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -45,
+        63,
+        13
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -45,
+        64,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        64,
+        5
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        64,
+        6
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        64,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        65,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        65,
+        5
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        65,
+        6
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        65,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        66,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        66,
+        5
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        66,
+        6
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        66,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        67,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        67,
+        5
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        67,
+        6
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        67,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -44,
+        63,
+        2
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -44,
+        63,
+        3
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -44,
+        63,
+        4
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -44,
+        63,
+        5
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -44,
+        63,
+        6
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -44,
+        63,
+        7
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -44,
+        63,
+        8
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -44,
+        63,
+        9
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -44,
+        63,
+        10
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -44,
+        63,
+        11
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -44,
+        63,
+        12
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -44,
+        63,
+        13
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -44,
+        64,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -44,
+        64,
+        5
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -44,
+        64,
+        6
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -44,
+        64,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -44,
+        65,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -44,
+        65,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -44,
+        66,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -44,
+        66,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -44,
+        67,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -44,
+        67,
+        5
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -44,
+        67,
+        6
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -44,
+        67,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -43,
+        63,
+        2
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -43,
+        63,
+        3
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -43,
+        63,
+        4
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -43,
+        63,
+        5
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -43,
+        63,
+        6
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -43,
+        63,
+        7
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -43,
+        63,
+        8
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -43,
+        63,
+        9
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -43,
+        63,
+        10
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -43,
+        63,
+        11
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -43,
+        63,
+        12
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -43,
+        63,
+        13
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -43,
+        64,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -43,
+        64,
+        5
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -43,
+        64,
+        6
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -43,
+        64,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -43,
+        65,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -43,
+        66,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -43,
+        67,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -43,
+        67,
+        5
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -43,
+        67,
+        6
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -43,
+        67,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        63,
+        2
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -42,
+        63,
+        3
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -42,
+        63,
+        4
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -42,
+        63,
+        5
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -42,
+        63,
+        6
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -42,
+        63,
+        7
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -42,
+        63,
+        8
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -42,
+        63,
+        9
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -42,
+        63,
+        10
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -42,
+        63,
+        11
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -42,
+        63,
+        12
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -42,
+        63,
+        13
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -42,
+        64,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        64,
+        5
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        64,
+        6
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        64,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        65,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        65,
+        5
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        65,
+        6
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        65,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        66,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        66,
+        5
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        66,
+        6
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        66,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        67,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        67,
+        5
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        67,
+        6
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        67,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -41,
+        63,
+        2
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -41,
+        63,
+        3
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -41,
+        63,
+        4
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -41,
+        63,
+        5
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -41,
+        63,
+        6
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -41,
+        63,
+        7
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -41,
+        63,
+        8
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -41,
+        63,
+        9
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -41,
+        63,
+        10
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -41,
+        63,
+        11
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -41,
+        63,
+        12
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -41,
+        63,
+        13
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -40,
+        63,
+        2
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -40,
+        63,
+        3
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -40,
+        63,
+        4
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -40,
+        63,
+        5
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -40,
+        63,
+        6
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -40,
+        63,
+        7
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -40,
+        63,
+        8
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -40,
+        63,
+        9
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -40,
+        63,
+        10
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -40,
+        63,
+        11
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -40,
+        63,
+        12
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -40,
+        63,
+        13
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -39,
+        63,
+        2
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -39,
+        63,
+        3
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -39,
+        63,
+        4
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -39,
+        63,
+        5
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -39,
+        63,
+        6
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -39,
+        63,
+        7
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -39,
+        63,
+        8
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -39,
+        63,
+        9
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -39,
+        63,
+        10
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -39,
+        63,
+        11
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -39,
+        63,
+        12
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -39,
+        63,
+        13
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -38,
+        63,
+        2
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -38,
+        63,
+        3
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -38,
+        63,
+        4
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -38,
+        63,
+        5
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -38,
+        63,
+        6
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -38,
+        63,
+        7
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -38,
+        63,
+        8
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -38,
+        63,
+        9
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -38,
+        63,
+        10
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -38,
+        63,
+        11
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -38,
+        63,
+        12
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -38,
+        63,
+        13
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -37,
+        63,
+        2
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -37,
+        63,
+        3
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -37,
+        63,
+        4
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -37,
+        63,
+        5
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -37,
+        63,
+        6
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -37,
+        63,
+        7
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -37,
+        63,
+        8
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -37,
+        63,
+        9
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -37,
+        63,
+        10
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -37,
+        63,
+        11
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -37,
+        63,
+        12
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -37,
+        63,
+        13
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -36,
+        63,
+        2
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -36,
+        63,
+        3
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -36,
+        63,
+        4
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -36,
+        63,
+        5
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -36,
+        63,
+        6
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -36,
+        63,
+        7
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -36,
+        63,
+        8
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -36,
+        63,
+        9
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -36,
+        63,
+        10
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -36,
+        63,
+        11
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -36,
+        63,
+        12
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -36,
+        63,
+        13
+      ],
+      "material": "stone"
+    }
+  ],
+  "expectedArch": [
+    [
+      -40,
+      64,
+      10
+    ],
+    [
+      -38,
+      64,
+      10
+    ],
+    [
+      -40,
+      65,
+      10
+    ],
+    [
+      -38,
+      65,
+      10
+    ],
+    [
+      -40,
+      66,
+      10
+    ],
+    [
+      -39,
+      66,
+      10
+    ],
+    [
+      -38,
+      66,
+      10
+    ]
+  ],
+  "resources": [
+    [
+      -39,
+      64,
+      8
+    ],
+    [
+      -38,
+      64,
+      8
+    ]
+  ],
+  "beforeSource": {
+    "oak_planks": 72,
+    "cobblestone": 50
+  },
+  "beforeDestination": {
+    "cobblestone": 6
+  },
+  "error": "Exactly two withdrawn planks placed physically\n\n1 !== 0\n",
+  "messages": [
+    "TaskTester joined the game",
+    "Entered agentcity_play. Explore, collect materials and use your agent's assigned task area. /lobby returns to the NPCs.",
+    "Request queued: agent_follow (94589bcf).",
+    "CityAgent2 will follow you inside the safe hub.",
+    "Request queued: agent_wait (b07fc174).",
+    "CityAgent2 stopped and is waiting."
+  ],
+  "finishedAt": "2026-10-31T11:03:30.462Z"
+}

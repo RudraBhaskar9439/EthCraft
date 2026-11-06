@@ -1,0 +1,10 @@
+{
+  "status": "fail",
+  "scope": "Actual isolated Foundry official Uniswap v4 PoolManager with synthetic CRED/KIT fixture liquidity; zero public transactions or native effects",
+  "compile": "pass, Solidity 0.8.26",
+  "tests": {"passed": 2, "failed": 1, "skipped": 0},
+  "failure": "testWorldStaleHookRefusesWithoutSpendingAndRetainsOperation reverted freshness while renewing the fixture StateRegistry",
+  "diagnosis": "The optimizer may reuse block.timestamp across a Foundry vm.warp within one test transaction. The fixture must retain the explicit post-warp timestamp for registry validity and swap deadline; otherwise it tests an expired quote rather than stale-hook rejection.",
+  "publicTransactions": 0,
+  "productionWorldMutations": 0
+}

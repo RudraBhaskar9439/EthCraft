@@ -1,0 +1,759 @@
+{
+  "schema": "agentcity.p2.construction-client.v1",
+  "phase": "initial",
+  "status": "pass",
+  "started_at": "2026-10-29T18:51:07.337Z",
+  "independent_humans": 0,
+  "scripted_roles": true,
+  "checks": [
+    {
+      "name": "fixed-access-waypoint-7,0,7",
+      "goal_relative": [
+        7,
+        0,
+        7
+      ],
+      "actual_server_position": [
+        -4.5,
+        81,
+        3.499999999998657
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:22.768Z"
+    },
+    {
+      "name": "fixed-access-waypoint-7,0,4",
+      "goal_relative": [
+        7,
+        0,
+        4
+      ],
+      "actual_server_position": [
+        -4.500000000000274,
+        81,
+        0.5
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:23.542Z"
+    },
+    {
+      "name": "fixed-access-waypoint-15,0,4",
+      "goal_relative": [
+        15,
+        0,
+        4
+      ],
+      "actual_server_position": [
+        3.30040673130041,
+        81,
+        0.4999999999989166
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:25.230Z"
+    },
+    {
+      "name": "fixed-access-waypoint-15,0,-3",
+      "goal_relative": [
+        15,
+        0,
+        -3
+      ],
+      "actual_server_position": [
+        3.500851128681815,
+        81,
+        -6.5
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:26.772Z"
+    },
+    {
+      "name": "fixed-access-waypoint--2,0,-3",
+      "goal_relative": [
+        -2,
+        0,
+        -3
+      ],
+      "actual_server_position": [
+        -13.5,
+        81,
+        -6.4999999999992415
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:30.011Z"
+    },
+    {
+      "name": "fixed-access-waypoint--2,0,4",
+      "goal_relative": [
+        -2,
+        0,
+        4
+      ],
+      "actual_server_position": [
+        -13.49999999999995,
+        81,
+        0.5
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:31.499Z"
+    },
+    {
+      "name": "fixed-access-waypoint-15,0,4",
+      "goal_relative": [
+        15,
+        0,
+        4
+      ],
+      "actual_server_position": [
+        3.5,
+        81,
+        0.4999999999977211
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:34.779Z"
+    },
+    {
+      "name": "fixed-access-waypoint-7,0,4",
+      "goal_relative": [
+        7,
+        0,
+        4
+      ],
+      "actual_server_position": [
+        -4.300406731300685,
+        81,
+        0.49999999999808176
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:36.478Z"
+    },
+    {
+      "name": "fixed-access-waypoint-7,0,7",
+      "goal_relative": [
+        7,
+        0,
+        7
+      ],
+      "actual_server_position": [
+        -4.509522871382541,
+        81,
+        3.5
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:37.303Z"
+    },
+    {
+      "name": "declared-west-east-lane-crossings-at-level-0",
+      "feet_level_relative": 0,
+      "crossings_relative": [
+        -2,
+        15
+      ],
+      "lanes_relative": [
+        -3,
+        4
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:37.304Z"
+    },
+    {
+      "name": "fixed-access-waypoint-13,3,7",
+      "goal_relative": [
+        13,
+        3,
+        7
+      ],
+      "actual_server_position": [
+        1.326566456696006,
+        84,
+        3.4999999999991793
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:38.542Z"
+    },
+    {
+      "name": "fixed-access-waypoint-13,3,5",
+      "goal_relative": [
+        13,
+        3,
+        5
+      ],
+      "actual_server_position": [
+        1.5147534954034854,
+        84,
+        1.6061894936222136
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:39.317Z"
+    },
+    {
+      "name": "fixed-access-waypoint-15,3,5",
+      "goal_relative": [
+        15,
+        3,
+        5
+      ],
+      "actual_server_position": [
+        3.4184571403132002,
+        84,
+        1.4927629980201034
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:40.036Z"
+    },
+    {
+      "name": "fixed-access-waypoint-15,3,4",
+      "goal_relative": [
+        15,
+        3,
+        4
+      ],
+      "actual_server_position": [
+        3.4848588290671443,
+        84,
+        0.6804944187395452
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:40.490Z"
+    },
+    {
+      "name": "fixed-access-waypoint-15,3,-3",
+      "goal_relative": [
+        15,
+        3,
+        -3
+      ],
+      "actual_server_position": [
+        3.4995337370740893,
+        84,
+        -6.5
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:42.034Z"
+    },
+    {
+      "name": "fixed-access-waypoint--2,3,-3",
+      "goal_relative": [
+        -2,
+        3,
+        -3
+      ],
+      "actual_server_position": [
+        -13.5,
+        84,
+        -6.4999999999992415
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:45.271Z"
+    },
+    {
+      "name": "fixed-access-waypoint--2,3,4",
+      "goal_relative": [
+        -2,
+        3,
+        4
+      ],
+      "actual_server_position": [
+        -13.49999999999995,
+        84,
+        0.5
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:46.814Z"
+    },
+    {
+      "name": "fixed-access-waypoint-15,3,4",
+      "goal_relative": [
+        15,
+        3,
+        4
+      ],
+      "actual_server_position": [
+        3.5,
+        84,
+        0.4999999999977211
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:50.001Z"
+    },
+    {
+      "name": "fixed-access-waypoint-15,3,5",
+      "goal_relative": [
+        15,
+        3,
+        5
+      ],
+      "actual_server_position": [
+        3.5000000000000497,
+        84,
+        1.3149785454451008
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:50.568Z"
+    },
+    {
+      "name": "fixed-access-waypoint-13,3,5",
+      "goal_relative": [
+        13,
+        3,
+        5
+      ],
+      "actual_server_position": [
+        1.6085036354229865,
+        84,
+        1.5156662629412052
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:51.286Z"
+    },
+    {
+      "name": "fixed-access-waypoint-13,3,7",
+      "goal_relative": [
+        13,
+        3,
+        7
+      ],
+      "actual_server_position": [
+        1.492286113612738,
+        84,
+        3.419059022627098
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:52.061Z"
+    },
+    {
+      "name": "declared-west-east-lane-crossings-at-level-3",
+      "feet_level_relative": 3,
+      "crossings_relative": [
+        -2,
+        15
+      ],
+      "lanes_relative": [
+        -3,
+        4
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:52.061Z"
+    },
+    {
+      "name": "fixed-access-waypoint-19,6,7",
+      "goal_relative": [
+        19,
+        6,
+        7
+      ],
+      "actual_server_position": [
+        7.3246856615753595,
+        87,
+        3.5005544061672156
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:53.289Z"
+    },
+    {
+      "name": "fixed-access-waypoint-19,6,5",
+      "goal_relative": [
+        19,
+        6,
+        5
+      ],
+      "actual_server_position": [
+        7.514954589529498,
+        87,
+        1.6071062972988372
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:54.059Z"
+    },
+    {
+      "name": "fixed-access-waypoint-15,6,5",
+      "goal_relative": [
+        15,
+        6,
+        5
+      ],
+      "actual_server_position": [
+        3.649455409315361,
+        87,
+        1.498343175074662
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:55.028Z"
+    },
+    {
+      "name": "fixed-access-waypoint-15,6,4",
+      "goal_relative": [
+        15,
+        6,
+        4
+      ],
+      "actual_server_position": [
+        3.528620455759101,
+        87,
+        0.6923727394165737
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:55.488Z"
+    },
+    {
+      "name": "fixed-access-waypoint-15,6,-3",
+      "goal_relative": [
+        15,
+        6,
+        -3
+      ],
+      "actual_server_position": [
+        3.5002731883536655,
+        87,
+        -6.5
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:51:57.027Z"
+    },
+    {
+      "name": "fixed-access-waypoint--2,6,-3",
+      "goal_relative": [
+        -2,
+        6,
+        -3
+      ],
+      "actual_server_position": [
+        -13.5,
+        87,
+        -6.4999999999992415
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:52:00.277Z"
+    },
+    {
+      "name": "fixed-access-waypoint--2,6,4",
+      "goal_relative": [
+        -2,
+        6,
+        4
+      ],
+      "actual_server_position": [
+        -13.49999999999995,
+        87,
+        0.5
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:52:01.817Z"
+    },
+    {
+      "name": "fixed-access-waypoint-15,6,4",
+      "goal_relative": [
+        15,
+        6,
+        4
+      ],
+      "actual_server_position": [
+        3.5,
+        87,
+        0.4999999999977211
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:52:05.008Z"
+    },
+    {
+      "name": "fixed-access-waypoint-15,6,5",
+      "goal_relative": [
+        15,
+        6,
+        5
+      ],
+      "actual_server_position": [
+        3.5000000000000497,
+        87,
+        1.3149785454451008
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:52:05.570Z"
+    },
+    {
+      "name": "fixed-access-waypoint-19,6,5",
+      "goal_relative": [
+        19,
+        6,
+        5
+      ],
+      "actual_server_position": [
+        7.352410305821913,
+        87,
+        1.5043265737684612
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:52:06.550Z"
+    },
+    {
+      "name": "fixed-access-waypoint-19,6,7",
+      "goal_relative": [
+        19,
+        6,
+        7
+      ],
+      "actual_server_position": [
+        7.512398958285319,
+        87,
+        3.4025200960268815
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:52:07.221Z"
+    },
+    {
+      "name": "declared-west-east-lane-crossings-at-level-6",
+      "feet_level_relative": 6,
+      "crossings_relative": [
+        -2,
+        15
+      ],
+      "lanes_relative": [
+        -3,
+        4
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:52:07.221Z"
+    },
+    {
+      "name": "fixed-access-waypoint-25,9,7",
+      "goal_relative": [
+        25,
+        9,
+        7
+      ],
+      "actual_server_position": [
+        13.342874389738183,
+        90,
+        3.5005369059876945
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:52:08.511Z"
+    },
+    {
+      "name": "fixed-access-waypoint-25,9,5",
+      "goal_relative": [
+        25,
+        9,
+        5
+      ],
+      "actual_server_position": [
+        13.513124609740544,
+        90,
+        1.6038858616534202
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:52:09.026Z"
+    },
+    {
+      "name": "fixed-access-waypoint-15,9,5",
+      "goal_relative": [
+        15,
+        9,
+        5
+      ],
+      "actual_server_position": [
+        3.5,
+        90,
+        1.4995828793752592
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:52:10.990Z"
+    },
+    {
+      "name": "fixed-access-waypoint-15,9,4",
+      "goal_relative": [
+        15,
+        9,
+        4
+      ],
+      "actual_server_position": [
+        3.4999999999999005,
+        90,
+        0.6846043339278794
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:52:11.553Z"
+    },
+    {
+      "name": "fixed-access-waypoint-15,9,-3",
+      "goal_relative": [
+        15,
+        9,
+        -3
+      ],
+      "actual_server_position": [
+        3.499999999999254,
+        90,
+        -6.5
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:52:13.012Z"
+    },
+    {
+      "name": "fixed-access-waypoint--2,9,-3",
+      "goal_relative": [
+        -2,
+        9,
+        -3
+      ],
+      "actual_server_position": [
+        -13.5,
+        90,
+        -6.4999999999992415
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:52:16.312Z"
+    },
+    {
+      "name": "fixed-access-waypoint--2,9,4",
+      "goal_relative": [
+        -2,
+        9,
+        4
+      ],
+      "actual_server_position": [
+        -13.49999999999995,
+        90,
+        0.5
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:52:17.804Z"
+    },
+    {
+      "name": "fixed-access-waypoint-15,9,4",
+      "goal_relative": [
+        15,
+        9,
+        4
+      ],
+      "actual_server_position": [
+        3.5,
+        90,
+        0.4999999999977211
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:52:21.043Z"
+    },
+    {
+      "name": "fixed-access-waypoint-15,9,5",
+      "goal_relative": [
+        15,
+        9,
+        5
+      ],
+      "actual_server_position": [
+        3.5000000000000497,
+        90,
+        1.3149785454451008
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:52:21.500Z"
+    },
+    {
+      "name": "fixed-access-waypoint-25,9,5",
+      "goal_relative": [
+        25,
+        9,
+        5
+      ],
+      "actual_server_position": [
+        13.5,
+        90,
+        1.5003241922972805
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:52:23.511Z"
+    },
+    {
+      "name": "fixed-access-waypoint-25,9,7",
+      "goal_relative": [
+        25,
+        9,
+        7
+      ],
+      "actual_server_position": [
+        13.50000000000005,
+        90,
+        3.410442636362112
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:52:24.023Z"
+    },
+    {
+      "name": "declared-west-east-lane-crossings-at-level-9",
+      "feet_level_relative": 9,
+      "crossings_relative": [
+        -2,
+        15
+      ],
+      "lanes_relative": [
+        -3,
+        4
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:52:24.023Z"
+    },
+    {
+      "name": "fixed-access-waypoint-19,6,7",
+      "goal_relative": [
+        19,
+        6,
+        7
+      ],
+      "actual_server_position": [
+        7.645876563304366,
+        87,
+        3.5051785224261476
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:52:25.821Z"
+    },
+    {
+      "name": "fixed-access-waypoint-13,3,7",
+      "goal_relative": [
+        13,
+        3,
+        7
+      ],
+      "actual_server_position": [
+        1.5,
+        84,
+        3.50077590766938
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:52:27.518Z"
+    },
+    {
+      "name": "fixed-access-waypoint-7,0,7",
+      "goal_relative": [
+        7,
+        0,
+        7
+      ],
+      "actual_server_position": [
+        -4.430553095547411,
+        81,
+        3.923932848915039
+      ],
+      "status": "pass",
+      "at": "2026-10-29T18:52:29.321Z"
+    },
+    {
+      "name": "access-only-calibration-preserves-all144-stock-and-empty-circuit",
+      "stock": {
+        "minecraft:lever": 4,
+        "minecraft:redstone": 19,
+        "minecraft:redstone_lamp": 3,
+        "minecraft:redstone_torch": 37,
+        "minecraft:repeater": 16,
+        "minecraft:stone_bricks": 65
+      },
+      "placements": 0,
+      "revision": 0,
+      "status": "pass",
+      "at": "2026-10-29T18:52:29.411Z"
+    }
+  ],
+  "live0GVerified": false,
+  "spending": 0,
+  "finished_at": "2026-10-29T18:52:29.913Z"
+}

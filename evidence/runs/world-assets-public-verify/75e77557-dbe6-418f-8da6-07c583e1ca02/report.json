@@ -1,0 +1,86 @@
+{
+  "status": "pass",
+  "scope": "Actual read-only Unichain Sepolia deployment/role/hook/liquidity verification; no user asset mint, native-rights proof or production certification",
+  "checks": [
+    {
+      "name": "actual chain genesis and all registry market CITY official pool manager quoter hooked router state-registry bytecodes match pinned manifests",
+      "status": "pass"
+    },
+    {
+      "name": "actual registry administrator and registrar are distinct roles market bindings match and nextTokenId1 confirms zero assets minted",
+      "status": "pass"
+    },
+    {
+      "name": "actual nonzero beforeSwap-only hook pool key immutable router currencies manager state registry publisher and market ID are bound",
+      "status": "pass"
+    },
+    {
+      "name": "actual canonical seed receipt contains exact hooked-pool positive liquidity event and current official pool liquidity remains nonzero",
+      "status": "pass"
+    }
+  ],
+  "publicTransactions": 0,
+  "healthyPublications": 0,
+  "codeHashes": {
+    "registry": {
+      "address": "0x8cf4192b9846990f5fef4576d5b0a76f520023a8",
+      "hash": "0x9825094905f226df9f11f142b1f876b56adc56de6215fba350c05d34fb57cc9a"
+    },
+    "market": {
+      "address": "0x98bb35196507528a3855e4980d4e845a970ed289",
+      "hash": "0xd13ac22d2aa21ba155a71e5302e86cec771c914e6e8b03d9280ed42f390d2780"
+    },
+    "city": {
+      "address": "0x789dab2f22f0161401523ebe858ce88a3b14fae8",
+      "hash": "0xf9eebf13f96d7b246e30cadd39bbfcf908086d15fdb328ac522e52fa71fb2821"
+    },
+    "poolManager": {
+      "address": "0x9cb26a7183b2f4515945dc52cb4195b0d2d06c95",
+      "hash": "0x2566e42d45723eef05d7253a7b7c140a6da61992594525fc66d06b4a973b5d0b"
+    },
+    "quoter": {
+      "address": "0xb2b34025a07af3925313b6b46f8046ee8ffba30b",
+      "hash": "0x7fd1ee3f8e9172cb587fd1c8a190271615ca7e5d4c874ee3f4bd46ceb8c334da"
+    },
+    "router": {
+      "address": "0x3378ee4a7930797865370140ce24517651e37069",
+      "hash": "0x566322aa3736236510b4c9ee98d93326e1fa0a7f71ae83c58dbe34132d3ee0cf"
+    },
+    "hook": {
+      "address": "0x3c98b8b484a303decc9321ee0e944742dfdbc080",
+      "hash": "0x732d5e04001b65d1e4d6a1641c0219678f5fe7cb89824cfcee482cd3e6739fe4"
+    },
+    "stateRegistry": {
+      "address": "0x5db0cf0721c4b2f98de3f079d13a956dc922a3e4",
+      "hash": "0x3228cb288284b1e2c6713824548222ee73edab6ef986993b366ac263d1069998"
+    }
+  },
+  "nextTokenId": "1",
+  "playerAssetsMinted": 0,
+  "roles": {
+    "administrator": "0x5cAEC1fD260Ad8bB747A3984752D7943BcDc4A54",
+    "registrar": "0x24115c9D84b3413d449EdCbcB401c90cB194384c",
+    "publisher": "0x8BdE4D7eFeb35ea1b90933D50c0169B7546cbA4f"
+  },
+  "poolKey": {
+    "currency0": "0x789dab2f22f0161401523ebe858ce88a3b14fae8",
+    "currency1": "0x83ea7c33c6787e80ad6a0a78c66eb36ee355344d",
+    "fee": 3000,
+    "tickSpacing": 60,
+    "hooks": "0x3c98B8B484a303DeCC9321ee0e944742dFDbC080"
+  },
+  "stateRegistryAvailable": false,
+  "liquidity": {
+    "poolId": "0x73f3b247db05109d07588841926eb44f31a23893408958d8a381f3bb1cf5fa86",
+    "seedTransactionHash": "0x897edcd600055cdcf2970a7f3c4b17a7dada0040988adfdda6c8ff2f6d02bba9",
+    "blockHash": "0x7a84272f37571fadf380fea50ce92fbc916e5aa02e7a66d795355ebd34af750c",
+    "blockNumber": "66614751",
+    "canonicalConfirmations": "494",
+    "seedDelta": "500000000000000000000",
+    "currentLiquidity": "500000000000000000000"
+  },
+  "manifestHashes": {
+    "asset": "cfa22a2343e682bc002b242d57525924cc3cd8c20c69263903fddda3aae93506",
+    "payment": "6e8391e8ab4f49e14e2f3da53673c37f884caea58fb3fb8e37775e8ec610d7fb"
+  }
+}

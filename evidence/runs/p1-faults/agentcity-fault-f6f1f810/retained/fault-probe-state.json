@@ -1,0 +1,13 @@
+{
+  "scenario": "adapter-unavailable-input_setting",
+  "state": {
+    "revision": 0,
+    "lockMode": "NONE",
+    "quarantined": false,
+    "readyForReview": false,
+    "passValidUntilMs": 0
+  },
+  "reports": {
+    "0944341e-2bce-48e7-a9e9-1f81479b2cd3.json": "c6936b276c208af2871a1f30718769164a3dc982625d4b5cecdb3e41e1bdfd48"
+  }
+}

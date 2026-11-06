@@ -1,0 +1,189 @@
+{
+  "kind": "requester-side-local-component-and-ancestor-dependency-review",
+  "reviewer": "/root/p2_harness; AI engineering peer and requester role; not an independent human participant",
+  "createdAt": "2026-10-29T22:36:00.657738+00:00",
+  "status": "draft-ready-for-final-release-binding",
+  "recommendation": "The reviewed local component checkpoint is ready for release binding. Canonical live P3-P8 gates remain pending.",
+  "releaseBinding": {
+    "status": "pending-final-release-commit",
+    "baselineHead": "5adbc827d000f24424678586142ac6ce369431c2",
+    "reviewedImplementationManifest": {
+      "path": "evidence/runs/local-review/requester-review-20261029T223321Z/reviewed-implementation-manifest.json",
+      "sha256": "33d6d82188143f0bc3e9199902cfc94df515eef96dbfd60c452f143430fa6ee7"
+    },
+    "instruction": "Bind the final release after confirming reviewed source hashes remain unchanged. Preserve actual execution releases and evidence; do not describe this review as a new physical Minecraft run."
+  },
+  "scope": "Focused permission, material/funds accounting and retry review, as requested. No broad edge-case sweep.",
+  "resolvedFindings": [
+    {
+      "id": "AC-LOCAL-REVIEW-001",
+      "title": "Expired pass stayed locked after a canonically reverted acceptance",
+      "status": "resolved-in-reviewed-working-tree",
+      "files": [
+        "backend/src/inspection/synthetic-world.mjs",
+        "backend/src/inspection/coordinator.mjs",
+        "backend/src/inspection/settlement-service.mjs"
+      ],
+      "review": "Unknown or pending acceptance remains locked after pass expiry. The verifier obtains the local canonical receipt through LocalEvm. A known reverted attempt can be cleared without releasing a still-usable pass. A pass whose validity has expired can release after the failed attempt is reconciled. Recovery reuses uncertain transaction identity and creates a replacement attempt only after a known revert.",
+      "verification": "Read the implementation and the retained three-check actual-PostgreSQL test report. The outcome verifier in that component test is scripted; the combined E2E covers actual successful EVM acceptance and claims."
+    }
+  ],
+  "openFindingsWithinReviewedScope": [],
+  "selectedVerificationReports": [
+    {
+      "name": "identity",
+      "path": "evidence/runs/local-p4/identity-2339a63d-7bda-4015-ae3a-8c5aa9e9297f/report.json",
+      "sha256": "7c1f7eb548c5c810b09d065b8e91bbd14be80c08d0135c9e02c19a093c154566",
+      "status": "pass",
+      "checkCount": 6,
+      "scope": "Actual PostgreSQL and local EIP-712 signatures; fixture game sessions.",
+      "reviewMethod": "Retained evidence inspected; this review did not rerun the product suite."
+    },
+    {
+      "name": "agreements",
+      "path": "evidence/runs/local-p4/agreements-77631290-b687-4c06-8969-2290d0ab726c/report.json",
+      "sha256": "bb9cd1a13b77a1c1031ab2a7d4e1af9ee7c7f72a4376c0fd657dffbe10bc7160",
+      "status": "pass",
+      "checkCount": 6,
+      "scope": "Actual PostgreSQL, signatures and deployed local contract digest cross-check; component funding verifier scripted. Actual funding is in the E2E report.",
+      "reviewMethod": "Retained evidence inspected; this review did not rerun the product suite."
+    },
+    {
+      "name": "discovery",
+      "path": "evidence/runs/local-p4/discovery-2201ccb5-6507-4eeb-8fb4-221f95a6aa8e/report.json",
+      "sha256": "63b33d77c7a8545dff9dc4968869edff79ff048c851224ad91730442a12c2be2",
+      "status": "pass",
+      "checkCount": 6,
+      "scope": "Actual official Arkiv SDK writes and queries on a loopback local Arkiv node; also an explicitly separate SQL fixture adapter.",
+      "reviewMethod": "Retained evidence inspected; this review did not rerun the product suite."
+    },
+    {
+      "name": "procurement",
+      "path": "evidence/runs/local-procurement/procurement-efd2563d-e0ec-4190-8349-aa77c754f8ea/report.json",
+      "sha256": "0ffc980a63de1d70e8fc57a5a4da8dc56b8f7e1015ec613248eb469e35948432",
+      "status": "pass",
+      "checkCount": 5,
+      "scope": "Actual isolated PostgreSQL and local Anvil procurement; snapshot restored after the component run.",
+      "reviewMethod": "Retained evidence inspected; this review did not rerun the product suite."
+    },
+    {
+      "name": "procurement-authorization",
+      "path": "evidence/runs/local-procurement/authorization-bc3a19fe-f28e-4e7a-9b02-b5b19c5de4f3/report.json",
+      "sha256": "bacc79f4547c5872757868eb12249422faf3c1d5358ff4c6f7963403d6db4560",
+      "status": "pass",
+      "checkCount": 3,
+      "scope": "Actual PostgreSQL authorization checks with a synthetic reserved row; chain read-only.",
+      "reviewMethod": "Retained evidence inspected; this review did not rerun the product suite."
+    },
+    {
+      "name": "settlement-locks",
+      "path": "evidence/runs/local-settlement/c4d7c04e-1a70-4902-bb3f-044d7a1e3dd5/report.json",
+      "sha256": "d8efd454e363ef01c834ef6af61345db12aad4014d70dcb4bf24d6aa7ccdd290",
+      "status": "pass",
+      "checkCount": 3,
+      "scope": "Actual PostgreSQL lock transitions; canonical-outcome verifier scripted.",
+      "reviewMethod": "Retained evidence inspected; this review did not rerun the product suite."
+    },
+    {
+      "name": "combined-local-flow",
+      "path": "evidence/runs/local-e2e/d0c1f7d3-5f97-4e4f-b73d-30c6adc37107/report.json",
+      "sha256": "d0e34b9ef23f5d50416daf6d17e00de69ee704b9e418bf56a77cd9f05ce749ae",
+      "status": "pass",
+      "checkCount": 6,
+      "scope": "Actual PostgreSQL, local signatures, local EVM funding/v4 swap/burn/claim/acceptance/labor transfer. Inference and game observations are explicit fixtures.",
+      "reviewMethod": "Retained evidence inspected; this review did not rerun the product suite."
+    },
+    {
+      "name": "same-job-recovery",
+      "path": "evidence/runs/local-e2e/resume-178f3176-8e3d-459e-a359-77c8529a9954/report.json",
+      "sha256": "297488ae4fb79e969239835558c08bcdff7e9a078f4934c0ae01961ee474a551",
+      "status": "pass",
+      "checkCount": null,
+      "scope": "Actual same-job local settlement recovery: no new purchase; first labor claim 6e18 base units, replay claimed zero.",
+      "reviewMethod": "Retained evidence inspected; this review did not rerun the product suite."
+    },
+    {
+      "name": "workflow",
+      "path": "evidence/runs/local-workflow/730be9cf-e0c3-4477-a6c9-840a06388863/report.json",
+      "sha256": "4f1814da8bd2e6bbcf47c53f757d9c49696b4994b1291caf3e0f1b524abe9c39",
+      "status": "pass",
+      "checkCount": 6,
+      "scope": "Actual PostgreSQL budgets, fresh authority and fenced delivery; inference and claim source scripted.",
+      "reviewMethod": "Retained evidence inspected; this review did not rerun the product suite."
+    },
+    {
+      "name": "contracts",
+      "path": "evidence/runs/local-p5-p8/forge-tests.json",
+      "sha256": "fd0e54449b4cb8a59a12580f360d25a297ba6291919f3d802fcc75f650e6b9d9",
+      "status": "pass",
+      "checkCount": 11,
+      "scope": "Local Foundry contract checks using actual pinned Uniswap v4 core; no public-chain or physical-custody verification.",
+      "reviewMethod": "Retained evidence inspected; this review did not rerun the contract suite."
+    }
+  ],
+  "ancestorDependencyReview": {
+    "anchor": "5adbc827d000f24424678586142ac6ce369431c2",
+    "runtimeFilesCompared": 76,
+    "runtimeDifferences": [],
+    "untrackedRuntimeFiles": [],
+    "runtimeManifest": {
+      "path": "evidence/runs/local-review/requester-review-20261029T223321Z/ancestor-runtime-manifest.json",
+      "sha256": "c4043efbcf6938be0ddb2fc600a27632cfe7467b2fd700bdbd2c9b4bcc6e24c9"
+    },
+    "retainedEvidenceFilesHashVerified": 50,
+    "evidenceManifest": {
+      "path": "evidence/runs/local-review/requester-review-20261029T223321Z/ancestor-evidence-manifest.json",
+      "sha256": "55d31c28ff69b5c9f8f2bd6f06a115e677745fb8ca2337b1a84a285f3b6af0d7"
+    },
+    "sourcePhaseRecords": {
+      "P0": {
+        "recordedExecutionRelease": "74466c2a4188ffcb96cb331a0f30ab567a2924df",
+        "caseCount": 15,
+        "allRecordedCasesPass": true
+      },
+      "P1": {
+        "recordedExecutionRelease": "eb49114ccd6811bf323eaf9b8a891da6f002267e",
+        "caseCount": 10,
+        "allRecordedCasesPass": true
+      },
+      "P2": {
+        "recordedExecutionRelease": "eb49114ccd6811bf323eaf9b8a891da6f002267e",
+        "caseCount": 6,
+        "allRecordedCasesPass": true
+      }
+    },
+    "newSharedPathsRequiringRenewedBinding": [
+      "backend/package.json",
+      "backend/package-lock.json",
+      "backend/src/workflow/",
+      "contracts/foundry.toml",
+      "contracts/foundry.lock",
+      "contracts/lib/",
+      "contracts/abi/",
+      "planning/scope.json",
+      "planning/phases.json"
+    ],
+    "dependencyConclusion": "The new backend ESM package and pg/viem/Arkiv dependencies do not alter the earlier .cjs bot runtime. The bot adapter explicitly resolves the unchanged tests/compatibility/node_modules tree; its lock and reviewed game/plugin source are byte-identical to the anchor. New contract ABIs and workflow modules are not imported into that earlier game path. Shared scope metadata still invalidates automatic old bindings and requires the explicit final-release review binding.",
+    "physicalP2Provenance": "Retain the same-world composition: 137 original native placements, seven continuation placements, and zero new placements in the final protected inspection segment. Final report 1d764720-4f55-4a69-bb64-acb8c3c6b3c2 passed 16/16 at revision 144. This review performs no new physical build, restores no world or stock, and does not erase failed attempts.",
+    "newPhysicalRunPerformed": false
+  },
+  "unprovedLiveRequirements": [
+    "Funded real 0G inference, actual provider billing and selected-model evidence.",
+    "Independently controlled human requester and builder, licensed/authenticated game sessions and their actual wallet approvals.",
+    "Public Arkiv discovery and network verification; the checked SDK/node was local.",
+    "Actual platform suitability for transferable-token Minecraft integration.",
+    "Selected public-chain deployment, exact addresses, real gas/liquidity/funding and authorized requester transactions.",
+    "Physical Minecraft custody, delivery and signed settlement integrated with the new economic flow."
+  ],
+  "limits": [
+    "All newly checked economic flows use disposable local test accounts and local tokens.",
+    "The economic-flow inventory and world inspection remain explicit synthetic fixtures; earlier non-token physical Minecraft evidence remains separate.",
+    "Two AI role agents do not establish independent-human participation.",
+    "No paid provider call, public transaction or user-wallet signing was performed by this review.",
+    "Earlier failed reports remain retained. No exhaustive or production-certification claim is made."
+  ],
+  "canonicalLiveGateApproval": false,
+  "independentHumanVerified": false,
+  "realMoneySpentByReview": 0,
+  "productFilesEditedByReviewer": []
+}

@@ -1,0 +1,37 @@
+{
+  "status": "pass",
+  "scope": "In-memory HTTP requests and mocked runtime; no browser, network, signing or native effect.",
+  "checks": [
+    {
+      "name": "host capability origin and JSON content type are required before runtime access",
+      "status": "pass"
+    },
+    {
+      "name": "oversized malformed and non-object bodies cannot dispatch an operation",
+      "status": "pass"
+    },
+    {
+      "name": "only explicit HTTP routes dispatch and there is no arbitrary command endpoint",
+      "status": "pass"
+    },
+    {
+      "name": "preview dispatch does not confirm sign or change its request fields",
+      "status": "pass"
+    },
+    {
+      "name": "explicit confirmation status and health routes call only their named runtime method",
+      "status": "pass"
+    },
+    {
+      "name": "static delivery preserves browser protections and errors redact provider payloads",
+      "status": "pass"
+    }
+  ],
+  "publicTransactions": 0,
+  "signatures": 0,
+  "networkCalls": 0,
+  "sourceHashes": {
+    "backend/src/bank/http.mjs": "62b9e7858b9bc87bc671a139f3b3e891028f428f4fbf9e7b6be120a90ca7e5b6",
+    "tests/bank/http.mjs": "18be99325eb03d5c99eb9edf9513573564ea9820fbb54fbf93232eb36cf62e98"
+  }
+}

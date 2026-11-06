@@ -1,0 +1,101 @@
+# Native Linux deployment candidate. Never run beside an existing pilot writer.
+x-app: &app
+  image: agentcity-playable:deployment-candidate
+  build:
+    context: ../..
+    dockerfile: ops/playable-production/Dockerfile
+  user: "10001:10001"
+  read_only: true
+  init: true
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  network_mode: host
+  restart: unless-stopped
+  stop_grace_period: 45s
+  tmpfs: ["/tmp:rw,noexec,nosuid,nodev,size=32m,uid=10001,gid=10001,mode=0700"]
+  environment:
+    NODE_ENV: production
+    AGENTCITY_LOCAL_PORT: "8789"
+  volumes: &runtime-mounts
+    # This directory contains ONLY market.json, wallet-settings.json and enrolled-players.json.
+    - type: bind
+      source: ${PUBLIC_CONFIG_DIR:?Provide a dedicated reviewed public-config directory}
+      target: /app/.local/playable-testnet
+      read_only: true
+    - type: bind
+      source: ${DATABASE_SETTINGS_FILE:?Provide private database settings file}
+      target: /app/.local/backend/environment.json
+      read_only: true
+    - type: bind
+      source: ${ACTIVE_WORLD_FILE:?Provide reviewed active world pointer}
+      target: /app/.local/playable-world/active.json
+      read_only: true
+    - type: bind
+      source: ${AGENT_JOURNAL_DIR:?Provide private persistent agent journal directory}
+      target: /app/.local/playable-world/agentcity-playable-00000001
+    - type: bind
+      source: ${PLUGIN_TOKEN_FILE:?Provide private plugin API token file}
+      target: /app/.local/playable-world/agentcity-playable-00000001/api-token
+      read_only: true
+    - type: bind
+      source: ${RUNTIME_CREDENTIALS_FILE:?Provide runtime-only Privy delegate and AppSecret file}
+      target: /run/agentcity-runtime/credentials.json
+      read_only: true
+
+services:
+  console:
+    <<: *app
+    command: [console]
+  worker:
+    <<: *app
+    command: [worker]
+  proxy:
+    image: nginx:1.29.7-alpine@sha256:e7257f1ef28ba17cf7c248cb8ccf6f0c6e0228ab9c315c152f9c203cd34cf6d1
+    user: "101:101"
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    network_mode: host
+    restart: unless-stopped
+    entrypoint: [nginx]
+    command: [-g, "daemon off;"]
+    tmpfs: ["/tmp:rw,noexec,nosuid,nodev,size=16m,uid=101,gid=101,mode=0700"]
+    volumes:
+      - type: bind
+        source: ${PROXY_CONFIG_FILE:?Provide reviewed nginx configuration}
+        target: /etc/nginx/nginx.conf
+        read_only: true
+      - type: bind
+        source: ./wallet-upstream.conf
+        target: /etc/nginx/wallet-upstream.conf
+        read_only: true
+      - type: bind
+        source: ${TLS_CERT_FILE:?Provide TLS certificate file}
+        target: /run/tls/cert.pem
+        read_only: true
+      - type: bind
+        source: ${TLS_KEY_FILE:?Provide private TLS key readable by proxy UID101 only}
+        target: /run/tls/key.pem
+        read_only: true
+  admin:
+    <<: *app
+    profiles: [admin]
+    restart: "no"
+    command: [admin, --verify-authority]
+    # Compose list replacement is intentional: this one-off CLI alone receives owner authority.
+    volumes:
+      - type: bind
+        source: ${PUBLIC_CONFIG_DIR:?Provide dedicated config directory}
+        target: /app/.local/playable-testnet
+      - type: bind
+        source: ${DATABASE_SETTINGS_FILE:?Provide database settings}
+        target: /app/.local/backend/environment.json
+        read_only: true
+      - type: bind
+        source: ${RUNTIME_CREDENTIALS_FILE:?Provide runtime credentials}
+        target: /run/agentcity-runtime/credentials.json
+        read_only: true
+      - type: bind
+        source: ${OWNER_CREDENTIALS_FILE:-/operator-must-provide/offline-owner.json}
+        target: /run/agentcity-owner/owner.json
+        read_only: true

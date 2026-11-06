@@ -1,0 +1,87 @@
+{
+  "scope": "Actual local lobby/play-world fixture; no independently authenticated human or blockchain action",
+  "username": "LobbyTester",
+  "status": "pass",
+  "independentHumansVerified": 0,
+  "startedAt": "2026-10-31T06:53:49.667Z",
+  "checks": [
+    {
+      "name": "fixture-arrival-is-separate-survival-lobby",
+      "status": "pass",
+      "world": "minecraft:agentcity_lobby"
+    },
+    {
+      "name": "five-first-use-npcs-visible-in-lobby",
+      "status": "pass",
+      "names": [
+        "Guide",
+        "Agent Desk",
+        "Job Board",
+        "Game Coins",
+        "Play"
+      ]
+    },
+    {
+      "name": "play-npc-opens-normal-resource-world-with-inventory-preserved",
+      "status": "pass",
+      "world": "minecraft:agentcity_play",
+      "levelType": "default"
+    },
+    {
+      "name": "play-world-has-observed-natural-grass-or-dirt",
+      "status": "pass",
+      "observedBlocks": 4
+    },
+    {
+      "name": "lobby-npcs-are-absent-from-play-world",
+      "status": "pass"
+    },
+    {
+      "name": "personal-agent-spawns-in-play-world",
+      "status": "pass",
+      "agent": "CityAgent2"
+    },
+    {
+      "name": "lobby-return-preserves-inventory-and-keeps-agent-in-play-world",
+      "status": "pass"
+    },
+    {
+      "name": "reconnect-preserves-gameplay-world-position-and-inventory",
+      "status": "pass",
+      "world": "minecraft:agentcity_play"
+    },
+    {
+      "name": "disclosed-fixture-agent-slot-released-with-owner-command",
+      "status": "pass"
+    }
+  ],
+  "worldHistory": [
+    {
+      "worldName": "minecraft:agentcity_lobby",
+      "isFlat": true,
+      "at": "2026-10-31T06:53:50.080Z"
+    },
+    {
+      "worldName": "minecraft:agentcity_play",
+      "isFlat": false,
+      "at": "2026-10-31T06:53:51.874Z"
+    },
+    {
+      "worldName": "minecraft:agentcity_lobby",
+      "isFlat": true,
+      "at": "2026-10-31T06:54:16.051Z"
+    },
+    {
+      "worldName": "minecraft:agentcity_play",
+      "isFlat": false,
+      "at": "2026-10-31T06:54:16.817Z"
+    },
+    {
+      "worldName": "minecraft:agentcity_play",
+      "isFlat": false,
+      "at": "2026-10-31T06:54:21.781Z"
+    }
+  ],
+  "agent": "CityAgent2",
+  "finishedAt": "2026-10-31T06:54:23.108Z"
+}

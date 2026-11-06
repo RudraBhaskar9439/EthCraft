@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "scope": "Same-container final plugin upgrade and retained completed-task bindings; no new inventory or world effects",
+  "pluginSha256": "228a5c1ab4865f42a9294a0fc24cd4e2a43344403cad5e7dcd71d36ebccb9bf5",
+  "sameContainer": true,
+  "apiHealthy": true,
+  "completedTasksRetained": 4,
+  "verifiedCanonicalMigrations": 2,
+  "unmigratedLegacyRecordsPreserved": 2,
+  "originalRawHashesPreserved": true,
+  "verifiedCompletedTaskReplaysNoDispatch": 2,
+  "ruddyOwnershipPreserved": true,
+  "cityAgent2Free": true,
+  "taskLocks": 0,
+  "independentHumansVerified": 0,
+  "blockchainLinked": false,
+  "completedAt": "2026-10-31T08:00:18.727Z"
+}

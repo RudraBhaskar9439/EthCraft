@@ -1,0 +1,14 @@
+{
+  "status": "fail",
+  "runId": "c7cc2be2-5d37-49ff-b46a-d41eb13812a6",
+  "scope": "Credential-free Docker container loopback HTTP packaging fixture only",
+  "tests": [],
+  "databaseWrites": 0,
+  "providerWallets": 0,
+  "publicTransactions": 0,
+  "realMoneySpentUsd": 0,
+  "independentHumans": 0,
+  "image": "sha256:b4e714d60df9c21e128d946c41eb0cdcff8b425ba377a68ba0093d32f463768f",
+  "error": "Credential-free HTTP server starts",
+  "containerLog": ""
+}

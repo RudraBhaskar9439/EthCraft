@@ -1,0 +1,7 @@
+{
+  "status": "fail",
+  "scope": "Maintained loopback non-token software host; no human authentication or job acceptance claim",
+  "error": "managed_start_timeout",
+  "configSha256": "6ced906da4564401590b6dc7011ec53e74ebe072c34e9cd71942814524f3e20d",
+  "recordedAt": "2026-10-30T09:07:43.457250+00:00"
+}

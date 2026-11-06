@@ -1,0 +1,26 @@
+{
+  "status": "fail",
+  "scope": "Actual local player-agent build, delivery and sale; disclosed TaskTester fixture, real Minecraft items, Game Coins only",
+  "independentHumansVerified": 0,
+  "publicTransactions": 0,
+  "startedAt": "2026-10-31T07:03:16.505Z",
+  "checks": [
+    {
+      "name": "fixture-player-enters-real-survival-play-world",
+      "status": "pass",
+      "worldName": "minecraft:agentcity_play"
+    },
+    {
+      "name": "natural-language-platform-produces-four-real-blocks-and-consumes-four-planks",
+      "status": "pass"
+    },
+    {
+      "name": "agent-delivery-conserves-four-real-cobblestone-between-owned-chests",
+      "status": "pass"
+    }
+  ],
+  "agent": "CityAgent2",
+  "error": "Timed out: /agent task sell 4 cobblestone I am giving you",
+  "finishedAt": "2026-10-31T07:05:15.865Z",
+  "lastWorldName": "minecraft:agentcity_play"
+}

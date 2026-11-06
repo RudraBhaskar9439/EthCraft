@@ -1,0 +1,101 @@
+{
+  "status": "review_required",
+  "scope": "Actual Ollama language only; no Minecraft effects",
+  "model": "qwen3:1.7b",
+  "samples": [
+    {
+      "request": "make me a small wooden shelter, put four cobble in destination and sell four more",
+      "failure": "INVALID_CONVERSATIONAL_PLAN",
+      "proposal": {
+        "kind": "progress",
+        "message": "Making a small wooden shelter, putting four cobble in destination, and selling four more",
+        "steps": [
+          {
+            "action": "build_shelter",
+            "width": 4,
+            "depth": 4,
+            "material": "oak_planks"
+          },
+          {
+            "action": "deliver",
+            "item": "cobblestone",
+            "count": 4
+          },
+          {
+            "action": "sell",
+            "item": "oak_planks",
+            "count": 4
+          }
+        ]
+      }
+    },
+    {
+      "request": "what are you doing?",
+      "failure": "INVALID_CONVERSATIONAL_PLAN",
+      "proposal": {
+        "kind": "progress",
+        "message": "I am building a small wooden shelter.",
+        "steps": [
+          {
+            "action": "build_platform",
+            "width": 2,
+            "depth": 4,
+            "material": "oak_planks"
+          },
+          {
+            "action": "build_platform",
+            "width": 2,
+            "depth": 4,
+            "material": "oak_planks"
+          },
+          {
+            "action": "build_platform",
+            "width": 2,
+            "depth": 4,
+            "material": "oak_planks"
+          },
+          {
+            "action": "build_platform",
+            "width": 2,
+            "depth": 4,
+            "material": "oak_planks"
+          },
+          {
+            "action": "build_platform",
+            "width": 2,
+            "depth": 4,
+            "material": "oak_planks"
+          }
+        ]
+      }
+    },
+    {
+      "request": "stop that",
+      "intent": {
+        "kind": "stop",
+        "message": "Stopping the current workflow.",
+        "steps": []
+      }
+    },
+    {
+      "request": "deliver some stuff",
+      "failure": "INVALID_CONVERSATIONAL_PLAN",
+      "proposal": {
+        "kind": "progress",
+        "message": "Delivering some stuff",
+        "steps": [
+          {
+            "action": "deliver",
+            "item": "oak_planks",
+            "count": 4
+          },
+          {
+            "action": "deliver",
+            "item": "cobblestone",
+            "count": 4
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "agentcity.playable-privy-provisioning.v1",
+  "recordedAt": "2026-10-31T09:28:58.946Z",
+  "status": "pass",
+  "scope": "Actual operator account provisioning following already completed human Privy JWT game link; managed player and recipient-restricted treasury; no EVM transactions or human trade claim",
+  "player": {
+    "name": "Ruddy",
+    "address": "0x27f53660a409d14a3acc5f2e82ba9a7077090c96",
+    "verifiedSessionExpiresAt": "2026-10-31T10:06:41.000Z",
+    "exactPersonalAgentOwnerUuidChecked": true,
+    "enrollmentSubjectAndImmutableBindingMatch": true
+  },
+  "treasury": {
+    "address": "0x245167cc2cd6ddb264adb83b49f1b3d910a51f67",
+    "recipientCount": 1,
+    "recipientAddresses": [
+      "0x27f53660a409d14a3acc5f2e82ba9a7077090c96"
+    ],
+    "policy": {
+      "policyId": "oj5soulkjnlfwcmquf7u0i7m",
+      "policySha256": "1abfaa5ef5127f352bdc22b00e8b9dbc35655cc74bbd92d2850b98c98e367af1"
+    }
+  },
+  "ownerQuorumId": "eggn8irg9axry1f97lhopmer",
+  "delegateQuorumId": "zptbxggvqckkpsu2wj9mrwys",
+  "actualProviderMetadataVerified": true,
+  "actualDatabaseWallets": [
+    {
+      "address": "0x245167cc2cd6ddb264adb83b49f1b3d910a51f67",
+      "provider_type": "privy",
+      "provider_account_id": "ww8tljnphmvivs81pngruxxq",
+      "enrolled": false
+    },
+    {
+      "address": "0x27f53660a409d14a3acc5f2e82ba9a7077090c96",
+      "provider_type": "privy",
+      "provider_account_id": "rut0gbnhybqsu8f2a2u37x1o",
+      "enrolled": true
+    }
+  ],
+  "publicTransactions": 0,
+  "allowBroadcast": false,
+  "gameSpendingRequiresLiveConnectionAndRequesterAcceptance": true,
+  "fixtureVerification": "evidence/runs/playable-testnet-wallets/f7ee82cc-f03e-42cf-8b5a-174025d4a667/report.json",
+  "retainedFailedFixture": "evidence/runs/playable-testnet-wallets/5679336e-6384-4f5b-8765-94b026334baa/report.json",
+  "sourceSha256": "7d2bfcfc000e553cf19937d241e4cf8963afd4a4e023a6413425ed4f65aba4b1",
+  "pending": [
+    "Treasury finite funding and real balance preflight",
+    "Actual human-requested managed delegate signing and canonical approval/swap receipts",
+    "Separate admin operating-system identity/offline custody and provider dashboard review before production"
+  ]
+}

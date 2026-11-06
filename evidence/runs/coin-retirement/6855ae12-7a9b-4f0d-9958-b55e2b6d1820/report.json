@@ -1,0 +1,23 @@
+{
+  "scope": "Isolated PostgreSQL retirement fixtures; no live accounts, inventory, chain or provider effects",
+  "checks": [
+    {
+      "name": "all new monetary actions and unknown routes refuse; historical reads remain available",
+      "status": "pass"
+    },
+    {
+      "name": "only original funded buyer recovery admitted; foreign mailbox ownership and premature cutover refused",
+      "status": "pass"
+    },
+    {
+      "name": "owner withdrawal and settled replay retained; cutover requires authoritative zero unresolved native intents; helper performs no economic writes",
+      "status": "pass"
+    }
+  ],
+  "status": "pass",
+  "sources": {
+    "backend/src/playable/coin-retirement.mjs": "19312398317e0f23eb580fec7efec2d4817aea473b651dbcce8b79f60b6d43e1",
+    "backend/src/playable/economy.mjs": "01b951b3e3a13318a744b24202bf37404a74ac04e2f45973f9c7bd6192fea7a8",
+    "backend/src/playable/game-marketplace.mjs": "4b18cb4c5d4d3186a5e0f963f361acc3f926aa466ee0da5dd981b07e9a7fd87c"
+  }
+}

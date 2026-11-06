@@ -1,0 +1,20 @@
+name: Planning integrity
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  planning:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out reviewed source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # verified v4 tag
+      - name: Test phase evidence validator
+        run: python3 -m unittest discover -s tests -v
+      - name: Check plan sources cases and links
+        run: python3 scripts/check_plan.py

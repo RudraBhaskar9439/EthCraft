@@ -1,0 +1,317 @@
+{
+  "verified_on": "2026-10-29",
+  "source_document": "User supplied Research design paper Version 3, Pasted text.txt",
+  "scope_note": "The pasted V3 text names technologies and primary-documentation titles but contains no literal GitHub repository URLs. These are verified canonical upstream mappings plus clearly labeled supplemental engineering tools and user baseline developer repositories. The observed SHAs document this review, not dependency locks or evidence of compatibility.",
+  "entries": [
+    {
+      "name": "PaperMC/Paper",
+      "url": "https://github.com/PaperMC/Paper",
+      "verified_revision": "804dd0c3f08b666dc51a0250257915c002c59755",
+      "license": "GPL-3.0 with identified MIT contributions; mixed per LICENSE.md",
+      "role": "World server and plugin API",
+      "use_mode": "Use a pinned Paper server artifact and compile-only plugin API; implement AgentCity plugin separately. Do not fork the server.",
+      "phase": "P0 P1",
+      "limitations": "Latest main advertises 26.3 and Java 25; bot README advertises through 26.1. Verify a compatible intersection and runtime. Paper license is inherited GPL-3.0 with identified MIT contributions; inspect artifact/file terms.",
+      "source": [
+        "https://github.com/PaperMC/Paper/blob/main/README.md",
+        "https://api.github.com/repos/PaperMC/Paper",
+        "https://github.com/PaperMC/Paper/blob/804dd0c3f08b666dc51a0250257915c002c59755/LICENSE.md"
+      ],
+      "observation_date": "2026-10-29",
+      "revision_status": "Observed current default-branch commit; not yet the implementation lock"
+    },
+    {
+      "name": "PrismarineJS/mineflayer",
+      "url": "https://github.com/PrismarineJS/mineflayer",
+      "verified_revision": "5a252e6d258882b042e60e21c37d552cdf3b3380",
+      "license": "MIT",
+      "role": "Physical Minecraft bot",
+      "use_mode": "Install and pin mineflayer; reuse movement, inventory and placement APIs behind AgentCity permissions.",
+      "phase": "P0 P2",
+      "limitations": "README advertises supported game versions through 26.1 and Node >=18; exact version compatibility must be run-tested. Bot completion is not functional inspection.",
+      "source": [
+        "https://github.com/PrismarineJS/mineflayer/blob/master/docs/README.md",
+        "https://api.github.com/repos/PrismarineJS/mineflayer"
+      ],
+      "observation_date": "2026-10-29",
+      "revision_status": "Observed current default-branch commit; not yet the implementation lock"
+    },
+    {
+      "name": "PrismarineJS/mineflayer-pathfinder",
+      "url": "https://github.com/PrismarineJS/mineflayer-pathfinder",
+      "verified_revision": "b07a419a4181d242bc4b9f8648a4f624e587c18f",
+      "license": "MIT",
+      "role": "Bounded navigation",
+      "use_mode": "Install and pin plugin; configure movement policies and allowed routes, disable unauthorized break/place behavior.",
+      "phase": "P2",
+      "limitations": "Default autonomy can dig/place; explicitly bound route, region, stock, hazards and action quota. Stop on unreachable target or unknown state.",
+      "source": [
+        "https://github.com/PrismarineJS/mineflayer-pathfinder/blob/master/readme.md",
+        "https://api.github.com/repos/PrismarineJS/mineflayer-pathfinder"
+      ],
+      "observation_date": "2026-10-29",
+      "revision_status": "Observed current default-branch commit; not yet the implementation lock"
+    },
+    {
+      "name": "Arkiv-Network/arkiv-sdk-js",
+      "url": "https://github.com/Arkiv-Network/arkiv-sdk-js",
+      "verified_revision": "371454470a253f497bdfcf27fc076ce6ebc902bd",
+      "license": "MIT",
+      "role": "Independent owned discovery records",
+      "use_mode": "Use @arkiv-network/sdk with its required viem peer dependency; use official query/entity APIs and implement application schemas/validation.",
+      "phase": "P4",
+      "limitations": "Arkiv is expiring discovery data, not escrow authority. README recommends Node >=22.10.0. Retain signed agreements outside it and verify owner/signature/domain.",
+      "source": [
+        "https://github.com/Arkiv-Network/arkiv-sdk-js/blob/develop/README.md",
+        "https://api.github.com/repos/Arkiv-Network/arkiv-sdk-js"
+      ],
+      "observation_date": "2026-10-29",
+      "revision_status": "Observed current default-branch commit; not yet the implementation lock"
+    },
+    {
+      "name": "0gfoundation/0g-compute-ts-sdk",
+      "url": "https://github.com/0gfoundation/0g-compute-ts-sdk",
+      "verified_revision": "3e833e24eef2b9416a8b2c9ca72c80a81126d61e",
+      "license": "ISC declared in package.json; standalone license file not verified",
+      "role": "Direct inference and account integration reference",
+      "use_mode": "Use current official SDK only if the chosen integration path requires it; Router-first backend may use its documented HTTP interface. Pin SDK if Direct is adopted.",
+      "phase": "P3",
+      "limitations": "Package renamed to @0gfoundation/0g-compute-ts-sdk; @0glabs/0g-serving-broker deprecated. SDK README documents Direct provider subaccounts; Router uses a different API-key/unified-balance path. Node >=20. Package declares ISC but root standalone license not verified.",
+      "source": [
+        "https://github.com/0gfoundation/0g-compute-ts-sdk/blob/main/README.md",
+        "https://api.github.com/repos/0gfoundation/0g-compute-ts-sdk",
+        "https://build.0g.ai/compute",
+        "https://github.com/0gfoundation/0g-compute-ts-sdk/blob/3e833e24eef2b9416a8b2c9ca72c80a81126d61e/package.json"
+      ],
+      "observation_date": "2026-10-29",
+      "revision_status": "Observed current default-branch commit; not yet the implementation lock"
+    },
+    {
+      "name": "0gfoundation/0g-compute-ts-starter-kit",
+      "url": "https://github.com/0gfoundation/0g-compute-ts-starter-kit",
+      "verified_revision": "df91ab47d32f867fa02797289193b425f373e8d5",
+      "license": "Unverified; no root or package license found",
+      "role": "Official inference example",
+      "use_mode": "Reference-only study of current wiring; copy code only after license permission is established. Do not adopt a second application scaffold.",
+      "phase": "P3",
+      "limitations": "No root license or package license verified. Starter is not mandatory runtime dependency and does not prove Router/Direct equivalence.",
+      "source": [
+        "https://github.com/0gfoundation/0g-compute-ts-starter-kit/blob/main/README.md",
+        "https://api.github.com/repos/0gfoundation/0g-compute-ts-starter-kit"
+      ],
+      "observation_date": "2026-10-29",
+      "revision_status": "Observed current default-branch commit; not yet the implementation lock"
+    },
+    {
+      "name": "Uniswap/v4-core",
+      "url": "https://github.com/Uniswap/v4-core",
+      "verified_revision": "bea7f6d1c11cd5dc4f0d5151ffa37a1c239feee6",
+      "license": "BUSL-1.1 and MIT per file headers/licenses",
+      "role": "PoolManager and v4 interfaces",
+      "use_mode": "Use audited compatible tagged code/interfaces and official deployed PoolManager; pin exact tested revision and deployment identity. Do not rewrite AMM math.",
+      "phase": "P5 P6 P7",
+      "limitations": "README states BUSL-1.1 and MIT on a per-file basis. Current HEAD is observation, not an audited chosen release. Hook attaches at pool creation and must match permission bits.",
+      "source": [
+        "https://github.com/Uniswap/v4-core/blob/main/README.md",
+        "https://api.github.com/repos/Uniswap/v4-core"
+      ],
+      "observation_date": "2026-10-29",
+      "revision_status": "Observed current default-branch commit; not yet the implementation lock"
+    },
+    {
+      "name": "Uniswap/v4-periphery",
+      "url": "https://github.com/Uniswap/v4-periphery",
+      "verified_revision": "c6e4754dab11bd38c6f08ac51c3c868569e93d64",
+      "license": "MIT (GitHub metadata); inspect imported file headers",
+      "role": "v4 hook and position/swap support",
+      "use_mode": "Use compatible periphery interfaces/libraries/base hook APIs where current version exposes them. Keep dependencies aligned with core.",
+      "phase": "P6 P7",
+      "limitations": "Do not assume old BaseHook path or API from tutorials. Verify selected commit public APIs, router behavior and deployed addresses.",
+      "source": [
+        "https://github.com/Uniswap/v4-periphery/blob/main/README.md",
+        "https://api.github.com/repos/Uniswap/v4-periphery"
+      ],
+      "observation_date": "2026-10-29",
+      "revision_status": "Observed current default-branch commit; not yet the implementation lock"
+    },
+    {
+      "name": "Uniswap/v4-template",
+      "url": "https://github.com/Uniswap/v4-template",
+      "verified_revision": "1fbf95547791f0821a170b88c750cb2e04e6818b",
+      "license": "MIT",
+      "role": "Foundry hook project example",
+      "use_mode": "Reference official hook scaffolding and tests; reuse a minimal compatible setup with notices rather than a second monorepo.",
+      "phase": "P6",
+      "limitations": "The current official first-hook guide links the legacy uniswapfoundation/v4-template alias; GitHub resolves it to canonical Uniswap/v4-template. This is a starting example, not an audited production hook; dependency SHAs and permission address mining must be verified.",
+      "source": [
+        "https://github.com/Uniswap/v4-template/blob/main/README.md",
+        "https://api.github.com/repos/Uniswap/v4-template",
+        "https://developers.uniswap.org/docs/protocols/v4/guides/hooks/your-first-hook",
+        "https://github.com/Uniswap/v4-template/commit/1fbf95547791f0821a170b88c750cb2e04e6818b"
+      ],
+      "observation_date": "2026-10-29",
+      "revision_status": "Observed current default-branch commit; not yet the implementation lock",
+      "aliases": [
+        "https://github.com/uniswapfoundation/v4-template"
+      ],
+      "revision_verification": "Exact sha returned by GitHub repos/Uniswap/v4-template/commits/main; alias and canonical repository metadata both returned full_name Uniswap/v4-template."
+    },
+    {
+      "name": "Uniswap/universal-router",
+      "url": "https://github.com/Uniswap/universal-router",
+      "verified_revision": "edf19bfde87e6cf5b29046f6ca2f483a4ffd6ae6",
+      "license": "GPL-3.0",
+      "role": "Actual bounded swap route",
+      "use_mode": "Prefer a verified deployed compatible router and documented ABI/commands. Implement exact-output KIT path with CRED input cap and expiry enforcement.",
+      "phase": "P6 P7",
+      "limitations": "Router is GPL-3.0. Direct protocol integration does not imply vendoring/relicensing source. Validate actual supported commands, native assets, settlement, allowance and expiry semantics; no hosted auto-routing assumption.",
+      "source": [
+        "https://github.com/Uniswap/universal-router/blob/main/README.md",
+        "https://api.github.com/repos/Uniswap/universal-router"
+      ],
+      "observation_date": "2026-10-29",
+      "revision_status": "Observed current default-branch commit; not yet the implementation lock"
+    },
+    {
+      "name": "OpenZeppelin/openzeppelin-contracts",
+      "url": "https://github.com/OpenZeppelin/openzeppelin-contracts",
+      "verified_revision": "e2f38adbb3b1a358a264d082520d360fbe2b7404",
+      "license": "MIT",
+      "role": "Token, signature, access and transfer primitives",
+      "use_mode": "Use pinned reviewed ERC20/access/signature/safe-transfer primitives for custom issuance, claim and escrow contracts. No bespoke cryptography.",
+      "phase": "P4 P5 P8",
+      "limitations": "Supplemental implementation choice, not explicitly named in V3. Library security does not audit our agreement semantics, replay domains, hook or custody assumptions.",
+      "source": [
+        "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/README.md",
+        "https://api.github.com/repos/OpenZeppelin/openzeppelin-contracts"
+      ],
+      "observation_date": "2026-10-29",
+      "revision_status": "Observed current default-branch commit; not yet the implementation lock"
+    },
+    {
+      "name": "foundry-rs/foundry",
+      "url": "https://github.com/foundry-rs/foundry",
+      "verified_revision": "b3d6942cc6e2b368e93a6899e7ca22c7aa5272cf",
+      "license": "Apache-2.0 OR MIT",
+      "role": "Contract build, local chain, fuzz and invariant tests",
+      "use_mode": "Use pinned forge/anvil/cast binaries and dependency locks for contract unit, fuzz, invariant and fork/integration suites.",
+      "phase": "P0 P5 P6 P7 P8",
+      "limitations": "Supplemental test-tool choice, not named in V3. Local Anvil or forks cannot prove real custody, real provider access or deployment policy.",
+      "source": [
+        "https://github.com/foundry-rs/foundry/blob/master/README.md",
+        "https://api.github.com/repos/foundry-rs/foundry"
+      ],
+      "observation_date": "2026-10-29",
+      "revision_status": "Observed current default-branch commit; not yet the implementation lock"
+    },
+    {
+      "name": "wevm/viem",
+      "url": "https://github.com/wevm/viem",
+      "verified_revision": "a8c47d58cdec9b1581618729f9eeb17ce52bb4aa",
+      "license": "MIT (verified LICENSE file)",
+      "role": "Typed EVM and Arkiv client foundation",
+      "use_mode": "Install as Arkiv-required peer; reuse chain reads, signed data encoding and transaction/receipt APIs in backend/companion.",
+      "phase": "P4 P5 P7 P8",
+      "limitations": "README-linked Arkiv dependency. Preserve exact chain/token/base-unit domain; pending transaction or included receipt is not finalized applied game delivery.",
+      "source": [
+        "https://github.com/wevm/viem/blob/main/README.md",
+        "https://api.github.com/repos/wevm/viem",
+        "https://github.com/wevm/viem/blob/a8c47d58cdec9b1581618729f9eeb17ce52bb4aa/LICENSE"
+      ],
+      "observation_date": "2026-10-29",
+      "revision_status": "Observed current default-branch commit; not yet the implementation lock"
+    },
+    {
+      "name": "headroomlabs-ai/headroom",
+      "url": "https://github.com/headroomlabs-ai/headroom",
+      "verified_revision": "a2d4fe72381e186651466ee94e92ce9d8d1396cc",
+      "license": "Apache-2.0",
+      "role": "Developer context compression",
+      "use_mode": "Use existing local checkout/tooling for compact tool context with recoverable originals; no Minecraft runtime dependency.",
+      "phase": "All implementation phases",
+      "limitations": "User baseline repository, not a runtime component of V3. Keep full original evidence and retrieve details for security-critical analysis; compression is not validation.",
+      "source": [
+        "https://github.com/headroomlabs-ai/headroom/blob/main/README.md",
+        "https://api.github.com/repos/headroomlabs-ai/headroom"
+      ],
+      "observation_date": "2026-10-29",
+      "revision_status": "Observed current default-branch commit; not yet the implementation lock"
+    },
+    {
+      "name": "rtk-ai/rtk",
+      "url": "https://github.com/rtk-ai/rtk",
+      "verified_revision": "7e92da00a5cf737dc87850505aa3dea603454613",
+      "license": "Apache-2.0 OSS; README identifies BUSL-1.1 additional features",
+      "role": "Developer command output reduction",
+      "use_mode": "Use installed configured command filtering; retain raw/full logs as test evidence. No new runtime package or global reconfiguration needed.",
+      "phase": "All implementation phases",
+      "limitations": "User baseline tooling. Current README distinguishes Apache-2.0 OSS and BUSL extras; inspected root LICENSE is Apache-2.0. Review selected edition/features before copying.",
+      "source": [
+        "https://github.com/rtk-ai/rtk/blob/develop/README.md",
+        "https://api.github.com/repos/rtk-ai/rtk"
+      ],
+      "observation_date": "2026-10-29",
+      "revision_status": "Observed current default-branch commit; not yet the implementation lock"
+    },
+    {
+      "name": "juliusbrussee/caveman",
+      "url": "https://github.com/JuliusBrussee/caveman",
+      "verified_revision": "9b68f7ed12b05e7efaff18e65c5a3fc2849fd0a4",
+      "license": "Apache-2.0",
+      "role": "Concise agent communication",
+      "use_mode": "Apply current installed skill and existing local checkout; keep code, manifests and persisted technical docs exact and readable.",
+      "phase": "All implementation phases",
+      "limitations": "User baseline developer skill, not game agent policy or runtime model configuration. Never compress away permissions, failure evidence or acceptance rules.",
+      "source": [
+        "https://github.com/JuliusBrussee/caveman/blob/main/README.md",
+        "https://api.github.com/repos/juliusbrussee/caveman"
+      ],
+      "observation_date": "2026-10-29",
+      "revision_status": "Observed current default-branch commit; not yet the implementation lock"
+    },
+    {
+      "name": "dietrichgebert/ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "verified_revision": "96608e078b2d5ea607c5c3b8b5a54d1c1fba6846",
+      "license": "MIT",
+      "role": "Minimal complete implementation and review",
+      "use_mode": "Apply installed skill; reuse existing upstream/platform functions, keep smallest complete diff and test risky logic.",
+      "phase": "All implementation phases",
+      "limitations": "User baseline developer skill. Minimal code never permits skipping validation, error recovery, accessibility or phase gates.",
+      "source": [
+        "https://github.com/DietrichGebert/ponytail/blob/main/README.md",
+        "https://api.github.com/repos/dietrichgebert/ponytail"
+      ],
+      "observation_date": "2026-10-29",
+      "revision_status": "Observed current default-branch commit; not yet the implementation lock"
+    },
+    {
+      "name": "Redstone-Compiler/redstone-compiler",
+      "url": "https://github.com/Redstone-Compiler/redstone-compiler",
+      "verified_revision": "f39ecf2d528598eff8866a1392fa7ee15eff1bbf",
+      "license": "MIT; copyright rollrat 2024-2026; notice retained with candidate data",
+      "role": "Unvalidated two-bit adder source data candidate",
+      "use_mode": "Retain only the small licensed RCELL, NBT and IO metadata candidate. No compiler code is executed or used as a runtime dependency. Validate/adapt actual lamp interface in P1 before adoption.",
+      "phase": "P0 P1",
+      "limitations": "Upstream simulator equivalence is not physical Minecraft proof. NBT lacks an established DataVersion. Proposed lamps, input accessibility, initialization/torch burnout and 16/256 real-world cases remain untested. The proposed bill is not a KIT promise.",
+      "source": [
+        "https://github.com/Redstone-Compiler/redstone-compiler/blob/f39ecf2d528598eff8866a1392fa7ee15eff1bbf/docs/physical_cell_lab.md",
+        "https://github.com/Redstone-Compiler/redstone-compiler/blob/f39ecf2d528598eff8866a1392fa7ee15eff1bbf/LICENSE"
+      ],
+      "observation_date": "2026-10-29",
+      "revision_status": "Candidate data origin only; not physically validated or a release dependency lock"
+    }
+  ],
+  "important_findings": [
+    "0G canonical org/package changed. Use 0gfoundation/0g-compute-ts-sdk and current package name; V3 Router-first must not accidentally inherit Direct funding/accounting.",
+    "Paper latest main and Mineflayer advertised latest support differ. Pin a tested common game/server/bot/Java/Node matrix.",
+    "Uniswap v2 constant-product and v3 papers are explanatory research references. They are not additional AMM implementations to deploy for this v4 project.",
+    "No requirement in V3 names Voyager, MineDojo, LangChain, LangGraph or other autonomous-agent frameworks. Do not add them based on popularity.",
+    "0G starter license remains unverified. Study only until copy/use terms are established; hosted Router HTTP integration does not require copying that starter.",
+    "Arkiv SDK extends viem; install its peer rather than building our own chain RPC/signing stack.",
+    "Private AgentCity repository does not erase upstream BUSL/GPL/MIT/ISC/Apache obligations. Do not add a blanket permissive project license over copied upstream code.",
+    "Headroom, RTK, Caveman and Ponytail remain development tools; installing them in the game runtime would add irrelevant dependencies.",
+    "Use a known tested v4 core/periphery/router/template combination and verify actual deployment identities; latest default-branch SHAs are observations only."
+  ],
+  "revision_verification": "For every entry, verified_revision was read from the authenticated GitHub REST repos/{owner}/{repo}/commits/{default_branch} endpoint, not inferred from a URL or fabricated. Every recorded sha is a 40-character hexadecimal string. This verifies the observed commit identity, not compatibility, release quality or a dependency lock."
+}

@@ -1,0 +1,6 @@
+{
+  "status": "fail",
+  "scope": "Local HTTP routes only; no successful OAuth, provider wallet, Discord message or Minecraft effect",
+  "checks": [],
+  "error": "Expected values to be strictly equal:\n\n404 !== 200\n"
+}

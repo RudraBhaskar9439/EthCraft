@@ -1,0 +1,15 @@
+{
+  "schema": "agentcity.local-p4.discovery.v1",
+  "runId": "discovery-279fc7cb-9c7a-44ab-8fd5-aeee7f0276a7",
+  "status": "fail",
+  "checks": [],
+  "independentHumans": 0,
+  "localArkivNode": "http://127.0.0.1:8557",
+  "publicArkivVerified": false,
+  "startedAt": "2026-10-29T22:22:52.777Z",
+  "error": {
+    "code": "DISCOVERY_FIELDS",
+    "message": "DISCOVERY_FIELDS"
+  },
+  "finishedAt": "2026-10-29T22:22:52.859Z"
+}

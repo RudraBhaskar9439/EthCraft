@@ -1,0 +1,111 @@
+{
+  "status": "pass",
+  "recordedAt": "2026-11-04T04:04:42.758246+00:00",
+  "scope": "Local exact-output v4 implementation and verification. No public transaction, live managed-wallet policy update, native-world mutation or independent-human acceptance.",
+  "phase": "Local P6/P7 market extension; canonical phase gates remain unchanged and unqualified.",
+  "baseCommit": "cb2717175da48cda85663bbe3f31414ca0a2f170",
+  "contractVerification": {
+    "officialPinnedV4": true,
+    "newExactOutputTestsPassed": 4,
+    "originalHookedExactInputTestsPassed": 3,
+    "commands": [
+      "forge test --match-contract '^ExactOutputSwapTest$' --match-test '^testExactOutput' -v",
+      "forge test --match-contract '^WorldAssetSwapRouterTest$' --match-test '^testWorld' -v"
+    ]
+  },
+  "marketIntegration": {
+    "report": "evidence/runs/playable-uniswap/55d76d95-1fd5-4f62-af81-40802b04f07f/report.json",
+    "reportSha256": "ea67606f37844460655c4a043356b7e81d812df47e6ac12d33f1c5c367a630a0",
+    "checksPassed": 10,
+    "sourceHashesMatch": true,
+    "exactOutputReceipt": {
+      "poolId": "0xa77fd006c251cf715b6389d8c8eb4460b5363da7f3ab33e769e3cf4a23a57df6",
+      "status": "confirmed",
+      "blockHash": "0x8561f50d0ac5daa22052c9940142ea833de0b95d73f374383125665bd294cc70",
+      "blockNumber": "32",
+      "transactionHash": "0x16a5bcc842467bf93d5086ce664150e2a5caf20b8160f8d458cc2393ee1b174a",
+      "amountInBaseUnits": "3004068071349583682",
+      "gameCoinsCredited": false,
+      "amountOutBaseUnits": "3000000000000000000"
+    }
+  },
+  "walletVerification": {
+    "report": "evidence/runs/playable-testnet-wallets/ccfe61ab-d459-4a00-b94e-4940064dc707/report.json",
+    "reportSha256": "83b639a727f8d67aaca66d48fcc818bd1edafa5dbc997a88d02c75559afd5068",
+    "checksPassed": 9,
+    "privyProvider": "SDK-shaped fixture; no live provider calls"
+  },
+  "discordVerification": {
+    "report": "evidence/runs/discord-bot/62277981-b268-4f4a-876b-896e4ca35bd8/report.json",
+    "reportSha256": "31ef2ce354ee2d39c321083bf51d2e8d82c46355fc6face547ba48adf62a87d8",
+    "checksPassed": 13,
+    "client": "fixture; no live Discord messages sent"
+  },
+  "transportChecks": {
+    "onchainGame": "pass",
+    "worldAssetDiscord": "pass",
+    "legacyMarketRoute": "pass",
+    "newJavascriptSyntaxChecks": 14
+  },
+  "nativePlugin": {
+    "build": "pass",
+    "artifactSha256": "72ddb2becaddf2647b631dd5e199b9e06e5acc1a0aaa2334bc8aa691ec73a49a",
+    "runtimePins": "config/minecraft-runtime.json and config/property-dependencies.json",
+    "liveCommandVerification": false
+  },
+  "planningChecks": {
+    "pythonTestsPassed": 56,
+    "integrity": "pass",
+    "productPhaseQualified": false
+  },
+  "implementationSourceHashes": {
+    "backend/package-lock.json": "9c6f712df2a68a2f2bd48656207415d50375e3430ece1134bcfbac53176b0763",
+    "backend/src/discord/bot.mjs": "7468149a1dcbcfe937f5d0dfdb272bdbd1b23814e715ee7af36ed0c58f8c18ad",
+    "backend/src/discord/onchain-game.mjs": "5b4851937f09220694165e18973c8ee35c3c0e9369bd5ac8a5772852338b6e3c",
+    "backend/src/discord/world-assets-runtime.mjs": "39e78fdaa080cf92fe5f9ecd9a1466b60ccd3526dd45d9864ac293e7c76446db",
+    "backend/src/playable/market-runtime.mjs": "f92f0dffd4e6f5c4ebfdbe5a0b79c1dfeaee77cfbef6fb369fa7fd2d2f9dbdc3",
+    "backend/src/playable/swap-request.mjs": "c9f492e6d3b1a19f1f94c1a5ad5e2f686dadbad91de8bf6f2ae1a3a6c249d919",
+    "backend/src/playable/testnet-wallets.mjs": "8d2663058483586129ff9a87fe69d5fc0ad4eea6fa373ed0fc5770204e7a90e0",
+    "backend/src/playable/uniswap-market.mjs": "88ae18620864338357d313882757df4eab79f21b29029c91c5b237ada4dd515d",
+    "backend/src/playable/uniswap-market.sql": "e3ae2d0300645dc8aa222df7307e1e8867ed5f09b45c5745ef8cafddc8179b27",
+    "config/minecraft-runtime.json": "6ced906da4564401590b6dc7011ec53e74ebe072c34e9cd71942814524f3e20d",
+    "config/property-dependencies.json": "47d8299474322697a39f4c6b52c6be6adbcc5af405ac73291292b9d1e16a7298",
+    "contracts/package-lock.json": "80312c2b2b961d9094131a38097f043c67d14731a186ba7d91894cea527ebb8c",
+    "contracts/src/PlayableMarketRouter.sol": "0f990250303dd9d9e8accff4946c431707a7416779357bb35928737aea990af1",
+    "contracts/src/WorldAssetSwapRouter.sol": "5d5e6af0c6280338e4e1967c776b2c1b9f76022e58c95a0db5e3430217bfc2c2",
+    "planning/scope.json": "d5b05d3654fba42de33370495100be10b879f6d3438bcf2f6f11b816a51159d6",
+    "plugin/src/main/java/org/agentcity/paper/PlayableExperience.java": "a4c6da0573e49d56f0ef6f2c9a732b9999f7b4e2e60710b99f2124d932c56162",
+    "scripts/build_plugin.py": "a670a7781dd1007c594185e806869897f9609ce3acb3fcead928454743335184",
+    "scripts/playable_uniswap_public_setup.mjs": "19a05506be01a0f8a1b720d965c8342169a9d0e5b2a505029c89947b716096d6",
+    "scripts/playable_uniswap_setup.mjs": "fff3fa032bf1cfc565897a043c496b740997253f0e151547178267d4b9085681",
+    "scripts/world_asset_deploy.mjs": "2f46285e7783b1b4a6a3c767c67191df0e18a19f564efcd29dd558594c9e5a14",
+    "tests/contracts/ExactOutputSwap.t.sol": "52b423cbe50d73ad47fb81df39c7dc70459cc63bed415cbbf30309b45bd9df4c",
+    "tests/playable/onchain-game.mjs": "2b67728f616ef38bc86602988d7b8d97afd3f6fb5cb8fb98cf3684cbec04dce0",
+    "tests/playable/testnet-wallets.mjs": "54dbfdcbd6eeb76e72421053a111442d509c53fe9c5b3b3d8dd0bbc575f7133e",
+    "tests/playable/uniswap-market.mjs": "9a0a7e4cf567167e30f019cf2d6b232fb188dafdf4915e8cb15d34c0f6ce91a9",
+    "tests/world-assets/discord.mjs": "bad3e54fa24800c537913346185e65335ea0a8b7e2330d538a2059cb83ec1637"
+  },
+  "retainedFailures": [
+    {
+      "path": "evidence/runs/uniswap-exact-output/setup-output-directory/report.json",
+      "reason": "Fresh setup needed contracts/.local before Forge output; zero chain transactions verified before retry."
+    },
+    {
+      "path": "evidence/runs/playable-uniswap/edb13198-cc68-4d65-9897-3734d8465a09/report.json",
+      "reason": "The database correctly rejected cap mutation; the test expected lower-case error text. The assertion now checks the actual error code."
+    }
+  ],
+  "publicTransactions": 0,
+  "realMoneySpentUsd": 0,
+  "paidModelCalls": 0,
+  "independentHumans": 0,
+  "liveDeployment": {
+    "status": "pending",
+    "requires": [
+      "Verified replacement router for the same pool",
+      "Scoped managed-wallet policy and target update through operator approval",
+      "Reconciled existing transaction intents before manifest cutover",
+      "Paired worker/plugin rollout and real Discord/Minecraft acceptance"
+    ]
+  }
+}

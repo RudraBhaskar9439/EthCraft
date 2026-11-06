@@ -1,0 +1,8 @@
+{
+  "scope": "Real isolated PostgreSQL; plugin-attributed player events are fixtures, no real wallets or Minecraft payment proof",
+  "status": "fail",
+  "checks": [],
+  "schema": "game_economy_test_351d84ab65b3423db07cd28901507bcb",
+  "publicTransactions": 0,
+  "error": "the database system is starting up"
+}

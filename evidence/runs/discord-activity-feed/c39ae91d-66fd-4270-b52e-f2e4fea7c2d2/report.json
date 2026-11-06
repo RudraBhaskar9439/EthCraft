@@ -1,0 +1,7 @@
+{
+  "status": "fail",
+  "scope": "Three focused isolated PostgreSQL and Discord-adapter fixtures; no actual posting, financial writes or live blockchain verification",
+  "checks": [],
+  "sourceSha256": "f321e63a94958656017b0c16052baad7ae4430b2d2c077f5d305da070712ba90",
+  "error": "operator is not unique: - unknown"
+}

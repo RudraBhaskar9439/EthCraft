@@ -1,0 +1,12 @@
+{
+  "schema": "agentcity.inventory-game-live-enrollment.v1",
+  "status": "pass",
+  "scope": "Actual native user enrollment and persisted Privy wallet/identity binding; purchase verification remains pending.",
+  "providerPrivy": true,
+  "identityBindingMatches": true,
+  "providerAliasMatches": true,
+  "paymentAuthorized": false,
+  "paymentConfirmed": false,
+  "delivered": false,
+  "walletAddressDigest": "1c1c3940921247d19a6d4b9cee08b2a5cd0d594e9c1448180a09e5485adc0a4f"
+}

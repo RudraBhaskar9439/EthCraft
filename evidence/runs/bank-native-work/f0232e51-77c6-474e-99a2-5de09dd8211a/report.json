@@ -1,0 +1,13 @@
+{
+  "runId": "f0232e51-77c6-474e-99a2-5de09dd8211a",
+  "status": "fail",
+  "recordedAt": "2026-11-05T15:01:32.167Z",
+  "scope": "Actual Unichain Sepolia funded native2x2platform, forged-result refusal and lost-reply recovery using operator-controlled wallets. No human/Privy/0G qualification.",
+  "checks": [],
+  "paidModelCalls": 0,
+  "error": "The request took too long to respond.\n\nURL: https://sepolia.unichain.org/\nRequest body: {\"method\":\"eth_call\",\"params\":[{\"data\":\"0x7b103999\",\"to\":\"0x16b3032e060ec8ca094f60423a8bdc30f4ddff29\"},\"latest\"]}\n \nRaw Call Arguments:\n  to:    0x16b3032e060ec8ca094f60423a8bdc30f4ddff29\n  data:  0x7b103999\n \nContract Call:\n  address:   0x16b3032e060ec8ca094f60423a8bdc30f4ddff29\n  function:  registry()\n\nDocs: https://viem.sh/docs/contract/readContract\nDetails: The request timed out.\nVersion: viem@2.57.13",
+  "sources": {
+    "backend/src/bank/native-work.mjs": "c2f9a0c7b6e7b7053530ff3ca76b6240ffb49bd89d09badb12aa83f3fa5b0329",
+    "tests/bank/native-work.mjs": "510eab7a23297f20d3acb9651b555144e10bdb7ea183bc293c25c00be5925684"
+  }
+}

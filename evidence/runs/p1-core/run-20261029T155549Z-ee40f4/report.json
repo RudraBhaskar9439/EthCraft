@@ -1,0 +1,51 @@
+{
+  "status": "pass",
+  "scope": "Java core/parser/mapping checks only; no live world, full phase approval or bot construction claimed",
+  "source_sha256": {
+    "plugin/src/main/java/org/agentcity/core/Command.java": "d3163d022003ba9910be1b637ea5af42931ba6906a9934fbd7342354d40d2bd6",
+    "plugin/src/main/java/org/agentcity/core/DurableJournal.java": "ba72304c0ff74da6c62f55413a2c02eb642b61154297d16361982e9eedbba311",
+    "plugin/src/main/java/org/agentcity/core/InspectionReport.java": "430d4460c193191ef2c24c551f7c50b0739ba097b9e0fe8e3072335085e22a92",
+    "plugin/src/main/java/org/agentcity/core/JobEngine.java": "973eb4dabfba976d5370b506ff7d498d59c61ca9fc41c2790ce031150672cbde",
+    "plugin/src/main/java/org/agentcity/paper/AgentCityPlugin.java": "5c39bcb29bf61fef86507f0c3fb72a8b65e2fdb06c77debf47dbc0b1c0461929",
+    "plugin/src/main/java/org/agentcity/paper/CalculatorInspector.java": "9bb59c890234247c1acbc7b032a5346385c62105e85eebf6e1ba875e895dee56",
+    "plugin/src/main/java/org/agentcity/paper/NativeLever.java": "9d26227261cd1f0e1b959d249fc3334ffa0ebce770d0ba5a1b9919515ba2a2a0",
+    "plugin/src/main/java/org/agentcity/paper/PlotProtection.java": "df08585916684efc6d0f9762bd60984e6c78571e84d9f09451356395a22228db",
+    "plugin/src/main/java/org/agentcity/paper/StrictJson.java": "581cd27a7fb4f31165400e29dc9127af4b54692d37749947b48880f0ffe47ad8",
+    "plugin/src/main/java/org/agentcity/paper/WorldProjection.java": "43e17a086da02ae7f07e806c25e91debe331c27f79890e024e586fb4453c2a19",
+    "plugin/src/main/resources/META-INF/MANIFEST.MF": "d05e74fefa839172bf1ace743da687d2a2a7ba0c862a4a5b349aa50ac77a6a0a",
+    "plugin/src/main/resources/plugin.yml": "33d9fc2c72d120facdc85ef635979a25cb1a73c8eee54aed1e44a86e2c803afc",
+    "tests/compatibility/versions.json": "f9ee9617748df8545cadd5469d383b11f68ec43af6c9181d4259fcd1bb913502",
+    "tests/inspection/build.py": "40404f386ba70204b089ffb63485abffdd428e43aa46798b15542751290574d7",
+    "tests/inspection/core/CoreCoverageCheck.java": "d575220c6756b9a40469add390dc2dffe5fbd6f53228a322fdbf6ad65dee4af5",
+    "tests/inspection/core/CoreSelfCheck.java": "8f1c712b495d89edef6c7849e8a8565bb990b60b33f87b50ced6b00c7a6bf128",
+    "tests/inspection/core/coverage-mapping.json": "8a72da0f9bff13563e840aed1036fb29acca5f5f960151ec55da285ced2e8e14",
+    "tests/inspection/core/coverage-results.json": "675b22cee2dcb40ce0e47b6d3def3fcd74d41b7be01c6c0b188e2b927bd822f3",
+    "tests/inspection/core/paper-integration-review.json": "8aa860f933a933984341e556c218d38a3dea7be55277dc170ed5233e7a86931e",
+    "tests/inspection/core/run_coverage.py": "936fbff02cce56edff1f9aa8e0c371532ecefea18b0c1799a67698838cea6950",
+    "tests/inspection/paper/InspectorMappingCheck.java": "6c00654e5964c2c18636424028a80efacd9314fc76f8c293346e7e77005ad520",
+    "tests/inspection/paper/StrictJsonCheck.java": "84630b3159fc24dcee4c1667391ba5e2b4396f7a5950093a937d4e4d10b7b96e",
+    "tests/inspection/run_checks.py": "8fe2954a961f1171525cc2908a72a2941b80583907beb0aa600f056f3b1138b4"
+  },
+  "checks": [
+    {
+      "name": "java-version",
+      "exit_code": 0,
+      "output": "openjdk version \"21.0.12.1\" 2026-08-18 LTS\nOpenJDK Runtime Environment Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS)\nOpenJDK 64-Bit Server VM Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS, mixed mode, sharing)\n"
+    },
+    {
+      "name": "core",
+      "exit_code": 0,
+      "output": "{\"suite\":\"core-selfchecks\",\"assertions\":376,\"status\":\"pass\",\"scope\":\"pure core protocol; no actual world observations\"}\n"
+    },
+    {
+      "name": "strict-json",
+      "exit_code": 0,
+      "output": "StrictJsonCheck PASS: 1 valid and 14 refused payloads\n"
+    },
+    {
+      "name": "mapping",
+      "exit_code": 0,
+      "output": "InspectorMappingCheck PASS: 51 assertions\n"
+    }
+  ]
+}

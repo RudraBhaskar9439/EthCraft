@@ -1,0 +1,47 @@
+{
+  "schema": "agentcity.inventory-game-agent-restore-health.v1",
+  "recordedAt": "2026-11-06T05:26:59.600Z",
+  "status": "partial",
+  "scope": "Read-only Minecraft server-list ping and native session observations after saved-owner idle agent restore. No model requests or customer wallet calls were made by this check.",
+  "previousObservation": "evidence/runs/inventory-game-privy/58ef5449-33bb-4339-a3da-c90d264b8258/post-deploy-health.json",
+  "checks": {
+    "actualMinecraftStatusPingHealthy": true,
+    "bothHostedAgentsPresent": true,
+    "merchantApprovedOnline": true,
+    "modelSpendAndReservationsUnchanged": false
+  },
+  "presence": {
+    "healthy": true,
+    "onlineCount": 3,
+    "zeroGAgentPresent": true,
+    "claudeAgentPresent": true,
+    "merchantPresent": true
+  },
+  "ownerObservation": {
+    "online": false,
+    "approved": false,
+    "humanWalletEnrollmentAndPurchase": "pending actual native user confirmation"
+  },
+  "budgets": {
+    "0g": {
+      "limitUsd": 5,
+      "spentUsd": 0.0282027,
+      "completedRequests": 7,
+      "pendingReservations": 4,
+      "reservationsPreserved": false,
+      "spendAndCountUnchanged": false
+    },
+    "claude": {
+      "limitUsd": 0.25,
+      "spentUsd": 0.068162,
+      "completedRequests": 5,
+      "pendingReservations": 0,
+      "reservationsPreserved": true,
+      "spendAndCountUnchanged": true
+    }
+  },
+  "sources": {
+    "scripts/mumbai_agents.mjs": "25ae5ea06dbeaf9d96f4491c21fec71ff27ac3e34a1e859471c44083fba03334",
+    "tests/playable/mumbai-agents.mjs": "1c0762f241321f04fdef9faf2e35846d032f68d53dfc78cf03e5da5042030e00"
+  }
+}

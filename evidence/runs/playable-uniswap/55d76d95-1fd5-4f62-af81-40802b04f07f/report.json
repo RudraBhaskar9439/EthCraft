@@ -1,0 +1,508 @@
+{
+  "status": "pass",
+  "kind": "actual_local_uniswap_v4_market",
+  "runId": "55d76d95-1fd5-4f62-af81-40802b04f07f",
+  "schema": "market_test_55d76d951fd54f62af8140802b04f07f",
+  "publicTransactions": 0,
+  "realSpending": 0,
+  "gameCoinsCredited": false,
+  "independentHumansVerified": 0,
+  "scope": "Dedicated8559CITY/GEMtestpool; no old8547market, Minecraft, custody backing or humanwalletsignoff claim",
+  "checks": [
+    {
+      "name": "actual-new-v4-pool-code-roles-and-funded-disposable-wallet",
+      "status": "pass",
+      "chainId": 31337
+    },
+    {
+      "name": "strict-owner-bound-quote-preview-never-signs-or-sends",
+      "status": "pass",
+      "quotedOut": "9.950365204898589219",
+      "minimumOut": "9.850861552849603326"
+    },
+    {
+      "name": "actual-erc20-approval-v4-exact-input-and-canonical-event-transfer-proof",
+      "status": "pass",
+      "transactionHash": "0xb8b6ca73ed251ff3d840edb920f4d7bd6a9813247cb3762f5168ff4d79eea2e8",
+      "amountOutBaseUnits": "9950365204898589219"
+    },
+    {
+      "name": "same-preview-replay-reuses-original-purchase-and-pays-zero-extra",
+      "status": "pass"
+    },
+    {
+      "name": "actual-reverse-GEM-to-CITY-swap",
+      "status": "pass",
+      "transactionHash": "0x02342eacc759f65b3b6a9bb4d5214b6dde01585dc86d7a09fd729fd3d58fd1b4"
+    },
+    {
+      "name": "existing-exact-input-quote-survives-actual-column-migration-and-confirmation",
+      "status": "pass",
+      "transactionHash": "0x5bf7ddc9695590c6f224dd1b60c45d3ef2d573213a47955e7ce0af5da29bc1f9"
+    },
+    {
+      "name": "exact-output-owner-quote-and-spend-cap-are-immutable-and-never-sign-before-confirmation",
+      "status": "pass",
+      "target": "3",
+      "maximumInput": "3.034108752063079519"
+    },
+    {
+      "name": "exact-output-lost-reply-and-service-recreation-recover-real-v4-swap-within-original-cap",
+      "status": "pass",
+      "transactionHash": "0x16a5bcc842467bf93d5086ce664150e2a5caf20b8160f8d458cc2393ee1b174a",
+      "actualInput": "3004068071349583682",
+      "actualOutput": "3000000000000000000"
+    },
+    {
+      "name": "exact-output-repeat-confirmation-and-retry-create-no-extra-signatures-or-spending",
+      "status": "pass"
+    },
+    {
+      "name": "real-EVM-minimum-output-and-expiry-refuse-without-new-swap-or-credit",
+      "status": "pass"
+    }
+  ],
+  "manifest": {
+    "schema": "agentcity.playable-market.v1",
+    "environment": "LOCAL_TEST_FIXTURE",
+    "chainId": 31337,
+    "rpcUrl": "http://127.0.0.1:8559",
+    "genesisHash": "0xc84a8cbfcd63c290082682e80a3bf9bacf121e9f06fe6cc942e3d9bcc3fda3ae",
+    "poolManager": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+    "quoter": "0xdc64a140aa3e981100a9beca4e685f962f0cf6c9",
+    "router": "0x5fc8d32690cc91d4c39d9d3abcbd16989f875707",
+    "tokens": {
+      "CITY": {
+        "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+        "decimals": 18
+      },
+      "GEM": {
+        "address": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+        "decimals": 18
+      }
+    },
+    "poolKey": {
+      "currency0": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "currency1": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+      "fee": 3000,
+      "tickSpacing": 60,
+      "hooks": "0x0000000000000000000000000000000000000000"
+    },
+    "codeHashes": {
+      "poolManager": "0xccabfb6b6eb6f2d776a498b923d3706fe6b35f59f9106b03cc2e81618318afb6",
+      "quoter": "0xa521ac45344d609d8700dfb23e43b87d7112c7f2df7bbf6cf70530eb50abf4d0",
+      "router": "0x4da570e773508c63a050c7fcd9b09cdcc8fa9d81d473fb8cb80224de66c38e2e",
+      "CITY": "0xf9eebf13f96d7b246e30cadd39bbfcf908086d15fdb328ac522e52fa71fb2821",
+      "GEM": "0xf9eebf13f96d7b246e30cadd39bbfcf908086d15fdb328ac522e52fa71fb2821"
+    },
+    "exactOutputEnabled": true,
+    "maxInputBaseUnits": "100000000000000000000",
+    "maxNativeCostWei": "2000000000000000",
+    "localFixture": {
+      "administrator": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+      "issuer": "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+      "liquidityHelper": "0x0165878A594ca255338adfa4d48449f69242Eb8F",
+      "issuedEachToken": "100000000000000000000000",
+      "liquidity": "10000000000000000000000",
+      "ticks": [
+        -600,
+        600
+      ],
+      "testOnly": true
+    },
+    "sourceHashes": {
+      "contracts/src/PlayableMarketRouter.sol": "0f990250303dd9d9e8accff4946c431707a7416779357bb35928737aea990af1",
+      "contracts/src/PlayableMarketToken.sol": "264f6f933e1e2b376708e53d37723d436893bbb34199d75e304e5e706ac74ddd",
+      "contracts/script/PlayableMarketLocal.s.sol": "3c00b4d530c7a92463e6f1c5a69edb853030621974e5bd862048d2bb8fa5e54d",
+      "contracts/package-lock.json": "80312c2b2b961d9094131a38097f043c67d14731a186ba7d91894cea527ebb8c"
+    },
+    "gameCoinsBacked": false,
+    "minecraftInventoryBacked": false,
+    "confirmations": 1,
+    "maxGas": 1000000
+  },
+  "playerFixture": {
+    "playerId": "d0f8cb5b-719b-4792-9e12-fbc3ab02ef10",
+    "address": "0x61d161e019b61fd9dd73d5da572f8ee7965ed1a0",
+    "custody": "server_managed_testnet"
+  },
+  "fundingTransactions": [
+    "0xa9a564e183453396de9c067695ff174cbf30fe1d95c0a8b2b6190f94cc604985",
+    "0x48e55e1dc4fc6bd4a14e4ffd9413072c4af8692c8a5bd46e4da568be486b668c",
+    "0xabf505f83abdb97a5d2ba91c7726d197883452b4ccc5adf34b0eb85a96ae2c3d"
+  ],
+  "exactOutputSwaps": [
+    {
+      "previewId": "f1b40ef4-6d18-4370-981d-a5e22bf65f6d",
+      "playerId": "d0f8cb5b-719b-4792-9e12-fbc3ab02ef10",
+      "address": "0x61d161e019b61fd9dd73d5da572f8ee7965ed1a0",
+      "chainId": 31337,
+      "kind": "exact_output",
+      "maxAmountInBaseUnits": "3034108752063079519",
+      "maxAmountIn": "3.034108752063079519",
+      "tokenIn": "GEM",
+      "tokenOut": "CITY",
+      "amountInBaseUnits": "3004068071349583682",
+      "quotedOutBaseUnits": "3000000000000000000",
+      "minimumOutBaseUnits": "3000000000000000000",
+      "amountIn": "3.004068071349583682",
+      "quotedOut": "3",
+      "minimumOut": "3",
+      "slippageBps": 100,
+      "deadline": 1793764456,
+      "status": "confirmed",
+      "proof": {
+        "swap": {
+          "poolId": "0xa77fd006c251cf715b6389d8c8eb4460b5363da7f3ab33e769e3cf4a23a57df6",
+          "status": "confirmed",
+          "blockHash": "0x8561f50d0ac5daa22052c9940142ea833de0b95d73f374383125665bd294cc70",
+          "blockNumber": "32",
+          "transactionHash": "0x16a5bcc842467bf93d5086ce664150e2a5caf20b8160f8d458cc2393ee1b174a",
+          "amountInBaseUnits": "3004068071349583682",
+          "gameCoinsCredited": false,
+          "amountOutBaseUnits": "3000000000000000000"
+        },
+        "approval": {
+          "status": "confirmed",
+          "transactionHash": "0x1ba48d9d10010eaa8f2ba6a6d4e516285e640ef6eadf9cd38123558002c985bc"
+        }
+      },
+      "consented": true,
+      "confirmedAt": "2026-11-04T03:52:17.109Z",
+      "market": "Uniswap v4 fixed CITY/GEM test pool",
+      "gameCoinsCredited": false,
+      "realValueSupported": false
+    }
+  ],
+  "swaps": [
+    {
+      "previewId": "d845a325-0591-41da-868d-b521c3e4a2be",
+      "playerId": "d0f8cb5b-719b-4792-9e12-fbc3ab02ef10",
+      "address": "0x61d161e019b61fd9dd73d5da572f8ee7965ed1a0",
+      "chainId": 31337,
+      "kind": "exact_input",
+      "maxAmountInBaseUnits": "10000000000000000000",
+      "maxAmountIn": "10",
+      "tokenIn": "CITY",
+      "tokenOut": "GEM",
+      "amountInBaseUnits": "10000000000000000000",
+      "quotedOutBaseUnits": "9950365204898589219",
+      "minimumOutBaseUnits": "9850861552849603326",
+      "amountIn": "10",
+      "quotedOut": "9.950365204898589219",
+      "minimumOut": "9.850861552849603326",
+      "slippageBps": 100,
+      "deadline": 1793764455,
+      "status": "confirmed",
+      "proof": {
+        "swap": {
+          "poolId": "0xa77fd006c251cf715b6389d8c8eb4460b5363da7f3ab33e769e3cf4a23a57df6",
+          "status": "confirmed",
+          "blockHash": "0x5dec686768573bf5ee732d014ea8723d3276bbeab987fc85240a1fcdf80cbc22",
+          "blockNumber": "26",
+          "transactionHash": "0xb8b6ca73ed251ff3d840edb920f4d7bd6a9813247cb3762f5168ff4d79eea2e8",
+          "amountInBaseUnits": "10000000000000000000",
+          "gameCoinsCredited": false,
+          "amountOutBaseUnits": "9950365204898589219"
+        },
+        "approval": {
+          "status": "confirmed",
+          "transactionHash": "0xbb68637c9c94292eb5eae82c9e8c1ecc353f3eb3f2f8f1197f321fbabced8f69"
+        }
+      },
+      "consented": true,
+      "confirmedAt": "2026-11-04T03:52:16.097Z",
+      "market": "Uniswap v4 fixed CITY/GEM test pool",
+      "gameCoinsCredited": false,
+      "realValueSupported": false
+    },
+    {
+      "previewId": "5e9b813b-c94e-42d3-a304-40f012831c13",
+      "playerId": "d0f8cb5b-719b-4792-9e12-fbc3ab02ef10",
+      "address": "0x61d161e019b61fd9dd73d5da572f8ee7965ed1a0",
+      "chainId": 31337,
+      "kind": "exact_input",
+      "maxAmountInBaseUnits": "5000000000000000000",
+      "maxAmountIn": "5",
+      "tokenIn": "GEM",
+      "tokenOut": "CITY",
+      "amountInBaseUnits": "5000000000000000000",
+      "quotedOutBaseUnits": "4997319331857764821",
+      "minimumOutBaseUnits": "4947346138539187172",
+      "amountIn": "5",
+      "quotedOut": "4.997319331857764821",
+      "minimumOut": "4.947346138539187172",
+      "slippageBps": 100,
+      "deadline": 1793764456,
+      "status": "confirmed",
+      "proof": {
+        "swap": {
+          "poolId": "0xa77fd006c251cf715b6389d8c8eb4460b5363da7f3ab33e769e3cf4a23a57df6",
+          "status": "confirmed",
+          "blockHash": "0x912e5ae2706031373162f3b0455b7d43e84db06283e8a8e2311627dbdb6a0ead",
+          "blockNumber": "28",
+          "transactionHash": "0x02342eacc759f65b3b6a9bb4d5214b6dde01585dc86d7a09fd729fd3d58fd1b4",
+          "amountInBaseUnits": "5000000000000000000",
+          "gameCoinsCredited": false,
+          "amountOutBaseUnits": "4997319331857764821"
+        },
+        "approval": {
+          "status": "confirmed",
+          "transactionHash": "0x46cf3efd58f73f6c8c75bdd07f0da2931cb0ed6f86378c9ff75de94bdd89fcee"
+        }
+      },
+      "consented": true,
+      "confirmedAt": "2026-11-04T03:52:16.420Z",
+      "market": "Uniswap v4 fixed CITY/GEM test pool",
+      "gameCoinsCredited": false,
+      "realValueSupported": false
+    }
+  ],
+  "history": [
+    {
+      "previewId": "07356693-318b-47e5-9b02-183683d74dc5",
+      "playerId": "d0f8cb5b-719b-4792-9e12-fbc3ab02ef10",
+      "address": "0x61d161e019b61fd9dd73d5da572f8ee7965ed1a0",
+      "chainId": 31337,
+      "kind": "exact_output",
+      "maxAmountInBaseUnits": "1011773899351767968",
+      "maxAmountIn": "1.011773899351767968",
+      "tokenIn": "GEM",
+      "tokenOut": "CITY",
+      "amountInBaseUnits": "1001756335991849473",
+      "quotedOutBaseUnits": "1000000000000000000",
+      "minimumOutBaseUnits": "1000000000000000000",
+      "amountIn": "1.001756335991849473",
+      "quotedOut": "1",
+      "minimumOut": "1",
+      "slippageBps": 100,
+      "deadline": 1793764367,
+      "status": "expired",
+      "proof": {},
+      "consented": true,
+      "confirmedAt": "2026-11-04T03:52:17.750Z",
+      "market": "Uniswap v4 fixed CITY/GEM test pool",
+      "gameCoinsCredited": false,
+      "realValueSupported": false
+    },
+    {
+      "previewId": "14bf85d8-dab2-40b7-9b1e-c62e6b831ca3",
+      "playerId": "d0f8cb5b-719b-4792-9e12-fbc3ab02ef10",
+      "address": "0x61d161e019b61fd9dd73d5da572f8ee7965ed1a0",
+      "chainId": 31337,
+      "kind": "exact_input",
+      "maxAmountInBaseUnits": "1000000000000000000",
+      "maxAmountIn": "1",
+      "tokenIn": "CITY",
+      "tokenOut": "GEM",
+      "amountInBaseUnits": "1000000000000000000",
+      "quotedOutBaseUnits": "995556115488769819",
+      "minimumOutBaseUnits": "985600554333882120",
+      "amountIn": "1",
+      "quotedOut": "0.995556115488769819",
+      "minimumOut": "0.98560055433388212",
+      "slippageBps": 100,
+      "deadline": 1793764367,
+      "status": "expired",
+      "proof": {},
+      "consented": true,
+      "confirmedAt": "2026-11-04T03:52:17.711Z",
+      "market": "Uniswap v4 fixed CITY/GEM test pool",
+      "gameCoinsCredited": false,
+      "realValueSupported": false
+    },
+    {
+      "previewId": "f1b40ef4-6d18-4370-981d-a5e22bf65f6d",
+      "playerId": "d0f8cb5b-719b-4792-9e12-fbc3ab02ef10",
+      "address": "0x61d161e019b61fd9dd73d5da572f8ee7965ed1a0",
+      "chainId": 31337,
+      "kind": "exact_output",
+      "maxAmountInBaseUnits": "3034108752063079519",
+      "maxAmountIn": "3.034108752063079519",
+      "tokenIn": "GEM",
+      "tokenOut": "CITY",
+      "amountInBaseUnits": "3004068071349583682",
+      "quotedOutBaseUnits": "3000000000000000000",
+      "minimumOutBaseUnits": "3000000000000000000",
+      "amountIn": "3.004068071349583682",
+      "quotedOut": "3",
+      "minimumOut": "3",
+      "slippageBps": 100,
+      "deadline": 1793764456,
+      "status": "confirmed",
+      "proof": {
+        "swap": {
+          "poolId": "0xa77fd006c251cf715b6389d8c8eb4460b5363da7f3ab33e769e3cf4a23a57df6",
+          "status": "confirmed",
+          "blockHash": "0x8561f50d0ac5daa22052c9940142ea833de0b95d73f374383125665bd294cc70",
+          "blockNumber": "32",
+          "transactionHash": "0x16a5bcc842467bf93d5086ce664150e2a5caf20b8160f8d458cc2393ee1b174a",
+          "amountInBaseUnits": "3004068071349583682",
+          "gameCoinsCredited": false,
+          "amountOutBaseUnits": "3000000000000000000"
+        },
+        "approval": {
+          "status": "confirmed",
+          "transactionHash": "0x1ba48d9d10010eaa8f2ba6a6d4e516285e640ef6eadf9cd38123558002c985bc"
+        }
+      },
+      "consented": true,
+      "confirmedAt": "2026-11-04T03:52:17.109Z",
+      "market": "Uniswap v4 fixed CITY/GEM test pool",
+      "gameCoinsCredited": false,
+      "realValueSupported": false
+    },
+    {
+      "previewId": "ad5ff96e-2216-4421-9b3e-537a21dd2dc8",
+      "playerId": "d0f8cb5b-719b-4792-9e12-fbc3ab02ef10",
+      "address": "0x61d161e019b61fd9dd73d5da572f8ee7965ed1a0",
+      "chainId": 31337,
+      "kind": "exact_input",
+      "maxAmountInBaseUnits": "100000000000000000",
+      "maxAmountIn": "0.1",
+      "tokenIn": "GEM",
+      "tokenOut": "CITY",
+      "amountInBaseUnits": "100000000000000000",
+      "quotedOutBaseUnits": "99895517345987254",
+      "minimumOutBaseUnits": "98896562172527381",
+      "amountIn": "0.1",
+      "quotedOut": "0.099895517345987254",
+      "minimumOut": "0.098896562172527381",
+      "slippageBps": 100,
+      "deadline": 1793764456,
+      "status": "confirmed",
+      "proof": {
+        "swap": {
+          "poolId": "0xa77fd006c251cf715b6389d8c8eb4460b5363da7f3ab33e769e3cf4a23a57df6",
+          "status": "confirmed",
+          "blockHash": "0x980765887ad4822d6211b1f01c1820db9ec2c06ef0cf4f7f6715e934d16d6699",
+          "blockNumber": "30",
+          "transactionHash": "0x5bf7ddc9695590c6f224dd1b60c45d3ef2d573213a47955e7ce0af5da29bc1f9",
+          "amountInBaseUnits": "100000000000000000",
+          "gameCoinsCredited": false,
+          "amountOutBaseUnits": "99895517345987254"
+        },
+        "approval": {
+          "status": "confirmed",
+          "transactionHash": "0xffb8e7bd92ed1aad22b08065f8258f7c5de7a8defb4fa846fd5b529879ad22e2"
+        }
+      },
+      "consented": true,
+      "confirmedAt": "2026-11-04T03:52:16.709Z",
+      "market": "Uniswap v4 fixed CITY/GEM test pool",
+      "gameCoinsCredited": false,
+      "realValueSupported": false
+    },
+    {
+      "previewId": "5e9b813b-c94e-42d3-a304-40f012831c13",
+      "playerId": "d0f8cb5b-719b-4792-9e12-fbc3ab02ef10",
+      "address": "0x61d161e019b61fd9dd73d5da572f8ee7965ed1a0",
+      "chainId": 31337,
+      "kind": "exact_input",
+      "maxAmountInBaseUnits": "5000000000000000000",
+      "maxAmountIn": "5",
+      "tokenIn": "GEM",
+      "tokenOut": "CITY",
+      "amountInBaseUnits": "5000000000000000000",
+      "quotedOutBaseUnits": "4997319331857764821",
+      "minimumOutBaseUnits": "4947346138539187172",
+      "amountIn": "5",
+      "quotedOut": "4.997319331857764821",
+      "minimumOut": "4.947346138539187172",
+      "slippageBps": 100,
+      "deadline": 1793764456,
+      "status": "confirmed",
+      "proof": {
+        "swap": {
+          "poolId": "0xa77fd006c251cf715b6389d8c8eb4460b5363da7f3ab33e769e3cf4a23a57df6",
+          "status": "confirmed",
+          "blockHash": "0x912e5ae2706031373162f3b0455b7d43e84db06283e8a8e2311627dbdb6a0ead",
+          "blockNumber": "28",
+          "transactionHash": "0x02342eacc759f65b3b6a9bb4d5214b6dde01585dc86d7a09fd729fd3d58fd1b4",
+          "amountInBaseUnits": "5000000000000000000",
+          "gameCoinsCredited": false,
+          "amountOutBaseUnits": "4997319331857764821"
+        },
+        "approval": {
+          "status": "confirmed",
+          "transactionHash": "0x46cf3efd58f73f6c8c75bdd07f0da2931cb0ed6f86378c9ff75de94bdd89fcee"
+        }
+      },
+      "consented": true,
+      "confirmedAt": "2026-11-04T03:52:16.420Z",
+      "market": "Uniswap v4 fixed CITY/GEM test pool",
+      "gameCoinsCredited": false,
+      "realValueSupported": false
+    },
+    {
+      "previewId": "d845a325-0591-41da-868d-b521c3e4a2be",
+      "playerId": "d0f8cb5b-719b-4792-9e12-fbc3ab02ef10",
+      "address": "0x61d161e019b61fd9dd73d5da572f8ee7965ed1a0",
+      "chainId": 31337,
+      "kind": "exact_input",
+      "maxAmountInBaseUnits": "10000000000000000000",
+      "maxAmountIn": "10",
+      "tokenIn": "CITY",
+      "tokenOut": "GEM",
+      "amountInBaseUnits": "10000000000000000000",
+      "quotedOutBaseUnits": "9950365204898589219",
+      "minimumOutBaseUnits": "9850861552849603326",
+      "amountIn": "10",
+      "quotedOut": "9.950365204898589219",
+      "minimumOut": "9.850861552849603326",
+      "slippageBps": 100,
+      "deadline": 1793764455,
+      "status": "confirmed",
+      "proof": {
+        "swap": {
+          "poolId": "0xa77fd006c251cf715b6389d8c8eb4460b5363da7f3ab33e769e3cf4a23a57df6",
+          "status": "confirmed",
+          "blockHash": "0x5dec686768573bf5ee732d014ea8723d3276bbeab987fc85240a1fcdf80cbc22",
+          "blockNumber": "26",
+          "transactionHash": "0xb8b6ca73ed251ff3d840edb920f4d7bd6a9813247cb3762f5168ff4d79eea2e8",
+          "amountInBaseUnits": "10000000000000000000",
+          "gameCoinsCredited": false,
+          "amountOutBaseUnits": "9950365204898589219"
+        },
+        "approval": {
+          "status": "confirmed",
+          "transactionHash": "0xbb68637c9c94292eb5eae82c9e8c1ecc353f3eb3f2f8f1197f321fbabced8f69"
+        }
+      },
+      "consented": true,
+      "confirmedAt": "2026-11-04T03:52:16.097Z",
+      "market": "Uniswap v4 fixed CITY/GEM test pool",
+      "gameCoinsCredited": false,
+      "realValueSupported": false
+    }
+  ],
+  "finalBalances": {
+    "address": "0x61d161e019b61fd9dd73d5da572f8ee7965ed1a0",
+    "chainId": 31337,
+    "nativeBalanceWei": "9250395023684932",
+    "tokens": {
+      "CITY": {
+        "baseUnits": "98097214849203752075",
+        "amount": "98.097214849203752075"
+      },
+      "GEM": {
+        "baseUnits": "101846297133549005537",
+        "amount": "101.846297133549005537"
+      }
+    },
+    "gameCoinsCredited": false
+  },
+  "sourceHashes": {
+    "backend/src/playable/uniswap-market.mjs": "88ae18620864338357d313882757df4eab79f21b29029c91c5b237ada4dd515d",
+    "backend/src/playable/uniswap-market.sql": "e3ae2d0300645dc8aa222df7307e1e8867ed5f09b45c5745ef8cafddc8179b27",
+    "contracts/src/PlayableMarketRouter.sol": "0f990250303dd9d9e8accff4946c431707a7416779357bb35928737aea990af1",
+    "contracts/src/PlayableMarketToken.sol": "264f6f933e1e2b376708e53d37723d436893bbb34199d75e304e5e706ac74ddd",
+    "scripts/playable_uniswap_setup.mjs": "fff3fa032bf1cfc565897a043c496b740997253f0e151547178267d4b9085681",
+    "tests/playable/uniswap-market.mjs": "9a0a7e4cf567167e30f019cf2d6b232fb188dafdf4915e8cb15d34c0f6ce91a9",
+    "backend/src/playable/swap-request.mjs": "c9f492e6d3b1a19f1f94c1a5ad5e2f686dadbad91de8bf6f2ae1a3a6c249d919",
+    "backend/src/playable/testnet-wallets.mjs": "8d2663058483586129ff9a87fe69d5fc0ad4eea6fa373ed0fc5770204e7a90e0",
+    "contracts/src/WorldAssetSwapRouter.sol": "5d5e6af0c6280338e4e1967c776b2c1b9f76022e58c95a0db5e3430217bfc2c2",
+    "tests/contracts/ExactOutputSwap.t.sol": "52b423cbe50d73ad47fb81df39c7dc70459cc63bed415cbbf30309b45bd9df4c"
+  },
+  "finishedAt": "2026-11-04T03:52:17.826Z"
+}

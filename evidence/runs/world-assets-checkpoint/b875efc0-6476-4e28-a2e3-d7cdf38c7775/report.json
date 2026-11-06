@@ -1,0 +1,293 @@
+{
+  "schema": "agentcity.world-assets-checkpoint.v1",
+  "recordedAt": "2026-10-31T18:25:34.799Z",
+  "status": "implemented-and-installed-with-live-acceptance-pending",
+  "authority": {
+    "userRequestedBlockchainOwnershipAndPayments": true,
+    "userExplicitlyOverrodeEarlierGuidelineConstraint": true,
+    "exceptionDate": "2026-10-31",
+    "scope": "Faucet-funded Unichain Sepolia testnet; original platform suitability evidence remains unresolved",
+    "fiatBudget": 0,
+    "noHumanConsentImpersonated": true
+  },
+  "canonicalPhase": {
+    "phase": "P0",
+    "gate": "blocked",
+    "observedCommand": "python3 scripts/check_phase.py P0",
+    "exitCode": 1,
+    "reasons": [
+      "implementation scope changed since the approved release; review and rerun affected evidence",
+      "P0-015: artifact hash mismatch: docs/UPSTREAM_REUSE.md"
+    ],
+    "originalPhaseEvidenceRewritten": false
+  },
+  "implemented": [
+    "exact native equipment escrow, immutable NBT fingerprint, contract mint, atomic CITY/NFT sale and backed redemption",
+    "four fixed estate parcels with combined land/house deeds, confirmed owner/owned-agent entry and native mutation freeze for listings",
+    "hooked official Uniswap v4 CITY/GEM pool and explicit preview/confirm swaps",
+    "existing Privy wallet policy migration, bounded registrar/publisher/faucet roles and stable intent recovery",
+    "Discord /assets, clean market cards and canonical receipt feeds"
+  ],
+  "evidence": [
+    {
+      "name": "contracts",
+      "path": "evidence/runs/world-assets-contracts/5396443e-1639-4980-8eb1-1674a17d4092/report.json",
+      "sha256": "887828f753e564b15c2376f5e1b07d2c6924fa1cd4d344803eb5b757e50e13d4",
+      "recordedStatus": "pass",
+      "scope": "Actual isolated Foundry EVM tests with disclosed trusted-registrar native receipt fixtures; no public deployment or live Minecraft custody proof",
+      "passedChecks": 5
+    },
+    {
+      "name": "hookedRouter",
+      "path": "evidence/runs/world-asset-router/verified/report.json",
+      "sha256": "e16d53c4d227ff7459c6e5023857f147ccaf606ed9f90493fabb15039637a3cf",
+      "recordedStatus": "pass",
+      "scope": "Actual isolated Foundry execution against the official Uniswap v4 PoolManager with synthetic CRED/KIT fixture assets and seeded liquidity; no public transaction or live Minecraft effect",
+      "passedChecks": 3
+    },
+    {
+      "name": "canonicalService",
+      "path": "evidence/runs/world-assets-service/6479c218-5f9c-4c87-81fc-c4cd829230e5/report.json",
+      "sha256": "c063c22dc25be3fd9496aa6f24b956c86f26ee29963b103b7640df811b7e01df",
+      "recordedStatus": "pass",
+      "scope": "Actual isolated Anvil31337 + PostgreSQL; injected native/identity/unlocked-local-wallet fixtures. No public transactions, actual equipment, human identities or live Privy signing.",
+      "passedChecks": 4
+    },
+    {
+      "name": "registrarFixture",
+      "path": "evidence/runs/world-assets-registrar/fc0319a2-b08e-46bc-942f-0184e34de4a7/report.json",
+      "sha256": "8f7d3f2be7b633ba3d34891282506e1b5a4d0020b9f5bc94eaeb2be602db1d6b",
+      "recordedStatus": "pass",
+      "scope": "Injected signer/EVM and isolated actual PG fixtures only; no real key unlock, public transaction or native mint",
+      "passedChecks": 3
+    },
+    {
+      "name": "faucetFixture",
+      "path": "evidence/runs/world-assets-faucet/291108bd-82c3-4e37-b78c-882eb5bcbbf0/report.json",
+      "sha256": "038bfde2fa98c1b8032e78377a524959856ddacd9ef98eb2b28833cd26bd3fb2",
+      "recordedStatus": "pass",
+      "scope": "Finite-grant injected EVM and actual isolated PG fixtures; no real wallet key, provider, token or native transfers",
+      "passedChecks": 3
+    },
+    {
+      "name": "discordRuntimeFixture",
+      "path": "evidence/runs/discord-bot/0d5be89a-5809-497c-abe4-283e6b871a2b/report.json",
+      "sha256": "1f59ddab8d6cee1eb828b0c4523fae1d3c33303ea8f102fe84b66a8f6233bd50",
+      "recordedStatus": "pass",
+      "scope": "Actual isolated PostgreSQL plus explicitly simulated Discord REST/Gateway/interactions; zero external posts, provider wallets or human verification",
+      "passedChecks": 9
+    },
+    {
+      "name": "activityFeedFixture",
+      "path": "evidence/runs/discord-activity-feed/f4748027-448a-4ffb-b82c-4981a9013972/report.json",
+      "sha256": "5e19ff8a40639b08595733073ee46c565ea98bbe82d083c1bca5910fd1535ffb",
+      "recordedStatus": "pass",
+      "scope": "Focused isolated PostgreSQL and Discord-adapter fixtures; no actual posting, financial writes or live blockchain verification",
+      "passedChecks": 5
+    },
+    {
+      "name": "nativeGearPartialRun",
+      "path": "evidence/runs/escrow-native/9c4a18c9-3faa-45f4-9a1a-281a00ea57a4/report.json",
+      "sha256": "d5171e217538a84ac902e131602758aff463a73f542cd167f558cbbe409ac624",
+      "recordedStatus": "fail",
+      "scope": "Actual isolated Paper26.3, pinned WorldGuard/WorldEdit and native gear/property receiving checks. Canonical chain proofs are explicitly synthetic adapter fixtures; no live NFT, human purchase or production world change.",
+      "passedChecks": 2
+    },
+    {
+      "name": "nativePropertyResumed",
+      "path": "evidence/runs/escrow-native/b3e74222-af4d-4f2e-806c-c00b3032db74/report.json",
+      "sha256": "7cd4d2d7026af88d3285428fd1a09db1269366c1f6b89d0dc3ca6a4894bd58dd",
+      "recordedStatus": "pass",
+      "scope": "Retained isolated Paper native property verification with unchanged production-plugin JAR; only test approach platform and explicit synthetic OP WorldGuard bypass were corrected. Native gear checks remain separately recorded; chain proofs are simulated private-adapter fixtures.",
+      "passedChecks": 3
+    },
+    {
+      "name": "nativeOwnedAgent",
+      "path": "evidence/runs/property-agent/96b884d6-869c-4767-ae8f-692a3025846c/report.json",
+      "sha256": "cb8fd7d74d0f8112b52949d34c6b74cdff377a0a902e393d79eaf192cce3c0c4",
+      "recordedStatus": "pass",
+      "scope": "Actual owned-agent native estate entry/denial/eviction in retained isolated Paper fixture, with synthetic private-adapter chain snapshot; no human or live-chain proof",
+      "passedChecks": 1
+    },
+    {
+      "name": "realPaperAnvilEquipment",
+      "path": "evidence/runs/world-assets-minecraft/1524576e-61c0-4862-b0e7-989b5e225d14/report.json",
+      "sha256": "352df4fff72ddb98e701a46e731064b8490a99fc77b22ec9e6f2467e225c3cac",
+      "recordedStatus": "pass",
+      "scope": "Actual isolated Paper26.3 gear escrow/claim + Anvil31337 contracts + PostgreSQL translation service. Synthetic Discord/Privy principals and unlocked local signers; no real human, live Privy, public-chain or production action.",
+      "passedChecks": 3
+    },
+    {
+      "name": "publicDeployment",
+      "path": "evidence/runs/world-assets-deployment/d12a7895-188a-49b7-80da-54b8821bdcb1/report.json",
+      "sha256": "b0620a26e87afcb3136bcbd2302a585907fba880ae7a05f62727cdbc0197d925",
+      "recordedStatus": "pass",
+      "scope": "Actual faucet-funded Unichain Sepolia asset contracts and a new official v4 hooked pool with seeded developer fixture liquidity; no player asset registration or native ownership activation",
+      "passedChecks": null
+    },
+    {
+      "name": "publicReadback",
+      "path": "evidence/runs/world-assets-public-verify/75e77557-dbe6-418f-8da6-07c583e1ca02/report.json",
+      "sha256": "361b2e6ced9cbd0cd0205ba830c8e793922bdd836867c7a1b6252301af015fc0",
+      "recordedStatus": "pass",
+      "scope": "Actual read-only Unichain Sepolia deployment/role/hook/liquidity verification; no user asset mint, native-rights proof or production certification",
+      "passedChecks": 4
+    },
+    {
+      "name": "publicHookedSwap",
+      "path": "evidence/runs/world-asset-swap/77500602-4e00-41bd-9b73-688e62fb27c1/attempt.json",
+      "sha256": "f5a455ffcea32fd403e63db421c8cfccd58c0c0b325da232711d4fe074c4ce77",
+      "recordedStatus": "pass",
+      "scope": "Existing encrypted developer account only; fixed0.01CITY→GEM through the new hooked v4 pool. No player wallet, NFT mint, human-consent claim or Game Coins.",
+      "passedChecks": 2
+    },
+    {
+      "name": "liveHost",
+      "path": "evidence/runs/world-assets-host/0f61e4a9-8c9c-4286-a9a2-a079adee74d5/report.json",
+      "sha256": "80b6e54ed8c49f3b196e4266551a81d0993020ff9d7dbf38852bf273c8fa4ea1",
+      "recordedStatus": "pass",
+      "scope": "Actual installed native plugin, confirmed ownership projection, Discord controls and pre-upgrade Game Coin balance readback; zero wallet signatures, grants, user inventory changes or independent-human trades",
+      "passedChecks": 6
+    }
+  ],
+  "sourceHashes": {
+    "backend/src/chain/public-testnet.mjs": "af77073c27e5ff72451517ce726ec5e6b3f75f662f1aa2536c487cf95f721604",
+    "backend/src/discord/activity-feed.mjs": "cf149ea6be8ba51d789ed07ca7b9c01516c4b4760abbc6ae88adda1a9f6b8a2d",
+    "backend/src/discord/bot.mjs": "3a957731f82444e655f1adb392848128e654d91af02ae3ac405547bdc79e97f9",
+    "backend/src/discord/server-experience.mjs": "89b2a80894df0d15a8784c1616659b2c26b44a7e1d45aedbb5ddb25c2ab013a8",
+    "backend/src/discord/world-assets-runtime.mjs": "930cdefa72b62e5b680d07ca45c58de51bf491d21f7150ab328e5d20203b9393",
+    "backend/src/playable/market-runtime.mjs": "9822ca93076a4ca534fedfcf04a0be0d25cad6815b8f147e4832aa9456fb61b2",
+    "backend/src/playable/testnet-wallets.mjs": "b3c71f80547e9f6932479c2021ca702d12819254d653005f305cf8ce0a7e3f43",
+    "backend/src/playable/uniswap-market.mjs": "0bbb943841ab2bc94cf90395661b3f6976f6dd0f87416556b84770c9cbd8125a",
+    "backend/src/world-assets/abis.mjs": "c88114bc728e1014b171b47754329dee474d3830a82d3807fdddc0a94a8d33de",
+    "backend/src/world-assets/canonical.mjs": "49c5a63385e1807dd426db0522f940793cd37f28f7db475b2de8b959d2b12620",
+    "backend/src/world-assets/faucet.mjs": "d3ec9210e2dfeecaac25887ac2cbf3198049b6780eb548846fd8eeac3c211b34",
+    "backend/src/world-assets/health-publisher.mjs": "3ec674a1ff9bd9e70ec4f2f54c7f03da8d779241ef9dd89a0a8dbac4ad3ec634",
+    "backend/src/world-assets/managed-policy.mjs": "960bac6a1053c8f3e8595118a79eefbaed0c96d80a1faebae88ee4547808849e",
+    "backend/src/world-assets/registrar.mjs": "fbd759966dab603e4391dc3a5dbd8f371b93caa62710a5526828a5a9799da6a6",
+    "backend/src/world-assets/service.mjs": "85eeed613bfe4c59fa0f008b1c1103f3812acea4b8641e4938143d1f21bff1af",
+    "backend/src/world-assets/store.mjs": "484501cec1801d989bb7b56263b123f14b92ef23c567c53334cb3953ffe107b3",
+    "config/property-dependencies.json": "47d8299474322697a39f4c6b52c6be6adbcc5af405ac73291292b9d1e16a7298",
+    "contracts/src/WorldAssetMarket.sol": "63b79da91e7fff2eeb15ee400bcf43e22334b08388cf00fbceb968ca38113f77",
+    "contracts/src/WorldAssetRegistry.sol": "394a1159fcd1c06d589e84f46502987e402346ce3dbec69ed217d7d498245ce5",
+    "contracts/src/WorldAssetSwapRouter.sol": "4e0006bfc72fd63d7c2bee46c287214bc6ec706c3a8e28c80c406bd7497a2f7a",
+    "contracts/world-assets-public-testnet-deployment.json": "cfa22a2343e682bc002b242d57525924cc3cd8c20c69263903fddda3aae93506",
+    "docs/AGENT_CAPABILITIES.md": "535f0768188e5e6a878a135abb23db39a6585ca5a54ddfa3e06c8d5d50fa340a",
+    "docs/BLOCKCHAIN_ASSETS.md": "2215c19df7807fa46b1f8b49d55e135e03452808504151ac42d058ca2203cbc9",
+    "docs/DEPLOYMENT_ROUTE.md": "d9cbeda35f119a024cc695c0df36c98e1259d3f801f430dc77b95554c268d5a5",
+    "docs/DISCORD_ONBOARDING.md": "c532338cd142e6930bb140b2a05fafe8b789d940a9f2070c4b1508a4ebeb4c08",
+    "docs/GAME_MARKETPLACE.md": "a4023e3605e3de906f5dcec897d71ee13cc07b73761e71cca02f60d8ccff4feb",
+    "planning/phases.json": "faaa9e1e1946cef702caab9b0d5ca05be0e9d63378622a113e403b59eee5dbff",
+    "planning/scope.json": "830bd0f9d8313792606c987027299da3d35644a539b9c421c27637faf94ce6cb",
+    "plugin/src/main/java/org/agentcity/paper/AgentCityPlugin.java": "d477ffca3b44d35ece325e8de3bc3f63fb3919d1ad041867bf30c842391321a2",
+    "plugin/src/main/java/org/agentcity/paper/InventoryEscrow.java": "7073da1dbd5588194d70419ceeeb2952c916f5fd21027ce94c2d67a4b296dd59",
+    "plugin/src/main/java/org/agentcity/paper/PlayableExperience.java": "020172639b56faa99c982a3c09fa41d9c9831bf150abd9503f870f13bd64b870",
+    "plugin/src/main/java/org/agentcity/paper/PropertyProtection.java": "9c9f648a1dbb1972af20376709c545b6d354a8f878156d6986506c3ce9800b74",
+    "plugin/src/main/resources/plugin.yml": "ba9eff775160c0bca199c777e331ac7e33f863535c3ba72989e1468108b42fc2",
+    "scripts/playable_worker.mjs": "78f49bda36e263db56b5bb535b4d75e22eb0c5b13f906f2d2bb77e248707dd42",
+    "scripts/world_asset_deploy.mjs": "be287bef4b016a8f74d5ffd838a2eb1ef6bfa278996e10e259606f214a0e8e2e",
+    "scripts/world_asset_faucet_setup.mjs": "e7f5841961e242ab2c7a3f3bbd98ca4dd43c8860daf11510b980ae527a15619a",
+    "scripts/world_asset_host_verify.mjs": "2c5f95fe40570a9cae13e46a218b67600cc952ebefde15d17bfde12fc1ffb849",
+    "scripts/world_asset_preflight.mjs": "4a8b6e92247c6d69da93370e24b6e13eb490c25ff3203d6c01710ef883b122d2",
+    "scripts/world_asset_public_verify.mjs": "0a825ad1db251997d0bade6b589a6761bd6fdc89df3f6bd9758ee3943f939263",
+    "scripts/world_asset_swap_smoke.mjs": "eb3303f5e214a886c36eece7ea63024e209560c661f8f4e5ce0154e238a1ace6",
+    "scripts/world_asset_wallet_policy.mjs": "342249feb1e6205f49f9387fb4011746a9df265bdf624bf6523a4470cdec1e55",
+    "tests/contracts/WorldAssetSwapRouter.t.sol": "337cc78d50e8d29f7813cd64c3eca257b97d40742f2990ef3c0c4b1c519d48ec",
+    "tests/contracts/WorldAssets.t.sol": "80111efacf170260c52d2c8f4f64b06c6b94b6cab804797438e104b466482583",
+    "tests/inspection/EscrowNativeStockPlugin.java": "38de708a7bb2e4ca385b54b6b24523da1ea68c3c80c0eb8319fc384600956565",
+    "tests/inspection/build_world_assets.ps1": "ffcbb0832683616b74de6cbc0d6f2434feb61cc7f6d1b627647be7f4b2752c91",
+    "tests/playable/activity-feed.mjs": "d9521ca6da4d45c8726d38644fd6758a8043cf27691ab7246b8c34310fd370b8",
+    "tests/playable/discord-bot.mjs": "d01fde3c46604efad42fad4cf4087d5afe6cd2df7ff0e91901cae3f3d9839749",
+    "tests/playable/escrow-native-live.cjs": "ee470212f68a72bb4b30fca4bc9a8554de2450604c057e322574ffb620f873dd",
+    "tests/playable/market-route.mjs": "0de9640922184d9db2464360a21485d7a5f23f1143c1bcbf602ed2ccdb555fdf",
+    "tests/playable/property-agent-live.cjs": "ba768fb4eb9d96fdfb122406bb2e631e386c6986195f6b51d0cb63c50db53849",
+    "tests/playable/world-payment-manifest.mjs": "9f0f790d1b4f8c5cadd722c79cd9214de2936104775dbc4cade8f001ad133933",
+    "tests/world-assets/SeamEquipmentStock.java": "e067d487907456de9516d3744e08e0b6b3377f47eaf6890dd61d56e64fc7b0dd",
+    "tests/world-assets/anvil-live.mjs": "32fb0a313e14ddf46b2a2a1891ff836070c90e7a6e70166415d425180b89ca71",
+    "tests/world-assets/discord.mjs": "05631f0229011fd5e6fd915f2640b90ef2c18fbc81cc6c2e593a9f3820b285ae",
+    "tests/world-assets/faucet.mjs": "48d7166964680e18129cdd9615e2f3ed8038b21325cacab15494b1283398e8bb",
+    "tests/world-assets/minecraft-live.mjs": "80c9dea4fb8c5a8b7abd4b71b04ccca28235280e9c0c66a7f3b2d201934ac2af",
+    "tests/world-assets/paper-fixture.cjs": "071aabce0fa4e7d3adbec25d8045d3822f1550fe9bd1cc95f65105ffbf7ab1fe",
+    "tests/world-assets/registrar.mjs": "4929b0d53e4b572ae30e3cee5c97de070f622393ec603389ec23174e93812c3f",
+    "tests/world-assets/unit.mjs": "709e7d6ccb7d456e4c86daa302c3a40680bedf44027779c5a4ecbce75ef3bb6e"
+  },
+  "release": {
+    "paper": "26.3 build231",
+    "java": "25",
+    "applicationJarSha256": "c9a108690fad15f8d15702b6d6c67468dab438c6ba5d6837fbf0938b28c02a69",
+    "dependencies": "config/property-dependencies.json",
+    "publicManifest": "contracts/world-assets-public-testnet-deployment.json",
+    "estateWorld": "agentcity_estates",
+    "estateWorldUUID": "6ff9a1da-a800-4c5e-bf69-de747b3a870e",
+    "parcels": 4
+  },
+  "walletMigration": {
+    "observedProviderReadback": true,
+    "migratedExistingWallets": 2,
+    "newPolicySha256": "e5644dda414447b23e12c2281a6d102e29b7bcaaca1f7f6f47cdbe4815b013aa",
+    "identitiesAndAddressesRetained": true,
+    "signaturesDuringMigration": 0
+  },
+  "liveDeployment": {
+    "worldAndDatabaseBackedUp": true,
+    "originalGameCoinAccountsUnchanged": 7,
+    "originalAgentTaskAndLockJournalsUnchanged": true,
+    "workerReload": {
+      "oldPid": 25511,
+      "newPid": 26951,
+      "readyObserved": true,
+      "taskJournalUnchanged": true,
+      "worldAndTunnelsRestarted": false
+    },
+    "userAssetsMintedByDeployment": 0,
+    "userTradesOrFaucetClaimsApprovedByAgent": 0
+  },
+  "additionalFocusedChecks": [
+    {
+      "command": "node tests/world-assets/unit.mjs",
+      "exitCode": 0,
+      "passed": 3,
+      "layer": "isolated policy/canonical/store fixtures"
+    },
+    {
+      "command": "python3 -m unittest discover -s tests -v",
+      "exitCode": 0,
+      "passed": 56,
+      "layer": "planning infrastructure only"
+    },
+    {
+      "command": "python3 scripts/check_plan.py",
+      "exitCode": 0,
+      "phases": 11,
+      "scenarioFamilies": 270,
+      "upstreams": 18,
+      "layer": "planning integrity only"
+    }
+  ],
+  "retainedFailures": [
+    "world-assets-contracts initial compile and cheatcode setup failures",
+    "world-asset-router initial compile and fixture timestamp failures",
+    "world-assets-deployment/preflight-unlock keystore executable setup failure",
+    "world-asset-swap/89119e67-22db-450e-89b2-70dc1061b5c2 Windows checkpoint fsync failure: zero transactions",
+    "escrow-native/9c4a18c9 property approach fixture failure after two passing gear checks",
+    "discord-bot/bc123c13 closed-adapter test ordering failure",
+    "world-assets-minecraft/b2d9147c stale local Anvil refused before custody or mint"
+  ],
+  "qualification": {
+    "realPaperAnvilFlow": "real native equipment and real local EVM settlement; synthetic identity/consent/unlocked-wallet fixtures",
+    "publicSwap": "actual operator-owned testnet funds, official manager/hook events and retry with zero additional effects",
+    "nativeProperty": "actual Paper protection/restart/owned-bot checks with explicitly synthetic chain adapter proofs",
+    "directExternalParcelListings": "contract revisions alone do not attest physical house state; qualified service requires native freeze and canonical listing proof",
+    "agentConstruction": "existing registered work-area restrictions persist; arbitrary estate construction not implemented",
+    "productionQualification": false
+  },
+  "pending": [
+    "real player Privy-managed-wallet funding, asset registration, purchase and redemption acceptance",
+    "independent second human ownership transfer and native access acceptance",
+    "coordinated crash-window injection and restore across extended native custody/property/DB state",
+    "dedicated Discord bot applications and live per-agent DM verification",
+    "Microsoft authentication and 0G live evidence",
+    "original canonical phase gates and platform-suitability qualification"
+  ],
+  "nextStep": "Existing player uses Discord /assets action:fund and confirms the exact wallet and bounded test grant, then registers real equipment or claims an available parcel; a second independent participant purchases and verifies delivery/access."
+}

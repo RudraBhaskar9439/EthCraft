@@ -1,0 +1,40 @@
+{
+  "schema": "agentcity.p1.candidate-run.v1",
+  "status": "pass",
+  "name": "agentcity-p1-849d118a",
+  "started_at": "2026-10-29T14:09:21.072916+00:00",
+  "manifest_sha256": "060367a1d480ffb8ec15b6981286eb643645755ac8f3f85d7f329d1b8f373dd5",
+  "sources": {
+    "fixtures/candidates/redstone-compiler/calculator-candidate-v1.json": "d14cc0956831efeb68df4b9aba588e946bbd3b546d6a2d37be02194378b1922b",
+    "fixtures/candidates/redstone-compiler/calculator-tests-candidate-v1.json": "8ec4afb0f561370cf74fc686a3683a01c6d0758fe6f0c15e33c8e1b5926e5897",
+    "tests/world/plugin/CandidatePlugin.java": "48eb0dae19dc19af4b34f033daf944b1073f0f1eb788cf07f7163bd80aae23f9",
+    "tests/world/plugin/plugin.yml": "d20d196039ab5e03e13c4a22e593d529c7255b5ad476504408cd85bd60f7a26c",
+    "tests/world/observe.cjs": "76c4608c8b20f25c10937b17e616233f47911edabb68be7ff07bc99591e35a25",
+    "tests/world/run_candidate.py": "e63e7f1929c1d06ceb897a415ecb8b42174201dad94367d73c7adb1f9b2d8de4",
+    "tests/compatibility/versions.json": "f9ee9617748df8545cadd5469d383b11f68ec43af6c9181d4259fcd1bb913502"
+  },
+  "runtime_lock": {
+    "purpose": "isolated_non_token_fixture",
+    "bind": "127.0.0.1",
+    "port": 25576,
+    "minecraft": "1.21.11",
+    "paper": {
+      "build": 132,
+      "support": "UNSUPPORTED",
+      "support_ended": "2026-06-15",
+      "sha256": "5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba",
+      "url": "https://fill-data.papermc.io/v1/objects/5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba/paper-1.21.11-132.jar"
+    },
+    "java_image": "eclipse-temurin@sha256:5d90b26c0784ccf55af55f97cbcf7f3969c66a06299c93bdc72649219942a48f",
+    "mineflayer": "4.39.0",
+    "pathfinder": "2.4.5",
+    "authentication": "offline_fixture_only",
+    "independent_human_participants": 0,
+    "token_integration": false,
+    "production_supported": false
+  },
+  "independent_humans": 0,
+  "full_phase_gate_passed": false,
+  "plugin_sha256": "e8cc8146a541c72ef389d2a8461312a8a726bd589249cc97ba1c3279726cadc7",
+  "finished_at": "2026-10-29T14:13:30.243528+00:00"
+}

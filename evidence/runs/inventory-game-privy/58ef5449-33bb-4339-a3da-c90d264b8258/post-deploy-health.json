@@ -1,0 +1,88 @@
+{
+  "schema": "agentcity.inventory-game-privy-health.v1",
+  "recordedAt": "2026-11-06T05:18:11.392113+00:00",
+  "status": "pass",
+  "scope": "Read-only live laptop service, original world identity and controlled merchant observations after native Privy activation. No customer wallet creation, approval, signing or transfer.",
+  "backupReference": ".local/mumbai-city/backups/213d7703c23249cabfcf56477753728a",
+  "checks": {
+    "sevenWorldUuidsPreserved": true,
+    "deployedJarMatchesDescriptor": true,
+    "deployedJarMatchesQualifiedCandidate": true,
+    "bankMarkerReady": true,
+    "migrationJournalReady": true,
+    "bankMarkerUnchangedByMenuUpgrade": true,
+    "migrationJournalUnchangedByMenuUpgrade": true,
+    "nativeAvailable": true,
+    "backendAndShopWorkerHealthy": true,
+    "identityOnlyPreserved": true,
+    "nativePrivyRouteEnabled": true,
+    "merchantApprovedOnline": true,
+    "merchantOpsSeedAvailable": true,
+    "noStaleShopRequestBlocking": true
+  },
+  "observed": {
+    "native": {
+      "http": 200,
+      "available": true,
+      "bankReady": true,
+      "bankTemplateVersion": 2
+    },
+    "backend": {
+      "http": 200,
+      "identityConfigured": true,
+      "identityOnly": true,
+      "walletBrowserSetupUnavailable": true,
+      "shopEnabled": true,
+      "privyInGameEnabled": true,
+      "shopWorkerOwnsBackendLease": true
+    },
+    "merchant": {
+      "approvedOnline": true,
+      "nativeBalanceWei": "1248960919998533",
+      "starterSourceMinimumSatisfied": true,
+      "stock": {
+        "http": 200,
+        "operatorSuppliedDemo": true,
+        "bootstrapPreviouslyGranted": true,
+        "items": {
+          "cobblestone": 64,
+          "dirt": 64,
+          "oak_log": 64,
+          "oak_planks": 64,
+          "sand": 64,
+          "stick": 64,
+          "stone": 64,
+          "stone_bricks": 64
+        },
+        "inventoryFingerprintSha256": "b89661d171ec196b54c100f767e8e1d3a000fd857b5ac5a0c61c30090cac2cde"
+      }
+    },
+    "queue": {
+      "total": 1,
+      "shopQueued": 0,
+      "staleShopQueued": 0
+    },
+    "game": {
+      "healthy": true,
+      "onlineCount": 1,
+      "merchantPresent": true,
+      "zeroGAgentPresent": false,
+      "claudeAgentPresent": false
+    },
+    "human": {
+      "online": false,
+      "currentConnectionApproved": false,
+      "walletEnrollmentAndPurchase": "pending actual native user confirmation"
+    }
+  },
+  "hashes": {
+    "deployedJarSha256": "0924d26a81820ebfc32688afc67063293ff7d2cfab4f1b59a2f8a43535fe84b1",
+    "worldIdentityMapSha256": "ff884298a6960486b4569e5b7d9b867ac9380149fbb63250cb788b727f80b599",
+    "bankMarkerSha256": "17f6d8cbc1eff28343dfff15ac48ed144ab3a8ec534dfbe5e80d77af0dd9af4a",
+    "migrationJournalSha256": "43c2f4224b2ee5265cc2b1692763609904444ed55b6fc6ae1e69cf5383091584"
+  },
+  "limitations": [
+    "Actual native wallet enrollment, starter claim and purchase are pending human confirmation.",
+    "Hosted agents will be restarted after the new owner connection is approved; presence is recorded without substituting approval."
+  ]
+}

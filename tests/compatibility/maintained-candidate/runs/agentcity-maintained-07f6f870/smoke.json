@@ -1,0 +1,488 @@
+{
+  "status": "pass",
+  "scope": "isolated non-token maintained candidate smoke; no adoption",
+  "clientVersion": "1.21.11",
+  "scriptedPlayers": true,
+  "independentHumans": 0,
+  "checks": [
+    {
+      "name": "three-translated-1.21.11-logins-and-scoped-sessions",
+      "status": "pass"
+    },
+    {
+      "name": "real-fresh-block-and-exact-stock-read",
+      "status": "pass",
+      "circuitBlocks": 0,
+      "stock": 144
+    },
+    {
+      "name": "receipted-native-placement-and-one-item-consumption",
+      "status": "pass",
+      "operationId": "aeec4288-cdc5-4382-92d2-730174133588",
+      "target": [
+        -7,
+        81,
+        -3
+      ],
+      "remaining": 143
+    },
+    {
+      "name": "actual-unauthorized-native-dig-refused-without-world-or-revision-change",
+      "status": "pass",
+      "target": [
+        -7,
+        81,
+        -3
+      ],
+      "denial": "interaction_not_authorized"
+    },
+    {
+      "name": "candidate-plugin-native-lever-path-toggles-and-restores",
+      "status": "pass"
+    }
+  ],
+  "serverPositions": [
+    {
+      "player": "WorldBuilder",
+      "data": {
+        "teleportId": 1,
+        "x": -13.5,
+        "y": 90,
+        "z": -2.5,
+        "dx": 0,
+        "dy": 0,
+        "dz": 0,
+        "yaw": 0,
+        "pitch": 0,
+        "flags": {
+          "_value": 0,
+          "x": false,
+          "y": false,
+          "z": false,
+          "yaw": false,
+          "pitch": false,
+          "dx": false,
+          "dy": false,
+          "dz": false,
+          "yawDelta": false
+        }
+      }
+    },
+    {
+      "player": "WorldBuilder",
+      "data": {
+        "teleportId": 2,
+        "x": -14.5,
+        "y": 81,
+        "z": 3.5,
+        "dx": 0,
+        "dy": 0,
+        "dz": 0,
+        "yaw": 0,
+        "pitch": 0,
+        "flags": {
+          "_value": 0,
+          "x": false,
+          "y": false,
+          "z": false,
+          "yaw": false,
+          "pitch": false,
+          "dx": false,
+          "dy": false,
+          "dz": false,
+          "yawDelta": false
+        }
+      }
+    },
+    {
+      "player": "WorldRequester",
+      "data": {
+        "teleportId": 1,
+        "x": -13.5,
+        "y": 90,
+        "z": -3.5,
+        "dx": 0,
+        "dy": 0,
+        "dz": 0,
+        "yaw": 0,
+        "pitch": 0,
+        "flags": {
+          "_value": 0,
+          "x": false,
+          "y": false,
+          "z": false,
+          "yaw": false,
+          "pitch": false,
+          "dx": false,
+          "dy": false,
+          "dz": false,
+          "yawDelta": false
+        }
+      }
+    },
+    {
+      "player": "WorldRequester",
+      "data": {
+        "teleportId": 2,
+        "x": 12.5,
+        "y": 81,
+        "z": 5.5,
+        "dx": 0,
+        "dy": 0,
+        "dz": 0,
+        "yaw": 0,
+        "pitch": 0,
+        "flags": {
+          "_value": 0,
+          "x": false,
+          "y": false,
+          "z": false,
+          "yaw": false,
+          "pitch": false,
+          "dx": false,
+          "dy": false,
+          "dz": false,
+          "yawDelta": false
+        }
+      }
+    },
+    {
+      "player": "WorldInspector",
+      "data": {
+        "teleportId": 1,
+        "x": -9.5,
+        "y": 81,
+        "z": 3.5,
+        "dx": 0,
+        "dy": 0,
+        "dz": 0,
+        "yaw": 0,
+        "pitch": 0,
+        "flags": {
+          "_value": 0,
+          "x": false,
+          "y": false,
+          "z": false,
+          "yaw": false,
+          "pitch": false,
+          "dx": false,
+          "dy": false,
+          "dz": false,
+          "yawDelta": false
+        }
+      }
+    },
+    {
+      "player": "WorldInspector",
+      "data": {
+        "teleportId": 2,
+        "x": 12.5,
+        "y": 81,
+        "z": -6.5,
+        "dx": 0,
+        "dy": 0,
+        "dz": 0,
+        "yaw": 0,
+        "pitch": 0,
+        "flags": {
+          "_value": 0,
+          "x": false,
+          "y": false,
+          "z": false,
+          "yaw": false,
+          "pitch": false,
+          "dx": false,
+          "dy": false,
+          "dz": false,
+          "yawDelta": false
+        }
+      }
+    }
+  ],
+  "movement": [
+    {
+      "player": "WorldBuilder",
+      "packet": "position_look",
+      "data": {
+        "x": -13.5,
+        "y": 90,
+        "z": -2.5,
+        "yaw": 0,
+        "pitch": 0,
+        "onGround": false,
+        "time": 0,
+        "flags": {
+          "onGround": false
+        }
+      },
+      "nonfinite": []
+    },
+    {
+      "player": "WorldBuilder",
+      "packet": "position_look",
+      "data": {
+        "x": -14.5,
+        "y": 81,
+        "z": 3.5,
+        "yaw": 0,
+        "pitch": 0,
+        "onGround": false,
+        "time": 0,
+        "flags": {
+          "onGround": false
+        }
+      },
+      "nonfinite": []
+    },
+    {
+      "player": "WorldBuilder",
+      "packet": "position",
+      "data": {
+        "x": -14.5,
+        "y": 81,
+        "z": 3.5,
+        "yaw": 0,
+        "pitch": 0,
+        "onGround": false,
+        "time": 0,
+        "flags": {
+          "onGround": false
+        }
+      },
+      "nonfinite": []
+    },
+    {
+      "player": "WorldBuilder",
+      "packet": "flying",
+      "data": {
+        "onGround": true,
+        "flags": {
+          "onGround": true
+        }
+      },
+      "nonfinite": []
+    },
+    {
+      "player": "WorldBuilder",
+      "packet": "position",
+      "data": {
+        "x": -14.5,
+        "y": 81,
+        "z": 3.5,
+        "yaw": 0,
+        "pitch": 0,
+        "onGround": true,
+        "time": 2477.616167,
+        "flags": {
+          "onGround": true
+        }
+      },
+      "nonfinite": []
+    },
+    {
+      "player": "WorldBuilder",
+      "packet": "position",
+      "data": {
+        "x": -14.5,
+        "y": 81,
+        "z": 3.5,
+        "yaw": 0,
+        "pitch": 0,
+        "onGround": true,
+        "time": 3500.247375,
+        "flags": {
+          "onGround": true
+        }
+      },
+      "nonfinite": []
+    },
+    {
+      "player": "WorldBuilder",
+      "packet": "position",
+      "data": {
+        "x": -14.5,
+        "y": 81,
+        "z": 3.5,
+        "yaw": 0,
+        "pitch": 0,
+        "onGround": true,
+        "time": 4476.620584,
+        "flags": {
+          "onGround": true
+        }
+      },
+      "nonfinite": []
+    },
+    {
+      "player": "WorldBuilder",
+      "packet": "position",
+      "data": {
+        "x": -14.5,
+        "y": 81,
+        "z": 3.5,
+        "yaw": 0,
+        "pitch": 0,
+        "onGround": true,
+        "time": 5452.281709,
+        "flags": {
+          "onGround": true
+        }
+      },
+      "nonfinite": []
+    },
+    {
+      "player": "WorldRequester",
+      "packet": "position_look",
+      "data": {
+        "x": -13.5,
+        "y": 90,
+        "z": -3.5,
+        "yaw": 0,
+        "pitch": 0,
+        "onGround": false,
+        "time": 0,
+        "flags": {
+          "onGround": false
+        }
+      },
+      "nonfinite": []
+    },
+    {
+      "player": "WorldRequester",
+      "packet": "position_look",
+      "data": {
+        "x": 12.5,
+        "y": 81,
+        "z": 5.5,
+        "yaw": 0,
+        "pitch": 0,
+        "onGround": false,
+        "time": 0,
+        "flags": {
+          "onGround": false
+        }
+      },
+      "nonfinite": []
+    },
+    {
+      "player": "WorldBuilder",
+      "packet": "position",
+      "data": {
+        "x": -14.5,
+        "y": 81,
+        "z": 3.5,
+        "yaw": 0,
+        "pitch": 0,
+        "onGround": true,
+        "time": 6476.02325,
+        "flags": {
+          "onGround": true
+        }
+      },
+      "nonfinite": []
+    },
+    {
+      "player": "WorldRequester",
+      "packet": "position",
+      "data": {
+        "x": 12.5,
+        "y": 81,
+        "z": 5.5,
+        "yaw": 0,
+        "pitch": 0,
+        "onGround": false,
+        "time": 0,
+        "flags": {
+          "onGround": false
+        }
+      },
+      "nonfinite": []
+    }
+  ],
+  "worker": {
+    "status": "checkpointed",
+    "completed": 1,
+    "placedThisRun": 1,
+    "readiness": false
+  },
+  "lastNavigation": {
+    "goal": [
+      -7,
+      81,
+      0
+    ],
+    "start": {
+      "position": [
+        -13.5,
+        81,
+        4.5
+      ],
+      "onGround": true
+    },
+    "end": {
+      "position": [
+        -6.574254153580494,
+        81,
+        0.4856230705664668
+      ],
+      "onGround": true
+    },
+    "pathUpdates": [
+      {
+        "status": "success",
+        "pathLength": 7,
+        "visitedNodes": 15,
+        "elapsedMs": 34.58370900000227
+      }
+    ]
+  },
+  "protection": {
+    "beforeRefusals": [
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "awaiting_player_inventory"
+    ],
+    "afterRefusals": [
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "awaiting_player_inventory",
+      "interaction_not_authorized"
+    ]
+  },
+  "nativeLever": {
+    "status": "pass",
+    "server": "26.3-231-8a170a3 (MC: 26.3)",
+    "path": "candidate AgentCity NativeLever.set true then false",
+    "outside_plot_probe_restored": true
+  }
+}

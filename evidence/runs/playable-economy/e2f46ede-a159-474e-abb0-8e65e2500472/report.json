@@ -1,0 +1,48 @@
+{
+  "scope": "Real isolated PostgreSQL; player events, inventory removal receipts and depleted-treasury state are explicit fixtures, no real wallets or Minecraft inventory/payment proof",
+  "status": "pass",
+  "checks": [
+    {
+      "name": "one-time starter grants and durable join retries",
+      "status": "pass"
+    },
+    {
+      "name": "payment preview does not spend and another player cannot confirm",
+      "status": "pass"
+    },
+    {
+      "name": "confirmed transfer conserves coins and repeated confirmations pay zero extra",
+      "status": "pass"
+    },
+    {
+      "name": "immutable operation binding, whole positive amounts and overdraft checks",
+      "status": "pass"
+    },
+    {
+      "name": "confirmation rechecks available funds and no unsupported paid jobs are invented",
+      "status": "pass"
+    },
+    {
+      "name": "finite shop funding is seeded once and sale preparation holds coins without paying",
+      "status": "pass"
+    },
+    {
+      "name": "owner-only sale retry returns original immutable inventory target and operation without grants",
+      "status": "pass"
+    },
+    {
+      "name": "only an exact bound removal receipt settles a sale and receipt replay pays zero extra",
+      "status": "pass"
+    },
+    {
+      "name": "confirmed no-removal cancellation releases only its hold and combined coin supply is conserved",
+      "status": "pass"
+    },
+    {
+      "name": "unfunded or unsupported sales never authorize inventory removal",
+      "status": "pass"
+    }
+  ],
+  "schema": "game_economy_test_bd156f85c3d84846ae670fa85fb30961",
+  "publicTransactions": 0
+}

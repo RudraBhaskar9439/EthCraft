@@ -1,0 +1,12 @@
+{
+  "status": "fail",
+  "stage": "initial_local_setup",
+  "error": "Forge dry-run could not write contracts/.local/playable-market-deployment.json because its parent directory was absent.",
+  "chainId": 31337,
+  "rpcUrl": "http://127.0.0.1:8559",
+  "genesisHash": "0xc84a8cbfcd63c290082682e80a3bf9bacf121e9f06fe6cc942e3d9bcc3fda3ae",
+  "blockNumber": 0,
+  "administratorNonce": 0,
+  "publicTransactions": 0,
+  "recovery": "Verified owned genesis, block 0 and nonce 0 before archiving the original start checkpoint. Added the missing output-directory creation; no chain reset or transaction replay."
+}

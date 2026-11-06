@@ -1,0 +1,12 @@
+{
+  "status": "pass",
+  "check": "same operation and canonical transaction; no second liquidity transaction",
+  "operationId": "14a0a04b-cced-5bfb-8853-df89d72e8de1",
+  "transactionHash": "0x33566ee95c7d246eff2514cebe2c5f4ae62e6b7c142f7fae12de050cc5914a73",
+  "blockNumber": "35",
+  "headBefore": "35",
+  "headAfter": "35",
+  "nonceBefore": 17,
+  "nonceAfter": 17,
+  "verifiedAt": "2026-10-29T22:38:36.235Z"
+}

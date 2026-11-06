@@ -1,0 +1,37 @@
+{
+  "purpose": "Candidate source only; not production adoption",
+  "original_source_sha256": {
+    "src/main/java/org/agentcity/core/Command.java": "d3163d022003ba9910be1b637ea5af42931ba6906a9934fbd7342354d40d2bd6",
+    "src/main/java/org/agentcity/core/DurableJournal.java": "ba72304c0ff74da6c62f55413a2c02eb642b61154297d16361982e9eedbba311",
+    "src/main/java/org/agentcity/core/InspectionReport.java": "430d4460c193191ef2c24c551f7c50b0739ba097b9e0fe8e3072335085e22a92",
+    "src/main/java/org/agentcity/core/JobEngine.java": "973eb4dabfba976d5370b506ff7d498d59c61ca9fc41c2790ce031150672cbde",
+    "src/main/java/org/agentcity/paper/AgentCityPlugin.java": "1a7f4b51af67b78aac0bea58cf64a7f1459fbf44278b93d54ecfd89430f490a6",
+    "src/main/java/org/agentcity/paper/CalculatorInspector.java": "9bb59c890234247c1acbc7b032a5346385c62105e85eebf6e1ba875e895dee56",
+    "src/main/java/org/agentcity/paper/ConstructionAccessPlan.java": "d426dfc8aef8c0af81f3f0a1b1e298ff56039f9b3d32cd56b64213bbd98e84ef",
+    "src/main/java/org/agentcity/paper/NativeLever.java": "9d26227261cd1f0e1b959d249fc3334ffa0ebce770d0ba5a1b9919515ba2a2a0",
+    "src/main/java/org/agentcity/paper/PlotProtection.java": "df08585916684efc6d0f9762bd60984e6c78571e84d9f09451356395a22228db",
+    "src/main/java/org/agentcity/paper/StrictJson.java": "581cd27a7fb4f31165400e29dc9127af4b54692d37749947b48880f0ffe47ad8",
+    "src/main/java/org/agentcity/paper/WorldProjection.java": "43e17a086da02ae7f07e806c25e91debe331c27f79890e024e586fb4453c2a19",
+    "src/main/resources/META-INF/MANIFEST.MF": "d05e74fefa839172bf1ace743da687d2a2a7ba0c862a4a5b349aa50ac77a6a0a",
+    "src/main/resources/plugin.yml": "33d9fc2c72d120facdc85ef635979a25cb1a73c8eee54aed1e44a86e2c803afc"
+  },
+  "candidate_source_sha256": {
+    "src/main/java/org/agentcity/core/Command.java": "d3163d022003ba9910be1b637ea5af42931ba6906a9934fbd7342354d40d2bd6",
+    "src/main/java/org/agentcity/core/DurableJournal.java": "ba72304c0ff74da6c62f55413a2c02eb642b61154297d16361982e9eedbba311",
+    "src/main/java/org/agentcity/core/InspectionReport.java": "430d4460c193191ef2c24c551f7c50b0739ba097b9e0fe8e3072335085e22a92",
+    "src/main/java/org/agentcity/core/JobEngine.java": "973eb4dabfba976d5370b506ff7d498d59c61ca9fc41c2790ce031150672cbde",
+    "src/main/java/org/agentcity/paper/AgentCityPlugin.java": "c9db2c16c892dc8964576a0039e8067d7558137a635f88b1c4ec6153e6b4b743",
+    "src/main/java/org/agentcity/paper/CalculatorInspector.java": "9bb59c890234247c1acbc7b032a5346385c62105e85eebf6e1ba875e895dee56",
+    "src/main/java/org/agentcity/paper/ConstructionAccessPlan.java": "d426dfc8aef8c0af81f3f0a1b1e298ff56039f9b3d32cd56b64213bbd98e84ef",
+    "src/main/java/org/agentcity/paper/NativeLever.java": "302b0067fb68352f245f86f9b78f3e58179d53472dadc6d07ac18a60e4e8c253",
+    "src/main/java/org/agentcity/paper/PlotProtection.java": "df08585916684efc6d0f9762bd60984e6c78571e84d9f09451356395a22228db",
+    "src/main/java/org/agentcity/paper/StrictJson.java": "581cd27a7fb4f31165400e29dc9127af4b54692d37749947b48880f0ffe47ad8",
+    "src/main/java/org/agentcity/paper/WorldProjection.java": "43e17a086da02ae7f07e806c25e91debe331c27f79890e024e586fb4453c2a19",
+    "src/main/resources/META-INF/MANIFEST.MF": "d05e74fefa839172bf1ace743da687d2a2a7ba0c862a4a5b349aa50ac77a6a0a",
+    "src/main/resources/plugin.yml": "33d9fc2c72d120facdc85ef635979a25cb1a73c8eee54aed1e44a86e2c803afc"
+  },
+  "compiler_java_image": "eclipse-temurin@sha256:5d90b26c0784ccf55af55f97cbcf7f3969c66a06299c93bdc72649219942a48f",
+  "class_file_release": 21,
+  "compile_api": "historical Paper1.21.11 pinned API; actual26.3 native linkage tested separately",
+  "candidate_jar_sha256": "781191a016255d21528f904d0b8e0375f8d40341d79036c774630c01efffaa97"
+}

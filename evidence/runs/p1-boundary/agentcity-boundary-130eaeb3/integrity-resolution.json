@@ -1,0 +1,305 @@
+{
+  "schema": "agentcity.archived-execution-integrity-review.v1",
+  "reviewed_at": "2026-10-29T15:49:20.530307+00:00",
+  "reviewer": "/root/p0_platform_prereqs; separate from manifest editor, author of harness",
+  "decision": "exact_executed_archived_source_identity_confirmed_for_case_review",
+  "phase_gate_approved": false,
+  "original_run_report": {
+    "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/run-report.json",
+    "sha256": "1d4ada9dda56d4c95c2fba2d13da63c70327d9f3692a072a1e6a423966a507e9",
+    "status_preserved": "fail"
+  },
+  "incident": {
+    "changed_path": "plugin/src/main/resources/META-INF/MANIFEST.MF",
+    "archived_and_restored_sha256": "d05e74fefa839172bf1ace743da687d2a2a7ba0c862a4a5b349aa50ac77a6a0a",
+    "observed_interim_sha256": "cb96d99d1aed54e8dc87d19dcddafb7393071f74b37d0ee7c1ee68bdb1f9125a",
+    "difference": "Exactly one final LF was removed after artifact build. Manifest-Version and Mojang namespace headers were unchanged. Root restored exact archived bytes. Installed JARs remained frozen and their hashes match the original run report.",
+    "history": "Original outer FAIL and source-integrity finding remain unchanged. This separate identity resolution does not rewrite that status."
+  },
+  "matching_current_source_inputs": [
+    {
+      "path": "config/p0-policy.json",
+      "archived_sha256": "5ccc40514792b3e8079685716b5f616bfe58dad04151b74404bf79205c60e2aa",
+      "current_sha256": "5ccc40514792b3e8079685716b5f616bfe58dad04151b74404bf79205c60e2aa",
+      "current_matches_archived": true
+    },
+    {
+      "path": "fixtures/blueprints/calculator-v1.json",
+      "archived_sha256": "c8704765464a574ec4c797ad78d5294cc167007f66a0abfebd742e0b06711c49",
+      "current_sha256": "c8704765464a574ec4c797ad78d5294cc167007f66a0abfebd742e0b06711c49",
+      "current_matches_archived": true
+    },
+    {
+      "path": "fixtures/test-manifests/calculator-v1.json",
+      "archived_sha256": "cfb5986bf2f5bfea89075ffee8e38eb1652f3fad15503935d1f134a776d309cf",
+      "current_sha256": "cfb5986bf2f5bfea89075ffee8e38eb1652f3fad15503935d1f134a776d309cf",
+      "current_matches_archived": true
+    },
+    {
+      "path": "plugin/src/main/java/org/agentcity/core/Command.java",
+      "archived_sha256": "d3163d022003ba9910be1b637ea5af42931ba6906a9934fbd7342354d40d2bd6",
+      "current_sha256": "d3163d022003ba9910be1b637ea5af42931ba6906a9934fbd7342354d40d2bd6",
+      "current_matches_archived": true
+    },
+    {
+      "path": "plugin/src/main/java/org/agentcity/core/DurableJournal.java",
+      "archived_sha256": "ba72304c0ff74da6c62f55413a2c02eb642b61154297d16361982e9eedbba311",
+      "current_sha256": "ba72304c0ff74da6c62f55413a2c02eb642b61154297d16361982e9eedbba311",
+      "current_matches_archived": true
+    },
+    {
+      "path": "plugin/src/main/java/org/agentcity/core/InspectionReport.java",
+      "archived_sha256": "430d4460c193191ef2c24c551f7c50b0739ba097b9e0fe8e3072335085e22a92",
+      "current_sha256": "430d4460c193191ef2c24c551f7c50b0739ba097b9e0fe8e3072335085e22a92",
+      "current_matches_archived": true
+    },
+    {
+      "path": "plugin/src/main/java/org/agentcity/core/JobEngine.java",
+      "archived_sha256": "973eb4dabfba976d5370b506ff7d498d59c61ca9fc41c2790ce031150672cbde",
+      "current_sha256": "973eb4dabfba976d5370b506ff7d498d59c61ca9fc41c2790ce031150672cbde",
+      "current_matches_archived": true
+    },
+    {
+      "path": "plugin/src/main/java/org/agentcity/paper/AgentCityPlugin.java",
+      "archived_sha256": "5c39bcb29bf61fef86507f0c3fb72a8b65e2fdb06c77debf47dbc0b1c0461929",
+      "current_sha256": "5c39bcb29bf61fef86507f0c3fb72a8b65e2fdb06c77debf47dbc0b1c0461929",
+      "current_matches_archived": true
+    },
+    {
+      "path": "plugin/src/main/java/org/agentcity/paper/CalculatorInspector.java",
+      "archived_sha256": "9bb59c890234247c1acbc7b032a5346385c62105e85eebf6e1ba875e895dee56",
+      "current_sha256": "9bb59c890234247c1acbc7b032a5346385c62105e85eebf6e1ba875e895dee56",
+      "current_matches_archived": true
+    },
+    {
+      "path": "plugin/src/main/java/org/agentcity/paper/NativeLever.java",
+      "archived_sha256": "9d26227261cd1f0e1b959d249fc3334ffa0ebce770d0ba5a1b9919515ba2a2a0",
+      "current_sha256": "9d26227261cd1f0e1b959d249fc3334ffa0ebce770d0ba5a1b9919515ba2a2a0",
+      "current_matches_archived": true
+    },
+    {
+      "path": "plugin/src/main/java/org/agentcity/paper/PlotProtection.java",
+      "archived_sha256": "df08585916684efc6d0f9762bd60984e6c78571e84d9f09451356395a22228db",
+      "current_sha256": "df08585916684efc6d0f9762bd60984e6c78571e84d9f09451356395a22228db",
+      "current_matches_archived": true
+    },
+    {
+      "path": "plugin/src/main/java/org/agentcity/paper/StrictJson.java",
+      "archived_sha256": "581cd27a7fb4f31165400e29dc9127af4b54692d37749947b48880f0ffe47ad8",
+      "current_sha256": "581cd27a7fb4f31165400e29dc9127af4b54692d37749947b48880f0ffe47ad8",
+      "current_matches_archived": true
+    },
+    {
+      "path": "plugin/src/main/java/org/agentcity/paper/WorldProjection.java",
+      "archived_sha256": "43e17a086da02ae7f07e806c25e91debe331c27f79890e024e586fb4453c2a19",
+      "current_sha256": "43e17a086da02ae7f07e806c25e91debe331c27f79890e024e586fb4453c2a19",
+      "current_matches_archived": true
+    },
+    {
+      "path": "plugin/src/main/resources/META-INF/MANIFEST.MF",
+      "archived_sha256": "d05e74fefa839172bf1ace743da687d2a2a7ba0c862a4a5b349aa50ac77a6a0a",
+      "current_sha256": "d05e74fefa839172bf1ace743da687d2a2a7ba0c862a4a5b349aa50ac77a6a0a",
+      "current_matches_archived": true
+    },
+    {
+      "path": "plugin/src/main/resources/plugin.yml",
+      "archived_sha256": "33d9fc2c72d120facdc85ef635979a25cb1a73c8eee54aed1e44a86e2c803afc",
+      "current_sha256": "33d9fc2c72d120facdc85ef635979a25cb1a73c8eee54aed1e44a86e2c803afc",
+      "current_matches_archived": true
+    },
+    {
+      "path": "tests/compatibility/package-lock.json",
+      "archived_sha256": "644d0168c7bd3d406eeb489e55469fdf2f0e70fe40debcdbe18c9f0b1a1fa915",
+      "current_sha256": "644d0168c7bd3d406eeb489e55469fdf2f0e70fe40debcdbe18c9f0b1a1fa915",
+      "current_matches_archived": true
+    },
+    {
+      "path": "tests/compatibility/versions.json",
+      "archived_sha256": "f9ee9617748df8545cadd5469d383b11f68ec43af6c9181d4259fcd1bb913502",
+      "current_sha256": "f9ee9617748df8545cadd5469d383b11f68ec43af6c9181d4259fcd1bb913502",
+      "current_matches_archived": true
+    },
+    {
+      "path": "tests/inspection/build.py",
+      "archived_sha256": "40404f386ba70204b089ffb63485abffdd428e43aa46798b15542751290574d7",
+      "current_sha256": "40404f386ba70204b089ffb63485abffdd428e43aa46798b15542751290574d7",
+      "current_matches_archived": true
+    },
+    {
+      "path": "tests/inspection/core/CoreCoverageCheck.java",
+      "archived_sha256": "d575220c6756b9a40469add390dc2dffe5fbd6f53228a322fdbf6ad65dee4af5",
+      "current_sha256": "d575220c6756b9a40469add390dc2dffe5fbd6f53228a322fdbf6ad65dee4af5",
+      "current_matches_archived": true
+    },
+    {
+      "path": "tests/inspection/core/CoreSelfCheck.java",
+      "archived_sha256": "8f1c712b495d89edef6c7849e8a8565bb990b60b33f87b50ced6b00c7a6bf128",
+      "current_sha256": "8f1c712b495d89edef6c7849e8a8565bb990b60b33f87b50ced6b00c7a6bf128",
+      "current_matches_archived": true
+    },
+    {
+      "path": "tests/inspection/core/coverage-mapping.json",
+      "archived_sha256": "8a72da0f9bff13563e840aed1036fb29acca5f5f960151ec55da285ced2e8e14",
+      "current_sha256": "8a72da0f9bff13563e840aed1036fb29acca5f5f960151ec55da285ced2e8e14",
+      "current_matches_archived": true
+    },
+    {
+      "path": "tests/inspection/core/coverage-results.json",
+      "archived_sha256": "675b22cee2dcb40ce0e47b6d3def3fcd74d41b7be01c6c0b188e2b927bd822f3",
+      "current_sha256": "675b22cee2dcb40ce0e47b6d3def3fcd74d41b7be01c6c0b188e2b927bd822f3",
+      "current_matches_archived": true
+    },
+    {
+      "path": "tests/inspection/core/paper-integration-review.json",
+      "archived_sha256": "8aa860f933a933984341e556c218d38a3dea7be55277dc170ed5233e7a86931e",
+      "current_sha256": "8aa860f933a933984341e556c218d38a3dea7be55277dc170ed5233e7a86931e",
+      "current_matches_archived": true
+    },
+    {
+      "path": "tests/inspection/core/run_coverage.py",
+      "archived_sha256": "936fbff02cce56edff1f9aa8e0c371532ecefea18b0c1799a67698838cea6950",
+      "current_sha256": "936fbff02cce56edff1f9aa8e0c371532ecefea18b0c1799a67698838cea6950",
+      "current_matches_archived": true
+    },
+    {
+      "path": "tests/inspection/coverage.json",
+      "archived_sha256": "076a398b79ae8798eea6fc90c1ea3b2f369d6080f5b02029a719837e832783d1",
+      "current_sha256": "076a398b79ae8798eea6fc90c1ea3b2f369d6080f5b02029a719837e832783d1",
+      "current_matches_archived": true
+    },
+    {
+      "path": "tests/inspection/fixture/WorldFixture.java",
+      "archived_sha256": "ff8325a1a8b02906f7d9dbb7d5f32f669b2b8908857f3cf26d0b1a9c98e2c9fd",
+      "current_sha256": "ff8325a1a8b02906f7d9dbb7d5f32f669b2b8908857f3cf26d0b1a9c98e2c9fd",
+      "current_matches_archived": true
+    },
+    {
+      "path": "tests/inspection/fixture/plugin.yml",
+      "archived_sha256": "dd2faba16a40ac78dec5cfe98ee6b2a5a292606330a9b9a9936e93baa7659c3e",
+      "current_sha256": "dd2faba16a40ac78dec5cfe98ee6b2a5a292606330a9b9a9936e93baa7659c3e",
+      "current_matches_archived": true
+    },
+    {
+      "path": "tests/inspection/paper/InspectorMappingCheck.java",
+      "archived_sha256": "6c00654e5964c2c18636424028a80efacd9314fc76f8c293346e7e77005ad520",
+      "current_sha256": "6c00654e5964c2c18636424028a80efacd9314fc76f8c293346e7e77005ad520",
+      "current_matches_archived": true
+    },
+    {
+      "path": "tests/inspection/paper/StrictJsonCheck.java",
+      "archived_sha256": "84630b3159fc24dcee4c1667391ba5e2b4396f7a5950093a937d4e4d10b7b96e",
+      "current_sha256": "84630b3159fc24dcee4c1667391ba5e2b4396f7a5950093a937d4e4d10b7b96e",
+      "current_matches_archived": true
+    },
+    {
+      "path": "tests/inspection/probe.cjs",
+      "archived_sha256": "71de6e8c61936192611be262665de244b9b1318939059a82c0111956d9f088b7",
+      "current_sha256": "71de6e8c61936192611be262665de244b9b1318939059a82c0111956d9f088b7",
+      "current_matches_archived": true
+    },
+    {
+      "path": "tests/inspection/regressions.json",
+      "archived_sha256": "f22d963071c086c7d5f20643425fa94f5d113890032f56f4d78ed58336ae5648",
+      "current_sha256": "f22d963071c086c7d5f20643425fa94f5d113890032f56f4d78ed58336ae5648",
+      "current_matches_archived": true
+    },
+    {
+      "path": "tests/inspection/run.py",
+      "archived_sha256": "14fddfe73a8c770641ac8bfe640e87ebec38348645b15aa640b06c32498c9fc3",
+      "current_sha256": "14fddfe73a8c770641ac8bfe640e87ebec38348645b15aa640b06c32498c9fc3",
+      "current_matches_archived": true
+    },
+    {
+      "path": "tests/inspection/run_checks.py",
+      "archived_sha256": "8fe2954a961f1171525cc2908a72a2941b80583907beb0aa600f056f3b1138b4",
+      "current_sha256": "8fe2954a961f1171525cc2908a72a2941b80583907beb0aa600f056f3b1138b4",
+      "current_matches_archived": true
+    }
+  ],
+  "later_changed_unexecuted_auxiliary_inputs": [
+    {
+      "path": "tests/inspection/faults/SealedFaults.java.inc",
+      "archived_sha256": "03a6157d438cbb1fca8cc2ec719087e0981148d43ef54cb3c26458b48a749140",
+      "current_sha256": "f3155b0ff59631fb155157f10d3fa6b23397fc66b91721dc75d29cbc5ffb2d33",
+      "current_matches_archived": false,
+      "execution_role": "Unexecuted auxiliary recovery/fault-suite source; not imported by the lifecycle driver/probe or compiled into its plugin/fixture."
+    },
+    {
+      "path": "tests/inspection/faults/augment.py",
+      "archived_sha256": "791177abc941d29fb403d429002673a3998637ca3c003a4bd7459bf598021229",
+      "current_sha256": "ad13a64bbfb48157496157d09fda76d3562da466ee0422329b4a59dfde5b50d2",
+      "current_matches_archived": false,
+      "execution_role": "Unexecuted auxiliary recovery/fault-suite source; not imported by the lifecycle driver/probe or compiled into its plugin/fixture."
+    },
+    {
+      "path": "tests/inspection/faults/probe.cjs",
+      "archived_sha256": "09d3c7147be48382f00bc540f0db74ff513cb6bf71d93207e6f909d63d0a47a2",
+      "current_sha256": "33dbd6502e0935d1f39bfa78a2b2ebfd283cf1882248d10348f359f5dba7c754",
+      "current_matches_archived": false,
+      "execution_role": "Unexecuted auxiliary recovery/fault-suite source; not imported by the lifecycle driver/probe or compiled into its plugin/fixture."
+    },
+    {
+      "path": "tests/inspection/faults/run.py",
+      "archived_sha256": "23f89caf0118487c4c33d0cea3bd876b6f4bfc465e69520b2091d01f78e32d03",
+      "current_sha256": "2f5e0683037c3c3607019b8ee122f64030f937175f2a470cfdb1cf7e5c483116",
+      "current_matches_archived": false,
+      "execution_role": "Unexecuted auxiliary recovery/fault-suite source; not imported by the lifecycle driver/probe or compiled into its plugin/fixture."
+    }
+  ],
+  "tested_artifacts": [
+    {
+      "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/integrity-artifacts/AgentCity.jar",
+      "sha256": "68e4cd79306b2405ba1822ee4b713f6351983bc65f20f7548ec937c60dac077b"
+    },
+    {
+      "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/integrity-artifacts/AgentCityWorldFixture.jar",
+      "sha256": "f0ccdb9be65a5f09a04a8f0220c06fe34abc84941d177b1843be415f63d59285"
+    }
+  ],
+  "observed_results": {
+    "initial_assertion_groups": 41,
+    "restart_lifecycle_assertion_groups": 41,
+    "all_client_groups_status": "pass",
+    "actual_counts": [
+      16,
+      10,
+      16
+    ],
+    "structural_revisions": [
+      1,
+      2,
+      3
+    ],
+    "immutable_reports": [
+      {
+        "run_id": "66d84186-bedf-49c0-9e38-1401ebcffdd6",
+        "revision": 1,
+        "status": "PASS",
+        "sha256": "87a1cf3383a99779cf26ad52aa15a32d0d4758b7e927c9b5fe5f7af4635bc36b"
+      },
+      {
+        "run_id": "ff91399e-cdcb-4d64-a32f-772ad34a042d",
+        "revision": 2,
+        "status": "FAIL",
+        "sha256": "53d5ffcca24a74ca834e98deb02ba1d0f39164e8c9db82091fe5e0a4bef1a168"
+      },
+      {
+        "run_id": "9e43b6f8-b31e-46dd-b1fa-6c257b717a7a",
+        "revision": 3,
+        "status": "PASS",
+        "sha256": "0f66b06722296467df8b2076dd3c3c4ab44ba6bceb6365af67fd21fc4028e686"
+      }
+    ]
+  },
+  "supplemental_git_policy": {
+    "path": ".gitattributes",
+    "sha256": "b8578b461640676c1cbc4d517bfbd610464199831cd36e75920ba2264a15172f",
+    "effect": "Per-file blank-at-EOF whitespace policy prevents cosmetic cleanup of the valid JAR manifest; no runtime behavior change."
+  },
+  "limits": [
+    "Source/artifact identity and retained observations are confirmed for case review; P1 gate is not approved.",
+    "Harness author performed this identity review. Root/another peer must independently review phase completion.",
+    "Four auxiliary fault/recovery helpers changed later; they were not executed by this lifecycle and require separate fresh execution evidence.",
+    "Unexecuted mandatory variants remain unproved. No P2, human, token, funded or production claim."
+  ]
+}

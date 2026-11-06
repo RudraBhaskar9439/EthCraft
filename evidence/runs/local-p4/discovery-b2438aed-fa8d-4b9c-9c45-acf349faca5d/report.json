@@ -1,0 +1,14 @@
+{
+  "schema": "agentcity.local-p4.discovery.v1",
+  "runId": "discovery-b2438aed-fa8d-4b9c-9c45-acf349faca5d",
+  "status": "fail",
+  "checks": [],
+  "independentHumans": 0,
+  "localArkivNode": "http://127.0.0.1:8557",
+  "publicArkivVerified": false,
+  "startedAt": "2026-10-29T22:23:01.332Z",
+  "error": {
+    "message": "Transaction failed: an attribute name holds \"I\" (0x49) at byte 3, which is outside the name charset (\"A\"-\"Z\", \"a\"-\"z\", \"0\"-\"9\", \".\", \"-\" and \"_\", with a letter first)"
+  },
+  "finishedAt": "2026-10-29T22:23:01.526Z"
+}

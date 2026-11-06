@@ -1,0 +1,116 @@
+{
+  "schema": "agentcity.agent-comparison-checkpoint.v1",
+  "recordedAt": "2026-11-05T19:31:51.595844+00:00",
+  "status": "actual_comparison_partial_with_verified_native_recovery",
+  "productionReady": false,
+  "canonicalPhasesPassedByThisWork": false,
+  "originalComparison": {
+    "path": "evidence/runs/agent-comparison/27e46dc2-6060-46d8-87c9-827745c4d1fe/report.json",
+    "sha256": "d99bc9a32426429069f5573b10b0a966bf9de631ca581487f75897074bcf1077",
+    "executedCommit": "290264373370533b35d9040bff11118c56b38267",
+    "status": "partial",
+    "passed": 4,
+    "trials": 6
+  },
+  "nativeRecovery": {
+    "path": "evidence/runs/agent-comparison/27e46dc2-6060-46d8-87c9-827745c4d1fe/recovery-d7e697ae-7688-4cfd-91ec-4e0f46fe3769.json",
+    "sha256": "3428dc7bdc8707d73b54648b07ffa10c111e603ed435d016dbcef4a25f82693e",
+    "status": "complete",
+    "checksPassed": 13,
+    "modelCalls": 0,
+    "originalModelPlanUnchanged": true,
+    "originalComparisonUnchanged": true,
+    "budgetsUnchanged": true
+  },
+  "agents": {
+    "CityAgent2": {
+      "provider": "0g",
+      "model": "glm-4.7",
+      "delivery": "pass",
+      "arch": "pass",
+      "bench": "geometry request timed out; no geometry returned"
+    },
+    "CityAgent3": {
+      "provider": "anthropic",
+      "model": "claude-sonnet-5-5",
+      "delivery": "pass",
+      "arch": "pass",
+      "bench": "valid plan; native task completed separately after movement fix"
+    }
+  },
+  "budgets": {
+    "0g": {
+      "limitUsd": 5,
+      "knownTokenCostEstimateUsd": 0.0123546,
+      "completedRequests": 3,
+      "pendingReservationCount": 1,
+      "reservedUnknownChargeUsd": 0.1893888,
+      "uncommittedAllowanceUsd": 4.7982566
+    },
+    "anthropic": {
+      "limitUsd": 0.25,
+      "knownTokenCostEstimateUsd": 0.054228,
+      "completedRequests": 4,
+      "pendingReservationCount": 0,
+      "reservedUnknownChargeUsd": 0,
+      "uncommittedAllowanceUsd": 0.195772
+    }
+  },
+  "recommendation": "Claude is the practical interactive planner in this measured configuration: all three plans returned in 3.1\u20136.5 seconds. 0G completed baseline tasks at lower recorded cost but needed 46\u201359 seconds and timed out on custom geometry. This is a narrow operational comparison, not universal creative superiority.",
+  "activeLaptop": {
+    "minecraft": "127.0.0.1:25596",
+    "operatorMarketplace": "http://127.0.0.1:8794/",
+    "mumbaiCommand": "/mumbai",
+    "returnCommand": "/lobby",
+    "bothComparisonAgentsConnectedAtVerification": true,
+    "automaticPaidCalls": false,
+    "recoveryDaemon": "scripts/recover_agent_comparison.mjs --serve",
+    "originalNormalWorkerMustRemainStopped": true,
+    "controlledOwnersNotHumanAccounts": true
+  },
+  "credentialSetup": {
+    "actualCredential": "Previously supplied 0G inference key, stored only in ignored local environment file.",
+    "actualCap": "Durable local $5 comparison ledger; original key server-side cap is not asserted.",
+    "newKey": "UI confirms unused AgentCity-laptop-comparison key with $5 total cap; secret was not imported.",
+    "secretsCommitted": false
+  },
+  "pending": [
+    "Reconcile the unknown 0G geometry-request charge before retrying that comparison. Reservation is not confirmed spending.",
+    "The two controlled agents do not establish independent human participation, public onboarding or original phase gates.",
+    "Full Minecraft player flow, general paid-work composition, permitted public product launch and complete host disaster recovery remain in docs/CURRENT_REMAINING_WORK.md."
+  ],
+  "sources": [
+    {
+      "path": "backend/src/inference/zero-g.mjs",
+      "sha256": "a81097b31209f258617c35455f66d2c8a6660010fb016d057dea1e6442e6acc7"
+    },
+    {
+      "path": "backend/src/inference/zero-g-budget.mjs",
+      "sha256": "f6a4797b5caf01d5639adb050afbab1dbee847bd16381624032c7ed9c176954f"
+    },
+    {
+      "path": "backend/src/inference/anthropic.mjs",
+      "sha256": "f653c4ca9a1a02bde501ba01c433e3cd76c348d31cd75171832908740f7fa09e"
+    },
+    {
+      "path": "backend/src/playable/agents.mjs",
+      "sha256": "c97a372b999e8de0b1b19df9c1172d9b4fde29a3f21be4b6f212c4046b13f251"
+    },
+    {
+      "path": "backend/src/playable/intent-planner.mjs",
+      "sha256": "dcc3a5b47616c352458953528c9f0bb5a90112c4203200a3727a45b420424434"
+    },
+    {
+      "path": "backend/src/playable/task-tools.mjs",
+      "sha256": "b7efc2f93f4436a833b685e6e70b5abce3a888f8ce20fadec07b8fef68997a3a"
+    },
+    {
+      "path": "scripts/compare_agents.mjs",
+      "sha256": "6080d70365e63be09bd65ee1b5fab326d441d3cc7d09a364d38da5b8d95854fc"
+    },
+    {
+      "path": "scripts/recover_agent_comparison.mjs",
+      "sha256": "734659ef0105e78ab557944d38a6c8ca553ebd0319cf3241c483650415896f07"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "container": "agentcity-maintained-host-b553ae1b",
+  "containerId": "13a98987c8d510709552d89619575fa23f657dc97479df02ae400193c19c93df",
+  "runtime": "/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/.local/maintained-world/b553ae1bcf404d62956318f77b0ba0ef/runtime",
+  "reinspection": false,
+  "sourceWasNotMounted": true,
+  "sourceFilesUnchangedDuringVerification": true,
+  "sourceMeasurementWindow": "existing clone before retry/start through verification",
+  "sourceMeasurementStartedAt": "2026-10-30T11:41:13.802672+00:00",
+  "sourceFileCount": 224,
+  "sourceManifestBeforeSha256": "7ae1eedb84973843c093bb27c7f559caaaccc9525a2f667ba1978cbd734d90fd",
+  "sourceManifestAfterSha256": "7ae1eedb84973843c093bb27c7f559caaaccc9525a2f667ba1978cbd734d90fd",
+  "sourceManifestAttemptId": "927be14ecccb410aa09b31e4c52349c9"
+}

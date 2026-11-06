@@ -1,0 +1,127 @@
+{
+  "placement": {
+    "operationId": "dde79df0-f523-4560-906d-d082868981f8",
+    "serverId": "local-inspection-server",
+    "jobId": "agentcity-boundary-b0f1eaa4",
+    "agreementVersion": 1,
+    "actorId": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+    "expectedRevision": 0,
+    "authorizationReference": "local-boundary-authorization",
+    "expiresAtMs": 1793301894478,
+    "action": "PLACE",
+    "params": {
+      "x": -2,
+      "y": 82,
+      "z": -4,
+      "state": "minecraft:redstone_wire"
+    }
+  },
+  "expected": {
+    "state": {
+      "revision": 1,
+      "lockMode": "NONE",
+      "quarantined": false,
+      "readyForReview": false,
+      "passValidUntilMs": 0
+    },
+    "refusals": [
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "awaiting_player_inventory",
+      "interaction_not_authorized",
+      "placement_not_authorized",
+      "interaction_not_authorized",
+      "interaction_not_authorized"
+    ],
+    "tick": 1235,
+    "observed_at_ms": 1793301894715,
+    "target": "minecraft:redstone_wire[east=up,north=none,power=14,south=none,west=side]",
+    "stock": {
+      "minecraft:lever": 4,
+      "minecraft:redstone": 18,
+      "minecraft:redstone_lamp": 3,
+      "minecraft:redstone_torch": 37,
+      "minecraft:repeater": 16,
+      "minecraft:stone_bricks": 65
+    },
+    "players": {
+      "WorldBuilder": {
+        "mode": "SURVIVAL",
+        "eye_position": [
+          -1.5,
+          82.62000000476837,
+          -6.500323974827124
+        ],
+        "block_interaction_range": 4.5,
+        "items": {},
+        "position": [
+          -1.5,
+          81,
+          -6.500323974827124
+        ],
+        "uuid": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+        "display_name": "WorldBuilder"
+      },
+      "WorldInspector": {
+        "mode": "SURVIVAL",
+        "eye_position": [
+          12.5,
+          82.62000000476837,
+          5.5
+        ],
+        "block_interaction_range": 4.5,
+        "items": {},
+        "position": [
+          12.5,
+          81,
+          5.5
+        ],
+        "uuid": "563add28-410b-350e-9001-a9be4cc7bd00",
+        "display_name": "WorldInspector"
+      },
+      "WorldRequester": {
+        "mode": "SURVIVAL",
+        "eye_position": [
+          -7.5,
+          82.62000000476837,
+          -6.5000000000006715
+        ],
+        "block_interaction_range": 4.5,
+        "items": {
+          "minecraft:lava_bucket": 1,
+          "minecraft:water_bucket": 1
+        },
+        "position": [
+          -7.5,
+          81,
+          -6.5000000000006715
+        ],
+        "uuid": "a56f0418-1cf4-3f1e-a0ab-9b34ba31f192",
+        "display_name": "WorldRequester"
+      },
+      "WorldStranger": {
+        "mode": "SURVIVAL",
+        "eye_position": [
+          12.50000000000005,
+          82.62000000476837,
+          -3.5
+        ],
+        "block_interaction_range": 4.5,
+        "items": {
+          "minecraft:cobblestone": 1
+        },
+        "position": [
+          12.50000000000005,
+          81,
+          -3.5
+        ],
+        "uuid": "3febf1ac-21e5-394e-bb24-e8731e755afa",
+        "display_name": "WorldBuilder"
+      }
+    },
+    "structural_sha256": "3572edfe0f17bc3197eda7292dcb4b1e365d753e1ca617775ed8f223818c05e2"
+  },
+  "initial_assertion_groups": 41
+}

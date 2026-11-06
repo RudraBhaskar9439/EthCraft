@@ -1,0 +1,128 @@
+Starting org.bukkit.craftbukkit.Main
+[14:43:54 INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.12.1+1-LTS; Eclipse Adoptium Temurin-21.0.12.1+1) on Linux 6.12.76-linuxkit (aarch64)
+[14:43:54 INFO]: [bootstrap] Loading Paper 1.21.11-132-ver/1.21.11@c5eb079 (2026-05-11T11:43:09Z) for Minecraft 1.21.11
+[14:43:54 INFO]: [PluginInitializerManager] Initializing plugins...
+[14:43:54 INFO]: [PluginInitializerManager] Initialized 2 plugins
+[14:43:54 INFO]: [PluginInitializerManager] Bukkit plugins (2):
+ - AgentCity (0.1.0), AgentCityWorldFixture (0.1.0)
+[14:43:54 INFO]: [ReobfServer] Remapping server...
+[14:43:58 INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[14:43:58 INFO]: Found new data pack file/bukkit, loading it automatically
+[14:43:58 INFO]: Found new data pack paper, loading it automatically
+[14:43:59 INFO]: No existing world data, creating new world
+[14:43:59 ERROR]: No key layers in MapLike[{}]
+[14:43:59 INFO]: Loaded 1470 recipes
+[14:43:59 INFO]: Loaded 1584 advancements
+[14:43:59 INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Initialising converters for DataConverter...
+[14:43:59 INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Finished initialising converters for DataConverter in 285.9ms
+[14:43:59 INFO]: Starting minecraft server version 1.21.11
+[14:43:59 INFO]: Loading properties
+[14:44:00 INFO]: This server is running Paper version 1.21.11-132-ver/1.21.11@c5eb079 (2026-05-11T11:43:09Z) (Implementing API version 1.21.11-R0.1-SNAPSHOT)
+[14:44:00 INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[14:44:00 INFO]: Server Ping Player Sample Count: 12
+[14:44:00 INFO]: Using 4 threads for Netty based IO
+[14:44:00 INFO]: [MoonriseCommon] Paper is using 1 worker threads, 1 I/O threads
+[14:44:00 INFO]: Default game type: SURVIVAL
+[14:44:00 INFO]: Generating keypair
+[14:44:00 INFO]: Starting Minecraft server on *:25565
+[14:44:00 INFO]: Paper: Using libdeflate (Linux aarch64) compression from Velocity.
+[14:44:00 INFO]: Paper: Using OpenSSL 3.x.x (Linux aarch64) cipher from Velocity.
+[14:44:00 INFO]: [ReobfServer] Done remapping server in 5916ms.
+[14:44:00 INFO]: [AgentCityWorldFixture] Loading server plugin AgentCityWorldFixture v0.1.0
+[14:44:00 INFO]: [AgentCity] Loading server plugin AgentCity v0.1.0
+[14:44:00 WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[14:44:00 WARN]: The server will make no attempt to authenticate usernames. Beware.
+[14:44:00 WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[14:44:00 WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[14:44:00 INFO]: Preparing level "agentcity-boundary-8f2cb629"
+[14:44:00 ERROR]: No key layers in MapLike[{}]
+[14:44:01 INFO]: Selecting spawn point for world 'minecraft:overworld'...
+[14:44:01 ERROR]: No key layers in MapLike[{}]
+[14:44:01 INFO]: Selecting spawn point for world 'minecraft:the_nether'...
+[14:44:01 ERROR]: No key layers in MapLike[{}]
+[14:44:01 INFO]: Selecting spawn point for world 'minecraft:the_end'...
+[14:44:01 INFO]: Loading 0 persistent chunks for world 'minecraft:overworld'...
+[14:44:01 INFO]: Preparing spawn area: 100%
+[14:44:01 INFO]: Prepared spawn area in 947 ms
+[14:44:01 INFO]: Loading 0 persistent chunks for world 'minecraft:the_nether'...
+[14:44:01 INFO]: Preparing spawn area: 100%
+[14:44:01 INFO]: Prepared spawn area in 661 ms
+[14:44:01 INFO]: Loading 0 persistent chunks for world 'minecraft:the_end'...
+[14:44:01 INFO]: Preparing spawn area: 100%
+[14:44:01 INFO]: Prepared spawn area in 188 ms
+[14:44:01 INFO]: Done preparing level "agentcity-boundary-8f2cb629" (1.078s)
+[14:44:01 INFO]: [AgentCityWorldFixture] Enabling AgentCityWorldFixture v0.1.0
+[14:44:02 WARN]: A manual (plugin-induced) save has been detected while server is configured to auto-save. This may affect performance.
+[14:44:02 INFO]: [AgentCity] Enabling AgentCity v0.1.0
+[14:44:02 INFO]: [AgentCity] Local non-token AgentCity boundary active; control port must be published on host loopback only.
+[14:44:02 INFO]: [spark] Starting background profiler...
+[14:44:02 INFO]: Running delayed init tasks
+[14:44:02 INFO]: Done (8.625s)! For help, type "help"
+[14:44:02 INFO]: *************************************************************************************
+[14:44:02 INFO]: This is the first time you're starting this server.
+[14:44:02 INFO]: It's recommended you read our 'Getting Started' documentation for guidance.
+[14:44:02 INFO]: View this and more helpful information here: https://docs.papermc.io/paper/next-steps
+[14:44:02 INFO]: *************************************************************************************
+[14:44:03 WARN]: *************************************************************************************
+[14:44:03 WARN]: You are running the latest build for your Minecraft version (1.21.11)
+[14:44:03 WARN]: However, you are 6 release(s) behind the latest stable release (26.3)!
+[14:44:03 WARN]: It is recommended that you update as soon as possible
+[14:44:03 WARN]: https://papermc.io/downloads/paper
+[14:44:03 WARN]: *************************************************************************************
+[14:44:03 INFO]: UUID of player WorldBuilder is 43a86a2e-ba2e-350a-a576-a65b67aa87d1
+[14:44:04 INFO]: WorldBuilder joined the game
+[14:44:04 INFO]: WorldBuilder[/172.17.0.1:63972] logged in with entity id 1 at ([agentcity-boundary-8f2cb629]-14.5, 81.0, 3.5)
+[14:44:09 INFO]: UUID of player WorldRequester is a56f0418-1cf4-3f1e-a0ab-9b34ba31f192
+[14:44:09 INFO]: WorldRequester joined the game
+[14:44:09 INFO]: WorldRequester[/172.17.0.1:56962] logged in with entity id 2 at ([agentcity-boundary-8f2cb629]-12.5, 81.0, -6.5)
+[14:44:09 INFO]: WorldRequester has made the advancement [Hot Stuff]
+[14:44:14 INFO]: UUID of player WorldInspector is 563add28-410b-350e-9001-a9be4cc7bd00
+[14:44:14 INFO]: WorldInspector joined the game
+[14:44:14 INFO]: WorldInspector[/172.17.0.1:62184] logged in with entity id 3 at ([agentcity-boundary-8f2cb629]12.5, 81.0, 5.5)
+[14:44:20 INFO]: UUID of player WorldStranger is 3febf1ac-21e5-394e-bb24-e8731e755afa
+[14:44:20 INFO]: WorldStranger joined the game
+[14:44:20 INFO]: WorldStranger[/172.17.0.1:62196] logged in with entity id 4 at ([agentcity-boundary-8f2cb629]12.5, 81.0, -6.5)
+[14:44:20 INFO]: WorldStranger has made the advancement [Stone Age]
+[14:45:02 INFO]: WorldBuilder lost connection: Disconnected
+[14:45:02 INFO]: WorldBuilder left the game
+[14:45:02 INFO]: WorldRequester lost connection: Disconnected
+[14:45:02 INFO]: WorldRequester left the game
+[14:45:02 INFO]: WorldInspector lost connection: Disconnected
+[14:45:02 INFO]: WorldInspector left the game
+[14:45:02 INFO]: WorldStranger lost connection: Disconnected
+[14:45:02 INFO]: WorldStranger left the game
+[14:45:02 INFO]: Stopping server
+[14:45:02 INFO]: [AgentCity] Disabling AgentCity v0.1.0
+[14:45:02 INFO]: [AgentCityWorldFixture] Disabling AgentCityWorldFixture v0.1.0
+[14:45:02 INFO]: Saving players
+[14:45:02 INFO]: Saving worlds
+[14:45:02 INFO]: Saving chunks for level 'ServerLevel[agentcity-boundary-8f2cb629]'/minecraft:overworld
+[14:45:02 INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'agentcity-boundary-8f2cb629'
+[14:45:02 INFO]: [ChunkHolderManager] Halted chunk system for world 'agentcity-boundary-8f2cb629'
+[14:45:02 INFO]: [ChunkHolderManager] Saving all chunkholders for world 'agentcity-boundary-8f2cb629'
+[14:45:03 INFO]: [ChunkHolderManager] Saved 1011 block chunks, 5 entity chunks, 0 poi chunks in world 'agentcity-boundary-8f2cb629' in 0.24s
+[14:45:03 INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'agentcity-boundary-8f2cb629'
+[14:45:03 INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'agentcity-boundary-8f2cb629'
+[14:45:03 INFO]: Saving chunks for level 'ServerLevel[agentcity-boundary-8f2cb629_nether]'/minecraft:the_nether
+[14:45:03 INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'agentcity-boundary-8f2cb629_nether'
+[14:45:03 INFO]: [ChunkHolderManager] Halted chunk system for world 'agentcity-boundary-8f2cb629_nether'
+[14:45:03 INFO]: [ChunkHolderManager] Saving all chunkholders for world 'agentcity-boundary-8f2cb629_nether'
+[14:45:03 INFO]: [ChunkHolderManager] Saved 0 block chunks, 0 entity chunks, 0 poi chunks in world 'agentcity-boundary-8f2cb629_nether' in 0.00s
+[14:45:03 INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'agentcity-boundary-8f2cb629_nether'
+[14:45:03 INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'agentcity-boundary-8f2cb629_nether'
+[14:45:03 INFO]: Saving chunks for level 'ServerLevel[agentcity-boundary-8f2cb629_the_end]'/minecraft:the_end
+[14:45:03 INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'agentcity-boundary-8f2cb629_the_end'
+[14:45:03 INFO]: [ChunkHolderManager] Halted chunk system for world 'agentcity-boundary-8f2cb629_the_end'
+[14:45:03 INFO]: [ChunkHolderManager] Saving all chunkholders for world 'agentcity-boundary-8f2cb629_the_end'
+[14:45:03 INFO]: [ChunkHolderManager] Saved 0 block chunks, 0 entity chunks, 0 poi chunks in world 'agentcity-boundary-8f2cb629_the_end' in 0.00s
+[14:45:03 INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'agentcity-boundary-8f2cb629_the_end'
+[14:45:03 INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'agentcity-boundary-8f2cb629_the_end'
+[14:45:03 INFO]: ThreadedAnvilChunkStorage (agentcity-boundary-8f2cb629): All chunks are saved
+[14:45:03 INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[14:45:03 INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[14:45:03 INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[14:45:03 INFO]: Waiting for all RegionFile I/O tasks to complete...
+[14:45:03 INFO]: All RegionFile I/O tasks to complete
+[14:45:03 INFO]: [MoonriseCommon] Awaiting termination of worker pool for up to 60s...
+[14:45:03 INFO]: [MoonriseCommon] Awaiting termination of I/O pool for up to 60s...
+2026-10-29T14:43:54.169651253Z ServerMain WARN Advanced terminal features are not available in this environment

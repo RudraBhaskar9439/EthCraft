@@ -1,0 +1,1523 @@
+{
+  "schema": "agentcity.p1-regressions.v1",
+  "phase": "P1",
+  "recorded_at": "2026-10-29T15:08:47.224810+00:00",
+  "status": "archived_extended_reference_not_required_by_user_approved_local_P1_MVP",
+  "execution_results_in_this_file": false,
+  "approval_claimed_by_this_file": false,
+  "frozen_original_coverage": {
+    "path": "tests/inspection/coverage.json",
+    "sha256": "076a398b79ae8798eea6fc90c1ea3b2f369d6080f5b02029a719837e832783d1",
+    "required_variant_count": 1041,
+    "requirements_removed_or_waived": 0
+  },
+  "policy": {
+    "path": "config/p0-policy.json",
+    "sha256": "5ccc40514792b3e8079685716b5f616bfe58dad04151b74404bf79205c60e2aa"
+  },
+  "scope": {
+    "obligation_mode": "LOCAL_NO_EXTERNAL_OBLIGATIONS",
+    "funding_signing_acceptance_api_added": false,
+    "independent_humans_or_economic_prerequisites_proved": false
+  },
+  "gate_contract": {
+    "all_regressions_mandatory": true,
+    "unexecuted_can_pass": false,
+    "original_1041_still_mandatory": true,
+    "registration_is_execution": false,
+    "core_support_can_replace_native_evidence": false,
+    "past_failures_and_invalidated_claims_must_be_retained": true,
+    "refreeze_and_rerun": "Include this annex SHA256 and every selected regression digest in each affected immutable acceptance run; never rebind old observations to changed source/timing/manifest."
+  },
+  "summary": {
+    "regression_variant_count": 35,
+    "actual_executions_recorded": 0,
+    "phase_passes_claimed": 0
+  },
+  "variants": [
+    {
+      "variant_id": "P1-REG/armed-break-right-click-repeater",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-012",
+          "case_digest": "a5cf4bb4c9bab6fd844a4e34df70e16b5e8c6f131700eb14ce56b972aa21e1a6"
+        },
+        {
+          "case_id": "P1-013",
+          "case_digest": "772b9331838211211bf494e5eec46ea6e76d2d7b1faf8fac65b2375b278cabd0"
+        },
+        {
+          "case_id": "P1-018",
+          "case_digest": "87f8328bc9adcfa717a97770a0f4080c00b66fd0171509a2993c2a0567f8810d"
+        }
+      ],
+      "verification_layer": "native_paper",
+      "parameters": {
+        "action": "BREAK",
+        "attempt": "RIGHT_CLICK_BLOCK"
+      },
+      "setup": [
+        "Start from a healthy authorized build revision with a real repeater at the exact target.",
+        "Durably prepare BREAK; while the arm is still current, send RIGHT_CLICK_BLOCK from the main hand instead of mining."
+      ],
+      "expected": [
+        "Repeater delay remains unchanged; no block breaks or item charge occurs.",
+        "No native permit is consumed by a property click; refusal is observable, not inferred from absent output."
+      ],
+      "required_evidence": [
+        "Exact pinned environment/plugin/blueprint/test/annex hashes and actual actor UUID/session/role/game mode",
+        "Client position, reachable targeted block/face and a real receiving-side event with action/hand",
+        "Before/after real block properties, actor/stock inventory contents, revision, lock and pending operation",
+        "Exact operation payload/digest and durable intent/receipt or typed refusal/quarantine",
+        "Actual repeater delay and receiving-side cancelled interaction with BOTH block and item denied"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "regression_digest": "bb174be1ee00d9580e16ab99ed46466cac797080c87b8d52f573147407527a70"
+    },
+    {
+      "variant_id": "P1-REG/armed-break-native-mining-positive",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-012",
+          "case_digest": "a5cf4bb4c9bab6fd844a4e34df70e16b5e8c6f131700eb14ce56b972aa21e1a6"
+        },
+        {
+          "case_id": "P1-014",
+          "case_digest": "dcb7da8fc1d1680226b4a06132bb0af5abd102101ab7748acb9af46721f17efa"
+        }
+      ],
+      "verification_layer": "native_paper",
+      "parameters": {
+        "action": "BREAK",
+        "control": "legitimate_mining"
+      },
+      "setup": [
+        "Prepare one supported BREAK and perform a reachable main-hand native mining action in Survival before expiry."
+      ],
+      "expected": [
+        "A real uncancelled BlockBreakEvent follows the matched left click; mining is not suppressed by useItemInHand DENY.",
+        "Exactly the declared removal occurs, no replacement item is created, and one structural revision/receipt is recorded."
+      ],
+      "required_evidence": [
+        "Exact pinned environment/plugin/blueprint/test/annex hashes and actual actor UUID/session/role/game mode",
+        "Client position, reachable targeted block/face and a real receiving-side event with action/hand",
+        "Before/after real block properties, actor/stock inventory contents, revision, lock and pending operation",
+        "Exact operation payload/digest and durable intent/receipt or typed refusal/quarantine",
+        "Native left-click, BlockBreakEvent, item-use result and final receipt"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "regression_digest": "7fe0902b3a621579e260061d8c5ae18f36cbae0e0800949f4a636b786f8ca8c0"
+    },
+    {
+      "variant_id": "P1-REG/armed-place-interactive-reference-repeater",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-012",
+          "case_digest": "a5cf4bb4c9bab6fd844a4e34df70e16b5e8c6f131700eb14ce56b972aa21e1a6"
+        },
+        {
+          "case_id": "P1-013",
+          "case_digest": "772b9331838211211bf494e5eec46ea6e76d2d7b1faf8fac65b2375b278cabd0"
+        },
+        {
+          "case_id": "P1-018",
+          "case_digest": "87f8328bc9adcfa717a97770a0f4080c00b66fd0171509a2993c2a0567f8810d"
+        }
+      ],
+      "verification_layer": "native_paper",
+      "parameters": {
+        "action": "PLACE",
+        "reference": "repeater",
+        "property": "delay"
+      },
+      "setup": [
+        "Choose an approved empty target adjacent to the specified interactive reference and freeze exact positions.",
+        "Prepare PLACE with real authorized material, then issue a reachable main-hand right click against that reference/face."
+      ],
+      "expected": [
+        "The unsafe interactive reference is refused entirely under the scoped whitelist.",
+        "The reference property, stock, target and structural revision remain unchanged; no native permit is consumed."
+      ],
+      "required_evidence": [
+        "Exact pinned environment/plugin/blueprint/test/annex hashes and actual actor UUID/session/role/game mode",
+        "Client position, reachable targeted block/face and a real receiving-side event with action/hand",
+        "Before/after real block properties, actor/stock inventory contents, revision, lock and pending operation",
+        "Exact operation payload/digest and durable intent/receipt or typed refusal/quarantine",
+        "Actual delay before/after and cancelled interact with BOTH block and item denied"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "regression_digest": "9c17dcc0ddd5691597fe040269491a128cbf6d8ff7c7205688ea696a58dac490"
+    },
+    {
+      "variant_id": "P1-REG/armed-place-interactive-reference-lever",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-012",
+          "case_digest": "a5cf4bb4c9bab6fd844a4e34df70e16b5e8c6f131700eb14ce56b972aa21e1a6"
+        },
+        {
+          "case_id": "P1-013",
+          "case_digest": "772b9331838211211bf494e5eec46ea6e76d2d7b1faf8fac65b2375b278cabd0"
+        },
+        {
+          "case_id": "P1-018",
+          "case_digest": "87f8328bc9adcfa717a97770a0f4080c00b66fd0171509a2993c2a0567f8810d"
+        }
+      ],
+      "verification_layer": "native_paper",
+      "parameters": {
+        "action": "PLACE",
+        "reference": "lever",
+        "property": "powered"
+      },
+      "setup": [
+        "Choose an approved empty target adjacent to the specified interactive reference and freeze exact positions.",
+        "Prepare PLACE with real authorized material, then issue a reachable main-hand right click against that reference/face."
+      ],
+      "expected": [
+        "The unsafe interactive reference is refused entirely under the scoped whitelist.",
+        "The reference property, stock, target and structural revision remain unchanged; no native permit is consumed."
+      ],
+      "required_evidence": [
+        "Exact pinned environment/plugin/blueprint/test/annex hashes and actual actor UUID/session/role/game mode",
+        "Client position, reachable targeted block/face and a real receiving-side event with action/hand",
+        "Before/after real block properties, actor/stock inventory contents, revision, lock and pending operation",
+        "Exact operation payload/digest and durable intent/receipt or typed refusal/quarantine",
+        "Actual powered before/after and cancelled interact with BOTH block and item denied"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "regression_digest": "380e33774b646dcb1bf186981feb1a02b3c1e5ecfeeaa30f06eea4489f4d539f"
+    },
+    {
+      "variant_id": "P1-REG/armed-place-interactive-reference-chest",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-012",
+          "case_digest": "a5cf4bb4c9bab6fd844a4e34df70e16b5e8c6f131700eb14ce56b972aa21e1a6"
+        },
+        {
+          "case_id": "P1-013",
+          "case_digest": "772b9331838211211bf494e5eec46ea6e76d2d7b1faf8fac65b2375b278cabd0"
+        },
+        {
+          "case_id": "P1-018",
+          "case_digest": "87f8328bc9adcfa717a97770a0f4080c00b66fd0171509a2993c2a0567f8810d"
+        }
+      ],
+      "verification_layer": "native_paper",
+      "parameters": {
+        "action": "PLACE",
+        "reference": "chest",
+        "property": "open/inventory"
+      },
+      "setup": [
+        "Choose an approved empty target adjacent to the specified interactive reference and freeze exact positions.",
+        "Prepare PLACE with real authorized material, then issue a reachable main-hand right click against that reference/face."
+      ],
+      "expected": [
+        "The unsafe interactive reference is refused entirely under the scoped whitelist.",
+        "The reference property, stock, target and structural revision remain unchanged; no native permit is consumed."
+      ],
+      "required_evidence": [
+        "Exact pinned environment/plugin/blueprint/test/annex hashes and actual actor UUID/session/role/game mode",
+        "Client position, reachable targeted block/face and a real receiving-side event with action/hand",
+        "Before/after real block properties, actor/stock inventory contents, revision, lock and pending operation",
+        "Exact operation payload/digest and durable intent/receipt or typed refusal/quarantine",
+        "Actual open/inventory before/after and cancelled interact with BOTH block and item denied"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "regression_digest": "913afb28fa3cb7a21fc630dc1bfd76ca7ca809c1a42e3262b3e363f58d8ed9c8"
+    },
+    {
+      "variant_id": "P1-REG/armed-place-interactive-reference-redstone_wire",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-012",
+          "case_digest": "a5cf4bb4c9bab6fd844a4e34df70e16b5e8c6f131700eb14ce56b972aa21e1a6"
+        },
+        {
+          "case_id": "P1-013",
+          "case_digest": "772b9331838211211bf494e5eec46ea6e76d2d7b1faf8fac65b2375b278cabd0"
+        },
+        {
+          "case_id": "P1-018",
+          "case_digest": "87f8328bc9adcfa717a97770a0f4080c00b66fd0171509a2993c2a0567f8810d"
+        }
+      ],
+      "verification_layer": "native_paper",
+      "parameters": {
+        "action": "PLACE",
+        "reference": "redstone_wire",
+        "property": "connection shape"
+      },
+      "setup": [
+        "Choose an approved empty target adjacent to the specified interactive reference and freeze exact positions.",
+        "Prepare PLACE with real authorized material, then issue a reachable main-hand right click against that reference/face."
+      ],
+      "expected": [
+        "The unsafe interactive reference is refused entirely under the scoped whitelist.",
+        "The reference property, stock, target and structural revision remain unchanged; no native permit is consumed."
+      ],
+      "required_evidence": [
+        "Exact pinned environment/plugin/blueprint/test/annex hashes and actual actor UUID/session/role/game mode",
+        "Client position, reachable targeted block/face and a real receiving-side event with action/hand",
+        "Before/after real block properties, actor/stock inventory contents, revision, lock and pending operation",
+        "Exact operation payload/digest and durable intent/receipt or typed refusal/quarantine",
+        "Actual connection shape before/after and cancelled interact with BOTH block and item denied"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "regression_digest": "6b50dc85ba39fa8df460542f59aeedbad64849559241d16202be1f33f4e42153"
+    },
+    {
+      "variant_id": "P1-REG/armed-place-stone-top-positive",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-010",
+          "case_digest": "ace80da0d9d5242c42921b180f83662114d9a781dcdd0aee1bb169517535d4e9"
+        },
+        {
+          "case_id": "P1-012",
+          "case_digest": "a5cf4bb4c9bab6fd844a4e34df70e16b5e8c6f131700eb14ce56b972aa21e1a6"
+        },
+        {
+          "case_id": "P1-013",
+          "case_digest": "772b9331838211211bf494e5eec46ea6e76d2d7b1faf8fac65b2375b278cabd0"
+        }
+      ],
+      "verification_layer": "native_paper",
+      "parameters": {
+        "action": "PLACE",
+        "reference": "STONE or STONE_BRICKS",
+        "control": "legitimate_native_placement"
+      },
+      "setup": [
+        "Choose an approved empty target with an allowed solid stone/stone-bricks reference and exactly one plain authorized item.",
+        "Prepare PLACE and send the actual reachable Survival placement using default vanilla block/item interaction."
+      ],
+      "expected": [
+        "A real uncancelled BlockPlaceEvent occurs; mixed DENY/ALLOW interaction flags are not substituted for a placement.",
+        "Exactly one real item is consumed, the approved block state appears, and revision advances once."
+      ],
+      "required_evidence": [
+        "Exact pinned environment/plugin/blueprint/test/annex hashes and actual actor UUID/session/role/game mode",
+        "Client position, reachable targeted block/face and a real receiving-side event with action/hand",
+        "Before/after real block properties, actor/stock inventory contents, revision, lock and pending operation",
+        "Exact operation payload/digest and durable intent/receipt or typed refusal/quarantine",
+        "Native placement event and exact pre/post item quantity"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "regression_digest": "7333036f727e4eda3caf408d802591620db69639622f485d8cf3222d4adb6535"
+    },
+    {
+      "variant_id": "P1-REG/expired-arm-property-click-break-0",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-012",
+          "case_digest": "a5cf4bb4c9bab6fd844a4e34df70e16b5e8c6f131700eb14ce56b972aa21e1a6"
+        },
+        {
+          "case_id": "P1-020",
+          "case_digest": "31b093e9e2fb1f3b881564000eb458507cc36ac3b99e00169fc8981ae28293d5"
+        }
+      ],
+      "verification_layer": "native_paper",
+      "parameters": {
+        "action": "BREAK",
+        "authority_now_minus_expiry_ms": 0
+      },
+      "setup": [
+        "Durably prepare the specified arm while healthy and valid.",
+        "Keep the expired arm entry present at the controlled event barrier; at expiry plus the specified milliseconds, issue a reachable repeater property click."
+      ],
+      "expected": [
+        "Expired arm cannot authorize a property change, native mutation or item charge.",
+        "Refusal must hold even before periodic arm cleanup runs; actual repeater delay is unchanged."
+      ],
+      "required_evidence": [
+        "Exact pinned environment/plugin/blueprint/test/annex hashes and actual actor UUID/session/role/game mode",
+        "Client position, reachable targeted block/face and a real receiving-side event with action/hand",
+        "Before/after real block properties, actor/stock inventory contents, revision, lock and pending operation",
+        "Exact operation payload/digest and durable intent/receipt or typed refusal/quarantine",
+        "Exact authority now/expiry milliseconds and event-before-cleanup ordering"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "regression_digest": "947a23cb2b0269cd800e59f4e7a90912323a6462542e70cdc272ed4ae2be106a"
+    },
+    {
+      "variant_id": "P1-REG/expired-arm-property-click-break-1",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-012",
+          "case_digest": "a5cf4bb4c9bab6fd844a4e34df70e16b5e8c6f131700eb14ce56b972aa21e1a6"
+        },
+        {
+          "case_id": "P1-020",
+          "case_digest": "31b093e9e2fb1f3b881564000eb458507cc36ac3b99e00169fc8981ae28293d5"
+        }
+      ],
+      "verification_layer": "native_paper",
+      "parameters": {
+        "action": "BREAK",
+        "authority_now_minus_expiry_ms": 1
+      },
+      "setup": [
+        "Durably prepare the specified arm while healthy and valid.",
+        "Keep the expired arm entry present at the controlled event barrier; at expiry plus the specified milliseconds, issue a reachable repeater property click."
+      ],
+      "expected": [
+        "Expired arm cannot authorize a property change, native mutation or item charge.",
+        "Refusal must hold even before periodic arm cleanup runs; actual repeater delay is unchanged."
+      ],
+      "required_evidence": [
+        "Exact pinned environment/plugin/blueprint/test/annex hashes and actual actor UUID/session/role/game mode",
+        "Client position, reachable targeted block/face and a real receiving-side event with action/hand",
+        "Before/after real block properties, actor/stock inventory contents, revision, lock and pending operation",
+        "Exact operation payload/digest and durable intent/receipt or typed refusal/quarantine",
+        "Exact authority now/expiry milliseconds and event-before-cleanup ordering"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "regression_digest": "ad4798197b08c49f76d203d123f8351e81e823efe943dbd4ddaf511acbc41154"
+    },
+    {
+      "variant_id": "P1-REG/expired-arm-property-click-place-0",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-012",
+          "case_digest": "a5cf4bb4c9bab6fd844a4e34df70e16b5e8c6f131700eb14ce56b972aa21e1a6"
+        },
+        {
+          "case_id": "P1-020",
+          "case_digest": "31b093e9e2fb1f3b881564000eb458507cc36ac3b99e00169fc8981ae28293d5"
+        }
+      ],
+      "verification_layer": "native_paper",
+      "parameters": {
+        "action": "PLACE",
+        "authority_now_minus_expiry_ms": 0
+      },
+      "setup": [
+        "Durably prepare the specified arm while healthy and valid.",
+        "Keep the expired arm entry present at the controlled event barrier; at expiry plus the specified milliseconds, issue a reachable repeater property click."
+      ],
+      "expected": [
+        "Expired arm cannot authorize a property change, native mutation or item charge.",
+        "Refusal must hold even before periodic arm cleanup runs; actual repeater delay is unchanged."
+      ],
+      "required_evidence": [
+        "Exact pinned environment/plugin/blueprint/test/annex hashes and actual actor UUID/session/role/game mode",
+        "Client position, reachable targeted block/face and a real receiving-side event with action/hand",
+        "Before/after real block properties, actor/stock inventory contents, revision, lock and pending operation",
+        "Exact operation payload/digest and durable intent/receipt or typed refusal/quarantine",
+        "Exact authority now/expiry milliseconds and event-before-cleanup ordering"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "regression_digest": "7ed16408f7a1164f87ebec24395ad9828b9615f48fb8ba095752ccec94639581"
+    },
+    {
+      "variant_id": "P1-REG/expired-arm-property-click-place-1",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-012",
+          "case_digest": "a5cf4bb4c9bab6fd844a4e34df70e16b5e8c6f131700eb14ce56b972aa21e1a6"
+        },
+        {
+          "case_id": "P1-020",
+          "case_digest": "31b093e9e2fb1f3b881564000eb458507cc36ac3b99e00169fc8981ae28293d5"
+        }
+      ],
+      "verification_layer": "native_paper",
+      "parameters": {
+        "action": "PLACE",
+        "authority_now_minus_expiry_ms": 1
+      },
+      "setup": [
+        "Durably prepare the specified arm while healthy and valid.",
+        "Keep the expired arm entry present at the controlled event barrier; at expiry plus the specified milliseconds, issue a reachable repeater property click."
+      ],
+      "expected": [
+        "Expired arm cannot authorize a property change, native mutation or item charge.",
+        "Refusal must hold even before periodic arm cleanup runs; actual repeater delay is unchanged."
+      ],
+      "required_evidence": [
+        "Exact pinned environment/plugin/blueprint/test/annex hashes and actual actor UUID/session/role/game mode",
+        "Client position, reachable targeted block/face and a real receiving-side event with action/hand",
+        "Before/after real block properties, actor/stock inventory contents, revision, lock and pending operation",
+        "Exact operation payload/digest and durable intent/receipt or typed refusal/quarantine",
+        "Exact authority now/expiry milliseconds and event-before-cleanup ordering"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "regression_digest": "6b1a052464f8cbcbe1f7a3ca2bb7d160a09297cb93afb7dec2e2517cc4cea44a"
+    },
+    {
+      "variant_id": "P1-REG/inspection-unlock-race-receipt_before_checker_task",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-015",
+          "case_digest": "f12d7bff27c9021b5b2fe1f13bbc08aaf1415b65e18bf9f6be6ad802617d5397"
+        },
+        {
+          "case_id": "P1-016",
+          "case_digest": "0db1ebf69a7d88387190962b00c48ac476e8c21665eec05356652b89ee74bd6e"
+        },
+        {
+          "case_id": "P1-020",
+          "case_digest": "31b093e9e2fb1f3b881564000eb458507cc36ac3b99e00169fc8981ae28293d5"
+        }
+      ],
+      "verification_layer": "native_paper",
+      "parameters": {
+        "race_window": "receipt_before_checker_task"
+      },
+      "setup": [
+        "Use real scheduled Paper tasks and barriers to freeze the named ownership window.",
+        "Submit an authorized inspector UNLOCK and a builder edit while the INSPECT start/report work overlaps."
+      ],
+      "expected": [
+        "No active or reserved checker continues while its structural lock is NONE.",
+        "UNLOCK refuses while inspection ownership is reserved/running/report persistence is pending, or the checker is stopped and invalidated before any permitted release.",
+        "One owner/revision and coherent final report/refusal remain; no still-usable pass is unlocked."
+      ],
+      "required_evidence": [
+        "Exact pinned environment/plugin/blueprint/test/annex hashes and actual actor UUID/session/role/game mode",
+        "Client position, reachable targeted block/face and a real receiving-side event with action/hand",
+        "Before/after real block properties, actor/stock inventory contents, revision, lock and pending operation",
+        "Exact operation payload/digest and durable intent/receipt or typed refusal/quarantine",
+        "Ordered owner reservation, intent force, checker start/finish, report force, unlock consume and lock states"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "regression_digest": "ae8fc4e5005f372ca131e724f7d8c0cbf48a68dade8cc63ee4d4673bbeb25a63"
+    },
+    {
+      "variant_id": "P1-REG/inspection-unlock-race-unlock_preparation_callback_after_checker_start",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-015",
+          "case_digest": "f12d7bff27c9021b5b2fe1f13bbc08aaf1415b65e18bf9f6be6ad802617d5397"
+        },
+        {
+          "case_id": "P1-016",
+          "case_digest": "0db1ebf69a7d88387190962b00c48ac476e8c21665eec05356652b89ee74bd6e"
+        },
+        {
+          "case_id": "P1-020",
+          "case_digest": "31b093e9e2fb1f3b881564000eb458507cc36ac3b99e00169fc8981ae28293d5"
+        }
+      ],
+      "verification_layer": "native_paper",
+      "parameters": {
+        "race_window": "unlock_preparation_callback_after_checker_start"
+      },
+      "setup": [
+        "Use real scheduled Paper tasks and barriers to freeze the named ownership window.",
+        "Submit an authorized inspector UNLOCK and a builder edit while the INSPECT start/report work overlaps."
+      ],
+      "expected": [
+        "No active or reserved checker continues while its structural lock is NONE.",
+        "UNLOCK refuses while inspection ownership is reserved/running/report persistence is pending, or the checker is stopped and invalidated before any permitted release.",
+        "One owner/revision and coherent final report/refusal remain; no still-usable pass is unlocked."
+      ],
+      "required_evidence": [
+        "Exact pinned environment/plugin/blueprint/test/annex hashes and actual actor UUID/session/role/game mode",
+        "Client position, reachable targeted block/face and a real receiving-side event with action/hand",
+        "Before/after real block properties, actor/stock inventory contents, revision, lock and pending operation",
+        "Exact operation payload/digest and durable intent/receipt or typed refusal/quarantine",
+        "Ordered owner reservation, intent force, checker start/finish, report force, unlock consume and lock states"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "regression_digest": "623c6568e8787e15e71f8d96784e8b3ed6f602b0f65f44b5366c908d3fadd33f"
+    },
+    {
+      "variant_id": "P1-REG/inspection-unlock-race-checker_complete_before_report_durable",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-015",
+          "case_digest": "f12d7bff27c9021b5b2fe1f13bbc08aaf1415b65e18bf9f6be6ad802617d5397"
+        },
+        {
+          "case_id": "P1-016",
+          "case_digest": "0db1ebf69a7d88387190962b00c48ac476e8c21665eec05356652b89ee74bd6e"
+        },
+        {
+          "case_id": "P1-020",
+          "case_digest": "31b093e9e2fb1f3b881564000eb458507cc36ac3b99e00169fc8981ae28293d5"
+        }
+      ],
+      "verification_layer": "native_paper",
+      "parameters": {
+        "race_window": "checker_complete_before_report_durable"
+      },
+      "setup": [
+        "Use real scheduled Paper tasks and barriers to freeze the named ownership window.",
+        "Submit an authorized inspector UNLOCK and a builder edit while the INSPECT start/report work overlaps."
+      ],
+      "expected": [
+        "No active or reserved checker continues while its structural lock is NONE.",
+        "UNLOCK refuses while inspection ownership is reserved/running/report persistence is pending, or the checker is stopped and invalidated before any permitted release.",
+        "One owner/revision and coherent final report/refusal remain; no still-usable pass is unlocked."
+      ],
+      "required_evidence": [
+        "Exact pinned environment/plugin/blueprint/test/annex hashes and actual actor UUID/session/role/game mode",
+        "Client position, reachable targeted block/face and a real receiving-side event with action/hand",
+        "Before/after real block properties, actor/stock inventory contents, revision, lock and pending operation",
+        "Exact operation payload/digest and durable intent/receipt or typed refusal/quarantine",
+        "Ordered owner reservation, intent force, checker start/finish, report force, unlock consume and lock states"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "regression_digest": "974da05a0e9908d350bf4621af92c67844c8cdcb35b5b8ed5deb86b3fb691f55"
+    },
+    {
+      "variant_id": "P1-REG/port-mapping-whole_mapping_translated_inside_plot",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-004",
+          "case_digest": "ba706f4c525493d90a3083c075434c81b69f87643ab524259d0e6749ff7a743f"
+        },
+        {
+          "case_id": "P1-008",
+          "case_digest": "62429b7821e610377c03b8e4ed739d7268ead05e47c77e23b568914a599df543"
+        },
+        {
+          "case_id": "P1-021",
+          "case_digest": "3f91c6aed0aecbf277ab7272f279017ce368579fd9705b3776c388951b8d214e"
+        }
+      ],
+      "verification_layer": "paper_bootstrap",
+      "parameters": {
+        "mapping_mutation": "whole_mapping_translated_inside_plot"
+      },
+      "setup": [
+        "Use a controlled intentionally invalid proposed manifest, with its proposal hash/bootstrap grant updated only to reach the intended property guard.",
+        "Keep canonical accepted artifacts unchanged and label the altered proposal as a refusal fixture.",
+        "Freeze all port/placement coordinates; for wrong-anchor control keep relative geometry and approved material types valid so only the anchor rule distinguishes it."
+      ],
+      "expected": [
+        "Startup rejects the invalid protected-interface mapping before a checker changes inputs.",
+        "A matching relative layout alone cannot point inspection at another/unprotected circuit; no readiness/pass appears."
+      ],
+      "required_evidence": [
+        "Exact invalid proposal bytes/digest plus unchanged canonical hashes",
+        "Actual Paper startup diagnostics identifying bounds/approved-interface/origin/carry-source rejection",
+        "No checker start, input mutation or usable pass"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "regression_digest": "37fc5a309637a5c6757f154dbc13590ef76482c956dfbfbfcdde1f990cb2c7e3"
+    },
+    {
+      "variant_id": "P1-REG/port-mapping-whole_mapping_translated_outside_plot",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-004",
+          "case_digest": "ba706f4c525493d90a3083c075434c81b69f87643ab524259d0e6749ff7a743f"
+        },
+        {
+          "case_id": "P1-008",
+          "case_digest": "62429b7821e610377c03b8e4ed739d7268ead05e47c77e23b568914a599df543"
+        },
+        {
+          "case_id": "P1-021",
+          "case_digest": "3f91c6aed0aecbf277ab7272f279017ce368579fd9705b3776c388951b8d214e"
+        }
+      ],
+      "verification_layer": "paper_bootstrap",
+      "parameters": {
+        "mapping_mutation": "whole_mapping_translated_outside_plot"
+      },
+      "setup": [
+        "Use a controlled intentionally invalid proposed manifest, with its proposal hash/bootstrap grant updated only to reach the intended property guard.",
+        "Keep canonical accepted artifacts unchanged and label the altered proposal as a refusal fixture.",
+        "Freeze all port/placement coordinates; for wrong-anchor control keep relative geometry and approved material types valid so only the anchor rule distinguishes it."
+      ],
+      "expected": [
+        "Startup rejects the invalid protected-interface mapping before a checker changes inputs.",
+        "A matching relative layout alone cannot point inspection at another/unprotected circuit; no readiness/pass appears."
+      ],
+      "required_evidence": [
+        "Exact invalid proposal bytes/digest plus unchanged canonical hashes",
+        "Actual Paper startup diagnostics identifying bounds/approved-interface/origin/carry-source rejection",
+        "No checker start, input mutation or usable pass"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "regression_digest": "f41c4716e3cc8f4bfd38307e71db7220cae087dc0bb1850abdca28b0c6c6f4cf"
+    },
+    {
+      "variant_id": "P1-REG/port-mapping-matching_type_at_unapproved_port",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-004",
+          "case_digest": "ba706f4c525493d90a3083c075434c81b69f87643ab524259d0e6749ff7a743f"
+        },
+        {
+          "case_id": "P1-008",
+          "case_digest": "62429b7821e610377c03b8e4ed739d7268ead05e47c77e23b568914a599df543"
+        },
+        {
+          "case_id": "P1-021",
+          "case_digest": "3f91c6aed0aecbf277ab7272f279017ce368579fd9705b3776c388951b8d214e"
+        }
+      ],
+      "verification_layer": "paper_bootstrap",
+      "parameters": {
+        "mapping_mutation": "matching_type_at_unapproved_port"
+      },
+      "setup": [
+        "Use a controlled intentionally invalid proposed manifest, with its proposal hash/bootstrap grant updated only to reach the intended property guard.",
+        "Keep canonical accepted artifacts unchanged and label the altered proposal as a refusal fixture.",
+        "Freeze all port/placement coordinates; for wrong-anchor control keep relative geometry and approved material types valid so only the anchor rule distinguishes it."
+      ],
+      "expected": [
+        "Startup rejects the invalid protected-interface mapping before a checker changes inputs.",
+        "A matching relative layout alone cannot point inspection at another/unprotected circuit; no readiness/pass appears."
+      ],
+      "required_evidence": [
+        "Exact invalid proposal bytes/digest plus unchanged canonical hashes",
+        "Actual Paper startup diagnostics identifying bounds/approved-interface/origin/carry-source rejection",
+        "No checker start, input mutation or usable pass"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "regression_digest": "30e2c53bc1ff39599d941fd92ef5262825204bd70d1f2bc7282fdc8291ac58f7"
+    },
+    {
+      "variant_id": "P1-REG/port-mapping-all_ports_approved_but_wrong_anchor",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-004",
+          "case_digest": "ba706f4c525493d90a3083c075434c81b69f87643ab524259d0e6749ff7a743f"
+        },
+        {
+          "case_id": "P1-008",
+          "case_digest": "62429b7821e610377c03b8e4ed739d7268ead05e47c77e23b568914a599df543"
+        },
+        {
+          "case_id": "P1-021",
+          "case_digest": "3f91c6aed0aecbf277ab7272f279017ce368579fd9705b3776c388951b8d214e"
+        }
+      ],
+      "verification_layer": "paper_bootstrap",
+      "parameters": {
+        "mapping_mutation": "all_ports_approved_but_wrong_anchor"
+      },
+      "setup": [
+        "Use a controlled intentionally invalid proposed manifest, with its proposal hash/bootstrap grant updated only to reach the intended property guard.",
+        "Keep canonical accepted artifacts unchanged and label the altered proposal as a refusal fixture.",
+        "Freeze all port/placement coordinates; for wrong-anchor control keep relative geometry and approved material types valid so only the anchor rule distinguishes it."
+      ],
+      "expected": [
+        "Startup rejects the invalid protected-interface mapping before a checker changes inputs.",
+        "A matching relative layout alone cannot point inspection at another/unprotected circuit; no readiness/pass appears."
+      ],
+      "required_evidence": [
+        "Exact invalid proposal bytes/digest plus unchanged canonical hashes",
+        "Actual Paper startup diagnostics identifying bounds/approved-interface/origin/carry-source rejection",
+        "No checker start, input mutation or usable pass"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "regression_digest": "cd6b05053def7300d5e15654689f78946ee6e99e5109830816364cdc9954a16b"
+    },
+    {
+      "variant_id": "P1-REG/port-mapping-carry_source_outside_or_wrong_anchor",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-004",
+          "case_digest": "ba706f4c525493d90a3083c075434c81b69f87643ab524259d0e6749ff7a743f"
+        },
+        {
+          "case_id": "P1-008",
+          "case_digest": "62429b7821e610377c03b8e4ed739d7268ead05e47c77e23b568914a599df543"
+        },
+        {
+          "case_id": "P1-021",
+          "case_digest": "3f91c6aed0aecbf277ab7272f279017ce368579fd9705b3776c388951b8d214e"
+        }
+      ],
+      "verification_layer": "paper_bootstrap",
+      "parameters": {
+        "mapping_mutation": "carry_source_outside_or_wrong_anchor"
+      },
+      "setup": [
+        "Use a controlled intentionally invalid proposed manifest, with its proposal hash/bootstrap grant updated only to reach the intended property guard.",
+        "Keep canonical accepted artifacts unchanged and label the altered proposal as a refusal fixture.",
+        "Freeze all port/placement coordinates; for wrong-anchor control keep relative geometry and approved material types valid so only the anchor rule distinguishes it."
+      ],
+      "expected": [
+        "Startup rejects the invalid protected-interface mapping before a checker changes inputs.",
+        "A matching relative layout alone cannot point inspection at another/unprotected circuit; no readiness/pass appears."
+      ],
+      "required_evidence": [
+        "Exact invalid proposal bytes/digest plus unchanged canonical hashes",
+        "Actual Paper startup diagnostics identifying bounds/approved-interface/origin/carry-source rejection",
+        "No checker start, input mutation or usable pass"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "regression_digest": "3defb5e8bb0c7c0b0e481e1720ba68f9e2f92f6420c1cba24438af909d137a4d"
+    },
+    {
+      "variant_id": "P1-REG/initial-custody-nonempty-bot-main_storage",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-010",
+          "case_digest": "ace80da0d9d5242c42921b180f83662114d9a781dcdd0aee1bb169517535d4e9"
+        },
+        {
+          "case_id": "P1-011",
+          "case_digest": "85f30efb37ddaf2bf41c902ab6a92993f5935ea4e8cbfeb85178afa2850caa41"
+        },
+        {
+          "case_id": "P1-012",
+          "case_digest": "a5cf4bb4c9bab6fd844a4e34df70e16b5e8c6f131700eb14ce56b972aa21e1a6"
+        }
+      ],
+      "verification_layer": "native_paper",
+      "parameters": {
+        "role": "BOT",
+        "initial_item_location": "main_storage"
+      },
+      "setup": [
+        "Start an explicitly granted fresh job with no observed-effect baseline and no pending operation.",
+        "Before first reconciliation/command, give the named actor a plain matching personal material in the named inventory location through the isolated fixture setup."
+      ],
+      "expected": [
+        "Initial custody refuses establishing a baseline or mutating job command with nonempty builder/bot inventory.",
+        "Personal material is never silently adopted as job stock and is not deleted; all actual stock/inventory/world counts remain intact."
+      ],
+      "required_evidence": [
+        "Exact pinned environment/plugin/blueprint/test/annex hashes and actual actor UUID/session/role/game mode",
+        "Client position, reachable targeted block/face and a real receiving-side event with action/hand",
+        "Before/after real block properties, actor/stock inventory contents, revision, lock and pending operation",
+        "Exact operation payload/digest and durable intent/receipt or typed refusal/quarantine",
+        "Initial hasObservedEffect=false/pending=null, actual initial item location and unchanged initialized journal/effect baseline"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "regression_digest": "1f670947840e9afe1d953e6e15fd72ce42d6ad82216ae5fe980f05d9e56f3949"
+    },
+    {
+      "variant_id": "P1-REG/initial-custody-nonempty-bot-offhand",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-010",
+          "case_digest": "ace80da0d9d5242c42921b180f83662114d9a781dcdd0aee1bb169517535d4e9"
+        },
+        {
+          "case_id": "P1-011",
+          "case_digest": "85f30efb37ddaf2bf41c902ab6a92993f5935ea4e8cbfeb85178afa2850caa41"
+        },
+        {
+          "case_id": "P1-012",
+          "case_digest": "a5cf4bb4c9bab6fd844a4e34df70e16b5e8c6f131700eb14ce56b972aa21e1a6"
+        }
+      ],
+      "verification_layer": "native_paper",
+      "parameters": {
+        "role": "BOT",
+        "initial_item_location": "offhand"
+      },
+      "setup": [
+        "Start an explicitly granted fresh job with no observed-effect baseline and no pending operation.",
+        "Before first reconciliation/command, give the named actor a plain matching personal material in the named inventory location through the isolated fixture setup."
+      ],
+      "expected": [
+        "Initial custody refuses establishing a baseline or mutating job command with nonempty builder/bot inventory.",
+        "Personal material is never silently adopted as job stock and is not deleted; all actual stock/inventory/world counts remain intact."
+      ],
+      "required_evidence": [
+        "Exact pinned environment/plugin/blueprint/test/annex hashes and actual actor UUID/session/role/game mode",
+        "Client position, reachable targeted block/face and a real receiving-side event with action/hand",
+        "Before/after real block properties, actor/stock inventory contents, revision, lock and pending operation",
+        "Exact operation payload/digest and durable intent/receipt or typed refusal/quarantine",
+        "Initial hasObservedEffect=false/pending=null, actual initial item location and unchanged initialized journal/effect baseline"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "regression_digest": "444c3ae1e16a6244ce4b69c3456a4aa195503caccc396430b6dcf99f6d8bffec"
+    },
+    {
+      "variant_id": "P1-REG/initial-custody-nonempty-builder-main_storage",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-010",
+          "case_digest": "ace80da0d9d5242c42921b180f83662114d9a781dcdd0aee1bb169517535d4e9"
+        },
+        {
+          "case_id": "P1-011",
+          "case_digest": "85f30efb37ddaf2bf41c902ab6a92993f5935ea4e8cbfeb85178afa2850caa41"
+        },
+        {
+          "case_id": "P1-012",
+          "case_digest": "a5cf4bb4c9bab6fd844a4e34df70e16b5e8c6f131700eb14ce56b972aa21e1a6"
+        }
+      ],
+      "verification_layer": "native_paper",
+      "parameters": {
+        "role": "BUILDER",
+        "initial_item_location": "main_storage"
+      },
+      "setup": [
+        "Start an explicitly granted fresh job with no observed-effect baseline and no pending operation.",
+        "Before first reconciliation/command, give the named actor a plain matching personal material in the named inventory location through the isolated fixture setup."
+      ],
+      "expected": [
+        "Initial custody refuses establishing a baseline or mutating job command with nonempty builder/bot inventory.",
+        "Personal material is never silently adopted as job stock and is not deleted; all actual stock/inventory/world counts remain intact."
+      ],
+      "required_evidence": [
+        "Exact pinned environment/plugin/blueprint/test/annex hashes and actual actor UUID/session/role/game mode",
+        "Client position, reachable targeted block/face and a real receiving-side event with action/hand",
+        "Before/after real block properties, actor/stock inventory contents, revision, lock and pending operation",
+        "Exact operation payload/digest and durable intent/receipt or typed refusal/quarantine",
+        "Initial hasObservedEffect=false/pending=null, actual initial item location and unchanged initialized journal/effect baseline"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "regression_digest": "d51c01716e9dc91af68abb83fd70478543d30d5ce0b58611b371adafb0dbc346"
+    },
+    {
+      "variant_id": "P1-REG/initial-custody-nonempty-builder-offhand",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-010",
+          "case_digest": "ace80da0d9d5242c42921b180f83662114d9a781dcdd0aee1bb169517535d4e9"
+        },
+        {
+          "case_id": "P1-011",
+          "case_digest": "85f30efb37ddaf2bf41c902ab6a92993f5935ea4e8cbfeb85178afa2850caa41"
+        },
+        {
+          "case_id": "P1-012",
+          "case_digest": "a5cf4bb4c9bab6fd844a4e34df70e16b5e8c6f131700eb14ce56b972aa21e1a6"
+        }
+      ],
+      "verification_layer": "native_paper",
+      "parameters": {
+        "role": "BUILDER",
+        "initial_item_location": "offhand"
+      },
+      "setup": [
+        "Start an explicitly granted fresh job with no observed-effect baseline and no pending operation.",
+        "Before first reconciliation/command, give the named actor a plain matching personal material in the named inventory location through the isolated fixture setup."
+      ],
+      "expected": [
+        "Initial custody refuses establishing a baseline or mutating job command with nonempty builder/bot inventory.",
+        "Personal material is never silently adopted as job stock and is not deleted; all actual stock/inventory/world counts remain intact."
+      ],
+      "required_evidence": [
+        "Exact pinned environment/plugin/blueprint/test/annex hashes and actual actor UUID/session/role/game mode",
+        "Client position, reachable targeted block/face and a real receiving-side event with action/hand",
+        "Before/after real block properties, actor/stock inventory contents, revision, lock and pending operation",
+        "Exact operation payload/digest and durable intent/receipt or typed refusal/quarantine",
+        "Initial hasObservedEffect=false/pending=null, actual initial item location and unchanged initialized journal/effect baseline"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "regression_digest": "5699edae556a7a552462430bc1302d87c5d3fe3c2e3a72eae338f0fb4eb1c46f"
+    },
+    {
+      "variant_id": "P1-REG/initial-withdraw-after-effect-before-receipt-recovery",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-011",
+          "case_digest": "85f30efb37ddaf2bf41c902ab6a92993f5935ea4e8cbfeb85178afa2850caa41"
+        },
+        {
+          "case_id": "P1-013",
+          "case_digest": "772b9331838211211bf494e5eec46ea6e76d2d7b1faf8fac65b2375b278cabd0"
+        },
+        {
+          "case_id": "P1-014",
+          "case_digest": "dcb7da8fc1d1680226b4a06132bb0af5abd102101ab7748acb9af46721f17efa"
+        }
+      ],
+      "verification_layer": "native_paper",
+      "parameters": {
+        "action": "WITHDRAW",
+        "fault_window": "first_command_after_effect_before_receipt"
+      },
+      "setup": [
+        "Begin a fresh job with empty builder/bot inventory and no completed custody baseline.",
+        "Make the first command a durably prepared real WITHDRAW; terminate after actual transfer and before receipt.",
+        "Restart with the same job/journal/world; join the necessary actors and retry the same operation."
+      ],
+      "expected": [
+        "Nonempty recovered actor inventory is reconciled against the pending first intent rather than rejected as a fresh personal baseline.",
+        "One terminal receipt/replay or explicit uncertainty is retained; no second stock debit, inventory erasure or blind transfer occurs."
+      ],
+      "required_evidence": [
+        "Exact pinned environment/plugin/blueprint/test/annex hashes and actual actor UUID/session/role/game mode",
+        "Client position, reachable targeted block/face and a real receiving-side event with action/hand",
+        "Before/after real block properties, actor/stock inventory contents, revision, lock and pending operation",
+        "Exact operation payload/digest and durable intent/receipt or typed refusal/quarantine",
+        "First-command marker, pending intent, actual transfer boundary, pre/post-restart inventory/chest and reconciled original receipt"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "regression_digest": "e3ad69387fc5e46bacfbba940c6db89b5a16a47d25e3d2295628b04cded084de"
+    },
+    {
+      "variant_id": "P1-REG/native-permission-health-unknown_full_effect_quarantine",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-007",
+          "case_digest": "cfeb566855bcfc65983b527ddcc5afa8ad506dc835deaedea6dd172edaa3b90a"
+        },
+        {
+          "case_id": "P1-018",
+          "case_digest": "87f8328bc9adcfa717a97770a0f4080c00b66fd0171509a2993c2a0567f8810d"
+        },
+        {
+          "case_id": "P1-020",
+          "case_digest": "31b093e9e2fb1f3b881564000eb458507cc36ac3b99e00169fc8981ae28293d5"
+        }
+      ],
+      "verification_layer": "core_and_native_paper",
+      "parameters": {
+        "fault": "unknown_full_effect_quarantine",
+        "actions": [
+          "requester_lever",
+          "builder_stock_open"
+        ]
+      },
+      "setup": [
+        "Establish the named real engine health fault through controlled authority/state evidence.",
+        "Attempt both requester lever operation and assigned builder/bot stock open; preserve each actual native event."
+      ],
+      "expected": [
+        "Native permissions deny while health/protection/time is uncertain, even for configured unrevoked actors.",
+        "Clock correction alone cannot restore a regressed permission; a healthy fresh empty-custody bootstrap can still reconcile.",
+        "No lever/property/stock mutation or fabricated readiness occurs."
+      ],
+      "required_evidence": [
+        "Exact pinned environment/plugin/blueprint/test/annex hashes and actual actor UUID/session/role/game mode",
+        "Client position, reachable targeted block/face and a real receiving-side event with action/hand",
+        "Before/after real block properties, actor/stock inventory contents, revision, lock and pending operation",
+        "Exact operation payload/digest and durable intent/receipt or typed refusal/quarantine",
+        "Core activeActor/health state and actual native event refusal for BOTH lever and chest paths"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "candidate_support_only": "CoreSelfCheck.nativePermissionHealth",
+      "regression_digest": "7751abd1fcfa86dba25c562aa46017b6c81a21064ed306fd8965403d70bb3b0d"
+    },
+    {
+      "variant_id": "P1-REG/native-permission-health-authority_clock_regression",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-007",
+          "case_digest": "cfeb566855bcfc65983b527ddcc5afa8ad506dc835deaedea6dd172edaa3b90a"
+        },
+        {
+          "case_id": "P1-018",
+          "case_digest": "87f8328bc9adcfa717a97770a0f4080c00b66fd0171509a2993c2a0567f8810d"
+        },
+        {
+          "case_id": "P1-020",
+          "case_digest": "31b093e9e2fb1f3b881564000eb458507cc36ac3b99e00169fc8981ae28293d5"
+        }
+      ],
+      "verification_layer": "core_and_native_paper",
+      "parameters": {
+        "fault": "authority_clock_regression",
+        "actions": [
+          "requester_lever",
+          "builder_stock_open"
+        ]
+      },
+      "setup": [
+        "Establish the named real engine health fault through controlled authority/state evidence.",
+        "Attempt both requester lever operation and assigned builder/bot stock open; preserve each actual native event."
+      ],
+      "expected": [
+        "Native permissions deny while health/protection/time is uncertain, even for configured unrevoked actors.",
+        "Clock correction alone cannot restore a regressed permission; a healthy fresh empty-custody bootstrap can still reconcile.",
+        "No lever/property/stock mutation or fabricated readiness occurs."
+      ],
+      "required_evidence": [
+        "Exact pinned environment/plugin/blueprint/test/annex hashes and actual actor UUID/session/role/game mode",
+        "Client position, reachable targeted block/face and a real receiving-side event with action/hand",
+        "Before/after real block properties, actor/stock inventory contents, revision, lock and pending operation",
+        "Exact operation payload/digest and durable intent/receipt or typed refusal/quarantine",
+        "Core activeActor/health state and actual native event refusal for BOTH lever and chest paths"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "candidate_support_only": "CoreSelfCheck.nativePermissionHealth",
+      "regression_digest": "cff97f544589a355b6fc43dcb50bcaa088b0c88177bbd7a0ce84b5bcd252194c"
+    },
+    {
+      "variant_id": "P1-REG/native-permission-health-clock_corrected_after_regression",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-007",
+          "case_digest": "cfeb566855bcfc65983b527ddcc5afa8ad506dc835deaedea6dd172edaa3b90a"
+        },
+        {
+          "case_id": "P1-018",
+          "case_digest": "87f8328bc9adcfa717a97770a0f4080c00b66fd0171509a2993c2a0567f8810d"
+        },
+        {
+          "case_id": "P1-020",
+          "case_digest": "31b093e9e2fb1f3b881564000eb458507cc36ac3b99e00169fc8981ae28293d5"
+        }
+      ],
+      "verification_layer": "core_and_native_paper",
+      "parameters": {
+        "fault": "clock_corrected_after_regression",
+        "actions": [
+          "requester_lever",
+          "builder_stock_open"
+        ]
+      },
+      "setup": [
+        "Establish the named real engine health fault through controlled authority/state evidence.",
+        "Attempt both requester lever operation and assigned builder/bot stock open; preserve each actual native event."
+      ],
+      "expected": [
+        "Native permissions deny while health/protection/time is uncertain, even for configured unrevoked actors.",
+        "Clock correction alone cannot restore a regressed permission; a healthy fresh empty-custody bootstrap can still reconcile.",
+        "No lever/property/stock mutation or fabricated readiness occurs."
+      ],
+      "required_evidence": [
+        "Exact pinned environment/plugin/blueprint/test/annex hashes and actual actor UUID/session/role/game mode",
+        "Client position, reachable targeted block/face and a real receiving-side event with action/hand",
+        "Before/after real block properties, actor/stock inventory contents, revision, lock and pending operation",
+        "Exact operation payload/digest and durable intent/receipt or typed refusal/quarantine",
+        "Core activeActor/health state and actual native event refusal for BOTH lever and chest paths"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "candidate_support_only": "CoreSelfCheck.nativePermissionHealth",
+      "regression_digest": "05ba9e36d538c5e69edb73b6cdca91813bd84efa00b5765eab65839d8217403a"
+    },
+    {
+      "variant_id": "P1-REG/native-permission-health-restart_before_reconciliation",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-007",
+          "case_digest": "cfeb566855bcfc65983b527ddcc5afa8ad506dc835deaedea6dd172edaa3b90a"
+        },
+        {
+          "case_id": "P1-018",
+          "case_digest": "87f8328bc9adcfa717a97770a0f4080c00b66fd0171509a2993c2a0567f8810d"
+        },
+        {
+          "case_id": "P1-020",
+          "case_digest": "31b093e9e2fb1f3b881564000eb458507cc36ac3b99e00169fc8981ae28293d5"
+        }
+      ],
+      "verification_layer": "core_and_native_paper",
+      "parameters": {
+        "fault": "restart_before_reconciliation",
+        "actions": [
+          "requester_lever",
+          "builder_stock_open"
+        ]
+      },
+      "setup": [
+        "Establish the named real engine health fault through controlled authority/state evidence.",
+        "Attempt both requester lever operation and assigned builder/bot stock open; preserve each actual native event."
+      ],
+      "expected": [
+        "Native permissions deny while health/protection/time is uncertain, even for configured unrevoked actors.",
+        "Clock correction alone cannot restore a regressed permission; a healthy fresh empty-custody bootstrap can still reconcile.",
+        "No lever/property/stock mutation or fabricated readiness occurs."
+      ],
+      "required_evidence": [
+        "Exact pinned environment/plugin/blueprint/test/annex hashes and actual actor UUID/session/role/game mode",
+        "Client position, reachable targeted block/face and a real receiving-side event with action/hand",
+        "Before/after real block properties, actor/stock inventory contents, revision, lock and pending operation",
+        "Exact operation payload/digest and durable intent/receipt or typed refusal/quarantine",
+        "Core activeActor/health state and actual native event refusal for BOTH lever and chest paths"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "candidate_support_only": "CoreSelfCheck.nativePermissionHealth",
+      "regression_digest": "8942446db2f4665696f06ddf29237f5889f60eb47dc98e372ada80308b378436"
+    },
+    {
+      "variant_id": "P1-REG/disk-admission-threshold--1",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-012",
+          "case_digest": "a5cf4bb4c9bab6fd844a4e34df70e16b5e8c6f131700eb14ce56b972aa21e1a6"
+        },
+        {
+          "case_id": "P1-014",
+          "case_digest": "dcb7da8fc1d1680226b4a06132bb0af5abd102101ab7748acb9af46721f17efa"
+        },
+        {
+          "case_id": "P1-023",
+          "case_digest": "17f8f980edab49e7eb541aa1b5f897cd83f356a09fc7d5d5cf84064acb3c62f7"
+        }
+      ],
+      "verification_layer": "core",
+      "parameters": {
+        "minimum_free_bytes": 1073741824,
+        "delta_bytes": -1
+      },
+      "setup": [
+        "Use a controlled journal space probe returning exactly the declared minimum free bytes plus delta.",
+        "Prepare a consequential command; record the thread on which free space is probed."
+      ],
+      "expected": [
+        "Below minimum: no durable intent/native permit; typed journal failure/quarantine and unchanged revision.",
+        "At/above minimum: durable preparation is permitted; filesystem query occurs only on the journal worker.",
+        "Injected threshold tests establish core logic, not actual native filesystem pressure."
+      ],
+      "required_evidence": [
+        "Pinned core/runtime hashes",
+        "Exact injected bytes, probe thread, journal frames/prepare/consume results and revision"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "candidate_support_only": "CoreSelfCheck.diskAdmission",
+      "regression_digest": "fb6b75a4c687637bcb4bfabd316b5fe890379fd6c96add0343aec10f0ce34714"
+    },
+    {
+      "variant_id": "P1-REG/disk-admission-threshold-0",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-012",
+          "case_digest": "a5cf4bb4c9bab6fd844a4e34df70e16b5e8c6f131700eb14ce56b972aa21e1a6"
+        },
+        {
+          "case_id": "P1-014",
+          "case_digest": "dcb7da8fc1d1680226b4a06132bb0af5abd102101ab7748acb9af46721f17efa"
+        },
+        {
+          "case_id": "P1-023",
+          "case_digest": "17f8f980edab49e7eb541aa1b5f897cd83f356a09fc7d5d5cf84064acb3c62f7"
+        }
+      ],
+      "verification_layer": "core",
+      "parameters": {
+        "minimum_free_bytes": 1073741824,
+        "delta_bytes": 0
+      },
+      "setup": [
+        "Use a controlled journal space probe returning exactly the declared minimum free bytes plus delta.",
+        "Prepare a consequential command; record the thread on which free space is probed."
+      ],
+      "expected": [
+        "Below minimum: no durable intent/native permit; typed journal failure/quarantine and unchanged revision.",
+        "At/above minimum: durable preparation is permitted; filesystem query occurs only on the journal worker.",
+        "Injected threshold tests establish core logic, not actual native filesystem pressure."
+      ],
+      "required_evidence": [
+        "Pinned core/runtime hashes",
+        "Exact injected bytes, probe thread, journal frames/prepare/consume results and revision"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "candidate_support_only": "CoreSelfCheck.diskAdmission",
+      "regression_digest": "2c63d25c83c1264ec574029c09f9833c43e342b2e981bf76b46f5123707bc13a"
+    },
+    {
+      "variant_id": "P1-REG/disk-admission-threshold-1",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-012",
+          "case_digest": "a5cf4bb4c9bab6fd844a4e34df70e16b5e8c6f131700eb14ce56b972aa21e1a6"
+        },
+        {
+          "case_id": "P1-014",
+          "case_digest": "dcb7da8fc1d1680226b4a06132bb0af5abd102101ab7748acb9af46721f17efa"
+        },
+        {
+          "case_id": "P1-023",
+          "case_digest": "17f8f980edab49e7eb541aa1b5f897cd83f356a09fc7d5d5cf84064acb3c62f7"
+        }
+      ],
+      "verification_layer": "core",
+      "parameters": {
+        "minimum_free_bytes": 1073741824,
+        "delta_bytes": 1
+      },
+      "setup": [
+        "Use a controlled journal space probe returning exactly the declared minimum free bytes plus delta.",
+        "Prepare a consequential command; record the thread on which free space is probed."
+      ],
+      "expected": [
+        "Below minimum: no durable intent/native permit; typed journal failure/quarantine and unchanged revision.",
+        "At/above minimum: durable preparation is permitted; filesystem query occurs only on the journal worker.",
+        "Injected threshold tests establish core logic, not actual native filesystem pressure."
+      ],
+      "required_evidence": [
+        "Pinned core/runtime hashes",
+        "Exact injected bytes, probe thread, journal frames/prepare/consume results and revision"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "candidate_support_only": "CoreSelfCheck.diskAdmission",
+      "regression_digest": "42b33911e39760f19e1fd885ee5bc8bdcdb8ff9e88e108992e456cce4c013a68"
+    },
+    {
+      "variant_id": "P1-REG/disk-actual-reserve-refusal",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-012",
+          "case_digest": "a5cf4bb4c9bab6fd844a4e34df70e16b5e8c6f131700eb14ce56b972aa21e1a6"
+        },
+        {
+          "case_id": "P1-014",
+          "case_digest": "dcb7da8fc1d1680226b4a06132bb0af5abd102101ab7748acb9af46721f17efa"
+        },
+        {
+          "case_id": "P1-023",
+          "case_digest": "17f8f980edab49e7eb541aa1b5f897cd83f356a09fc7d5d5cf84064acb3c62f7"
+        }
+      ],
+      "verification_layer": "native_paper",
+      "parameters": {
+        "minimum_free_bytes": 1073741824
+      },
+      "setup": [
+        "Use only a bounded, owned disposable runtime filesystem whose actual FileStore usable bytes are below 1GiB; never fill the user workspace disk.",
+        "Attempt a real current-authorized stock/mutation command with all other preconditions valid."
+      ],
+      "expected": [
+        "The real filesystem admission reserve refuses before a durable intent/native permit and no stock/world/revision change occurs.",
+        "A stale/mock probe result cannot be represented as actual disk-pressure evidence."
+      ],
+      "required_evidence": [
+        "Exact pinned environment/plugin/blueprint/test/annex hashes and actual actor UUID/session/role/game mode",
+        "Client position, reachable targeted block/face and a real receiving-side event with action/hand",
+        "Before/after real block properties, actor/stock inventory contents, revision, lock and pending operation",
+        "Exact operation payload/digest and durable intent/receipt or typed refusal/quarantine",
+        "Actual FileStore identity/usable bytes immediately before preparation, journal frames, no native authorization and retained refusal"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "regression_digest": "90dc07c08dc789a7fa4534add038136c3603d4992b006ab3a83ac9d7dbfad591"
+    },
+    {
+      "variant_id": "P1-REG/disk-reserve-drop-after-consume-keeps-receipt",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-013",
+          "case_digest": "772b9331838211211bf494e5eec46ea6e76d2d7b1faf8fac65b2375b278cabd0"
+        },
+        {
+          "case_id": "P1-014",
+          "case_digest": "dcb7da8fc1d1680226b4a06132bb0af5abd102101ab7748acb9af46721f17efa"
+        },
+        {
+          "case_id": "P1-023",
+          "case_digest": "17f8f980edab49e7eb541aa1b5f897cd83f356a09fc7d5d5cf84064acb3c62f7"
+        }
+      ],
+      "verification_layer": "core_and_native_paper",
+      "parameters": {
+        "minimum_free_bytes": 1073741824
+      },
+      "setup": [
+        "Prepare above the actual reserve; after the real native effect lower free space below reserve on the same bounded owned filesystem, retaining ample bytes for the receipt.",
+        "Observe actual world/inventory and complete the existing operation."
+      ],
+      "expected": [
+        "A reserve drop does not deliberately suppress the already-applied operation receipt; the next new intent refuses.",
+        "Receipt describes observed effect only. Restart re-observation must reconcile or quarantine; no atomic Minecraft persistence is inferred."
+      ],
+      "required_evidence": [
+        "Exact pinned environment/plugin/blueprint/test/annex hashes and actual actor UUID/session/role/game mode",
+        "Client position, reachable targeted block/face and a real receiving-side event with action/hand",
+        "Before/after real block properties, actor/stock inventory contents, revision, lock and pending operation",
+        "Exact operation payload/digest and durable intent/receipt or typed refusal/quarantine",
+        "Reserve values/ordering, actual effect, retained receipt, next admission refusal and post-restart observation"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "candidate_support_only": "CoreSelfCheck.diskAdmission",
+      "regression_digest": "4505abb3bd1239158d2ad28a533d7b86169a1a37b48b1690d96aa9ecd2a30d77"
+    },
+    {
+      "variant_id": "P1-REG/receipt-append-io-failure-after-consume",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-013",
+          "case_digest": "772b9331838211211bf494e5eec46ea6e76d2d7b1faf8fac65b2375b278cabd0"
+        },
+        {
+          "case_id": "P1-014",
+          "case_digest": "dcb7da8fc1d1680226b4a06132bb0af5abd102101ab7748acb9af46721f17efa"
+        },
+        {
+          "case_id": "P1-020",
+          "case_digest": "31b093e9e2fb1f3b881564000eb458507cc36ac3b99e00169fc8981ae28293d5"
+        }
+      ],
+      "verification_layer": "core",
+      "parameters": {},
+      "setup": [
+        "Durably prepare and consume a temporary test operation.",
+        "Close only that owned test journal FileChannel before completing the observed effect, injecting an actual append IOException without production API changes.",
+        "Reopen the intact intent and reconcile the supplied observed after-effect."
+      ],
+      "expected": [
+        "No APPLIED acknowledgement is returned for the failed append; authority quarantines and native permission denies.",
+        "Durable intent survives unchanged; recovery records exactly one observed terminal outcome and exact retry replays without reapplying.",
+        "This core fault is not evidence of a physical Minecraft disk failure or native world durability."
+      ],
+      "required_evidence": [
+        "Exact source/runtime hashes, failed receipt result, unchanged original intent bytes, quarantine and recovery/replay results"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "candidate_support_only": "CoreSelfCheck.receiptWriteFailure",
+      "regression_digest": "274b4e6aa0332d7e789312d93405ef107072c3f94e99edee39684e5254c5840b"
+    },
+    {
+      "variant_id": "P1-REG/harness-mixed-deny-allow-is-not-native-refusal",
+      "mandatory": true,
+      "canonical_cases": [
+        {
+          "case_id": "P1-010",
+          "case_digest": "ace80da0d9d5242c42921b180f83662114d9a781dcdd0aee1bb169517535d4e9"
+        },
+        {
+          "case_id": "P1-012",
+          "case_digest": "a5cf4bb4c9bab6fd844a4e34df70e16b5e8c6f131700eb14ce56b972aa21e1a6"
+        }
+      ],
+      "verification_layer": "harness_unit",
+      "parameters": {
+        "use_interacted_block": "DENY",
+        "use_item_in_hand": "ALLOW"
+      },
+      "setup": [
+        "Supply a captured/interpreted interact result with block=DENY and item=ALLOW, with no cancelled native place/break/bucket event."
+      ],
+      "expected": [
+        "Denial classifier returns false; the mixed interaction cannot pass a Creative/native-denial verification variant.",
+        "Native refusal needs a real cancelled consequential event or a reached interact with BOTH block and item denied, plus unchanged state."
+      ],
+      "required_evidence": [
+        "Classifier selfcheck output and original raw event rows; no native execution inferred"
+      ],
+      "execution": {
+        "status": "NOT_EXECUTED_IN_THIS_MANIFEST",
+        "execution_claimed": false
+      },
+      "regression_digest": "d868faef8af4dcd3f1ba7a88dfbe160be00d36e809549d27f529153bd336cb78"
+    }
+  ],
+  "user_scope_override": "See planning/p1-mvp-scope-2026-10-29.json. No expanded-sweep execution or approval is implied."
+}

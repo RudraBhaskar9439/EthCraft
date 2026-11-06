@@ -1,0 +1,36 @@
+{
+  "schema": "agentcity.discord-planning-review.v1",
+  "recordedAt": "2026-10-31T12:28:50.999Z",
+  "status": "pass",
+  "scope": "Planning and documentation integrity only; no product phase certification",
+  "files": {
+    "planning/scope.json": "b27a281b8b05e60b19509a5886bee568a4b3a39200cf87528667af5ede55b9df",
+    "planning/phases.json": "3d0259b0a87071dac29d926cae95a9bd44740e1dc3d9157a2fc375fa582b9299",
+    "docs/UPSTREAM_REUSE.md": "9548d06dffe3c45cbda00ea3c79aacef5cb81104f87068d753a15a3b473c3f05",
+    "docs/DISCORD_ONBOARDING.md": "75532b247326db7ea08b76d95db8eb62bdecf0dd0ca0b6217c468a8ae587c9fc"
+  },
+  "commands": [
+    {
+      "command": "wsl -d Ubuntu --exec /usr/bin/python3 -m unittest discover -s tests -v",
+      "status": "pass",
+      "tests": 56
+    },
+    {
+      "command": "wsl -d Ubuntu --exec /usr/bin/python3 scripts/check_plan.py",
+      "status": "pass",
+      "phases": 11,
+      "scenarioFamilies": 270,
+      "upstreams": 18
+    }
+  ],
+  "canonicalEvidenceEdited": false,
+  "gateSemanticsEdited": false,
+  "productTestsExecutedByTheseChecks": false,
+  "pending": [
+    "Actual Discord credentials/OAuth/message-delivery verification",
+    "Independent human onboarding and acceptance",
+    "Microsoft mixed-login authentication on current offline-mode host",
+    "Funding/execution integration for accepted work quotes",
+    "Original canonical live gate and release requirements remain unchanged"
+  ]
+}

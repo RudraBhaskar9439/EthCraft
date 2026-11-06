@@ -1,0 +1,240 @@
+{
+  "status": "renewed implementer assessment; separate review pending",
+  "cases": [
+    {
+      "case_id": "P0-001",
+      "origin_case_id": "P0-002",
+      "area": "Version compatibility",
+      "result": "pass",
+      "verification_scope": "approved local P0 technical readiness only",
+      "detail": "Seven actual compatibility groups pass with explicit server-confirmed navigation; historical local environment only.",
+      "required_subcases": 7,
+      "passed_subcases": 7,
+      "evidence": [
+        "tests/compatibility/versions.json",
+        "evidence/runs/p0-local-compatibility/attempt-08/run-report.json",
+        "evidence/runs/p0-local-compatibility/attempt-08/probe-report.json",
+        "evidence/runs/p0-local-compatibility/renewal-20261029/environment.json"
+      ]
+    },
+    {
+      "case_id": "P0-002",
+      "origin_case_id": "P0-003",
+      "area": "Blueprint definition",
+      "result": "pass",
+      "verification_scope": "approved local P0 technical readiness only",
+      "detail": "Complete candidate data, transformed coordinates, material counts, source hashes and expected-input manifest pass static review/tests. Physical calculator validity remains P1.",
+      "required_subcases": 3,
+      "passed_subcases": 3,
+      "evidence": [
+        "fixtures/candidates/redstone-compiler/calculator-candidate-v1.json",
+        "fixtures/candidates/redstone-compiler/calculator-tests-candidate-v1.json",
+        "fixtures/candidates/redstone-compiler/LICENSE",
+        "evidence/runs/p0-local-compatibility/unit-tests.json"
+      ]
+    },
+    {
+      "case_id": "P0-003",
+      "origin_case_id": "P0-005",
+      "area": "Authority boundaries",
+      "result": "pass",
+      "verification_scope": "approved local P0 technical readiness only",
+      "detail": "Versioned default-deny role/action matrix and critical privilege-separation properties are adopted as oracles, not runtime enforcement.",
+      "required_subcases": 1,
+      "passed_subcases": 1,
+      "evidence": [
+        "fixtures/policy/authority.json",
+        "config/p0-policy.json",
+        "docs/P0_POLICY_BASELINE.md",
+        "evidence/runs/p0-local-compatibility/unit-tests.json"
+      ]
+    },
+    {
+      "case_id": "P0-004",
+      "origin_case_id": "P0-006",
+      "area": "Verification configuration",
+      "result": "pass",
+      "verification_scope": "approved local P0 technical readiness only",
+      "detail": "Reset/settle candidates, hazard refusal model, retry budgets, fault schedule, expiry and observation targets are explicit. P1 and later phases measure/implement them.",
+      "required_subcases": 1,
+      "passed_subcases": 1,
+      "evidence": [
+        "config/p0-policy.json",
+        "docs/P0_POLICY_BASELINE.md",
+        "evidence/runs/p0-local-compatibility/unit-tests.json"
+      ]
+    },
+    {
+      "case_id": "P0-005",
+      "origin_case_id": "P0-007",
+      "area": "Policy adoption",
+      "result": "pass",
+      "verification_scope": "approved local P0 technical readiness only",
+      "detail": "Current-link uniqueness, relinking consent and immutable prior funded rights are explicit; actual participant consent remains later.",
+      "required_subcases": 1,
+      "passed_subcases": 1,
+      "evidence": [
+        "config/p0-policy.json",
+        "docs/P0_POLICY_BASELINE.md",
+        "evidence/runs/p0-local-compatibility/unit-tests.json"
+      ]
+    },
+    {
+      "case_id": "P0-006",
+      "origin_case_id": "P0-008",
+      "area": "Expiry policy",
+      "result": "pass",
+      "verification_scope": "approved local P0 technical readiness only",
+      "detail": "Every declared authority clock uses explicit units and half-open validity with equality expired; fixed work/review/absolute deadlines cannot reset on outage or resubmission. Boundary oracles pass.",
+      "required_subcases": 1,
+      "passed_subcases": 1,
+      "evidence": [
+        "config/p0-policy.json",
+        "docs/P0_POLICY_BASELINE.md",
+        "evidence/runs/p0-local-compatibility/unit-tests.json"
+      ]
+    },
+    {
+      "case_id": "P0-007",
+      "origin_case_id": "P0-009",
+      "area": "Resource ownership policy",
+      "result": "pass",
+      "verification_scope": "approved local P0 technical readiness only",
+      "detail": "Each purchased/resource/reward class has a separate owner and terminal treatment; future parties must approve actual terms before funding.",
+      "required_subcases": 1,
+      "passed_subcases": 1,
+      "evidence": [
+        "config/p0-policy.json",
+        "docs/P0_POLICY_BASELINE.md",
+        "evidence/runs/p0-local-compatibility/unit-tests.json"
+      ]
+    },
+    {
+      "case_id": "P0-008",
+      "origin_case_id": "P0-010",
+      "area": "Inspection evidence lifecycle",
+      "result": "pass",
+      "verification_scope": "approved local P0 technical readiness only",
+      "detail": "Signed context, immutable pass revision, no early unlock, usable-pass/pending-acceptance protection and canonical release rules are explicit; direct-call enforcement is tested in P8.",
+      "required_subcases": 1,
+      "passed_subcases": 1,
+      "evidence": [
+        "config/p0-policy.json",
+        "docs/P0_POLICY_BASELINE.md",
+        "evidence/runs/p0-local-compatibility/unit-tests.json"
+      ]
+    },
+    {
+      "case_id": "P0-009",
+      "origin_case_id": "P0-011",
+      "area": "Token and allocation policy",
+      "result": "pass",
+      "verification_scope": "approved local P0 technical readiness only",
+      "detail": "Integer scaling, whole-kit issuance/redemption, retained fractions, UI-one/contract-up-to-eight allocations, exact funding and zero/duplicate recipient rules are defined; no balances or deployments are asserted.",
+      "required_subcases": 1,
+      "passed_subcases": 1,
+      "evidence": [
+        "config/p0-policy.json",
+        "docs/P0_POLICY_BASELINE.md",
+        "evidence/runs/p0-local-compatibility/unit-tests.json"
+      ]
+    },
+    {
+      "case_id": "P0-010",
+      "origin_case_id": "P0-012",
+      "area": "Canonical state and capability matrices",
+      "result": "pass",
+      "verification_scope": "approved local P0 technical readiness only",
+      "detail": "All fourteen-state ordered pairs have an explicit policy outcome, with allowed transition actor/guard references and default denial. Tests verify normative fixtures, not future workflow execution.",
+      "required_subcases": 196,
+      "passed_subcases": 196,
+      "evidence": [
+        "fixtures/policy/transitions.json",
+        "fixtures/policy/authority.json",
+        "evidence/runs/p0-local-compatibility/unit-tests.json"
+      ]
+    },
+    {
+      "case_id": "P0-011",
+      "origin_case_id": "P0-014",
+      "area": "Chain finality and loss response",
+      "result": "pass",
+      "verification_scope": "approved local P0 technical readiness only",
+      "detail": "Future delivery requires twelve canonical confirmations plus a finalized source block; unsupported evidence fails closed. Deep reorganization preserves obligations and requires explicit remediation, with no automatic compensation authority. Actual network preflight remains P5.",
+      "required_subcases": 1,
+      "passed_subcases": 1,
+      "evidence": [
+        "config/p0-policy.json",
+        "docs/P0_POLICY_BASELINE.md",
+        "evidence/runs/p0-local-compatibility/unit-tests.json"
+      ]
+    },
+    {
+      "case_id": "P0-012",
+      "origin_case_id": "P0-015",
+      "area": "Recovery and workload targets",
+      "result": "pass",
+      "verification_scope": "approved local P0 technical readiness only",
+      "detail": "Single-job limits, payload/queue/disk thresholds, response/tick targets and backup/restore criteria are explicit targets; measured success is not claimed.",
+      "required_subcases": 1,
+      "passed_subcases": 1,
+      "evidence": [
+        "config/p0-policy.json",
+        "docs/P0_POLICY_BASELINE.md",
+        "evidence/runs/p0-local-compatibility/unit-tests.json"
+      ]
+    },
+    {
+      "case_id": "P0-013",
+      "origin_case_id": "P0-016",
+      "area": "Cancellation and minimum settlement surface",
+      "result": "pass",
+      "verification_scope": "approved local P0 technical readiness only",
+      "detail": "Supported funded terminal paths are acceptance or timeout refund, fixed entitlements remain immutable, and requester refusal can leave work unpaid. No unsupported cancellation/team UI is implied.",
+      "required_subcases": 1,
+      "passed_subcases": 1,
+      "evidence": [
+        "config/p0-policy.json",
+        "docs/P0_POLICY_BASELINE.md",
+        "evidence/runs/p0-local-compatibility/unit-tests.json"
+      ]
+    },
+    {
+      "case_id": "P0-014",
+      "origin_case_id": "P0-017",
+      "area": "Research preregistration",
+      "result": "pass",
+      "verification_scope": "approved local P0 technical readiness only",
+      "detail": "E1 to E8 protocol, controlled/held-out scenarios, pilot-based trials, privacy and honest negative/null results are documented before comparative outcomes. No experiments are claimed complete.",
+      "required_subcases": 1,
+      "passed_subcases": 1,
+      "evidence": [
+        "docs/RESEARCH_PROTOCOL.md",
+        "config/p0-policy.json",
+        "evidence/runs/p0-local-compatibility/unit-tests.json"
+      ]
+    },
+    {
+      "case_id": "P0-015",
+      "origin_case_id": "P0-018",
+      "area": "Upstream reuse review",
+      "result": "pass",
+      "verification_scope": "approved local P0 technical readiness only",
+      "detail": "Eighteen upstreams have declared roles and license/revision observations; direct spike dependencies and Java are pinned, unknown-license starters remain reference-only, and historical support/audit limitations are retained.",
+      "required_subcases": 1,
+      "passed_subcases": 1,
+      "evidence": [
+        "planning/upstreams.json",
+        "docs/UPSTREAM_REUSE.md",
+        "tests/compatibility/package-lock.json",
+        "tests/compatibility/versions.json",
+        "evidence/runs/p0-local-compatibility/upstream-compatibility-research.json",
+        "evidence/runs/p0-local-compatibility/npm-audit.json"
+      ]
+    }
+  ],
+  "runtime_application_enforcement_claimed": false,
+  "independent_participants_established": false,
+  "token_integration_approved": false,
+  "renewal_reason": "Strengthen original client-only navigation to server-confirmed physical movement. Attempt07 retained test-variable failure; attempt08 passes actual server goal."
+}

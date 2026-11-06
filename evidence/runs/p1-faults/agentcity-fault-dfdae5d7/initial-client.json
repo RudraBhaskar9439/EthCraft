@@ -1,0 +1,142 @@
+{
+  "schema": "agentcity.p1.fault-client.v1",
+  "status": "fail",
+  "phase": "initial",
+  "started_at": "2026-10-29T15:14:59.590Z",
+  "full_phase_gate_passed": false,
+  "steps": [],
+  "scenario": "missing-lamp-s0-preflight",
+  "declared_variant_ids": [
+    "P1-004/output-missing-s0"
+  ],
+  "error": {
+    "name": "Error",
+    "message": "WorldRequester spawn timeout",
+    "stack": "Error: WorldRequester spawn timeout\n    at /Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/inspection/faults/probe.cjs:47:107\n    at async connect (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/inspection/faults/probe.cjs:47:3)\n    at async run (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/inspection/faults/probe.cjs:69:106)"
+  },
+  "final_state": {
+    "refusals": [
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "awaiting_player_inventory"
+    ],
+    "state": {
+      "revision": 0,
+      "lockMode": "NONE",
+      "quarantined": false,
+      "readyForReview": false,
+      "passValidUntilMs": 0
+    }
+  },
+  "final_observation": {
+    "at_ms": 1793286916863,
+    "checker": {},
+    "chunk_snapshot_freeze": false,
+    "fault_applied": true,
+    "players": {
+      "WorldBuilder": {
+        "uuid": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+        "mode": "SURVIVAL",
+        "position": [
+          -14.5,
+          81,
+          3.5
+        ]
+      }
+    },
+    "ports": {
+      "a0": {
+        "position": [
+          -12,
+          85,
+          -4
+        ],
+        "actual": "minecraft:lever[face=floor,facing=north,powered=false]"
+      },
+      "a0_support": {
+        "position": [
+          -12,
+          84,
+          -4
+        ],
+        "actual": "minecraft:stone_bricks"
+      },
+      "a1": {
+        "position": [
+          -8,
+          84,
+          -3
+        ],
+        "actual": "minecraft:lever[face=wall,facing=west,powered=false]"
+      },
+      "b0": {
+        "position": [
+          -12,
+          84,
+          -3
+        ],
+        "actual": "minecraft:lever[face=wall,facing=south,powered=false]"
+      },
+      "b1": {
+        "position": [
+          -8,
+          82,
+          -3
+        ],
+        "actual": "minecraft:lever[face=wall,facing=east,powered=false]"
+      },
+      "c1": {
+        "position": [
+          -1,
+          87,
+          -5
+        ],
+        "actual": "minecraft:redstone_lamp[lit=false]"
+      },
+      "s0": {
+        "position": [
+          -8,
+          88,
+          -5
+        ],
+        "actual": "minecraft:air"
+      },
+      "s1": {
+        "position": [
+          1,
+          90,
+          -2
+        ],
+        "actual": "minecraft:redstone_lamp[lit=false]"
+      }
+    },
+    "scenario": "missing-lamp-s0-preflight",
+    "target_chunk_loaded": true,
+    "tick": 374
+  },
+  "finished_at": "2026-10-29T15:15:16.893Z"
+}

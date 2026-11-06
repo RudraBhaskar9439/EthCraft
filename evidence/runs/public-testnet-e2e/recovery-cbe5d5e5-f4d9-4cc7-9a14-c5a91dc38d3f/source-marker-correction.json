@@ -1,0 +1,6 @@
+{
+  "scope": "Correction to the source-integrity marker only; original report remains immutable.",
+  "field": "sourceIntegrityPassed",
+  "status": "unverified_in_that_script_version",
+  "explanation": "The first recovery script set this marker without a before/after hash assertion. Do not use that marker as source-integrity proof. Actual contract, delivery, model, settlement and no-extra-purchase/payment checks were executed. Subsequent recovery evidence includes an executed source-hash comparison."
+}

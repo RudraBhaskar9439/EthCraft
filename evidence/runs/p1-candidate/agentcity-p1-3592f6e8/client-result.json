@@ -1,0 +1,5836 @@
+{
+  "status": "pass",
+  "purpose": "offline independent world-read fixture, not independent human proof",
+  "observations": [
+    {
+      "suite": "normal",
+      "case_index": 0,
+      "a": 0,
+      "b": 0,
+      "expected": 0,
+      "observed": 0,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "normal",
+      "case_index": 1,
+      "a": 0,
+      "b": 1,
+      "expected": 1,
+      "observed": 1,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "normal",
+      "case_index": 2,
+      "a": 0,
+      "b": 2,
+      "expected": 2,
+      "observed": 2,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "normal",
+      "case_index": 3,
+      "a": 0,
+      "b": 3,
+      "expected": 3,
+      "observed": 3,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "normal",
+      "case_index": 4,
+      "a": 1,
+      "b": 0,
+      "expected": 1,
+      "observed": 1,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "normal",
+      "case_index": 5,
+      "a": 1,
+      "b": 1,
+      "expected": 2,
+      "observed": 2,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "normal",
+      "case_index": 6,
+      "a": 1,
+      "b": 2,
+      "expected": 3,
+      "observed": 3,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "normal",
+      "case_index": 7,
+      "a": 1,
+      "b": 3,
+      "expected": 4,
+      "observed": 4,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "normal",
+      "case_index": 8,
+      "a": 2,
+      "b": 0,
+      "expected": 2,
+      "observed": 2,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "normal",
+      "case_index": 9,
+      "a": 2,
+      "b": 1,
+      "expected": 3,
+      "observed": 3,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "normal",
+      "case_index": 10,
+      "a": 2,
+      "b": 2,
+      "expected": 4,
+      "observed": 4,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "normal",
+      "case_index": 11,
+      "a": 2,
+      "b": 3,
+      "expected": 5,
+      "observed": 5,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "normal",
+      "case_index": 12,
+      "a": 3,
+      "b": 0,
+      "expected": 3,
+      "observed": 3,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "normal",
+      "case_index": 13,
+      "a": 3,
+      "b": 1,
+      "expected": 4,
+      "observed": 4,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "normal",
+      "case_index": 14,
+      "a": 3,
+      "b": 2,
+      "expected": 5,
+      "observed": 5,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "normal",
+      "case_index": 15,
+      "a": 3,
+      "b": 3,
+      "expected": 6,
+      "observed": 6,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "descending",
+      "case_index": 0,
+      "a": 3,
+      "b": 3,
+      "expected": 6,
+      "observed": 6,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "descending",
+      "case_index": 1,
+      "a": 3,
+      "b": 2,
+      "expected": 5,
+      "observed": 5,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "descending",
+      "case_index": 2,
+      "a": 3,
+      "b": 1,
+      "expected": 4,
+      "observed": 4,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "descending",
+      "case_index": 3,
+      "a": 3,
+      "b": 0,
+      "expected": 3,
+      "observed": 3,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "descending",
+      "case_index": 4,
+      "a": 2,
+      "b": 3,
+      "expected": 5,
+      "observed": 5,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "descending",
+      "case_index": 5,
+      "a": 2,
+      "b": 2,
+      "expected": 4,
+      "observed": 4,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "descending",
+      "case_index": 6,
+      "a": 2,
+      "b": 1,
+      "expected": 3,
+      "observed": 3,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "descending",
+      "case_index": 7,
+      "a": 2,
+      "b": 0,
+      "expected": 2,
+      "observed": 2,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "descending",
+      "case_index": 8,
+      "a": 1,
+      "b": 3,
+      "expected": 4,
+      "observed": 4,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "descending",
+      "case_index": 9,
+      "a": 1,
+      "b": 2,
+      "expected": 3,
+      "observed": 3,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "descending",
+      "case_index": 10,
+      "a": 1,
+      "b": 1,
+      "expected": 2,
+      "observed": 2,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "descending",
+      "case_index": 11,
+      "a": 1,
+      "b": 0,
+      "expected": 1,
+      "observed": 1,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "descending",
+      "case_index": 12,
+      "a": 0,
+      "b": 3,
+      "expected": 3,
+      "observed": 3,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "descending",
+      "case_index": 13,
+      "a": 0,
+      "b": 2,
+      "expected": 2,
+      "observed": 2,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "descending",
+      "case_index": 14,
+      "a": 0,
+      "b": 1,
+      "expected": 1,
+      "observed": 1,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "descending",
+      "case_index": 15,
+      "a": 0,
+      "b": 0,
+      "expected": 0,
+      "observed": 0,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "alternating",
+      "case_index": 0,
+      "a": 3,
+      "b": 3,
+      "expected": 6,
+      "observed": 6,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "alternating",
+      "case_index": 1,
+      "a": 0,
+      "b": 0,
+      "expected": 0,
+      "observed": 0,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "alternating",
+      "case_index": 2,
+      "a": 3,
+      "b": 2,
+      "expected": 5,
+      "observed": 5,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "alternating",
+      "case_index": 3,
+      "a": 0,
+      "b": 1,
+      "expected": 1,
+      "observed": 1,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "alternating",
+      "case_index": 4,
+      "a": 2,
+      "b": 3,
+      "expected": 5,
+      "observed": 5,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "alternating",
+      "case_index": 5,
+      "a": 1,
+      "b": 0,
+      "expected": 1,
+      "observed": 1,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "alternating",
+      "case_index": 6,
+      "a": 3,
+      "b": 1,
+      "expected": 4,
+      "observed": 4,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "alternating",
+      "case_index": 7,
+      "a": 0,
+      "b": 2,
+      "expected": 2,
+      "observed": 2,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "alternating",
+      "case_index": 8,
+      "a": 2,
+      "b": 2,
+      "expected": 4,
+      "observed": 4,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "alternating",
+      "case_index": 9,
+      "a": 1,
+      "b": 1,
+      "expected": 2,
+      "observed": 2,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "alternating",
+      "case_index": 10,
+      "a": 1,
+      "b": 3,
+      "expected": 4,
+      "observed": 4,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "alternating",
+      "case_index": 11,
+      "a": 2,
+      "b": 0,
+      "expected": 2,
+      "observed": 2,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "alternating",
+      "case_index": 12,
+      "a": 3,
+      "b": 0,
+      "expected": 3,
+      "observed": 3,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "alternating",
+      "case_index": 13,
+      "a": 0,
+      "b": 3,
+      "expected": 3,
+      "observed": 3,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "alternating",
+      "case_index": 14,
+      "a": 2,
+      "b": 1,
+      "expected": 3,
+      "observed": 3,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "alternating",
+      "case_index": 15,
+      "a": 1,
+      "b": 2,
+      "expected": 3,
+      "observed": 3,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "seeded-20261029",
+      "case_index": 0,
+      "a": 3,
+      "b": 1,
+      "expected": 4,
+      "observed": 4,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "seeded-20261029",
+      "case_index": 1,
+      "a": 2,
+      "b": 0,
+      "expected": 2,
+      "observed": 2,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "seeded-20261029",
+      "case_index": 2,
+      "a": 3,
+      "b": 3,
+      "expected": 6,
+      "observed": 6,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "seeded-20261029",
+      "case_index": 3,
+      "a": 0,
+      "b": 1,
+      "expected": 1,
+      "observed": 1,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "seeded-20261029",
+      "case_index": 4,
+      "a": 3,
+      "b": 0,
+      "expected": 3,
+      "observed": 3,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "seeded-20261029",
+      "case_index": 5,
+      "a": 2,
+      "b": 1,
+      "expected": 3,
+      "observed": 3,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "seeded-20261029",
+      "case_index": 6,
+      "a": 0,
+      "b": 0,
+      "expected": 0,
+      "observed": 0,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "seeded-20261029",
+      "case_index": 7,
+      "a": 1,
+      "b": 2,
+      "expected": 3,
+      "observed": 3,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "seeded-20261029",
+      "case_index": 8,
+      "a": 2,
+      "b": 3,
+      "expected": 5,
+      "observed": 5,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "seeded-20261029",
+      "case_index": 9,
+      "a": 0,
+      "b": 2,
+      "expected": 2,
+      "observed": 2,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "seeded-20261029",
+      "case_index": 10,
+      "a": 1,
+      "b": 0,
+      "expected": 1,
+      "observed": 1,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "seeded-20261029",
+      "case_index": 11,
+      "a": 1,
+      "b": 3,
+      "expected": 4,
+      "observed": 4,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "seeded-20261029",
+      "case_index": 12,
+      "a": 1,
+      "b": 1,
+      "expected": 2,
+      "observed": 2,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "seeded-20261029",
+      "case_index": 13,
+      "a": 2,
+      "b": 2,
+      "expected": 4,
+      "observed": 4,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "suite": "seeded-20261029",
+      "case_index": 14,
+      "a": 0,
+      "b": 3,
+      "expected": 3,
+      "observed": 3,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "suite": "seeded-20261029",
+      "case_index": 15,
+      "a": 3,
+      "b": 2,
+      "expected": 5,
+      "observed": 5,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": true,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": true
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    }
+  ],
+  "server_summary": {
+    "status": "pass",
+    "suite_count": 4,
+    "result_file": "candidate-result.json"
+  },
+  "finished_at": "2026-10-29T14:21:51.702Z"
+}

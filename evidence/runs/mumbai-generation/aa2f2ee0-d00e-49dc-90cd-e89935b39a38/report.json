@@ -1,0 +1,92 @@
+{
+  "status": "pass",
+  "scope": "ActualfreeArnis3.4.0 SouthMumbai generation, beforePaperload. Geographicrecreationwithapproximatearchitecture, notcompleteMumbaicity.",
+  "worldUuid": "be915875-64ec-4498-ae2a-1a6800dd1e53",
+  "spawn": [
+    1640,
+    68,
+    2779
+  ],
+  "bounds": {
+    "min": [
+      0,
+      -64,
+      0
+    ],
+    "max": [
+      2629,
+      319,
+      3224
+    ]
+  },
+  "worldFiles": 47,
+  "bytes": 147277142,
+  "sourceDataVersion": 4189,
+  "targetServer": "PinnedPaper26.3 withJava1.21.11compatibilityclient",
+  "generatorArchiveSha256": "aa964164e60de7c4d62fd304e8c5c48ba393c1632c84b320d58cae5118d8eb80",
+  "sourceConfig": "config/mumbai-map.json",
+  "mapPreview": "preview.png",
+  "mapPreviewSha256": "c2590a3d7f9f0fc58f815b84d370bef2585e2d41c9a97ec689492d417665da70",
+  "artifactFileHashes": {
+    "icon.png": "b7bde3fcd269fd794446911470c1c4b2e6d5fa55ce10808117b68b6cfc3345fa",
+    "metadata.json": "0be381c962e867ec6f575680a40482b649fc646427b71d8eaabe0e8c7ff3ba84",
+    "arnis_world_map.png": "c2590a3d7f9f0fc58f815b84d370bef2585e2d41c9a97ec689492d417665da70",
+    "uid.dat": "b0c026a66942917f58b54ee1da2f6047be784bbfca39dd67fccdf6d587434498",
+    "level.dat": "2b35c973ec559a9ea4134faabb93dee3eef158214351e669fcfc4ef224ebf597",
+    "region/r.0.0.mca": "2cd75c03185cb5ce2b3688bdc917666652589b3ca1d052d356f7a5881ce2687c",
+    "region/r.2.2.mca": "d0d2a23568b68dfb7f1b394f123edf5ca9c782298e70e3349120bba45fec9086",
+    "region/r.4.4.mca": "4097ca755225361119878eeb2578382dcfc769ebc7ae54a6f5e624ad99fc6f84",
+    "region/r.4.5.mca": "85f7ffdfe3235ecd309969e73245543944f785f3a9bdff038a0dc9f2470d0d9a",
+    "region/r.2.3.mca": "d034115b8f3a7c6bdc9ab32840145b2794904760c88e9e6ef9bdd049d0b8d2c8",
+    "region/r.0.1.mca": "4bb937b3d1cae908eae9eb73c85f2fa20698541a5be546c647bf8d4b3d927b9d",
+    "region/r.0.3.mca": "5da817433bd98dbdc8addb45085b2bc6eceed148b41e2705f647a95694588982",
+    "region/r.2.1.mca": "44de50f476b54ae2c1fc58f85a02275a8e2c71f6847bdfff4afe80b2a9e2b659",
+    "region/r.4.6.mca": "b66b4f1000cf0fc2a905150bf9c82a8d3a7574adc98f76b22d78c38bb3bdfdad",
+    "region/r.2.0.mca": "14a47dd289bd25baaf8a844744734f67235d8edbb2b435c3d7f844847135ef81",
+    "region/r.0.2.mca": "fc7987c1e4001982c616b100887f65f7035e948c93677370e98254d430808025",
+    "region/r.0.6.mca": "decad475cd3fa893cef33390a642e0f1ac27a59f8df75773a9458aba0316867f",
+    "region/r.2.4.mca": "1077ad1ea8ec137edc90197d52fb37927a85466dfebe59daa470e7ea55bd6982",
+    "region/r.4.2.mca": "16790d28ca40c6067140382cd14331d50c694e3bb3a7ee38c43136c5f7fb5518",
+    "region/r.4.3.mca": "ed906097bbd4b15f1d2c926ff64a8bcde519f6d8d3b25bbb654f392ce86614b7",
+    "region/r.2.5.mca": "d88c0cf0dc01d821fc30c7c29b1c80b2672cc3c4a3500f089332850b6dc1bb17",
+    "region/r.0.5.mca": "9749f3460db19610624b6ebfb3e828b080dc600604a67cff9cb42d2d70590838",
+    "region/r.4.1.mca": "6c7293860c5d94bf89a75a7a6cf3429cfa4a3cdb315092e18eb9e17cbc579359",
+    "region/r.4.0.mca": "3fb52b7718f7a57e632f4c50e545706a458910ca82feceae8ee47b75bdb4866c",
+    "region/r.2.6.mca": "4e854de172439fdf07a1d1c501d155c5405a9bab9ebce258e005a9c1c6cc4b4b",
+    "region/r.0.4.mca": "76df2ca4bc0667321e39935a7102c4d577d84ec58b1a51a1380544503807f438",
+    "region/r.3.1.mca": "43eda9c01860226fa78e16f2066d1622cf7e65a4bcc62463a4e4e83484f494b7",
+    "region/r.1.3.mca": "d5f2370a1aace52df9f245c917c68ff5ff76287612375bb908c9416a01cb0c66",
+    "region/r.1.2.mca": "3c1551821018529e4f88605b602dd13f29c138280c76c0e35cc7df5e5acc3a92",
+    "region/r.3.0.mca": "6ad50c77153f6ad1be9d1bd1dd4e01c81e16be8f61d0db4f2dad319d56080b3f",
+    "region/r.5.6.mca": "e16c01ecf84e16b753bf34409edf59e8fdd0b732416ac5e9cb541585982e9607",
+    "region/r.5.4.mca": "387179fed1942a167dd191292acc9391ad11eb690fde77b24a4b770f9f5ce1d7",
+    "region/r.3.2.mca": "1615bcb1a212f7528058299e01aec1ba961c6ea78eea7ae3edbb7dfb615dbbec",
+    "region/r.1.0.mca": "5e6bb7f0e41b33b70642c9fc6e5f29a8dec962cf9a6099715b0afab603894907",
+    "region/r.1.1.mca": "8bb5592e4bc0c5aff999c9697335fa7b9fdee7ea64fd9553fad7556622515184",
+    "region/r.3.3.mca": "19095a08e7a348a0d4e01bd6437ab4f69cf75044c1b29de2eef5016cc70228ee",
+    "region/r.5.5.mca": "8befb5652ae185bdbbe3153c46894f0821f99ee6f2328fbe9a7008841503c6ce",
+    "region/r.5.1.mca": "a4d54c09bad0a1fc206e6297640913a0c1fe10e93b916a3ce415a2ba15d751bc",
+    "region/r.1.5.mca": "117723a01213ef409566683c00e8fbe9a390a747db853d6815b04c7b51a8a682",
+    "region/r.1.4.mca": "5d4e79de2b30821e63fa237abd1e997d2fc9ff9a869a52c3f045848ab59c1f5c",
+    "region/r.3.6.mca": "251976e22284c07996ccbb93185587100e20066d37b069947b2305fa1b9338e4",
+    "region/r.5.0.mca": "de5911e15672560a9fb780cebbcbd37de0cce19041d2541afaeb49e823dc7abe",
+    "region/r.5.2.mca": "9802f63deb9ba7f2a2ee8c9b453ad5fe1fbef65f1709b67f28183aaa86de2291",
+    "region/r.3.4.mca": "54660e2a7f8b93bd67fca367b43d3bfe6e3a5186ef4d919aa4a6945070c16902",
+    "region/r.1.6.mca": "727a9d390e1bbd23686046e2aace462b2ce9aab106d97e215a6809da665c9bed",
+    "region/r.3.5.mca": "1b73d73cc067e50e5256fc9ed059352a42fdbd3798e6bcdbb2e7a4d95a798a17",
+    "region/r.5.3.mca": "e46ade0267d935f6929c15b1142bb696857bef6c799b8d5ad10141029bb32ec8"
+  },
+  "excludedFromImport": [
+    {
+      "path": "data/map_1000000.dat",
+      "sha256": "31a80944a25df0a3be1cbee8d5530480e008517ec3ee9b4b75657001d89a78a1"
+    },
+    {
+      "path": "data/idcounts.dat",
+      "sha256": "c28c010bb8eabd80328fba7c2d55da8b4f8a8a0bccc79773269958fa7a2bc04a"
+    }
+  ],
+  "realMoneySpentUsd": 0,
+  "paidModelCalls": 0,
+  "publicTransactions": 0
+}

@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-29",
+  "authorization": "User: from now on no deep edge cases",
+  "scope": "Focused local single-host Phase 2 construction MVP. Original broad requirements remain mandatory for later release qualification; no unrun result is passed.",
+  "supported_worker_scope": "one cooperative worker on one host; local process exclusion plus server-enforced per-operation actor/session, revision, lock and expiry",
+  "distributed_task_lease_verified": false,
+  "retained_release_qualification_mapping": {
+    "P2-001": "P9-059",
+    "P2-002": "P9-060",
+    "P2-003": "P9-061",
+    "P2-004": "P9-062",
+    "P2-005": "P9-063",
+    "P2-006": "P9-064",
+    "P2-007": "P9-065",
+    "P2-008": "P9-066",
+    "P2-009": "P9-067",
+    "P2-010": "P9-068",
+    "P2-011": "P9-069",
+    "P2-012": "P9-070",
+    "P2-013": "P9-071",
+    "P2-014": "P9-072"
+  },
+  "retained_original_cases": [
+    {
+      "old_id": "P2-001",
+      "new_id": "P9-059",
+      "original_case_digest": "c62170538f7ce2ebbdf954d05aa1bce98932d48403ca71cd29497810cb13ca04",
+      "requirement_sha256": "3776c4dbf1875fc4fd5d6abda47e9b5bba560681ccdda5c56a160dcffb4e9817",
+      "historical_status": "not_run"
+    },
+    {
+      "old_id": "P2-002",
+      "new_id": "P9-060",
+      "original_case_digest": "dde873bd81aaca54d68da3fddb63bef9979fd230d68c500113d01c00c0fc0c28",
+      "requirement_sha256": "dbdc3d89575430f433d7deff618d7be55cd470081f0ddd09140ba4e5289f90f2",
+      "historical_status": "not_run"
+    },
+    {
+      "old_id": "P2-003",
+      "new_id": "P9-061",
+      "original_case_digest": "b136f7041c027148f14e62ffdbfdae4b5cd47b165872d98f5853ed2bfe3b1f53",
+      "requirement_sha256": "d200bfc1396bd68cb551f6aeb8f1dd937ea69a5f4d92efad52f84894518e4362",
+      "historical_status": "not_run"
+    },
+    {
+      "old_id": "P2-004",
+      "new_id": "P9-062",
+      "original_case_digest": "d5f13d6da59cdff052649e79a92e0edb03d035c49aa7d2ef540c17546f098a18",
+      "requirement_sha256": "68966cf06f11346ff9c0cfd4d26b4b4266bc129818a814db9f0ebf08f45e31c5",
+      "historical_status": "not_run"
+    },
+    {
+      "old_id": "P2-005",
+      "new_id": "P9-063",
+      "original_case_digest": "eb872e5802518617c027a3ae15143a5ffcb16d3320af7020b2443659f125a76e",
+      "requirement_sha256": "cd467ff7cc4b01e876ff5c0f4c0e1abf493bde18bfbd1384d3c8837a87c18b3f",
+      "historical_status": "not_run"
+    },
+    {
+      "old_id": "P2-006",
+      "new_id": "P9-064",
+      "original_case_digest": "34a0b134026a384f4f187344067e82a62eda694e5e76c2c6a5318d87bb30c339",
+      "requirement_sha256": "5f550230053c76a1f677bbe552e0d9d01b8266e2220d0430a2de210d1c974a20",
+      "historical_status": "not_run"
+    },
+    {
+      "old_id": "P2-007",
+      "new_id": "P9-065",
+      "original_case_digest": "6276a073189e7371edf023dc0070f6e1ba82e1dd36bcc2feef44c333802b34ac",
+      "requirement_sha256": "7ddd558c77a623c973cc969750a6b3f0569acf9949abe02a49e43bcbcb657cb3",
+      "historical_status": "not_run"
+    },
+    {
+      "old_id": "P2-008",
+      "new_id": "P9-066",
+      "original_case_digest": "6c10d4abce693b52e7b457be879d4048f649e217f280b1c4afac42f9dc89e8b7",
+      "requirement_sha256": "5401ffb1553073124d7e938a35fdd9f82a4289b4916e38c71a22f6c9329b389f",
+      "historical_status": "not_run"
+    },
+    {
+      "old_id": "P2-009",
+      "new_id": "P9-067",
+      "original_case_digest": "2335787fa9fe275fe0a49e4935791c651aac6ad9abcd0c2b251add236526a666",
+      "requirement_sha256": "663ec0eb8c7b1d76775941c37fc0c43a55a9cf66211032b8014ede4e1e6e65cc",
+      "historical_status": "not_run"
+    },
+    {
+      "old_id": "P2-010",
+      "new_id": "P9-068",
+      "original_case_digest": "d574ed9102905a431e96f16dff5603fe404a8e8b45c31814b6018b0f2f475c70",
+      "requirement_sha256": "feba8d480e278d95e3f09deb8848d40aa8908d659b29bf99b396bc31b1b1bb5e",
+      "historical_status": "not_run"
+    },
+    {
+      "old_id": "P2-011",
+      "new_id": "P9-069",
+      "original_case_digest": "ea24fc57fb8e92d645c285287d9256c2bacb60bc6faab6e6e249756d578d7902",
+      "requirement_sha256": "8855e2ecc207a2d8544c0fbd419598c443652b2d61f7437e7777a3316f6e9918",
+      "historical_status": "not_run"
+    },
+    {
+      "old_id": "P2-012",
+      "new_id": "P9-070",
+      "original_case_digest": "c36610570752cb9cfa448b8c54b7863acf5c317917d592f88ffa3effea9d87e6",
+      "requirement_sha256": "d863deee3231919367609ef95c4a916811542f5e921d24f2a3de48680a851e11",
+      "historical_status": "not_run"
+    },
+    {
+      "old_id": "P2-013",
+      "new_id": "P9-071",
+      "original_case_digest": "7a8e18f694a42ff081b4e5d1295d98d0d31b358a556931a948bd43b4367edcba",
+      "requirement_sha256": "ebb56a659bf8af457501b2b0404758ad6c1d5e3d08637b6a7ff3b3af5a070218",
+      "historical_status": "not_run"
+    },
+    {
+      "old_id": "P2-014",
+      "new_id": "P9-072",
+      "original_case_digest": "762ff10b6fb021e70b96e69b08383d419a5649048fceddd392f2886bd93da4c1",
+      "requirement_sha256": "443c465e0337ae4f603cba638fbb66ca176d475eec6b73776bd55f929890f003",
+      "historical_status": "not_run"
+    }
+  ],
+  "local_case_ids": [
+    "P2-001",
+    "P2-002",
+    "P2-003",
+    "P2-004",
+    "P2-005",
+    "P2-006"
+  ],
+  "original_requirement_inventory": 257,
+  "previous_total_scenarios": 264,
+  "new_focused_cases": 6
+}

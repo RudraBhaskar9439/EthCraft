@@ -1,0 +1,49 @@
+{
+  "status": "pass",
+  "startedAt": "2026-10-30T07:06:21.888116+00:00",
+  "checks": [
+    "six current loopback services pass bounded health checks without restart",
+    "a foreign container owner is refused before backup or restore",
+    "actual pg_dump/pg_restore preserves every table row count and content fingerprint from one exported snapshot",
+    "archive corruption is refused before database creation; the live container and start time remain unchanged"
+  ],
+  "scope": "Actual owned laptop services and online PostgreSQL dump/isolated restore; no live database replacement or chain/world rollback",
+  "realMoneySpent": 0,
+  "liveJobsExecutedByRestore": 0,
+  "serviceRestartPerformed": false,
+  "health": {
+    "ready": true,
+    "scope": "loopback laptop preparation; no public exposure or authenticated-human claim",
+    "services": {
+      "postgres": {
+        "ready": true
+      },
+      "anvil": {
+        "ready": true
+      },
+      "arkiv": {
+        "ready": true
+      },
+      "ollama": {
+        "ready": true
+      },
+      "console": {
+        "ready": true
+      },
+      "minecraft": {
+        "ready": true
+      }
+    }
+  },
+  "restore": {
+    "status": "pass",
+    "isolatedDatabase": "agentcity_restore_a77f67d277c54efbb67c19d706beb37f",
+    "tablesVerified": 162,
+    "rowsVerified": 345,
+    "archiveSha256": "26136c505eae20fc8fd297e40a25385606808af4643b207e2e9cb6fb61330ae7",
+    "liveDatabaseReplaced": false,
+    "scope": "actual pg_dump/pg_restore and every restored table fingerprint; no restored worker or chain/world rollback"
+  },
+  "backupDirectory": ".local/ops/backups/20261030T070228Z-89e335edf9644787a8ed102c4882fe25",
+  "finishedAt": "2026-10-30T07:06:28.564186+00:00"
+}

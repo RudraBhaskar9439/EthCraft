@@ -1,0 +1,115 @@
+{
+  "status": "pass",
+  "runId": "50f7f023-a03d-422a-b28e-4baad7032b1f",
+  "recordedAt": "2026-11-05T16:27:30.283Z",
+  "checks": [
+    "Borrower inventory is empty after native resale custody and delivery",
+    "Seller inventory stays empty",
+    "Bidder holds exactly two distinct original swords, one each from BankBorrower and BankSeller",
+    "Both independently reconstructed canonical full-NBT fingerprints equal the actual native delivery receipts"
+  ],
+  "observations": [
+    {
+      "role": "borrower",
+      "playerId": "23d62fe0-1c3f-311e-be1b-8e39156c501b",
+      "savedFileSha256": "e202ea33f4e95e9b004819ea402793a41e58f82dbee4787e09542a28daa9903e",
+      "savedAt": "2026-11-05T16:25:42.025Z",
+      "entries": []
+    },
+    {
+      "role": "seller",
+      "playerId": "6762f7b4-50a9-33f9-a378-c5b0bbf2c2ca",
+      "savedFileSha256": "d0534100a4a62ab0e96e035fb9b3a45d0d6e6d9c333528a91ff108c667a00d96",
+      "savedAt": "2026-11-05T16:25:46.870Z",
+      "entries": []
+    },
+    {
+      "role": "bidder",
+      "playerId": "cc98e9a3-0b21-30a7-9509-817076d54d80",
+      "savedFileSha256": "9947496172fb6c072e53e4ba1654afde70bc96e94e1e813c2c0135951118caee",
+      "savedAt": "2026-11-05T16:25:51.868Z",
+      "entries": [
+        {
+          "Slot": 0,
+          "id": "minecraft:diamond_sword",
+          "count": 1,
+          "components": {
+            "minecraft:lore": [
+              {
+                "extra": [
+                  "Disclosed laptop fixture stock"
+                ],
+                "text": ""
+              },
+              {
+                "extra": [
+                  "Controlled actor and testnet assets only"
+                ],
+                "text": ""
+              }
+            ],
+            "minecraft:custom_name": {
+              "extra": [
+                "BankBorrower testnet collateral"
+              ],
+              "text": ""
+            },
+            "minecraft:enchantments": {
+              "minecraft:sharpness": 2
+            },
+            "minecraft:custom_data": {
+              "PublicBukkitValues": {
+                "agentcityworldfixture:native_proof": "BankBorrower"
+              }
+            },
+            "minecraft:damage": 7
+          },
+          "fingerprint": "37a461141daaef09a37a94b794eec115cfe05a5998c08476a47fe0a1266d617c"
+        },
+        {
+          "Slot": 1,
+          "id": "minecraft:diamond_sword",
+          "count": 1,
+          "components": {
+            "minecraft:lore": [
+              {
+                "extra": [
+                  "Disclosed laptop fixture stock"
+                ],
+                "text": ""
+              },
+              {
+                "extra": [
+                  "Controlled actor and testnet assets only"
+                ],
+                "text": ""
+              }
+            ],
+            "minecraft:enchantments": {
+              "minecraft:sharpness": 2
+            },
+            "minecraft:custom_name": {
+              "extra": [
+                "BankSeller testnet collateral"
+              ],
+              "text": ""
+            },
+            "minecraft:custom_data": {
+              "PublicBukkitValues": {
+                "agentcityworldfixture:native_proof": "BankSeller"
+              }
+            },
+            "minecraft:damage": 7
+          },
+          "fingerprint": "d41e0d6ac1cd88199dc49e6882ddd3cb117339da474297237e23de07ce4f828a"
+        }
+      ]
+    }
+  ],
+  "publicTransactions": 0,
+  "paidModelCalls": 0,
+  "scope": "Independent read-only saved Paper inventory NBT after active marketplace resale and fresh-runtime replay. Controlled test actors; no independent-human qualification.",
+  "sourceMarketplaceRunId": "84c37271-e7d8-437c-b8a1-68d5add690e6",
+  "serverId": "laptop-bank-1ce53d39d114410b90f72599ebae8b07",
+  "container": "agentcity-playable-1ce53d39"
+}

@@ -1,0 +1,206 @@
+{
+  "schema": "agentcity.p0.compatibility.v1",
+  "status": "failed",
+  "started_at": "2026-10-29T12:55:56.790Z",
+  "environment": {
+    "host": "127.0.0.1",
+    "port": 25576,
+    "version": "1.21.11",
+    "auth": "offline"
+  },
+  "identities": "FixtureBuilder and FixtureObserver are both agent-controlled test fixtures, not independent humans or licensed-account proof.",
+  "steps": [
+    {
+      "name": "initial_off",
+      "passed": true,
+      "observations": [
+        {
+          "lever": false,
+          "lamp": false,
+          "wire": 0,
+          "stock": 2,
+          "target": "AIR",
+          "server": "1.21.11-132-c5eb079 (MC: 1.21.11)",
+          "plugin": "0.1.0"
+        },
+        {
+          "lever": false,
+          "lamp": false,
+          "wire": 0,
+          "stock": 2,
+          "target": "AIR",
+          "server": "1.21.11-132-c5eb079 (MC: 1.21.11)",
+          "plugin": "0.1.0"
+        }
+      ],
+      "client_blocks": [
+        {
+          "player": "FixtureBuilder",
+          "lever": {
+            "powered": false,
+            "facing": "east",
+            "face": "floor"
+          },
+          "wire": {
+            "west": "none",
+            "south": "none",
+            "power": "0",
+            "north": "none",
+            "east": "none"
+          },
+          "lamp": {
+            "lit": false
+          }
+        },
+        {
+          "player": "FixtureObserver",
+          "lever": {
+            "powered": false,
+            "facing": "east",
+            "face": "floor"
+          },
+          "wire": {
+            "west": "none",
+            "south": "none",
+            "power": "0",
+            "north": "none",
+            "east": "none"
+          },
+          "lamp": {
+            "lit": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "lever_on",
+      "passed": true,
+      "observations": [
+        {
+          "lever": true,
+          "lamp": true,
+          "wire": 15,
+          "stock": 2,
+          "target": "AIR",
+          "server": "1.21.11-132-c5eb079 (MC: 1.21.11)",
+          "plugin": "0.1.0"
+        },
+        {
+          "lever": true,
+          "lamp": true,
+          "wire": 15,
+          "stock": 2,
+          "target": "AIR",
+          "server": "1.21.11-132-c5eb079 (MC: 1.21.11)",
+          "plugin": "0.1.0"
+        }
+      ],
+      "client_blocks": [
+        {
+          "player": "FixtureBuilder",
+          "lever": {
+            "powered": true,
+            "facing": "east",
+            "face": "floor"
+          },
+          "wire": {
+            "west": "side",
+            "south": "none",
+            "power": "15",
+            "north": "none",
+            "east": "side"
+          },
+          "lamp": {
+            "lit": true
+          }
+        },
+        {
+          "player": "FixtureObserver",
+          "lever": {
+            "powered": true,
+            "facing": "east",
+            "face": "floor"
+          },
+          "wire": {
+            "west": "side",
+            "south": "none",
+            "power": "15",
+            "north": "none",
+            "east": "side"
+          },
+          "lamp": {
+            "lit": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "lever_off_again",
+      "passed": true,
+      "observations": [
+        {
+          "lever": false,
+          "lamp": false,
+          "wire": 0,
+          "stock": 2,
+          "target": "AIR",
+          "server": "1.21.11-132-c5eb079 (MC: 1.21.11)",
+          "plugin": "0.1.0"
+        },
+        {
+          "lever": false,
+          "lamp": false,
+          "wire": 0,
+          "stock": 2,
+          "target": "AIR",
+          "server": "1.21.11-132-c5eb079 (MC: 1.21.11)",
+          "plugin": "0.1.0"
+        }
+      ],
+      "client_blocks": [
+        {
+          "player": "FixtureBuilder",
+          "lever": {
+            "powered": false,
+            "facing": "east",
+            "face": "floor"
+          },
+          "wire": {
+            "west": "side",
+            "south": "none",
+            "power": "0",
+            "north": "none",
+            "east": "side"
+          },
+          "lamp": {
+            "lit": false
+          }
+        },
+        {
+          "player": "FixtureObserver",
+          "lever": {
+            "powered": false,
+            "facing": "east",
+            "face": "floor"
+          },
+          "wire": {
+            "west": "side",
+            "south": "none",
+            "power": "0",
+            "north": "none",
+            "east": "side"
+          },
+          "lamp": {
+            "lit": false
+          }
+        }
+      ]
+    }
+  ],
+  "current_step": "withdraw_one_actual_item",
+  "error": {
+    "name": "AssertionError",
+    "message": "builder must receive exactly one item\n\n0 !== 1\n"
+  },
+  "finished_at": "2026-10-29T12:56:06.387Z"
+}

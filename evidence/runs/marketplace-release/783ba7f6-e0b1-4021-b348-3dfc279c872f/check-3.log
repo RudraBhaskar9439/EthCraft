@@ -1,0 +1,17 @@
+P5: BLOCKED
+- P4 is not ready
+- release must be an exact 40 character Git commit
+- environment is missing
+- approved named review is missing
+- review: evidence is missing
+- P5-001: not passed
+- P5-002: not passed
+- P5-003: not passed
+- P5-004: not passed
+- P5-005: not passed
+- P5-006: not passed
+- P5-007: not passed
+- P5-008: not passed
+- P5-009: not passed
+- P5-010: not passed
+- 15 additional unmet conditions

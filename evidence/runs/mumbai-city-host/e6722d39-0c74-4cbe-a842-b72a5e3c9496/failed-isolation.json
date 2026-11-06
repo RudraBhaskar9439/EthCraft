@@ -1,0 +1,10 @@
+{
+  "status": "failed",
+  "recordedAt": "2026-11-06T02:05:39.193657+00:00",
+  "action": "first isolation copy",
+  "error": "unowned_occupied_port_25596",
+  "observed": "Copy completed; original resume bind probe refused a TIME_WAIT port. No listener was present. Original owned server resumed on retry.",
+  "candidateInstalledOnActiveWorld": false,
+  "partialCopyRetained": ".local/mumbai-city/isolated/e1bf828a39324656ab3d59aba57a9c4e",
+  "fix": "SO_REUSEADDR probe; actual-listener refusal remains tested."
+}

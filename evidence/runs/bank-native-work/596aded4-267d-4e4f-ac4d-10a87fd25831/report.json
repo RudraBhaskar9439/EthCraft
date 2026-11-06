@@ -1,0 +1,55 @@
+{
+  "runId": "596aded4-267d-4e4f-ac4d-10a87fd25831",
+  "status": "fail",
+  "recordedAt": "2026-11-05T14:41:57.498Z",
+  "scope": "Actual Unichain Sepolia funded native2x2platform, forged-result refusal and lost-reply recovery using operator-controlled wallets. No human/Privy/0G qualification.",
+  "checks": [],
+  "paidModelCalls": 0,
+  "funding": [
+    {
+      "confirmed": true,
+      "chainId": 1301,
+      "registry": "0xf3037a6d2b68ee5832f53d9ff0bf22c22031af81",
+      "deploymentId": "0xcaf3af7e40fda3478f2a5c75587ddf1219f6692645cc5f95fa1f37d5c3c67aff",
+      "transactionHash": "0xf246f39a776b4373115c1eb754789155190e45bf6703f839eaedd04487d9ee82",
+      "blockNumber": "67037339",
+      "blockHash": "0xad76da045147e74e7b40e0997c0744f4c54ac9ebe2ab32b0de19ec37a681d0ce",
+      "confirmations": 5,
+      "observedAtMs": 1793889773931,
+      "logIndex": null,
+      "eventName": null,
+      "args": {},
+      "receiptHash": "7de9b6762c2d7e6fb24925cc847422503d72b4e1a6622b0af211855e75809863",
+      "logHash": null
+    },
+    {
+      "confirmed": true,
+      "chainId": 1301,
+      "registry": "0xf3037a6d2b68ee5832f53d9ff0bf22c22031af81",
+      "deploymentId": "0xcaf3af7e40fda3478f2a5c75587ddf1219f6692645cc5f95fa1f37d5c3c67aff",
+      "transactionHash": "0xc5e83f1cb3797cc9fb36258a13fb47cee822e38726c78020502d00d6cef56fbf",
+      "blockNumber": "67037351",
+      "blockHash": "0x0093951af628cb6c4d9973d471559ad4dcda8615790d0bc49c4b1350d2e35475",
+      "confirmations": 6,
+      "observedAtMs": 1793889786428,
+      "logIndex": 1,
+      "eventName": "WorkFunded",
+      "args": {
+        "workId": "0xa3131d24b09adf4a101dd8ffc9bec98817bef7ac79c7485645e8bb214c7e2dc9",
+        "requester": "0x0c5E09658141B4E931efEf2d1E825F22B7283B01",
+        "worker": "0x0AF8908AD8c80e886e651311869ad3D28eCa1A85",
+        "termsHash": "0x70c024d2acc87000f1526cf23664aa8c91484f1a32c55181a37aff77f56d8e57",
+        "amount": "1000000000000000000",
+        "deadline": 1793893343,
+        "reviewPeriod": 3600
+      },
+      "receiptHash": "0e29ada7ec3a387bf79d3b1fba173cd21051ace60c50822dc471ed19637116e9",
+      "logHash": "bd26e9780093cefe73d34220976858ab87a05eb64d21e035e096381ee09e9c9b"
+    }
+  ],
+  "error": "The request took too long to respond.\n\nURL: https://sepolia.unichain.org/\nRequest body: {\"method\":\"eth_call\",\"params\":[{\"data\":\"0xfd0160fe\",\"to\":\"0xb2b515bbbaf0b65a011e1523563601c00fbf0d53\"},\"latest\"]}\n \nRaw Call Arguments:\n  to:    0xb2b515bbbaf0b65a011e1523563601c00fbf0d53\n  data:  0xfd0160fe\n \nContract Call:\n  address:   0xb2b515bbbaf0b65a011e1523563601c00fbf0d53\n  function:  city()\n\nDocs: https://viem.sh/docs/contract/readContract\nDetails: The request timed out.\nVersion: viem@2.57.13",
+  "sources": {
+    "backend/src/bank/native-work.mjs": "c2f9a0c7b6e7b7053530ff3ca76b6240ffb49bd89d09badb12aa83f3fa5b0329",
+    "tests/bank/native-work.mjs": "510eab7a23297f20d3acb9651b555144e10bdb7ea183bc293c25c00be5925684"
+  }
+}

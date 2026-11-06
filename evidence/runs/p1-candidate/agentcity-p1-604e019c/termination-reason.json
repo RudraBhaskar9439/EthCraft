@@ -1,0 +1,5 @@
+{
+  "schema": "agentcity.candidate.operator-termination.v1",
+  "reason": "Preflight comparison found alternate high/low sequence differs from frozen coverage; stop before accepting any order result. Correct sequence will be rerun.",
+  "final_phase_approval": false
+}

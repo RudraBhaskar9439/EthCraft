@@ -1,0 +1,249 @@
+{
+  "schema": "agentcity.marketplace-checkpoint.v1",
+  "status": "verified_testnet_mvp",
+  "recordedAt": "2026-11-05T16:31:45.610210+00:00",
+  "activeScope": "USDC/CITY marketplace, deposited equipment and owner-approved CITY agent work; no lending or borrowing.",
+  "originalCanonicalPhases": "Required original live gates remain unqualified; no phase relabelled passed.",
+  "realMoneySpentUsd": 0,
+  "paidModelCalls": 0,
+  "pending": [],
+  "notGuaranteed": [
+    "Zero LVR",
+    "Immunity to all attacks",
+    "CITY fair value or peg",
+    "LP returns"
+  ],
+  "productionReady": false,
+  "verification": [
+    {
+      "name": "hook",
+      "status": "pass",
+      "checks": 9,
+      "report": "evidence/runs/marketplace-hook/1ceba5e7-2f78-4f51-8cb5-0a72922a6f64/report.json",
+      "sha256": "544293d254a5f3af3c1f9493ec02f8063b8da59408dc394980cad9b999a36efc"
+    },
+    {
+      "name": "backend",
+      "status": "pass",
+      "checks": 12,
+      "report": "evidence/runs/bank-service/958a2742-7045-4402-9106-6a473ac3ea04/report.json",
+      "sha256": "a778b3fb4e06804fd1e0ae35201f341c27e6b45bf5158f8ce1c799d547730848"
+    },
+    {
+      "name": "signer",
+      "status": "pass",
+      "checks": 10,
+      "report": "evidence/runs/bank-operator-guards/10640ba7-994e-413e-ad1f-c0218a68549a/report.json",
+      "sha256": "4538a71712ccc1327fe61378cf1175602d30ebb2acddb40481e2f31d9b65dec9"
+    },
+    {
+      "name": "httpFixtures",
+      "status": "pass",
+      "checks": 7,
+      "report": "evidence/runs/bank-http/0debc481-692a-41d4-bdae-53c994a1c769/report.json",
+      "sha256": "f21c7a8ca0b52c6919fdca1b7a3618a22fe7a116e9ee6ee020c44366dce2e36b"
+    },
+    {
+      "name": "observationRecovery",
+      "status": "pass",
+      "checks": 3,
+      "report": "evidence/runs/marketplace-observations/55c6bf98-0be8-434e-9170-18ebe418cd6b/report.json",
+      "sha256": "101a6a6ab0107a1b4caebc543ad1c4327545507e78e6a833d27458ec91362bff"
+    },
+    {
+      "name": "rpcFixtures",
+      "status": "pass",
+      "checks": 6,
+      "report": "evidence/runs/marketplace-rpc/e12c5bae-8bc0-48ca-828b-23a7fadd70be/report.json",
+      "sha256": "2b516c7a0eb11acbd151c8fa849d3602575ae3981665e8e1fad0acc46c61b7f7"
+    },
+    {
+      "name": "actualReadOnlyHttp",
+      "status": "pass",
+      "checks": 3,
+      "report": "evidence/runs/marketplace-http/b08627ba-6527-44f1-92bb-e880b740537f/report.json",
+      "sha256": "6ed4f149d634d706284a215704c46b63b43fbdc553a6f6b2b80b091a5fdb3d10"
+    },
+    {
+      "name": "publicDeployment",
+      "status": "pass",
+      "checks": null,
+      "report": "evidence/runs/marketplace-deployment/2071cae8-4dab-431b-bdd2-5b9d19fc64ea/report.json",
+      "sha256": "163e93d5ef4c07545a274dd31f4b852f1ea4d48fc854fd7d1ce7dc0e92505f4a"
+    },
+    {
+      "name": "publicDeploymentAfterDemo",
+      "status": "pass",
+      "checks": 6,
+      "report": "evidence/runs/marketplace-deployment-verification/e1a47578-4386-4629-adc8-f8ab560d00cc/report.json",
+      "sha256": "0e80fdabb1f198d49546e850f69649979b463bace79e3a4598c6b505bc591cbe"
+    },
+    {
+      "name": "actualMarketplaceJourney",
+      "status": "pass",
+      "checks": 5,
+      "report": "evidence/runs/marketplace-public-native/84c37271-e7d8-437c-b8a1-68d5add690e6/report.json",
+      "sha256": "7c663e7fa3dfc4ba9f5e2150f1863771358b9e6cb20742b6b0a454972d9906a6"
+    },
+    {
+      "name": "freshRuntimeReplay",
+      "status": "pass",
+      "checks": null,
+      "report": "evidence/runs/marketplace-public-native/84c37271-e7d8-437c-b8a1-68d5add690e6/replay-bb5eb137-edf2-4c56-8071-bc7dae368f48.json",
+      "sha256": "e310e04fcb49680fd20e539a44185ba5e1d4394160a47880f169e5061587c3b9"
+    },
+    {
+      "name": "savedNativeInventory",
+      "status": "pass",
+      "checks": 4,
+      "report": "evidence/runs/marketplace-native-delivery/50f7f023-a03d-422a-b28e-4baad7032b1f/report.json",
+      "sha256": "d94db41c749ca0b2ba6cf8942d87a0753181aaade281fe2dba8bd3d7e36a7358"
+    },
+    {
+      "name": "separateActualPaidNativeWork",
+      "status": "pass",
+      "checks": 7,
+      "report": "evidence/runs/bank-native-work/cd5aa76c-d53b-41bd-9bd4-15ab81c75d16/report.json",
+      "sha256": "0936f2cbc7876101918e01bb15acaf9336672edb7ac38f3ad230e56d39f8bcc1"
+    },
+    {
+      "name": "planningRelease",
+      "status": "pass",
+      "checks": null,
+      "report": "evidence/runs/marketplace-release/783ba7f6-e0b1-4021-b348-3dfc279c872f/report.json",
+      "sha256": "a893795fe976db4ee325199301a45178d68b84c8a43aba55858f251cd12ec9ec"
+    }
+  ],
+  "deployment": {
+    "manifest": "config/marketplace-public-deployment.json",
+    "chainId": 1301,
+    "deploymentId": "0x3f7fc51e18c3bb704db3ed4a96dccee0457a898cea3b540c460571b3c5790b61",
+    "hook": "0x6faf5918c8fd0af9716d300ce8f7e9310cc11fc0",
+    "router": "0x6d00ad99e68508cd4cae4fe93eab8b03af8efcaf",
+    "lpPosition": "21",
+    "lendingEnabled": false,
+    "mockUsdc": true,
+    "historicalLpPositionsPreserved": [
+      "19",
+      "20"
+    ]
+  },
+  "running": {
+    "url": "http://127.0.0.1:8794/",
+    "minecraft": "127.0.0.1:25596",
+    "scope": "Laptop loopback operator fixture, not a public player login"
+  },
+  "feeAccounting": {
+    "report": "evidence/runs/marketplace-final-fees/cd6d97bc-94f5-4a55-ae56-ad80f88673c8/report.json",
+    "scope": "Combined historical bank and current marketplace operations, not130 new marketplace trades",
+    "journal": {
+      "totalSignedIntents": 130,
+      "statusCounts": {
+        "confirmed": 130
+      },
+      "maximumReservedWei": "548537326400000",
+      "remainingReservationWei": "3451462673600000"
+    },
+    "pendingOrUnknownCount": 0,
+    "walletCount": 11,
+    "actualTotalNativeCostWei": "44018511130562",
+    "actualTotalNativeCostEth": "0.000044018511130562",
+    "nativeCostSincePriorAccountingWei": "11990899528812",
+    "maximumNativeBudgetWei": "4000000000000000"
+  },
+  "compositionLimit": "The new pool conversion/purchase proof and earlier1CITY/four-block paid-work proof are separate runs using the same CITY token and work escrow. The new conversion did not fund the earlier task.",
+  "limits": [
+    "No zero-LVR/attack-immunity guarantee; the same-pool reference is not independent fair value",
+    "Mock tUSDC and controlled actors; active application supports CITY/testUSDC only",
+    "Fixed2x2oak paid-work example; existing origin occupied, further jobs need a fresh prepared area or signed offsets",
+    "Live Discord/Privy activation, independent humans,0G and public platform permission remain pending",
+    "Browser visual verification denied and not bypassed; HTTP tests are separate",
+    "Full-host backup restore and general production qualification remain pending"
+  ],
+  "retainedFailureReports": [
+    "evidence/runs/bank-bot-transport/f8b23d54-5498-404f-a3e3-7c4ac6711d6a/report.json",
+    "evidence/runs/bank-native-work/0a0164e1-d9d7-495d-ac95-8b908a34f438/report.json",
+    "evidence/runs/bank-native-work/3f3b9a23-cec5-487f-8d95-595bf71908d6/report.json",
+    "evidence/runs/bank-native-work/596aded4-267d-4e4f-ac4d-10a87fd25831/report.json",
+    "evidence/runs/bank-native-work/9d5a7eb3-50af-45ea-afac-18cfc3fa28ed/report.json",
+    "evidence/runs/bank-native-work/f0232e51-77c6-474e-99a2-5de09dd8211a/report.json",
+    "evidence/runs/bank-release/58790da7-501c-4211-a48e-de5ec8183e7e/report.json",
+    "evidence/runs/bank-service/946a2c63-da93-4ca3-a422-552e2b695854/report.json",
+    "evidence/runs/bank-service/dcaaf6c1-857a-4c50-80ac-e7843c02d442/report.json",
+    "evidence/runs/marketplace-public-native/84c37271-e7d8-437c-b8a1-68d5add690e6/failure-8f10cb1b-f937-4628-bd97-ac9b598950f9.json",
+    "evidence/runs/marketplace-public-native/preflight/e1a49e37-dd29-4a03-a18f-415de47fb5e9.json"
+  ],
+  "runbook": "docs/TESTNET_MARKETPLACE.md",
+  "historicalBankCheckpoint": "evidence/TESTNET_BANK_CHECKPOINT.json",
+  "sourceHashes": {
+    "AGENTS.md": "b2c0116672dc5e90630871ec53c0c84482547d2b0c01809e58ff08d894eb028c",
+    "FEEDBACK.md": "eaf32a9ace3b90ece6d35ccdceb73c7083a88f8c87a67847a2b388fb616fe0f9",
+    "README.md": "9897d52dd0344dbdea652e262abbc510f64ce19b4c091436fcea71099ab76274",
+    "backend/src/bank/abis.mjs": "8b540c24b5ed4abfefbfdd35b36efe8aa85b3d906a2dc743e35d8d02c34e1e7c",
+    "backend/src/bank/canonical.mjs": "f1686d68c01936d07a62eb834ad40f8fef0c4bc0e301d9567e8c2edb506de2f0",
+    "backend/src/bank/health-publisher.mjs": "2dd5d1a0319c8bd2196a4d222e9696951d534cc825d840451b685208362faf04",
+    "backend/src/bank/http.mjs": "62b9e7858b9bc87bc671a139f3b3e891028f428f4fbf9e7b6be120a90ca7e5b6",
+    "backend/src/bank/laptop-runtime.mjs": "9db532f394bc841ab1af9da2bb06a16645881083ae516db148440f1da2a0c979",
+    "backend/src/bank/managed-policy.mjs": "3bea988905367955973d03c7f8c5049e31024a33e61c5ee291a6d294ce18d6d9",
+    "backend/src/bank/native-work.mjs": "c2f9a0c7b6e7b7053530ff3ca76b6240ffb49bd89d09badb12aa83f3fa5b0329",
+    "backend/src/bank/operator-wallets.mjs": "8eb675a4859f5fa96bea45b40e063c92328fec048486661e012ec4476a96ecd4",
+    "backend/src/bank/pool-observations.mjs": "e47f5e2a0df2ad87f4675196d09152076f88066e6a4748cf1eb5e897aea0f0b1",
+    "backend/src/bank/rpc.mjs": "59096e135cea03b81d7b459e78f08bd7c2699b14502dbd879af7d36250688438",
+    "backend/src/bank/service.mjs": "6804be37297133f57ccad4346712826a2596ba7bcc1eaa69d99b3d085f8a9fe3",
+    "backend/src/discord/bank-runtime.mjs": "09d801369cb6d57af31eea455ec79a546fbd83f10773ee0a00dcabd2403a8df1",
+    "backend/src/discord/bot.mjs": "26cb7dd28291f4b9de8145a9e50b43ea8099bdeff55131d6d08a707a126acfc6",
+    "backend/src/discord/work-orders.mjs": "4c60dc65b6f37f643c7b1c6c184eea2ab759acb57984b8f50b3428fc71b9c255",
+    "backend/src/web/bank.css": "c90477933451579043ccf84643c0b73f2ff917dec1aa7304ce8d18b22e1900da",
+    "backend/src/web/bank.html": "b793ca9587c98a9ba8ad11d984c3d824eec1343847349ea06fcff0972143eaf4",
+    "backend/src/web/bank.mjs": "5696ed8376a740b28b70e43fd6a95adc2e47e22b5c8a2bff49713ab96a2af893",
+    "backend/src/web/marketplace.html": "b3614cce66f368565fa8f9a97c38173fcb726885fee893e806ebddad14fdd30c",
+    "backend/src/web/marketplace.mjs": "4c1ee14e2dcedf381bcd4ac191a0f1ef8735274647e16de80f295f5b2406b63b",
+    "backend/src/world-assets/canonical.mjs": "83df3765a087c5a8dd8fd951e82c7fb10c7f54e0eb0c8bd1516e436fe734259b",
+    "config/marketplace-public-deployment.json": "be2754733700cfa8cb990331e9a5a8121f0069562223fbe63df494e2f5721d12",
+    "contracts/bank-public-testnet-deployment.json": "70202e5ab87bee832099390db14388edd2418a965695a5231e65448414276e61",
+    "contracts/src/AgentCityBank.sol": "a0e9090b46563c6df112893e990e046832e96bef82a3fc488835811cf48361be",
+    "contracts/src/AgentCityMarketplaceHook.sol": "eca22673e987cd9a07e3865dcd3e3d803778aaf0c5f2dbb9994adf1c622444eb",
+    "contracts/src/AgentCityReputationHook.sol": "a1d64ab184da0bf643eb4159f59b5902ef68b1a13856bab8fed5d3a4516e116e",
+    "contracts/src/AgentCityWorkEscrow.sol": "3b8a0e1152a4a0d9fc0ef05e60284c1e707d909a1003b5b6befe4e1c141d7811",
+    "contracts/src/BankPaymentRouter.sol": "fc3db20b9b3f7eab14a8b35986bd964c1f66f34aa72735651ec349d32f77666e",
+    "contracts/src/BankTestUSDC.sol": "f34159a7cfae151c6f237066122f656c434d2bda513fae299df3a56573849d60",
+    "docs/DEPLOYMENT_ROUTE.md": "e76cfa580b7191b7411730b4b9ae8a5d592c5535b630aa1cfeea374aabba50ff",
+    "docs/TESTNET_BANK.md": "bd548abec7b150816941cafd605dd15c84327678a1da2235769473e8763449fa",
+    "docs/TESTNET_MARKETPLACE.md": "89b84c5d5cb059e2800a5a3e0dec4f87cb89698b91908ae2cdf5f0b70b9a50d7",
+    "docs/UNISWAP_BANK_RUNBOOK.md": "5d095e4519646febf92eac2f617b2daf9a2f87e5f3be8cc2e3d55db990a0784e",
+    "planning/phases.json": "f044ac23da51eadd3cf669239e7b0fa641bba9cddfa266307dfe38e936932f05",
+    "planning/scope.json": "11dee4322fcf15f46d4f46bcf41540abb65bff5384f09b461440032817caa069",
+    "plugin/src/main/java/org/agentcity/paper/CanonicalItemFingerprint.java": "37de2b5eeb96cb2fed1a872a025c40a3027c1bba49352742ec3ce7fc30e0a401",
+    "plugin/src/main/java/org/agentcity/paper/InventoryEscrow.java": "2a9abc6577f9e69f4fd1b8777bc13eb57f21a400949b2429432d5573c478321c",
+    "scripts/bank_deploy.mjs": "96f6ac3cd141e1180735a0c39a4fde58f9271d0932c9004971f0445041432c5a",
+    "scripts/bank_public_demo.mjs": "f73aebddf00c8729d6d4ef13ba5d9afaabd636fa1607bb7466c5452170c15a2b",
+    "scripts/bank_server.mjs": "41182b07be10fdf84545d1b577fa08435b668c11e1289969c92c876ed65c8eb6",
+    "scripts/laptop_host.py": "6426a1e414099b75b36caabea486c0eb74229a6dacd1c591eacf71dd594e8a23",
+    "scripts/marketplace_deploy.mjs": "b0fd7148660f859ba4b915a0381c095619ae9595615b50b7fe8a8c5bd6b8ade3",
+    "scripts/marketplace_public_demo.mjs": "286c48931f3a6f87886f9f39d1fa0e5f9cbb7654225bac4e03b2f03dc876bd03",
+    "scripts/marketplace_server.mjs": "cbb666336e024e8cd99d6697d6c0ef9e9e3d91a668efff9c74c5e73cb5ecbf74",
+    "scripts/src/bank-keys.mjs": "e29870b2bb215727a1a234ebf210a2382373e06fdc97f9060f7a0941bc3178e5",
+    "tests/bank/CanonicalItemFingerprintTest.java": "14b127baeefef6142fd6b82b04b854769808019109bbeb1dfc3b06c74b2c78c2",
+    "tests/bank/LaptopBankStock.java": "7c0111326e311c9fdded0fc9cbe5dd8d8b5d8aed693c4c419e454ddd46bd2def",
+    "tests/bank/bot-transport.mjs": "0f56e8234c3254442e3bd827d5be2483fb47865674a459166d2cc5766c1c8e51",
+    "tests/bank/deployment.mjs": "537f52f98d5fc3e0caba5c5a19ead9970cdbfa40ffc40b8a671fc961d0872b9c",
+    "tests/bank/discord.mjs": "e33e84d9807a5c95f84bc45deff2989e6bd318fe652b7438d02174850eee4f0f",
+    "tests/bank/health-publisher.mjs": "55de160181f5dee5a6fd4a45a3174b61eabbff34b49c898b28dc32f6934f9680",
+    "tests/bank/http.mjs": "4c62949723950d2667542fd6098214ea07c7ffdb143331cd3ffb9bdcacf7c7fd",
+    "tests/bank/native-delivery.mjs": "989bdd0a35b0975d0424dbb0d6154210f80a340ac9d918d08ac6c7eb2c686ad7",
+    "tests/bank/native-fingerprint.mjs": "3442594e3f490bf56119814f3da9a25ffcbd18194ffe3c0f11f50727b4ed7d4c",
+    "tests/bank/native-laptop.mjs": "a8b9d9f2d9c0fadf3a32c5575221134be929c5dad96c5ee1192602f6d7b86be4",
+    "tests/bank/native-work.mjs": "510eab7a23297f20d3acb9651b555144e10bdb7ea183bc293c25c00be5925684",
+    "tests/bank/operator-wallets.mjs": "db0a58c8a7e3c9019c53857a5b5f2ccd51aed7ef0cd5c8c4ad353fe287d3ccb2",
+    "tests/bank/policy.mjs": "d0c5f8d7bade71b4ead0568714ba3118d93a083bfb4a9d6581abae1bd965c8d2",
+    "tests/bank/pool-observations.mjs": "8a4a7c57a060a65a0375bab9443ee863880c5786d4abd2cc3c44011d002c30c1",
+    "tests/bank/rpc.mjs": "2fa3fd70a6b1b0b325c1329c6941a4bf04a1dc47d3c0ac4bf08c92a7ddb52f15",
+    "tests/bank/service.mjs": "937e67b8d661efa6918dd49bc7e919eb160960e7f4a95ca4ef9076e2f0726be5",
+    "tests/bank/work-orders.mjs": "82ea72a60eb8ae1f57851c019199ef516c9811c61c56b70069a7beb062664c0c",
+    "tests/contracts/AgentCityBank.t.sol": "bbfbb79becb38271ed74216423f9e07f565db59623a58eaf82b1c4b14d44b0bb",
+    "tests/contracts/AgentCityMarketplaceHook.t.sol": "3cee8f192713cffc09f1b6288f0a5177887cdb2866a58fa0b4c75272b3f8208f",
+    "tests/contracts/AgentCityReputationHook.t.sol": "2b983e588894366769305ef715fd6f242a98abe6780c2bc532d56e8d99fa0bed",
+    "tests/contracts/BankPayments.t.sol": "a580703000b7aabc4ad438cc3bca18df053c6fe684e467ec54beeac20c8ef9db",
+    "tests/marketplace/deployment.mjs": "6170fe20c458adc4304276d85e48c8fe08e27af57e7a5648bfca7e4e9da31c53"
+  }
+}

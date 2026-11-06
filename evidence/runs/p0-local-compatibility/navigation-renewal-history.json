@@ -1,0 +1,20 @@
+{
+  "previous_source_release": "03ee715d5657333c78daa483391bc43a0e184040",
+  "reason": "Strengthen original client-only navigation to server-confirmed physical movement. Attempt07 retained test-variable failure; attempt08 passes actual server goal.",
+  "attempts": [
+    {
+      "path": "evidence/runs/p0-local-compatibility/attempt-07",
+      "status": "fail",
+      "reason": "Test update referenced an undefined observer variable; preserved before correction."
+    },
+    {
+      "path": "evidence/runs/p0-local-compatibility/attempt-08",
+      "status": "pass",
+      "server_navigation_goal": [
+        -2,
+        81,
+        0
+      ]
+    }
+  ]
+}

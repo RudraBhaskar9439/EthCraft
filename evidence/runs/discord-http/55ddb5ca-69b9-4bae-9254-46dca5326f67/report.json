@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "scope": "Local HTTP routes only; no successful OAuth, provider wallet, Discord message or Minecraft effect",
+  "checks": [
+    {
+      "name": "current console serves Discord setup HTML compiled bundle and only public configuration",
+      "status": "pass"
+    },
+    {
+      "name": "foreign browser origins and caller-selected wallet owners refused before identity or provider operations",
+      "status": "pass"
+    }
+  ]
+}

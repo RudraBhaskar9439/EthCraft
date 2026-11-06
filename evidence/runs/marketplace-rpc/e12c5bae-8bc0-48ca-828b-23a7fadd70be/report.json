@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "scope": "Mock RPC graph identity and lazy-construction fixtures; no real public RPC or signing.",
+  "command": [
+    "node",
+    "tests/bank/rpc.mjs"
+  ],
+  "exitCode": 0,
+  "logSha256": "15e2c6dca0f0e590eb5c8fcb275ad5dec1061f566fe94fd8f07895e4eb63b3b1",
+  "sources": {
+    "backend/src/bank/rpc.mjs": "59096e135cea03b81d7b459e78f08bd7c2699b14502dbd879af7d36250688438",
+    "tests/bank/rpc.mjs": "2fa3fd70a6b1b0b325c1329c6941a4bf04a1dc47d3c0ac4bf08c92a7ddb52f15"
+  },
+  "publicTransactions": 0,
+  "walletSignatures": 0
+}

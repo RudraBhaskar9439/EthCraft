@@ -1,0 +1,12 @@
+{
+  "status": "failed_attempt_retained",
+  "recorded_on": "2026-10-29",
+  "finding": "Pathfinder local completion was not backed by authoritative server position before native placement attempts.",
+  "invalid_preliminary_claims": [
+    "creative_native_placement_prevented",
+    "creative_placement_refused_before_mutation"
+  ],
+  "reason": "No native interaction/place event was observed for the out-of-reach wire target. Unchanged world state alone does not prove that the Creative guard rejected a valid reachable action.",
+  "preserved": "Original failed client report, event log, source snapshot and run report remain unchanged.",
+  "required_fix": "Require fresh exact server-confirmed waypoint coordinates and actual relevant event evidence before interpreting native refusal."
+}

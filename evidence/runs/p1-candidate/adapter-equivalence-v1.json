@@ -1,0 +1,21 @@
+{
+  "schema": "agentcity.candidate.adapter-equivalence.v1",
+  "status": "candidate_electrical_equivalence_observed",
+  "full_phase_gate_passed": false,
+  "scope": "Pinned engine pull with null Player compared with real Mineflayer clicks; excludes construction and production authority. These initial comparisons predate final500ms spacing.",
+  "compared_cases": 16,
+  "bindings": [
+    {
+      "input_adapter": "native_click",
+      "path": "evidence/runs/p1-candidate/agentcity-p1-8b8f3235/server-result.json",
+      "sha256": "fd639a68d747b1167caf24e3a55c92716117a8534073d811118df2540581bccd",
+      "elapsed_ms": 165593
+    },
+    {
+      "input_adapter": "native_engine",
+      "path": "evidence/runs/p1-candidate/agentcity-p1-742a03c3/server-result.json",
+      "sha256": "b433aa1a766560a7b3e5bef7282253eda47488a811df45a774e5c179c6f3df4d",
+      "elapsed_ms": 79689
+    }
+  ]
+}

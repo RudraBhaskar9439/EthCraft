@@ -1,0 +1,26 @@
+{
+  "status": "pass",
+  "recorded_at": "2026-10-29T22:30:26.431769+00:00",
+  "scope": "Local procurement service verification; actual Anvil/PostgreSQL five-case integration plus read-only-chain three-case PostgreSQL authorization regression",
+  "source_sha256": {
+    "backend/src/procurement/service.mjs": "05d36442476355f3a47d28eb768191943408413ec75b258584ef7e5c15e6a932",
+    "backend/src/procurement/schema.sql": "b3f31e03be327662ade8d6af9ea96dbf8cac394ccaa01103d30463589fc4b7bd",
+    "backend/src/procurement/README.md": "8cb4130152bd4c3aadfb370a0a2bab4331d36fc8c940f18ec60d746196c0133a",
+    "tests/procurement/local.mjs": "4dabbef8561bc4ac7af89ec75d53b45392edf31ba3fee7f528b5e900811df006",
+    "tests/procurement/authorization.mjs": "f56c8b9996109ab4a950234cac70acd1a0cf90ef71da92ecda1646817340d939"
+  },
+  "evidence": [
+    {
+      "path": "evidence/runs/local-procurement/procurement-efd2563d-e0ec-4190-8349-aa77c754f8ea/report.json",
+      "sha256": "0ffc980a63de1d70e8fc57a5a4da8dc56b8f7e1015ec613248eb469e35948432",
+      "checks": 5
+    },
+    {
+      "path": "evidence/runs/local-procurement/authorization-bc3a19fe-f28e-4e7a-9b02-b5b19c5de4f3/report.json",
+      "sha256": "bacc79f4547c5872757868eb12249422faf3c1d5358ff4c6f7963403d6db4560",
+      "checks": 3
+    }
+  ],
+  "qualification": "The main five-case integration preceded the supplemental shared-reader requester/chain guard. That narrow authorization delta is verified by the three-case actual PostgreSQL regression; no additional Anvil mutation was made while the combined demo resumed.",
+  "liveExternalGatePassed": false
+}

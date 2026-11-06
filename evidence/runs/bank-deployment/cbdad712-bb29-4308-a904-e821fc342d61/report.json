@@ -1,0 +1,408 @@
+{
+  "status": "pass",
+  "scope": "Isolated owned Anvil banking deployment with actual v4 and disclosed LP fixture",
+  "manifest": {
+    "schema": "agentcity.bank.v1",
+    "environment": "LOCAL_TEST_FIXTURE",
+    "chainId": 31337,
+    "rpcUrl": "http://127.0.0.1:8561",
+    "genesisHash": "0x3061beeb57295e2fa7c6baebd723ba39acf72e26ff1d8de003ba2587d60cd69a",
+    "deploymentId": "0xeea174164be56461a20a5f9c5f33636769b9286bd5bbda49d1519034d8fe3436",
+    "serverId": "0x2706fad236dc74105dc4cd51031ff93c3e279ec2e9c766c971689d530307e618",
+    "serverIdText": "laptop-bank-1ce53d39d114410b90f72599ebae8b07",
+    "registry": "0x46cf0fc69acf52e29b6dd8ad7883947c2e24ae16",
+    "market": "0x4c1e81f776f34ef9034dd273de426a65d672c830",
+    "city": "0xba343e1030e5c126de821de85df109b48f54b42f",
+    "usdc": "0x072ae7d43705543b411efb8f42c5e7863ac6fc4c",
+    "gem": "0x041fa32f6d948a765b9330e92a06fa78221af781",
+    "bank": "0x54b889481342c0ed80fb7a92df1f3e06fb8299cc",
+    "router": "0x29a1b8f2408ba8fc7bef17d1d75f10a133328d01",
+    "hook": "0x25d4b81adfbb29850242c30b05a7713be8cf4080",
+    "stateRegistry": "0xb7f284315c88fed7e8bf3a0a1208fe8afc35abcd",
+    "workEscrow": "0x611a8b7a593dd8377e65c730840a8c4c942cbfb8",
+    "poolManager": "0xda2ec869cc3d95e75ef6b48edb34e965e0980dd5",
+    "quoter": "0xf035f2570dc6cb85fbcc1449e1455e128043d5f5",
+    "codeHashes": {
+      "registry": "0x9825094905f226df9f11f142b1f876b56adc56de6215fba350c05d34fb57cc9a",
+      "market": "0x45e20c186a9f03dce082c65e38a97a07fabce569c152ebeb7bbab9e4f89f5bc9",
+      "city": "0xf9eebf13f96d7b246e30cadd39bbfcf908086d15fdb328ac522e52fa71fb2821",
+      "usdc": "0xbad597e8112aba7f7e29880b1128fffe0e7ed71e29c6f8133ad33988d0dcea38",
+      "gem": "0xf9eebf13f96d7b246e30cadd39bbfcf908086d15fdb328ac522e52fa71fb2821",
+      "bank": "0x54f29bd9bccedabbb63c1aa828b4ded2dff39de22dcc62284b98587854e15634",
+      "router": "0x136f65a9a6c9e6df76079caa0226044a87c3450442cec3cf790c6478bfba8f4a",
+      "hook": "0x3edd0e62f8d9922da34624ae2b31a873baca03b7e7e7c0d34689d5cbe9e394e4",
+      "stateRegistry": "0x38db11adc663b540ce88c38ce9027c938aaf5564bf0ca109ddd4b86be8c37cb4",
+      "workEscrow": "0x35d1cd9f915f12848ae3fc41807382895df41313210b10fa08fea434b4184083",
+      "poolManager": "0x1ae0e1ec59df9ac897fc5a1ee297c7484182a9b0050c1057a0d4eeb3cee29536",
+      "quoter": "0xc8d6841688d154ef896e9b1677c95c66b85169bd682624bba86ecb9bf860b9b3"
+    },
+    "pools": {
+      "cityUsdc": {
+        "currency0": "0x072ae7d43705543b411efb8f42c5e7863ac6fc4c",
+        "currency1": "0xba343e1030e5c126de821de85df109b48f54b42f",
+        "fee": 8388608,
+        "tickSpacing": 60,
+        "hooks": "0x25d4b81aDFBB29850242C30B05a7713BE8cf4080"
+      },
+      "gemUsdc": {
+        "currency0": "0x041fa32f6d948a765b9330e92a06fa78221af781",
+        "currency1": "0x072ae7d43705543b411efb8f42c5e7863ac6fc4c",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x0000000000000000000000000000000000000000"
+      }
+    },
+    "worldAssets": {
+      "schema": "agentcity.world-assets.v1",
+      "environment": "LOCAL_TEST_FIXTURE",
+      "chainId": 31337,
+      "rpcUrl": "http://127.0.0.1:8561",
+      "genesisHash": "0x3061beeb57295e2fa7c6baebd723ba39acf72e26ff1d8de003ba2587d60cd69a",
+      "deploymentId": "0xeea174164be56461a20a5f9c5f33636769b9286bd5bbda49d1519034d8fe3436",
+      "serverId": "0x2706fad236dc74105dc4cd51031ff93c3e279ec2e9c766c971689d530307e618",
+      "registry": "0x46cf0fc69acf52e29b6dd8ad7883947c2e24ae16",
+      "market": "0x4c1e81f776f34ef9034dd273de426a65d672c830",
+      "city": "0xba343e1030e5c126de821de85df109b48f54b42f",
+      "confirmations": 2,
+      "maxPriceBaseUnits": "100000000000000000000",
+      "maxGas": "1000000",
+      "maxNativeCostWei": "500000000000000",
+      "codeHashes": {
+        "registry": "0x9825094905f226df9f11f142b1f876b56adc56de6215fba350c05d34fb57cc9a",
+        "market": "0x45e20c186a9f03dce082c65e38a97a07fabce569c152ebeb7bbab9e4f89f5bc9",
+        "city": "0xf9eebf13f96d7b246e30cadd39bbfcf908086d15fdb328ac522e52fa71fb2821"
+      }
+    },
+    "roles": {
+      "administrator": "0xb46334d7786cd6c288949e1d21642df0d2395498",
+      "issuer": "0x80865d6e8f3d98c0f43b2fe5e3496d8e284fac64",
+      "registrar": "0xea31c0a4dcafa5ab5f37842d34c47c0804ad5433",
+      "publisher": "0x627c328f112b42875f63c59eab9b8e65b413fa92",
+      "lender": "0xee6404ed1e1d073a3034d893032329f01e98ed89",
+      "inspector": "0xf2955d518850c037d02b9c25a1d6ea47af6359a5",
+      "liquidity": "0xb25898f5e4907e6925741b10dea46f351104a0e4"
+    },
+    "confirmations": 2,
+    "maxGas": 3000000,
+    "maxNativeCostWei": "500000000000000",
+    "maxCityAmountBaseUnits": "100000000000000000000",
+    "maxUsdcAmountBaseUnits": "30000000",
+    "tokens": {
+      "CITY": {
+        "address": "0xba343e1030e5c126de821de85df109b48f54b42f",
+        "decimals": 18
+      },
+      "GEM": {
+        "address": "0x041fa32f6d948a765b9330e92a06fa78221af781",
+        "decimals": 18
+      },
+      "USDC": {
+        "address": "0x072ae7d43705543b411efb8f42c5e7863ac6fc4c",
+        "decimals": 6,
+        "symbol": "tUSDC",
+        "mock": true,
+        "circleIssued": false
+      }
+    },
+    "operatorControlled": true,
+    "mockUSDC": true,
+    "journalSchema": "bank_deployment_31337_cbdad712bb29",
+    "maximumNativeBudgetWei": "4000000000000000",
+    "official": {},
+    "sourceHashes": {
+      "contracts/src/AgentCityBank.sol": "a0e9090b46563c6df112893e990e046832e96bef82a3fc488835811cf48361be",
+      "contracts/src/AgentCityReputationHook.sol": "a1d64ab184da0bf643eb4159f59b5902ef68b1a13856bab8fed5d3a4516e116e",
+      "contracts/src/BankPaymentRouter.sol": "fc3db20b9b3f7eab14a8b35986bd964c1f66f34aa72735651ec349d32f77666e",
+      "contracts/src/BankTestUSDC.sol": "f34159a7cfae151c6f237066122f656c434d2bda513fae299df3a56573849d60",
+      "contracts/src/AgentCityWorkEscrow.sol": "3b8a0e1152a4a0d9fc0ef05e60284c1e707d909a1003b5b6befe4e1c141d7811",
+      "contracts/src/WorldAssetRegistry.sol": "394a1159fcd1c06d589e84f46502987e402346ce3dbec69ed217d7d498245ce5",
+      "contracts/src/WorldAssetMarket.sol": "63b79da91e7fff2eeb15ee400bcf43e22334b08388cf00fbceb968ca38113f77",
+      "contracts/src/PlayableMarketToken.sol": "264f6f933e1e2b376708e53d37723d436893bbb34199d75e304e5e706ac74ddd",
+      "contracts/src/StateRegistry.sol": "f0b37057da5e219b7ab85d2dd78657577d17d320749fb28af2f202cbaa19aad3",
+      "contracts/src/DemoHookFactory.sol": "74cee97b1f7ab2a6c1e1b680d5ad05b0b1fa934277164f4e7c3d1cfb3e2df6dd",
+      "contracts/package-lock.json": "80312c2b2b961d9094131a38097f043c67d14731a186ba7d91894cea527ebb8c"
+    },
+    "positionManager": null,
+    "permit2": null,
+    "localFixture": {
+      "owner": "agentcity-bank-local",
+      "liquidityHelper": "0xe384c222239fbf07723f6d827659b4453cdf8e2b"
+    },
+    "liquidity": {
+      "cityUsdc": {
+        "before": {
+          "0xba343e1030e5c126de821de85df109b48f54b42f": "1000000000000000000000",
+          "0x072ae7d43705543b411efb8f42c5e7863ac6fc4c": "2000000000"
+        },
+        "deposited": {
+          "0xba343e1030e5c126de821de85df109b48f54b42f": "307180719784746958171",
+          "0x072ae7d43705543b411efb8f42c5e7863ac6fc4c": "283865494"
+        },
+        "liquidity": "10000000000000000",
+        "tickLower": 275700,
+        "tickUpper": 276900,
+        "transactionHash": "0x0f078b582840dc39d60ed01d68153c77b33d5b461ad7df2a8796116add1b5583",
+        "disclosure": "Initial seed price near1wholeCITY/GEM=1mocktUSDC, not a peg or redemption promise."
+      },
+      "gemUsdc": {
+        "before": {
+          "0x041fa32f6d948a765b9330e92a06fa78221af781": "1000000000000000000000",
+          "0x072ae7d43705543b411efb8f42c5e7863ac6fc4c": "1716134506"
+        },
+        "deposited": {
+          "0x041fa32f6d948a765b9330e92a06fa78221af781": "278060058800808995177",
+          "0x072ae7d43705543b411efb8f42c5e7863ac6fc4c": "312968766"
+        },
+        "liquidity": "10000000000000000",
+        "tickLower": -276960,
+        "tickUpper": -275760,
+        "transactionHash": "0x3a6a9ebb8e57e93027f6a09bba6eb7f7df01af63f4e504328d7e7ad7f3665ec1",
+        "disclosure": "Initial seed price near1wholeCITY/GEM=1mocktUSDC, not a peg or redemption promise."
+      }
+    },
+    "deploymentRunId": "cbdad712-bb29-4308-a904-e821fc342d61"
+  },
+  "operations": {
+    "deploy-mock-USDC": {
+      "id": "28491fb9-655c-4d78-b08e-439b0859f007",
+      "hash": "0x1878ec8ea03c1fcf78aca68c630e1e82faf7defedc96e127847ee9c4ded6c8ac",
+      "blockNumber": "1",
+      "gasUsed": "788405",
+      "effectiveGasPrice": "2000000000"
+    },
+    "deploy-CITY": {
+      "id": "1629fdc1-f580-440c-a09c-a44b2097921f",
+      "hash": "0x23817cd87590837aec9c3f4afa800389890aa8f61190e774a1fa2d55a9f79a81",
+      "blockNumber": "2",
+      "gasUsed": "793273",
+      "effectiveGasPrice": "1881570042"
+    },
+    "deploy-GEM": {
+      "id": "d6a5b093-ee4e-4869-8b71-95583bc255e5",
+      "hash": "0xf8dc2be7e66db31b1660bc9550eb44a1122a28af1c722e9ca5f5c5941262348c",
+      "blockNumber": "3",
+      "gasUsed": "793274",
+      "effectiveGasPrice": "1777201502"
+    },
+    "deploy-asset-registry": {
+      "id": "ffe13ebf-37c0-4d3b-b25f-5784d2fadb14",
+      "hash": "0x8f60360af6cb6fe3e18211283df98938e99dc4767b45f599e1bd3b3c6e6a3d6a",
+      "blockNumber": "4",
+      "gasUsed": "2432122",
+      "effectiveGasPrice": "1685189096"
+    },
+    "deploy-asset-market": {
+      "id": "f9439e56-d6f8-493a-88f1-5762ab037a5f",
+      "hash": "0xb48fde188483426c2f1e3549d0de8df7bbde0a220f9c3719078ca368ed7b3795",
+      "blockNumber": "5",
+      "gasUsed": "1251433",
+      "effectiveGasPrice": "1613427655"
+    },
+    "deploy-bank": {
+      "id": "3fe4bfa2-9bbb-47f6-b6ac-220d3b519f66",
+      "hash": "0x211f2a00627a7b019db6bc24b389ce51fa0a7d8f3d20a7078a106743108e73b8",
+      "blockNumber": "6",
+      "gasUsed": "2753290",
+      "effectiveGasPrice": "1543146395"
+    },
+    "deploy-state-registry": {
+      "id": "60e9464d-83d4-47aa-bad4-4eb29a17b64e",
+      "hash": "0x948d56cfa67989d34e19a9a9ee4a99127846579374f65dede4d6e354f2f630e1",
+      "blockNumber": "7",
+      "gasUsed": "272335",
+      "effectiveGasPrice": "1487715092"
+    },
+    "deploy-local-manager": {
+      "id": "fd80336e-f05b-419c-a0f2-d3e3b8fb9fa1",
+      "hash": "0xc8389488257dcb69a3045d37ee584f4d21e925e46dd45cad8c3d131f2f3f5c7a",
+      "blockNumber": "8",
+      "gasUsed": "3787277",
+      "effectiveGasPrice": "1427857555"
+    },
+    "deploy-local-quoter": {
+      "id": "af532bdb-9174-42f1-8a7a-62216c63b0f6",
+      "hash": "0x3cba6e853d0569f91032bdad02b13296ea3baa387aac2d1c5578a27bea59b916",
+      "blockNumber": "9",
+      "gasUsed": "995874",
+      "effectiveGasPrice": "1387878820"
+    },
+    "deploy-hook-factory": {
+      "id": "4ba4aa0f-437f-4c02-adfb-574f35a77c2a",
+      "hash": "0x6ce81d7db827ea363f114f5666bbe41b4dd2662826c3190d04f86413d14d116d",
+      "blockNumber": "10",
+      "gasUsed": "176566",
+      "effectiveGasPrice": "1342612955"
+    },
+    "deploy-reputation-hook": {
+      "id": "06e84c77-cbb3-4fca-92a3-cc058114460c",
+      "hash": "0xda9d6e48ec043708458cd07bc2a3a1d42bb1777bb570e6436c6972b16a812cf5",
+      "blockNumber": "11",
+      "gasUsed": "1081438",
+      "effectiveGasPrice": "1300290451"
+    },
+    "initialize-CITY-pool": {
+      "id": "cab368c7-6531-4ac3-9736-a0c1f9051446",
+      "hash": "0x5e083199b5c419a4d879ffc9b4e486768c2057a8988b20a1ac7815549977725d",
+      "blockNumber": "12",
+      "gasUsed": "52358",
+      "effectiveGasPrice": "1265460358"
+    },
+    "initialize-GEM-pool": {
+      "id": "a96a0c1a-bf6e-4d60-bef7-305dca7ab97e",
+      "hash": "0x55669a6093281217172f0a303d71e514abe8a1e7302a8010d6a2ca945be13d71",
+      "blockNumber": "13",
+      "gasUsed": "52269",
+      "effectiveGasPrice": "1232393639"
+    },
+    "deploy-payment-router": {
+      "id": "8d4a1db0-762a-40f8-a3d3-184fa93c79ac",
+      "hash": "0xa19270fa41ce64a3a68f55f777d2dcc845e15d92fd9d77840b267836d660dd1f",
+      "blockNumber": "14",
+      "gasUsed": "1974878",
+      "effectiveGasPrice": "1203445659"
+    },
+    "bind-reputation-router": {
+      "id": "9bb19cef-9a6e-4ca7-a6c3-b2bf2040d9d2",
+      "hash": "0xe5e4b59566ce5cc58c0366d42d6b27b8df6d530df43bf1ab8c143a5cae15dbaa",
+      "blockNumber": "15",
+      "gasUsed": "51768",
+      "effectiveGasPrice": "1181363122"
+    },
+    "deploy-work-escrow": {
+      "id": "f9ac44fd-17f8-485e-9f7b-7e8bef08d410",
+      "hash": "0x0e0b49bb0b479a1be357fe3c22532d26d9bfd5feb1e00fb4e17e8ac538520ad1",
+      "blockNumber": "16",
+      "gasUsed": "951545",
+      "effectiveGasPrice": "1158770972"
+    },
+    "mint-USDC-0xb25898f5e4907e6925741b10dea46f351104a0e4": {
+      "id": "49457835-722d-4538-aeec-042f5f1e3d8c",
+      "hash": "0xc2283d9df810099e528c10891ba237979bb85a71874fa793a7897bd8fc4542f0",
+      "blockNumber": "17",
+      "gasUsed": "70500",
+      "effectiveGasPrice": "1140183582"
+    },
+    "mint-CITY-0xb25898f5e4907e6925741b10dea46f351104a0e4": {
+      "id": "5256a481-07f5-457f-ac05-eceb6a465c2b",
+      "hash": "0x1e85590791e21920d2a20c38d86b26c57015aaebc1277d25d2bd7b8f8a885269",
+      "blockNumber": "18",
+      "gasUsed": "70548",
+      "effectiveGasPrice": "1122742993"
+    },
+    "mint-GEM-0xb25898f5e4907e6925741b10dea46f351104a0e4": {
+      "id": "420ed257-f7a1-43ec-b2ad-b993244640a7",
+      "hash": "0x8419d9349f761a4bc567aeb08140b769519887ab84e768672c72a09ab58b5bcf",
+      "blockNumber": "19",
+      "gasUsed": "70548",
+      "effectiveGasPrice": "1107472280"
+    },
+    "mint-USDC-0xee6404ed1e1d073a3034d893032329f01e98ed89": {
+      "id": "71322aee-c849-41ba-9756-721bfcb03630",
+      "hash": "0xb6166cb8f2767819527961d397ef0651b977a1b44111b9c97638e7ca9a0f746e",
+      "blockNumber": "20",
+      "gasUsed": "53400",
+      "effectiveGasPrice": "1094101428"
+    },
+    "mint-USDC-0x0c5e09658141b4e931efef2d1e825f22b7283b01": {
+      "id": "10232c30-397d-4c3c-90ee-21e6cf739fd0",
+      "hash": "0xe30fc6ff315af95dc6739044d8b92c12fe7933d3e2d02bf306469a60dc02b695",
+      "blockNumber": "21",
+      "gasUsed": "53400",
+      "effectiveGasPrice": "1082380625"
+    },
+    "mint-GEM-0x0c5e09658141b4e931efef2d1e825f22b7283b01": {
+      "id": "fcf415ce-52d1-4033-8f1f-d31c9a24cfb0",
+      "hash": "0xd77941352b62f003ca1f0178ccac711460d3051e1fdb9815b5662335e1c7ebf1",
+      "blockNumber": "22",
+      "gasUsed": "53448",
+      "effectiveGasPrice": "1072119707"
+    },
+    "mint-CITY-0xcb3340f60b88f2fa6f5820d4b24899938143dbc2": {
+      "id": "5a2fdb0c-6077-493b-b548-aa3245e79ceb",
+      "hash": "0x7b8525dd1a86b98904176ba57ac449deb35d80e64c4d21b603f2026d2cd9f082",
+      "blockNumber": "23",
+      "gasUsed": "53448",
+      "effectiveGasPrice": "1063136866"
+    },
+    "mint-USDC-0x92686a568fcdf0142f2d2448dd009a927111c80f": {
+      "id": "bf7cf658-a27b-41d0-a48d-94953c12087c",
+      "hash": "0x9e7249b0b01daec911004936372c3ef80dfcee6b27e9bff6e9a1f3b79e4ed2bb",
+      "blockNumber": "24",
+      "gasUsed": "53388",
+      "effectiveGasPrice": "1055272879"
+    },
+    "deploy-local-liquidity-fixture": {
+      "id": "ea871a6c-e7e8-40f7-a208-c7f62b502e96",
+      "hash": "0x4d476482811bc7a8fbf4fe229a768316c450979ca733944753f1a46bc2ba4701",
+      "blockNumber": "25",
+      "gasUsed": "1034663",
+      "effectiveGasPrice": "1048388361"
+    },
+    "approve-liquidity-cityUsdc-0xba343e1030e5c126de821de85df109b48f54b42f": {
+      "id": "6d93c410-27c5-4f7a-9d61-d9b7dcaeadae",
+      "hash": "0x94d74f23136da9232bedcaf503874db28cfeb6d73997718381c75c308325d2d3",
+      "blockNumber": "26",
+      "gasUsed": "45991",
+      "effectiveGasPrice": "1042757030"
+    },
+    "approve-liquidity-cityUsdc-0x072ae7d43705543b411efb8f42c5e7863ac6fc4c": {
+      "id": "bf001ce5-38e9-4e80-ac36-68f2735db297",
+      "hash": "0x9d5ee34b408c151dbc27ed183b0c8f464446d966c6ef57a3841ddafbb7c62b64",
+      "blockNumber": "27",
+      "gasUsed": "45943",
+      "effectiveGasPrice": "1037428789"
+    },
+    "seed-cityUsdc": {
+      "id": "d4741b11-6dcd-48b2-896b-475a6d0cbad7",
+      "hash": "0x0f078b582840dc39d60ed01d68153c77b33d5b461ad7df2a8796116add1b5583",
+      "blockNumber": "28",
+      "gasUsed": "303776",
+      "effectiveGasPrice": "1032764521"
+    },
+    "approve-liquidity-gemUsdc-0x041fa32f6d948a765b9330e92a06fa78221af781": {
+      "id": "3e9a820f-c13f-428c-b7f6-0d6298c92a92",
+      "hash": "0xd7cbb86e51d2255840862daaac9f7304177e23a7e6de8745afa74cad3a3718b7",
+      "blockNumber": "29",
+      "gasUsed": "45991",
+      "effectiveGasPrice": "1028751899"
+    },
+    "approve-liquidity-gemUsdc-0x072ae7d43705543b411efb8f42c5e7863ac6fc4c": {
+      "id": "009966e5-ae3a-4693-9968-5e83fb846571",
+      "hash": "0x5247528ddb5587277daff9073b052de7ccfe30f9e518473afa395f315af1d67b",
+      "blockNumber": "30",
+      "gasUsed": "28843",
+      "effectiveGasPrice": "1025168932"
+    },
+    "seed-gemUsdc": {
+      "id": "17f31b84-7f17-4046-91a7-e54cb7d02cf0",
+      "hash": "0x3a6a9ebb8e57e93027f6a09bba6eb7f7df01af63f4e504328d7e7ad7f3665ec1",
+      "blockNumber": "31",
+      "gasUsed": "286793",
+      "effectiveGasPrice": "1022028866"
+    },
+    "publish-bootstrap-availability": {
+      "id": "825700bb-1093-4c43-b10f-2e0fa9ad71c2",
+      "hash": "0xc2b1960be6bc1d633696df4e0d2fec06fa83a692a628a4f171979d71293f2b94",
+      "blockNumber": "32",
+      "gasUsed": "46053",
+      "effectiveGasPrice": "1019327906"
+    }
+  },
+  "originalSourceHashes": {
+    "contracts/src/AgentCityBank.sol": "a0e9090b46563c6df112893e990e046832e96bef82a3fc488835811cf48361be",
+    "contracts/src/AgentCityReputationHook.sol": "a1d64ab184da0bf643eb4159f59b5902ef68b1a13856bab8fed5d3a4516e116e",
+    "contracts/src/BankPaymentRouter.sol": "fc3db20b9b3f7eab14a8b35986bd964c1f66f34aa72735651ec349d32f77666e",
+    "contracts/src/BankTestUSDC.sol": "f34159a7cfae151c6f237066122f656c434d2bda513fae299df3a56573849d60",
+    "contracts/src/AgentCityWorkEscrow.sol": "3b8a0e1152a4a0d9fc0ef05e60284c1e707d909a1003b5b6befe4e1c141d7811",
+    "contracts/src/WorldAssetRegistry.sol": "394a1159fcd1c06d589e84f46502987e402346ce3dbec69ed217d7d498245ce5",
+    "contracts/src/WorldAssetMarket.sol": "63b79da91e7fff2eeb15ee400bcf43e22334b08388cf00fbceb968ca38113f77",
+    "contracts/src/PlayableMarketToken.sol": "264f6f933e1e2b376708e53d37723d436893bbb34199d75e304e5e706ac74ddd",
+    "contracts/src/StateRegistry.sol": "f0b37057da5e219b7ab85d2dd78657577d17d320749fb28af2f202cbaa19aad3",
+    "contracts/src/DemoHookFactory.sol": "74cee97b1f7ab2a6c1e1b680d5ad05b0b1fa934277164f4e7c3d1cfb3e2df6dd",
+    "contracts/package-lock.json": "80312c2b2b961d9094131a38097f043c67d14731a186ba7d91894cea527ebb8c"
+  },
+  "realMoneySpentUsd": 0,
+  "independentHumans": 0,
+  "nativeItemsRegistered": 0,
+  "actualGasCostWei": "29790405898281584"
+}

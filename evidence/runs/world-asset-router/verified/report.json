@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "scope": "Actual isolated Foundry execution against the official Uniswap v4 PoolManager with synthetic CRED/KIT fixture assets and seeded liquidity; no public transaction or live Minecraft effect",
+  "command": "forge test --root contracts --out ../.local/world-router-out --cache-path ../.local/world-router-cache --skip WorldAssetRegistry.sol --skip WorldAssetMarket.sol --match-contract WorldAssetSwapRouterTest --match-test testWorld -vv",
+  "solidityVersion": "0.8.26",
+  "tests": [
+    "testWorldHookRequiredAndMinimumOutputCannotSpend",
+    "testWorldHookedSwapConservesInputAndReturnsOutputOnce",
+    "testWorldStaleHookRefusesWithoutSpendingAndRetainsOperation"
+  ],
+  "passed": 3,
+  "failed": 0,
+  "qualification": "Actual pool/router/hook execution, not live managed-wallet or Minecraft ownership integration proof. A successful swap alone does not establish an asset purchase.",
+  "publicTransactions": 0,
+  "productionWorldMutations": 0
+}

@@ -1,0 +1,120 @@
+{
+  "status": "pass",
+  "scope": "Actual faucet-funded DEVELOPER fixture, not a Privy player or independent human",
+  "tests": [
+    {
+      "name": "unconfirmed-preview-retry-signs-zero-transactions",
+      "status": "pass"
+    },
+    {
+      "name": "actual-1CITY-swap-canonical-router-manager-transfers-and-balance-deltas",
+      "status": "pass"
+    },
+    {
+      "name": "same-operation-retry-zero-additional-signs-transfers-or-nonce",
+      "status": "pass"
+    }
+  ],
+  "realMoneySpentUsd": 0,
+  "independentHumans": 0,
+  "managedPlayers": 0,
+  "runId": "edc664fd-a0b9-43ac-97c2-7f6afd58bf2c",
+  "developer": "0x5cAEC1fD260Ad8bB747A3984752D7943BcDc4A54",
+  "chainId": 1301,
+  "preview": {
+    "previewId": "bea0d7fc-7088-4c7b-839e-a251a135b46b",
+    "playerId": "7730fab9-8885-4cba-9526-53e783b9eb99",
+    "address": "0x5caec1fd260ad8bb747a3984752d7943bcdc4a54",
+    "chainId": 1301,
+    "tokenIn": "CITY",
+    "tokenOut": "GEM",
+    "amountInBaseUnits": "1000000000000000000",
+    "quotedOutBaseUnits": "996900609009281774",
+    "minimumOutBaseUnits": "986931602919188956",
+    "amountIn": "1",
+    "quotedOut": "0.996900609009281774",
+    "minimumOut": "0.986931602919188956",
+    "slippageBps": 100,
+    "deadline": 1793437392,
+    "status": "preview",
+    "proof": {},
+    "consented": false,
+    "confirmedAt": null,
+    "market": "Uniswap v4 fixed CITY/GEM test pool",
+    "gameCoinsCredited": false,
+    "realValueSupported": false
+  },
+  "result": {
+    "previewId": "bea0d7fc-7088-4c7b-839e-a251a135b46b",
+    "playerId": "7730fab9-8885-4cba-9526-53e783b9eb99",
+    "address": "0x5caec1fd260ad8bb747a3984752d7943bcdc4a54",
+    "chainId": 1301,
+    "tokenIn": "CITY",
+    "tokenOut": "GEM",
+    "amountInBaseUnits": "1000000000000000000",
+    "quotedOutBaseUnits": "996900609009281774",
+    "minimumOutBaseUnits": "986931602919188956",
+    "amountIn": "1",
+    "quotedOut": "0.996900609009281774",
+    "minimumOut": "0.986931602919188956",
+    "slippageBps": 100,
+    "deadline": 1793437392,
+    "status": "confirmed",
+    "proof": {
+      "swap": {
+        "poolId": "0xb432a4214dd33346f5583d9566ccf0a00fb2eebf483cb6c9cea820a9d8bb275b",
+        "status": "confirmed",
+        "blockHash": "0x3fae68b74e763a65c0da8aadb77308a655ded7410bedc950bb2ab911d5f41770",
+        "blockNumber": "66584864",
+        "transactionHash": "0x561ad772c923cba69ee5730482f5b55060d326525eea758dd4a37875db07eaaa",
+        "amountInBaseUnits": "1000000000000000000",
+        "gameCoinsCredited": false,
+        "amountOutBaseUnits": "996900609009281774"
+      },
+      "approval": {
+        "status": "confirmed",
+        "transactionHash": "0x431d6b1f5513e84cf79b529c9675719dcc1a13fb6f2ae471f01d2fe81c61e07e"
+      }
+    },
+    "consented": true,
+    "confirmedAt": "2026-10-31T09:01:11.832Z",
+    "market": "Uniswap v4 fixed CITY/GEM test pool",
+    "gameCoinsCredited": false,
+    "realValueSupported": false
+  },
+  "before": {
+    "address": "0x5caec1fd260ad8bb747a3984752d7943bcdc4a54",
+    "chainId": 1301,
+    "nativeBalanceWei": "999945425788988444",
+    "tokens": {
+      "CITY": {
+        "baseUnits": "99704469891208628303191",
+        "amount": "99704.469891208628303191"
+      },
+      "GEM": {
+        "baseUnits": "99704469891208628303191",
+        "amount": "99704.469891208628303191"
+      }
+    },
+    "gameCoinsCredited": false
+  },
+  "after": {
+    "address": "0x5caec1fd260ad8bb747a3984752d7943bcdc4a54",
+    "chainId": 1301,
+    "nativeBalanceWei": "999945123895988151",
+    "tokens": {
+      "CITY": {
+        "baseUnits": "99703469891208628303191",
+        "amount": "99703.469891208628303191"
+      },
+      "GEM": {
+        "baseUnits": "99705466791817637584965",
+        "amount": "99705.466791817637584965"
+      }
+    },
+    "gameCoinsCredited": false
+  },
+  "intentsAfterReplay": 14,
+  "maximumCombinedDeploymentAndSwapBudgetWei": "8000000000000000",
+  "gameCoinsCredited": false
+}

@@ -1,0 +1,57 @@
+{
+  "purpose": "isolated_maintained_candidate_not_adopted",
+  "artifacts": {
+    "paper": {
+      "version": "26.3",
+      "build": 231,
+      "sha256": "a836a016be7ac52352eb3a1efb6857bb42ee73a6c78d46e292f7e87742edb0e6",
+      "url": "https://fill-data.papermc.io/v1/objects/a836a016be7ac52352eb3a1efb6857bb42ee73a6c78d46e292f7e87742edb0e6/paper-26.3-231.jar"
+    },
+    "ViaVersion": {
+      "version": "5.12.2",
+      "sha256": "24e4876fefe73e08a4c87cd6c457ee0916e62dd69656631caf41e26f909d504b",
+      "url": "https://github.com/ViaVersion/ViaVersion/releases/download/5.12.2/ViaVersion-5.12.2.jar"
+    },
+    "ViaBackwards": {
+      "version": "5.12.2",
+      "sha256": "9a148a80ea22074f4bd1626cdbe254a4cd998bf44e7ceaff4e285a1b6b35da42",
+      "url": "https://github.com/ViaVersion/ViaBackwards/releases/download/5.12.2/ViaBackwards-5.12.2.jar"
+    }
+  },
+  "server_java_minimum": 25,
+  "java_image": "eclipse-temurin@sha256:83f4a7fc27df94dcc7b8de04d14cbbba8da14406f921e966969c3b09000aa507",
+  "java_runtime": "Temurin25.0.5+8",
+  "licenses": {
+    "Paper": "GPL-3.0 and bundled upstream notices",
+    "ViaVersion_plugin": "GPL-3.0-only",
+    "ViaVersion_API_only": "MIT",
+    "ViaBackwards": "GPL-3.0-only",
+    "Temurin_JDK": "GPL-2.0-only WITH Classpath-exception-2.0",
+    "container_build_scripts": "Apache-2.0",
+    "complete_container": "Mixed JDK, Ubuntu and third-party licenses; bundled JDK notices retained"
+  },
+  "client": "1.21.11",
+  "mineflayer": "4.39.0",
+  "pathfinder": "2.4.5",
+  "bind": "127.0.0.1",
+  "ports": [
+    25596,
+    25597
+  ],
+  "non_token": true,
+  "production_adopted": false,
+  "official_source_sha256": {
+    "Paper-LICENSE.md": "fc5629be761124cb418bed11c70b2cd2aeff136c52ca8b80caf8fdf7474c3bc8",
+    "Temurin-java-base-ADDITIONAL_LICENSE_INFO": "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916",
+    "Temurin-java-base-LICENSE": "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726",
+    "Temurin-java-version.txt": "dc25d4c269605476cbe8abf0a71814a943b1303a7249657c140d7e2878f5fa46",
+    "ViaBackwards-LICENSE": "8b1ba204bb69a0ade2bfcf65ef294a920f6bb361b317dba43c7ef29d96332b9b",
+    "ViaBackwards-platform.java": "6b5a3b0476b086f7b0e40cafe818e0ca42adb3676b5919d7f8c47f75a0282e90",
+    "ViaBackwards-release.json": "b6593f50fc04d660e96187d1e528cacabd0ebc7806cec9501a5324edcc83baa9",
+    "ViaVersion-API-MIT.md": "53b23ab831428ec5b9126eff80de5a31f24c2393e6e8bbade3cab7e3717d3f8f",
+    "ViaVersion-GPL.md": "0e1372769c3ea4ce2a8fb0955a02adf8e88d1804c6143518dee9f969eb0911f7",
+    "ViaVersion-release.json": "ea29473eb9dd336743d9691f99dc9edf38e1d5e5ad2d21e27596e4745c4376d8",
+    "paper-build.json": "f779a1b79506a557d2bba8b07cc88ea37197191e499d78127a2ac6303051bcc6",
+    "paper-version.json": "2aaffaa283dbffa64f33ab450eaae45f0daefeb95362cb4000e3344165d8d14d"
+  }
+}

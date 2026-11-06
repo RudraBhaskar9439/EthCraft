@@ -1,0 +1,18 @@
+﻿{
+    "observedAt":  "2026-10-31T13:42:31.1936056Z",
+    "upstreamRelease":  "playit-agent v1.1.0",
+    "publicHostname":  "domination-uid.tun.ply.gg",
+    "beforeDestination":  "127.0.0.1:25565",
+    "requestedDestination":  "127.0.0.1:8796",
+    "authentication":  "scoped Agent-Key from existing private agent keystore; value never captured",
+    "readEndpoint":  "/v1/agents/rundata",
+    "readStatus":  200,
+    "officialUpdateEndpoint":  "/v1/tunnels/config",
+    "updateStatus":  401,
+    "updateErrorType":  "auth",
+    "afterDestination":  "127.0.0.1:25565",
+    "configurationChanged":  false,
+    "requires":  "Account dashboard: existing tunnel local address127.0.0.1, local port8796",
+    "guestSessionAccessed":  false,
+    "paidActions":  0
+}

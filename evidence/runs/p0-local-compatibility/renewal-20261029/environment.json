@@ -1,0 +1,20 @@
+{
+  "scope": "isolated local technical P0 only",
+  "system": "Darwin",
+  "architecture": "arm64",
+  "python": "3.15.2",
+  "node": "v26.3.1",
+  "live_run": "evidence/runs/p0-local-compatibility/attempt-08/run-report.json",
+  "physical_sources_confirmed_unchanged_since_passing_run": true,
+  "physical_source_sha256": {
+    "tests/compatibility/plugin/CompatibilityPlugin.java": "d5f1c5e5598cd6b39bf456cd0fe7ccba63836c7135e68d8c0bc15ded423cce7e",
+    "tests/compatibility/probe.cjs": "269a4480b58e10a019c658cf5969c55bf0a5f5230c092a996e2d8f3d0ee24ff1",
+    "tests/compatibility/run.py": "9854d303a4158b268fd6c54d630927195705693af06c2268a0a970fd6f403889",
+    "tests/compatibility/versions.json": "f9ee9617748df8545cadd5469d383b11f68ec43af6c9181d4259fcd1bb913502",
+    "tests/compatibility/package-lock.json": "644d0168c7bd3d406eeb489e55469fdf2f0e70fe40debcdbe18c9f0b1a1fa915"
+  },
+  "independent_humans_established": false,
+  "token_integration": false,
+  "production_supported": false,
+  "navigation_evidence": "Paper reports builder_position [-2,81,0]; both clients observe same authoritative fixture; no client-only movement claim."
+}

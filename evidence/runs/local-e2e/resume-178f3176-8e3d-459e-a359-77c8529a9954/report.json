@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "kind": "same-job-local-settlement-recovery",
+  "sourceRun": "c0d26a0e-7791-459c-92ef-5997535ce60f",
+  "newPurchases": 0,
+  "result": {
+    "status": "settled",
+    "acceptanceOperationId": "248cc20c-666c-44b7-a195-5d5a8130df0f",
+    "claimOperationId": "df5ce1c3-cece-498d-840f-9ec3ef175fc8",
+    "claimed": "6000000000000000000",
+    "claimTransactionHash": "0x6ed2e110d5c2490b6ff28a21c92476f3e439c32d92576a296e521baaf1f02efe"
+  },
+  "replay": {
+    "status": "settled",
+    "acceptanceOperationId": null,
+    "claimOperationId": "df5ce1c3-cece-498d-840f-9ec3ef175fc8",
+    "claimed": "0",
+    "replay": true,
+    "claimTransactionHash": "0x6ed2e110d5c2490b6ff28a21c92476f3e439c32d92576a296e521baaf1f02efe"
+  },
+  "jobId": "e75ebf8d-588d-419e-9d12-b0157a75337e",
+  "schema": "local_demo_c0d26a0e7791459c92ef5997535ce60f"
+}

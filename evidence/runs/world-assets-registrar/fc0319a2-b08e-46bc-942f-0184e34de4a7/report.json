@@ -1,0 +1,24 @@
+{
+  "status": "pass",
+  "scope": "Injected signer/EVM and isolated actual PG fixtures only; no real key unlock, public transaction or native mint",
+  "checks": [
+    {
+      "name": "constructor and prepare never broadcast; exact operation binding precedes injected signing and retained intent retries reuse original hash",
+      "status": "pass"
+    },
+    {
+      "name": "wrong registry value administrative or transfer selectors mainnet changed payload and raised call limits refuse before signer or send",
+      "status": "pass"
+    },
+    {
+      "name": "actual role preflight gates each operation; explicit broadcast requires retained intent and all fixture writes stay in isolated registrar namespace",
+      "status": "pass"
+    }
+  ],
+  "publicTransactions": 0,
+  "realSignatures": 0,
+  "sources": {
+    "backend/src/world-assets/registrar.mjs": "fbd759966dab603e4391dc3a5dbd8f371b93caa62710a5526828a5a9799da6a6",
+    "backend/src/chain/public-testnet.mjs": "af77073c27e5ff72451517ce726ec5e6b3f75f662f1aa2536c487cf95f721604"
+  }
+}

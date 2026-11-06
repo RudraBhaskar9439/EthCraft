@@ -1,0 +1,52 @@
+{
+  "status": "awaiting_human_actions",
+  "recordedAt": "2026-10-30T12:35:23.289231+00:00",
+  "scope": "Two people sharing this computer; separate offchain test-agreement approvals and genuine Microsoft Java identity verification. No Minecraft economic bridge.",
+  "participants": {
+    "requester": "0xd1DcAAFf9356d5a42f2eE6F90179C4509386a83f",
+    "builder": "0x76D7D56fb21A6969E1F07B722e3c63E2c80a7cB1",
+    "sharedComputerReported": true,
+    "builderMicrosoftAccountReported": true,
+    "javaEntitlementVerified": false,
+    "independentHumanParticipationVerified": false
+  },
+  "operatorReview": {
+    "url": "http://127.0.0.1:8789/",
+    "browser": "Brave",
+    "action": "Prepare approval pages",
+    "newAgreementMaximumReviewMinutes": 15,
+    "existingSignedTermsAndApprovalsImmutable": true,
+    "sameActiveRequestsReused": true,
+    "preparationCallsDoNotSignOrSubmitTransactions": true
+  },
+  "onlineAuthProbe": {
+    "gameAddress": "127.0.0.1:25598",
+    "controlAddress": "127.0.0.1:25599",
+    "directOnlineMode": true,
+    "offlineClientRefused": true,
+    "genuineHumanWalletLinksVerified": 0,
+    "genuineHumanSessionProofStillRequired": true,
+    "existingDemoWorldsUnchanged": true
+  },
+  "evidence": {
+    "reviewWindow": {
+      "path": "tests/identity/runs/handoff-c1c1aa49-0ec8-4bda-8c8c-251b7c8af4d7/report.json",
+      "sha256": "12e59a4d76be7de2666e323ca3945c3f723c449166872493910bf8c9576b1ddf"
+    },
+    "operatorPreparation": {
+      "path": "tests/identity/runs/human-review-70035c5f-db03-4b11-a8d4-37336936156c/report.json",
+      "sha256": "acd89b897890d2c5792c84642a804fc861216192405ee6d2d7cc283e3bce4166"
+    },
+    "onlineAuthSoftware": {
+      "path": "tests/identity/runs/online-auth-5e07c787-769f-476b-b59d-56d6ca0acaf8/report.json",
+      "sha256": "5e84e1161096827fb13257118662aff44bfaee4ff95cd55e0b1ad95ff918748e"
+    }
+  },
+  "remaining": [
+    "Each participant signs their own prepared agreement in Brave.",
+    "Each participant launches entitled Java through their own Microsoft login, joins the online probe and initiates /walletlink with their own public address.",
+    "The operator prepares a WalletLink from that live server event; each participant signs while still connected.",
+    "Personal-wallet funding, purchase, acceptance and claims remain separate user-controlled onchain actions; the approval page does not implement them.",
+    "Shared/public operator authentication and an off-laptop disaster copy remain production release requirements."
+  ]
+}

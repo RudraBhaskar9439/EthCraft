@@ -1,0 +1,3681 @@
+{
+  "schema": "agentcity.construction-fixture.v1",
+  "purpose": "isolated_non_token_p2_construction",
+  "run_id": "agentcity-construction-9e26a924",
+  "deployment": {
+    "serverId": "local-inspection-server",
+    "jobId": "agentcity-construction-9e26a924",
+    "agreementVersion": 1,
+    "authorizationReference": "local-boundary-authorization",
+    "world": "agentcity-construction-9e26a924",
+    "plotMin": [
+      -16,
+      80,
+      -8
+    ],
+    "plotMax": [
+      15,
+      95,
+      7
+    ],
+    "chest": [
+      -14,
+      81,
+      5
+    ],
+    "actors": {
+      "43a86a2e-ba2e-350a-a576-a65b67aa87d1": "BOT",
+      "a56f0418-1cf4-3f1e-a0ab-9b34ba31f192": "REQUESTER",
+      "563add28-410b-350e-9001-a9be4cc7bd00": "INSPECTOR"
+    },
+    "blueprintSha256": "c8704765464a574ec4c797ad78d5294cc167007f66a0abfebd742e0b06711c49",
+    "testManifestSha256": "cfb5986bf2f5bfea89075ffee8e38eb1652f3fad15503935d1f134a776d309cf",
+    "workDeadlineMs": 1793302231014,
+    "reviewDeadlineMs": 1793303131014,
+    "obligationMode": "LOCAL_NO_EXTERNAL_OBLIGATIONS",
+    "localPassValidityMs": 30000,
+    "constructionAccessSha256": "be9b2956fd2f1ad8b6616cacaeaa186e9a2b010f29db6adc0b11f041082a8fce"
+  },
+  "blueprint": {
+    "schema": "agentcity.blueprint.v1",
+    "id": "calculator-v1",
+    "status": "physically_validated",
+    "usable_for_funded_agreement": false,
+    "physical_test_results": {
+      "scope": "Real physical calculator selection evidence only; full protected-plugin/bot acceptance is not complete. This does not approve KIT issuance.",
+      "normal_fault_repaired": {
+        "path": "evidence/runs/p1-candidate/agentcity-p1-849d118a/run-report.json",
+        "sha256": "dfcbbd9da248d9cd158fa86ab050c147f0dff33d26aa3061207b66a4180e008c"
+      },
+      "sequence": [
+        16,
+        10,
+        16
+      ]
+    },
+    "source_repository": "https://github.com/Redstone-Compiler/redstone-compiler",
+    "source_commit": "f39ecf2d528598eff8866a1392fa7ee15eff1bbf",
+    "license": "MIT",
+    "source_files": [
+      {
+        "path": "fixtures/candidates/redstone-compiler/adder2-exact-2x14x10.rcell",
+        "source": "https://github.com/Redstone-Compiler/redstone-compiler/blob/f39ecf2d528598eff8866a1392fa7ee15eff1bbf/test/adder2-exact-2x14x10.rcell",
+        "bytes": 1521,
+        "sha256": "33d84d213d308dc50d2978c2a4b8bead957e69d82cc88f9458eec1ab31a2ca67",
+        "git_blob": "75bf810817eef15301d40a55ce8590c0b0c6c4b1"
+      },
+      {
+        "path": "fixtures/candidates/redstone-compiler/adder2-exact-2x14x10.nbt",
+        "source": "https://github.com/Redstone-Compiler/redstone-compiler/blob/f39ecf2d528598eff8866a1392fa7ee15eff1bbf/test/adder2-exact-2x14x10.nbt",
+        "bytes": 916,
+        "sha256": "3afc99266a741d203c7c62a7ee7e773c1ff3ef510917b8454c3ad0dc16f7a483",
+        "git_blob": "8fadaa8b6f760ee13a3c5b957226e65a5cced7a2"
+      },
+      {
+        "path": "fixtures/candidates/redstone-compiler/adder2-exact-2x14x10.outputs.json",
+        "source": "https://github.com/Redstone-Compiler/redstone-compiler/blob/f39ecf2d528598eff8866a1392fa7ee15eff1bbf/test/adder2-exact-2x14x10.outputs.json",
+        "bytes": 736,
+        "sha256": "2bb2035da3dadc4fb9ef642d28c318d2274e89646d94298f79f58ece2229d21b",
+        "git_blob": "47014b8edc38adc9cb2966fd122d8f9055c58d9e"
+      },
+      {
+        "path": "fixtures/candidates/redstone-compiler/LICENSE",
+        "source": "https://github.com/Redstone-Compiler/redstone-compiler/blob/f39ecf2d528598eff8866a1392fa7ee15eff1bbf/LICENSE",
+        "bytes": 1069,
+        "sha256": "61feb77f116e6e3a9a505863a9388749d3413df7ec0aef41927c7b9da7b0a083",
+        "git_blob": "6e377e8e7f72920824f4ae460659a105bab0c06e"
+      }
+    ],
+    "coordinates": "Minecraft [x,y,z], relative; upstream RCELL [x,y,z] maps to [y,z,x]",
+    "supported_orientations": [
+      "identity_only_candidate"
+    ],
+    "source_size": [
+      14,
+      10,
+      2
+    ],
+    "bounds": {
+      "min": [
+        0,
+        0,
+        -1
+      ],
+      "max": [
+        13,
+        9,
+        2
+      ]
+    },
+    "inputs": [
+      {
+        "name": "a0",
+        "position": [
+          0,
+          4,
+          0
+        ],
+        "weight": 1,
+        "group": "a"
+      },
+      {
+        "name": "a1",
+        "position": [
+          4,
+          3,
+          1
+        ],
+        "weight": 2,
+        "group": "a"
+      },
+      {
+        "name": "b0",
+        "position": [
+          0,
+          3,
+          1
+        ],
+        "weight": 1,
+        "group": "b"
+      },
+      {
+        "name": "b1",
+        "position": [
+          4,
+          1,
+          1
+        ],
+        "weight": 2,
+        "group": "b"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "c1",
+        "source_position": [
+          11,
+          6,
+          0
+        ],
+        "proposed_lamp_position": [
+          11,
+          6,
+          -1
+        ],
+        "weight": 4
+      },
+      {
+        "name": "s0",
+        "source_position": [
+          4,
+          7,
+          0
+        ],
+        "proposed_lamp_position": [
+          4,
+          7,
+          -1
+        ],
+        "weight": 1
+      },
+      {
+        "name": "s1",
+        "source_position": [
+          13,
+          9,
+          1
+        ],
+        "proposed_lamp_position": [
+          13,
+          9,
+          2
+        ],
+        "weight": 2
+      }
+    ],
+    "placements": [
+      {
+        "position": [
+          5,
+          0,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          8,
+          0,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          10,
+          0,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          1,
+          1,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          3,
+          1,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          4,
+          1,
+          1
+        ],
+        "block": "minecraft:lever",
+        "properties": {
+          "facing": "east",
+          "face": "wall",
+          "powered": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          5,
+          1,
+          1
+        ],
+        "block": "minecraft:repeater",
+        "properties": {
+          "facing": "west",
+          "delay": "1",
+          "locked": "false",
+          "powered": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          6,
+          1,
+          0
+        ],
+        "block": "minecraft:redstone_wall_torch",
+        "properties": {
+          "facing": "north",
+          "lit": "true"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          6,
+          1,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          7,
+          1,
+          1
+        ],
+        "block": "minecraft:redstone_wall_torch",
+        "properties": {
+          "facing": "east",
+          "lit": "true"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          8,
+          1,
+          1
+        ],
+        "block": "minecraft:repeater",
+        "properties": {
+          "facing": "west",
+          "delay": "1",
+          "locked": "false",
+          "powered": "true"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          9,
+          1,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          10,
+          1,
+          0
+        ],
+        "block": "minecraft:redstone_wire",
+        "properties": {
+          "power": "14",
+          "east": "side",
+          "west": "side"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          11,
+          1,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          12,
+          1,
+          0
+        ],
+        "block": "minecraft:redstone_wall_torch",
+        "properties": {
+          "facing": "east",
+          "lit": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          0,
+          2,
+          0
+        ],
+        "block": "minecraft:redstone_wire",
+        "properties": {
+          "power": "0",
+          "east": "side",
+          "west": "side"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          1,
+          2,
+          0
+        ],
+        "block": "minecraft:redstone_wire",
+        "properties": {
+          "power": "0",
+          "east": "side",
+          "west": "side"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          1,
+          2,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          2,
+          2,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          2,
+          2,
+          1
+        ],
+        "block": "minecraft:redstone_wall_torch",
+        "properties": {
+          "facing": "south",
+          "lit": "true"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          3,
+          2,
+          0
+        ],
+        "block": "minecraft:redstone_wall_torch",
+        "properties": {
+          "facing": "east",
+          "lit": "true"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          6,
+          2,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          6,
+          2,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          7,
+          2,
+          0
+        ],
+        "block": "minecraft:redstone_wall_torch",
+        "properties": {
+          "facing": "east",
+          "lit": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          7,
+          2,
+          1
+        ],
+        "block": "minecraft:redstone_wall_torch",
+        "properties": {
+          "facing": "west",
+          "lit": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          8,
+          2,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          9,
+          2,
+          1
+        ],
+        "block": "minecraft:redstone_wire",
+        "properties": {
+          "power": "15",
+          "east": "side",
+          "west": "side",
+          "south": "side",
+          "north": "side"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          11,
+          2,
+          0
+        ],
+        "block": "minecraft:redstone_wire",
+        "properties": {
+          "power": "15",
+          "east": "side",
+          "west": "side"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          12,
+          2,
+          0
+        ],
+        "block": "minecraft:redstone_wall_torch",
+        "properties": {
+          "facing": "west",
+          "lit": "true"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          13,
+          2,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          0,
+          3,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          0,
+          3,
+          1
+        ],
+        "block": "minecraft:lever",
+        "properties": {
+          "facing": "south",
+          "face": "wall",
+          "powered": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          1,
+          3,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          1,
+          3,
+          1
+        ],
+        "block": "minecraft:repeater",
+        "properties": {
+          "facing": "west",
+          "delay": "1",
+          "locked": "false",
+          "powered": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          2,
+          3,
+          0
+        ],
+        "block": "minecraft:redstone_torch",
+        "properties": {
+          "lit": "true"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          2,
+          3,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          3,
+          3,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          4,
+          3,
+          0
+        ],
+        "block": "minecraft:redstone_wall_torch",
+        "properties": {
+          "facing": "east",
+          "lit": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          4,
+          3,
+          1
+        ],
+        "block": "minecraft:lever",
+        "properties": {
+          "facing": "west",
+          "face": "wall",
+          "powered": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          5,
+          3,
+          0
+        ],
+        "block": "minecraft:redstone_wall_torch",
+        "properties": {
+          "facing": "north",
+          "lit": "true"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          5,
+          3,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          6,
+          3,
+          0
+        ],
+        "block": "minecraft:repeater",
+        "properties": {
+          "facing": "west",
+          "delay": "1",
+          "locked": "false",
+          "powered": "true"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          6,
+          3,
+          1
+        ],
+        "block": "minecraft:repeater",
+        "properties": {
+          "facing": "west",
+          "delay": "1",
+          "locked": "false",
+          "powered": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          7,
+          3,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          7,
+          3,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          8,
+          3,
+          1
+        ],
+        "block": "minecraft:redstone_wall_torch",
+        "properties": {
+          "facing": "east",
+          "lit": "true"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          12,
+          3,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          13,
+          3,
+          0
+        ],
+        "block": "minecraft:redstone_wire",
+        "properties": {
+          "power": "0",
+          "east": "side",
+          "west": "side",
+          "south": "side",
+          "north": "side"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          0,
+          4,
+          0
+        ],
+        "block": "minecraft:lever",
+        "properties": {
+          "face": "floor",
+          "powered": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          1,
+          4,
+          0
+        ],
+        "block": "minecraft:repeater",
+        "properties": {
+          "facing": "west",
+          "delay": "1",
+          "locked": "false",
+          "powered": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          1,
+          4,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          2,
+          4,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          2,
+          4,
+          1
+        ],
+        "block": "minecraft:redstone_torch",
+        "properties": {
+          "lit": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          3,
+          4,
+          0
+        ],
+        "block": "minecraft:redstone_wall_torch",
+        "properties": {
+          "facing": "east",
+          "lit": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          4,
+          4,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          4,
+          4,
+          1
+        ],
+        "block": "minecraft:redstone_wall_torch",
+        "properties": {
+          "facing": "south",
+          "lit": "true"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          5,
+          4,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          5,
+          4,
+          1
+        ],
+        "block": "minecraft:redstone_wall_torch",
+        "properties": {
+          "facing": "south",
+          "lit": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          6,
+          4,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          6,
+          4,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          7,
+          4,
+          0
+        ],
+        "block": "minecraft:redstone_torch",
+        "properties": {
+          "lit": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          7,
+          4,
+          1
+        ],
+        "block": "minecraft:redstone_torch",
+        "properties": {
+          "lit": "true"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          8,
+          4,
+          0
+        ],
+        "block": "minecraft:redstone_wall_torch",
+        "properties": {
+          "facing": "north",
+          "lit": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          8,
+          4,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          11,
+          4,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          12,
+          4,
+          1
+        ],
+        "block": "minecraft:repeater",
+        "properties": {
+          "facing": "west",
+          "delay": "1",
+          "locked": "false",
+          "powered": "true"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          13,
+          4,
+          0
+        ],
+        "block": "minecraft:redstone_wall_torch",
+        "properties": {
+          "facing": "north",
+          "lit": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          13,
+          4,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          1,
+          5,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          1,
+          5,
+          1
+        ],
+        "block": "minecraft:redstone_wire",
+        "properties": {
+          "power": "0",
+          "east": "side",
+          "west": "side",
+          "south": "side",
+          "north": "side"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          2,
+          5,
+          0
+        ],
+        "block": "minecraft:repeater",
+        "properties": {
+          "facing": "west",
+          "delay": "1",
+          "locked": "false",
+          "powered": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          2,
+          5,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          3,
+          5,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          4,
+          5,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          5,
+          5,
+          0
+        ],
+        "block": "minecraft:redstone_wall_torch",
+        "properties": {
+          "facing": "north",
+          "lit": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          5,
+          5,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          6,
+          5,
+          0
+        ],
+        "block": "minecraft:repeater",
+        "properties": {
+          "facing": "west",
+          "delay": "1",
+          "locked": "false",
+          "powered": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          6,
+          5,
+          1
+        ],
+        "block": "minecraft:repeater",
+        "properties": {
+          "facing": "east",
+          "delay": "1",
+          "locked": "false",
+          "powered": "true"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          7,
+          5,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          7,
+          5,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          8,
+          5,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          9,
+          5,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          9,
+          5,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          10,
+          5,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          11,
+          5,
+          1
+        ],
+        "block": "minecraft:redstone_wire",
+        "properties": {
+          "power": "15",
+          "east": "side",
+          "west": "side",
+          "south": "side",
+          "north": "side"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          13,
+          5,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          13,
+          5,
+          1
+        ],
+        "block": "minecraft:redstone_torch",
+        "properties": {
+          "lit": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          3,
+          6,
+          0
+        ],
+        "block": "minecraft:redstone_torch",
+        "properties": {
+          "lit": "true"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          4,
+          6,
+          1
+        ],
+        "block": "minecraft:redstone_torch",
+        "properties": {
+          "lit": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          5,
+          6,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          5,
+          6,
+          1
+        ],
+        "block": "minecraft:repeater",
+        "properties": {
+          "facing": "west",
+          "delay": "1",
+          "locked": "false",
+          "powered": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          6,
+          6,
+          0
+        ],
+        "block": "minecraft:redstone_wall_torch",
+        "properties": {
+          "facing": "north",
+          "lit": "true"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          6,
+          6,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          7,
+          6,
+          0
+        ],
+        "block": "minecraft:redstone_torch",
+        "properties": {
+          "lit": "true"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          7,
+          6,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          8,
+          6,
+          0
+        ],
+        "block": "minecraft:redstone_torch",
+        "properties": {
+          "lit": "true"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          8,
+          6,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          9,
+          6,
+          0
+        ],
+        "block": "minecraft:redstone_wire",
+        "properties": {
+          "power": "15",
+          "east": "side",
+          "west": "side"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          9,
+          6,
+          1
+        ],
+        "block": "minecraft:repeater",
+        "properties": {
+          "facing": "west",
+          "delay": "1",
+          "locked": "false",
+          "powered": "true"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          10,
+          6,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          10,
+          6,
+          1
+        ],
+        "block": "minecraft:repeater",
+        "properties": {
+          "facing": "west",
+          "delay": "1",
+          "locked": "false",
+          "powered": "true"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          11,
+          6,
+          0
+        ],
+        "block": "minecraft:redstone_wall_torch",
+        "properties": {
+          "facing": "east",
+          "lit": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          11,
+          6,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          12,
+          6,
+          1
+        ],
+        "block": "minecraft:redstone_wall_torch",
+        "properties": {
+          "facing": "west",
+          "lit": "true"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          13,
+          6,
+          0
+        ],
+        "block": "minecraft:redstone_torch",
+        "properties": {
+          "lit": "true"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          13,
+          6,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          3,
+          7,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          4,
+          7,
+          0
+        ],
+        "block": "minecraft:redstone_wall_torch",
+        "properties": {
+          "facing": "east",
+          "lit": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          5,
+          7,
+          0
+        ],
+        "block": "minecraft:repeater",
+        "properties": {
+          "facing": "west",
+          "delay": "1",
+          "locked": "false",
+          "powered": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          6,
+          7,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          7,
+          7,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          7,
+          7,
+          1
+        ],
+        "block": "minecraft:redstone_wire",
+        "properties": {
+          "power": "15",
+          "east": "side",
+          "west": "side"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          8,
+          7,
+          1
+        ],
+        "block": "minecraft:redstone_wire",
+        "properties": {
+          "power": "14",
+          "east": "side",
+          "west": "side"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          9,
+          7,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          9,
+          7,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          10,
+          7,
+          0
+        ],
+        "block": "minecraft:redstone_wire",
+        "properties": {
+          "power": "0",
+          "south": "side",
+          "north": "side"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          10,
+          7,
+          1
+        ],
+        "block": "minecraft:redstone_wall_torch",
+        "properties": {
+          "facing": "east",
+          "lit": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          11,
+          7,
+          1
+        ],
+        "block": "minecraft:repeater",
+        "properties": {
+          "facing": "west",
+          "delay": "1",
+          "locked": "false",
+          "powered": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          12,
+          7,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          12,
+          7,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          13,
+          7,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          13,
+          7,
+          1
+        ],
+        "block": "minecraft:redstone_wall_torch",
+        "properties": {
+          "facing": "east",
+          "lit": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          6,
+          8,
+          0
+        ],
+        "block": "minecraft:redstone_wire",
+        "properties": {
+          "power": "15",
+          "east": "side",
+          "west": "side",
+          "south": "side",
+          "north": "side"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          7,
+          8,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          8,
+          8,
+          0
+        ],
+        "block": "minecraft:redstone_wall_torch",
+        "properties": {
+          "facing": "east",
+          "lit": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          8,
+          8,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          9,
+          8,
+          0
+        ],
+        "block": "minecraft:redstone_wire",
+        "properties": {
+          "power": "0",
+          "east": "side",
+          "west": "side",
+          "south": "side"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          9,
+          8,
+          1
+        ],
+        "block": "minecraft:redstone_wire",
+        "properties": {
+          "power": "0",
+          "west": "side",
+          "north": "side"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          10,
+          8,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          11,
+          8,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          11,
+          8,
+          1
+        ],
+        "block": "minecraft:redstone_wall_torch",
+        "properties": {
+          "facing": "south",
+          "lit": "true"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          12,
+          8,
+          0
+        ],
+        "block": "minecraft:redstone_wire",
+        "properties": {
+          "power": "0",
+          "east": "side",
+          "west": "side"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          12,
+          8,
+          1
+        ],
+        "block": "minecraft:repeater",
+        "properties": {
+          "facing": "west",
+          "delay": "1",
+          "locked": "false",
+          "powered": "true"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          13,
+          8,
+          0
+        ],
+        "block": "minecraft:redstone_torch",
+        "properties": {
+          "lit": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          13,
+          8,
+          1
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          8,
+          9,
+          1
+        ],
+        "block": "minecraft:redstone_wire",
+        "properties": {
+          "power": "0",
+          "east": "side",
+          "west": "side"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          10,
+          9,
+          0
+        ],
+        "block": "minecraft:redstone_wire",
+        "properties": {
+          "power": "0",
+          "east": "side",
+          "west": "side"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          11,
+          9,
+          0
+        ],
+        "block": "minecraft:redstone_wire",
+        "properties": {
+          "power": "0",
+          "east": "side",
+          "west": "side"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          12,
+          9,
+          0
+        ],
+        "block": "minecraft:stone_bricks",
+        "properties": {},
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          13,
+          9,
+          1
+        ],
+        "block": "minecraft:redstone_torch",
+        "properties": {
+          "lit": "false"
+        },
+        "origin": "upstream_candidate"
+      },
+      {
+        "position": [
+          4,
+          7,
+          -1
+        ],
+        "block": "minecraft:redstone_lamp",
+        "properties": {
+          "lit": "false"
+        },
+        "origin": "proposed_unvalidated_output_interface",
+        "port": "s0"
+      },
+      {
+        "position": [
+          13,
+          9,
+          2
+        ],
+        "block": "minecraft:redstone_lamp",
+        "properties": {
+          "lit": "false"
+        },
+        "origin": "proposed_unvalidated_output_interface",
+        "port": "s1"
+      },
+      {
+        "position": [
+          11,
+          6,
+          -1
+        ],
+        "block": "minecraft:redstone_lamp",
+        "properties": {
+          "lit": "false"
+        },
+        "origin": "proposed_unvalidated_output_interface",
+        "port": "c1"
+      }
+    ],
+    "limitations": [
+      "Physical selection evidence proves normal/fault/restored circuit behavior with real lamp states. Final rate-limited production checker, permissions, recovery, generated transitions and bot construction remain mandatory P1/P2 acceptance.",
+      "Dynamic lit/powered/power/locked/wire-connectivity fields are initial source values, excluded from structural comparison.",
+      "This blueprint is non-token local engineering data. Funded agreement, KIT issuance and platform adoption remain blocked by later phase gates."
+    ],
+    "full_phase_acceptance": false,
+    "material_bill": {
+      "minecraft:stone_bricks": 65,
+      "minecraft:lever": 4,
+      "minecraft:repeater": 16,
+      "minecraft:redstone_torch": 37,
+      "minecraft:redstone": 19,
+      "minecraft:redstone_lamp": 3
+    }
+  },
+  "construction_access": {
+    "schema": "agentcity.construction-access.v1",
+    "description": "Fixed operator-seeded glass supports and calibrated bottom-slab access for local Survival construction. Not purchased stock, bot mutations, independent humans or token backing. Only the144 final blueprint blocks consume the controlled material bill.",
+    "coordinates": "Relative to deployment plotMin+[4,1,4]; glass floor y is one below standing feet.",
+    "block": "minecraft:glass",
+    "positions": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        11,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        1
+      ],
+      [
+        6,
+        0,
+        1
+      ],
+      [
+        9,
+        0,
+        1
+      ],
+      [
+        9,
+        0,
+        7
+      ],
+      [
+        2,
+        1,
+        0
+      ],
+      [
+        13,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        11,
+        1,
+        7
+      ],
+      [
+        -2,
+        2,
+        -3
+      ],
+      [
+        -1,
+        2,
+        -3
+      ],
+      [
+        0,
+        2,
+        -3
+      ],
+      [
+        1,
+        2,
+        -3
+      ],
+      [
+        2,
+        2,
+        -3
+      ],
+      [
+        3,
+        2,
+        -3
+      ],
+      [
+        4,
+        2,
+        -3
+      ],
+      [
+        5,
+        2,
+        -3
+      ],
+      [
+        6,
+        2,
+        -3
+      ],
+      [
+        7,
+        2,
+        -3
+      ],
+      [
+        8,
+        2,
+        -3
+      ],
+      [
+        9,
+        2,
+        -3
+      ],
+      [
+        10,
+        2,
+        -3
+      ],
+      [
+        11,
+        2,
+        -3
+      ],
+      [
+        12,
+        2,
+        -3
+      ],
+      [
+        13,
+        2,
+        -3
+      ],
+      [
+        14,
+        2,
+        -3
+      ],
+      [
+        15,
+        2,
+        -3
+      ],
+      [
+        15,
+        2,
+        -2
+      ],
+      [
+        15,
+        2,
+        -1
+      ],
+      [
+        15,
+        2,
+        0
+      ],
+      [
+        5,
+        2,
+        1
+      ],
+      [
+        12,
+        2,
+        1
+      ],
+      [
+        15,
+        2,
+        1
+      ],
+      [
+        15,
+        2,
+        2
+      ],
+      [
+        15,
+        2,
+        3
+      ],
+      [
+        -2,
+        2,
+        4
+      ],
+      [
+        -1,
+        2,
+        4
+      ],
+      [
+        0,
+        2,
+        4
+      ],
+      [
+        1,
+        2,
+        4
+      ],
+      [
+        2,
+        2,
+        4
+      ],
+      [
+        3,
+        2,
+        4
+      ],
+      [
+        4,
+        2,
+        4
+      ],
+      [
+        5,
+        2,
+        4
+      ],
+      [
+        6,
+        2,
+        4
+      ],
+      [
+        7,
+        2,
+        4
+      ],
+      [
+        8,
+        2,
+        4
+      ],
+      [
+        9,
+        2,
+        4
+      ],
+      [
+        10,
+        2,
+        4
+      ],
+      [
+        11,
+        2,
+        4
+      ],
+      [
+        12,
+        2,
+        4
+      ],
+      [
+        13,
+        2,
+        4
+      ],
+      [
+        14,
+        2,
+        4
+      ],
+      [
+        15,
+        2,
+        4
+      ],
+      [
+        15,
+        2,
+        5
+      ],
+      [
+        13,
+        2,
+        6
+      ],
+      [
+        14,
+        2,
+        6
+      ],
+      [
+        15,
+        2,
+        6
+      ],
+      [
+        13,
+        2,
+        7
+      ],
+      [
+        11,
+        3,
+        1
+      ],
+      [
+        13,
+        3,
+        1
+      ],
+      [
+        15,
+        3,
+        7
+      ],
+      [
+        9,
+        4,
+        0
+      ],
+      [
+        9,
+        4,
+        1
+      ],
+      [
+        10,
+        4,
+        1
+      ],
+      [
+        17,
+        4,
+        7
+      ],
+      [
+        -2,
+        5,
+        -3
+      ],
+      [
+        -1,
+        5,
+        -3
+      ],
+      [
+        0,
+        5,
+        -3
+      ],
+      [
+        1,
+        5,
+        -3
+      ],
+      [
+        2,
+        5,
+        -3
+      ],
+      [
+        3,
+        5,
+        -3
+      ],
+      [
+        4,
+        5,
+        -3
+      ],
+      [
+        5,
+        5,
+        -3
+      ],
+      [
+        6,
+        5,
+        -3
+      ],
+      [
+        7,
+        5,
+        -3
+      ],
+      [
+        8,
+        5,
+        -3
+      ],
+      [
+        9,
+        5,
+        -3
+      ],
+      [
+        10,
+        5,
+        -3
+      ],
+      [
+        11,
+        5,
+        -3
+      ],
+      [
+        12,
+        5,
+        -3
+      ],
+      [
+        13,
+        5,
+        -3
+      ],
+      [
+        14,
+        5,
+        -3
+      ],
+      [
+        15,
+        5,
+        -3
+      ],
+      [
+        15,
+        5,
+        -2
+      ],
+      [
+        11,
+        5,
+        -1
+      ],
+      [
+        15,
+        5,
+        -1
+      ],
+      [
+        10,
+        5,
+        0
+      ],
+      [
+        15,
+        5,
+        0
+      ],
+      [
+        8,
+        5,
+        1
+      ],
+      [
+        15,
+        5,
+        1
+      ],
+      [
+        15,
+        5,
+        2
+      ],
+      [
+        15,
+        5,
+        3
+      ],
+      [
+        -2,
+        5,
+        4
+      ],
+      [
+        -1,
+        5,
+        4
+      ],
+      [
+        0,
+        5,
+        4
+      ],
+      [
+        1,
+        5,
+        4
+      ],
+      [
+        2,
+        5,
+        4
+      ],
+      [
+        3,
+        5,
+        4
+      ],
+      [
+        4,
+        5,
+        4
+      ],
+      [
+        5,
+        5,
+        4
+      ],
+      [
+        6,
+        5,
+        4
+      ],
+      [
+        7,
+        5,
+        4
+      ],
+      [
+        8,
+        5,
+        4
+      ],
+      [
+        9,
+        5,
+        4
+      ],
+      [
+        10,
+        5,
+        4
+      ],
+      [
+        11,
+        5,
+        4
+      ],
+      [
+        12,
+        5,
+        4
+      ],
+      [
+        13,
+        5,
+        4
+      ],
+      [
+        14,
+        5,
+        4
+      ],
+      [
+        15,
+        5,
+        4
+      ],
+      [
+        15,
+        5,
+        5
+      ],
+      [
+        15,
+        5,
+        6
+      ],
+      [
+        16,
+        5,
+        6
+      ],
+      [
+        17,
+        5,
+        6
+      ],
+      [
+        18,
+        5,
+        6
+      ],
+      [
+        19,
+        5,
+        6
+      ],
+      [
+        19,
+        5,
+        7
+      ],
+      [
+        4,
+        6,
+        -1
+      ],
+      [
+        12,
+        6,
+        0
+      ],
+      [
+        21,
+        6,
+        7
+      ],
+      [
+        11,
+        7,
+        0
+      ],
+      [
+        23,
+        7,
+        7
+      ],
+      [
+        -2,
+        8,
+        -3
+      ],
+      [
+        -1,
+        8,
+        -3
+      ],
+      [
+        0,
+        8,
+        -3
+      ],
+      [
+        1,
+        8,
+        -3
+      ],
+      [
+        2,
+        8,
+        -3
+      ],
+      [
+        3,
+        8,
+        -3
+      ],
+      [
+        4,
+        8,
+        -3
+      ],
+      [
+        5,
+        8,
+        -3
+      ],
+      [
+        6,
+        8,
+        -3
+      ],
+      [
+        7,
+        8,
+        -3
+      ],
+      [
+        8,
+        8,
+        -3
+      ],
+      [
+        9,
+        8,
+        -3
+      ],
+      [
+        10,
+        8,
+        -3
+      ],
+      [
+        11,
+        8,
+        -3
+      ],
+      [
+        12,
+        8,
+        -3
+      ],
+      [
+        13,
+        8,
+        -3
+      ],
+      [
+        14,
+        8,
+        -3
+      ],
+      [
+        15,
+        8,
+        -3
+      ],
+      [
+        15,
+        8,
+        -2
+      ],
+      [
+        15,
+        8,
+        -1
+      ],
+      [
+        15,
+        8,
+        0
+      ],
+      [
+        15,
+        8,
+        1
+      ],
+      [
+        13,
+        8,
+        2
+      ],
+      [
+        15,
+        8,
+        2
+      ],
+      [
+        15,
+        8,
+        3
+      ],
+      [
+        -2,
+        8,
+        4
+      ],
+      [
+        -1,
+        8,
+        4
+      ],
+      [
+        0,
+        8,
+        4
+      ],
+      [
+        1,
+        8,
+        4
+      ],
+      [
+        2,
+        8,
+        4
+      ],
+      [
+        3,
+        8,
+        4
+      ],
+      [
+        4,
+        8,
+        4
+      ],
+      [
+        5,
+        8,
+        4
+      ],
+      [
+        6,
+        8,
+        4
+      ],
+      [
+        7,
+        8,
+        4
+      ],
+      [
+        8,
+        8,
+        4
+      ],
+      [
+        9,
+        8,
+        4
+      ],
+      [
+        10,
+        8,
+        4
+      ],
+      [
+        11,
+        8,
+        4
+      ],
+      [
+        12,
+        8,
+        4
+      ],
+      [
+        13,
+        8,
+        4
+      ],
+      [
+        14,
+        8,
+        4
+      ],
+      [
+        15,
+        8,
+        4
+      ],
+      [
+        15,
+        8,
+        5
+      ],
+      [
+        15,
+        8,
+        6
+      ],
+      [
+        16,
+        8,
+        6
+      ],
+      [
+        17,
+        8,
+        6
+      ],
+      [
+        18,
+        8,
+        6
+      ],
+      [
+        19,
+        8,
+        6
+      ],
+      [
+        20,
+        8,
+        6
+      ],
+      [
+        21,
+        8,
+        6
+      ],
+      [
+        22,
+        8,
+        6
+      ],
+      [
+        23,
+        8,
+        6
+      ],
+      [
+        24,
+        8,
+        6
+      ],
+      [
+        25,
+        8,
+        6
+      ],
+      [
+        25,
+        8,
+        7
+      ]
+    ],
+    "stances": {
+      "5,0,1": [
+        5,
+        0,
+        4
+      ],
+      "8,0,1": [
+        8,
+        0,
+        4
+      ],
+      "10,0,0": [
+        10,
+        0,
+        -3
+      ],
+      "0,1,0": [
+        0,
+        0,
+        -3
+      ],
+      "1,1,0": [
+        1,
+        0,
+        -3
+      ],
+      "3,1,1": [
+        3,
+        0,
+        4
+      ],
+      "4,1,1": [
+        4,
+        0,
+        4
+      ],
+      "5,1,1": [
+        5,
+        0,
+        4
+      ],
+      "6,1,0": [
+        6,
+        0,
+        -3
+      ],
+      "6,1,1": [
+        6,
+        0,
+        4
+      ],
+      "7,1,1": [
+        7,
+        0,
+        4
+      ],
+      "8,1,1": [
+        8,
+        0,
+        4
+      ],
+      "9,1,1": [
+        9,
+        0,
+        4
+      ],
+      "10,1,0": [
+        10,
+        0,
+        -3
+      ],
+      "11,1,0": [
+        11,
+        0,
+        -3
+      ],
+      "12,1,0": [
+        12,
+        0,
+        -3
+      ],
+      "0,2,0": [
+        0,
+        0,
+        -3
+      ],
+      "1,2,0": [
+        1,
+        0,
+        -3
+      ],
+      "1,2,1": [
+        1,
+        0,
+        4
+      ],
+      "2,2,0": [
+        2,
+        0,
+        -3
+      ],
+      "2,2,1": [
+        2,
+        0,
+        4
+      ],
+      "3,2,0": [
+        3,
+        0,
+        -3
+      ],
+      "6,2,0": [
+        6,
+        0,
+        -3
+      ],
+      "6,2,1": [
+        6,
+        0,
+        4
+      ],
+      "7,2,0": [
+        7,
+        0,
+        -3
+      ],
+      "7,2,1": [
+        7,
+        0,
+        4
+      ],
+      "8,2,1": [
+        8,
+        0,
+        4
+      ],
+      "9,2,1": [
+        9,
+        0,
+        4
+      ],
+      "11,2,0": [
+        11,
+        0,
+        -3
+      ],
+      "12,2,0": [
+        12,
+        0,
+        -3
+      ],
+      "13,2,0": [
+        13,
+        0,
+        -3
+      ],
+      "0,3,0": [
+        0,
+        3,
+        -3
+      ],
+      "0,3,1": [
+        0,
+        3,
+        4
+      ],
+      "1,3,0": [
+        1,
+        3,
+        -3
+      ],
+      "1,3,1": [
+        1,
+        3,
+        4
+      ],
+      "2,3,0": [
+        2,
+        3,
+        -3
+      ],
+      "2,3,1": [
+        2,
+        3,
+        4
+      ],
+      "3,3,0": [
+        3,
+        3,
+        -3
+      ],
+      "4,3,0": [
+        4,
+        3,
+        -3
+      ],
+      "4,3,1": [
+        4,
+        3,
+        4
+      ],
+      "5,3,0": [
+        5,
+        3,
+        -3
+      ],
+      "5,3,1": [
+        5,
+        3,
+        4
+      ],
+      "6,3,0": [
+        6,
+        3,
+        -3
+      ],
+      "6,3,1": [
+        6,
+        3,
+        4
+      ],
+      "7,3,0": [
+        7,
+        3,
+        -3
+      ],
+      "7,3,1": [
+        7,
+        3,
+        4
+      ],
+      "8,3,1": [
+        8,
+        3,
+        4
+      ],
+      "12,3,1": [
+        12,
+        3,
+        4
+      ],
+      "13,3,0": [
+        13,
+        3,
+        -3
+      ],
+      "0,4,0": [
+        0,
+        3,
+        -3
+      ],
+      "1,4,0": [
+        1,
+        3,
+        -3
+      ],
+      "1,4,1": [
+        1,
+        3,
+        4
+      ],
+      "2,4,0": [
+        2,
+        3,
+        -3
+      ],
+      "2,4,1": [
+        2,
+        3,
+        4
+      ],
+      "3,4,0": [
+        3,
+        3,
+        -3
+      ],
+      "4,4,0": [
+        4,
+        3,
+        -3
+      ],
+      "4,4,1": [
+        4,
+        3,
+        4
+      ],
+      "5,4,0": [
+        5,
+        3,
+        -3
+      ],
+      "5,4,1": [
+        5,
+        3,
+        4
+      ],
+      "6,4,0": [
+        6,
+        3,
+        -3
+      ],
+      "6,4,1": [
+        6,
+        3,
+        4
+      ],
+      "7,4,0": [
+        7,
+        3,
+        -3
+      ],
+      "7,4,1": [
+        7,
+        3,
+        4
+      ],
+      "8,4,0": [
+        8,
+        3,
+        -3
+      ],
+      "8,4,1": [
+        8,
+        3,
+        4
+      ],
+      "11,4,1": [
+        11,
+        3,
+        4
+      ],
+      "12,4,1": [
+        12,
+        3,
+        4
+      ],
+      "13,4,0": [
+        13,
+        3,
+        -3
+      ],
+      "13,4,1": [
+        13,
+        3,
+        4
+      ],
+      "1,5,0": [
+        1,
+        3,
+        -3
+      ],
+      "1,5,1": [
+        1,
+        3,
+        4
+      ],
+      "2,5,0": [
+        2,
+        3,
+        -3
+      ],
+      "2,5,1": [
+        2,
+        3,
+        4
+      ],
+      "3,5,0": [
+        3,
+        3,
+        -3
+      ],
+      "4,5,1": [
+        4,
+        3,
+        4
+      ],
+      "5,5,0": [
+        5,
+        3,
+        -3
+      ],
+      "5,5,1": [
+        5,
+        3,
+        4
+      ],
+      "6,5,0": [
+        6,
+        3,
+        -3
+      ],
+      "6,5,1": [
+        6,
+        3,
+        4
+      ],
+      "7,5,0": [
+        7,
+        3,
+        -3
+      ],
+      "7,5,1": [
+        7,
+        3,
+        4
+      ],
+      "8,5,0": [
+        8,
+        3,
+        -3
+      ],
+      "9,5,0": [
+        9,
+        3,
+        -3
+      ],
+      "9,5,1": [
+        9,
+        3,
+        4
+      ],
+      "10,5,1": [
+        10,
+        3,
+        4
+      ],
+      "11,5,1": [
+        11,
+        3,
+        4
+      ],
+      "13,5,0": [
+        13,
+        3,
+        -3
+      ],
+      "13,5,1": [
+        13,
+        3,
+        4
+      ],
+      "3,6,0": [
+        3,
+        6,
+        -3
+      ],
+      "4,6,1": [
+        4,
+        6,
+        4
+      ],
+      "5,6,0": [
+        5,
+        6,
+        -3
+      ],
+      "5,6,1": [
+        5,
+        6,
+        4
+      ],
+      "6,6,0": [
+        6,
+        6,
+        -3
+      ],
+      "6,6,1": [
+        6,
+        6,
+        4
+      ],
+      "7,6,0": [
+        7,
+        6,
+        -3
+      ],
+      "7,6,1": [
+        7,
+        6,
+        4
+      ],
+      "8,6,0": [
+        8,
+        6,
+        -3
+      ],
+      "8,6,1": [
+        8,
+        6,
+        4
+      ],
+      "9,6,0": [
+        9,
+        6,
+        -3
+      ],
+      "9,6,1": [
+        9,
+        6,
+        4
+      ],
+      "10,6,0": [
+        10,
+        6,
+        -3
+      ],
+      "10,6,1": [
+        10,
+        6,
+        4
+      ],
+      "11,6,0": [
+        11,
+        6,
+        -3
+      ],
+      "11,6,1": [
+        11,
+        6,
+        4
+      ],
+      "12,6,1": [
+        12,
+        6,
+        4
+      ],
+      "13,6,0": [
+        13,
+        6,
+        -3
+      ],
+      "13,6,1": [
+        13,
+        6,
+        4
+      ],
+      "3,7,0": [
+        3,
+        6,
+        -3
+      ],
+      "4,7,0": [
+        4,
+        6,
+        -3
+      ],
+      "5,7,0": [
+        5,
+        6,
+        -3
+      ],
+      "6,7,0": [
+        6,
+        6,
+        -3
+      ],
+      "7,7,0": [
+        7,
+        6,
+        -3
+      ],
+      "7,7,1": [
+        7,
+        6,
+        4
+      ],
+      "8,7,1": [
+        8,
+        6,
+        4
+      ],
+      "9,7,0": [
+        9,
+        6,
+        -3
+      ],
+      "9,7,1": [
+        9,
+        6,
+        4
+      ],
+      "10,7,0": [
+        10,
+        6,
+        -3
+      ],
+      "10,7,1": [
+        10,
+        6,
+        4
+      ],
+      "11,7,1": [
+        11,
+        6,
+        4
+      ],
+      "12,7,0": [
+        12,
+        6,
+        -3
+      ],
+      "12,7,1": [
+        12,
+        6,
+        4
+      ],
+      "13,7,0": [
+        13,
+        6,
+        -3
+      ],
+      "13,7,1": [
+        13,
+        6,
+        4
+      ],
+      "6,8,0": [
+        6,
+        6,
+        -3
+      ],
+      "7,8,0": [
+        7,
+        6,
+        -3
+      ],
+      "8,8,0": [
+        8,
+        6,
+        -3
+      ],
+      "8,8,1": [
+        8,
+        6,
+        4
+      ],
+      "9,8,0": [
+        9,
+        6,
+        -3
+      ],
+      "9,8,1": [
+        9,
+        6,
+        4
+      ],
+      "10,8,0": [
+        10,
+        6,
+        -3
+      ],
+      "11,8,0": [
+        11,
+        6,
+        -3
+      ],
+      "11,8,1": [
+        11,
+        6,
+        4
+      ],
+      "12,8,0": [
+        12,
+        6,
+        -3
+      ],
+      "12,8,1": [
+        12,
+        6,
+        4
+      ],
+      "13,8,0": [
+        13,
+        6,
+        -3
+      ],
+      "13,8,1": [
+        13,
+        6,
+        4
+      ],
+      "8,9,1": [
+        8,
+        9,
+        4
+      ],
+      "10,9,0": [
+        10,
+        9,
+        -3
+      ],
+      "11,9,0": [
+        11,
+        9,
+        -3
+      ],
+      "12,9,0": [
+        12,
+        9,
+        -3
+      ],
+      "13,9,1": [
+        13,
+        9,
+        4
+      ],
+      "4,7,-1": [
+        4,
+        6,
+        -3
+      ],
+      "13,9,2": [
+        13,
+        9,
+        4
+      ],
+      "11,6,-1": [
+        11,
+        6,
+        -3
+      ]
+    },
+    "navigation_bounds_relative": {
+      "min": [
+        -4,
+        -1,
+        -4
+      ],
+      "max": [
+        27,
+        13,
+        11
+      ]
+    },
+    "stairs": {
+      "start_relative": [
+        7,
+        0,
+        7
+      ],
+      "end_relative": [
+        25,
+        9,
+        7
+      ],
+      "half_steps": 18,
+      "rise_per_step_half_blocks": 1,
+      "can_dig": false,
+      "can_place": false,
+      "landings_relative": [
+        [
+          13,
+          3,
+          7
+        ],
+        [
+          19,
+          6,
+          7
+        ],
+        [
+          25,
+          9,
+          7
+        ]
+      ]
+    },
+    "fixtures_disclosed": true,
+    "bottom_slabs": [
+      [
+        8,
+        0,
+        7
+      ],
+      [
+        10,
+        1,
+        7
+      ],
+      [
+        12,
+        2,
+        7
+      ],
+      [
+        14,
+        3,
+        7
+      ],
+      [
+        16,
+        4,
+        7
+      ],
+      [
+        18,
+        5,
+        7
+      ],
+      [
+        20,
+        6,
+        7
+      ],
+      [
+        22,
+        7,
+        7
+      ],
+      [
+        24,
+        8,
+        7
+      ]
+    ],
+    "calibration_note": "Uses the half-height bottom-slab access pattern already exercised in the P1 physical fixture. This fixture calibration is not a proven diagnosis of the prior full-block jump timeout."
+  },
+  "scenario": "access",
+  "material_bill": {
+    "minecraft:stone_bricks": 65,
+    "minecraft:lever": 4,
+    "minecraft:repeater": 16,
+    "minecraft:redstone_torch": 37,
+    "minecraft:redstone": 19,
+    "minecraft:redstone_lamp": 3
+  },
+  "withheld_stock": {},
+  "operator_reserve_chest": null,
+  "occupied_target_relative": null,
+  "final_circuit_seeded": false,
+  "post_bootstrap_mutation_api": false
+}

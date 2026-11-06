@@ -1,0 +1,13 @@
+{
+  "status": "fail",
+  "runId": "procurement-67f26ddb-7f55-4480-858d-4bbada024122",
+  "scope": "Actual isolated PostgreSQL and local Anvil procurement; local chain snapshot is restored afterward",
+  "checks": [],
+  "liveExternalGatePassed": false,
+  "externalSpendingUsd": 0,
+  "error": {
+    "message": "Execution reverted with reason: freshness.\n\nRequest Arguments:\n  chain:  Foundry (id: 31337)\n  from:   0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC\n  to:     0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0\n  value:  0 ETH\n  data:   0x0f0da69500000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000006ae3c873\n  nonce:  1\n\nDetails: execution reverted: freshness\nVersion: viem@2.57.13"
+  },
+  "snapshotRestored": true,
+  "finishedAt": "2026-10-29T22:23:03.851Z"
+}

@@ -1,0 +1,5 @@
+name: AgentCityMaintainedNativeProbe
+version: 0.1.0
+main: org.agentcity.maintained.fixture.NativeProbe
+api-version: '1.21'
+depend: [AgentCity, AgentCityWorldFixture]

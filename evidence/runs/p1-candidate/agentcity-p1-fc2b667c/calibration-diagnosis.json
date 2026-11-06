@@ -1,0 +1,5 @@
+{
+  "schema": "agentcity.candidate.calibration-diagnosis.v1",
+  "reason": "Expected excessive-lag INCOMPLETE assertion failed because parkNanos returned early. This is a retained delay-injection regression, not a source-circuit failure or a negative-test pass.",
+  "full_phase_gate_passed": false
+}

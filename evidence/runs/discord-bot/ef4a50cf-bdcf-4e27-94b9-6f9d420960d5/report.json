@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "scope": "Actual isolated PostgreSQL plus explicitly simulated Discord REST/Gateway/interactions; zero external posts, provider wallets or human verification",
+  "checks": [
+    {
+      "name": "command-schema-and-own-versus-foreign-agent-panel-controls",
+      "status": "pass"
+    },
+    {
+      "name": "existing-writable-channel-fallback-owner-gates-and-stable-command-replay",
+      "status": "pass"
+    },
+    {
+      "name": "work-request-quote-revision-and-requester-acceptance-retain-immutable-references-without-execution",
+      "status": "pass"
+    },
+    {
+      "name": "screenshot-attachments-stay-owner-private-and-use-observation-timestamp",
+      "status": "pass"
+    },
+    {
+      "name": "asynchronous-ready-errors-are-caught-and-do-not-mark-the-bridge-ready",
+      "status": "pass"
+    }
+  ],
+  "publicDiscordPosts": 0,
+  "actualGatewayConnections": 0,
+  "independentHumansVerified": 0,
+  "publicTransactions": 0,
+  "schema": "discord_bot_fixture_ef4a50cfbdcf4e2794b96f9d420960d5"
+}

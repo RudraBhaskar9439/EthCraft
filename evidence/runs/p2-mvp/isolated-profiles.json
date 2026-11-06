@@ -1,0 +1,17 @@
+{
+  "scope": "Two focused isolated profiles alongside the separate full build; unchanged source and unique loopback ports",
+  "game_port": 25584,
+  "http_port": 25585,
+  "profiles": [
+    {
+      "scenario": "shortage",
+      "report": "evidence/runs/p2-construction/agentcity-construction-1b755aff/run-report.json",
+      "status": "pass"
+    },
+    {
+      "scenario": "occupied",
+      "report": "evidence/runs/p2-construction/agentcity-construction-ef6dfdc3/run-report.json",
+      "status": "pass"
+    }
+  ]
+}

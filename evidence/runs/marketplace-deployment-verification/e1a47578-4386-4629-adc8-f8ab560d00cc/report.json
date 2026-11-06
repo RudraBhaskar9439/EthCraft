@@ -1,0 +1,45 @@
+{
+  "status": "pass",
+  "schema": "agentcity.marketplace-deployment-check.v1",
+  "checks": [
+    {
+      "name": "Marketplace mode and inherited custody/journal identities",
+      "status": "pass"
+    },
+    {
+      "name": "Pinned deployed code and exact source files",
+      "status": "pass"
+    },
+    {
+      "name": "Hook/router/official quoter and pair bindings without a credit interface",
+      "status": "pass"
+    },
+    {
+      "name": "Mature real reference and payer-independent market fee",
+      "status": "pass"
+    },
+    {
+      "name": "Official LP position and historical positions retain liquidity and ownership",
+      "status": "pass"
+    },
+    {
+      "name": "Actual official whole-token exit quote uses correct6/18units",
+      "status": "pass"
+    }
+  ],
+  "deploymentId": "0x3f7fc51e18c3bb704db3ed4a96dccee0457a898cea3b540c460571b3c5790b61",
+  "publicTransactions": 0,
+  "walletSignatures": 0,
+  "newLendingTransactions": 0,
+  "reference": [
+    true,
+    -276323,
+    "1793895621",
+    "382"
+  ],
+  "feePips": 3200,
+  "exitQuote": {
+    "cityInputBaseUnits": "1002909299764246290",
+    "mockUsdcOutputBaseUnits": "1000000"
+  }
+}

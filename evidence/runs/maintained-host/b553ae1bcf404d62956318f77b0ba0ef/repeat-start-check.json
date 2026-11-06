@@ -1,0 +1,28 @@
+{
+  "status": "pass",
+  "container": "agentcity-maintained-host-b553ae1b",
+  "containerIdBefore": "13a98987c8d510709552d89619575fa23f657dc97479df02ae400193c19c93df",
+  "containerIdAfter": "13a98987c8d510709552d89619575fa23f657dc97479df02ae400193c19c93df",
+  "startedAtBefore": "2026-10-30T09:04:35.068725424Z",
+  "startedAtAfter": "2026-10-30T09:04:35.068725424Z",
+  "runtime": "/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/.local/maintained-world/b553ae1bcf404d62956318f77b0ba0ef/runtime",
+  "cloneDirectoriesBefore": [
+    "b553ae1bcf404d62956318f77b0ba0ef"
+  ],
+  "cloneDirectoriesAfter": [
+    "b553ae1bcf404d62956318f77b0ba0ef"
+  ],
+  "inspectionFilesBefore": [
+    "d1e4fa50-031c-43cf-8bad-e24a40c10ef8.json",
+    "f53d456e-ef9b-475d-98ed-ae61783c4655.json"
+  ],
+  "inspectionFilesAfter": [
+    "d1e4fa50-031c-43cf-8bad-e24a40c10ef8.json",
+    "f53d456e-ef9b-475d-98ed-ae61783c4655.json"
+  ],
+  "restarted": false,
+  "newClone": false,
+  "reinspection": false,
+  "ready": true,
+  "verifiedAt": "2026-10-30T09:12:00.172217+00:00"
+}

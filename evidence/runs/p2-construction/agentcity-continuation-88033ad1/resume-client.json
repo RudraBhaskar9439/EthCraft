@@ -1,0 +1,162 @@
+{
+  "schema": "agentcity.p2.construction-client.v1",
+  "phase": "resume",
+  "status": "fail",
+  "started_at": "2026-10-29T19:32:12.056Z",
+  "independent_humans": 0,
+  "scripted_roles": true,
+  "checks": [
+    {
+      "name": "same-world-restart-matches-retained-structure-and-all-real-inventories",
+      "prior_applied_placements": 137,
+      "carried": {
+        "minecraft:redstone": 2,
+        "minecraft:redstone_torch": 1,
+        "minecraft:stone_bricks": 4
+      },
+      "stock": {},
+      "revision": 137,
+      "status": "pass",
+      "at": "2026-10-29T19:32:25.543Z"
+    },
+    {
+      "name": "unsneaked-thin-reference-refused-with-original-operation-reconciled",
+      "target": [
+        -11,
+        86,
+        -4
+      ],
+      "reference": [
+        -11,
+        85,
+        -4
+      ],
+      "reference_material": "repeater",
+      "native_message": "Server refused to place stone_bricks at (-11, 86, -4): the block is still air",
+      "replay": {
+        "status": "REFUSED",
+        "code": "RECORDED_NOT_APPLIED",
+        "operationId": "3e1172f7-13f6-4a7b-9a45-e99cd337f99e",
+        "revision": 137
+      },
+      "revision": 137,
+      "status": "pass",
+      "at": "2026-10-29T19:32:34.545Z"
+    },
+    {
+      "name": "new-process-reconnect-preserves-real-carried-stock",
+      "carried": {
+        "minecraft:redstone": 2,
+        "minecraft:redstone_torch": 1,
+        "minecraft:stone_bricks": 4
+      },
+      "stock": {},
+      "revision": 137,
+      "status": "pass",
+      "at": "2026-10-29T19:32:34.588Z"
+    },
+    {
+      "name": "complete-native-build-consumes-exact144-items-once",
+      "native_placements": 144,
+      "actual_empty_stock": true,
+      "actual_empty_builder_inventory": true,
+      "stage_count": 10,
+      "readiness": false,
+      "status": "pass",
+      "at": "2026-10-29T19:33:12.755Z"
+    }
+  ],
+  "live0GVerified": false,
+  "spending": 0,
+  "continuation": {
+    "source_run": "agentcity-continuation-a8debbd5",
+    "prior_applied_placements": 137,
+    "expected_new_placements": 7,
+    "no_world_or_stock_restoration": true
+  },
+  "denied_thin_reference_events": [
+    {
+      "actor": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+      "action": "RIGHT_CLICK_BLOCK",
+      "use_block": "DENY",
+      "position": [
+        -11,
+        85,
+        -4
+      ],
+      "event": "native_interact",
+      "use_item": "DENY",
+      "tick": 296,
+      "cancelled": true
+    }
+  ],
+  "worker": {
+    "status": "built",
+    "completed": 144,
+    "placedThisRun": 7,
+    "readiness": false,
+    "stages": [
+      {
+        "stage": 0,
+        "revision": 3,
+        "placements": 3
+      },
+      {
+        "stage": 1,
+        "revision": 16,
+        "placements": 13
+      },
+      {
+        "stage": 2,
+        "revision": 47,
+        "placements": 15
+      },
+      {
+        "stage": 3,
+        "revision": 49,
+        "placements": 18
+      },
+      {
+        "stage": 4,
+        "revision": 69,
+        "placements": 20
+      },
+      {
+        "stage": 6,
+        "revision": 107,
+        "placements": 20
+      },
+      {
+        "stage": 5,
+        "revision": 138,
+        "placements": 19
+      },
+      {
+        "stage": 7,
+        "revision": 141,
+        "placements": 17
+      },
+      {
+        "stage": 8,
+        "revision": 143,
+        "placements": 13
+      },
+      {
+        "stage": 9,
+        "revision": 144,
+        "placements": 6
+      }
+    ]
+  },
+  "consumed_this_segment_by_material": {
+    "minecraft:stone_bricks": 4,
+    "minecraft:redstone_torch": 1,
+    "minecraft:redstone": 2
+  },
+  "error": {
+    "name": "AssertionError",
+    "message": "Expected values to be strictly equal:\n\n429 !== 200\n",
+    "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n429 !== 200\n\n    at inspect (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/evidence/runs/p2-construction/agentcity-continuation-88033ad1/source/tests/construction/probe.cjs:216:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async run (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/evidence/runs/p2-construction/agentcity-continuation-88033ad1/source/tests/construction/probe.cjs:416:5)"
+  },
+  "finished_at": "2026-10-29T19:33:13.269Z"
+}

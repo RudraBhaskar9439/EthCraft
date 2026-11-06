@@ -1,0 +1,30 @@
+{
+  "status": "pass",
+  "sourceRun": "agentcity-construction-750b0aae",
+  "scope": "Cold restore of a completed isolated internal-material Minecraft fixture; no blockchain link",
+  "checks": [
+    "complete stopped source archived and extracted; all saved file fingerprints match before first boot",
+    "fresh server observations preserve all 144 structural block states, empty stock and durable revision 144",
+    "the restored local review lock is released only after its recorded pass validity expires",
+    "a newly authenticated fixture inspector obtains a new real 16/16 lamp report and retained review lock without placing or replenishing blocks"
+  ],
+  "sourceOwner": "6d4af3c1c8824374b78de953c374ee27",
+  "userAccessWorldTouched": false,
+  "sourceWorldModified": false,
+  "realMoneySpent": 0,
+  "savedFileCount": 217,
+  "archiveSha256": "5fb2687ab667987611bf4ea9142c4fd40d2a69c5179aa0c45d7712384faa82cf",
+  "backupDirectory": ".local/ops/world-backups/a582a9b5748447088f4a938d0752676e",
+  "restoredInspectionId": "e041f584-4991-4105-b88d-5a3b841887a1",
+  "sourceFingerprintsUnchanged": true,
+  "userAccessContainerUnchanged": true,
+  "ownedCloneRemoved": true,
+  "finishedAt": "2026-10-30T07:35:03.441666+00:00",
+  "sources": {
+    "ops/world_recovery.py": "573146bd5c6a0f6f38bfe90b47c6cff8f75b40efa6ca2c8c2482340228419da9",
+    "ops/inspect_restored_world.cjs": "10e2c80a410c3787345d573d26397bd9d95c5a757a39944d1751c3b59b2d4099",
+    "scripts/local_host.py": "fe8e867a2f7e5077ea0154f907f69ffb33c9d8c516105747782bd606143ff65a",
+    "backend/src/bot/construction-worker.cjs": "4effac5a0100bb9a6c51461b5790e7e0848294304fb6398e849e3f20f2790297",
+    "tests/compatibility/package-lock.json": "644d0168c7bd3d406eeb489e55469fdf2f0e70fe40debcdbe18c9f0b1a1fa915"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "runId": "ef0a1ad5-02f9-4350-b26e-ffbad717b4e8",
+  "startedAt": "2026-10-31T13:47:47.329Z",
+  "status": "fail",
+  "scope": "Actual ingress status and denial only; no Discord-profile login or independent-human claim",
+  "target": {
+    "host": "domination-uid.tun.ply.gg",
+    "address": "147.185.221.20",
+    "port": 31628
+  },
+  "checks": [
+    {
+      "name": "actual status and ping echo protocol 774",
+      "status": "pass",
+      "serverVersion": {
+        "name": "Paper 26.3",
+        "protocol": 774
+      },
+      "onlineCount": 0
+    },
+    {
+      "name": "actual status and ping echo protocol 777",
+      "status": "pass",
+      "serverVersion": {
+        "name": "Paper 26.3",
+        "protocol": 777
+      },
+      "onlineCount": 0
+    }
+  ],
+  "process": {
+    "pid": 48236,
+    "bind": "127.0.0.1:8796",
+    "privateUpstream": "127.0.0.1:25596"
+  },
+  "stateHashes": {
+    "personal-agents.json": "b39d27885afc448e38d663220a5075a1465e182ca6e212159f7fbaab232447fb",
+    "personal-agent-tasks.json": "381c3359ae7a89ba02e079d9d8606a222e12db6fbcd300a92b39047c45bf9f37",
+    "plugins/AgentCity/discord-game-access.json": "83be671dd06217dc3dbc7cf807e459b50c6615e43c1b0cfc85c421b391afbad2",
+    "plugins/AgentCity/task-region-locks.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+  },
+  "error": "READONLY_CHECK_TIMEOUT",
+  "finalStateHashes": {
+    "personal-agents.json": "b39d27885afc448e38d663220a5075a1465e182ca6e212159f7fbaab232447fb",
+    "personal-agent-tasks.json": "381c3359ae7a89ba02e079d9d8606a222e12db6fbcd300a92b39047c45bf9f37",
+    "plugins/AgentCity/discord-game-access.json": "83be671dd06217dc3dbc7cf807e459b50c6615e43c1b0cfc85c421b391afbad2",
+    "plugins/AgentCity/task-region-locks.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+  },
+  "finishedAt": "2026-10-31T13:48:05.253Z"
+}

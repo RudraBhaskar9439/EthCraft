@@ -1,0 +1,42 @@
+{
+  "schema": "agentcity.p1.candidate-run.v1",
+  "status": "fail",
+  "name": "agentcity-p1-86c4ff1d",
+  "started_at": "2026-10-29T14:22:28.928683+00:00",
+  "manifest_sha256": "123932574318eea48aa9e4cbf3d2da4aaf20fd61bbf854f31f628a6d34d10333",
+  "sources": {
+    "fixtures/candidates/redstone-compiler/calculator-candidate-v1.json": "d14cc0956831efeb68df4b9aba588e946bbd3b546d6a2d37be02194378b1922b",
+    "fixtures/candidates/redstone-compiler/calculator-tests-candidate-v1.json": "8ec4afb0f561370cf74fc686a3683a01c6d0758fe6f0c15e33c8e1b5926e5897",
+    "tests/world/plugin/CandidatePlugin.java": "d373f20ad7c1c9fa38c9cb5eb6c3a048c126c0429fe5b1b9c431e478c2db380a",
+    "tests/world/plugin/plugin.yml": "d20d196039ab5e03e13c4a22e593d529c7255b5ad476504408cd85bd60f7a26c",
+    "tests/world/observe.cjs": "d97e6295e3ad5665c82575eac7ea8fe2de461aff71948c9ef690397a0eff0987",
+    "tests/world/run_candidate.py": "393eccbc692eb62f1347a5f96599fd7f5c94b968a734f04e63c04db7568e6f22",
+    "tests/compatibility/versions.json": "f9ee9617748df8545cadd5469d383b11f68ec43af6c9181d4259fcd1bb913502"
+  },
+  "runtime_lock": {
+    "purpose": "isolated_non_token_fixture",
+    "bind": "127.0.0.1",
+    "port": 25576,
+    "minecraft": "1.21.11",
+    "paper": {
+      "build": 132,
+      "support": "UNSUPPORTED",
+      "support_ended": "2026-06-15",
+      "sha256": "5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba",
+      "url": "https://fill-data.papermc.io/v1/objects/5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba/paper-1.21.11-132.jar"
+    },
+    "java_image": "eclipse-temurin@sha256:5d90b26c0784ccf55af55f97cbcf7f3969c66a06299c93bdc72649219942a48f",
+    "mineflayer": "4.39.0",
+    "pathfinder": "2.4.5",
+    "authentication": "offline_fixture_only",
+    "independent_human_participants": 0,
+    "token_integration": false,
+    "production_supported": false
+  },
+  "loopback_port": 25580,
+  "independent_humans": 0,
+  "full_phase_gate_passed": false,
+  "plugin_sha256": "0418096afc860743556018a210d316e84e7660fce0f34e24e016fa2c383189e7",
+  "error": "node failed (1): {\"suite\":\"normal\",\"case\":0,\"a\":0,\"b\":0,\"expected\":0,\"actual\":0,\"passed\":true}\n{\"suite\":\"normal\",\"case\":1,\"a\":0,\"b\":1,\"expected\":1,\"actual\":1,\"passed\":true}\n{\"suite\":\"normal\",\"case\":2,\"a\":0,\"b\":2,\"expected\":2,\"actual\":2,\"passed\":true}\n{\"suite\":\"normal\",\"case\":3,\"a\":0,\"b\":3,\"expected\":3,\"actual\":3,\"passed\":true}\n{\"suite\":\"normal\",\"case\":4,\"a\":1,\"b\":0,\"expected\":1,\"actual\":1,\"passed\":true}\n{\"suite\":\"normal\",\"case\":5,\"a\":1,\"b\":1,\"expected\":2,\"actual\":2,\"passed\":true}\n{\"suite\":\"normal\",\"case\":6,\"a\":1,\"b\":2,\"expected\":3,\"actual\":3,\"passed\":true}\n{\"suite\":\"normal\",\"case\":7,\"a\":1,\"b\":3,\"expected\":4,\"actual\":4,\"passed\":true}\n{\"suite\":\"normal\",\"case\":8,\"a\":2,\"b\":0,\"expected\":2,\"actual\":2,\"passed\":true}\n{\"suite\":\"normal\",\"case\":9,\"a\":2,\"b\":1,\"expected\":3,\"actual\":3,\"passed\":true}\n{\"suite\":\"normal\",\"case\":10,\"a\":2,\"b\":2,\"expected\":4,\"actual\":4,\"passed\":true}\n{\"suite\":\"normal\",\"case\":11,\"a\":2,\"b\":3,\"expected\":5,\"actual\":5,\"passed\":true}\n{\"suite\":\"normal\",\"case\":12,\"a\":3,\"b\":0,\"expected\":3,\"actual\":3,\"passed\":true}\n{\"suite\":\"normal\",\"case\":13,\"a\":3,\"b\":1,\"expected\":4,\"actual\":4,\"passed\":true}\n{\"suite\":\"normal\",\"case\":14,\"a\":3,\"b\":2,\"expected\":5,\"actual\":5,\"passed\":true}\n{\"suite\":\"normal\",\"case\":15,\"a\":3,\"b\":3,\"expected\":6,\"actual\":6,\"passed\":true}\n{\"suite\":\"descending\",\"case\":0,\"a\":3,\"b\":3,\"expected\":6,\"actual\":6,\"passed\":true}\n{\"suite\":\"descending\",\"case\":1,\"a\":3,\"b\":2,\"expected\":5,\"actual\":5,\"passed\":true}\n{\"suite\":\"descending\",\"case\":2,\"a\":3,\"b\":1,\"expected\":4,\"actual\":4,\"passed\":true}\n{\"suite\":\"descending\",\"case\":3,\"a\":3,\"b\":0,\"expected\":3,\"actual\":3,\"passed\":true}\n{\"suite\":\"descending\",\"case\":4,\"a\":2,\"b\":3,\"expected\":5,\"actual\":5,\"passed\":true}\n{\"suite\":\"descending\",\"case\":5,\"a\":2,\"b\":2,\"expected\":4,\"actual\":4,\"passed\":true}\n{\"suite\":\"descending\",\"case\":6,\"a\":2,\"b\":1,\"expected\":3,\"actual\":3,\"passed\":true}\n{\"suite\":\"descending\",\"case\":7,\"a\":2,\"b\":0,\"expected\":2,\"actual\":2,\"passed\":true}\n{\"suite\":\"descending\",\"case\":8,\"a\":1,\"b\":3,\"expected\":4,\"actual\":4,\"passed\":true}\n{\"suite\":\"descending\",\"case\":9,\"a\":1,\"b\":2,\"expected\":3,\"actual\":3,\"passed\":true}\n{\"suite\":\"descending\",\"case\":10,\"a\":1,\"b\":1,\"expected\":2,\"actual\":2,\"passed\":true}\n{\"suite\":\"descending\",\"case\":11,\"a\":1,\"b\":0,\"expected\":1,\"actual\":1,\"passed\":true}\n{\"suite\":\"descending\",\"case\":12,\"a\":0,\"b\":3,\"expected\":3,\"actual\":3,\"passed\":true}\n{\"suite\":\"descending\",\"case\":13,\"a\":0,\"b\":2,\"expected\":2,\"actual\":2,\"passed\":true}\n{\"suite\":\"descending\",\"case\":14,\"a\":0,\"b\":1,\"expected\":1,\"actual\":1,\"passed\":true}\n{\"status\":\"fail\",\"cases\":31,\"error\":\"Error: Observer kicked: {\\\"type\\\":\\\"string\\\",\\\"value\\\":\\\"Server closed\\\"}\\n    at EventEmitter.<anonymous> (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/world/observe.cjs:57:51)\\n    at EventEmitter.emit (node:events:509:20)\\n    at Client.<anonymous> (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/mineflayer/lib/plugins/kick.js:5:9)\\n    at Client.emit (node:events:509:20)\\n    at emitPacket (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/minecraft-protocol/src/client.js:85:12)\\n    at FullPacketParser.<anonymous> (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/minecraft-protocol/src/client.js:114:9)\\n    at FullPacketParser.emit (node:events:509:20)\\n    at addChunk (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/readable-stream/lib/internal/streams/readable.js:323:12)\\n    at readableAddChunk (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/readable-stream/lib/internal/streams/readable.js:300:9)\\n    at Readable.push (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/readable-stream/lib/internal/streams/readable.js:246:10)\"}\n",
+  "finished_at": "2026-10-29T14:26:40.471323+00:00"
+}

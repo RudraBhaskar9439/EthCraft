@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="agentcity-local-token" content="{{LOCAL_TOKEN}}">
+  <title>AgentCity laptop pilot</title>
+  <link rel="stylesheet" href="/console.css">
+  <script type="module" src="/console.mjs"></script>
+</head>
+<body><main>
+  <span class="badge">Laptop pilot · $0 real spending</span>
+  <h1>AgentCity</h1>
+  <p class="intro">A working Minecraft calculator and a separate blockchain contract demonstration.</p>
+  <p>Minecraft uses internal game materials. Blockchain balances, purchases and payments do not affect Minecraft.</p>
+  <p id="status" role="status" aria-live="polite">Loading verification results…</p>
+  <section aria-labelledby="human-heading">
+    <h2 id="human-heading">Two-person test</h2>
+    <p>Link both authenticated Minecraft accounts first, then review one agreement and complete the separate contract demonstration with your own wallets.</p>
+    <a id="prepare-human-review" href="/human">Open the human test</a>
+    <p>Agreement preparation stays disabled until both game-to-wallet identities are verified.</p>
+  </section>
+  <section aria-labelledby="minecraft-heading">
+    <h2 id="minecraft-heading">Minecraft construction</h2>
+    <p id="minecraft-status">Waiting for a verified build.</p>
+    <p id="runtime-status">Maintained runtime verification is pending.</p>
+    <p>Materials are placed inside the game and actual lamps are checked. Ollama proposes actions; the server enforces permissions.</p>
+  </section>
+  <section aria-labelledby="contracts-heading">
+    <h2 id="contracts-heading">Contract demonstration</h2>
+    <p id="public-status">No public-testnet result yet.</p>
+    <p>This flow uses developer-controlled test wallets, test tokens, and simulated materials and inspection. Your personal wallet remains under your control.</p>
+    <div class="actions">
+      <button data-action="/api/public-demo">Run a new testnet demonstration</button>
+      <button class="secondary" data-action="/api/public-resume">Resume the retained testnet job</button>
+    </div>
+    <ol id="steps"></ol>
+    <a id="payment-link" hidden target="_blank" rel="noopener noreferrer">View the confirmed testnet payment</a>
+    <p id="verified-at" class="muted"></p>
+  </section>
+  <section aria-labelledby="recovery-heading">
+    <h2 id="recovery-heading">Backup and recovery</h2>
+    <ul id="recovery"><li>Waiting for recovery verification.</li></ul>
+    <p class="muted">Restored workers stay stopped until their transaction and inventory state is reconciled.</p>
+  </section>
+  <details><summary>Offline contract test</summary>
+    <p>Run the same synthetic contract workflow on the local development chain.</p>
+    <button class="secondary" data-action="/api/demo">Run the local flow</button>
+    <p id="local-status"></p>
+  </details>
+  <footer>Trusted local operator only. Keep this console private. Independent participant acceptance and authenticated multiplayer remain final checks.</footer>
+</main></body>
+</html>

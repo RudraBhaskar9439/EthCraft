@@ -1,0 +1,33 @@
+{
+  "serverId": "local-inspection-server",
+  "jobId": "agentcity-boundary-8f2cb629",
+  "agreementVersion": 1,
+  "authorizationReference": "local-boundary-authorization",
+  "world": "agentcity-boundary-8f2cb629",
+  "plotMin": [
+    -16,
+    80,
+    -8
+  ],
+  "plotMax": [
+    15,
+    95,
+    7
+  ],
+  "chest": [
+    -14,
+    81,
+    5
+  ],
+  "actors": {
+    "43a86a2e-ba2e-350a-a576-a65b67aa87d1": "BOT",
+    "a56f0418-1cf4-3f1e-a0ab-9b34ba31f192": "REQUESTER",
+    "563add28-410b-350e-9001-a9be4cc7bd00": "INSPECTOR"
+  },
+  "blueprintSha256": "c8704765464a574ec4c797ad78d5294cc167007f66a0abfebd742e0b06711c49",
+  "testManifestSha256": "acf6291bfaf8b89794836e29de387e798c13b4956d8b25bc7eae1065403b10f2",
+  "workDeadlineMs": 1793288632541,
+  "reviewDeadlineMs": 1793289532541,
+  "obligationMode": "LOCAL_NO_EXTERNAL_OBLIGATIONS",
+  "localPassValidityMs": 30000
+}

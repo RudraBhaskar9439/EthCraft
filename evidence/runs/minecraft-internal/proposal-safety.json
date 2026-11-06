@@ -1,0 +1,49 @@
+{
+  "status": "pass",
+  "effects": 0,
+  "checks": [
+    {
+      "name": "changed-revision-rejected-after-real-inference",
+      "status": "waiting",
+      "proposal": {
+        "action": "wait",
+        "reason": "job_changed_during_inference"
+      },
+      "evidence": {
+        "mode": "ollama_local",
+        "executed": false,
+        "live0GVerified": false,
+        "billingVerified": false,
+        "model": "qwen3:1.7b",
+        "responseId": "2026-10-30T07:08:12.034791Z",
+        "generatedTokens": 13,
+        "paidCalls": 0
+      }
+    },
+    {
+      "name": "review-lock-prevents-execution",
+      "status": "waiting",
+      "proposal": {
+        "action": "wait",
+        "reason": "construction_not_authorized",
+        "jobId": "local-safety-job",
+        "expectedRevision": 1
+      },
+      "evidence": {
+        "mode": "ollama_local",
+        "executed": false,
+        "live0GVerified": false,
+        "billingVerified": false,
+        "model": "qwen3:1.7b",
+        "responseId": "2026-10-30T07:08:14.668704Z",
+        "generatedTokens": 13,
+        "paidCalls": 0
+      }
+    }
+  ],
+  "recorded_at": "2026-10-30T07:08:14.696890+00:00",
+  "source_sha256": {
+    "backend/src/bot/proposal-gate.mjs": "e3ca45fefeaa68623ef8629d1600c628000bae6974304cfcc3805d9635c79078",
+    "tests/construction/proposal-safety.mjs": "2d10ba2a02d0d2ddffb8ff0b3aa19e1d6f824346108f5e1576990ee7bb576881"
+  }
+}

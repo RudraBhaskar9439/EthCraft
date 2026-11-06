@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "scope": "Focused isolated PostgreSQL Game Coin accounting with fixture native escrow/mailbox receipts; no live inventory or balances mutated, no blockchain",
+  "checks": [
+    {
+      "name": "canonical owner maps only to existing Game Coin account; explicit listing authority and exact native stock receipt required; CITY and extra starter accounts excluded",
+      "status": "pass"
+    },
+    {
+      "name": "full-lot purchase atomically holds buyer coins; insufficient or second buyer refused; only exact backed-mailbox receipt settles conserved funds",
+      "status": "pass"
+    },
+    {
+      "name": "lost delivery reply replays original receipt without paying twice; owner cancellation returns exact escrow to seller mailbox without currency movement",
+      "status": "pass"
+    }
+  ],
+  "sources": {
+    "backend/src/playable/game-marketplace.mjs": "8cb993461f60c1416db70e0f232c6dcb2845646292d1e9fd8c6047efdc820918",
+    "backend/src/playable/game-marketplace.sql": "25f53b095d7f2c589fb817ef8725660289538131408637dae6555c8f29760173"
+  }
+}

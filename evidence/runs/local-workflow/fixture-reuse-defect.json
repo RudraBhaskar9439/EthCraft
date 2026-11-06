@@ -1,0 +1,11 @@
+{
+  "status": "resolved",
+  "problem": "The workflow test reused one fixed synthetic destination between test runs, so correct per-run deliveries accumulated and the single-bundle assertion failed.",
+  "observed": {
+    "actual_material_multiple": 4,
+    "expected_material_multiple": 1,
+    "source": "Actual PostgreSQL test assertion from 2026-10-29 22:19:48 UTC"
+  },
+  "fix": "Generate a unique destination hash for each run. Product delivery accounting is unchanged.",
+  "verification": "node tests/workflow/local-checks.mjs passed all six focused checks after the fixture correction."
+}

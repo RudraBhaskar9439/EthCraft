@@ -1,0 +1,403 @@
+{
+  "phase": "P0",
+  "release": "194ceb3bccea87d42548012e830d80a3bdfe3816",
+  "environment": "macOS arm64; pinned Java21/Paper1.21.11-132/Mineflayer4.39.0; loopback offline non-token fixture; Paper-confirmed navigation [-2,81,0] Dependency renewal: unchanged historical game runtime and retained observations reviewed after additive local backend/contracts setup; no new physical Minecraft run is claimed.",
+  "open_defects": [],
+  "review": {
+    "status": "approved",
+    "reviewer": "/root/p2_harness (requester-side AI engineering peer; not an independent human participant)",
+    "release": "194ceb3bccea87d42548012e830d80a3bdfe3816",
+    "evidence": [
+      {
+        "path": "evidence/runs/local-review/final-review.json",
+        "sha256": "5eada06010b1b90319563b40ea5f02b84d435de17d81d1ab69837de64afc27fb"
+      }
+    ]
+  },
+  "cases": {
+    "P0-001": {
+      "status": "pass",
+      "case_digest": "e16f1e4a9073dc7f9b203fa7da70c915ba4667623d5862c78e17ae1c02859619",
+      "evidence": [
+        {
+          "path": "tests/compatibility/versions.json",
+          "sha256": "f9ee9617748df8545cadd5469d383b11f68ec43af6c9181d4259fcd1bb913502"
+        },
+        {
+          "path": "evidence/runs/p0-local-compatibility/attempt-08/run-report.json",
+          "sha256": "0d0967081698b457a784de7366968505a85c33424d17709d1e3db72c3cea6b6f"
+        },
+        {
+          "path": "evidence/runs/p0-local-compatibility/attempt-08/probe-report.json",
+          "sha256": "7f8ddd207ff226afdc14e1ca1f06eec679586e2c5d73725e1ff1d6fd645ea84c"
+        },
+        {
+          "path": "evidence/runs/p0-local-compatibility/renewal-20261029/environment.json",
+          "sha256": "f02456dcb43764ff9b11f5bc3290a071c772ffbac8ad589dc798068a08b183d3"
+        }
+      ],
+      "subcases": {
+        "required": 7,
+        "passed": 7,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P0-002": {
+      "status": "pass",
+      "case_digest": "a4ce99849f0bac79bbd5af4ee42ee1d707a3de34f2a1e7837a028746def5d941",
+      "evidence": [
+        {
+          "path": "fixtures/candidates/redstone-compiler/calculator-candidate-v1.json",
+          "sha256": "d14cc0956831efeb68df4b9aba588e946bbd3b546d6a2d37be02194378b1922b"
+        },
+        {
+          "path": "fixtures/candidates/redstone-compiler/calculator-tests-candidate-v1.json",
+          "sha256": "8ec4afb0f561370cf74fc686a3683a01c6d0758fe6f0c15e33c8e1b5926e5897"
+        },
+        {
+          "path": "fixtures/candidates/redstone-compiler/LICENSE",
+          "sha256": "61feb77f116e6e3a9a505863a9388749d3413df7ec0aef41927c7b9da7b0a083"
+        },
+        {
+          "path": "evidence/runs/p0-local-compatibility/unit-tests.json",
+          "sha256": "8dfab044db40d54d27c82c19f89b8eeaeb84b5b3cb1d09d749cf50151eb69a38"
+        }
+      ],
+      "subcases": {
+        "required": 3,
+        "passed": 3,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P0-003": {
+      "status": "pass",
+      "case_digest": "4346c1619bf46dc34089f68269d19c77b017ab378e10b55f4decf4f54b1d1296",
+      "evidence": [
+        {
+          "path": "fixtures/policy/authority.json",
+          "sha256": "0d9be53f124480de53f77ee6e84eb4cb7cff303bea8081d5b4cbba33421b786d"
+        },
+        {
+          "path": "config/p0-policy.json",
+          "sha256": "5ccc40514792b3e8079685716b5f616bfe58dad04151b74404bf79205c60e2aa"
+        },
+        {
+          "path": "docs/P0_POLICY_BASELINE.md",
+          "sha256": "3a51096f508e7f5c9c2c4aefe00e2fdb74889e1c5cff30f7b8420bca01a513cf"
+        },
+        {
+          "path": "evidence/runs/p0-local-compatibility/unit-tests.json",
+          "sha256": "8dfab044db40d54d27c82c19f89b8eeaeb84b5b3cb1d09d749cf50151eb69a38"
+        }
+      ],
+      "subcases": {
+        "required": 1,
+        "passed": 1,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P0-004": {
+      "status": "pass",
+      "case_digest": "7a1725bc7f9c62eec870aacd4d409a1f1e109f4fd31d79aa902ce81b6df8b0ee",
+      "evidence": [
+        {
+          "path": "config/p0-policy.json",
+          "sha256": "5ccc40514792b3e8079685716b5f616bfe58dad04151b74404bf79205c60e2aa"
+        },
+        {
+          "path": "docs/P0_POLICY_BASELINE.md",
+          "sha256": "3a51096f508e7f5c9c2c4aefe00e2fdb74889e1c5cff30f7b8420bca01a513cf"
+        },
+        {
+          "path": "evidence/runs/p0-local-compatibility/unit-tests.json",
+          "sha256": "8dfab044db40d54d27c82c19f89b8eeaeb84b5b3cb1d09d749cf50151eb69a38"
+        }
+      ],
+      "subcases": {
+        "required": 1,
+        "passed": 1,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P0-005": {
+      "status": "pass",
+      "case_digest": "52e3eceda285dda093c6d43975dd34cab6b4e0d550cf6dedd6e948f33b40c625",
+      "evidence": [
+        {
+          "path": "config/p0-policy.json",
+          "sha256": "5ccc40514792b3e8079685716b5f616bfe58dad04151b74404bf79205c60e2aa"
+        },
+        {
+          "path": "docs/P0_POLICY_BASELINE.md",
+          "sha256": "3a51096f508e7f5c9c2c4aefe00e2fdb74889e1c5cff30f7b8420bca01a513cf"
+        },
+        {
+          "path": "evidence/runs/p0-local-compatibility/unit-tests.json",
+          "sha256": "8dfab044db40d54d27c82c19f89b8eeaeb84b5b3cb1d09d749cf50151eb69a38"
+        }
+      ],
+      "subcases": {
+        "required": 1,
+        "passed": 1,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P0-006": {
+      "status": "pass",
+      "case_digest": "1622dcf2ecefc2edd913e95c73c3c78169ba26dae187433c7c181786f8ca1bbf",
+      "evidence": [
+        {
+          "path": "config/p0-policy.json",
+          "sha256": "5ccc40514792b3e8079685716b5f616bfe58dad04151b74404bf79205c60e2aa"
+        },
+        {
+          "path": "docs/P0_POLICY_BASELINE.md",
+          "sha256": "3a51096f508e7f5c9c2c4aefe00e2fdb74889e1c5cff30f7b8420bca01a513cf"
+        },
+        {
+          "path": "evidence/runs/p0-local-compatibility/unit-tests.json",
+          "sha256": "8dfab044db40d54d27c82c19f89b8eeaeb84b5b3cb1d09d749cf50151eb69a38"
+        }
+      ],
+      "subcases": {
+        "required": 1,
+        "passed": 1,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P0-007": {
+      "status": "pass",
+      "case_digest": "06b79b439bee42e37dde01b6f299251f9c88a905346116b747bec72261eb8ce3",
+      "evidence": [
+        {
+          "path": "config/p0-policy.json",
+          "sha256": "5ccc40514792b3e8079685716b5f616bfe58dad04151b74404bf79205c60e2aa"
+        },
+        {
+          "path": "docs/P0_POLICY_BASELINE.md",
+          "sha256": "3a51096f508e7f5c9c2c4aefe00e2fdb74889e1c5cff30f7b8420bca01a513cf"
+        },
+        {
+          "path": "evidence/runs/p0-local-compatibility/unit-tests.json",
+          "sha256": "8dfab044db40d54d27c82c19f89b8eeaeb84b5b3cb1d09d749cf50151eb69a38"
+        }
+      ],
+      "subcases": {
+        "required": 1,
+        "passed": 1,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P0-008": {
+      "status": "pass",
+      "case_digest": "c5fc21f73d6a8d5f1c42d9b434eea0fdfc4b5495e438f0442f597ba3aeca7f8b",
+      "evidence": [
+        {
+          "path": "config/p0-policy.json",
+          "sha256": "5ccc40514792b3e8079685716b5f616bfe58dad04151b74404bf79205c60e2aa"
+        },
+        {
+          "path": "docs/P0_POLICY_BASELINE.md",
+          "sha256": "3a51096f508e7f5c9c2c4aefe00e2fdb74889e1c5cff30f7b8420bca01a513cf"
+        },
+        {
+          "path": "evidence/runs/p0-local-compatibility/unit-tests.json",
+          "sha256": "8dfab044db40d54d27c82c19f89b8eeaeb84b5b3cb1d09d749cf50151eb69a38"
+        }
+      ],
+      "subcases": {
+        "required": 1,
+        "passed": 1,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P0-009": {
+      "status": "pass",
+      "case_digest": "143097250f82a497ea1d543e106118cdb832569854b250614c251952ea3e0165",
+      "evidence": [
+        {
+          "path": "config/p0-policy.json",
+          "sha256": "5ccc40514792b3e8079685716b5f616bfe58dad04151b74404bf79205c60e2aa"
+        },
+        {
+          "path": "docs/P0_POLICY_BASELINE.md",
+          "sha256": "3a51096f508e7f5c9c2c4aefe00e2fdb74889e1c5cff30f7b8420bca01a513cf"
+        },
+        {
+          "path": "evidence/runs/p0-local-compatibility/unit-tests.json",
+          "sha256": "8dfab044db40d54d27c82c19f89b8eeaeb84b5b3cb1d09d749cf50151eb69a38"
+        }
+      ],
+      "subcases": {
+        "required": 1,
+        "passed": 1,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P0-010": {
+      "status": "pass",
+      "case_digest": "a810070e12befe897e98d5f9d54035a5a8c2c4f2d6f12f7b77cade69fca89b91",
+      "evidence": [
+        {
+          "path": "fixtures/policy/transitions.json",
+          "sha256": "2497603144aa1de01021386664698743b47fbe7b648e9df69f4a8b3874775a81"
+        },
+        {
+          "path": "fixtures/policy/authority.json",
+          "sha256": "0d9be53f124480de53f77ee6e84eb4cb7cff303bea8081d5b4cbba33421b786d"
+        },
+        {
+          "path": "evidence/runs/p0-local-compatibility/unit-tests.json",
+          "sha256": "8dfab044db40d54d27c82c19f89b8eeaeb84b5b3cb1d09d749cf50151eb69a38"
+        }
+      ],
+      "subcases": {
+        "required": 196,
+        "passed": 196,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P0-011": {
+      "status": "pass",
+      "case_digest": "ed253ef0af35da23db171729811aa08665992f484b1baf7b269de4f58ab16a37",
+      "evidence": [
+        {
+          "path": "config/p0-policy.json",
+          "sha256": "5ccc40514792b3e8079685716b5f616bfe58dad04151b74404bf79205c60e2aa"
+        },
+        {
+          "path": "docs/P0_POLICY_BASELINE.md",
+          "sha256": "3a51096f508e7f5c9c2c4aefe00e2fdb74889e1c5cff30f7b8420bca01a513cf"
+        },
+        {
+          "path": "evidence/runs/p0-local-compatibility/unit-tests.json",
+          "sha256": "8dfab044db40d54d27c82c19f89b8eeaeb84b5b3cb1d09d749cf50151eb69a38"
+        }
+      ],
+      "subcases": {
+        "required": 1,
+        "passed": 1,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P0-012": {
+      "status": "pass",
+      "case_digest": "4edb598f7a68069c54351a6b006d22aaa4c5984a1754485c54eb418788805608",
+      "evidence": [
+        {
+          "path": "config/p0-policy.json",
+          "sha256": "5ccc40514792b3e8079685716b5f616bfe58dad04151b74404bf79205c60e2aa"
+        },
+        {
+          "path": "docs/P0_POLICY_BASELINE.md",
+          "sha256": "3a51096f508e7f5c9c2c4aefe00e2fdb74889e1c5cff30f7b8420bca01a513cf"
+        },
+        {
+          "path": "evidence/runs/p0-local-compatibility/unit-tests.json",
+          "sha256": "8dfab044db40d54d27c82c19f89b8eeaeb84b5b3cb1d09d749cf50151eb69a38"
+        }
+      ],
+      "subcases": {
+        "required": 1,
+        "passed": 1,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P0-013": {
+      "status": "pass",
+      "case_digest": "e7c53c5ead9f4317b1610bce29e3f49a9bbd9559f7aa7ca07db028d333722274",
+      "evidence": [
+        {
+          "path": "config/p0-policy.json",
+          "sha256": "5ccc40514792b3e8079685716b5f616bfe58dad04151b74404bf79205c60e2aa"
+        },
+        {
+          "path": "docs/P0_POLICY_BASELINE.md",
+          "sha256": "3a51096f508e7f5c9c2c4aefe00e2fdb74889e1c5cff30f7b8420bca01a513cf"
+        },
+        {
+          "path": "evidence/runs/p0-local-compatibility/unit-tests.json",
+          "sha256": "8dfab044db40d54d27c82c19f89b8eeaeb84b5b3cb1d09d749cf50151eb69a38"
+        }
+      ],
+      "subcases": {
+        "required": 1,
+        "passed": 1,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P0-014": {
+      "status": "pass",
+      "case_digest": "40ed5189a63d434afc679ea178246c577cee90ece55f2e07c11dd4c4203914fa",
+      "evidence": [
+        {
+          "path": "docs/RESEARCH_PROTOCOL.md",
+          "sha256": "63fdfa67bc5ffbc6c2073393dcd8d083ea1067bee6e15e1da820a0ad95e8f4f7"
+        },
+        {
+          "path": "config/p0-policy.json",
+          "sha256": "5ccc40514792b3e8079685716b5f616bfe58dad04151b74404bf79205c60e2aa"
+        },
+        {
+          "path": "evidence/runs/p0-local-compatibility/unit-tests.json",
+          "sha256": "8dfab044db40d54d27c82c19f89b8eeaeb84b5b3cb1d09d749cf50151eb69a38"
+        }
+      ],
+      "subcases": {
+        "required": 1,
+        "passed": 1,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P0-015": {
+      "status": "pass",
+      "case_digest": "8d6dec0a09519ca198d71a47c22691af960abb65a3bf565164e0bc4d1fcbc5ca",
+      "evidence": [
+        {
+          "path": "planning/upstreams.json",
+          "sha256": "473584224ebf19aa058c8062d5c9006979754c64cc4aaabefb102294865d46ba"
+        },
+        {
+          "path": "docs/UPSTREAM_REUSE.md",
+          "sha256": "87b8fb74e40012b90bcdea21b6333f66d4f7cdb00d584ec9a73432b9ca8bd7b7"
+        },
+        {
+          "path": "tests/compatibility/package-lock.json",
+          "sha256": "644d0168c7bd3d406eeb489e55469fdf2f0e70fe40debcdbe18c9f0b1a1fa915"
+        },
+        {
+          "path": "tests/compatibility/versions.json",
+          "sha256": "f9ee9617748df8545cadd5469d383b11f68ec43af6c9181d4259fcd1bb913502"
+        },
+        {
+          "path": "evidence/runs/p0-local-compatibility/upstream-compatibility-research.json",
+          "sha256": "36fc4609dbf3b8fe3bdced1c75dc7db06f0ce4e8a57db9cf6a9c014edc2f991c"
+        },
+        {
+          "path": "evidence/runs/p0-local-compatibility/npm-audit.json",
+          "sha256": "f60cb9b772c82079bcae12da32661bac61b3568ee5579ae698a212c2eae0bbbc"
+        }
+      ],
+      "subcases": {
+        "required": 1,
+        "passed": 1,
+        "failed": 0,
+        "blocked": 0
+      }
+    }
+  }
+}

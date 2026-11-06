@@ -1,0 +1,50 @@
+{
+  "schema": "agentcity.bank-bot-transport.v1",
+  "runId": "1607bad2-950f-4d5b-8dba-7260d47993fd",
+  "scope": "In-memory Discord transport and service fixtures only; no credentials, network, database, or actual signatures.",
+  "checks": [
+    {
+      "name": "Bank command is opt-in; existing commands are unchanged and new options are typed and bounded",
+      "status": "pass"
+    },
+    {
+      "name": "No bank runtime means no bank registration or signing; legacy agent panel still works",
+      "status": "pass"
+    },
+    {
+      "name": "Loan preview shows exact immutable money, collateral, term, grace and auction terms without signing",
+      "status": "pass"
+    },
+    {
+      "name": "Only actual preview owner can confirm; original operation survives click IDs and repeat clicks do not resign",
+      "status": "pass"
+    },
+    {
+      "name": "Exact-output swap displays maximum spend and both deadlines before confirmation; incomplete terms fail closed",
+      "status": "pass"
+    },
+    {
+      "name": "Borrowers and workers resolve verified guild identity IDs; unknown recipients dispatch nothing",
+      "status": "pass"
+    },
+    {
+      "name": "Wrong guild, bot user and failed acknowledgement dispatch no previews or confirmations",
+      "status": "pass"
+    },
+    {
+      "name": "Loans, wallet history, credits and work are readable ephemeral replies without confirmation or signing",
+      "status": "pass"
+    }
+  ],
+  "publicDiscordPosts": 0,
+  "gatewayConnections": 0,
+  "publicTransactions": 0,
+  "actualSignatures": 0,
+  "result": "pass",
+  "fixtureSignatures": 1,
+  "sourceHashes": {
+    "backend/src/discord/bot.mjs": "565f7448c80d11aa504d5ca5aa25c902a10954f9bd2aebc7be6122eaf44b0bf2",
+    "backend/src/discord/bank-runtime.mjs": "09d801369cb6d57af31eea455ec79a546fbd83f10773ee0a00dcabd2403a8df1",
+    "tests/bank/bot-transport.mjs": "aa3a54ace06f8d9e332e6733fb58c136c732d8fa5dd7ddf1d15649222a436f73"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "status": "fail",
+  "scope": "Actual local player-agent build, delivery and sale; disclosed TaskTester fixture, real Minecraft items, Game Coins only",
+  "independentHumansVerified": 0,
+  "publicTransactions": 0,
+  "startedAt": "2026-10-31T07:02:05.149Z",
+  "checks": [],
+  "error": "Timed out: /play",
+  "finishedAt": "2026-10-31T07:02:52.351Z"
+}

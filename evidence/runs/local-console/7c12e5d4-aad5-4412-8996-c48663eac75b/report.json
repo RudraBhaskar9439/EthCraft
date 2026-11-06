@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "checks": [
+    "current six-phase local result is displayed without live-gate claims",
+    "separate Minecraft scope and actual local AI are disclosed",
+    "missing local token refused",
+    "foreign origin refused",
+    "foreign host refused"
+  ],
+  "realMoneySpent": 0
+}

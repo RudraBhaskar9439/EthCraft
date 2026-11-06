@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "scope": "Actual PostgreSQL; canonical escrow reader is a labelled fixture; no chain/signing/native effects.",
+  "checks": [
+    {
+      "name": "pending funding binds immutable quote and blocks cancellation",
+      "status": "pass"
+    },
+    {
+      "name": "only verified exact work and amount receipts establish funding",
+      "status": "pass"
+    },
+    {
+      "name": "inspected result settles once and canonical replay preserves state",
+      "status": "pass"
+    }
+  ]
+}

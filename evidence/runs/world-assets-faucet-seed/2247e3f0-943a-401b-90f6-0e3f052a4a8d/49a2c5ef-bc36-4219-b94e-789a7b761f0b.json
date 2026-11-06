@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "scope": "Finite dedicated faucet role setup; seeding only with explicit --seed",
+  "publicTransactions": 2,
+  "playerTransfers": 0,
+  "faucet": "0xb50b09132ef8e0bbc114a741e2fa222a1c6764c4",
+  "seedCityBaseUnits": "1000000000000000000000",
+  "seedNativeWei": "2000000000000000",
+  "receipts": {
+    "city": {
+      "transactionHash": "0x68429c37f1ba0d9e998e4df9133531bff2efa5cf0d4bb5ffb6241d9c2d6d8614",
+      "blockHash": "0x2f9fb33ed51bbe708d4d85f24992707be1f9049d01a123a3abe6eacebfa285a3",
+      "blockNumber": "66615863"
+    },
+    "native": {
+      "transactionHash": "0xd6580eaf9ea0f09fd12c8a0a4fa09ad43dce939ef4c38bb52c5669c8b2d8bebb",
+      "blockHash": "0xa68917e50fc047928b566d685fc8c5ff7323aa64d29c482db539f56ebdd3e8b4",
+      "blockNumber": "66615873"
+    }
+  },
+  "maxPrincipals": 10,
+  "sourceSha256": "e7f5841961e242ab2c7a3f3bbd98ca4dd43c8860daf11510b980ae527a15619a"
+}

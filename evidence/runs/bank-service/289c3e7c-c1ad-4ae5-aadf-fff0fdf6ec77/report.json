@@ -1,0 +1,46 @@
+{
+  "status": "pass",
+  "runId": "289c3e7c-c1ad-4ae5-aadf-fff0fdf6ec77",
+  "schema": "bank_test_289c3e7cc1ad4ae5aadffff0fdf6ec77",
+  "publicTransactions": 0,
+  "paidModelCalls": 0,
+  "realMoneySpentUsd": 0,
+  "independentHumans": 0,
+  "scope": "Actual isolated PostgreSQL/Anvil fork and official v4 contracts; synthetic native custody and inspector context; controlled signers.",
+  "checks": [
+    {
+      "name": "owner confirmation and immutable preview gate lender capital",
+      "status": "pass"
+    },
+    {
+      "name": "service recreation reconciles original signed borrow and never lends twice",
+      "status": "pass"
+    },
+    {
+      "name": "official two-pool exact-output quote and swap enforce exact receipt and cap",
+      "status": "pass"
+    },
+    {
+      "name": "atomic item checkout pays seller and verifies final buyer after two NFT transfers",
+      "status": "pass"
+    },
+    {
+      "name": "funded work requires inspector result and requester acceptance and pays once",
+      "status": "pass"
+    },
+    {
+      "name": "repayment credits lender exactly and collateral and cash claims release once",
+      "status": "pass"
+    },
+    {
+      "name": "two qualifying controlled repayments produce the contract-recorded discount",
+      "status": "pass"
+    },
+    {
+      "name": "overdue auctions account for borrower surplus and lender shortfall and remove discount",
+      "status": "pass"
+    }
+  ],
+  "controlledSignatures": 42,
+  "sourceChainUnchangedByFixture": true
+}

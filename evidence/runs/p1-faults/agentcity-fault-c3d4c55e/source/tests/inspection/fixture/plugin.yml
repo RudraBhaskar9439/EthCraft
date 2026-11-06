@@ -1,0 +1,7 @@
+name: AgentCityWorldFixture
+version: 0.1.0
+main: org.agentcity.inspection.fixture.WorldFixture
+api-version: '1.21.11'
+load: POSTWORLD
+loadbefore: [AgentCity]
+description: Isolated one-shot inspection test setup and observations

@@ -1,0 +1,14 @@
+{
+  "frozen": true,
+  "source_sha256": {
+    "plugin/src/main/java/org/agentcity/paper/AgentCityPlugin.java": "c9db2c16c892dc8964576a0039e8067d7558137a635f88b1c4ec6153e6b4b743",
+    "plugin/src/main/java/org/agentcity/paper/NativeLever.java": "302b0067fb68352f245f86f9b78f3e58179d53472dadc6d07ac18a60e4e8c253",
+    "backend/src/bot/client-protocol.cjs": "1127043a435511d544398214c69812050f0573007edf9486894b22bd854e5e63",
+    "config/minecraft-runtime.json": "6ced906da4564401590b6dc7011ec53e74ebe072c34e9cd71942814524f3e20d",
+    "tests/construction/probe.cjs": "6bdd5e0ef2d5aee3f75654976dc633489b5976d2a4e86d85c92dd43ff4907969",
+    "tests/construction/run.py": "2e0b35d6198f344f20140a88261d911de7a26bc0083d223f3ac760e9353c82ce",
+    "scripts/maintained_world.py": "4c80d2e956e3582e2b81f2cbd9f735e59727bac3b195ccbadc2a8b588811679c",
+    "ops/inspect_restored_world.cjs": "96eed0a577065a09ce79589562bb23ec8b35354e016863999c7a186190c27778",
+    "docs/MAINTAINED_RUNTIME.md": "b6f4d21943df29b46a0a7bb9d8b2d972804a01394df876a040e48f4272f1cd4a"
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "schema": "agentcity.p0.dependency-review.v1",
+  "reviewer": "/root/p2_scope_review (independent AI engineering peer)",
+  "reviewed_at": "2026-10-29T17:34:28.169048+00:00",
+  "status": "approved",
+  "previous_approved_release": "14f0cd9bef36b7b2f69a765af6e46ac5b1ccab37",
+  "reviewed_git_head": "c4593ff7b0ec61ad4e42db5a598885f095fe5f03",
+  "release": "74466c2a4188ffcb96cb331a0f30ab567a2924df",
+  "scope": "Reuse of existing local P0 observations only; no new compatibility/world run or live integration claim.",
+  "reviewed_comparison": "Previous P0 approved release to current tracked working tree plus nonignored untracked paths.",
+  "p0_phase_definition_unchanged": true,
+  "p0_implementation_paths": [
+    "docs/DECISIONS.md",
+    "planning/upstreams.json",
+    "config/deployment.json",
+    "tests/compatibility/",
+    "config/p0-policy.json",
+    "docs/P0_POLICY_BASELINE.md",
+    "fixtures/policy/",
+    "fixtures/candidates/",
+    "tests/test_candidate_manifest.py",
+    "tests/test_policy_baseline.py",
+    "tests/test_compatibility_safety.py"
+  ],
+  "p0_implementation_changes": [],
+  "shared_scope_changes": [
+    {
+      "path": "planning/phases.json",
+      "previous_sha256": "1914d7d50cb099da3b44111b450ae41ef0a198cede034e727f388850469b6ac8",
+      "reviewed_working_sha256": "9a1c4072009d4663cf44dc654221107b7809883d55600f33b3b5408c6324ec17",
+      "change": "P1 focused milestone metadata from the prior approved work and the new six-case local P2 definition/path inventory; P9 retains the original broad P1/P2 families. P0 phase configuration, compatibility sources, policy definitions, dependency lock and runtime versions remain unchanged."
+    }
+  ],
+  "review_checks": {
+    "all_15_current_p0_case_digests_match_retained_records": true,
+    "all_18_unique_retained_case_artifact_hashes_match": true,
+    "shared_scope_definition_unchanged": true,
+    "p0_runtime_and_dependency_sources_unchanged": true
+  },
+  "retained_case_artifacts": [
+    {
+      "path": "config/p0-policy.json",
+      "sha256": "5ccc40514792b3e8079685716b5f616bfe58dad04151b74404bf79205c60e2aa"
+    },
+    {
+      "path": "docs/P0_POLICY_BASELINE.md",
+      "sha256": "3a51096f508e7f5c9c2c4aefe00e2fdb74889e1c5cff30f7b8420bca01a513cf"
+    },
+    {
+      "path": "docs/RESEARCH_PROTOCOL.md",
+      "sha256": "63fdfa67bc5ffbc6c2073393dcd8d083ea1067bee6e15e1da820a0ad95e8f4f7"
+    },
+    {
+      "path": "docs/UPSTREAM_REUSE.md",
+      "sha256": "87b8fb74e40012b90bcdea21b6333f66d4f7cdb00d584ec9a73432b9ca8bd7b7"
+    },
+    {
+      "path": "evidence/runs/p0-local-compatibility/attempt-08/probe-report.json",
+      "sha256": "7f8ddd207ff226afdc14e1ca1f06eec679586e2c5d73725e1ff1d6fd645ea84c"
+    },
+    {
+      "path": "evidence/runs/p0-local-compatibility/attempt-08/run-report.json",
+      "sha256": "0d0967081698b457a784de7366968505a85c33424d17709d1e3db72c3cea6b6f"
+    },
+    {
+      "path": "evidence/runs/p0-local-compatibility/npm-audit.json",
+      "sha256": "f60cb9b772c82079bcae12da32661bac61b3568ee5579ae698a212c2eae0bbbc"
+    },
+    {
+      "path": "evidence/runs/p0-local-compatibility/renewal-20261029/environment.json",
+      "sha256": "f02456dcb43764ff9b11f5bc3290a071c772ffbac8ad589dc798068a08b183d3"
+    },
+    {
+      "path": "evidence/runs/p0-local-compatibility/unit-tests.json",
+      "sha256": "8dfab044db40d54d27c82c19f89b8eeaeb84b5b3cb1d09d749cf50151eb69a38"
+    },
+    {
+      "path": "evidence/runs/p0-local-compatibility/upstream-compatibility-research.json",
+      "sha256": "36fc4609dbf3b8fe3bdced1c75dc7db06f0ce4e8a57db9cf6a9c014edc2f991c"
+    },
+    {
+      "path": "fixtures/candidates/redstone-compiler/LICENSE",
+      "sha256": "61feb77f116e6e3a9a505863a9388749d3413df7ec0aef41927c7b9da7b0a083"
+    },
+    {
+      "path": "fixtures/candidates/redstone-compiler/calculator-candidate-v1.json",
+      "sha256": "d14cc0956831efeb68df4b9aba588e946bbd3b546d6a2d37be02194378b1922b"
+    },
+    {
+      "path": "fixtures/candidates/redstone-compiler/calculator-tests-candidate-v1.json",
+      "sha256": "8ec4afb0f561370cf74fc686a3683a01c6d0758fe6f0c15e33c8e1b5926e5897"
+    },
+    {
+      "path": "fixtures/policy/authority.json",
+      "sha256": "0d9be53f124480de53f77ee6e84eb4cb7cff303bea8081d5b4cbba33421b786d"
+    },
+    {
+      "path": "fixtures/policy/transitions.json",
+      "sha256": "2497603144aa1de01021386664698743b47fbe7b648e9df69f4a8b3874775a81"
+    },
+    {
+      "path": "planning/upstreams.json",
+      "sha256": "473584224ebf19aa058c8062d5c9006979754c64cc4aaabefb102294865d46ba"
+    },
+    {
+      "path": "tests/compatibility/package-lock.json",
+      "sha256": "644d0168c7bd3d406eeb489e55469fdf2f0e70fe40debcdbe18c9f0b1a1fa915"
+    },
+    {
+      "path": "tests/compatibility/versions.json",
+      "sha256": "f9ee9617748df8545cadd5469d383b11f68ec43af6c9181d4259fcd1bb913502"
+    }
+  ],
+  "retained_physical_observations": {
+    "run": "evidence/runs/p0-local-compatibility/attempt-08/run-report.json",
+    "probe": "evidence/runs/p0-local-compatibility/attempt-08/probe-report.json",
+    "result": "Previously retained actual seven-check pass for local connection, lever/lamp observations, item retrieval/placement and bounded no-dig navigation. Navigation is Paper-confirmed at [-2,81,0]. These observations were not rerun for this dependency review."
+  },
+  "assessment": "Existing actual P0 evidence remains applicable to its unchanged isolated compatibility fixture and unchanged policy/upstream inputs. Metadata path-scope changes alone do not alter those physical observations. Renew the release binding only after the implementation commit, checking that no P0 implementation or additional shared dependency changed.",
+  "separate_required_reviews": [
+    "The changed main plugin and new construction access logic require their own affected P1 physical regressions.",
+    "P2 still requires actual 144-placement Survival construction, material conservation, interrupted resume and final real inspection evidence."
+  ],
+  "limitations": [
+    "Historical Paper1.21.11 build132 remains unsupported for production; this review does not adopt a maintained release.",
+    "All original observations used disclosed offline local fixtures and operator stock; no independently controlled human or genuine account ownership proof.",
+    "No token-linked platform approval, funded-chain preflight, live0G inference, liveArkiv publication, wallet signature or economic settlement is established.",
+    "No fresh runtime or physical test was executed by this review; no evidence/P0.json case status or release was edited."
+  ],
+  "final_release_binding": "Root confirmed the committed scope matches the independently reviewed working bytes; no P0 implementation paths changed."
+}

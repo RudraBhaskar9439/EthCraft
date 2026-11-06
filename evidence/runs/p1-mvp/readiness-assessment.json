@@ -1,0 +1,193 @@
+{
+  "status": "implementer assessment; independent review pending",
+  "scope": "User-approved focused local Phase1 MVP only",
+  "approval_quote": "dont go for that much edge cases just complete the phase1 asap",
+  "cases": [
+    {
+      "case_id": "P1-001",
+      "result": "pass",
+      "required_subcases": 16,
+      "passed_subcases": 16,
+      "evidence": [
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/retained/reports/66d84186-bedf-49c0-9e38-1401ebcffdd6.json",
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/restart-client.json",
+        "evidence/runs/p1-mvp/executable-binding.json",
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/integrity-resolution.json"
+      ],
+      "detail": "Actual protected report revision1; numeric pass count16 of16."
+    },
+    {
+      "case_id": "P1-002",
+      "result": "pass",
+      "required_subcases": 16,
+      "passed_subcases": 16,
+      "evidence": [
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/retained/reports/ff91399e-cdcb-4d64-a32f-772ad34a042d.json",
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/restart-client.json",
+        "evidence/runs/p1-mvp/executable-binding.json",
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/integrity-resolution.json"
+      ],
+      "detail": "Actual protected report revision2; numeric pass count10 of16."
+    },
+    {
+      "case_id": "P1-003",
+      "result": "pass",
+      "required_subcases": 16,
+      "passed_subcases": 16,
+      "evidence": [
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/retained/reports/9e43b6f8-b31e-46dd-b1fa-6c257b717a7a.json",
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/restart-client.json",
+        "evidence/runs/p1-mvp/executable-binding.json",
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/integrity-resolution.json"
+      ],
+      "detail": "Actual protected report revision3; numeric pass count16 of16."
+    },
+    {
+      "case_id": "P1-004",
+      "result": "pass",
+      "required_subcases": 3,
+      "passed_subcases": 3,
+      "actual_assertion_groups": [
+        "actual_job_stock_withdraw_once",
+        "actual_job_stock_return_once",
+        "actual_survival_placement_consumes_once"
+      ],
+      "evidence": [
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/initial-client.json",
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/restart-client.json",
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/integrity-resolution.json",
+        "evidence/runs/p1-mvp/executable-binding.json"
+      ],
+      "detail": "Focused live assertion groups are retained with authoritative game observations; no full expanded matrix claim."
+    },
+    {
+      "case_id": "P1-005",
+      "result": "pass",
+      "required_subcases": 6,
+      "passed_subcases": 6,
+      "actual_assertion_groups": [
+        "missing_control_authority_refused",
+        "wrong_live_actor_session",
+        "forged_display_name_cannot_place",
+        "unarmed_native_break_prevented",
+        "requester_cannot_build",
+        "requester_cannot_lock"
+      ],
+      "evidence": [
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/initial-client.json",
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/restart-client.json",
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/integrity-resolution.json",
+        "evidence/runs/p1-mvp/executable-binding.json"
+      ],
+      "detail": "Focused live assertion groups are retained with authoritative game observations; no full expanded matrix claim."
+    },
+    {
+      "case_id": "P1-006",
+      "result": "pass",
+      "required_subcases": 4,
+      "passed_subcases": 4,
+      "actual_assertion_groups": [
+        "placement_serial_replay_returns_original_receipt",
+        "placement_concurrent_replay_returns_original_receipt",
+        "operation_id_parameter_collision",
+        "restart_retry_returns_durable_original_receipt"
+      ],
+      "evidence": [
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/initial-client.json",
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/restart-client.json",
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/integrity-resolution.json",
+        "evidence/runs/p1-mvp/executable-binding.json"
+      ],
+      "detail": "Focused live assertion groups are retained with authoritative game observations; no full expanded matrix claim."
+    },
+    {
+      "case_id": "P1-007",
+      "result": "pass",
+      "required_subcases": 10,
+      "passed_subcases": 10,
+      "actual_assertion_groups": [
+        "active_checker_cannot_unlock",
+        "active_checker_structure_edit_denied",
+        "active_checker_external_input_event_denied",
+        "approved_review_toggle_a0",
+        "approved_review_toggle_a1",
+        "approved_review_toggle_b0",
+        "approved_review_toggle_b1",
+        "review_sneaking_water_bucket_prevented",
+        "review_sneaking_lava_bucket_prevented",
+        "usable_review_pass_cannot_unlock_early"
+      ],
+      "evidence": [
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/initial-client.json",
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/restart-client.json",
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/integrity-resolution.json",
+        "evidence/runs/p1-mvp/executable-binding.json"
+      ],
+      "detail": "Focused live assertion groups are retained with authoritative game observations; no full expanded matrix claim."
+    },
+    {
+      "case_id": "P1-008",
+      "result": "pass",
+      "required_subcases": 4,
+      "passed_subcases": 4,
+      "actual_assertion_groups": [
+        "usable_review_pass_cannot_unlock_early",
+        "expired_local_pass_unlock_without_external_obligation",
+        "actual_carry_break_advances_revision_without_resurrecting_old_pass",
+        "actual_carry_repair_consumes_once_and_advances_revision"
+      ],
+      "evidence": [
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/initial-client.json",
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/restart-client.json",
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/integrity-resolution.json",
+        "evidence/runs/p1-mvp/executable-binding.json"
+      ],
+      "detail": "Focused live assertion groups are retained with authoritative game observations; no full expanded matrix claim."
+    },
+    {
+      "case_id": "P1-009",
+      "result": "pass",
+      "required_subcases": 4,
+      "passed_subcases": 4,
+      "actual_assertion_groups": [
+        "protected_normal_complete_actual_report",
+        "protected_carry_fault_complete_actual_report",
+        "protected_repaired_complete_actual_report",
+        "immutable_16_10_16_report_and_revision_chain"
+      ],
+      "evidence": [
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/initial-client.json",
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/restart-client.json",
+        "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/integrity-resolution.json",
+        "evidence/runs/p1-mvp/executable-binding.json"
+      ],
+      "detail": "Focused live assertion groups are retained with authoritative game observations; no full expanded matrix claim."
+    },
+    {
+      "case_id": "P1-010",
+      "result": "pass",
+      "required_subcases": 4,
+      "passed_subcases": 4,
+      "evidence": [
+        "evidence/runs/p1-faults/agentcity-fault-4c72c42f/run-report.json",
+        "evidence/runs/p1-faults/agentcity-fault-407399bc/run-report.json",
+        "evidence/runs/p1-faults/agentcity-fault-e960a531/run-report.json",
+        "evidence/runs/p1-faults/agentcity-fault-02dde173/run-report.json",
+        "evidence/runs/p1-mvp/executable-binding.json"
+      ],
+      "detail": "Four actual isolated JVM exit/restart cuts, same-payload retries and real stock/world observations; all executed main bytecode matches the protected lifecycle."
+    }
+  ],
+  "not_claimed": [
+    "Expanded1041-variant sweep",
+    "35 additional regressions",
+    "Full survival bot construction",
+    "Independent humans/licensed accounts",
+    "Maintained production Paper support",
+    "Token, AI-provider or settlement integration"
+  ],
+  "nonblocking_historical_failures": [
+    "Lifecycle wrapper source-format mismatch preserved; separate bytecode/source integrity resolution provided.",
+    "Chunk-unload auxiliary stock value stayed unavailable; no numeric conservation result fabricated."
+  ]
+}

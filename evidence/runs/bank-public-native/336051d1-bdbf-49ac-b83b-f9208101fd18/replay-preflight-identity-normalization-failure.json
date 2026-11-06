@@ -1,0 +1,10 @@
+{
+  "status": "fail",
+  "recordedAt": "2026-11-05T13:44:46.831115+00:00",
+  "stage": "fresh-runtime replay preflight",
+  "reason": "Stored JSON omitted optional undefined minecraftPlayerId fields for worker and lender while the in-memory binding retained them; deep equality failed before replay confirmations.",
+  "financialConfirmationsStarted": false,
+  "newSignedTransactions": 0,
+  "actualIdentityChanges": false,
+  "fix": "Normalize the current binding through the same JSON encoding before comparing retained identity terms."
+}

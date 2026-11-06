@@ -1,0 +1,16 @@
+{
+  "status": "fail",
+  "scope": "Actual isolated Paper native escrow, synthetic Discord registrations and Mineflayer clients; no real human, live-server inventory, Game Coin ledger or blockchain effects",
+  "checks": [],
+  "fixtureGrants": [],
+  "productionWorldMutations": 0,
+  "independentHumansVerified": 0,
+  "pluginSha256": "a7a3771a4e84fa3a484f1cadb4c61f6b883c53a1a11aa2db9d5b4bdd30bd1d26",
+  "container": "agentcity-escrow-fixture-a05c811d",
+  "fixtureRuntime": "C:\\Users\\Rudransh Shinghal\\agentcity-minecraft\\.local\\escrow-fixture\\a05c811d-be30-4118-834d-4b2376178223",
+  "paperSha256": "a836a016be7ac52352eb3a1efb6857bb42ee73a6c78d46e292f7e87742edb0e6",
+  "error": {
+    "message": "candidate_client_profile_binding_required"
+  },
+  "finishedAt": "2026-10-31T16:33:45.739Z"
+}

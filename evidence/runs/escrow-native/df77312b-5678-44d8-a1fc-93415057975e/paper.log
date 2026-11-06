@@ -1,0 +1,140 @@
+Starting org.bukkit.craftbukkit.Main
+[16:27:37 INFO]: [bootstrap] Running Java 25 (OpenJDK 64-Bit Server VM 25.0.5+8-LTS; Eclipse Adoptium Temurin-25.0.5+8) on Linux 5.15.167.4-microsoft-standard-WSL2 (amd64)
+[16:27:37 INFO]: [bootstrap] Loading Paper 1.21.11-132-ver/1.21.11@c5eb079 (2026-05-11T11:43:09Z) for Minecraft 1.21.11
+[16:27:38 INFO]: [PluginInitializerManager] Initializing plugins...
+[16:27:40 INFO]: [ReobfServer] Remapping server...
+[16:27:59 INFO]: [ReobfServer] Done remapping server in 19222ms.
+[16:27:59 INFO]: [PluginRemapper] Remapping plugin 'plugins/AgentCityConstructionFixture.jar'...
+[16:27:59 INFO]: [PluginRemapper] Done remapping plugin 'plugins/AgentCityConstructionFixture.jar' in 702ms.
+[16:28:00 INFO]: [PluginInitializerManager] Initialized 2 plugins
+[16:28:00 INFO]: [PluginInitializerManager] Bukkit plugins (2):
+ - AgentCity (0.1.0), AgentCityConstructionFixture (1.0)
+[16:28:11 INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[16:28:12 INFO]: Found new data pack file/bukkit, loading it automatically
+[16:28:12 INFO]: Found new data pack paper, loading it automatically
+[16:28:12 ERROR]: Failed to request yggdrasil public key
+com.mojang.authlib.exceptions.MinecraftClientException: Failed to read from https://api.minecraftservices.com/publickeys due to Remote host terminated the handshake
+	at com.mojang.authlib.minecraft.client.MinecraftClient.readInputStream(MinecraftClient.java:111) ~[authlib-7.0.61.jar:?]
+	at com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:56) ~[authlib-7.0.61.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilServicesKeyInfo.fetch(YggdrasilServicesKeyInfo.java:114) ~[authlib-7.0.61.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilServicesKeyInfo$1.run(YggdrasilServicesKeyInfo.java:89) ~[authlib-7.0.61.jar:?]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[?:?]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:309) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[?:?]
+Caused by: javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake
+	at java.base/sun.security.ssl.SSLSocketImpl.handleEOF(SSLSocketImpl.java:1716) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1514) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1421) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426) ~[?:?]
+	at java.base/sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:490) ~[?:?]
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:190) ~[?:?]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1380) ~[?:?]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1306) ~[?:?]
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:493) ~[?:?]
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:307) ~[?:?]
+	at com.mojang.authlib.minecraft.client.MinecraftClient.readInputStream(MinecraftClient.java:82) ~[authlib-7.0.61.jar:?]
+	... 9 more
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:494) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:160) ~[?:?]
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1506) ~[?:?]
+	... 19 more
+[16:28:16 INFO]: No existing world data, creating new world
+[16:28:25 INFO]: Loaded 1470 recipes
+[16:28:25 INFO]: Loaded 1584 advancements
+[16:28:25 INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Initialising converters for DataConverter...
+[16:28:26 INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Finished initialising converters for DataConverter in 1,181.0ms
+[16:28:26 INFO]: Starting minecraft server version 1.21.11
+[16:28:26 WARN]: ****************************
+[16:28:26 WARN]: YOU ARE RUNNING THIS SERVER AS AN ADMINISTRATIVE OR ROOT USER. THIS IS NOT ADVISED.
+[16:28:26 WARN]: YOU ARE OPENING YOURSELF UP TO POTENTIAL RISKS WHEN DOING THIS.
+[16:28:26 WARN]: FOR MORE INFORMATION, SEE https://madelinemiller.dev/blog/root-minecraft-server/
+[16:28:26 WARN]: ****************************
+[16:28:26 INFO]: Loading properties
+[16:28:27 INFO]: This server is running Paper version 1.21.11-132-ver/1.21.11@c5eb079 (2026-05-11T11:43:09Z) (Implementing API version 1.21.11-R0.1-SNAPSHOT)
+[16:28:27 INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[16:28:27 INFO]: Server Ping Player Sample Count: 12
+[16:28:27 INFO]: Using 4 threads for Netty based IO
+[16:28:29 INFO]: [MoonriseCommon] Paper is using 1 worker threads, 1 I/O threads
+[16:28:29 INFO]: Default game type: SURVIVAL
+[16:28:29 INFO]: Generating keypair
+[16:28:29 INFO]: Starting Minecraft server on *:25565
+[16:28:30 INFO]: Paper: Using libdeflate (Linux x86_64) compression from Velocity.
+[16:28:30 INFO]: Paper: Using OpenSSL 3.x.x (Linux x86_64) cipher from Velocity.
+[16:28:30 INFO]: [AgentCityConstructionFixture] Loading server plugin AgentCityConstructionFixture v1.0
+[16:28:30 INFO]: [AgentCity] Loading server plugin AgentCity v0.1.0
+[16:28:30 WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[16:28:30 WARN]: The server will make no attempt to authenticate usernames. Beware.
+[16:28:30 WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[16:28:30 WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[16:28:30 INFO]: Preparing level "agentcity-fresh-c5a4bf5a"
+[16:28:31 INFO]: Selecting spawn point for world 'minecraft:overworld'...
+[16:28:32 INFO]: Selecting spawn point for world 'minecraft:the_nether'...
+[16:28:35 INFO]: Selecting spawn point for world 'minecraft:the_end'...
+[16:28:36 INFO]: Loading 0 persistent chunks for world 'minecraft:overworld'...
+[16:28:36 INFO]: Preparing spawn area: 100%
+[16:28:36 INFO]: Prepared spawn area in 4248 ms
+[16:28:36 INFO]: Loading 0 persistent chunks for world 'minecraft:the_nether'...
+[16:28:36 INFO]: Preparing spawn area: 100%
+[16:28:36 INFO]: Prepared spawn area in 3242 ms
+[16:28:36 INFO]: Loading 0 persistent chunks for world 'minecraft:the_end'...
+[16:28:36 INFO]: Preparing spawn area: 100%
+[16:28:36 INFO]: Prepared spawn area in 459 ms
+[16:28:36 INFO]: Done preparing level "agentcity-fresh-c5a4bf5a" (5.207s)
+[16:28:36 INFO]: [AgentCityConstructionFixture] Enabling AgentCityConstructionFixture v1.0
+[16:28:36 INFO]: [AgentCity] Enabling AgentCity v0.1.0
+[16:28:37 ERROR]: [AgentCity] AgentCity startup failed closed: unapproved_plugin:AgentCityConstructionFixture
+[16:28:37 INFO]: [spark] Starting background profiler...
+[16:28:38 INFO]: Running delayed init tasks
+[16:28:38 INFO]: Done (64.415s)! For help, type "help"
+[16:28:38 INFO]: *************************************************************************************
+[16:28:38 INFO]: This is the first time you're starting this server.
+[16:28:38 INFO]: It's recommended you read our 'Getting Started' documentation for guidance.
+[16:28:38 INFO]: View this and more helpful information here: https://docs.papermc.io/paper/next-steps
+[16:28:38 INFO]: *************************************************************************************
+[16:28:38 INFO]: Stopping server
+[16:28:38 INFO]: [AgentCity] Disabling AgentCity v0.1.0
+[16:28:38 INFO]: [AgentCityConstructionFixture] Disabling AgentCityConstructionFixture v1.0
+[16:28:38 INFO]: Saving players
+[16:28:39 INFO]: Saving worlds
+[16:28:39 INFO]: Saving chunks for level 'ServerLevel[agentcity-fresh-c5a4bf5a]'/minecraft:overworld
+[16:28:39 INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'agentcity-fresh-c5a4bf5a'
+[16:28:39 INFO]: [ChunkHolderManager] Halted chunk system for world 'agentcity-fresh-c5a4bf5a'
+[16:28:39 INFO]: [ChunkHolderManager] Saving all chunkholders for world 'agentcity-fresh-c5a4bf5a'
+[16:28:40 INFO]: [ChunkHolderManager] Saved 576 block chunks, 4 entity chunks, 0 poi chunks in world 'agentcity-fresh-c5a4bf5a' in 1.04s
+[16:28:40 INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'agentcity-fresh-c5a4bf5a'
+[16:28:40 INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'agentcity-fresh-c5a4bf5a'
+[16:28:40 INFO]: Saving chunks for level 'ServerLevel[agentcity-fresh-c5a4bf5a_nether]'/minecraft:the_nether
+[16:28:40 INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'agentcity-fresh-c5a4bf5a_nether'
+[16:28:40 INFO]: [ChunkHolderManager] Halted chunk system for world 'agentcity-fresh-c5a4bf5a_nether'
+[16:28:40 INFO]: [ChunkHolderManager] Saving all chunkholders for world 'agentcity-fresh-c5a4bf5a_nether'
+[16:28:40 INFO]: [ChunkHolderManager] Saved 623 block chunks, 7 entity chunks, 0 poi chunks in world 'agentcity-fresh-c5a4bf5a_nether' in 0.75s
+[16:28:40 INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'agentcity-fresh-c5a4bf5a_nether'
+[16:28:40 INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'agentcity-fresh-c5a4bf5a_nether'
+[16:28:40 INFO]: Saving chunks for level 'ServerLevel[agentcity-fresh-c5a4bf5a_the_end]'/minecraft:the_end
+[16:28:40 INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'agentcity-fresh-c5a4bf5a_the_end'
+[16:28:40 INFO]: [ChunkHolderManager] Halted chunk system for world 'agentcity-fresh-c5a4bf5a_the_end'
+[16:28:40 INFO]: [ChunkHolderManager] Saving all chunkholders for world 'agentcity-fresh-c5a4bf5a_the_end'
+[16:28:41 INFO]: [ChunkHolderManager] Saved 529 block chunks, 1 entity chunks, 0 poi chunks in world 'agentcity-fresh-c5a4bf5a_the_end' in 0.67s
+[16:28:41 INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'agentcity-fresh-c5a4bf5a_the_end'
+[16:28:41 INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'agentcity-fresh-c5a4bf5a_the_end'
+[16:28:41 INFO]: ThreadedAnvilChunkStorage (agentcity-fresh-c5a4bf5a): All chunks are saved
+[16:28:41 INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[16:28:41 INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[16:28:41 INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[16:28:44 WARN]: *************************************************************************************
+[16:28:44 WARN]: You are running the latest build for your Minecraft version (1.21.11)
+[16:28:44 WARN]: However, you are 6 release(s) behind the latest stable release (26.3)!
+[16:28:44 WARN]: It is recommended that you update as soon as possible
+[16:28:44 WARN]: https://papermc.io/downloads/paper
+[16:28:44 WARN]: *************************************************************************************
+[16:28:44 INFO]: Waiting for all RegionFile I/O tasks to complete...
+[16:28:44 INFO]: All RegionFile I/O tasks to complete
+[16:28:44 INFO]: [MoonriseCommon] Awaiting termination of worker pool for up to 60s...
+[16:28:44 INFO]: [MoonriseCommon] Awaiting termination of I/O pool for up to 60s...

@@ -1,0 +1,129 @@
+{
+  "status": "fail",
+  "name": "agentcity-maintained-a66a430a",
+  "owner": "5a1d022ebe3146e29d244d0ae852651e",
+  "mode": "smoke",
+  "purpose": "isolated maintained non-token compatibility candidate, not adoption",
+  "started_at": "2026-10-30T08:21:56.222415+00:00",
+  "matrix": {
+    "purpose": "isolated_maintained_candidate_not_adopted",
+    "artifacts": {
+      "paper": {
+        "version": "26.3",
+        "build": 231,
+        "sha256": "a836a016be7ac52352eb3a1efb6857bb42ee73a6c78d46e292f7e87742edb0e6",
+        "url": "https://fill-data.papermc.io/v1/objects/a836a016be7ac52352eb3a1efb6857bb42ee73a6c78d46e292f7e87742edb0e6/paper-26.3-231.jar"
+      },
+      "ViaVersion": {
+        "version": "5.12.2",
+        "sha256": "24e4876fefe73e08a4c87cd6c457ee0916e62dd69656631caf41e26f909d504b",
+        "url": "https://github.com/ViaVersion/ViaVersion/releases/download/5.12.2/ViaVersion-5.12.2.jar"
+      },
+      "ViaBackwards": {
+        "version": "5.12.2",
+        "sha256": "9a148a80ea22074f4bd1626cdbe254a4cd998bf44e7ceaff4e285a1b6b35da42",
+        "url": "https://github.com/ViaVersion/ViaBackwards/releases/download/5.12.2/ViaBackwards-5.12.2.jar"
+      }
+    },
+    "server_java_minimum": 25,
+    "java_image": "eclipse-temurin@sha256:83f4a7fc27df94dcc7b8de04d14cbbba8da14406f921e966969c3b09000aa507",
+    "java_runtime": "Temurin25.0.5+8",
+    "licenses": {
+      "Paper": "GPL-3.0 and bundled upstream notices",
+      "ViaVersion_plugin": "GPL-3.0-only",
+      "ViaVersion_API_only": "MIT",
+      "ViaBackwards": "GPL-3.0-only",
+      "Temurin_JDK": "GPL-2.0-only WITH Classpath-exception-2.0",
+      "container_build_scripts": "Apache-2.0",
+      "complete_container": "Mixed JDK, Ubuntu and third-party licenses; bundled JDK notices retained"
+    },
+    "client": "1.21.11",
+    "mineflayer": "4.39.0",
+    "pathfinder": "2.4.5",
+    "bind": "127.0.0.1",
+    "ports": [
+      25596,
+      25597
+    ],
+    "non_token": true,
+    "production_adopted": false,
+    "official_source_sha256": {
+      "Paper-LICENSE.md": "fc5629be761124cb418bed11c70b2cd2aeff136c52ca8b80caf8fdf7474c3bc8",
+      "Temurin-java-base-ADDITIONAL_LICENSE_INFO": "a69bce275ba7a3570af6579cb0f55682cd75fedfcd49e0e8e9022270c447c916",
+      "Temurin-java-base-LICENSE": "4b9abebc4338048a7c2dc184e9f800deb349366bdf28eb23c2677a77b4c87726",
+      "Temurin-java-version.txt": "dc25d4c269605476cbe8abf0a71814a943b1303a7249657c140d7e2878f5fa46",
+      "ViaBackwards-LICENSE": "8b1ba204bb69a0ade2bfcf65ef294a920f6bb361b317dba43c7ef29d96332b9b",
+      "ViaBackwards-platform.java": "6b5a3b0476b086f7b0e40cafe818e0ca42adb3676b5919d7f8c47f75a0282e90",
+      "ViaBackwards-release.json": "b6593f50fc04d660e96187d1e528cacabd0ebc7806cec9501a5324edcc83baa9",
+      "ViaVersion-API-MIT.md": "53b23ab831428ec5b9126eff80de5a31f24c2393e6e8bbade3cab7e3717d3f8f",
+      "ViaVersion-GPL.md": "0e1372769c3ea4ce2a8fb0955a02adf8e88d1804c6143518dee9f969eb0911f7",
+      "ViaVersion-release.json": "ea29473eb9dd336743d9691f99dc9edf38e1d5e5ad2d21e27596e4745c4376d8",
+      "paper-build.json": "f779a1b79506a557d2bba8b07cc88ea37197191e499d78127a2ac6303051bcc6",
+      "paper-version.json": "2aaffaa283dbffa64f33ab450eaae45f0daefeb95362cb4000e3344165d8d14d"
+    }
+  },
+  "candidate_source_manifest": {
+    "purpose": "Candidate source only; not production adoption",
+    "original_source_sha256": {
+      "src/main/java/org/agentcity/core/Command.java": "d3163d022003ba9910be1b637ea5af42931ba6906a9934fbd7342354d40d2bd6",
+      "src/main/java/org/agentcity/core/DurableJournal.java": "ba72304c0ff74da6c62f55413a2c02eb642b61154297d16361982e9eedbba311",
+      "src/main/java/org/agentcity/core/InspectionReport.java": "430d4460c193191ef2c24c551f7c50b0739ba097b9e0fe8e3072335085e22a92",
+      "src/main/java/org/agentcity/core/JobEngine.java": "973eb4dabfba976d5370b506ff7d498d59c61ca9fc41c2790ce031150672cbde",
+      "src/main/java/org/agentcity/paper/AgentCityPlugin.java": "1a7f4b51af67b78aac0bea58cf64a7f1459fbf44278b93d54ecfd89430f490a6",
+      "src/main/java/org/agentcity/paper/CalculatorInspector.java": "9bb59c890234247c1acbc7b032a5346385c62105e85eebf6e1ba875e895dee56",
+      "src/main/java/org/agentcity/paper/ConstructionAccessPlan.java": "d426dfc8aef8c0af81f3f0a1b1e298ff56039f9b3d32cd56b64213bbd98e84ef",
+      "src/main/java/org/agentcity/paper/NativeLever.java": "9d26227261cd1f0e1b959d249fc3334ffa0ebce770d0ba5a1b9919515ba2a2a0",
+      "src/main/java/org/agentcity/paper/PlotProtection.java": "df08585916684efc6d0f9762bd60984e6c78571e84d9f09451356395a22228db",
+      "src/main/java/org/agentcity/paper/StrictJson.java": "581cd27a7fb4f31165400e29dc9127af4b54692d37749947b48880f0ffe47ad8",
+      "src/main/java/org/agentcity/paper/WorldProjection.java": "43e17a086da02ae7f07e806c25e91debe331c27f79890e024e586fb4453c2a19",
+      "src/main/resources/META-INF/MANIFEST.MF": "d05e74fefa839172bf1ace743da687d2a2a7ba0c862a4a5b349aa50ac77a6a0a",
+      "src/main/resources/plugin.yml": "33d9fc2c72d120facdc85ef635979a25cb1a73c8eee54aed1e44a86e2c803afc"
+    },
+    "candidate_source_sha256": {
+      "src/main/java/org/agentcity/core/Command.java": "d3163d022003ba9910be1b637ea5af42931ba6906a9934fbd7342354d40d2bd6",
+      "src/main/java/org/agentcity/core/DurableJournal.java": "ba72304c0ff74da6c62f55413a2c02eb642b61154297d16361982e9eedbba311",
+      "src/main/java/org/agentcity/core/InspectionReport.java": "430d4460c193191ef2c24c551f7c50b0739ba097b9e0fe8e3072335085e22a92",
+      "src/main/java/org/agentcity/core/JobEngine.java": "973eb4dabfba976d5370b506ff7d498d59c61ca9fc41c2790ce031150672cbde",
+      "src/main/java/org/agentcity/paper/AgentCityPlugin.java": "c9db2c16c892dc8964576a0039e8067d7558137a635f88b1c4ec6153e6b4b743",
+      "src/main/java/org/agentcity/paper/CalculatorInspector.java": "9bb59c890234247c1acbc7b032a5346385c62105e85eebf6e1ba875e895dee56",
+      "src/main/java/org/agentcity/paper/ConstructionAccessPlan.java": "d426dfc8aef8c0af81f3f0a1b1e298ff56039f9b3d32cd56b64213bbd98e84ef",
+      "src/main/java/org/agentcity/paper/NativeLever.java": "302b0067fb68352f245f86f9b78f3e58179d53472dadc6d07ac18a60e4e8c253",
+      "src/main/java/org/agentcity/paper/PlotProtection.java": "df08585916684efc6d0f9762bd60984e6c78571e84d9f09451356395a22228db",
+      "src/main/java/org/agentcity/paper/StrictJson.java": "581cd27a7fb4f31165400e29dc9127af4b54692d37749947b48880f0ffe47ad8",
+      "src/main/java/org/agentcity/paper/WorldProjection.java": "43e17a086da02ae7f07e806c25e91debe331c27f79890e024e586fb4453c2a19",
+      "src/main/resources/META-INF/MANIFEST.MF": "d05e74fefa839172bf1ace743da687d2a2a7ba0c862a4a5b349aa50ac77a6a0a",
+      "src/main/resources/plugin.yml": "33d9fc2c72d120facdc85ef635979a25cb1a73c8eee54aed1e44a86e2c803afc"
+    },
+    "compiler_java_image": "eclipse-temurin@sha256:5d90b26c0784ccf55af55f97cbcf7f3969c66a06299c93bdc72649219942a48f",
+    "class_file_release": 21,
+    "compile_api": "historical Paper1.21.11 pinned API; actual26.3 native linkage tested separately",
+    "candidate_jar_sha256": "781191a016255d21528f904d0b8e0375f8d40341d79036c774630c01efffaa97"
+  },
+  "independent_humans": 0,
+  "real_spend_usd": 0,
+  "used_source_sha256": {
+    "backend/src/bot/construction-worker.cjs": "4effac5a0100bb9a6c51461b5790e7e0848294304fb6398e849e3f20f2790297",
+    "backend/src/bot/minecraft-adapter.cjs": "23d5bce11bcc64e2f8925d75deafc518085d6128614ea98afe9d4d19b5753b6b",
+    "backend/src/bot/checkpoint-store.cjs": "bd857c0b57ca4533c5bde3eb643b99500c35c98fd107b6ce865014c4702654e4"
+  },
+  "original_plugin_sha256": "a8ec21a9858659f806c06c7f9e4b7eac9daac80c8d3d3e784717151956abc008",
+  "candidate_plugin_sha256": "781191a016255d21528f904d0b8e0375f8d40341d79036c774630c01efffaa97",
+  "server_started": true,
+  "error": "{'name': 'Error', 'message': 'Timeout waiting for 20 chunks to load after 10000ms'}",
+  "owned_container_removed": true,
+  "finished_at": "2026-10-30T08:23:00.901053+00:00",
+  "evidence_sha256": {
+    "compile-native-probe.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "construction-observation.json": "3b8af0e13c9b5739f9c256cc64ef6595b72426f7346dda9e78483c55fef1bc1f",
+    "deployment.json": "a581db7e4d781b8768a77e0372a021eff23b4bb035954f1fda844c76c5d8a8ee",
+    "final-server-remove.log": "b5590e9de6c12a34e145ff64c931d6e9ba49542e9026fef1206f845e8eff99b0",
+    "final-server-stop.log": "bd16a78595d8b2a38ca21f2281ee3477346cf3b381935b4b89be8d684e356259",
+    "final-server.log": "4e249729ec0a2472409d2e70c91e677a2b69aab6397669b018eeaa61e3d14806",
+    "maintained-native-probe.json": "751cebed25ce1eae4985862d4216d475074b55c54cf05b12d6929b64bbcc77de",
+    "package-native-probe.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "server-start.log": "2f9d804d97c12961a1417f60c63686ab670016bf833684f0ae0f90b3aff857a9",
+    "server.log": "5a71cb2da42aff37c3e3619c304df0587e47214579d3a2546b5110849478daff",
+    "smoke.json": "e85c3e21852a8b6c93ef153a535488a930c27b6fbf429dfe8710ed0fd827388d",
+    "smoke.log": "403b60592bd1a467acae76df663d80205a9b4edc116fbb3a6f33fc3a23269b2f"
+  }
+}

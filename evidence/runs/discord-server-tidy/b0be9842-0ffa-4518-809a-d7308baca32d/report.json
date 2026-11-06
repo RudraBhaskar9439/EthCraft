@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "observedAt": "2026-10-31T15:45:28.368083+00:00",
+  "scope": "Authorized actual Discord organization of the original four default channels, without deleting history",
+  "originalChannelIdsPreserved": true,
+  "oldSetupChatReadOnly": true,
+  "managedCategoriesReorderedFirst": true,
+  "oldDirectoryPointsToNewRooms": true,
+  "messagesDeleted": 0,
+  "channelsDeleted": 0
+}

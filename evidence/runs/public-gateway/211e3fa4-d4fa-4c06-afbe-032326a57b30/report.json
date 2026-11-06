@@ -1,0 +1,30 @@
+{
+  "status": "pass",
+  "scope": "Actual isolated loopback HTTP gateway checks and onboarding callback bootstrap; no public tunnel or production-service changes",
+  "checks": [
+    {
+      "name": "OAuth query survives allowed onboarding pages while operator routes encoded paths and API query routing never reach upstream",
+      "status": "pass"
+    },
+    {
+      "name": "setup POST preserves exact approved origin and JSON body while stripping authorization cookies forwarded host and upstream cookies",
+      "status": "pass"
+    },
+    {
+      "name": "strict route methods and 16KiB request limit refuse unsupported input before upstream delivery",
+      "status": "pass"
+    },
+    {
+      "name": "actual frontend bootstrap removes private fragment but preserves OAuth query and console recognizes only onboarding page pathname",
+      "status": "pass"
+    }
+  ],
+  "sourceSha256": "2706a5d2d9a896e09033e62ff875ff6b7aab3c753ed244b8b03a8c080ad4e15e",
+  "sources": {
+    "backend/src/server.mjs": "ca4c3d88f805c9137ab47b3df292640f4cec0c3388a03102760b2025fc130406",
+    "companion/src/discord-setup.jsx": "b688de8e5a4144fa02bede594a2c068d01a5a6d36ace0be9531e49928da02c43",
+    "companion/src/player-wallet.jsx": "35d3efa787d804a8b86c1709364781a373ed38564cda6b4a3fb8607ccd49cbe8",
+    "companion/dist/discord-setup.js": "2171f2b9fbe872b6e776bb0916ceb4e7926b3b0c6170118f460632fac8ae0452",
+    "companion/dist/player-wallet.js": "1409acb475dff293b6e7cf4b9b781aadf85513d5ed1c1068baaaf5144ede657a"
+  }
+}

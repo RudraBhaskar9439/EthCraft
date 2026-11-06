@@ -1,0 +1,15 @@
+{
+  "status": "fail",
+  "stage": "actual Foundry EVM tests",
+  "testsExecuted": 5,
+  "passed": 4,
+  "failed": 1,
+  "failedTest": "testRegistrarUniqueCustodyCanonicalParcelAndDistinctAdmin",
+  "error": "next call did not revert as expected",
+  "scope": "Isolated EVM tests; no live Minecraft/native proof",
+  "sources": {
+    "contracts/src/WorldAssetRegistry.sol": "394a1159fcd1c06d589e84f46502987e402346ce3dbec69ed217d7d498245ce5",
+    "contracts/src/WorldAssetMarket.sol": "63b79da91e7fff2eeb15ee400bcf43e22334b08388cf00fbceb968ca38113f77",
+    "tests/contracts/WorldAssets.t.sol": "ac7f35efb60efed9f62ddc3a28813b6f25e6f4900ac00dc33e27ab8bff7f4e5b"
+  }
+}

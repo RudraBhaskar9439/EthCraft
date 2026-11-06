@@ -1,0 +1,170 @@
+{
+  "status": "pass",
+  "scope": "Retained isolated Paper native property verification with unchanged production-plugin JAR; only test approach platform and explicit synthetic OP WorldGuard bypass were corrected. Native gear checks remain separately recorded; chain proofs are simulated private-adapter fixtures.",
+  "checks": [
+    {
+      "name": "fixed nonoverlapping parcel catalog grants actual owner entry while real nonowner OP teleport and movement are denied at the server boundary",
+      "status": "pass"
+    },
+    {
+      "name": "real owner block placement changes observed parcel snapshot; durable pre-list freeze prevents even OP owner mutation",
+      "status": "pass"
+    },
+    {
+      "name": "restart preserves native equipment and unresolved listing lock; canonical resolution unlocks, old replay cannot revive paused rights, and regressed projection fails closed",
+      "status": "pass"
+    }
+  ],
+  "fixtureGrants": [],
+  "productionWorldMutations": 0,
+  "independentHumansVerified": 0,
+  "resumedFrom": {
+    "report": "evidence\\runs\\escrow-native\\9c4a18c9-3faa-45f4-9a1a-281a00ea57a4\\report.json",
+    "reportSha256": "d5171e217538a84ac902e131602758aff463a73f542cd167f558cbbe409ac624",
+    "samePluginSha256": "c9a108690fad15f8d15702b6d6c67468dab438c6ba5d6837fbf0938b28c02a69",
+    "previousPassedChecks": [
+      "main-hand and explicit-slot previews preserve exact damaged enchanted named gear; substitution and generic Game Coin release are refused",
+      "pinned-source mint/burn proof receiving fixture releases one native gear stack once, preserving full NBT fingerprint and metadata"
+    ]
+  },
+  "pluginSha256": "c9a108690fad15f8d15702b6d6c67468dab438c6ba5d6837fbf0938b28c02a69",
+  "container": "agentcity-escrow-fixture-9c4a18c9",
+  "fixtureRuntime": "C:\\Users\\Rudransh Shinghal\\agentcity-minecraft\\.local\\escrow-fixture\\9c4a18c9-3faa-45f4-9a1a-281a00ea57a4",
+  "paperSha256": "a836a016be7ac52352eb3a1efb6857bb42ee73a6c78d46e292f7e87742edb0e6",
+  "dependencies": [
+    {
+      "plugin": "WorldGuard",
+      "version": "7.0.20+2410-0b6c3f1",
+      "release": "7.0.20",
+      "file": "worldguard-bukkit-7.0.20.jar",
+      "url": "https://mediafilez.forgecdn.net/files/9219/599/worldguard-bukkit-7.0.20.jar",
+      "releasePage": "https://dev.bukkit.org/projects/worldguard/files/9219599",
+      "sha256": "8768a49bcbecbb7a413ad134ee72d9871cdf967b7d938e6b96bb0ca72bb1467b",
+      "officialReleaseMd5": "cf5da34dcd48d5b286b4a93b68383b93",
+      "license": "GPL-3.0-or-later",
+      "licenseUrl": "https://github.com/EngineHub/WorldGuard/blob/7.0.20/LICENSE.txt"
+    },
+    {
+      "plugin": "WorldEdit",
+      "version": "7.4.6+7648-00664b0",
+      "release": "7.4.6",
+      "file": "worldedit-bukkit-7.4.6.jar",
+      "url": "https://hangarcdn.papermc.io/plugins/EngineHub/WorldEdit/versions/7.4.6/PAPER/worldedit-bukkit-7.4.6.jar",
+      "releasePage": "https://hangar.papermc.io/EngineHub/WorldEdit/versions/7.4.6",
+      "sha256": "e0ce67d870ad1fef8a40dd9d7926360caf3bb44722438545d6b20b55f82a0c91",
+      "license": "GPL-3.0-or-later",
+      "licenseUrl": "https://github.com/EngineHub/WorldEdit/blob/7.4.6/LICENSE.txt"
+    }
+  ],
+  "fixtureApproach": "Nine stone blocks and clear headroom only on the public road x=-3..-1,z=7..9, outside all parcels; synthetic OP receives explicit WorldGuard estate bypass so native extra guard is tested. This is not house construction evidence.",
+  "retainedInventory": {
+    "sellerGear": 0,
+    "buyerGear": 1,
+    "sellerStone": 2,
+    "newStockGrants": 0
+  },
+  "property": {
+    "world": "agentcity_estates",
+    "cells": [
+      {
+        "parcelId": 1,
+        "cellX": 0,
+        "cellZ": 0,
+        "bounds": {
+          "min": {
+            "z": 0,
+            "y": -64,
+            "x": 0
+          },
+          "max": {
+            "z": 15,
+            "y": 319,
+            "x": 15
+          }
+        }
+      },
+      {
+        "parcelId": 2,
+        "cellX": 2,
+        "cellZ": 0,
+        "bounds": {
+          "min": {
+            "z": 0,
+            "y": -64,
+            "x": 32
+          },
+          "max": {
+            "z": 15,
+            "y": 319,
+            "x": 47
+          }
+        }
+      },
+      {
+        "parcelId": 3,
+        "cellX": 0,
+        "cellZ": 2,
+        "bounds": {
+          "min": {
+            "z": 32,
+            "y": -64,
+            "x": 0
+          },
+          "max": {
+            "z": 47,
+            "y": 319,
+            "x": 15
+          }
+        }
+      },
+      {
+        "parcelId": 4,
+        "cellX": 2,
+        "cellZ": 2,
+        "bounds": {
+          "min": {
+            "z": 32,
+            "y": -64,
+            "x": 32
+          },
+          "max": {
+            "z": 47,
+            "y": 319,
+            "x": 47
+          }
+        }
+      }
+    ],
+    "nativePlacedBlock": {
+      "x": 7,
+      "y": 65,
+      "z": 9
+    },
+    "houseBefore": "b36eca179ff8066f1770a6b479b97f94780b02912313a33ee34bae7d7c3dd5fc",
+    "houseAfter": "948f2aea3136123034f76a8cde327b41652dcddf3afc4b4fdfa016fdc7dc67d5",
+    "metadataQualification": "Observed real parcel blocks, not a claim that a completed house exists",
+    "listingFreezeOperationId": "79d71228-49d4-450a-869d-8d811a234ee0"
+  },
+  "previousPropertyHistoryRetainedAsExactPrefix": true,
+  "clientProfile": {
+    "version": "1.21.11",
+    "tickEndAtPhysicsCadence": true,
+    "fixtureOnlyPort": 25606,
+    "clients": [
+      {
+        "name": "EscSeller",
+        "tickBoundaries": 316
+      },
+      {
+        "name": "EscBuyer",
+        "tickBoundaries": 184
+      },
+      {
+        "name": "EscBuyer",
+        "tickBoundaries": 16
+      }
+    ]
+  },
+  "fixtureInfrastructure": "Fresh isolated PlayableExperience world initialization seeds its disclosed demonstration task-pad chests; the test does not withdraw those stocks.",
+  "finishedAt": "2026-10-31T17:48:31.355Z"
+}

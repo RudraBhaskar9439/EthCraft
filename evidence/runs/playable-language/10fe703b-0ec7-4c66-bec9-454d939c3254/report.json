@@ -1,0 +1,121 @@
+{
+  "status": "pass",
+  "model": "qwen3:4b",
+  "scope": "Actual Ollama language samples only; no Minecraft clients, inventory effects or independent-human proof",
+  "samples": [
+    {
+      "request": "make me a small wooden shelter, put four cobble in destination and sell four more",
+      "status": "pass",
+      "intent": {
+        "kind": "plan",
+        "message": "I can build a small wooden shelter, then deliver four cobblestone, then collect and sell four cobblestone.",
+        "steps": [
+          {
+            "action": "build_shelter",
+            "width": 4,
+            "depth": 4,
+            "material": "oak_planks"
+          },
+          {
+            "action": "deliver",
+            "item": "cobblestone",
+            "count": 4
+          },
+          {
+            "action": "collect",
+            "item": "cobblestone",
+            "count": 4
+          },
+          {
+            "action": "sell",
+            "item": "cobblestone",
+            "count": 4
+          }
+        ]
+      }
+    },
+    {
+      "request": "what are you doing?",
+      "status": "pass",
+      "intent": {
+        "kind": "progress",
+        "message": "I will report actual recorded progress.",
+        "steps": []
+      }
+    },
+    {
+      "request": "stop that",
+      "status": "pass",
+      "intent": {
+        "kind": "stop",
+        "message": "I will pause the saved workflow.",
+        "steps": []
+      }
+    },
+    {
+      "request": "deliver some stuff",
+      "status": "pass",
+      "intent": {
+        "kind": "clarify",
+        "message": "Which item and how many should I deliver to your destination chest?",
+        "steps": []
+      }
+    },
+    {
+      "request": "use stone instead",
+      "status": "pass",
+      "intent": {
+        "kind": "clarify",
+        "message": "Your active task has immutable wooden materials. Stop and reconcile it first; do you want to request a new stone task afterward?",
+        "steps": []
+      }
+    },
+    {
+      "request": "put a couple of cobble in my destination then sell four more",
+      "status": "pass",
+      "intent": {
+        "kind": "plan",
+        "message": "I can deliver two cobblestone, then collect and sell four cobblestone.",
+        "steps": [
+          {
+            "action": "deliver",
+            "item": "cobblestone",
+            "count": 2
+          },
+          {
+            "action": "collect",
+            "item": "cobblestone",
+            "count": 4
+          },
+          {
+            "action": "sell",
+            "item": "cobblestone",
+            "count": 4
+          }
+        ]
+      }
+    },
+    {
+      "request": "sell four cobble for CITY then swap two CITY to GEM",
+      "status": "pass",
+      "scope": "Language-only quote proposals; no provider wallet, token transfer or swap execution",
+      "intent": {
+        "kind": "plan",
+        "message": "I can request a CITY sale preview for four cobblestone followed by a CITY-to-GEM swap preview for two CITY.",
+        "steps": [
+          {
+            "action": "market",
+            "item": "cobblestone",
+            "count": 4
+          },
+          {
+            "action": "swap",
+            "amountIn": "2",
+            "tokenIn": "CITY",
+            "tokenOut": "GEM"
+          }
+        ]
+      }
+    }
+  ]
+}

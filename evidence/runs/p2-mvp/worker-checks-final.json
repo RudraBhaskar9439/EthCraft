@@ -1,0 +1,30 @@
+{
+  "status": "pass",
+  "verified_at": "2026-10-29T19:24:36.068379+00:00",
+  "scope": "Scripted domain and adapter regression checks plus pinned-library route model; no live construction claim",
+  "source_sha256": {
+    "backend/src/bot/checkpoint-store.cjs": "bd857c0b57ca4533c5bde3eb643b99500c35c98fd107b6ce865014c4702654e4",
+    "backend/src/bot/construction-worker.cjs": "4effac5a0100bb9a6c51461b5790e7e0848294304fb6398e849e3f20f2790297",
+    "backend/src/bot/minecraft-adapter.cjs": "3bd86142c1679cd68a7755a7357bbc12313f18ffcfc30f07bf958d6cde32413a",
+    "tests/bot/adapter-self-check.cjs": "2ac84bb59ddaab0671bd8e0a189b4fd1fc13418cebbedd794edb0343dae5c638",
+    "tests/bot/worker-self-check.cjs": "cc130c28fdb5f0d535825a5068f2bf8ea136161d636a3d5e1ddba5d0b6e81704",
+    "fixtures/blueprints/calculator-v1.json": "c8704765464a574ec4c797ad78d5294cc167007f66a0abfebd742e0b06711c49",
+    "fixtures/construction/access-v1.json": "8b08d81a1830d65a9bc404fd1443c95b4dcb94e6665da779d61acfe446d1d2c3",
+    "tests/compatibility/package-lock.json": "644d0168c7bd3d406eeb489e55469fdf2f0e70fe40debcdbe18c9f0b1a1fa915",
+    "tests/compatibility/versions.json": "f9ee9617748df8545cadd5469d383b11f68ec43af6c9181d4259fcd1bb913502"
+  },
+  "checks": [
+    {
+      "script": "tests/bot/worker-self-check.cjs",
+      "exit_code": 0,
+      "output": "PASS structural states preserve orientation and remove only dynamic signals\nPASS unapproved blueprint and transform fail before actions\nPASS 144 modeled placements resume from observed state without double consumption or readiness claims\nPASS effect-before-acknowledgement recovery replays receipt instead of placing again\nPASS shortage blocks without creating materials\nPASS unexpected occupied target blocks before withdrawal or placement\nPASS local worker exclusion releases when the OS listener closes\nPASS same-instance duplicate run preserves the active job lease\nPASS untracked carried inventory cannot become job stock\n{\"status\":\"pass\",\"checks\":9,\"scope\":\"scripted domain self-check; no Minecraft, model, tokens, or external-service verification\"}\n",
+      "check_count": 9
+    },
+    {
+      "script": "tests/bot/adapter-self-check.cjs",
+      "exit_code": 0,
+      "output": "PASS active chest window supplies current player inventory and excludes container stock\nPASS failed navigation cancels immediately without stopping the next goal\nPASS falsely resolved navigation is refused until the actual player reaches the requested block\nPASS floor-matching airborne descent waits for grounding at goal height before the next leg\nPASS declared access routes preserve same-level travel, ordered ascent/descent, and off-level refusal\nPASS opposite lanes use the nearer declared west/east bridge while same-side travel remains direct\nPASS pinned planner reaches all three declared reverse segments without a physical drop over one block on those paths\nPASS repeater and default-north floor lever use opposite headings and flush the orientation tick before placement\nPASS repeater/wire references require a sneak tick and restore controls; solid references retain priority\n{\"status\":\"pass\",\"checks\":9,\"scope\":\"Focused adapter regressions using the pinned window implementation and scripted navigation; no live Minecraft verification.\"}\n",
+      "check_count": 9
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "scope": "Actual local HTTP boundaries and read-only human-session preflight; no signature or transaction",
+  "checks": [
+    "local operator capability and same origin enforced",
+    "strict fields, body size and malformed JSON refused",
+    "assets and disabled initial agreement control served",
+    "real session status omits private links and unsigned transaction requests"
+  ],
+  "identitiesReady": false,
+  "linkedRoles": 0,
+  "sources": {
+    "backend/src/server.mjs": "b8b7bc71e848af7dcac2a8092419c238aa9f30a994ef14d22e6b898b3b65ced8",
+    "backend/src/web/human.mjs": "713b98de61a69b5428a0e0e0b8b0e67d1e845db62e9927237bd4a7075760aa2a",
+    "backend/src/workflow/human-session.mjs": "3e398aa20c9de53790b548055e78c2715e773c2a8cddaa45b9a1b9c1c85937ca"
+  },
+  "transactionsSubmitted": 0
+}

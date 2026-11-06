@@ -1,0 +1,1963 @@
+{
+  "status": "pass",
+  "scope": "Actual isolated restored Minecraft world; internal materials only",
+  "checks": [
+    "fresh server observations preserve all 144 structural block states, empty stock and durable revision 144",
+    "the restored local review lock is released only after its recorded pass validity expires",
+    "a newly authenticated fixture inspector obtains a new real 16/16 lamp report and retained review lock without placing or replenishing blocks"
+  ],
+  "inspection": {
+    "runId": "e041f584-4991-4105-b88d-5a3b841887a1",
+    "context": {
+      "serverId": "local-inspection-server",
+      "jobId": "agentcity-construction-750b0aae",
+      "agreementVersion": 1,
+      "blueprintHash": "c8704765464a574ec4c797ad78d5294cc167007f66a0abfebd742e0b06711c49",
+      "testVersion": "cfb5986bf2f5bfea89075ffee8e38eb1652f3fad15503935d1f134a776d309cf"
+    },
+    "revision": 144,
+    "startedAtMs": 1793345603170,
+    "completedAtMs": 1793345700784,
+    "status": "PASS",
+    "transitions": [
+      {
+        "port": "a0",
+        "before": true,
+        "after": false,
+        "tick": 82,
+        "elapsedNs": 4111275668
+      },
+      {
+        "port": "a1",
+        "before": true,
+        "after": false,
+        "tick": 93,
+        "elapsedNs": 4649510960
+      },
+      {
+        "port": "b0",
+        "before": true,
+        "after": false,
+        "tick": 104,
+        "elapsedNs": 5201659794
+      },
+      {
+        "port": "b1",
+        "before": true,
+        "after": false,
+        "tick": 114,
+        "elapsedNs": 5703479753
+      },
+      {
+        "port": "b0",
+        "before": false,
+        "after": true,
+        "tick": 325,
+        "elapsedNs": 16252671633
+      },
+      {
+        "port": "b0",
+        "before": true,
+        "after": false,
+        "tick": 372,
+        "elapsedNs": 18603291425
+      },
+      {
+        "port": "b1",
+        "before": false,
+        "after": true,
+        "tick": 414,
+        "elapsedNs": 20702749801
+      },
+      {
+        "port": "b1",
+        "before": true,
+        "after": false,
+        "tick": 461,
+        "elapsedNs": 23053665261
+      },
+      {
+        "port": "b0",
+        "before": false,
+        "after": true,
+        "tick": 503,
+        "elapsedNs": 25153180178
+      },
+      {
+        "port": "b1",
+        "before": false,
+        "after": true,
+        "tick": 514,
+        "elapsedNs": 25699688511
+      },
+      {
+        "port": "b0",
+        "before": true,
+        "after": false,
+        "tick": 561,
+        "elapsedNs": 28057685054
+      },
+      {
+        "port": "b1",
+        "before": true,
+        "after": false,
+        "tick": 572,
+        "elapsedNs": 28599310971
+      },
+      {
+        "port": "a0",
+        "before": false,
+        "after": true,
+        "tick": 614,
+        "elapsedNs": 30700401139
+      },
+      {
+        "port": "a0",
+        "before": true,
+        "after": false,
+        "tick": 661,
+        "elapsedNs": 33057598640
+      },
+      {
+        "port": "a0",
+        "before": false,
+        "after": true,
+        "tick": 703,
+        "elapsedNs": 35155814183
+      },
+      {
+        "port": "b0",
+        "before": false,
+        "after": true,
+        "tick": 714,
+        "elapsedNs": 35700903725
+      },
+      {
+        "port": "a0",
+        "before": true,
+        "after": false,
+        "tick": 761,
+        "elapsedNs": 38055340892
+      },
+      {
+        "port": "b0",
+        "before": true,
+        "after": false,
+        "tick": 772,
+        "elapsedNs": 38600421809
+      },
+      {
+        "port": "a0",
+        "before": false,
+        "after": true,
+        "tick": 814,
+        "elapsedNs": 40699296227
+      },
+      {
+        "port": "b1",
+        "before": false,
+        "after": true,
+        "tick": 824,
+        "elapsedNs": 41201185560
+      },
+      {
+        "port": "a0",
+        "before": true,
+        "after": false,
+        "tick": 871,
+        "elapsedNs": 43556735270
+      },
+      {
+        "port": "b1",
+        "before": true,
+        "after": false,
+        "tick": 882,
+        "elapsedNs": 44102681270
+      },
+      {
+        "port": "a0",
+        "before": false,
+        "after": true,
+        "tick": 924,
+        "elapsedNs": 46199345813
+      },
+      {
+        "port": "b0",
+        "before": false,
+        "after": true,
+        "tick": 935,
+        "elapsedNs": 46749704938
+      },
+      {
+        "port": "b1",
+        "before": false,
+        "after": true,
+        "tick": 946,
+        "elapsedNs": 47301956063
+      },
+      {
+        "port": "a0",
+        "before": true,
+        "after": false,
+        "tick": 993,
+        "elapsedNs": 49653663856
+      },
+      {
+        "port": "b0",
+        "before": true,
+        "after": false,
+        "tick": 1004,
+        "elapsedNs": 50200904856
+      },
+      {
+        "port": "b1",
+        "before": true,
+        "after": false,
+        "tick": 1015,
+        "elapsedNs": 50752205523
+      },
+      {
+        "port": "a1",
+        "before": false,
+        "after": true,
+        "tick": 1057,
+        "elapsedNs": 52851287233
+      },
+      {
+        "port": "a1",
+        "before": true,
+        "after": false,
+        "tick": 1104,
+        "elapsedNs": 55202947108
+      },
+      {
+        "port": "a1",
+        "before": false,
+        "after": true,
+        "tick": 1146,
+        "elapsedNs": 57303441651
+      },
+      {
+        "port": "b0",
+        "before": false,
+        "after": true,
+        "tick": 1156,
+        "elapsedNs": 57804114318
+      },
+      {
+        "port": "a1",
+        "before": true,
+        "after": false,
+        "tick": 1203,
+        "elapsedNs": 60150476027
+      },
+      {
+        "port": "b0",
+        "before": true,
+        "after": false,
+        "tick": 1213,
+        "elapsedNs": 60653628361
+      },
+      {
+        "port": "a1",
+        "before": false,
+        "after": true,
+        "tick": 1255,
+        "elapsedNs": 62752324112
+      },
+      {
+        "port": "b1",
+        "before": false,
+        "after": true,
+        "tick": 1266,
+        "elapsedNs": 63300862612
+      },
+      {
+        "port": "a1",
+        "before": true,
+        "after": false,
+        "tick": 1313,
+        "elapsedNs": 65654934613
+      },
+      {
+        "port": "b1",
+        "before": true,
+        "after": false,
+        "tick": 1324,
+        "elapsedNs": 66199961363
+      },
+      {
+        "port": "a1",
+        "before": false,
+        "after": true,
+        "tick": 1366,
+        "elapsedNs": 68308067156
+      },
+      {
+        "port": "b0",
+        "before": false,
+        "after": true,
+        "tick": 1377,
+        "elapsedNs": 68849426740
+      },
+      {
+        "port": "b1",
+        "before": false,
+        "after": true,
+        "tick": 1388,
+        "elapsedNs": 69399198865
+      },
+      {
+        "port": "a1",
+        "before": true,
+        "after": false,
+        "tick": 1435,
+        "elapsedNs": 71753604283
+      },
+      {
+        "port": "b0",
+        "before": true,
+        "after": false,
+        "tick": 1446,
+        "elapsedNs": 72302519991
+      },
+      {
+        "port": "b1",
+        "before": true,
+        "after": false,
+        "tick": 1456,
+        "elapsedNs": 72803720533
+      },
+      {
+        "port": "a0",
+        "before": false,
+        "after": true,
+        "tick": 1498,
+        "elapsedNs": 74908144284
+      },
+      {
+        "port": "a1",
+        "before": false,
+        "after": true,
+        "tick": 1509,
+        "elapsedNs": 75450883534
+      },
+      {
+        "port": "a0",
+        "before": true,
+        "after": false,
+        "tick": 1556,
+        "elapsedNs": 77805722452
+      },
+      {
+        "port": "a1",
+        "before": true,
+        "after": false,
+        "tick": 1567,
+        "elapsedNs": 78353235661
+      },
+      {
+        "port": "a0",
+        "before": false,
+        "after": true,
+        "tick": 1609,
+        "elapsedNs": 80450722245
+      },
+      {
+        "port": "a1",
+        "before": false,
+        "after": true,
+        "tick": 1620,
+        "elapsedNs": 81003735787
+      },
+      {
+        "port": "b0",
+        "before": false,
+        "after": true,
+        "tick": 1631,
+        "elapsedNs": 81550575996
+      },
+      {
+        "port": "a0",
+        "before": true,
+        "after": false,
+        "tick": 1678,
+        "elapsedNs": 83901852830
+      },
+      {
+        "port": "a1",
+        "before": true,
+        "after": false,
+        "tick": 1688,
+        "elapsedNs": 84403872038
+      },
+      {
+        "port": "b0",
+        "before": true,
+        "after": false,
+        "tick": 1699,
+        "elapsedNs": 84950709497
+      },
+      {
+        "port": "a0",
+        "before": false,
+        "after": true,
+        "tick": 1741,
+        "elapsedNs": 87103704789
+      },
+      {
+        "port": "a1",
+        "before": false,
+        "after": true,
+        "tick": 1753,
+        "elapsedNs": 87653301040
+      },
+      {
+        "port": "b1",
+        "before": false,
+        "after": true,
+        "tick": 1764,
+        "elapsedNs": 88201845123
+      },
+      {
+        "port": "a0",
+        "before": true,
+        "after": false,
+        "tick": 1811,
+        "elapsedNs": 90550667708
+      },
+      {
+        "port": "a1",
+        "before": true,
+        "after": false,
+        "tick": 1822,
+        "elapsedNs": 91103443041
+      },
+      {
+        "port": "b1",
+        "before": true,
+        "after": false,
+        "tick": 1833,
+        "elapsedNs": 91649552542
+      },
+      {
+        "port": "a0",
+        "before": false,
+        "after": true,
+        "tick": 1875,
+        "elapsedNs": 93748541001
+      },
+      {
+        "port": "a1",
+        "before": false,
+        "after": true,
+        "tick": 1886,
+        "elapsedNs": 94299730501
+      },
+      {
+        "port": "b0",
+        "before": false,
+        "after": true,
+        "tick": 1896,
+        "elapsedNs": 94805374543
+      },
+      {
+        "port": "b1",
+        "before": false,
+        "after": true,
+        "tick": 1907,
+        "elapsedNs": 95351372793
+      }
+    ],
+    "initialization": [
+      {
+        "tick": 81,
+        "elapsedNs": 4075996335,
+        "controls": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "lamps": [
+          true,
+          false,
+          true
+        ]
+      },
+      {
+        "tick": 195,
+        "elapsedNs": 9748727088,
+        "controls": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "lamps": [
+          false,
+          false,
+          false
+        ]
+      }
+    ],
+    "rows": [
+      {
+        "a": 0,
+        "b": 0,
+        "expected": 0,
+        "observed": 0,
+        "lamps": [
+          false,
+          false,
+          false
+        ],
+        "elapsedMs": 4300,
+        "resetElapsedNs": 2050159710,
+        "settleElapsedNs": 2250093668,
+        "stableObservations": [
+          {
+            "tick": 278,
+            "elapsedNs": 4101968252,
+            "controls": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "lamps": [
+              false,
+              false,
+              false
+            ]
+          },
+          {
+            "tick": 279,
+            "elapsedNs": 4149038127,
+            "controls": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "lamps": [
+              false,
+              false,
+              false
+            ]
+          },
+          {
+            "tick": 280,
+            "elapsedNs": 4198607419,
+            "controls": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "lamps": [
+              false,
+              false,
+              false
+            ]
+          },
+          {
+            "tick": 281,
+            "elapsedNs": 4250817961,
+            "controls": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "lamps": [
+              false,
+              false,
+              false
+            ]
+          },
+          {
+            "tick": 282,
+            "elapsedNs": 4299911211,
+            "controls": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "lamps": [
+              false,
+              false,
+              false
+            ]
+          }
+        ]
+      },
+      {
+        "a": 0,
+        "b": 1,
+        "expected": 1,
+        "observed": 1,
+        "lamps": [
+          false,
+          true,
+          false
+        ],
+        "elapsedMs": 4349,
+        "resetElapsedNs": 2052656459,
+        "settleElapsedNs": 2297208251,
+        "stableObservations": [
+          {
+            "tick": 366,
+            "elapsedNs": 4151416585,
+            "controls": [
+              false,
+              false,
+              true,
+              false
+            ],
+            "lamps": [
+              false,
+              true,
+              false
+            ]
+          },
+          {
+            "tick": 367,
+            "elapsedNs": 4199740002,
+            "controls": [
+              false,
+              false,
+              true,
+              false
+            ],
+            "lamps": [
+              false,
+              true,
+              false
+            ]
+          },
+          {
+            "tick": 368,
+            "elapsedNs": 4249557960,
+            "controls": [
+              false,
+              false,
+              true,
+              false
+            ],
+            "lamps": [
+              false,
+              true,
+              false
+            ]
+          },
+          {
+            "tick": 369,
+            "elapsedNs": 4299105668,
+            "controls": [
+              false,
+              false,
+              true,
+              false
+            ],
+            "lamps": [
+              false,
+              true,
+              false
+            ]
+          },
+          {
+            "tick": 370,
+            "elapsedNs": 4349589085,
+            "controls": [
+              false,
+              false,
+              true,
+              false
+            ],
+            "lamps": [
+              false,
+              true,
+              false
+            ]
+          }
+        ]
+      },
+      {
+        "a": 0,
+        "b": 2,
+        "expected": 2,
+        "observed": 2,
+        "lamps": [
+          false,
+          false,
+          true
+        ],
+        "elapsedMs": 4401,
+        "resetElapsedNs": 2098741960,
+        "settleElapsedNs": 2303001543,
+        "stableObservations": [
+          {
+            "tick": 455,
+            "elapsedNs": 4199104961,
+            "controls": [
+              false,
+              false,
+              false,
+              true
+            ],
+            "lamps": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "tick": 456,
+            "elapsedNs": 4249377544,
+            "controls": [
+              false,
+              false,
+              false,
+              true
+            ],
+            "lamps": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "tick": 457,
+            "elapsedNs": 4302594252,
+            "controls": [
+              false,
+              false,
+              false,
+              true
+            ],
+            "lamps": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "tick": 458,
+            "elapsedNs": 4347952461,
+            "controls": [
+              false,
+              false,
+              false,
+              true
+            ],
+            "lamps": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "tick": 459,
+            "elapsedNs": 4401660336,
+            "controls": [
+              false,
+              false,
+              false,
+              true
+            ],
+            "lamps": [
+              false,
+              false,
+              true
+            ]
+          }
+        ]
+      },
+      {
+        "a": 0,
+        "b": 3,
+        "expected": 3,
+        "observed": 3,
+        "lamps": [
+          false,
+          true,
+          true
+        ],
+        "elapsedMs": 4950,
+        "resetElapsedNs": 2108333167,
+        "settleElapsedNs": 2842596918,
+        "stableObservations": [
+          {
+            "tick": 555,
+            "elapsedNs": 4753533960,
+            "controls": [
+              false,
+              false,
+              true,
+              true
+            ],
+            "lamps": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "tick": 556,
+            "elapsedNs": 4804988043,
+            "controls": [
+              false,
+              false,
+              true,
+              true
+            ],
+            "lamps": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "tick": 557,
+            "elapsedNs": 4850559876,
+            "controls": [
+              false,
+              false,
+              true,
+              true
+            ],
+            "lamps": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "tick": 558,
+            "elapsedNs": 4904366210,
+            "controls": [
+              false,
+              false,
+              true,
+              true
+            ],
+            "lamps": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "tick": 559,
+            "elapsedNs": 4950925001,
+            "controls": [
+              false,
+              false,
+              true,
+              true
+            ],
+            "lamps": [
+              false,
+              true,
+              true
+            ]
+          }
+        ]
+      },
+      {
+        "a": 1,
+        "b": 0,
+        "expected": 1,
+        "observed": 1,
+        "lamps": [
+          false,
+          true,
+          false
+        ],
+        "elapsedMs": 4951,
+        "resetElapsedNs": 2652910585,
+        "settleElapsedNs": 2298319752,
+        "stableObservations": [
+          {
+            "tick": 655,
+            "elapsedNs": 4750339294,
+            "controls": [
+              true,
+              false,
+              false,
+              false
+            ],
+            "lamps": [
+              false,
+              true,
+              false
+            ]
+          },
+          {
+            "tick": 656,
+            "elapsedNs": 4801081961,
+            "controls": [
+              true,
+              false,
+              false,
+              false
+            ],
+            "lamps": [
+              false,
+              true,
+              false
+            ]
+          },
+          {
+            "tick": 657,
+            "elapsedNs": 4853263336,
+            "controls": [
+              true,
+              false,
+              false,
+              false
+            ],
+            "lamps": [
+              false,
+              true,
+              false
+            ]
+          },
+          {
+            "tick": 658,
+            "elapsedNs": 4900211961,
+            "controls": [
+              true,
+              false,
+              false,
+              false
+            ],
+            "lamps": [
+              false,
+              true,
+              false
+            ]
+          },
+          {
+            "tick": 659,
+            "elapsedNs": 4951227878,
+            "controls": [
+              true,
+              false,
+              false,
+              false
+            ],
+            "lamps": [
+              false,
+              true,
+              false
+            ]
+          }
+        ]
+      },
+      {
+        "a": 1,
+        "b": 1,
+        "expected": 2,
+        "observed": 2,
+        "lamps": [
+          false,
+          false,
+          true
+        ],
+        "elapsedMs": 4949,
+        "resetElapsedNs": 2097676084,
+        "settleElapsedNs": 2851581210,
+        "stableObservations": [
+          {
+            "tick": 755,
+            "elapsedNs": 4748223002,
+            "controls": [
+              true,
+              false,
+              true,
+              false
+            ],
+            "lamps": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "tick": 756,
+            "elapsedNs": 4799060335,
+            "controls": [
+              true,
+              false,
+              true,
+              false
+            ],
+            "lamps": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "tick": 757,
+            "elapsedNs": 4847423960,
+            "controls": [
+              true,
+              false,
+              true,
+              false
+            ],
+            "lamps": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "tick": 758,
+            "elapsedNs": 4902764044,
+            "controls": [
+              true,
+              false,
+              true,
+              false
+            ],
+            "lamps": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "tick": 759,
+            "elapsedNs": 4949255585,
+            "controls": [
+              true,
+              false,
+              true,
+              false
+            ],
+            "lamps": [
+              false,
+              false,
+              true
+            ]
+          }
+        ]
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "expected": 3,
+        "observed": 3,
+        "lamps": [
+          false,
+          true,
+          true
+        ],
+        "elapsedMs": 5450,
+        "resetElapsedNs": 2649288002,
+        "settleElapsedNs": 2800943668,
+        "stableObservations": [
+          {
+            "tick": 865,
+            "elapsedNs": 5248712753,
+            "controls": [
+              true,
+              false,
+              false,
+              true
+            ],
+            "lamps": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "tick": 866,
+            "elapsedNs": 5302557503,
+            "controls": [
+              true,
+              false,
+              false,
+              true
+            ],
+            "lamps": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "tick": 867,
+            "elapsedNs": 5348170878,
+            "controls": [
+              true,
+              false,
+              false,
+              true
+            ],
+            "lamps": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "tick": 868,
+            "elapsedNs": 5402266045,
+            "controls": [
+              true,
+              false,
+              false,
+              true
+            ],
+            "lamps": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "tick": 869,
+            "elapsedNs": 5450228795,
+            "controls": [
+              true,
+              false,
+              false,
+              true
+            ],
+            "lamps": [
+              false,
+              true,
+              true
+            ]
+          }
+        ]
+      },
+      {
+        "a": 1,
+        "b": 3,
+        "expected": 4,
+        "observed": 4,
+        "lamps": [
+          true,
+          false,
+          false
+        ],
+        "elapsedMs": 6059,
+        "resetElapsedNs": 2649884043,
+        "settleElapsedNs": 3409720210,
+        "stableObservations": [
+          {
+            "tick": 987,
+            "elapsedNs": 5850247170,
+            "controls": [
+              true,
+              false,
+              true,
+              true
+            ],
+            "lamps": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "tick": 988,
+            "elapsedNs": 5900011711,
+            "controls": [
+              true,
+              false,
+              true,
+              true
+            ],
+            "lamps": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "tick": 989,
+            "elapsedNs": 5950682420,
+            "controls": [
+              true,
+              false,
+              true,
+              true
+            ],
+            "lamps": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "tick": 990,
+            "elapsedNs": 5999953711,
+            "controls": [
+              true,
+              false,
+              true,
+              true
+            ],
+            "lamps": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "tick": 991,
+            "elapsedNs": 6059602295,
+            "controls": [
+              true,
+              false,
+              true,
+              true
+            ],
+            "lamps": [
+              true,
+              false,
+              false
+            ]
+          }
+        ]
+      },
+      {
+        "a": 2,
+        "b": 0,
+        "expected": 2,
+        "observed": 2,
+        "lamps": [
+          false,
+          false,
+          true
+        ],
+        "elapsedMs": 5500,
+        "resetElapsedNs": 3202102168,
+        "settleElapsedNs": 2297936751,
+        "stableObservations": [
+          {
+            "tick": 1098,
+            "elapsedNs": 5303692627,
+            "controls": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "lamps": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "tick": 1099,
+            "elapsedNs": 5351110585,
+            "controls": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "lamps": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "tick": 1100,
+            "elapsedNs": 5400175793,
+            "controls": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "lamps": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "tick": 1101,
+            "elapsedNs": 5453494460,
+            "controls": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "lamps": [
+              false,
+              false,
+              true
+            ]
+          },
+          {
+            "tick": 1102,
+            "elapsedNs": 5500036252,
+            "controls": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "lamps": [
+              false,
+              false,
+              true
+            ]
+          }
+        ]
+      },
+      {
+        "a": 2,
+        "b": 1,
+        "expected": 3,
+        "observed": 3,
+        "lamps": [
+          false,
+          true,
+          true
+        ],
+        "elapsedMs": 4906,
+        "resetElapsedNs": 2103682543,
+        "settleElapsedNs": 2802827209,
+        "stableObservations": [
+          {
+            "tick": 1197,
+            "elapsedNs": 4701426128,
+            "controls": [
+              false,
+              true,
+              true,
+              false
+            ],
+            "lamps": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "tick": 1198,
+            "elapsedNs": 4751289044,
+            "controls": [
+              false,
+              true,
+              true,
+              false
+            ],
+            "lamps": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "tick": 1199,
+            "elapsedNs": 4800494419,
+            "controls": [
+              false,
+              true,
+              true,
+              false
+            ],
+            "lamps": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "tick": 1200,
+            "elapsedNs": 4853781461,
+            "controls": [
+              false,
+              true,
+              true,
+              false
+            ],
+            "lamps": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "tick": 1201,
+            "elapsedNs": 4906507044,
+            "controls": [
+              false,
+              true,
+              true,
+              false
+            ],
+            "lamps": [
+              false,
+              true,
+              true
+            ]
+          }
+        ]
+      },
+      {
+        "a": 2,
+        "b": 2,
+        "expected": 4,
+        "observed": 4,
+        "lamps": [
+          true,
+          false,
+          false
+        ],
+        "elapsedMs": 5455,
+        "resetElapsedNs": 2600748918,
+        "settleElapsedNs": 2854660793,
+        "stableObservations": [
+          {
+            "tick": 1307,
+            "elapsedNs": 5251661086,
+            "controls": [
+              false,
+              true,
+              false,
+              true
+            ],
+            "lamps": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "tick": 1308,
+            "elapsedNs": 5299873961,
+            "controls": [
+              false,
+              true,
+              false,
+              true
+            ],
+            "lamps": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "tick": 1309,
+            "elapsedNs": 5351477503,
+            "controls": [
+              false,
+              true,
+              false,
+              true
+            ],
+            "lamps": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "tick": 1310,
+            "elapsedNs": 5400533420,
+            "controls": [
+              false,
+              true,
+              false,
+              true
+            ],
+            "lamps": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "tick": 1311,
+            "elapsedNs": 5455407795,
+            "controls": [
+              false,
+              true,
+              false,
+              true
+            ],
+            "lamps": [
+              true,
+              false,
+              false
+            ]
+          }
+        ]
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "expected": 5,
+        "observed": 5,
+        "lamps": [
+          true,
+          true,
+          false
+        ],
+        "elapsedMs": 6048,
+        "resetElapsedNs": 2648161460,
+        "settleElapsedNs": 3400190793,
+        "stableObservations": [
+          {
+            "tick": 1429,
+            "elapsedNs": 5852716420,
+            "controls": [
+              false,
+              true,
+              true,
+              true
+            ],
+            "lamps": [
+              true,
+              true,
+              false
+            ]
+          },
+          {
+            "tick": 1430,
+            "elapsedNs": 5897659962,
+            "controls": [
+              false,
+              true,
+              true,
+              true
+            ],
+            "lamps": [
+              true,
+              true,
+              false
+            ]
+          },
+          {
+            "tick": 1431,
+            "elapsedNs": 5949940837,
+            "controls": [
+              false,
+              true,
+              true,
+              true
+            ],
+            "lamps": [
+              true,
+              true,
+              false
+            ]
+          },
+          {
+            "tick": 1432,
+            "elapsedNs": 6002343295,
+            "controls": [
+              false,
+              true,
+              true,
+              true
+            ],
+            "lamps": [
+              true,
+              true,
+              false
+            ]
+          },
+          {
+            "tick": 1433,
+            "elapsedNs": 6048348253,
+            "controls": [
+              false,
+              true,
+              true,
+              true
+            ],
+            "lamps": [
+              true,
+              true,
+              false
+            ]
+          }
+        ]
+      },
+      {
+        "a": 3,
+        "b": 0,
+        "expected": 3,
+        "observed": 3,
+        "lamps": [
+          false,
+          true,
+          true
+        ],
+        "elapsedMs": 5998,
+        "resetElapsedNs": 3148255585,
+        "settleElapsedNs": 2850597960,
+        "stableObservations": [
+          {
+            "tick": 1550,
+            "elapsedNs": 5797887295,
+            "controls": [
+              true,
+              true,
+              false,
+              false
+            ],
+            "lamps": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "tick": 1551,
+            "elapsedNs": 5853774878,
+            "controls": [
+              true,
+              true,
+              false,
+              false
+            ],
+            "lamps": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "tick": 1552,
+            "elapsedNs": 5899476128,
+            "controls": [
+              true,
+              true,
+              false,
+              false
+            ],
+            "lamps": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "tick": 1553,
+            "elapsedNs": 5950204003,
+            "controls": [
+              true,
+              true,
+              false,
+              false
+            ],
+            "lamps": [
+              false,
+              true,
+              true
+            ]
+          },
+          {
+            "tick": 1554,
+            "elapsedNs": 5998848878,
+            "controls": [
+              true,
+              true,
+              false,
+              false
+            ],
+            "lamps": [
+              false,
+              true,
+              true
+            ]
+          }
+        ]
+      },
+      {
+        "a": 3,
+        "b": 1,
+        "expected": 4,
+        "observed": 4,
+        "lamps": [
+          true,
+          false,
+          false
+        ],
+        "elapsedMs": 6050,
+        "resetElapsedNs": 2647124793,
+        "settleElapsedNs": 3403860334,
+        "stableObservations": [
+          {
+            "tick": 1672,
+            "elapsedNs": 5847829377,
+            "controls": [
+              true,
+              true,
+              true,
+              false
+            ],
+            "lamps": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "tick": 1673,
+            "elapsedNs": 5896766169,
+            "controls": [
+              true,
+              true,
+              true,
+              false
+            ],
+            "lamps": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "tick": 1674,
+            "elapsedNs": 5946927585,
+            "controls": [
+              true,
+              true,
+              true,
+              false
+            ],
+            "lamps": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "tick": 1675,
+            "elapsedNs": 5996895252,
+            "controls": [
+              true,
+              true,
+              true,
+              false
+            ],
+            "lamps": [
+              true,
+              false,
+              false
+            ]
+          },
+          {
+            "tick": 1676,
+            "elapsedNs": 6050981585,
+            "controls": [
+              true,
+              true,
+              true,
+              false
+            ],
+            "lamps": [
+              true,
+              false,
+              false
+            ]
+          }
+        ]
+      },
+      {
+        "a": 3,
+        "b": 2,
+        "expected": 5,
+        "observed": 5,
+        "lamps": [
+          true,
+          true,
+          false
+        ],
+        "elapsedMs": 6599,
+        "resetElapsedNs": 3150935543,
+        "settleElapsedNs": 3448424793,
+        "stableObservations": [
+          {
+            "tick": 1805,
+            "elapsedNs": 6403137086,
+            "controls": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "lamps": [
+              true,
+              true,
+              false
+            ]
+          },
+          {
+            "tick": 1806,
+            "elapsedNs": 6451849461,
+            "controls": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "lamps": [
+              true,
+              true,
+              false
+            ]
+          },
+          {
+            "tick": 1807,
+            "elapsedNs": 6499979669,
+            "controls": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "lamps": [
+              true,
+              true,
+              false
+            ]
+          },
+          {
+            "tick": 1808,
+            "elapsedNs": 6549328878,
+            "controls": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "lamps": [
+              true,
+              true,
+              false
+            ]
+          },
+          {
+            "tick": 1809,
+            "elapsedNs": 6599356086,
+            "controls": [
+              true,
+              true,
+              false,
+              true
+            ],
+            "lamps": [
+              true,
+              true,
+              false
+            ]
+          }
+        ]
+      },
+      {
+        "a": 3,
+        "b": 3,
+        "expected": 6,
+        "observed": 6,
+        "lamps": [
+          true,
+          false,
+          true
+        ],
+        "elapsedMs": 7103,
+        "resetElapsedNs": 3199227169,
+        "settleElapsedNs": 3903979252,
+        "stableObservations": [
+          {
+            "tick": 1948,
+            "elapsedNs": 6900062795,
+            "controls": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "lamps": [
+              true,
+              false,
+              true
+            ]
+          },
+          {
+            "tick": 1949,
+            "elapsedNs": 6953980545,
+            "controls": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "lamps": [
+              true,
+              false,
+              true
+            ]
+          },
+          {
+            "tick": 1950,
+            "elapsedNs": 7000270920,
+            "controls": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "lamps": [
+              true,
+              false,
+              true
+            ]
+          },
+          {
+            "tick": 1951,
+            "elapsedNs": 7052803337,
+            "controls": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "lamps": [
+              true,
+              false,
+              true
+            ]
+          },
+          {
+            "tick": 1952,
+            "elapsedNs": 7103183504,
+            "controls": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "lamps": [
+              true,
+              false,
+              true
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

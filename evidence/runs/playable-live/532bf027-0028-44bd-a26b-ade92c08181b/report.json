@@ -1,0 +1,26 @@
+{
+  "scope": "local playable fixture; no independently verified human or blockchain action",
+  "username": "PlayTester",
+  "status": "fail",
+  "independentHumansVerified": 0,
+  "startedAt": "2026-10-31T06:13:58.515Z",
+  "checks": [
+    {
+      "name": "fixture-player-joins-in-survival",
+      "status": "pass",
+      "mode": "survival"
+    },
+    {
+      "name": "four-clickable-npc-entities-visible",
+      "status": "pass",
+      "npcNames": [
+        "Guide",
+        "Agent Desk",
+        "Job Board",
+        "Game Coins"
+      ]
+    }
+  ],
+  "error": "Guide menu did not open",
+  "finishedAt": "2026-10-31T06:14:13.075Z"
+}

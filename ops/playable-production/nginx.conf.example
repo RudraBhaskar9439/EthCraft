@@ -1,0 +1,24 @@
+pid /tmp/nginx.pid;
+error_log /dev/stderr warn;
+events { worker_connections 128; }
+http {
+  access_log off;
+  client_body_temp_path /tmp/client;
+  proxy_temp_path /tmp/proxy;
+  client_max_body_size 16k;
+  limit_req_zone $binary_remote_addr zone=wallet:1m rate=5r/s;
+  server {
+    listen 8443 ssl;
+    server_name wallet.example.invalid;
+    ssl_certificate /run/tls/cert.pem;
+    ssl_certificate_key /run/tls/key.pem;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    add_header Strict-Transport-Security "max-age=31536000" always;
+    location = /player-wallet { include /etc/nginx/wallet-upstream.conf; }
+    location = /player-wallet.js { include /etc/nginx/wallet-upstream.conf; }
+    location = /player-wallet.js.LEGAL.txt { include /etc/nginx/wallet-upstream.conf; }
+    location = /api/player-wallet/config { include /etc/nginx/wallet-upstream.conf; }
+    location = /api/player-wallet/link { include /etc/nginx/wallet-upstream.conf; }
+    location / { return 404; }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "status": "pass",
+  "scope": "Three focused terms-only isolated PostgreSQL fixtures; no external messages, execution, funding, escrow or payment",
+  "checks": [
+    {
+      "name": "verified Discord requester and exact executor ownership required; unapproved autonomous bids and foreign inbox access refused",
+      "status": "pass"
+    },
+    {
+      "name": "immutable quote versions bind exact parties specification price units materials scope deadline and digest; stale acceptance refused",
+      "status": "pass"
+    },
+    {
+      "name": "default work quotes use CITY, reject retired currency and remain unfunded proposals without execution authority",
+      "status": "pass"
+    },
+    {
+      "name": "requester acceptance replays identical terms awaiting funding only; explicit owner policy enables proposals and cancellation never pays or executes",
+      "status": "pass"
+    }
+  ],
+  "moneyMoved": false,
+  "sourceSha256": "8aca42551d0b1f901132d8ac15a08d02e0f2476984d475626d9518cdb78f8fd5"
+}

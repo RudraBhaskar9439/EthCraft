@@ -1,0 +1,95 @@
+{
+  "schema": "agentcity.anthropic-adapter-checkpoint.v1",
+  "recordedAtUtc": "2026-11-01T17:39:41.019089+00:00",
+  "scope": "Direct Anthropic personal-agent adapter; existing Ollama remains default. No live host configuration change.",
+  "status": "budgeted_fresh_model_request_pass_host_deployment_pending",
+  "provider": "Anthropic native Messages API",
+  "model": "claude-sonnet-5-5",
+  "apiVersion": "2026-10-21",
+  "credentialCheck": {
+    "httpStatus": 200,
+    "keyAccepted": true,
+    "modelAvailable": true,
+    "generationRequests": 0,
+    "secretIncluded": false
+  },
+  "checks": [
+    {
+      "command": "node tests/inference/anthropic.mjs",
+      "status": "pass",
+      "scope": "fixtures"
+    },
+    {
+      "command": "node tests/playable/intent-planner.mjs",
+      "status": "pass",
+      "scope": "fixtures"
+    },
+    {
+      "command": "node tests/playable/agents.mjs",
+      "status": "pass",
+      "scope": "fixtures"
+    },
+    {
+      "command": "python3 scripts/check_plan.py",
+      "status": "pass",
+      "scope": "planning infrastructure only"
+    },
+    {
+      "command": "One approved native Anthropic generation request",
+      "status": "HTTP 200; complete valid JSON plan returned",
+      "scope": "Actual model; synthetic context; original parser rejected plain JSON text"
+    },
+    {
+      "command": "Final parser replay of the retained real API response",
+      "status": "pass",
+      "scope": "Exact request body compared; real interpreter and validation; zero additional network requests"
+    },
+    {
+      "command": "node tests/inference/anthropic-budget.mjs",
+      "status": "pass",
+      "scope": "Shared money-budget fixtures; no paid calls"
+    },
+    {
+      "command": "Fresh native planning with shared budget guard",
+      "status": "pass",
+      "scope": "Real API response, synthetic context; total estimated spent $0.020952 under $10 cap"
+    }
+  ],
+  "syntaxChecks": "Changed JavaScript modules passed node --check",
+  "worldActionsExecuted": 0,
+  "financialTransactionsExecuted": 0,
+  "liveGenerationRequests": 2,
+  "spendingApprovedUsd": 10,
+  "paidCallGate": "ANTHROPIC_LIVE_ACCESS=1 plus explicit provider selection required; neither enabled on the live host",
+  "remaining": [
+    "Wake hosting computer and restore its Tailscale connectivity",
+    "Merge reviewed update and deploy private host configuration during an idle maintenance window",
+    "Verify the host worker selects Claude and actual agent controls remain available"
+  ],
+  "canonicalPhasePassed": false,
+  "sources": {
+    "backend/src/inference/anthropic.mjs": "c3a3eaa40dfe26ff081aede89b2b85b437bacfa79d264e76ef880f2b2a7175e1",
+    "backend/src/playable/intent-planner.mjs": "3b1e4bb7a102191e7cf43e618fda5b751781360aa9369e41d6ec2ba00ef11ab4",
+    "backend/src/playable/agents.mjs": "af90ffef2368c6e19a664a209f2cfd7b63bc5c66b6c36d2a0e891d89713e3cde",
+    "scripts/playable_worker.mjs": "a3a90bd3004e29b3dd5e177b91cd396c328f306771b8f72987e55fe08b358f37",
+    "tests/inference/anthropic.mjs": "33802e763b0ef860a97f635ffbeda58e3383f4569e4ad325304db9a127d2fc78",
+    "docs/ANTHROPIC_SETUP.md": "74992c39ff1bdd1df92cf7b16489377641d443c7e54a387ad466ee2641e34fd3",
+    "docs/AGENT_CAPABILITIES.md": "da568d8e0a24519e525524ccca6d49c68d0632260a35e1f75cf315dd69005c75",
+    "backend/src/inference/anthropic-budget.mjs": "bb64ed9402d8c5990df6da0d01399f9dd1cca55b67f19d0d7b7f783c7145682b",
+    "tests/inference/anthropic-budget.mjs": "4b544ef2ff15b18c373f2c7565d27941421e3cdd70e4865c74647c612f7372fc"
+  },
+  "updatedAtUtc": "2026-11-02T12:10:25.827806+00:00",
+  "approvalScope": "Up to $10 total for enabling Claude on the live server and testing, including previous AgentCity tests",
+  "preflightFinding": "Free token counting rejected disabled thinking and forced tool choice for Sonnet 5.5 before generation. Adapter selects a supported thinking mode and requests a single validated return_plan using automatic tool choice.",
+  "freePreflightFailures": 3,
+  "estimatedGenerationTokenCostUsd": 0.020952,
+  "ongoingUsageAuthorized": true,
+  "singleTestAllowanceConsumed": true,
+  "livePlanAcceptanceReport": "evidence/runs/anthropic-live-planning/83b43a59-3db9-4fe9-bf61-dcdfc1d49e71/report.json",
+  "liveTestLimits": [
+    "Final parser was verified by replaying the real saved response, not a second fresh generation.",
+    "One real request does not establish broad model quality or a completed Minecraft build.",
+    "No ongoing API spending or live host activation was authorized."
+  ],
+  "budgetedAcceptanceReport": "evidence/runs/anthropic-budgeted-planning/d97bae2b-3bbc-4ca8-b805-4c709035faa4/report.json"
+}

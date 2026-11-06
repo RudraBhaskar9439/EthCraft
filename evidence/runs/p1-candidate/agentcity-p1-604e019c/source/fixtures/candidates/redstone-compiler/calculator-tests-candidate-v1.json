@@ -1,0 +1,92 @@
+{
+  "schema": "agentcity.test-manifest.candidate.v1",
+  "status": "candidate_unvalidated",
+  "blueprint": "calculator-v1",
+  "actual_lamp_observations_required": true,
+  "reset_ticks_candidate": 40,
+  "settle_ticks_candidate": 40,
+  "stable_observations_candidate": 5,
+  "timing_calibrated": false,
+  "cases": [
+    {
+      "a": 0,
+      "b": 0,
+      "expected": 0
+    },
+    {
+      "a": 0,
+      "b": 1,
+      "expected": 1
+    },
+    {
+      "a": 0,
+      "b": 2,
+      "expected": 2
+    },
+    {
+      "a": 0,
+      "b": 3,
+      "expected": 3
+    },
+    {
+      "a": 1,
+      "b": 0,
+      "expected": 1
+    },
+    {
+      "a": 1,
+      "b": 1,
+      "expected": 2
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "expected": 3
+    },
+    {
+      "a": 1,
+      "b": 3,
+      "expected": 4
+    },
+    {
+      "a": 2,
+      "b": 0,
+      "expected": 2
+    },
+    {
+      "a": 2,
+      "b": 1,
+      "expected": 3
+    },
+    {
+      "a": 2,
+      "b": 2,
+      "expected": 4
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "expected": 5
+    },
+    {
+      "a": 3,
+      "b": 0,
+      "expected": 3
+    },
+    {
+      "a": 3,
+      "b": 1,
+      "expected": 4
+    },
+    {
+      "a": 3,
+      "b": 2,
+      "expected": 5
+    },
+    {
+      "a": 3,
+      "b": 3,
+      "expected": 6
+    }
+  ]
+}

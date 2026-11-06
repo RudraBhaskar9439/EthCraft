@@ -1,0 +1,26 @@
+{
+  "schema": "agentcity.unirock-template-check.v1",
+  "recordedAt": "2026-11-06T01:55:28.369333+00:00",
+  "status": "pass",
+  "scope": "Pure isolated Java checks, no server/world/model/wallet mutation",
+  "results": [
+    {
+      "main": "org.agentcity.paper.UniRockBankTemplateTest",
+      "exitCode": 0,
+      "stdout": "{\"status\":\"pass\",\"checks\":11,\"blocks\":16590,\"scope\":\"Pure UniRock template, safe arrival/headroom, no stock grants, stable retry hash, assigned-agent/owner volumes, public approach and approved Survival checks\"}"
+    },
+    {
+      "main": "org.agentcity.paper.MumbaiWorldConfigTest",
+      "exitCode": 0,
+      "stdout": "{\"status\":\"pass\",\"checks\":12,\"scope\":\"Static optional Mumbai config and both persisted storage layouts; no server/world mutation\"}"
+    }
+  ],
+  "sources": {
+    "plugin/src/main/java/org/agentcity/paper/UniRockBank.java": "e4020d1a6ddf2231d9a523626ad5cf3f4be73fe6358b75093ff028f7c35d7eb5",
+    "plugin/src/main/java/org/agentcity/paper/MumbaiWorld.java": "377eafd37a9795f0141530a53cc249e3cab20829f6ac43bc6501bcdff7f63d62",
+    "plugin/src/main/java/org/agentcity/paper/MumbaiWorldStorage.java": "9e39fed7cb06ed33a3e9bbdb153bb9a7ee9c7f7519b0f68f2cfbf2e38144b827",
+    "plugin/src/main/java/org/agentcity/paper/StrictJson.java": "581cd27a7fb4f31165400e29dc9127af4b54692d37749947b48880f0ffe47ad8",
+    "tests/maps/UniRockBankTemplateTest.java": "63d3d981e82418c04b62e42ea0f585eb9d57374d75eb8f8d26d816e102377987",
+    "tests/maps/MumbaiWorldConfigTest.java": "5795a5c4a6cb8eaae0c39476103825c8e16e1d67378d3defc9b27c57b9a0975b"
+  }
+}

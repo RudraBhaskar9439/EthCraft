@@ -1,0 +1,125 @@
+{
+  "status": "server-live-per-agent-applications-pending",
+  "observedAt": "2026-10-31T15:54:49.193Z",
+  "ancestorRelease": "74ebb9608a59bcb8726fe8f7192d929cad21f5ed",
+  "sourceSha256": {
+    "backend/src/discord/bot.mjs": "0547af9004cacaca7dc105e91a2cec7adad6797e454aba4b4555cb62c0293449",
+    "backend/src/discord/settings.mjs": "ae30dc4dc1cd00ae13bd50e7f4a4a94043d623472e6bc3d53a4205c8cce73ef4",
+    "backend/src/discord/server-experience.mjs": "d0be915afb300ecbfda6270d9139a53194c67b47959048ed4009e4f37db5b709",
+    "backend/src/discord/server-layout.mjs": "42ff5b53fb30453be5d2c10cc6c3034567aa6f1f7bc278a9cece256addaba78f",
+    "backend/src/discord/agent-presence.mjs": "a1a78ad8774472cc27b9a1092de7b68526afd080863d3d8cde260bb24c56dd9f",
+    "backend/src/discord/activity-feed.mjs": "20c30ec236da579cafd3ec5059eed67c924010778be8e3926d091a4b023fb258",
+    "scripts/discord_layout.mjs": "67be6aca479e3a1399a1eabee23b88ed52ac3534a8f0347727dce1882aed53fa",
+    "scripts/discord_agent_credentials.py": "59d70382394369b5e73275b8ca6a2808aec868e28cc971792a036b6766a51ae2",
+    "tests/playable/discord-bot.mjs": "b5b22e3ae5a01975a3a2a53607c45f1305c227c3002765bf2273243bde37554a",
+    "tests/playable/discord-agent-presence.mjs": "0605b70d8a512859c515a7775573d06b8ef9ceaff419b5ae43b8104f8e36a19a",
+    "tests/playable/discord-layout.mjs": "b432a38c364bec52d8654cb36183d79ee8757be84ea59777c0241c3b23ef39f5",
+    "tests/playable/activity-feed.mjs": "458d9d170534a7ae3044ed470cd32d8b27282625ef01c4960c260dea6b8bcfc2"
+  },
+  "scope": "Actual authorized Discord server organization, private controls, jobs and receipt reporting; generic per-agent bot client support prepared but actual separate applications not supplied",
+  "actualDiscord": {
+    "manageChannels": true,
+    "manageRoles": true,
+    "administratorRequested": false,
+    "managedCategories": 3,
+    "managedPublicChannels": 5,
+    "privateAgentRooms": 1,
+    "ownerRoomMemberCount": 2,
+    "administratorVisibility": true,
+    "publicJobCards": 5,
+    "gameCoinReceiptCards": 1,
+    "canonicalUnichainSepoliaReceiptCards": 1,
+    "generalChatExtraBotPanels": 0,
+    "originalChannelIdsPreserved": true,
+    "historyArchivedReadOnly": true,
+    "messagesDeleted": 0,
+    "channelsDeleted": 0
+  },
+  "tests": {
+    "layout": {
+      "status": "pass",
+      "groups": 7,
+      "environment": "isolated PostgreSQL plus simulated Discord API"
+    },
+    "presence": {
+      "status": "pass",
+      "groups": 5,
+      "environment": "simulated dedicated clients, verified identity fixtures, same-bot DM/private-room attachment routing"
+    },
+    "activityFeed": {
+      "status": "pass",
+      "groups": 3,
+      "environment": "isolated PostgreSQL plus simulated channel/receipt verifier; economic records unchanged"
+    },
+    "coordinator": {
+      "status": "pass",
+      "groups": 7,
+      "environment": "isolated PostgreSQL plus simulated Discord interactions; organized-mode private-room link and notification route"
+    },
+    "actualServerReadback": {
+      "status": "pass",
+      "checks": 6,
+      "environment": "actual Discord REST channels/messages/permission overwrites; multiple refresh/reload readbacks retained stable message counts and unique board markers"
+    },
+    "planningUnitTests": {
+      "status": "pass",
+      "tests": 56,
+      "productVerification": false
+    },
+    "planningIntegrity": {
+      "status": "pass",
+      "phases": 11,
+      "scenarioFamilies": 270,
+      "upstreams": 18,
+      "productVerification": false
+    }
+  },
+  "preservedFailures": [
+    "evidence/runs/discord-activity-feed/c39ae91d-66fd-4270-b52e-f2e4fea7c2d2/report.json",
+    "evidence/runs/discord-bot/4e93ca31-904c-4d28-8724-4c7b6de5a90c/report.json"
+  ],
+  "runtime": {
+    "workerReady": true,
+    "discordConnected": true,
+    "nativeGameApiReady": true,
+    "worldAndTunnelsNotRestarted": true,
+    "materialTaskJournalUnchangedAtReload": true,
+    "shortReadinessProbes": "Initially timed out during WSL dependency loading and supervisor backoff; eventual current-process readiness passed.",
+    "privateCredentialParentMode": "0700"
+  },
+  "authority": {
+    "newBotAccountsCreated": 0,
+    "newGrantsCreatedByLayout": 0,
+    "walletsCreated": 0,
+    "signatures": 0,
+    "newPublicTransactions": 0,
+    "blockchainGrantsGameplayAccess": false,
+    "privateTaskInstructionsPublished": false
+  },
+  "limitations": [
+    "Every live DM-capable agent profile still requires its own real Discord bot application/token and invitation; none supplied for the new profiles.",
+    "Registry accepts any registered agent identifier; the current Minecraft pilot still has two physical slots.",
+    "Automatic assignment from a pre-created bot pool is a possible extension, not implemented by the explicit registry.",
+    "Actual dedicated-bot owner DM, foreign-agent work request and screenshot delivery remain unverified until bot identities are provisioned.",
+    "No application creation, personal user-token automation, MFA/CAPTCHA automation or unsupported internal API was executed."
+  ],
+  "canonicalGate": {
+    "phase": "P0",
+    "status": "blocked",
+    "reasons": [
+      "implementation scope changed since approved release",
+      "P0-015 upstream document artifact hash mismatch"
+    ],
+    "noCanonicalEvidenceRewritten": true,
+    "independentSecondParticipantStillPending": true,
+    "zeroGStillPending": true
+  },
+  "evidence": [
+    "evidence/runs/discord-organized-live/fb6dcbee-6853-4a4b-b1e9-ed99ab1380d7/report.json",
+    "evidence/runs/discord-server-tidy/b0be9842-0ffa-4518-809a-d7308baca32d/report.json",
+    "evidence/runs/discord-layout/7a5d690a-3fc0-4ba6-adb8-50d59c3d8d91/report.json",
+    "evidence/runs/discord-activity-feed/3da53459-31fe-45a7-9f45-068486ca7027/report.json",
+    "evidence/runs/discord-bot/334a2ecd-be6e-48f0-bce5-83c887a2a4d3/report.json"
+  ],
+  "next": "Provision real Discord bot application identities through operator setup, then verify same-bot owner DM, another participant work request and actual world screenshot. Keep account creation separate from the game backend."
+}

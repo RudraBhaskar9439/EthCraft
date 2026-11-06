@@ -1,0 +1,779 @@
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "@coinbase/cdp-sdk": {
+      "name": "@coinbase/cdp-sdk",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "abitype",
+        "zod"
+      ],
+      "effects": [],
+      "range": ">=1.0.0",
+      "nodes": [
+        "node_modules/@wagmi/connectors/node_modules/@coinbase/cdp-sdk"
+      ],
+      "fixAvailable": true
+    },
+    "@gemini-wallet/core": {
+      "name": "@gemini-wallet/core",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "@metamask/rpc-errors"
+      ],
+      "effects": [
+        "@wagmi/connectors"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/@gemini-wallet/core"
+      ],
+      "fixAvailable": {
+        "name": "@privy-io/react-auth",
+        "version": "3.6.1",
+        "isSemVerMajor": true
+      }
+    },
+    "@metamask/rpc-errors": {
+      "name": "@metamask/rpc-errors",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "@metamask/utils"
+      ],
+      "effects": [
+        "@gemini-wallet/core"
+      ],
+      "range": ">=6.3.1",
+      "nodes": [
+        "node_modules/@metamask/eth-json-rpc-provider/node_modules/@metamask/rpc-errors",
+        "node_modules/@metamask/json-rpc-engine/node_modules/@metamask/rpc-errors",
+        "node_modules/@metamask/providers/node_modules/@metamask/rpc-errors",
+        "node_modules/@metamask/rpc-errors"
+      ],
+      "fixAvailable": {
+        "name": "@privy-io/react-auth",
+        "version": "3.6.1",
+        "isSemVerMajor": true
+      }
+    },
+    "@metamask/sdk": {
+      "name": "@metamask/sdk",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "@metamask/sdk-communication-layer",
+        "uuid"
+      ],
+      "effects": [
+        "@wagmi/connectors"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/@metamask/sdk"
+      ],
+      "fixAvailable": {
+        "name": "@privy-io/react-auth",
+        "version": "3.6.1",
+        "isSemVerMajor": true
+      }
+    },
+    "@metamask/sdk-communication-layer": {
+      "name": "@metamask/sdk-communication-layer",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "uuid"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@metamask/sdk/node_modules/@metamask/sdk-communication-layer"
+      ],
+      "fixAvailable": true
+    },
+    "@metamask/utils": {
+      "name": "@metamask/utils",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "uuid"
+      ],
+      "effects": [
+        "@metamask/rpc-errors"
+      ],
+      "range": "8.4.0 - 12.0.0",
+      "nodes": [
+        "node_modules/@metamask/eth-json-rpc-provider/node_modules/@metamask/json-rpc-engine/node_modules/@metamask/utils",
+        "node_modules/@metamask/eth-json-rpc-provider/node_modules/@metamask/rpc-errors/node_modules/@metamask/utils",
+        "node_modules/@metamask/json-rpc-engine/node_modules/@metamask/rpc-errors/node_modules/@metamask/utils",
+        "node_modules/@metamask/json-rpc-engine/node_modules/@metamask/utils",
+        "node_modules/@metamask/json-rpc-middleware-stream/node_modules/@metamask/utils",
+        "node_modules/@metamask/providers/node_modules/@metamask/rpc-errors/node_modules/@metamask/utils",
+        "node_modules/@metamask/providers/node_modules/@metamask/utils",
+        "node_modules/@metamask/utils"
+      ],
+      "fixAvailable": {
+        "name": "@privy-io/react-auth",
+        "version": "3.6.1",
+        "isSemVerMajor": true
+      }
+    },
+    "@privy-io/api-base": {
+      "name": "@privy-io/api-base",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "zod"
+      ],
+      "effects": [
+        "@privy-io/js-sdk-core",
+        "@privy-io/react-auth"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/@privy-io/api-base"
+      ],
+      "fixAvailable": {
+        "name": "@privy-io/react-auth",
+        "version": "3.6.1",
+        "isSemVerMajor": true
+      }
+    },
+    "@privy-io/js-sdk-core": {
+      "name": "@privy-io/js-sdk-core",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@privy-io/api-base"
+      ],
+      "effects": [
+        "@privy-io/react-auth"
+      ],
+      "range": ">=0.11.6-beta-20240203052235",
+      "nodes": [
+        "node_modules/@privy-io/react-auth/node_modules/@privy-io/js-sdk-core"
+      ],
+      "fixAvailable": {
+        "name": "@privy-io/react-auth",
+        "version": "3.6.1",
+        "isSemVerMajor": true
+      }
+    },
+    "@privy-io/react-auth": {
+      "name": "@privy-io/react-auth",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@privy-io/api-base",
+        "@privy-io/js-sdk-core",
+        "@walletconnect/ethereum-provider",
+        "x402"
+      ],
+      "effects": [],
+      "range": ">=1.71.1-beta-20240614001204",
+      "nodes": [
+        "node_modules/@privy-io/react-auth"
+      ],
+      "fixAvailable": {
+        "name": "@privy-io/react-auth",
+        "version": "3.6.1",
+        "isSemVerMajor": true
+      }
+    },
+    "@reown/appkit": {
+      "name": "@reown/appkit",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@reown/appkit-controllers",
+        "@reown/appkit-pay",
+        "@reown/appkit-scaffold-ui",
+        "@reown/appkit-ui",
+        "@reown/appkit-utils",
+        "@reown/appkit-wallet",
+        "@walletconnect/universal-provider",
+        "@walletconnect/universal-provider"
+      ],
+      "effects": [
+        "@walletconnect/ethereum-provider"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/@reown/appkit",
+        "node_modules/@wagmi/connectors/node_modules/@reown/appkit"
+      ],
+      "fixAvailable": {
+        "name": "@privy-io/react-auth",
+        "version": "3.6.1",
+        "isSemVerMajor": true
+      }
+    },
+    "@reown/appkit-controllers": {
+      "name": "@reown/appkit-controllers",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@reown/appkit-wallet",
+        "@walletconnect/universal-provider",
+        "@walletconnect/universal-provider"
+      ],
+      "effects": [
+        "@reown/appkit",
+        "@reown/appkit-pay",
+        "@reown/appkit-scaffold-ui",
+        "@reown/appkit-utils"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/@reown/appkit-controllers",
+        "node_modules/@wagmi/connectors/node_modules/@reown/appkit-controllers"
+      ],
+      "fixAvailable": {
+        "name": "@privy-io/react-auth",
+        "version": "3.6.1",
+        "isSemVerMajor": true
+      }
+    },
+    "@reown/appkit-pay": {
+      "name": "@reown/appkit-pay",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@reown/appkit-controllers",
+        "@reown/appkit-ui",
+        "@reown/appkit-utils"
+      ],
+      "effects": [
+        "@reown/appkit"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/@reown/appkit-pay",
+        "node_modules/@wagmi/connectors/node_modules/@reown/appkit-pay"
+      ],
+      "fixAvailable": {
+        "name": "@privy-io/react-auth",
+        "version": "3.6.1",
+        "isSemVerMajor": true
+      }
+    },
+    "@reown/appkit-scaffold-ui": {
+      "name": "@reown/appkit-scaffold-ui",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@reown/appkit-controllers",
+        "@reown/appkit-ui",
+        "@reown/appkit-utils",
+        "@reown/appkit-wallet"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@reown/appkit-scaffold-ui",
+        "node_modules/@wagmi/connectors/node_modules/@reown/appkit-scaffold-ui"
+      ],
+      "fixAvailable": true
+    },
+    "@reown/appkit-ui": {
+      "name": "@reown/appkit-ui",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@reown/appkit-controllers",
+        "@reown/appkit-wallet"
+      ],
+      "effects": [
+        "@reown/appkit",
+        "@reown/appkit-scaffold-ui"
+      ],
+      "range": ">=1.7.1-449657bc8f95adcfd295a2e883c4bcd439045044.0",
+      "nodes": [
+        "node_modules/@reown/appkit-ui",
+        "node_modules/@wagmi/connectors/node_modules/@reown/appkit-ui"
+      ],
+      "fixAvailable": {
+        "name": "@privy-io/react-auth",
+        "version": "3.6.1",
+        "isSemVerMajor": true
+      }
+    },
+    "@reown/appkit-utils": {
+      "name": "@reown/appkit-utils",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@reown/appkit-controllers",
+        "@reown/appkit-wallet",
+        "@walletconnect/universal-provider",
+        "@walletconnect/universal-provider"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@reown/appkit-utils",
+        "node_modules/@wagmi/connectors/node_modules/@reown/appkit-utils"
+      ],
+      "fixAvailable": true
+    },
+    "@reown/appkit-wallet": {
+      "name": "@reown/appkit-wallet",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "zod"
+      ],
+      "effects": [
+        "@reown/appkit",
+        "@reown/appkit-controllers",
+        "@reown/appkit-scaffold-ui",
+        "@reown/appkit-ui",
+        "@reown/appkit-utils"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/@reown/appkit-wallet",
+        "node_modules/@wagmi/connectors/node_modules/@reown/appkit-wallet"
+      ],
+      "fixAvailable": {
+        "name": "@privy-io/react-auth",
+        "version": "3.6.1",
+        "isSemVerMajor": true
+      }
+    },
+    "@wagmi/connectors": {
+      "name": "@wagmi/connectors",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@gemini-wallet/core",
+        "@metamask/sdk",
+        "@walletconnect/ethereum-provider"
+      ],
+      "effects": [
+        "wagmi"
+      ],
+      "range": "<=0.0.0-wc-links-20240926225814 || 4.0.0-alpha.0 - 4.0.0-rc.3 || >=4.0.1",
+      "nodes": [
+        "node_modules/@wagmi/connectors"
+      ],
+      "fixAvailable": {
+        "name": "@privy-io/react-auth",
+        "version": "3.6.1",
+        "isSemVerMajor": true
+      }
+    },
+    "@walletconnect/core": {
+      "name": "@walletconnect/core",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@walletconnect/utils",
+        "@walletconnect/utils"
+      ],
+      "effects": [],
+      "range": "1.2.3-1.3.0-rc.0.0 - 2.17.5-rc-1 || 2.18.0-canary-tvf-1 - 2.21.9",
+      "nodes": [
+        "node_modules/@reown/appkit-controllers/node_modules/@walletconnect/core",
+        "node_modules/@reown/appkit-utils/node_modules/@walletconnect/core",
+        "node_modules/@reown/appkit/node_modules/@walletconnect/core",
+        "node_modules/@wagmi/connectors/node_modules/@reown/appkit-controllers/node_modules/@walletconnect/core",
+        "node_modules/@wagmi/connectors/node_modules/@reown/appkit-utils/node_modules/@walletconnect/core",
+        "node_modules/@wagmi/connectors/node_modules/@reown/appkit/node_modules/@walletconnect/core",
+        "node_modules/@wagmi/connectors/node_modules/@walletconnect/core"
+      ],
+      "fixAvailable": true
+    },
+    "@walletconnect/ethereum-provider": {
+      "name": "@walletconnect/ethereum-provider",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@reown/appkit",
+        "@walletconnect/sign-client",
+        "@walletconnect/universal-provider",
+        "@walletconnect/utils"
+      ],
+      "effects": [
+        "@privy-io/react-auth",
+        "@wagmi/connectors"
+      ],
+      "range": "<=2.17.5-rc-1 || >=2.18.0-canary-ak-1",
+      "nodes": [
+        "node_modules/@wagmi/connectors/node_modules/@walletconnect/ethereum-provider",
+        "node_modules/@walletconnect/ethereum-provider"
+      ],
+      "fixAvailable": {
+        "name": "@privy-io/react-auth",
+        "version": "3.6.1",
+        "isSemVerMajor": true
+      }
+    },
+    "@walletconnect/sign-client": {
+      "name": "@walletconnect/sign-client",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@walletconnect/core",
+        "@walletconnect/core",
+        "@walletconnect/utils",
+        "@walletconnect/utils"
+      ],
+      "effects": [
+        "@walletconnect/ethereum-provider"
+      ],
+      "range": "<=2.17.5-rc-1 || 2.18.0-canary-tvf-1 - 2.21.9",
+      "nodes": [
+        "node_modules/@reown/appkit-controllers/node_modules/@walletconnect/sign-client",
+        "node_modules/@reown/appkit-utils/node_modules/@walletconnect/sign-client",
+        "node_modules/@reown/appkit/node_modules/@walletconnect/sign-client",
+        "node_modules/@wagmi/connectors/node_modules/@reown/appkit-controllers/node_modules/@walletconnect/sign-client",
+        "node_modules/@wagmi/connectors/node_modules/@reown/appkit-utils/node_modules/@walletconnect/sign-client",
+        "node_modules/@wagmi/connectors/node_modules/@reown/appkit/node_modules/@walletconnect/sign-client",
+        "node_modules/@wagmi/connectors/node_modules/@walletconnect/sign-client"
+      ],
+      "fixAvailable": {
+        "name": "@privy-io/react-auth",
+        "version": "3.6.1",
+        "isSemVerMajor": true
+      }
+    },
+    "@walletconnect/universal-provider": {
+      "name": "@walletconnect/universal-provider",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@walletconnect/sign-client",
+        "@walletconnect/sign-client",
+        "@walletconnect/utils",
+        "@walletconnect/utils"
+      ],
+      "effects": [
+        "@reown/appkit",
+        "@reown/appkit-controllers",
+        "@reown/appkit-utils",
+        "@walletconnect/ethereum-provider"
+      ],
+      "range": "<=2.17.5-rc-1 || 2.18.0-canary-tvf-1 - 2.21.9",
+      "nodes": [
+        "node_modules/@reown/appkit-controllers/node_modules/@walletconnect/universal-provider",
+        "node_modules/@reown/appkit-utils/node_modules/@walletconnect/universal-provider",
+        "node_modules/@reown/appkit/node_modules/@walletconnect/universal-provider",
+        "node_modules/@wagmi/connectors/node_modules/@reown/appkit-controllers/node_modules/@walletconnect/universal-provider",
+        "node_modules/@wagmi/connectors/node_modules/@reown/appkit-utils/node_modules/@walletconnect/universal-provider",
+        "node_modules/@wagmi/connectors/node_modules/@reown/appkit/node_modules/@walletconnect/universal-provider",
+        "node_modules/@wagmi/connectors/node_modules/@walletconnect/universal-provider"
+      ],
+      "fixAvailable": {
+        "name": "@privy-io/react-auth",
+        "version": "3.6.1",
+        "isSemVerMajor": true
+      }
+    },
+    "@walletconnect/utils": {
+      "name": "@walletconnect/utils",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "query-string",
+        "viem"
+      ],
+      "effects": [
+        "@walletconnect/core",
+        "@walletconnect/ethereum-provider",
+        "@walletconnect/sign-client",
+        "@walletconnect/universal-provider"
+      ],
+      "range": "1.2.3-1.3.0-rc.0.0 - 2.17.5-rc-1 || 2.18.0-canary-ell-1 - 2.21.9",
+      "nodes": [
+        "node_modules/@reown/appkit-controllers/node_modules/@walletconnect/utils",
+        "node_modules/@reown/appkit-utils/node_modules/@walletconnect/utils",
+        "node_modules/@reown/appkit/node_modules/@walletconnect/utils",
+        "node_modules/@wagmi/connectors/node_modules/@reown/appkit-controllers/node_modules/@walletconnect/utils",
+        "node_modules/@wagmi/connectors/node_modules/@reown/appkit-utils/node_modules/@walletconnect/utils",
+        "node_modules/@wagmi/connectors/node_modules/@reown/appkit/node_modules/@walletconnect/utils",
+        "node_modules/@wagmi/connectors/node_modules/@walletconnect/utils"
+      ],
+      "fixAvailable": {
+        "name": "@privy-io/react-auth",
+        "version": "3.6.1",
+        "isSemVerMajor": true
+      }
+    },
+    "abitype": {
+      "name": "abitype",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "zod"
+      ],
+      "effects": [
+        "@coinbase/cdp-sdk",
+        "viem"
+      ],
+      "range": "<=0.0.0-main-20230430000127 || 0.7.0-canary.20230307T162852 - 1.0.9",
+      "nodes": [
+        "node_modules/@reown/appkit-controllers/node_modules/abitype",
+        "node_modules/@reown/appkit-utils/node_modules/abitype",
+        "node_modules/@reown/appkit/node_modules/abitype",
+        "node_modules/@wagmi/connectors/node_modules/@reown/appkit-controllers/node_modules/abitype",
+        "node_modules/@wagmi/connectors/node_modules/@reown/appkit-utils/node_modules/abitype",
+        "node_modules/@wagmi/connectors/node_modules/@reown/appkit/node_modules/abitype",
+        "node_modules/@wagmi/connectors/node_modules/@walletconnect/utils/node_modules/abitype",
+        "node_modules/@wagmi/connectors/node_modules/abitype"
+      ],
+      "fixAvailable": {
+        "name": "@privy-io/react-auth",
+        "version": "3.6.1",
+        "isSemVerMajor": true
+      }
+    },
+    "decode-uri-component": {
+      "name": "decode-uri-component",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1147955,
+          "name": "decode-uri-component",
+          "dependency": "decode-uri-component",
+          "title": "decode-uri-component: Denial of service via exponential decoding of malformed percent-encoded input",
+          "url": "https://github.com/advisories/GHSA-vcc3-ghjq-m6fr",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-400",
+            "CWE-405",
+            "CWE-407",
+            "CWE-1176"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<=0.4.2"
+        },
+        {
+          "source": 1243857,
+          "name": "decode-uri-component",
+          "dependency": "decode-uri-component",
+          "title": "decode-uri-component vulnerable to denial of service via quadratic replacement of percent-encoded runs",
+          "url": "https://github.com/advisories/GHSA-qr28-fpjm-wq7f",
+          "severity": "high",
+          "cwe": [
+            "CWE-400",
+            "CWE-407"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<=0.5.0"
+        }
+      ],
+      "effects": [
+        "query-string"
+      ],
+      "range": "<=0.5.0",
+      "nodes": [
+        "node_modules/decode-uri-component"
+      ],
+      "fixAvailable": {
+        "name": "@privy-io/react-auth",
+        "version": "3.6.1",
+        "isSemVerMajor": true
+      }
+    },
+    "query-string": {
+      "name": "query-string",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "decode-uri-component"
+      ],
+      "effects": [
+        "@walletconnect/utils"
+      ],
+      "range": "5.0.0 - 9.4.1",
+      "nodes": [
+        "node_modules/query-string"
+      ],
+      "fixAvailable": {
+        "name": "@privy-io/react-auth",
+        "version": "3.6.1",
+        "isSemVerMajor": true
+      }
+    },
+    "uuid": {
+      "name": "uuid",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1119441,
+          "name": "uuid",
+          "dependency": "uuid",
+          "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+          "url": "https://github.com/advisories/GHSA-w5hq-g745-h8pq",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-787",
+            "CWE-1285"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+          },
+          "range": "<11.1.1"
+        }
+      ],
+      "effects": [
+        "@metamask/sdk",
+        "@metamask/sdk-communication-layer",
+        "@metamask/utils"
+      ],
+      "range": "<11.1.1",
+      "nodes": [
+        "node_modules/@metamask/eth-json-rpc-provider/node_modules/uuid",
+        "node_modules/@metamask/json-rpc-engine/node_modules/uuid",
+        "node_modules/@metamask/json-rpc-middleware-stream/node_modules/uuid",
+        "node_modules/@metamask/providers/node_modules/uuid",
+        "node_modules/@metamask/utils/node_modules/uuid",
+        "node_modules/uuid"
+      ],
+      "fixAvailable": {
+        "name": "@privy-io/react-auth",
+        "version": "3.6.1",
+        "isSemVerMajor": true
+      }
+    },
+    "viem": {
+      "name": "viem",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "abitype"
+      ],
+      "effects": [
+        "@walletconnect/utils"
+      ],
+      "range": "<=0.0.0-wagmiv2-20230628182101 || 0.1.10 - 2.37.1",
+      "nodes": [
+        "node_modules/@reown/appkit-controllers/node_modules/@walletconnect/utils/node_modules/viem",
+        "node_modules/@reown/appkit-utils/node_modules/@walletconnect/utils/node_modules/viem",
+        "node_modules/@reown/appkit/node_modules/@walletconnect/utils/node_modules/viem",
+        "node_modules/@wagmi/connectors/node_modules/@reown/appkit-controllers/node_modules/@walletconnect/utils/node_modules/viem",
+        "node_modules/@wagmi/connectors/node_modules/@reown/appkit-utils/node_modules/@walletconnect/utils/node_modules/viem",
+        "node_modules/@wagmi/connectors/node_modules/@reown/appkit/node_modules/@walletconnect/utils/node_modules/viem",
+        "node_modules/@wagmi/connectors/node_modules/@walletconnect/utils/node_modules/viem"
+      ],
+      "fixAvailable": {
+        "name": "@privy-io/react-auth",
+        "version": "3.6.1",
+        "isSemVerMajor": true
+      }
+    },
+    "wagmi": {
+      "name": "wagmi",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "@wagmi/connectors"
+      ],
+      "effects": [
+        "x402"
+      ],
+      "range": "<=0.0.0-wc-links-20240926225814 || 2.0.0-alpha.0 - 2.0.0-rc.3 || 2.0.1 - 3.5.0",
+      "nodes": [
+        "node_modules/wagmi"
+      ],
+      "fixAvailable": {
+        "name": "@privy-io/react-auth",
+        "version": "3.6.1",
+        "isSemVerMajor": true
+      }
+    },
+    "x402": {
+      "name": "x402",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "wagmi",
+        "zod"
+      ],
+      "effects": [
+        "@privy-io/react-auth"
+      ],
+      "range": ">=0.1.0",
+      "nodes": [
+        "node_modules/x402"
+      ],
+      "fixAvailable": {
+        "name": "@privy-io/react-auth",
+        "version": "3.6.1",
+        "isSemVerMajor": true
+      }
+    },
+    "zod": {
+      "name": "zod",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1243066,
+          "name": "zod",
+          "dependency": "zod",
+          "title": "Zod can exhaust memory while validating oversized constrained collections",
+          "url": "https://github.com/advisories/GHSA-mrhx-c7xc-m3w5",
+          "severity": "high",
+          "cwe": [
+            "CWE-770"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": "<4.6.6"
+        }
+      ],
+      "effects": [
+        "@coinbase/cdp-sdk",
+        "@privy-io/api-base",
+        "@reown/appkit-wallet",
+        "abitype",
+        "x402"
+      ],
+      "range": "<4.6.6",
+      "nodes": [
+        "node_modules/@reown/appkit-wallet/node_modules/zod",
+        "node_modules/@wagmi/connectors/node_modules/@reown/appkit-wallet/node_modules/zod",
+        "node_modules/zod"
+      ],
+      "fixAvailable": {
+        "name": "@privy-io/react-auth",
+        "version": "3.6.1",
+        "isSemVerMajor": true
+      }
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 7,
+      "high": 23,
+      "critical": 0,
+      "total": 30
+    },
+    "dependencies": {
+      "prod": 683,
+      "dev": 27,
+      "optional": 28,
+      "peer": 7,
+      "peerOptional": 0,
+      "total": 717
+    }
+  }
+}

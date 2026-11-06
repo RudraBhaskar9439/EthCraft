@@ -1,0 +1,67 @@
+{
+  "schema": "agentcity.mumbai-post-cleanup.v1",
+  "recordedAt": "2026-11-05T18:58:20.814055+00:00",
+  "status": "pass",
+  "scope": "Read-only post-cleanup health and persistent identity checks; no player actions, provider requests or transactions.",
+  "checks": [
+    {
+      "name": "active_container_running",
+      "status": "pass"
+    },
+    {
+      "name": "mumbai_ready",
+      "status": "pass"
+    },
+    {
+      "name": "original_six_world_identities_preserved",
+      "status": "pass"
+    },
+    {
+      "name": "only_mumbai_identity_added",
+      "status": "pass"
+    },
+    {
+      "name": "server_namespace_preserved",
+      "status": "pass"
+    },
+    {
+      "name": "owned_isolated_container_removed_runtime_retained",
+      "status": "pass"
+    }
+  ],
+  "active": {
+    "container": "agentcity-playable-1ce53d39",
+    "gamePort": 25596,
+    "controlPort": 25597,
+    "mumbai": {
+      "command": "/mumbai",
+      "worldUuid": "be915875-64ec-4498-ae2a-1a6800dd1e53",
+      "world": "agentcity_mumbai",
+      "readOnly": true,
+      "spawn": [
+        1640,
+        68,
+        2779
+      ],
+      "ready": true
+    },
+    "serverNamespace": "laptop-bank-1ce53d39d114410b90f72599ebae8b07",
+    "worldIds": {
+      "agentcity_laptop_bank/dimensions/minecraft/agentcity_estates/data/paper/metadata.dat": "56872012-26f5-48d3-ba50-761a895093cd",
+      "agentcity_laptop_bank/dimensions/minecraft/agentcity_lobby/data/paper/metadata.dat": "b58ce3c8-e107-4379-8ed7-259bed82a53f",
+      "agentcity_laptop_bank/dimensions/minecraft/agentcity_mumbai/data/paper/metadata.dat": "be915875-64ec-4498-ae2a-1a6800dd1e53",
+      "agentcity_laptop_bank/dimensions/minecraft/agentcity_play/data/paper/metadata.dat": "0f4accec-78fe-4578-821b-e9c4b14772c5",
+      "agentcity_laptop_bank/dimensions/minecraft/overworld/data/paper/metadata.dat": "45f82089-4a4a-42ed-a660-801b8ef613f9",
+      "agentcity_laptop_bank/dimensions/minecraft/the_end/data/paper/metadata.dat": "56d31e84-9f30-4826-ae27-822643d1c3c4",
+      "agentcity_laptop_bank/dimensions/minecraft/the_nether/data/paper/metadata.dat": "0140a91b-2202-4535-adb9-3740e48d6527"
+    }
+  },
+  "cleanup": {
+    "removedOwnedContainer": true,
+    "runtimeRetained": "/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/.local/mumbai/isolated/72b01e7a01324326a9b020028bc5358d",
+    "activeContainerStopped": false
+  },
+  "realMoneySpentUsd": 0,
+  "paidModelCalls": 0,
+  "onChainRequests": 0
+}

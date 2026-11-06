@@ -1,0 +1,13 @@
+{
+  "schema": "agentcity.minecraft-profile.v1",
+  "environment": "MAINTAINED_LOOPBACK_NON_TOKEN",
+  "configSha256": "6ced906da4564401590b6dc7011ec53e74ebe072c34e9cd71942814524f3e20d",
+  "pluginSha256": "0edd1f1958ef3aa3cc74bc84f7ff5418696dfc3db0c50bc8bb361bd4f6ae78be",
+  "gamePort": 25596,
+  "controlPort": 25597,
+  "minecraft": "26.3",
+  "client": "1.21.11",
+  "viaVersion": "5.12.2",
+  "viaBackwards": "5.12.2",
+  "javaImage": "eclipse-temurin@sha256:83f4a7fc27df94dcc7b8de04d14cbbba8da14406f921e966969c3b09000aa507"
+}

@@ -1,0 +1,1013 @@
+{
+  "schema": "agentcity.historical-testnet-fee-accounting.v1",
+  "runId": "cd6d97bc-94f5-4a55-ae56-ad80f88673c8",
+  "observedAt": "2026-11-05T16:26:36.120Z",
+  "status": "pass",
+  "scope": "Combined historical bank deployment/demo, paid native work and active guarded marketplace deployment/native purchase/replay. Lending remains archived.",
+  "chainId": 1301,
+  "journalSchema": "bank_deployment_1301_9e0144797c4a",
+  "genesisHash": "0xb7fe0bc9f98ca03294ca0094ff9374cc3e64130b6ec85850d6e260191f48bfe7",
+  "priorAccounting": "evidence/runs/bank-final-fees/ba922b1c-831b-4605-9eb6-0e3b47cc51e9/report.json",
+  "maximumNativeBudgetWei": "4000000000000000",
+  "publicTransactions": 0,
+  "walletSignatures": 0,
+  "realMoneySpentUsd": 0,
+  "journal": {
+    "totalSignedIntents": 130,
+    "statusCounts": {
+      "confirmed": 130
+    },
+    "maximumReservedWei": "548537326400000",
+    "remainingReservationWei": "3451462673600000",
+    "transactionHashes": [
+      "0xe82937d8ef72ecb8adac80b1ac8da780258a02bdcc7cb125c833f35b164852ef",
+      "0x165466dc25911bd763d0bfbfb7bf441c0f013f6d71b6ee06db48a979b1a8c976",
+      "0xb544a1176284240228e17bc8b0fe0085bb0dcdd4dc760037a11af7f9316d033e",
+      "0xc5e6cba6ba8188d1f158f8e1c7987f525df86d5e908f23c3da50bd121702f642",
+      "0x2ca260afd956dd361aba845cf66c4cbdc17c719f37edf4ff92db1b039e70d938",
+      "0x65af73679d6b3b1cfa6b61a5319795bef337200545db5ef79378d5d946d55fdb",
+      "0x2519e103b1a8fd167529d3a62b9ff632fe16d65683609ff029f1d3a33dd93b64",
+      "0x91c3b8be479135190a35b70792347542dcba1ed8c0db599a9ebf0bf73113ad78",
+      "0x99aefeeba6fc37e8f901bcbd1cb104feb84deb7c6ecd231056e919499ae15fc2",
+      "0x6b90c22d3a0dd03f3c55006557daea5bcb21755f8f734cd5568f93e62a5025f3",
+      "0xc11ce334e6285010ca06fe29be5608f9954a0da1a6b69d0f73ddcc50e5fe761b",
+      "0xc6f4e2b5ae3c756e3cf359aa7646c67522bcdbcd308d1b1161cfd51668366902",
+      "0xd65170d62c31bc2cceb0d4f43fa45118f060b91d7599afcf5d90f62a52dfdb06",
+      "0x0c8f5144310a807604099d60c48e391b29583c78ac3eb6515eec2b8a60189f88",
+      "0xee4af0e64e3ea0378b895e8f0acfa51349b88cee80595e4b3c284e8626839541",
+      "0x233a13e0f972a3caa4efc7339a680d74aae6f4678266163b0332a7d50318f4d1",
+      "0x0be2970538a528b4d034f8cc24fae56b6a1d22621422f6450fd15c9c4e6d0ae3",
+      "0x03ea4a6be8c7d2ec248a4473941e25fbaa3431699524f015fb4330192a0bb670",
+      "0x6a6d7258ad6e8b2938a7f3caf0f53f96c8b8f0770c3d69bb92dd924040f3f7dd",
+      "0xf246f39a776b4373115c1eb754789155190e45bf6703f839eaedd04487d9ee82",
+      "0xc5e83f1cb3797cc9fb36258a13fb47cee822e38726c78020502d00d6cef56fbf",
+      "0x7adc272e4709c21435636412847833e3b4cf2a61a35cbd5736ae46c4c145e002",
+      "0x2d0880992e28e311bd32edd2eb8e59b1ae9edd433023ef6ee347b1d30e79a052",
+      "0xcb249de70245d930a2c1aeed8fa40c4c3a4e5e9b6e92c327d783eb57c13b7c9c",
+      "0x96d3cd1199aee68200b3c8d90b373dc99d9cd128229f3ff313cc17f7dc327e55",
+      "0x47ef52f9ff38c205efb271eaef2c0d0e0b8e61008a994c44b6f3c4ee4cb482fe",
+      "0x6c34e9c73edb77459f2b508bec3249194621251d1424bb65cc1b5f28bf7d9f13",
+      "0xf851f36e61cdf4e802b120b9b869b4d172a4aa10220758d44515c520ce15801f",
+      "0x4536ead714a3e799d2e207e91a8be76ca44bd61d3e160e132dbc19b39d322fbd",
+      "0xe0657fc0e837148869934e4e10f01f7ed5150208960058d20dc99df86fef910c",
+      "0x8e24262fcee82b30ab073579681977a79a55e87a4aa27449f0597014d8fcddb4",
+      "0x02ac27334736e726955018841ba6b809b329323c84301acc8299f8b8c837d638",
+      "0xf7dec105f3bd07f7f550be23ce3d1710ff27701bb8852999df16cde43fd05026",
+      "0x428e075869d8bf1ab55ada9a7fc16ecf5d11a4dd26b9a46b3ca8d67888f2efcd",
+      "0xa42977a5ec8da144745bb29b4158219a308be350421dd54cf3ec15171ad81413",
+      "0x365d2651ad4852f6d3b5fd6f4959010ec9ec622dcfbf53730851475ff023e9f4",
+      "0x25093e2f6904abca19f4a552d81e0a5a15b7d59860c7663dbf8c6689adde37f7",
+      "0x35d250fefdd9773fea00c76b60e81bfed78519b2065ebfb7e26cfb044da3de35",
+      "0xa820614a6bfdbf35d6c35e4e1d0dd25eef89f5be7ac7ef430293d074e5d0d0a2",
+      "0x24b7290ba1b5478065747217cb9fe63395921f12e2e701a2c9e4a805bcf9a36b",
+      "0x4cb6c7bbd531b1149b868991b00b8c5000837c9160396b9c00d34b33bf685720",
+      "0xe59e64291d561c1744c92cf7dfe843fa3cd40e598b9786feb5087537cbf87d29",
+      "0xbf82c10c318a81be471a1c5afe41300cc8b0bd1a36b9badd9301b18ac2b63bca",
+      "0x1a617f0f6d1a8955ac1f0600df850c232b9e7026e8412234bb4f536e7e54ee1a",
+      "0x4b658d490bbb86611c3c30d6e366e4ebbb675b82a8a220540b71a54a03ad0737",
+      "0x54b263b49b4699fcc888e13a5c6f207fe5224756ed9a7f9b0aa303f49b082c9e",
+      "0xbdc72e2f40fc657ea57e89f9d307f5de879efea9576948ab6174d8026ced6d04",
+      "0x4240ee4d853ca2fac765083617a35317ea2b8971c54cb166837559d0d0fede41",
+      "0xa5ed5712d62bc57dd71130bb2dc75f46845fefa239b246b46263f888692d5a2d",
+      "0xa15cf58f3e988d9c0d62f5f7767b6e213882f70133f777ea599e8ec9c4a4ac55",
+      "0x1328a19a98419793b4cd040dd29ba1b57744480c57f66e3244f57ad9a9f6cef2",
+      "0x1311e66e1ce95d6a2cf8dc65e669783d2a66e88c553955e3c0b858a8942e6a4f",
+      "0xceb4130781f6953e90dd0751e4f0641ab12272fe1b0dca7c20834fe066ac22bc",
+      "0x171e835f5f18c59c456662b7d67e1d9549c734de057dbc5220bd64ef599b43c6",
+      "0x01c63431c99a2fb63edc459ecff63eec5b1f1df69574532ab92d1585b0bf66d2",
+      "0x4f1bd696474cca685f6d7ee572f449f4a5e6c7919bd201991d5cbdb874a91f35",
+      "0x6bee8dff5369b5b22b1c0f16f2f1bb65079857f2b0e9601b52419b96e3cbdb66",
+      "0xb018418a376216f264427ed69a7fe2a53d251db3b9bbf62032f3a4c64bf55fd9",
+      "0x7115eb35f9cc9eb9ac236bbaa26aa1c2b8d96d448316e70b60b8aeab7d6edc22",
+      "0x734e08754cb47f7971c6455ebcaf8c8012615b62920c745b9208ef1736a8561d",
+      "0x69606fa50e98ada2000cacda2c405b58267d7fc6f9012a041e99d4ec59e9e1c0",
+      "0x52632fc64de9ea433bece670f32ae681015d7206543896e21b923422395073c0",
+      "0xe873009ff82b42c23344c83b7a80eac0ba8e2ddf29c0877c93b6773396494dc2",
+      "0x09f847634a7bb48121f0177f0df895df7a48c2b42cbaf3faa168951d5ee049fb",
+      "0x35e8254c8b6232a8eef7c3b7d1419379a8b078669c84f322987c1fc20adda8e6",
+      "0x051e73cf6546af7dffa629c98020057c9cfc4773da5a34915ba406115f585e76",
+      "0xd9e82c6008a72f8a34027c14695f397717cd5aaac79960ed6b371ae67b811b97",
+      "0x4f7e50a9b31d4445b58278129838ef93977ed80665194b4bd97a9e266b6c6969",
+      "0x35ac2dfc8c31b0596c335aa9e11b4ff1bb1fdfe57d6e8046f4ab36dadaf16ed0",
+      "0xd2723cd4306e46d973c394d653a5faeffcf80d68d51168fb23143bb55058b1b5",
+      "0xe3cb21150d92aafbb1b86f918fcda2a3d39e515f2d2af495282ffabd03b4eb70",
+      "0x2d3552b164e5c91e6fefd6a2d4cf5f6a20215cc14077a809e8882323ec795582",
+      "0x454d68e2d0443cbb54b6c92d57cb3599151b2c6df0c963eda84e3aaa4848411d",
+      "0x5242f219e492787fa161c2de7d7f3cd4ab9baf25af0b7f1973d14357f7c35a17",
+      "0x664f57ed86176f8a463fc0ae05ee6bf30e79effa264682a57b3fcb16fe6c7045",
+      "0x3126e697d68635f73fb559892900cd6994313dd431a6c15c025e694f11b97dd0",
+      "0xe344820d6bf88a7797dd75c241f095bd48995d19a02c3c4fb59b23c115134f58",
+      "0x3a3cd96249452b2502077182ac3d709ab834b91df823ab18bc6734e0b6432f5b",
+      "0x44b0ba4986017379296a2ce492c0407f04e6b23a4f82c99c9714ce4c91e83e51",
+      "0x0c030d83381eec0e53bdd1fd5b79b3ef85690ca20ce7a3dc8078083b1d5addd1",
+      "0xc4e75dac5773bfae6edd79299c79f0c72344ba1b6c9c6ca33c19e1c81ca3620a",
+      "0x40e85d7a1c7ee7fffbc512a97f4a679d750be2ea5bab98aa2dffa2868ea89b5a",
+      "0x8939e1339e9858a47d1ec2b914139005172c15fe30051d73503caf9adb85b6a5",
+      "0xfaa371012a297e8e15463cf4ff23a2ca5f1754fd49df76e65c56d3710ca98b3c",
+      "0x49b8ea300cd6286b8aff686c126a1e730f259e4b8f8a4f76ec99d6fb919b45c0",
+      "0x18146d34d01e9f467c20d7659b67e4a8f8f9ed2ad9ff007341ab8d824581d809",
+      "0x9474b17619c724f944eaf9d497a2d8f25060e0b790130389222eac2149083072",
+      "0xa38734b1af4f81efa0c6866bb63a61fe08b45f72f0654cb88b4637532577920c",
+      "0x05aac4359c5c3b81904723ecb6a9ef9f116a45a6793415d86db24c5ebddf4ad2",
+      "0xd1274d1272419f7019f21828857a6f0805f33f04d8c781f4552491dbcec662f0",
+      "0xe865919067e47d77d9081cce073fe98d9fef41a1b077e570c4f15bd15bf920ae",
+      "0x604cf26491b79aed17756a3b6143e3aadfe28748cb3b5ab40e3584884a7e9a18",
+      "0xe4a3e17a99798cb913aae89cc26b18e0e8a3657f9f0fdacdee2ec9de2395faa9",
+      "0xcf08b5adf8f86112c96c5ea1a8fec9957b250812150afaedf6b7d8fa84b1af29",
+      "0x6d9163650bb5383f4da3e3b4160549b4cdbccbf550e385403c57801499b6c98a",
+      "0xb2df023cdb671c17d7994777395bf2b35e4b56ad79b5bfc1edc93b6c008ad31c",
+      "0xd9afb697da09df073240b29ea6a2547ac15ac067892e9084b435081de99055b9",
+      "0x40bbaf7d68466f81ce503b6393c38363979008ed3e0194114f1986b22901f915",
+      "0xd0176166d092ecc6026b913cf9a1f4a494954433cc6fa8ba07b14887126022a7",
+      "0x8c936073b6de0174789c1d45318b0806d21d02c8a17df7527c91b8f2c6a4d4fe",
+      "0x1585b50ad81fd416fa4340ad7667e92b738c488165c8bc34db48bb6249214636",
+      "0xa5af124de3b9827017a146cdf6779beceabf46197200b0e9d5571ce5a5d5543d",
+      "0xa41f14f50c4ba55ee136935e8e788601eae10648b6f4ff8fdd8453f2e4246344",
+      "0x1437b87706f0f69f9e9c04c90f562b411221d8e60ee9b313a066e027cc62cda4",
+      "0x0641456210a5805a5aa40c993c8a19a377e5ab2193b75495ffb62355a439899c",
+      "0xb57316ce2cdd00fa6c1fa27e98059a98fda58680c89750066d0e1e5612670712",
+      "0x9890c239419e5f29b064bb7bf407b1e896e433cd7462f75b854084140fdfe1e4",
+      "0xb2165ba9b22e9f65164cb258c0a4c9a4a960eea87aa554595a7985c56a831729",
+      "0x9216f01b62b578630da6e230b7feb5e1daa28ae6fb6e8430556bf4257e531449",
+      "0x5974cc28ef7a85e5b5ea78ea79be9736fbba5bb34b26012f7275782bd5f23030",
+      "0x67755fff92ae77904f59146c5ac7fa567339c448f6ecb0c63cc83d7ef0cb7da6",
+      "0x36444dcd44f442bc3d199773cc2a31225c59bff05fb890b5d3ce719edd5fe7ff",
+      "0x8fc2b7d75f012dc655589809543eca5f71e145a2faebed6e188daf8166dff621",
+      "0x91ebb84ad0b28c0543f899dc52473679c2c12b381e2a04434b1c8ee6e951f1a5",
+      "0xa44c69033d909fae0ad2af722788a7e9912577cfd50ffe9778e304c8f491cb58",
+      "0xa4c8c07abb393d0785a00fd1ce7ce84aa2c886fad2c4e40bb7fbfa28965f9b09",
+      "0x9a644f7fc36d1fbf129f72a3c61e0ed489f4b70287afb63fc0a4b4c60654da29",
+      "0xbcfc04e13170a61bf95263bd7205b08a30394ac5c366ea61c58083e3527f893a",
+      "0xd07d4658dbc203961fd6d1a3f0dbfdd04d67828adc5047812513593b0c5cb712",
+      "0xd0863b90fe1ebbf36cfe0b743e0ffc739ff58ce1760fb48727f96a6505b2915c",
+      "0x00e56517cd58d5e37f5d97a7e0cefde54b917db982a9f0d7a65717345947a931",
+      "0x82f3a09682c7c21a003983c3e6f6d02701f5ab334b9d8cbf0ecc22de555dc077",
+      "0x27c3e45f84f69d00e4fb49686f3278ac667900763988a85a48fa4a89485d7b99",
+      "0xb204115eb0519cd11a608b8302467b5790db22deed4defb940cadc6acacc17cc",
+      "0xb6604a6f86131d93dba3ef031361131ed7ccc19818486b98a1001259af18b34a",
+      "0x41020f84a62b7236a266b27197fcce54735625e3533b6a5aed8ce1f5b0e5827b",
+      "0x854dcf7a38a108720ff73992f664c60edd6c46f39bb2dbc3351d3fe3e3a79dbb",
+      "0xeac5c021fb802ded5c07a116225d657f8aa53664f94e2a0af48232f4d31d1c89",
+      "0xc38e39c4c6b4b5a189123c1edc9320fc7ef1401ac5d938f65248a3be7268c0b7",
+      "0x9a71a71b9d6bfc6ceeabab8cdaf496af64b3d118f3e3d32941fac2535fc52848"
+    ]
+  },
+  "pendingOrUnknown": [],
+  "nonceCoverage": [
+    {
+      "address": "0xb46334d7786cd6c288949e1d21642df0d2395498",
+      "fromNonce": 19,
+      "throughNonceExclusive": 55,
+      "retainedTransactions": 36
+    },
+    {
+      "address": "0x80865d6e8f3d98c0f43b2fe5e3496d8e284fac64",
+      "fromNonce": 0,
+      "throughNonceExclusive": 8,
+      "retainedTransactions": 8
+    },
+    {
+      "address": "0xea31c0a4dcafa5ab5f37842d34c47c0804ad5433",
+      "fromNonce": 0,
+      "throughNonceExclusive": 6,
+      "retainedTransactions": 6
+    },
+    {
+      "address": "0x627c328f112b42875f63c59eab9b8e65b413fa92",
+      "fromNonce": 0,
+      "throughNonceExclusive": 14,
+      "retainedTransactions": 14
+    },
+    {
+      "address": "0xee6404ed1e1d073a3034d893032329f01e98ed89",
+      "fromNonce": 0,
+      "throughNonceExclusive": 9,
+      "retainedTransactions": 9
+    },
+    {
+      "address": "0xf2955d518850c037d02b9c25a1d6ea47af6359a5",
+      "fromNonce": 0,
+      "throughNonceExclusive": 2,
+      "retainedTransactions": 2
+    },
+    {
+      "address": "0xb25898f5e4907e6925741b10dea46f351104a0e4",
+      "fromNonce": 0,
+      "throughNonceExclusive": 15,
+      "retainedTransactions": 15
+    },
+    {
+      "address": "0x0c5e09658141b4e931efef2d1e825f22b7283b01",
+      "fromNonce": 0,
+      "throughNonceExclusive": 26,
+      "retainedTransactions": 26
+    },
+    {
+      "address": "0xcb3340f60b88f2fa6f5820d4b24899938143dbc2",
+      "fromNonce": 0,
+      "throughNonceExclusive": 7,
+      "retainedTransactions": 7
+    },
+    {
+      "address": "0x92686a568fcdf0142f2d2448dd009a927111c80f",
+      "fromNonce": 0,
+      "throughNonceExclusive": 7,
+      "retainedTransactions": 7
+    },
+    {
+      "address": "0x0af8908ad8c80e886e651311869ad3d28eca1a85",
+      "fromNonce": 0,
+      "throughNonceExclusive": 0,
+      "retainedTransactions": 0
+    }
+  ],
+  "snapshots": [
+    {
+      "blockNumber": "67030500",
+      "blockHash": "0xf97c4503cc01d9f1044607bea46bd3f9816c6e4a811ff6b38f3f1d0c91eefd6d",
+      "values": [
+        {
+          "address": "0xb46334d7786cd6c288949e1d21642df0d2395498",
+          "balanceWei": "9090220472422335",
+          "nonce": 19
+        },
+        {
+          "address": "0x80865d6e8f3d98c0f43b2fe5e3496d8e284fac64",
+          "balanceWei": "0",
+          "nonce": 0
+        },
+        {
+          "address": "0xea31c0a4dcafa5ab5f37842d34c47c0804ad5433",
+          "balanceWei": "0",
+          "nonce": 0
+        },
+        {
+          "address": "0x627c328f112b42875f63c59eab9b8e65b413fa92",
+          "balanceWei": "0",
+          "nonce": 0
+        },
+        {
+          "address": "0xee6404ed1e1d073a3034d893032329f01e98ed89",
+          "balanceWei": "0",
+          "nonce": 0
+        },
+        {
+          "address": "0xf2955d518850c037d02b9c25a1d6ea47af6359a5",
+          "balanceWei": "0",
+          "nonce": 0
+        },
+        {
+          "address": "0xb25898f5e4907e6925741b10dea46f351104a0e4",
+          "balanceWei": "0",
+          "nonce": 0
+        },
+        {
+          "address": "0x0c5e09658141b4e931efef2d1e825f22b7283b01",
+          "balanceWei": "0",
+          "nonce": 0
+        },
+        {
+          "address": "0xcb3340f60b88f2fa6f5820d4b24899938143dbc2",
+          "balanceWei": "0",
+          "nonce": 0
+        },
+        {
+          "address": "0x92686a568fcdf0142f2d2448dd009a927111c80f",
+          "balanceWei": "0",
+          "nonce": 0
+        },
+        {
+          "address": "0x0af8908ad8c80e886e651311869ad3d28eca1a85",
+          "balanceWei": "0",
+          "nonce": 0
+        }
+      ],
+      "totalNativeWei": "9090220472422335"
+    },
+    {
+      "blockNumber": "67043568",
+      "blockHash": "0x1a31db490d5ab871d033f0e71114e55eb8ce3d02cf80cd190a0b0a94e96798ed",
+      "values": [
+        {
+          "address": "0xb46334d7786cd6c288949e1d21642df0d2395498",
+          "balanceWei": "8561770278316463",
+          "nonce": 55
+        },
+        {
+          "address": "0x80865d6e8f3d98c0f43b2fe5e3496d8e284fac64",
+          "balanceWei": "49281979998104",
+          "nonce": 8
+        },
+        {
+          "address": "0xea31c0a4dcafa5ab5f37842d34c47c0804ad5433",
+          "balanceWei": "48150967997633",
+          "nonce": 6
+        },
+        {
+          "address": "0x627c328f112b42875f63c59eab9b8e65b413fa92",
+          "balanceWei": "48902793497022",
+          "nonce": 14
+        },
+        {
+          "address": "0xee6404ed1e1d073a3034d893032329f01e98ed89",
+          "balanceWei": "48058105997555",
+          "nonce": 9
+        },
+        {
+          "address": "0xf2955d518850c037d02b9c25a1d6ea47af6359a5",
+          "balanceWei": "49871479999400",
+          "nonce": 2
+        },
+        {
+          "address": "0xb25898f5e4907e6925741b10dea46f351104a0e4",
+          "balanceWei": "47327296995603",
+          "nonce": 15
+        },
+        {
+          "address": "0x0c5e09658141b4e931efef2d1e825f22b7283b01",
+          "balanceWei": "45151537993202",
+          "nonce": 26
+        },
+        {
+          "address": "0xcb3340f60b88f2fa6f5820d4b24899938143dbc2",
+          "balanceWei": "48960919998533",
+          "nonce": 7
+        },
+        {
+          "address": "0x92686a568fcdf0142f2d2448dd009a927111c80f",
+          "balanceWei": "48726600498258",
+          "nonce": 7
+        },
+        {
+          "address": "0x0af8908ad8c80e886e651311869ad3d28eca1a85",
+          "balanceWei": "50000000000000",
+          "nonce": 0
+        }
+      ],
+      "totalNativeWei": "9046201961291773"
+    }
+  ],
+  "fromBlock": "67030500",
+  "throughBlock": "67043568",
+  "walletCount": 11,
+  "actualTotalNativeCostWei": "44018511130562",
+  "actualTotalNativeCostEth": "0.000044018511130562",
+  "nativeCostSincePriorAccountingWei": "11990899528812",
+  "method": "Historical balance depletion across all11controlled fixture wallets before bootstrap through active marketplace completion. Internal native transfers cancel; the depletion includes execution and OP-stack data fees. Every outgoing nonce is covered by the shared retained journal.",
+  "receiptFees": {
+    "completeL1FeeFields": true,
+    "reportedFeeTotalWei": "44018511130562",
+    "rows": [
+      {
+        "hash": "0xe82937d8ef72ecb8adac80b1ac8da780258a02bdcc7cb125c833f35b164852ef",
+        "executionFeeWei": "72492000000",
+        "l1FeeWei": "240"
+      },
+      {
+        "hash": "0x165466dc25911bd763d0bfbfb7bf441c0f013f6d71b6ee06db48a979b1a8c976",
+        "executionFeeWei": "340641000000",
+        "l1FeeWei": "270"
+      },
+      {
+        "hash": "0xb544a1176284240228e17bc8b0fe0085bb0dcdd4dc760037a11af7f9316d033e",
+        "executionFeeWei": "69004500000",
+        "l1FeeWei": "240"
+      },
+      {
+        "hash": "0xc5e6cba6ba8188d1f158f8e1c7987f525df86d5e908f23c3da50bd121702f642",
+        "executionFeeWei": "631702500000",
+        "l1FeeWei": "437"
+      },
+      {
+        "hash": "0x2ca260afd956dd361aba845cf66c4cbdc17c719f37edf4ff92db1b039e70d938",
+        "executionFeeWei": "129931500000",
+        "l1FeeWei": "150"
+      },
+      {
+        "hash": "0x65af73679d6b3b1cfa6b61a5319795bef337200545db5ef79378d5d946d55fdb",
+        "executionFeeWei": "68896500000",
+        "l1FeeWei": "240"
+      },
+      {
+        "hash": "0x2519e103b1a8fd167529d3a62b9ff632fe16d65683609ff029f1d3a33dd93b64",
+        "executionFeeWei": "315768000000",
+        "l1FeeWei": "240"
+      },
+      {
+        "hash": "0x91c3b8be479135190a35b70792347542dcba1ed8c0db599a9ebf0bf73113ad78",
+        "executionFeeWei": "112107000000",
+        "l1FeeWei": "257"
+      },
+      {
+        "hash": "0x99aefeeba6fc37e8f901bcbd1cb104feb84deb7c6ecd231056e919499ae15fc2",
+        "executionFeeWei": "72492000000",
+        "l1FeeWei": "244"
+      },
+      {
+        "hash": "0x6b90c22d3a0dd03f3c55006557daea5bcb21755f8f734cd5568f93e62a5025f3",
+        "executionFeeWei": "322191000000",
+        "l1FeeWei": "172"
+      },
+      {
+        "hash": "0xc11ce334e6285010ca06fe29be5608f9954a0da1a6b69d0f73ddcc50e5fe761b",
+        "executionFeeWei": "68896500000",
+        "l1FeeWei": "240"
+      },
+      {
+        "hash": "0xc6f4e2b5ae3c756e3cf359aa7646c67522bcdbcd308d1b1161cfd51668366902",
+        "executionFeeWei": "161868000000",
+        "l1FeeWei": "237"
+      },
+      {
+        "hash": "0xd65170d62c31bc2cceb0d4f43fa45118f060b91d7599afcf5d90f62a52dfdb06",
+        "executionFeeWei": "112107000000",
+        "l1FeeWei": "250"
+      },
+      {
+        "hash": "0x0c8f5144310a807604099d60c48e391b29583c78ac3eb6515eec2b8a60189f88",
+        "executionFeeWei": "43354500000",
+        "l1FeeWei": "237"
+      },
+      {
+        "hash": "0xee4af0e64e3ea0378b895e8f0acfa51349b88cee80595e4b3c284e8626839541",
+        "executionFeeWei": "340531500000",
+        "l1FeeWei": "373"
+      },
+      {
+        "hash": "0x233a13e0f972a3caa4efc7339a680d74aae6f4678266163b0332a7d50318f4d1",
+        "executionFeeWei": "72492000000",
+        "l1FeeWei": "234"
+      },
+      {
+        "hash": "0x0be2970538a528b4d034f8cc24fae56b6a1d22621422f6450fd15c9c4e6d0ae3",
+        "executionFeeWei": "322173000000",
+        "l1FeeWei": "262"
+      },
+      {
+        "hash": "0x03ea4a6be8c7d2ec248a4473941e25fbaa3431699524f015fb4330192a0bb670",
+        "executionFeeWei": "43336500000",
+        "l1FeeWei": "231"
+      },
+      {
+        "hash": "0x6a6d7258ad6e8b2938a7f3caf0f53f96c8b8f0770c3d69bb92dd924040f3f7dd",
+        "executionFeeWei": "315295500000",
+        "l1FeeWei": "363"
+      },
+      {
+        "hash": "0xf246f39a776b4373115c1eb754789155190e45bf6703f839eaedd04487d9ee82",
+        "executionFeeWei": "68968500000",
+        "l1FeeWei": "244"
+      },
+      {
+        "hash": "0xc5e83f1cb3797cc9fb36258a13fb47cee822e38726c78020502d00d6cef56fbf",
+        "executionFeeWei": "234376500000",
+        "l1FeeWei": "394"
+      },
+      {
+        "hash": "0x7adc272e4709c21435636412847833e3b4cf2a61a35cbd5736ae46c4c145e002",
+        "executionFeeWei": "107697000000",
+        "l1FeeWei": "345"
+      },
+      {
+        "hash": "0x2d0880992e28e311bd32edd2eb8e59b1ae9edd433023ef6ee347b1d30e79a052",
+        "executionFeeWei": "68896500000",
+        "l1FeeWei": "147"
+      },
+      {
+        "hash": "0xcb249de70245d930a2c1aeed8fa40c4c3a4e5e9b6e92c327d783eb57c13b7c9c",
+        "executionFeeWei": "425779500000",
+        "l1FeeWei": "367"
+      },
+      {
+        "hash": "0x96d3cd1199aee68200b3c8d90b373dc99d9cd128229f3ff313cc17f7dc327e55",
+        "executionFeeWei": "72510000000",
+        "l1FeeWei": "147"
+      },
+      {
+        "hash": "0x47ef52f9ff38c205efb271eaef2c0d0e0b8e61008a994c44b6f3c4ee4cb482fe",
+        "executionFeeWei": "254953500000",
+        "l1FeeWei": "237"
+      },
+      {
+        "hash": "0x6c34e9c73edb77459f2b508bec3249194621251d1424bb65cc1b5f28bf7d9f13",
+        "executionFeeWei": "69079500000",
+        "l1FeeWei": "234"
+      },
+      {
+        "hash": "0xf851f36e61cdf4e802b120b9b869b4d172a4aa10220758d44515c520ce15801f",
+        "executionFeeWei": "43429500000",
+        "l1FeeWei": "234"
+      },
+      {
+        "hash": "0x4536ead714a3e799d2e207e91a8be76ca44bd61d3e160e132dbc19b39d322fbd",
+        "executionFeeWei": "43429500000",
+        "l1FeeWei": "240"
+      },
+      {
+        "hash": "0xe0657fc0e837148869934e4e10f01f7ed5150208960058d20dc99df86fef910c",
+        "executionFeeWei": "43429500000",
+        "l1FeeWei": "237"
+      },
+      {
+        "hash": "0x8e24262fcee82b30ab073579681977a79a55e87a4aa27449f0597014d8fcddb4",
+        "executionFeeWei": "43429500000",
+        "l1FeeWei": "231"
+      },
+      {
+        "hash": "0x02ac27334736e726955018841ba6b809b329323c84301acc8299f8b8c837d638",
+        "executionFeeWei": "109650000000",
+        "l1FeeWei": "250"
+      },
+      {
+        "hash": "0xf7dec105f3bd07f7f550be23ce3d1710ff27701bb8852999df16cde43fd05026",
+        "executionFeeWei": "109650000000",
+        "l1FeeWei": "154"
+      },
+      {
+        "hash": "0x428e075869d8bf1ab55ada9a7fc16ecf5d11a4dd26b9a46b3ca8d67888f2efcd",
+        "executionFeeWei": "109650000000",
+        "l1FeeWei": "240"
+      },
+      {
+        "hash": "0xa42977a5ec8da144745bb29b4158219a308be350421dd54cf3ec15171ad81413",
+        "executionFeeWei": "109650000000",
+        "l1FeeWei": "240"
+      },
+      {
+        "hash": "0x365d2651ad4852f6d3b5fd6f4959010ec9ec622dcfbf53730851475ff023e9f4",
+        "executionFeeWei": "109650000000",
+        "l1FeeWei": "147"
+      },
+      {
+        "hash": "0x25093e2f6904abca19f4a552d81e0a5a15b7d59860c7663dbf8c6689adde37f7",
+        "executionFeeWei": "109650000000",
+        "l1FeeWei": "237"
+      },
+      {
+        "hash": "0x35d250fefdd9773fea00c76b60e81bfed78519b2065ebfb7e26cfb044da3de35",
+        "executionFeeWei": "109650000000",
+        "l1FeeWei": "147"
+      },
+      {
+        "hash": "0xa820614a6bfdbf35d6c35e4e1d0dd25eef89f5be7ac7ef430293d074e5d0d0a2",
+        "executionFeeWei": "43429500000",
+        "l1FeeWei": "237"
+      },
+      {
+        "hash": "0x24b7290ba1b5478065747217cb9fe63395921f12e2e701a2c9e4a805bcf9a36b",
+        "executionFeeWei": "43429500000",
+        "l1FeeWei": "150"
+      },
+      {
+        "hash": "0x4cb6c7bbd531b1149b868991b00b8c5000837c9160396b9c00d34b33bf685720",
+        "executionFeeWei": "105750000000",
+        "l1FeeWei": "237"
+      },
+      {
+        "hash": "0xe59e64291d561c1744c92cf7dfe843fa3cd40e598b9786feb5087537cbf87d29",
+        "executionFeeWei": "105822000000",
+        "l1FeeWei": "237"
+      },
+      {
+        "hash": "0xbf82c10c318a81be471a1c5afe41300cc8b0bd1a36b9badd9301b18ac2b63bca",
+        "executionFeeWei": "105822000000",
+        "l1FeeWei": "237"
+      },
+      {
+        "hash": "0x1a617f0f6d1a8955ac1f0600df850c232b9e7026e8412234bb4f536e7e54ee1a",
+        "executionFeeWei": "80100000000",
+        "l1FeeWei": "237"
+      },
+      {
+        "hash": "0x4b658d490bbb86611c3c30d6e366e4ebbb675b82a8a220540b71a54a03ad0737",
+        "executionFeeWei": "80100000000",
+        "l1FeeWei": "237"
+      },
+      {
+        "hash": "0x54b263b49b4699fcc888e13a5c6f207fe5224756ed9a7f9b0aa303f49b082c9e",
+        "executionFeeWei": "80172000000",
+        "l1FeeWei": "237"
+      },
+      {
+        "hash": "0xbdc72e2f40fc657ea57e89f9d307f5de879efea9576948ab6174d8026ced6d04",
+        "executionFeeWei": "80172000000",
+        "l1FeeWei": "237"
+      },
+      {
+        "hash": "0x4240ee4d853ca2fac765083617a35317ea2b8971c54cb166837559d0d0fede41",
+        "executionFeeWei": "80082000000",
+        "l1FeeWei": "237"
+      },
+      {
+        "hash": "0xa5ed5712d62bc57dd71130bb2dc75f46845fefa239b246b46263f888692d5a2d",
+        "executionFeeWei": "68896500000",
+        "l1FeeWei": "234"
+      },
+      {
+        "hash": "0xa15cf58f3e988d9c0d62f5f7767b6e213882f70133f777ea599e8ec9c4a4ac55",
+        "executionFeeWei": "142194000000",
+        "l1FeeWei": "141"
+      },
+      {
+        "hash": "0x1328a19a98419793b4cd040dd29ba1b57744480c57f66e3244f57ad9a9f6cef2",
+        "executionFeeWei": "119289000000",
+        "l1FeeWei": "240"
+      },
+      {
+        "hash": "0x1311e66e1ce95d6a2cf8dc65e669783d2a66e88c553955e3c0b858a8942e6a4f",
+        "executionFeeWei": "129931500000",
+        "l1FeeWei": "228"
+      },
+      {
+        "hash": "0xceb4130781f6953e90dd0751e4f0641ab12272fe1b0dca7c20834fe066ac22bc",
+        "executionFeeWei": "68896500000",
+        "l1FeeWei": "240"
+      },
+      {
+        "hash": "0x171e835f5f18c59c456662b7d67e1d9549c734de057dbc5220bd64ef599b43c6",
+        "executionFeeWei": "614242500000",
+        "l1FeeWei": "419"
+      },
+      {
+        "hash": "0x01c63431c99a2fb63edc459ecff63eec5b1f1df69574532ab92d1585b0bf66d2",
+        "executionFeeWei": "129949500000",
+        "l1FeeWei": "240"
+      },
+      {
+        "hash": "0x4f1bd696474cca685f6d7ee572f449f4a5e6c7919bd201991d5cbdb874a91f35",
+        "executionFeeWei": "68896500000",
+        "l1FeeWei": "237"
+      },
+      {
+        "hash": "0x6bee8dff5369b5b22b1c0f16f2f1bb65079857f2b0e9601b52419b96e3cbdb66",
+        "executionFeeWei": "71439000000",
+        "l1FeeWei": "276"
+      },
+      {
+        "hash": "0xb018418a376216f264427ed69a7fe2a53d251db3b9bbf62032f3a4c64bf55fd9",
+        "executionFeeWei": "68824500000",
+        "l1FeeWei": "147"
+      },
+      {
+        "hash": "0x7115eb35f9cc9eb9ac236bbaa26aa1c2b8d96d448316e70b60b8aeab7d6edc22",
+        "executionFeeWei": "71385000000",
+        "l1FeeWei": "264"
+      },
+      {
+        "hash": "0x734e08754cb47f7971c6455ebcaf8c8012615b62920c745b9208ef1736a8561d",
+        "executionFeeWei": "679278000000",
+        "l1FeeWei": "626"
+      },
+      {
+        "hash": "0x69606fa50e98ada2000cacda2c405b58267d7fc6f9012a041e99d4ec59e9e1c0",
+        "executionFeeWei": "68896500000",
+        "l1FeeWei": "234"
+      },
+      {
+        "hash": "0x52632fc64de9ea433bece670f32ae681015d7206543896e21b923422395073c0",
+        "executionFeeWei": "71457000000",
+        "l1FeeWei": "272"
+      },
+      {
+        "hash": "0xe873009ff82b42c23344c83b7a80eac0ba8e2ddf29c0877c93b6773396494dc2",
+        "executionFeeWei": "43174500000",
+        "l1FeeWei": "234"
+      },
+      {
+        "hash": "0x09f847634a7bb48121f0177f0df895df7a48c2b42cbaf3faa168951d5ee049fb",
+        "executionFeeWei": "45735000000",
+        "l1FeeWei": "260"
+      },
+      {
+        "hash": "0x35e8254c8b6232a8eef7c3b7d1419379a8b078669c84f322987c1fc20adda8e6",
+        "executionFeeWei": "597316500000",
+        "l1FeeWei": "574"
+      },
+      {
+        "hash": "0x051e73cf6546af7dffa629c98020057c9cfc4773da5a34915ba406115f585e76",
+        "executionFeeWei": "43246500000",
+        "l1FeeWei": "170"
+      },
+      {
+        "hash": "0xd9e82c6008a72f8a34027c14695f397717cd5aaac79960ed6b371ae67b811b97",
+        "executionFeeWei": "45789000000",
+        "l1FeeWei": "302"
+      },
+      {
+        "hash": "0x4f7e50a9b31d4445b58278129838ef93977ed80665194b4bd97a9e266b6c6969",
+        "executionFeeWei": "43174500000",
+        "l1FeeWei": "170"
+      },
+      {
+        "hash": "0x35ac2dfc8c31b0596c335aa9e11b4ff1bb1fdfe57d6e8046f4ab36dadaf16ed0",
+        "executionFeeWei": "45735000000",
+        "l1FeeWei": "190"
+      },
+      {
+        "hash": "0xd2723cd4306e46d973c394d653a5faeffcf80d68d51168fb23143bb55058b1b5",
+        "executionFeeWei": "708355500000",
+        "l1FeeWei": "441"
+      },
+      {
+        "hash": "0xe3cb21150d92aafbb1b86f918fcda2a3d39e515f2d2af495282ffabd03b4eb70",
+        "executionFeeWei": "31500000000",
+        "l1FeeWei": "150"
+      },
+      {
+        "hash": "0x2d3552b164e5c91e6fefd6a2d4cf5f6a20215cc14077a809e8882323ec795582",
+        "executionFeeWei": "31500000000",
+        "l1FeeWei": "150"
+      },
+      {
+        "hash": "0x454d68e2d0443cbb54b6c92d57cb3599151b2c6df0c963eda84e3aaa4848411d",
+        "executionFeeWei": "31500000000",
+        "l1FeeWei": "240"
+      },
+      {
+        "hash": "0x5242f219e492787fa161c2de7d7f3cd4ab9baf25af0b7f1973d14357f7c35a17",
+        "executionFeeWei": "31500000000",
+        "l1FeeWei": "240"
+      },
+      {
+        "hash": "0x664f57ed86176f8a463fc0ae05ee6bf30e79effa264682a57b3fcb16fe6c7045",
+        "executionFeeWei": "31500000000",
+        "l1FeeWei": "240"
+      },
+      {
+        "hash": "0x3126e697d68635f73fb559892900cd6994313dd431a6c15c025e694f11b97dd0",
+        "executionFeeWei": "31500000000",
+        "l1FeeWei": "150"
+      },
+      {
+        "hash": "0xe344820d6bf88a7797dd75c241f095bd48995d19a02c3c4fb59b23c115134f58",
+        "executionFeeWei": "31500000000",
+        "l1FeeWei": "150"
+      },
+      {
+        "hash": "0x3a3cd96249452b2502077182ac3d709ab834b91df823ab18bc6734e0b6432f5b",
+        "executionFeeWei": "31500000000",
+        "l1FeeWei": "150"
+      },
+      {
+        "hash": "0x44b0ba4986017379296a2ce492c0407f04e6b23a4f82c99c9714ce4c91e83e51",
+        "executionFeeWei": "31500000000",
+        "l1FeeWei": "240"
+      },
+      {
+        "hash": "0x0c030d83381eec0e53bdd1fd5b79b3ef85690ca20ce7a3dc8078083b1d5addd1",
+        "executionFeeWei": "31500000000",
+        "l1FeeWei": "240"
+      },
+      {
+        "hash": "0xc4e75dac5773bfae6edd79299c79f0c72344ba1b6c9c6ca33c19e1c81ca3620a",
+        "executionFeeWei": "1182640500000",
+        "l1FeeWei": "5815"
+      },
+      {
+        "hash": "0x40e85d7a1c7ee7fffbc512a97f4a679d750be2ea5bab98aa2dffa2868ea89b5a",
+        "executionFeeWei": "1189909500000",
+        "l1FeeWei": "6359"
+      },
+      {
+        "hash": "0x8939e1339e9858a47d1ec2b914139005172c15fe30051d73503caf9adb85b6a5",
+        "executionFeeWei": "1189911000000",
+        "l1FeeWei": "6357"
+      },
+      {
+        "hash": "0xfaa371012a297e8e15463cf4ff23a2ca5f1754fd49df76e65c56d3710ca98b3c",
+        "executionFeeWei": "3648216000000",
+        "l1FeeWei": "9616"
+      },
+      {
+        "hash": "0x49b8ea300cd6286b8aff686c126a1e730f259e4b8f8a4f76ec99d6fb919b45c0",
+        "executionFeeWei": "1877164500000",
+        "l1FeeWei": "7970"
+      },
+      {
+        "hash": "0x18146d34d01e9f467c20d7659b67e4a8f8f9ed2ad9ff007341ab8d824581d809",
+        "executionFeeWei": "4129968000000",
+        "l1FeeWei": "16815"
+      },
+      {
+        "hash": "0x9474b17619c724f944eaf9d497a2d8f25060e0b790130389222eac2149083072",
+        "executionFeeWei": "408520500000",
+        "l1FeeWei": "1850"
+      },
+      {
+        "hash": "0xa38734b1af4f81efa0c6866bb63a61fe08b45f72f0654cb88b4637532577920c",
+        "executionFeeWei": "264849000000",
+        "l1FeeWei": "1057"
+      },
+      {
+        "hash": "0x05aac4359c5c3b81904723ecb6a9ef9f116a45a6793415d86db24c5ebddf4ad2",
+        "executionFeeWei": "1622140500000",
+        "l1FeeWei": "4405"
+      },
+      {
+        "hash": "0xd1274d1272419f7019f21828857a6f0805f33f04d8c781f4552491dbcec662f0",
+        "executionFeeWei": "78139500000",
+        "l1FeeWei": "208"
+      },
+      {
+        "hash": "0xe865919067e47d77d9081cce073fe98d9fef41a1b077e570c4f15bd15bf920ae",
+        "executionFeeWei": "77800500000",
+        "l1FeeWei": "286"
+      },
+      {
+        "hash": "0x604cf26491b79aed17756a3b6143e3aadfe28748cb3b5ab40e3584884a7e9a18",
+        "executionFeeWei": "2962344000000",
+        "l1FeeWei": "13390"
+      },
+      {
+        "hash": "0xe4a3e17a99798cb913aae89cc26b18e0e8a3657f9f0fdacdee2ec9de2395faa9",
+        "executionFeeWei": "77652000000",
+        "l1FeeWei": "237"
+      },
+      {
+        "hash": "0xcf08b5adf8f86112c96c5ea1a8fec9957b250812150afaedf6b7d8fa84b1af29",
+        "executionFeeWei": "1427332500000",
+        "l1FeeWei": "6413"
+      },
+      {
+        "hash": "0x6d9163650bb5383f4da3e3b4160549b4cdbccbf550e385403c57801499b6c98a",
+        "executionFeeWei": "3884590500000",
+        "l1FeeWei": "11303"
+      },
+      {
+        "hash": "0xb2df023cdb671c17d7994777395bf2b35e4b56ad79b5bfc1edc93b6c008ad31c",
+        "executionFeeWei": "221808000000",
+        "l1FeeWei": "378"
+      },
+      {
+        "hash": "0xd9afb697da09df073240b29ea6a2547ac15ac067892e9084b435081de99055b9",
+        "executionFeeWei": "2962362000000",
+        "l1FeeWei": "9583"
+      },
+      {
+        "hash": "0x40bbaf7d68466f81ce503b6393c38363979008ed3e0194114f1986b22901f915",
+        "executionFeeWei": "52645500000",
+        "l1FeeWei": "170"
+      },
+      {
+        "hash": "0xd0176166d092ecc6026b913cf9a1f4a494954433cc6fa8ba07b14887126022a7",
+        "executionFeeWei": "109650000000",
+        "l1FeeWei": "253"
+      },
+      {
+        "hash": "0x8c936073b6de0174789c1d45318b0806d21d02c8a17df7527c91b8f2c6a4d4fe",
+        "executionFeeWei": "109650000000",
+        "l1FeeWei": "163"
+      },
+      {
+        "hash": "0x1585b50ad81fd416fa4340ad7667e92b738c488165c8bc34db48bb6249214636",
+        "executionFeeWei": "109650000000",
+        "l1FeeWei": "163"
+      },
+      {
+        "hash": "0xa5af124de3b9827017a146cdf6779beceabf46197200b0e9d5571ce5a5d5543d",
+        "executionFeeWei": "109650000000",
+        "l1FeeWei": "250"
+      },
+      {
+        "hash": "0xa41f14f50c4ba55ee136935e8e788601eae10648b6f4ff8fdd8453f2e4246344",
+        "executionFeeWei": "109650000000",
+        "l1FeeWei": "247"
+      },
+      {
+        "hash": "0x1437b87706f0f69f9e9c04c90f562b411221d8e60ee9b313a066e027cc62cda4",
+        "executionFeeWei": "109650000000",
+        "l1FeeWei": "244"
+      },
+      {
+        "hash": "0x0641456210a5805a5aa40c993c8a19a377e5ab2193b75495ffb62355a439899c",
+        "executionFeeWei": "109650000000",
+        "l1FeeWei": "150"
+      },
+      {
+        "hash": "0xb57316ce2cdd00fa6c1fa27e98059a98fda58680c89750066d0e1e5612670712",
+        "executionFeeWei": "109650000000",
+        "l1FeeWei": "240"
+      },
+      {
+        "hash": "0x9890c239419e5f29b064bb7bf407b1e896e433cd7462f75b854084140fdfe1e4",
+        "executionFeeWei": "72510000000",
+        "l1FeeWei": "240"
+      },
+      {
+        "hash": "0xb2165ba9b22e9f65164cb258c0a4c9a4a960eea87aa554595a7985c56a831729",
+        "executionFeeWei": "254953500000",
+        "l1FeeWei": "240"
+      },
+      {
+        "hash": "0x9216f01b62b578630da6e230b7feb5e1daa28ae6fb6e8430556bf4257e531449",
+        "executionFeeWei": "69004500000",
+        "l1FeeWei": "150"
+      },
+      {
+        "hash": "0x5974cc28ef7a85e5b5ea78ea79be9736fbba5bb34b26012f7275782bd5f23030",
+        "executionFeeWei": "300418500000",
+        "l1FeeWei": "228"
+      },
+      {
+        "hash": "0x67755fff92ae77904f59146c5ac7fa567339c448f6ecb0c63cc83d7ef0cb7da6",
+        "executionFeeWei": "68896500000",
+        "l1FeeWei": "237"
+      },
+      {
+        "hash": "0x36444dcd44f442bc3d199773cc2a31225c59bff05fb890b5d3ce719edd5fe7ff",
+        "executionFeeWei": "170136000000",
+        "l1FeeWei": "234"
+      },
+      {
+        "hash": "0x8fc2b7d75f012dc655589809543eca5f71e145a2faebed6e188daf8166dff621",
+        "executionFeeWei": "103161000000",
+        "l1FeeWei": "138"
+      },
+      {
+        "hash": "0x91ebb84ad0b28c0543f899dc52473679c2c12b381e2a04434b1c8ee6e951f1a5",
+        "executionFeeWei": "440905500000",
+        "l1FeeWei": "508"
+      },
+      {
+        "hash": "0xa44c69033d909fae0ad2af722788a7e9912577cfd50ffe9778e304c8f491cb58",
+        "executionFeeWei": "440905500000",
+        "l1FeeWei": "514"
+      },
+      {
+        "hash": "0xa4c8c07abb393d0785a00fd1ce7ce84aa2c886fad2c4e40bb7fbfa28965f9b09",
+        "executionFeeWei": "175432500000",
+        "l1FeeWei": "282"
+      },
+      {
+        "hash": "0x9a644f7fc36d1fbf129f72a3c61e0ed489f4b70287afb63fc0a4b4c60654da29",
+        "executionFeeWei": "175432500000",
+        "l1FeeWei": "267"
+      },
+      {
+        "hash": "0xbcfc04e13170a61bf95263bd7205b08a30394ac5c366ea61c58083e3527f893a",
+        "executionFeeWei": "440905500000",
+        "l1FeeWei": "514"
+      },
+      {
+        "hash": "0xd07d4658dbc203961fd6d1a3f0dbfdd04d67828adc5047812513593b0c5cb712",
+        "executionFeeWei": "175450500000",
+        "l1FeeWei": "282"
+      },
+      {
+        "hash": "0xd0863b90fe1ebbf36cfe0b743e0ffc739ff58ce1760fb48727f96a6505b2915c",
+        "executionFeeWei": "68896500000",
+        "l1FeeWei": "150"
+      },
+      {
+        "hash": "0x00e56517cd58d5e37f5d97a7e0cefde54b917db982a9f0d7a65717345947a931",
+        "executionFeeWei": "487323000000",
+        "l1FeeWei": "297"
+      },
+      {
+        "hash": "0x82f3a09682c7c21a003983c3e6f6d02701f5ab334b9d8cbf0ecc22de555dc077",
+        "executionFeeWei": "68896500000",
+        "l1FeeWei": "154"
+      },
+      {
+        "hash": "0x27c3e45f84f69d00e4fb49686f3278ac667900763988a85a48fa4a89485d7b99",
+        "executionFeeWei": "461673000000",
+        "l1FeeWei": "506"
+      },
+      {
+        "hash": "0xb204115eb0519cd11a608b8302467b5790db22deed4defb940cadc6acacc17cc",
+        "executionFeeWei": "68896500000",
+        "l1FeeWei": "237"
+      },
+      {
+        "hash": "0xb6604a6f86131d93dba3ef031361131ed7ccc19818486b98a1001259af18b34a",
+        "executionFeeWei": "461655000000",
+        "l1FeeWei": "495"
+      },
+      {
+        "hash": "0x41020f84a62b7236a266b27197fcce54735625e3533b6a5aed8ce1f5b0e5827b",
+        "executionFeeWei": "126628500000",
+        "l1FeeWei": "240"
+      },
+      {
+        "hash": "0x854dcf7a38a108720ff73992f664c60edd6c46f39bb2dbc3351d3fe3e3a79dbb",
+        "executionFeeWei": "126795000000",
+        "l1FeeWei": "228"
+      },
+      {
+        "hash": "0xeac5c021fb802ded5c07a116225d657f8aa53664f94e2a0af48232f4d31d1c89",
+        "executionFeeWei": "71130000000",
+        "l1FeeWei": "138"
+      },
+      {
+        "hash": "0xc38e39c4c6b4b5a189123c1edc9320fc7ef1401ac5d938f65248a3be7268c0b7",
+        "executionFeeWei": "46992000000",
+        "l1FeeWei": "257"
+      },
+      {
+        "hash": "0x9a71a71b9d6bfc6ceeabab8cdaf496af64b3d118f3e3d32941fac2535fc52848",
+        "executionFeeWei": "81528000000",
+        "l1FeeWei": "343"
+      }
+    ]
+  }
+}

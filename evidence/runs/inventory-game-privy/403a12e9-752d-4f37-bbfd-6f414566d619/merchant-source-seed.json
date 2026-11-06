@@ -1,0 +1,33 @@
+{
+  "schema": "agentcity.inventory-game-merchant-seed-receipt.v1",
+  "status": "confirmed",
+  "recordedAt": "2026-11-06T05:10:36.252Z",
+  "scope": "One-time controlled developer operations seed to the existing merchant. This is not a customer grant or purchase authorization.",
+  "terms": {
+    "operationId": "ad57a614-351f-182b-6f29-b9010a02351d",
+    "purpose": "privy-game-starter-source-seed-v1",
+    "chainId": 1301,
+    "rpcUrl": "https://sepolia.unichain.org",
+    "genesisHash": "0xb7fe0bc9f98ca03294ca0094ff9374cc3e64130b6ec85850d6e260191f48bfe7",
+    "journalSchema": "bank_deployment_1301_9e0144797c4a",
+    "maximumNativeBudgetWei": "4000000000000000",
+    "source": "0xb46334d7786cd6c288949e1d21642df0d2395498",
+    "recipient": "0xcb3340f60b88f2fa6f5820d4b24899938143dbc2",
+    "valueWei": "1200000000000000",
+    "data": "0x",
+    "maximumGas": "30000",
+    "maximumExecutionFeeWei": "30000000000000",
+    "originalManifestSha256": "c58d3e07a02ec282b4cd4d5508bd984723201c0c07dadf7141c0ea81c8f2c23d"
+  },
+  "transactionHash": "0x0b7fca6665f55177210e399898df08af567be1d469fb661532bab3192f7051a7",
+  "receipt": {
+    "blockNumber": "67089404",
+    "blockHash": "0x63d81e4cf26273b8583356e9159ef37db8e86a9cd6d2b57c9a4f0c794732463a",
+    "confirmations": 2
+  },
+  "originalNonceJournalPreserved": true,
+  "cumulativeBudgetUnchanged": true,
+  "earlierSeedIntentsUnchanged": true,
+  "userWalletsTouched": false,
+  "liquidityTouched": false
+}

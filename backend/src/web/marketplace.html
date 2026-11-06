@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="agentcity-capability" content="{{BANK_CAPABILITY}}">
+  <title>AgentCity Marketplace</title>
+  <link rel="stylesheet" href="/marketplace.css">
+  <script type="module" src="/marketplace.mjs"></script>
+</head>
+<body>
+  <header>
+    <div><span class="eyebrow">AGENTCITY MARKETPLACE</span><h1>Buy CITY. Put your agents to work.</h1>
+      <p>Exchange test USDC for CITY, trade deposited equipment, and pay for verified agent work.</p></div>
+    <div class="account"><label for="actor">Operator test wallet</label><select id="actor"></select><button id="refresh" type="button">Refresh</button></div>
+  </header>
+  <aside class="disclosure">Unichain Sepolia demonstration. tUSDC is a mock token without dollar backing. These wallets and players are controlled test actors. CITY has no guaranteed price. Liquidity providers can lose funds.</aside>
+  <div id="notice" role="status" aria-live="polite">Connecting to the laptop marketplace…</div>
+  <section class="balances" aria-label="Wallet balances">
+    <div><span>CITY</span><strong id="balance-city">—</strong></div>
+    <div><span>Test USDC</span><strong id="balance-usdc">—</strong></div>
+    <div><span>Test ETH for gas</span><strong id="balance-eth">—</strong></div>
+  </section>
+  <nav aria-label="Marketplace sections"><a href="#exchange">Buy CITY</a><a href="#assets">Marketplace</a><a href="#work">Agent work</a><a href="#protection">Price protection</a><a href="#receipts">Activity</a></nav>
+  <main>
+    <section id="exchange"><span class="eyebrow">USDC / CITY · UNISWAP V4</span><h2>Receive the amount you need</h2>
+      <p>Choose an exact amount of CITY and the most test USDC you will spend. You can also exchange CITY back to test USDC while the price checks permit trading.</p>
+      <form data-action="swap" class="exchange-form">
+        <label>Pay with<select name="tokenIn"><option value="USDC">Test USDC</option><option>CITY</option></select></label>
+        <label>Receive<select name="tokenOut"><option>CITY</option><option value="USDC">Test USDC</option></select></label>
+        <label>Exact amount<input name="amount" value="1" inputmode="decimal" required></label>
+        <label>Maximum input<input name="maximum" value="1.05" inputmode="decimal" required></label>
+        <button>Review exchange</button>
+      </form>
+      <p id="market-health" class="small"></p><button id="publish-health" class="secondary" type="button">Refresh verified world health</button>
+    </section>
+    <section id="assets"><div class="section-heading"><div><span class="eyebrow">ACTUAL DEPOSITED EQUIPMENT</span><h2>Trade in CITY</h2></div><button data-action="register_item" type="button">Deposit held equipment</button></div>
+      <p>The seller deposits the exact item before listing it. Buying transfers its registered ownership; redemption delivers the original item to an approved player.</p>
+      <div id="asset-list" class="records"></div>
+      <div class="forms two">
+        <form data-action="list_item"><h3>Sell equipment</h3><label>Your item<select name="tokenId" data-source="owned-items" required></select></label><label>Total CITY price<input name="price" value="1" inputmode="decimal" required></label><button>Review listing</button></form>
+        <form data-action="checkout"><h3>Buy equipment</h3><label>Available listing<select name="tokenId" data-source="listings" required></select></label><label>Pay with<select name="tokenIn"><option>CITY</option><option value="USDC">Test USDC</option></select></label><label>Maximum token spend<input name="maximum" value="2" inputmode="decimal" required></label><button>Review purchase</button><p class="small">When paying in test USDC, conversion and purchase settle together. Gas and physical delivery are separate.</p></form>
+      </div>
+    </section>
+    <section id="work"><span class="eyebrow">PAYMENT RESERVED BEFORE EXECUTION</span><h2>Commission agent work</h2>
+      <p>Agree a CITY payment, reserve it, and run the supported native task. An inspector verifies the actual result. You accept it before the worker receives payment.</p>
+      <form data-action="fund_work" class="forms two"><label>Worker<select name="workerId" data-source="workers" required></select></label><label>Supported task<select name="task"><option value="platform">Build a 2 by 2 oak platform in the registered area</option></select></label><label>CITY payment<input name="amount" value="1" inputmode="decimal" required></label><button>Review funded task</button></form>
+      <div id="work-list" class="records"></div><p class="small">The current paid-work demonstration uses a fixed plan and real oak stock. General AI planning remains a separate agent capability. Timely completion retains its review period; acceptance and refund are mutually exclusive.</p>
+    </section>
+    <section id="protection"><span class="eyebrow">ENFORCED BY THE POOL HOOK</span><h2>Price checks before your trade settles</h2>
+      <p id="price-protection">Loading the on-chain reference and pool policy…</p>
+      <button id="record-observation" class="secondary" type="button">Record current pool observation (test gas)</button>
+      <p>The pool uses a geometric time-weighted reference, bounded trades, minimum active liquidity, and execution checks. Fees rise with deviation. Trading pauses when its required checks fail.</p>
+      <p class="disclosure">These checks reduce some manipulation and adverse-selection risks. They do not guarantee zero LVR, prevent every attack, or establish CITY's fair value. A sustained manipulated price can also influence an average.</p>
+    </section>
+    <section id="receipts"><h2>Activity and receipts</h2><div id="operation-list" class="records"></div><details><summary>Deployment details</summary><pre id="deployment"></pre></details></section>
+  </main>
+  <dialog id="review"><form method="dialog"><button class="close" value="cancel" aria-label="Close review">×</button></form><span class="eyebrow">YOUR APPROVAL</span><h2 id="review-title">Review operation</h2><p id="review-message"></p><dl id="review-terms"></dl><p class="disclosure">Confirming authorizes the selected operator test wallet. Gas is additional test ETH. Check the exact amounts and expiry.</p><details><summary>Exact terms and evidence</summary><pre id="review-details"></pre></details><div class="dialog-actions"><button id="confirm" type="button">Confirm these terms</button><button id="cancel" type="button" class="secondary">Cancel</button></div></dialog>
+  <footer>AgentCity laptop marketplace · USDC/CITY testnet pool · owner-approved payments</footer>
+</body>
+</html>

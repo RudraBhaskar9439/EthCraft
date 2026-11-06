@@ -1,0 +1,11 @@
+{
+  "observedAt": "2026-10-31T18:24:55.293Z",
+  "owner": "world-assets-seam-fixture",
+  "container": "agentcity-world-assets-seam-51a0b601",
+  "running": false,
+  "exitCode": 143,
+  "productionContainersStopped": 0,
+  "filesDeleted": 0,
+  "worldResets": 0,
+  "qualification": "Only the newly created isolated seam Paper container was stopped after the combined test clients quit; data and journals retained."
+}

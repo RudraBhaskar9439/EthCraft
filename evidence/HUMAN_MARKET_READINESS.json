@@ -1,0 +1,53 @@
+{
+  "status": "blocked_before_explicit_operator_actions",
+  "inspectedAt": "2026-10-30T15:23:58.380Z",
+  "scope": "Read-only Unichain Sepolia observations; no private keys, signing, broadcast, minting or funding. Role labels replace participant addresses.",
+  "chainId": 1301,
+  "genesisMatchesPinnedDeployment": true,
+  "head": {
+    "number": "66521408",
+    "timestamp": "1793373836"
+  },
+  "syntheticMarket": {
+    "healthy": true,
+    "available": false,
+    "validUntil": "1793347175",
+    "sequence": "3",
+    "kitBacked": true,
+    "requiredStep": "Explicit publisher refresh before human buy quote",
+    "maximumHealthTtlSeconds": 300
+  },
+  "participants": {
+    "requester": {
+      "testCredBaseUnits": "0",
+      "testEthWei": "156733376547940179"
+    },
+    "builder": {
+      "testEthWei": "0"
+    }
+  },
+  "operatorTestEthWei": {
+    "publisher": "149844061499418",
+    "issuer": "149450020498418",
+    "admin": "9090220472422335",
+    "warehouse": "149454716999548",
+    "attestor": "150000000000000"
+  },
+  "operatorNativeBudget": {
+    "nativeCapWei": "8000000000000000",
+    "existingSignedIntentMaximumWei": "916615268800000",
+    "remainingWei": "7083384731200000",
+    "existingIntentCount": 42,
+    "existingIntentStatuses": {
+      "confirmed": 42
+    }
+  },
+  "nextExplicitActions": [
+    "Provision test CRED and builder faucet gas within the immutable provisioning plan after both verified approvals",
+    "Publish a fresh synthetic market state using only the publisher role before the buy quote"
+  ],
+  "realMoneySpent": 0,
+  "publicWritesPerformed": 0,
+  "privateKeysOpened": 0,
+  "minecraftEconomicBridge": false
+}

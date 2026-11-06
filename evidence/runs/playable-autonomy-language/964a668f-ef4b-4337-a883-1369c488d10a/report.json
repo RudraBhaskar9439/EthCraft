@@ -1,0 +1,110 @@
+{
+  "status": "fail",
+  "scope": "Actual local Ollama diverse structure design and material preparation language only; no native construction, gathering, crafting or human proof",
+  "model": "qwen3:4b",
+  "checks": [
+    {
+      "request": "Build a three-block-wide oak arch, two pillars and a top beam, three blocks high.",
+      "status": "fail",
+      "failure": "BLUEPRINT_DIMENSIONS_MISMATCH",
+      "proposal": {
+        "kind": "plan",
+        "message": "I can build the requested arch using explicit block placements with oak_planks.",
+        "steps": [
+          {
+            "action": "build_structure",
+            "material": "oak_planks",
+            "width": 3,
+            "depth": 2,
+            "height": 3,
+            "parts": [
+              {
+                "min": [
+                  0,
+                  0,
+                  0
+                ],
+                "max": [
+                  2,
+                  0,
+                  0
+                ]
+              },
+              {
+                "min": [
+                  0,
+                  0,
+                  0
+                ],
+                "max": [
+                  0,
+                  0,
+                  2
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "request": "Build a 4 by 4 wooden house, 4 blocks high.",
+      "status": "fail",
+      "intent": {
+        "kind": "plan",
+        "message": "I can build a 4x4 wooden house 4 blocks high using oak_planks from your inventory and source chest.",
+        "steps": [
+          {
+            "action": "build_structure",
+            "material": "oak_planks",
+            "width": 4,
+            "depth": 4,
+            "height": 4,
+            "parts": [
+              {
+                "min": [
+                  0,
+                  0,
+                  0
+                ],
+                "max": [
+                  3,
+                  3,
+                  3
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "failure": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- 'house'\n"
+    },
+    {
+      "request": "Gather two oak planks from permitted blocks in my plot, craft four sticks, and put all four sticks in my destination chest.",
+      "status": "pass",
+      "intent": {
+        "kind": "plan",
+        "message": "I can gather two oak planks, craft four sticks, and deliver them to your destination chest.",
+        "steps": [
+          {
+            "action": "gather",
+            "item": "oak_planks",
+            "count": 2
+          },
+          {
+            "action": "craft",
+            "item": "stick",
+            "count": 4
+          },
+          {
+            "action": "deliver",
+            "item": "stick",
+            "count": 4
+          }
+        ]
+      }
+    }
+  ],
+  "independentHumansVerified": 0,
+  "publicTransactions": 0
+}

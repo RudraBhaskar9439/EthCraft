@@ -1,0 +1,23 @@
+{"step":"restart_retry_returns_durable_original_receipt","status":"pass"}
+{"step":"protected_normal_checker_started","status":"pass"}
+{"step":"active_checker_cannot_unlock","status":"pass"}
+{"step":"active_checker_structure_edit_denied","status":"pass"}
+{"step":"server_confirmed_navigation","status":"pass"}
+{"step":"active_checker_external_input_event_denied","status":"pass"}
+{"step":"protected_normal_complete_actual_report","status":"pass"}
+{"step":"server_confirmed_navigation","status":"pass"}
+{"step":"approved_review_toggle_a0","status":"pass"}
+{"step":"server_confirmed_navigation","status":"pass"}
+{"step":"approved_review_toggle_a1","status":"pass"}
+{"step":"server_confirmed_navigation","status":"pass"}
+{"step":"approved_review_toggle_b0","status":"pass"}
+{"step":"server_confirmed_navigation","status":"pass"}
+{"step":"approved_review_toggle_b1","status":"pass"}
+{"step":"server_confirmed_navigation","status":"pass"}
+{"step":"review_sneaking_water_bucket_prevented","status":"pass"}
+{"step":"review_sneaking_lava_bucket_prevented","status":"pass"}
+{"step":"usable_review_pass_cannot_unlock_early","status":"pass"}
+{"step":"expired_local_pass_unlock_without_external_obligation","status":"pass"}
+{"step":"server_confirmed_navigation","status":"pass"}
+{"step":"server_confirmed_navigation","status":"pass"}
+{"status":"fail","assertion_groups":22,"error":{"name":"Error","message":"WorldBuilder bounded navigation: timeout after 18000 ms","stack":"Error: WorldBuilder bounded navigation: timeout after 18000 ms\n    at Timeout.<anonymous> (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/inspection/probe.cjs:51:39)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}}

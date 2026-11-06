@@ -1,0 +1,60 @@
+{
+  "status": "pass",
+  "model": "claude-sonnet-5-5",
+  "approvedTotalUsd": 10,
+  "worldActionsExecuted": 0,
+  "financialTransactionsExecuted": 0,
+  "contextScope": "Synthetic planning context; no game execution",
+  "generationRequests": 1,
+  "plan": {
+    "kind": "plan",
+    "message": "I can build a 3x3 oak plank platform using real available materials.",
+    "steps": [
+      {
+        "action": "build_platform",
+        "width": 3,
+        "depth": 3,
+        "material": "oak_planks"
+      }
+    ]
+  },
+  "usage": {
+    "input_tokens": 4818,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 73,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "responseId": "msg_011Cge59iUn8NcpfyBUziDKi",
+  "estimatedRequestCostUsd": 0.010366,
+  "totalEstimatedSpentUsd": 0.020952,
+  "remainingBudgetUsd": 9.979048,
+  "recordedAtUtc": "2026-11-02T12:10:25.825920+00:00",
+  "scope": "Fresh native Claude planning through the durable shared budget guard; synthetic context, no game execution.",
+  "initialPriorTestCostUsd": 0.010586,
+  "tokenBudgetGuard": "Input preflight and durable conservative reservation, followed by actual usage settlement. Pending reservations survive restart and never automatically refund unknown charges.",
+  "checks": [
+    "Budget identity/decimal binding, concurrent reservation refusal, receipt accounting and duplicate refusal passed",
+    "Restart and uncertain-receipt retention passed; missing/corrupt ledger cannot silently reset allowance",
+    "Native adapter, existing planner and personal-agent fixture suites passed"
+  ],
+  "sources": {
+    "backend/src/inference/anthropic-budget.mjs": "bb64ed9402d8c5990df6da0d01399f9dd1cca55b67f19d0d7b7f783c7145682b",
+    "backend/src/inference/anthropic.mjs": "c3a3eaa40dfe26ff081aede89b2b85b437bacfa79d264e76ef880f2b2a7175e1",
+    "scripts/playable_worker.mjs": "a3a90bd3004e29b3dd5e177b91cd396c328f306771b8f72987e55fe08b358f37",
+    "tests/inference/anthropic-budget.mjs": "4b544ef2ff15b18c373f2c7565d27941421e3cdd70e4865c74647c612f7372fc",
+    "tests/inference/anthropic.mjs": "33802e763b0ef860a97f635ffbeda58e3383f4569e4ad325304db9a127d2fc78",
+    "docs/ANTHROPIC_SETUP.md": "74992c39ff1bdd1df92cf7b16489377641d443c7e54a387ad466ee2641e34fd3"
+  },
+  "hostDeploymentPerformed": false,
+  "canonicalPhasePassed": false
+}

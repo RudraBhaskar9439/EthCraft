@@ -1,0 +1,26 @@
+{
+  "package": "mineflayer",
+  "version": "4.39.0",
+  "officialTarballIntegrityVerified": true,
+  "checks": [
+    {
+      "path": "lib/plugins/inventory.js",
+      "matchesOfficialPackage": true,
+      "local_sha256": "c7c4eb12a4ba606b2abd6ea62701933fd10f3751297590e6b2ee56d78798b4a8",
+      "official_sha256": "c7c4eb12a4ba606b2abd6ea62701933fd10f3751297590e6b2ee56d78798b4a8"
+    },
+    {
+      "path": "lib/plugins/place_block.js",
+      "matchesOfficialPackage": true,
+      "local_sha256": "6d9941df1725432adb12c3a439de4806077c134e569b3af78a80882bd2737d1b",
+      "official_sha256": "6d9941df1725432adb12c3a439de4806077c134e569b3af78a80882bd2737d1b"
+    },
+    {
+      "path": "lib/plugins/physics.js",
+      "matchesOfficialPackage": true,
+      "local_sha256": "881ed2ccb2b3f188684e9681ef309df6d097060c297e876b95953d61b0d7f425",
+      "official_sha256": "881ed2ccb2b3f188684e9681ef309df6d097060c297e876b95953d61b0d7f425"
+    }
+  ],
+  "scope": "Only runtime files involved in native placement, inventory and movement; no dependency changes"
+}

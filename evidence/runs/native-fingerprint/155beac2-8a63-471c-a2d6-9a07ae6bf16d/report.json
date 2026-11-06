@@ -1,0 +1,59 @@
+{
+  "status": "pass",
+  "recordedAt": "2026-11-05T12:52:50.391Z",
+  "scope": "Actual owned laptop Paper item canonical fingerprint, mutation refusal and player save/reload. Controlled fixture identities; no chain transaction or human qualification.",
+  "checks": [
+    "damage change refused before custody effect; exact metadata restored",
+    "enchant change refused before custody effect; exact metadata restored",
+    "pdc change refused before custody effect; exact metadata restored",
+    "canonical fingerprint and full descriptor stable across actual player save/reload; no extra item grant"
+  ],
+  "publicTransactions": 0,
+  "paidModelCalls": 0,
+  "before": {
+    "fingerprint": "37a461141daaef09a37a94b794eec115cfe05a5998c08476a47fe0a1266d617c",
+    "fingerprintAlgorithm": "canonical_nbt_v1",
+    "descriptor": {
+      "material": "minecraft:diamond_sword",
+      "amount": 1,
+      "maxStackSize": 1,
+      "name": "BankBorrower testnet collateral",
+      "damage": 7,
+      "maxDurability": 1561,
+      "enchantments": {
+        "minecraft:sharpness": 2
+      },
+      "lore": [
+        "Disclosed laptop fixture stock",
+        "Controlled actor and testnet assets only"
+      ]
+    }
+  },
+  "after": {
+    "fingerprint": "37a461141daaef09a37a94b794eec115cfe05a5998c08476a47fe0a1266d617c",
+    "fingerprintAlgorithm": "canonical_nbt_v1",
+    "descriptor": {
+      "material": "minecraft:diamond_sword",
+      "amount": 1,
+      "maxStackSize": 1,
+      "name": "BankBorrower testnet collateral",
+      "damage": 7,
+      "maxDurability": 1561,
+      "enchantments": {
+        "minecraft:sharpness": 2
+      },
+      "lore": [
+        "Disclosed laptop fixture stock",
+        "Controlled actor and testnet assets only"
+      ]
+    }
+  },
+  "serverId": "laptop-bank-1ce53d39d114410b90f72599ebae8b07",
+  "container": "agentcity-playable-1ce53d39",
+  "sources": {
+    "plugin/src/main/java/org/agentcity/paper/CanonicalItemFingerprint.java": "37de2b5eeb96cb2fed1a872a025c40a3027c1bba49352742ec3ce7fc30e0a401",
+    "plugin/src/main/java/org/agentcity/paper/InventoryEscrow.java": "2a9abc6577f9e69f4fd1b8777bc13eb57f21a400949b2429432d5573c478321c",
+    "tests/bank/native-fingerprint.mjs": "3442594e3f490bf56119814f3da9a25ffcbd18194ffe3c0f11f50727b4ed7d4c",
+    "tests/bank/LaptopBankStock.java": "7c0111326e311c9fdded0fc9cbe5dd8d8b5d8aed693c4c419e454ddd46bd2def"
+  }
+}

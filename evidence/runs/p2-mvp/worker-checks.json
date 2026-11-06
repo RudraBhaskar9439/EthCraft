@@ -1,0 +1,24 @@
+{
+  "status": "pass",
+  "scope": "Scripted domain and adapter regressions, not live construction or inference",
+  "verified_at": "2026-10-29T18:01:24.668395+00:00",
+  "sources": {
+    "backend/src/bot/checkpoint-store.cjs": "bd857c0b57ca4533c5bde3eb643b99500c35c98fd107b6ce865014c4702654e4",
+    "backend/src/bot/construction-worker.cjs": "4effac5a0100bb9a6c51461b5790e7e0848294304fb6398e849e3f20f2790297",
+    "backend/src/bot/minecraft-adapter.cjs": "18d1d1a9dc327ac809fbb21aa0e85edce9bcf67823cab05de102e78286041be2",
+    "tests/bot/adapter-self-check.cjs": "c0c6d8f0e53476c9ca52dc82118b8268ba16ae03b57078dba490cfd952eb3a5a",
+    "tests/bot/worker-self-check.cjs": "cc130c28fdb5f0d535825a5068f2bf8ea136161d636a3d5e1ddba5d0b6e81704"
+  },
+  "checks": [
+    {
+      "script": "tests/bot/worker-self-check.cjs",
+      "exit_code": 0,
+      "output": "PASS structural states preserve orientation and remove only dynamic signals\nPASS unapproved blueprint and transform fail before actions\nPASS 144 modeled placements resume from observed state without double consumption or readiness claims\nPASS effect-before-acknowledgement recovery replays receipt instead of placing again\nPASS shortage blocks without creating materials\nPASS unexpected occupied target blocks before withdrawal or placement\nPASS local worker exclusion releases when the OS listener closes\nPASS same-instance duplicate run preserves the active job lease\nPASS untracked carried inventory cannot become job stock\n{\"status\":\"pass\",\"checks\":9,\"scope\":\"scripted domain self-check; no Minecraft, model, tokens, or external-service verification\"}\n"
+    },
+    {
+      "script": "tests/bot/adapter-self-check.cjs",
+      "exit_code": 0,
+      "output": "PASS active chest window supplies current player inventory and excludes container stock\nPASS failed navigation cancels immediately without stopping the next goal\nPASS falsely resolved navigation is refused until the actual player reaches the requested block\n{\"status\":\"pass\",\"checks\":3,\"scope\":\"Focused adapter regressions using the pinned window implementation and scripted navigation; no live Minecraft verification.\"}\n"
+    }
+  ]
+}

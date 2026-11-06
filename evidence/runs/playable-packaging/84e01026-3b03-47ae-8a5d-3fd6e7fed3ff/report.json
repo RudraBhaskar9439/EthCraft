@@ -1,0 +1,14 @@
+{
+  "status": "fail",
+  "runId": "84e01026-3b03-47ae-8a5d-3fd6e7fed3ff",
+  "scope": "Credential-free Docker container loopback HTTP packaging fixture only",
+  "tests": [],
+  "databaseWrites": 0,
+  "providerWallets": 0,
+  "publicTransactions": 0,
+  "realMoneySpentUsd": 0,
+  "independentHumans": 0,
+  "image": "sha256:b85d6f0e4816c40eb8b70788f96112321e2ab847252f88dedf1c13bef211c970",
+  "error": "Docker exec failed: node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n200 !== 403\n\n    at file:///app/[eval1]:7:126\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: 200,\n  expected: 403,\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v26.3.1\n",
+  "containerLog": "AgentCity laptop console: http://127.0.0.1:18789"
+}

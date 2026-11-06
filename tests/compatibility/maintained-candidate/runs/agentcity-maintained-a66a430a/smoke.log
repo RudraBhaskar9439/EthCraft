@@ -1,0 +1,2 @@
+{"status":"fail","checks":0,"error":{"name":"Error","message":"Timeout waiting for 20 chunks to load after 10000ms"}}
+{"candidateClientProfile":"complete-position-instead-of-status-only","counts":[{"player":"WorldBuilder","promotedStatusOnlyPackets":1}]}

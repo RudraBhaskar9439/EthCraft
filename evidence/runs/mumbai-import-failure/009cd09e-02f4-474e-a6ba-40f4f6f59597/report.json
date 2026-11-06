@@ -1,0 +1,18 @@
+{
+  "status": "fail",
+  "reason": "mumbai_safe_spawn_required",
+  "scope": "Isolated copy only; active old profile resumed successfully",
+  "worldUuid": "be915875-64ec-4498-ae2a-1a6800dd1e53",
+  "pluginSha256": "9dd8a14e69395bc98bed432188487ff0e7d1c8029343f440abfa60c02e894430",
+  "configuredSpawn": [
+    1640,
+    70,
+    2779
+  ],
+  "observedTopBlock": {
+    "y": 67,
+    "material": "gray_concrete_powder"
+  },
+  "correction": "Use feetY68; no map blocks or oldworlds altered",
+  "publicTransactions": 0
+}

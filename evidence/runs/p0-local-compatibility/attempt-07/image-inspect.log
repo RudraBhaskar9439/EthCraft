@@ -1,0 +1,65 @@
+[
+    {
+        "Id": "sha256:5d90b26c0784ccf55af55f97cbcf7f3969c66a06299c93bdc72649219942a48f",
+        "RepoTags": [
+            "eclipse-temurin:21-jdk"
+        ],
+        "RepoDigests": [
+            "eclipse-temurin@sha256:5d90b26c0784ccf55af55f97cbcf7f3969c66a06299c93bdc72649219942a48f"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-10-26T23:17:31.636738827Z",
+        "Config": {
+            "Env": [
+                "PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "JAVA_HOME=/opt/java/openjdk",
+                "LANG=en_US.UTF-8",
+                "LANGUAGE=en_US:en",
+                "LC_ALL=en_US.UTF-8",
+                "JAVA_VERSION=jdk-21.0.12.1+1"
+            ],
+            "Entrypoint": [
+                "/__cacert_entrypoint.sh"
+            ],
+            "Cmd": [
+                "jshell"
+            ],
+            "Labels": {
+                "org.opencontainers.image.created": "2026-10-25T10:30:32.309136+00:00",
+                "org.opencontainers.image.description": "The Ubuntu container image maintained by Canonical\n\nUbuntu is a Debian-based Linux operating system that runs from the desktop to the cloud, to all your internet connected things.\nIt is the world's most popular operating system across public clouds and OpenStack clouds.\nIt is the number one platform for containers; from Docker to Kubernetes to LXD, Ubuntu can run your containers at scale.\nFast, secure and simple, Ubuntu powers millions of PCs worldwide.\n",
+                "org.opencontainers.image.title": "ubuntu",
+                "org.opencontainers.image.version": "26.04"
+            }
+        },
+        "Architecture": "arm64",
+        "Variant": "v8",
+        "Os": "linux",
+        "Size": 221484912,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:d0a7f257e3da49743402c9f3371e3994285b17d3546ae7464ad9ce5697e35d2b",
+                "sha256:44c7904a8b95aaf93ba3a2b2812c8b29f2f979369e47e96a82bd4d88d3e372f1",
+                "sha256:43325de138b9e7683389d6c830c3569700a5fcc24a4fa526fa45444c536ddcfa",
+                "sha256:fbe1f083f39f0ed156b4828e6594b5e8334c7e4e29ae73cad26a77fb7919332b",
+                "sha256:1e2f98dd6088a8f975483873a88b94e2ab421a283fe5d16d55c618b67ea68726",
+                "sha256:f547503cc8baa660f58e03686420e6b60238a3aa839789c671a31c18bd457a27"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-10-29T12:47:29.595263715Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:5d90b26c0784ccf55af55f97cbcf7f3969c66a06299c93bdc72649219942a48f",
+            "size": 5926
+        },
+        "Identity": {
+            "Pull": [
+                {
+                    "Repository": "docker.io/library/eclipse-temurin"
+                }
+            ]
+        }
+    }
+]

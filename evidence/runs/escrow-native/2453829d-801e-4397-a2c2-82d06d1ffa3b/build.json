@@ -1,0 +1,32 @@
+{
+  "recordedAt": "2026-10-31T16:45:32.503Z",
+  "compile": {
+    "status": "pass",
+    "method": "Windows Docker CLI; existing pinned Java image; javac --release21 -proc:none; networknone; same pinned compatibility Paper libraries",
+    "javaImage": "eclipse-temurin@sha256:5d90b26c0784ccf55af55f97cbcf7f3969c66a06299c93bdc72649219942a48f",
+    "compatibilityPaperSha256": "5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba"
+  },
+  "artifact": {
+    "path": ".local/escrow-build/a854b5da-c833-4343-ba13-4b0c89b0e542/AgentCity.jar",
+    "sha256": "bf285997b2e5569888a25c7cd51907558bb2c6e4e637923686d806c1c9091840"
+  },
+  "sourceSha256": {
+    "plugin/src/main/java/org/agentcity/paper/InventoryEscrow.java": "3b3a75e4f01c2dd318dccdb395fb4581c40c2417f2c9ec5c40fd232546dcb981",
+    "plugin/src/main/java/org/agentcity/paper/AgentCityPlugin.java": "d658443d1f723c8c04bd4453698e3d6a61ecfe371d9bd75c4f6be11402df1984",
+    "plugin/src/main/java/org/agentcity/paper/PlayableExperience.java": "ffb8361e3be23e04eaad3e08961c39d4ffd496346a361d1de2dc4afa944955bd",
+    "plugin/src/main/resources/plugin.yml": "27ee0a5868b7a90777dab42b8514bc083ae042f1a029fee6936b7a9e3fbbe646",
+    "tests/inspection/EscrowNativeStockPlugin.java": "7ad8eff45497a94e956fe8b6f38ec484c54a6da2d1049d7ad17dd51cfa7b5fe8",
+    "tests/playable/escrow-native-live.cjs": "5078882c9ab1f57bac6d305ebc766b4bae29543927ed44cf01fcf7745264f1ec"
+  },
+  "actualResumeEnvironment": {
+    "paper": "26.3-231-main@8a170a3",
+    "java": "25.0.5+8",
+    "viaVersion": "5.12.2",
+    "viaBackwards": "5.12.2",
+    "minecraftClient": "Mineflayer 1.21.11 with native tick_end shim"
+  },
+  "qualification": "Current-JAR resume checks are separate from predecessor-JAR full native/composed trade checks. No independent-human or canonical-phase gate pass. No intentional crash-window fault injection was run.",
+  "remaining": [
+    "Production host deployment and actual user confirmation are root-coordinated; not performed by this agent."
+  ]
+}

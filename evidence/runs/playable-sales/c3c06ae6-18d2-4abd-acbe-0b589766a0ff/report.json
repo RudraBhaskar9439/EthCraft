@@ -1,0 +1,20 @@
+{
+  "scope": "Actual local player inventory sale for Game Coins, using SaleTester and disclosed existing operator task-chest stock; no injected items, wallets, blockchain calls or independent-human claim",
+  "username": "SaleTester",
+  "taskSlot": "CityAgent2",
+  "status": "fail",
+  "startedAt": "2026-10-31T08:00:28.938Z",
+  "independentHumansVerified": 0,
+  "publicTransactions": 0,
+  "checks": [],
+  "commands": [
+    {
+      "command": "/play",
+      "replies": [
+        "Entered agentcity_play. Explore, collect materials and use your agent's assigned task area. /lobby returns to the NPCs."
+      ]
+    }
+  ],
+  "error": "Timed out: /play",
+  "finishedAt": "2026-10-31T08:01:15.918Z"
+}

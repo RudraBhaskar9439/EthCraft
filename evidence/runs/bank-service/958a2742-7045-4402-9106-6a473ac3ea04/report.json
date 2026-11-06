@@ -1,0 +1,69 @@
+{
+  "status": "pass",
+  "runId": "958a2742-7045-4402-9106-6a473ac3ea04",
+  "schema": "bank_test_958a27427045440291066a473ac3ea04",
+  "publicTransactions": 0,
+  "paidModelCalls": 0,
+  "realMoneySpentUsd": 0,
+  "independentHumans": 0,
+  "scope": "Actual isolated PostgreSQL/Anvil fork and official v4 contracts; synthetic native custody and inspector context; controlled signers.",
+  "checks": [
+    {
+      "name": "marketplace refuses lending and GEM before any financial signature",
+      "status": "pass"
+    },
+    {
+      "name": "marketplace retains CITY and USDC quote routes without signing a transaction",
+      "status": "pass"
+    },
+    {
+      "name": "historical bank confirmation cannot cross the marketplace manifest digest",
+      "status": "pass"
+    },
+    {
+      "name": "owner confirmation and immutable preview gate lender capital",
+      "status": "pass"
+    },
+    {
+      "name": "service recreation reconciles original signed borrow and never lends twice",
+      "status": "pass"
+    },
+    {
+      "name": "official two-pool exact-output quote and swap enforce exact receipt and cap",
+      "status": "pass"
+    },
+    {
+      "name": "atomic item checkout pays seller and verifies final buyer after two NFT transfers",
+      "status": "pass"
+    },
+    {
+      "name": "funded work requires inspector result and requester acceptance and pays once",
+      "status": "pass"
+    },
+    {
+      "name": "repayment credits lender exactly and collateral and cash claims release once",
+      "status": "pass"
+    },
+    {
+      "name": "two qualifying controlled repayments produce the contract-recorded discount",
+      "status": "pass"
+    },
+    {
+      "name": "overdue auctions account for borrower surplus and lender shortfall and remove discount",
+      "status": "pass"
+    },
+    {
+      "name": "expired partial checkout intent reconciles approval without new signing or token spending",
+      "status": "pass"
+    }
+  ],
+  "sourceHashes": {
+    "backend/src/bank/service.mjs": "6804be37297133f57ccad4346712826a2596ba7bcc1eaa69d99b3d085f8a9fe3",
+    "backend/src/bank/canonical.mjs": "f1686d68c01936d07a62eb834ad40f8fef0c4bc0e301d9567e8c2edb506de2f0",
+    "backend/src/bank/abis.mjs": "8b540c24b5ed4abfefbfdd35b36efe8aa85b3d906a2dc743e35d8d02c34e1e7c",
+    "backend/src/world-assets/canonical.mjs": "83df3765a087c5a8dd8fd951e82c7fb10c7f54e0eb0c8bd1516e436fe734259b",
+    "tests/bank/service.mjs": "937e67b8d661efa6918dd49bc7e919eb160960e7f4a95ca4ef9076e2f0726be5"
+  },
+  "controlledSignatures": 43,
+  "sourceChainUnchangedByFixture": true
+}

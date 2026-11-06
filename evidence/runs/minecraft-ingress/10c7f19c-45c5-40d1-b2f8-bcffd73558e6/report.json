@@ -1,0 +1,29 @@
+{
+  "runId": "10c7f19c-45c5-40d1-b2f8-bcffd73558e6",
+  "startedAt": "2026-10-31T13:46:52.736Z",
+  "status": "fail",
+  "scope": "Actual ingress status and denial only; no Discord-profile login or independent-human claim",
+  "target": {
+    "host": "domination-uid.tun.ply.gg",
+    "address": "147.185.221.20",
+    "port": 31628
+  },
+  "checks": [
+    {
+      "name": "actual status and ping echo protocol 774",
+      "status": "pass",
+      "serverVersion": {
+        "name": "Paper 26.3",
+        "protocol": 774
+      },
+      "onlineCount": 0
+    }
+  ],
+  "process": {
+    "pid": 48236,
+    "bind": "127.0.0.1:8796",
+    "privateUpstream": "127.0.0.1:25596"
+  },
+  "error": "READONLY_CHECK_TIMEOUT",
+  "finishedAt": "2026-10-31T13:47:04.278Z"
+}

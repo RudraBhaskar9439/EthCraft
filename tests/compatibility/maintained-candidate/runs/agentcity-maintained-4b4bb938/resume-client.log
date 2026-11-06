@@ -1,0 +1,8 @@
+{"check":"new-process-reconnect-preserves-real-carried-stock","status":"pass"}
+{"check":"original-pending-placement-receipt-reconciled","status":"pass"}
+{"check":"uncertain-placement-replayed-once-without-new-effect","status":"pass"}
+{"check":"complete-native-build-consumes-exact144-items-once","status":"pass"}
+{"check":"real16-case-inspection-after-native-construction","status":"pass"}
+{"check":"real-ollama-respects-protected-review","status":"pass"}
+{"status":"pass","checks":6}
+{"candidateClientProfile":"1.21.11-tick-end-at-physics-cadence","counts":[{"player":"WorldBuilder","physicsTickBoundaries":11536},{"player":"WorldRequester","physicsTickBoundaries":11431},{"player":"WorldInspector","physicsTickBoundaries":11324}]}

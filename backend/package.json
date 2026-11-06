@@ -1,0 +1,24 @@
+{
+  "name": "agentcity-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=26.3.1"
+  },
+  "scripts": {
+    "start": "node src/server.mjs",
+    "demo": "node ../scripts/local_demo.mjs",
+    "local:database": "python3 ../scripts/local_database.py"
+  },
+  "dependencies": {
+    "@arkiv-network/sdk": "0.8.1",
+    "@privy-io/node": "0.37.0",
+    "discord.js": "14.28.0",
+    "pg": "8.23.1",
+    "viem": "2.57.13"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}

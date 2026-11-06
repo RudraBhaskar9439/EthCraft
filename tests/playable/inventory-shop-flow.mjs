@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict'
+import {checkoutStep,checkoutError} from '../../companion/src/inventory-shop-flow.mjs'
+assert.equal(checkoutStep(null).step,0)
+assert.equal(checkoutStep({}).action,'link')
+const linked={walletLinked:true}
+assert.equal(checkoutStep(linked).action,'prepare')
+assert.equal(checkoutStep({...linked,status:'preparing_stock'}).action,'prepare')
+assert.equal(checkoutStep({...linked,status:'ready_to_pay'}).action,'buy')
+assert.equal(checkoutStep({...linked,transaction:{operation_id:'original'}}).action,'sign')
+const unknown=checkoutStep({...linked,transaction:{unknown_outcome:true}})
+assert.equal(unknown.recovery,true);assert.equal(unknown.action,undefined)
+assert.equal(checkoutStep({...linked,paid:true}).action,'redeem')
+assert.equal(checkoutStep({...linked,paid:true,transaction:{operation_id:'release'}}).action,'sign')
+assert.equal(checkoutStep({...linked,paid:true,status:'ready_to_collect'}).action,'claim')
+assert.equal(checkoutStep({...linked,paid:true,delivered:true}).action,undefined)
+assert.equal(checkoutStep({...linked,cancelling:true,transaction:{unknown_outcome:true}}).action,'cancel')
+assert.equal(checkoutStep({cancelled:true}).action,undefined)
+assert.match(checkoutError('INVENTORY_SHOP_CHECKOUT_APPROVED_CONNECTION_REQUIRED'),/\/join/)
+assert.match(checkoutError('INVENTORY_SHOP_CHECKOUT_OWNER_REQUIRED'),/different account/)
+assert.match(checkoutError('INVENTORY_SHOP_UNRESOLVED_BUYER_TRANSACTION'),/Do not send another payment/)
+console.log('PASS checkout shows one next step; uncertain transactions never offer another wallet send; actionable account and connection guidance')

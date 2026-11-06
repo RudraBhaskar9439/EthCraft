@@ -1,0 +1,12 @@
+{
+  "schema": "agentcity.inventory-funding-retry-update.v1",
+  "at": "2026-11-06T06:45:38.700Z",
+  "nativeAvailable": true,
+  "defaultWorld": "agentcity_mumbai",
+  "pluginSha256": "9fcf3f81c5bd306fafc77b5229f8d57d44c9b9bf8049e4cf4ad6ade8c8d88b69",
+  "claudeAgentOnline": true,
+  "zeroGAgentOnline": true,
+  "merchantOnline": true,
+  "realUserFundingPaymentAndDelivery": "pending explicit native user confirmations",
+  "qualification": "report.json"
+}

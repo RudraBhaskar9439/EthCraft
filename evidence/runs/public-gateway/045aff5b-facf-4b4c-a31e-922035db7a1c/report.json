@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "scope": "Actual isolated loopback HTTP gateway checks and onboarding callback bootstrap; no public tunnel or production-service changes",
+  "checks": [
+    {
+      "name": "OAuth query survives allowed onboarding pages while operator routes encoded paths and API query routing never reach upstream",
+      "status": "pass"
+    },
+    {
+      "name": "setup POST preserves exact approved origin and JSON body while stripping authorization cookies forwarded host and upstream cookies",
+      "status": "pass"
+    },
+    {
+      "name": "strict route methods and 16KiB request limit refuse unsupported input before upstream delivery",
+      "status": "pass"
+    },
+    {
+      "name": "actual frontend bootstrap removes private fragment but preserves OAuth query and console recognizes only onboarding page pathname",
+      "status": "pass"
+    }
+  ],
+  "sourceSha256": "6a2e56c7af22683ce15fe7ae9f0c0c619d5e7f2b693f12cb68a6a1face5c4878"
+}

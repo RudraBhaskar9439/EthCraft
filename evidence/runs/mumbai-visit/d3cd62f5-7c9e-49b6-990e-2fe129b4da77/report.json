@@ -1,0 +1,79 @@
+{
+  "runId": "d3cd62f5-7c9e-49b6-990e-2fe129b4da77",
+  "status": "pass",
+  "scope": "Actual isolated Paper load and copied controlled bidder; no active host, human or financial qualification.",
+  "publicTransactions": 0,
+  "walletSignatures": 0,
+  "paidModelCalls": 0,
+  "checks": [
+    {
+      "name": "Unapproved connection cannot enter Mumbai",
+      "status": "pass"
+    },
+    {
+      "name": "Approved visitor enters the imported world in Adventure with unchanged full client inventory",
+      "status": "pass",
+      "arrival": {
+        "x": 1640.5,
+        "y": 68,
+        "world": "agentcity_mumbai",
+        "z": 2779.5
+      },
+      "inventorySha256": "68863b65c0c7a32591d478448b8535ba1eba65bab27483500331850f3bf67be0"
+    },
+    {
+      "name": "Adventure dig cannot remove scenery and Mumbai inventory cannot enter native custody",
+      "status": "pass"
+    },
+    {
+      "name": "Visitor walks through loaded native Mumbai terrain",
+      "status": "pass",
+      "from": {
+        "x": 1640.5,
+        "y": 68,
+        "z": 2779.5
+      },
+      "to": {
+        "x": 1637.7375205979524,
+        "y": 68,
+        "z": 2779.4988027038153
+      }
+    },
+    {
+      "name": "Lobby return restores Survival without inventory, principal, connection or prior-world UUID changes",
+      "status": "pass"
+    }
+  ],
+  "messages": [
+    "Approve this connection in Discord to play.",
+    "BankBidder joined the game",
+    "Approve this connection in Discord to play.",
+    "Returned to agentcity_lobby. Click Guide or Play.",
+    "Welcome to South Mumbai. This is a read-only geographic recreation. /lobby returns to AgentCity.",
+    "Generated with Arnis. Map data © OpenStreetMap contributors (ODbL); elevation: Mapterhorn. This is an approximation of the city.",
+    "Returned to agentcity_lobby. Click Guide or Play."
+  ],
+  "serverId": "laptop-bank-1ce53d39d114410b90f72599ebae8b07",
+  "worldUuid": "be915875-64ec-4498-ae2a-1a6800dd1e53",
+  "actor": {
+    "name": "BankBidder",
+    "principalId": "fe40d57b-89a0-4eb4-922a-84d320c27609",
+    "playerId": "cc98e9a3-0b21-30a7-9509-817076d54d80",
+    "controlled": true
+  },
+  "worldIds": {
+    "agentcity_laptop_bank/dimensions/minecraft/agentcity_estates/data/paper/metadata.dat": "56872012-26f5-48d3-ba50-761a895093cd",
+    "agentcity_laptop_bank/dimensions/minecraft/agentcity_lobby/data/paper/metadata.dat": "b58ce3c8-e107-4379-8ed7-259bed82a53f",
+    "agentcity_laptop_bank/dimensions/minecraft/agentcity_mumbai/data/paper/metadata.dat": "be915875-64ec-4498-ae2a-1a6800dd1e53",
+    "agentcity_laptop_bank/dimensions/minecraft/agentcity_play/data/paper/metadata.dat": "0f4accec-78fe-4578-821b-e9c4b14772c5",
+    "agentcity_laptop_bank/dimensions/minecraft/overworld/data/paper/metadata.dat": "45f82089-4a4a-42ed-a660-801b8ef613f9",
+    "agentcity_laptop_bank/dimensions/minecraft/the_end/data/paper/metadata.dat": "56d31e84-9f30-4826-ae27-822643d1c3c4",
+    "agentcity_laptop_bank/dimensions/minecraft/the_nether/data/paper/metadata.dat": "0140a91b-2202-4535-adb9-3740e48d6527"
+  },
+  "sources": {
+    "plugin/src/main/java/org/agentcity/paper/MumbaiWorld.java": "0b2ce402fc5de23f7654d383138b84fe83937c3016bb031238eb804b804ce2f6",
+    "plugin/src/main/java/org/agentcity/paper/MumbaiWorldStorage.java": "9e39fed7cb06ed33a3e9bbdb153bb9a7ee9c7f7519b0f68f2cfbf2e38144b827",
+    "scripts/mumbai_host.py": "0a8cb327a952f81851c9372b8ad56d9f1332a6d1dc1db752d47051f21f8ae242",
+    "tests/maps/mumbai-visit.mjs": "8f738c86c5ecf4c951aed37a318aec334fa9c743db9a7f94a59f1923c84909d1"
+  }
+}

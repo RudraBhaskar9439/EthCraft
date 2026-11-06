@@ -1,0 +1,20 @@
+{
+  "appId": "cmvw5jylz00330fkxvvgfzxw5",
+  "recordedAt": "2026-11-05T21:12:42.785Z",
+  "readOnly": true,
+  "appMatches": true,
+  "discordLoginEnabled": true,
+  "localOriginExplicitlyListed": false,
+  "localhostExplicitlyListed": false,
+  "publicMetadataReached": true,
+  "privateApiAuthenticationAccepted": true,
+  "scope": "Actual read-only official Privy SDK requests. Private users-list response was discarded; no user details, provider secret, wallets or signing-policy changes retained.",
+  "browserObservation": {
+    "localSetupLoaded": true,
+    "discordLoginButtonEnabled": true,
+    "existingAccountLoginButtonEnabled": true,
+    "oauthCompleted": false,
+    "challengeConsumed": false
+  },
+  "explicitOriginListingNote": "Listing booleans are metadata observations, not evidence of a browser rejection; actual login has not been completed."
+}

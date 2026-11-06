@@ -1,0 +1,8 @@
+{
+  "scope": "Real isolated PostgreSQL; plugin-attributed player events are fixtures, no real wallets or Minecraft payment proof",
+  "status": "fail",
+  "checks": [],
+  "schema": "game_economy_test_cc9efa3e16db4de58d3555a633320f66",
+  "publicTransactions": 0,
+  "error": "Connection terminated unexpectedly"
+}

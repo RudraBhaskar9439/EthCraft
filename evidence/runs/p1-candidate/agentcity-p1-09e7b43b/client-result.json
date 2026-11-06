@@ -1,0 +1,103 @@
+{
+  "status": "incomplete",
+  "purpose": "offline independent world-read fixture, not independent human proof",
+  "observations": [
+    {
+      "suite": "normal",
+      "case_index": 0,
+      "a": 0,
+      "b": 0,
+      "expected": 0,
+      "observed": 0,
+      "plugin_passed": false,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    }
+  ],
+  "server_summary": {
+    "status": "incomplete",
+    "suite_count": 1,
+    "result_file": "candidate-result.json"
+  },
+  "finished_at": "2026-10-29T14:27:40.216Z"
+}

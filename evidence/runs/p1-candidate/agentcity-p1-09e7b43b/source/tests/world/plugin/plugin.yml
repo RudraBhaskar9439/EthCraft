@@ -1,0 +1,9 @@
+name: AgentCityCandidateFixture
+version: 0.1.0
+main: org.agentcity.worldtest.CandidatePlugin
+api-version: '1.21'
+description: Isolated real Paper candidate circuit test fixture
+commands:
+  candidate:
+    description: Run the pinned physical candidate test plan
+    usage: /candidate run

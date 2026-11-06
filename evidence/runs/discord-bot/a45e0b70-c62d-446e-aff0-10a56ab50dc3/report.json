@@ -1,0 +1,15 @@
+{
+  "status": "fail",
+  "scope": "Actual isolated PostgreSQL plus explicitly simulated Discord REST/Gateway/interactions; zero external posts, provider wallets or human verification",
+  "checks": [
+    {
+      "name": "command-schema-and-own-versus-foreign-agent-panel-controls",
+      "status": "pass"
+    }
+  ],
+  "publicDiscordPosts": 0,
+  "actualGatewayConnections": 0,
+  "independentHumansVerified": 0,
+  "publicTransactions": 0,
+  "error": "Error: EPERM: operation not permitted, mkdir 'C:\\Users\\Rudransh%20Shinghal'\n    at async mkdir (node:internal/fs/promises:1507:10)\n    at async file:///C:/Users/Rudransh%20Shinghal/agentcity-minecraft/tests/playable/discord-bot.mjs:57:2"
+}

@@ -1,0 +1,27 @@
+{
+  "status": "pass",
+  "scope": "Focused isolated PostgreSQL and Discord-adapter fixtures; no actual posting, financial writes or live blockchain verification",
+  "checks": [
+    {
+      "name": "redacted dynamic-agent jobs and distinct Game Coin versus verified public-testnet receipts omit private data invalid accounting submitted and local fixtures",
+      "status": "pass"
+    },
+    {
+      "name": "durable unknown-send nonce marker reconciliation survives restart and edits each existing job card without duplicate posts",
+      "status": "pass"
+    },
+    {
+      "name": "loss of canonical verification edits prior confirmation to reconciliation and absent verifier publishes no testnet confirmation while all economic records stay unchanged",
+      "status": "pass"
+    },
+    {
+      "name": "only backed marketplace lots receive purchase previews; exact conserved trade receipts publish once and sold lots lose purchase controls",
+      "status": "pass"
+    },
+    {
+      "name": "canonical asset-reader fixture produces exact CITY land purchase controls and hash-linked receipts; source outage edits the same cards and removes purchase controls",
+      "status": "pass"
+    }
+  ],
+  "sourceSha256": "4d9e5621e04460711f87215c14cc809f1033539002ea5da6113d128439f407f1"
+}

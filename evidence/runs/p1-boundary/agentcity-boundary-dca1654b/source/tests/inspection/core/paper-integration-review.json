@@ -1,0 +1,99 @@
+{
+  "schema": "agentcity-p1-paper-integration-review-v1",
+  "recorded_at": "2026-10-29T15:12:01.750847+00:00",
+  "review_scope": "Independent static integration review and pinned Paper bytecode inspection; no native acceptance run or phase pass",
+  "paper_files_edited_by_reviewer": false,
+  "source_sha256": {
+    "plugin/src/main/java/org/agentcity/paper/AgentCityPlugin.java": "d3eb740d784777dac300b45436456d6a15d6df431facd249e43d96fc9c82a6b7",
+    "plugin/src/main/java/org/agentcity/paper/CalculatorInspector.java": "dd233169e24aafbeff6c20364a7fe0cf66e3e3232cd0062b8a10a3c78e3049b1",
+    "plugin/src/main/java/org/agentcity/paper/NativeLever.java": "9d26227261cd1f0e1b959d249fc3334ffa0ebce770d0ba5a1b9919515ba2a2a0",
+    "plugin/src/main/java/org/agentcity/paper/PlotProtection.java": "df08585916684efc6d0f9762bd60984e6c78571e84d9f09451356395a22228db",
+    "plugin/src/main/java/org/agentcity/paper/StrictJson.java": "581cd27a7fb4f31165400e29dc9127af4b54692d37749947b48880f0ffe47ad8",
+    "plugin/src/main/java/org/agentcity/paper/WorldProjection.java": "43e17a086da02ae7f07e806c25e91debe331c27f79890e024e586fb4453c2a19"
+  },
+  "findings": [
+    {
+      "id": "PAPER-001",
+      "priority": 1,
+      "problem": "Exact-structure precheck prevented disclosed missing carry-source inspection, making required physical10/16 report unreachable",
+      "status": "corrected_in_source_pending_native_verification",
+      "correction": "Only declared pinned carry source may be absent; wrong state or other missing placement still refused; full lamp inspection remains required"
+    },
+    {
+      "id": "PAPER-002",
+      "priority": 1,
+      "problem": "UNLOCK ownership checked before async prepare, leaving an inspection-start interleaving that could release a live checker lock",
+      "status": "corrected_in_source_pending_native_verification",
+      "correction": "Inspection owner reserved on consume through report persistence; UNLOCK rechecks ownership before consume; checker start validates owner/lock/pending/revision/health"
+    },
+    {
+      "id": "PAPER-003",
+      "priority": 1,
+      "problem": "Armed input allowed right-click use-block changes to a repeater under BREAK or adjacent PLACE arm without consuming the exact native mutation permit",
+      "status": "corrected_in_source_pending_native_verification",
+      "correction": "Match action/main hand/current healthy unexpired arm; BREAK left click only. PLACE uses default native interaction only on explicit safe reference materials; matched interactive references must refuse without property changes. This replaces invalid DENY/ALLOW placement approach."
+    },
+    {
+      "id": "PAPER-004",
+      "priority": 1,
+      "problem": "An intermediate BREAK hardening set useItemInHand DENY, which pinned ServerPlayerGameMode immediately returns from before mining",
+      "status": "corrected_in_source_pending_native_verification",
+      "correction": "Legitimate matched BREAK leaves item-use default; action restriction already denies right-click interactions"
+    },
+    {
+      "id": "PAPER-005",
+      "priority": 2,
+      "problem": "Port-relative geometry allowed all ports to be translated away from protected approved circuit",
+      "status": "corrected_in_source_pending_native_verification",
+      "correction": "Port bounds and approved material checked; a0 anchor and carry source fixed to the supported approved origin"
+    },
+    {
+      "id": "CORE-HEALTH",
+      "priority": 1,
+      "problem": "Native permission helper ignored quarantine and reversed authority time",
+      "status": "corrected_in_core_and_pure_selfchecks",
+      "correction": "activeActor observes clock and requires healthy unquarantined non-regressed state; fresh bootstrap/reconciliation preserved"
+    },
+    {
+      "id": "PAPER-006",
+      "priority": 1,
+      "problem": "Mixed use-interacted-block DENY/item ALLOW suppressed legitimate native placement and could be mistaken by the harness for a refusal",
+      "status": "source_replaced_pending_native_positive_and_negative_verification",
+      "correction": "Explicit safe noninteractive reference whitelist with default vanilla use, plus real Survival placement positive control; denial classifier rejects mixed flags as proof of refusal"
+    }
+  ],
+  "remaining_risks": [
+    {
+      "priority": 2,
+      "area": "Native save latency and durability",
+      "details": "saveWorld invokes native world.save and every online player.saveData on Bukkit thread. Pinned PlayerDataStorage.save synchronously creates/writes/replaces files and logs save exceptions. Measure actual tick and acknowledgement path; return is not atomic/durable world evidence. Journal receipts attest observed effect and restart mismatch quarantines. No custom asynchronous Minecraft writer recommended."
+    }
+  ],
+  "verification_still_required": [
+    "Run actual carry fault10/16, repair16/16 and correct16/16 on exact pinned checker/runtime",
+    "Execute barrier-controlled UNLOCK/inspection startup race against real Paper scheduling",
+    "Attempt real repeater delay interactions under BREAK and adjacent PLACE arms, including expired arms",
+    "Verify native authorized mining still works after interaction hardening",
+    "Reject port translation and mismatched/out-of-plot ports at load boundary",
+    "Run real bucket/Creative/inventory/hazard cases; static inspection cannot replace required native evidence",
+    "Measure P1-023 real ticks/acks under adopted workloads and delayed external fixtures",
+    "Real allowed-reference Survival placement after replacing DENY/ALLOW behavior",
+    "Native-input spacing satisfies both10ticks and500ms; each complete row retains exactly5 actual stable observations",
+    "Live inspection stops on lost actor/health or work deadline before another pull/sample; zero readiness"
+  ],
+  "core_evidence": "tests/inspection/core/coverage-results.json",
+  "gate_claim": "No P1 gate acceptance claimed",
+  "latest_inspector_review": {
+    "result": "No new source correctness issue identified in the two requested inspector changes; native/timing verification remains mandatory",
+    "authority_supplier": "Every tick obtains core state, requires unquarantined INSPECTION lock, active inspection actor and authority now strictly before work deadline before any input pull or sample. Supplier failure produces incomplete evidence and cannot establish readiness.",
+    "interaction_spacing": "Each actual pull requires BOTH at least10 inspection ticks and at least500000000 monotonic nanoseconds since prior pull, including first pull; native spacing must be measured on exact runtime.",
+    "stable_sample_count": "One phase4 observation plus four later tick observations produces exactly five independently read stable samples; controls are rechecked and lamp equality retained.",
+    "binding_requirement": "Changed inspector/plugin/test timing bytes require new exact bindings and affected physical runs; do not relabel older observations."
+  },
+  "regression_manifest": {
+    "path": "tests/inspection/regressions.json",
+    "sha256": "f22d963071c086c7d5f20643425fa94f5d113890032f56f4d78ed58336ae5648",
+    "registered_variants": 35,
+    "execution_claimed_by_manifest": false
+  }
+}

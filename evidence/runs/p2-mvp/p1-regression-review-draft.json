@@ -1,0 +1,166 @@
+{
+  "schema": "agentcity.p1.regression-review-draft.v1",
+  "reviewer": "/root/p2_scope_review (independent AI engineering peer)",
+  "reviewed_at": "2026-10-29T19:27:32.929156+00:00",
+  "status": "pending_construction_access_physical_proof_and_final_release_binding",
+  "decision": "not_final_approval",
+  "release": null,
+  "reviewed_git_head": "74466c2a4188ffcb96cb331a0f30ab567a2924df",
+  "previous_approved_release": "14f0cd9bef36b7b2f69a765af6e46ac5b1ccab37",
+  "scope": "Focused P1 dependency and regression review for fixed glass/bottom-slab access and narrowly authorized native placement against repeater/wire references. Historical observations are explicitly reused; all original suites were not rerun.",
+  "reviewed_source_delta": {
+    "changed_runtime_sources": [
+      "plugin/src/main/java/org/agentcity/paper/AgentCityPlugin.java",
+      "plugin/src/main/java/org/agentcity/paper/ConstructionAccessPlan.java"
+    ],
+    "unchanged": "The pinned circuit and test manifest, CalculatorInspector/NativeLever, JobEngine/DurableJournal/Command/InspectionReport, PlotProtection, WorldProjection, parser and existing inspection test sources are byte-for-byte unchanged from the old approved P1 release.",
+    "additive_behavior": "Optional deployment hash loads exact fixed glass/bottom-slab access positions for inspection validation. For an exact valid nativeMatches armed target only, repeater/wire references now require sneaking and deny use of the interacted block. Existing actor, session, expiry, revision, lock, Survival and material guards remain. Approved circuit targets are not expanded.",
+    "current_plugin_sha256": "6655659c050c13202616284cb52ead31011c4d06d89b2a7827a19e500b91de78",
+    "current_access_loader_sha256": "d426dfc8aef8c0af81f3f0a1b1e298ff56039f9b3d32cd56b64213bbd98e84ef"
+  },
+  "retained_original_p1_evidence": {
+    "case_digests_checked": 10,
+    "unique_artifact_hashes_checked": 11,
+    "artifacts": [
+      {
+        "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/initial-client.json",
+        "sha256": "0e5f1544f7fc91b78a280f63ed6207ca0d93befa0d4807c97595318f35d9b87d"
+      },
+      {
+        "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/integrity-resolution.json",
+        "sha256": "a2af4b33ce9074e288ac09a9e5a92e7b84089c381e39778a688a85e9ddcc1e92"
+      },
+      {
+        "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/restart-client.json",
+        "sha256": "b8cdaf98438187099ed4e898b65791e81adb30d4f42a51cb56c1d0811627d7a4"
+      },
+      {
+        "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/retained/reports/66d84186-bedf-49c0-9e38-1401ebcffdd6.json",
+        "sha256": "87a1cf3383a99779cf26ad52aa15a32d0d4758b7e927c9b5fe5f7af4635bc36b"
+      },
+      {
+        "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/retained/reports/9e43b6f8-b31e-46dd-b1fa-6c257b717a7a.json",
+        "sha256": "0f66b06722296467df8b2076dd3c3c4ab44ba6bceb6365af67fd21fc4028e686"
+      },
+      {
+        "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/retained/reports/ff91399e-cdcb-4d64-a32f-772ad34a042d.json",
+        "sha256": "53d5ffcca24a74ca834e98deb02ba1d0f39164e8c9db82091fe5e0a4bef1a168"
+      },
+      {
+        "path": "evidence/runs/p1-faults/agentcity-fault-02dde173/run-report.json",
+        "sha256": "3b577647ef8699ddc7ccb8ddbd3d18e12506ad42a31ccf7f5c80bcdd51167690"
+      },
+      {
+        "path": "evidence/runs/p1-faults/agentcity-fault-407399bc/run-report.json",
+        "sha256": "22a54a894875a44ec01d0b1c9500c7b7fd4c7f50057775de55b438f16e03b695"
+      },
+      {
+        "path": "evidence/runs/p1-faults/agentcity-fault-4c72c42f/run-report.json",
+        "sha256": "4ff8ecc5fb559a1d856cb9dc0a171553a2d22c579dcf7e9bac255b64013addcf"
+      },
+      {
+        "path": "evidence/runs/p1-faults/agentcity-fault-e960a531/run-report.json",
+        "sha256": "d3bfaccc793f6ed9039ca50b9977ffc5f6af380df96251ce829c6839276810a2"
+      },
+      {
+        "path": "evidence/runs/p1-mvp/executable-binding.json",
+        "sha256": "c3e69665853662d1e61adaefde7cf0e303718744484dae24f0d75bf81e240d8b"
+      }
+    ],
+    "reuse_judgments": [
+      {
+        "cases": [
+          "P1-001",
+          "P1-002",
+          "P1-003",
+          "P1-009"
+        ],
+        "basis": "The historical protected real correct/fault/repaired16/10/16 reports remain unchanged actual observations of the identical circuit/checker and carry-repair logic. They were not rerun in the new primitives subset. Glass-enabled final construction still needs its own real16-row confirmation."
+      },
+      {
+        "cases": [
+          "P1-004",
+          "P1-005",
+          "P1-006"
+        ],
+        "basis": "New actual primitives observations renew material-consuming native placement, representative receiving permissions, serial/concurrent operation replay and same-world restart receipt recovery against the current plugin. The143 pre-existing placements remain disclosed operator fixtures."
+      },
+      {
+        "cases": [
+          "P1-007",
+          "P1-008"
+        ],
+        "basis": "Historical real inspection/review/expiry/repair observations remain relevant because their authority, native callbacks, checker and lock implementation are unchanged. New primitives separately recheck an actual durable inspection lock, refused structural break, external input refusal and safe unused-lock release. Full historical review/expiry lifecycle was not rerun."
+      },
+      {
+        "cases": [
+          "P1-010"
+        ],
+        "basis": "The four retained real process crash-cut results remain unchanged evidence for the unchanged core journal and unchanged mutation/receipt callbacks. New restart replay supplements them; no new four-cut crash suite is claimed."
+      }
+    ],
+    "historical_integrity_qualification": "The original lifecycle wrapper source-integrity failure remains a failure. Its separately retained integrity-resolution and executable-binding artifacts qualify which actual executed observations were reviewed; this draft does not rewrite that history."
+  },
+  "new_executed_regressions": [
+    {
+      "path": "evidence/runs/p2-mvp/access-checks/slab-report.json",
+      "sha256": "18792ad0ecb7d660426a242be15d303f8f825320fdcbed7e43543c851b8939a4",
+      "result": "pass_reused_for_unchanged_tested_components",
+      "scope": "Previously executed 9 access-map checks, 376 pure core assertions, 15 parser checks and 51 mapping assertions. Access loader, core, parser, checker and mapping code remain unchanged. This report is not a test of the later native interaction branch.",
+      "noncurrent_source_paths": [
+        "plugin/src/main/java/org/agentcity/paper/AgentCityPlugin.java"
+      ],
+      "unchanged_recorded_source_hashes_checked": 10,
+      "compiled_plugin_sha256": "3bf0c37e8b06f1f951807b19e134f4680060ee5cc73944231dd0b17cd1c857ad"
+    },
+    {
+      "path": "evidence/runs/p1-boundary/agentcity-boundary-b0f1eaa4/run-report.json",
+      "sha256": "2c3a2ee7e8bcbd650b7b39203ec732d6b222693476cf7cd30319bfa93c59e332",
+      "result": "pass",
+      "scope": "Fresh actual current-source Paper primitives: 41 initial assertion groups and 1 same-world restart group. Material withdrawal/return/placement, permissions, stale/expired commands, locks and receipt replay pass. The seven thin-reference-dependent construction placements are still pending.",
+      "compiled_plugin_sha256": "6c13f2a0dbd0b4bc505c65ff9ba19b2fa2cbef5fc1db391c96c411b5175e86dd",
+      "current_source_hashes_checked": 40,
+      "retained_artifact_hashes_checked": 68
+    }
+  ],
+  "pending_before_final_approval": [
+    "Complete the same persisted calculator with seven actual native placements after the narrowly reviewed reference/sneak source upgrade, retaining the original failed 137-placement segment and proving baseline equality without reseeding or deadline changes.",
+    "Retain the complete current real 16-case passing inspection and final material conservation. Do not claim a clean 144-placement run of the final source.",
+    "Bind the final review to the exact committed implementation; preserve all segment source hashes and independently justify reuse of unchanged prior paths."
+  ],
+  "limitations": [
+    "No final P1 approval or evidence/P1.json release/case change is made by this draft.",
+    "Historical Paper1.21.11 build132 remains unsupported for production and all clients are disclosed offline agent fixtures.",
+    "No independent human participation, funded token integration, live0G/Arkiv result, wallet signature or settlement follows from these checks."
+  ],
+  "superseded_draft_sha256": "ea8ec103ef98ca301af54adc623ecb851193cee372708194b517230eb2d09264",
+  "superseded_regression_reports": [
+    {
+      "path": "evidence/runs/p1-core/run-20261029T173923Z-f288f8/report.json",
+      "sha256": "5f8316b448cf5583fc82b0020cf657fd68e20fd2a6f5166f98cfa43547a6111b",
+      "result": "pass",
+      "scope": "376 pure core assertions;1 valid plus14 refused strict-parser payloads;51 mapping assertions. These are not world observations.",
+      "current_source_hashes_checked": 24
+    },
+    {
+      "path": "evidence/runs/p1-boundary/agentcity-boundary-9f0e65e2/run-report.json",
+      "sha256": "3de0d84944e2851a78c468998cd1acdbd8399d91db94ca1db4e675a30d9086a2",
+      "result": "pass",
+      "scope": "Actual pinned loopback Paper primitives:41 initial assertion groups plus1 same-world restart replay group. Includes live job-stock withdraw/return/shortage, one Survival wire placement, permissions, stale/expired commands, native locks and receipts. No complete construction or full lifecycle claim.",
+      "plugin_sha256": "e3f660395aeb08bece3ee6a853e2ad22da6d6962437a842e34e45668f993655a",
+      "current_source_hashes_checked": 40,
+      "retained_artifact_hashes_checked": 68
+    },
+    {
+      "path": "evidence/runs/p1-boundary/agentcity-boundary-dca1654b/run-report.json",
+      "sha256": "396ab3a897e3b6dcb49b4184c01245b9700c3c3cbaa79568a834270602f1df3d",
+      "result": "pass",
+      "scope": "Actual current glass/slab-map plugin against the pinned loopback Paper primitives:41 initial assertion groups plus1 same-world restart replay group. Includes live job-stock withdraw/return/shortage, one Survival wire placement, permissions, stale/expired commands, native locks and receipts. No complete construction or full lifecycle claim.",
+      "compiled_plugin_sha256": "c41e31dc9b4775b5d1f520c4ca3f82fd2b0e2fc1e649b393333f866b2115fd7f",
+      "current_source_hashes_checked": 40,
+      "retained_artifact_hashes_checked": 68
+    }
+  ],
+  "superseded_regression_reason": "The earlier glass-only Java source was replaced by the fixed per-position glass/bottom-slab map. Earlier reports remain historical results and are not the current-source regression basis.",
+  "source_review_judgment": "No concrete new authority blocker found: thin references are fallback-only after existing solid references; server permission requires exact armed context and sneaking, with interacted-block use denied. Adapter sneak state is flushed through a bounded tick and restored in finally. This reasoned judgment is not physical completion evidence."
+}

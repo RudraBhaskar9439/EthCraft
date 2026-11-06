@@ -1,0 +1,99 @@
+{
+  "status": "fail",
+  "purpose": "offline independent world-read fixture, not independent human proof",
+  "observations": [
+    {
+      "suite": "normal",
+      "case_index": 0,
+      "a": 0,
+      "b": 0,
+      "expected": 0,
+      "observed": 0,
+      "plugin_passed": true,
+      "controls": [
+        {
+          "position": [
+            0,
+            84,
+            0
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "north",
+            "face": "floor"
+          }
+        },
+        {
+          "position": [
+            4,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "west",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            0,
+            83,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "south",
+            "face": "wall"
+          }
+        },
+        {
+          "position": [
+            4,
+            81,
+            1
+          ],
+          "properties": {
+            "powered": false,
+            "facing": "east",
+            "face": "wall"
+          }
+        }
+      ],
+      "lamps": [
+        {
+          "position": [
+            11,
+            86,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            4,
+            87,
+            -1
+          ],
+          "properties": {
+            "lit": false
+          }
+        },
+        {
+          "position": [
+            13,
+            89,
+            2
+          ],
+          "properties": {
+            "lit": false
+          }
+        }
+      ]
+    }
+  ],
+  "error": "Error: Observer kicked: {\"type\":\"string\",\"value\":\"Server closed\"}\n    at EventEmitter.<anonymous> (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/world/observe.cjs:57:51)\n    at EventEmitter.emit (node:events:509:20)\n    at Client.<anonymous> (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/mineflayer/lib/plugins/kick.js:5:9)\n    at Client.emit (node:events:509:20)\n    at emitPacket (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/minecraft-protocol/src/client.js:85:12)\n    at FullPacketParser.<anonymous> (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/minecraft-protocol/src/client.js:114:9)\n    at FullPacketParser.emit (node:events:509:20)\n    at addChunk (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/readable-stream/lib/internal/streams/readable.js:323:12)\n    at readableAddChunk (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/readable-stream/lib/internal/streams/readable.js:300:9)\n    at Readable.push (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/readable-stream/lib/internal/streams/readable.js:246:10)",
+  "finished_at": "2026-10-29T14:14:42.884Z"
+}

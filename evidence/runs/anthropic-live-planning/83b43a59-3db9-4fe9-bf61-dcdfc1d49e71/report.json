@@ -1,0 +1,89 @@
+{
+  "schema": "agentcity.anthropic-live-plan-acceptance.v1",
+  "recordedAtUtc": "2026-11-01T17:51:17.469Z",
+  "status": "pass_real_model_plan_validated_after_retained_response_replay",
+  "provider": "Anthropic native Messages API",
+  "model": "claude-sonnet-5-5",
+  "apiVersion": "2026-10-21",
+  "sourceCommitAtPaidRequest": "56847e5e646eb88592df708de33b39e0a4424581",
+  "finalParserSourceSha256": "1d6058af2d1161f7fe1a23f6ab228e94c5bf4de2fe4da2dfa58a35e0113b8dd5",
+  "generationRequests": 1,
+  "additionalGenerationRequests": 0,
+  "replayNetworkRequests": 0,
+  "httpStatus": 200,
+  "elapsedMs": 2116,
+  "responseId": "msg_011CgcdSVrCF94uguj2fF8f8",
+  "providerRequestId": "req_011CgcdSUzMp8HRV4naBMdZ6",
+  "usage": {
+    "input_tokens": 4933,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 72,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global",
+    "speed": "standard"
+  },
+  "approvedBudgetUsd": 0.1,
+  "estimatedGenerationTokenCostUsd": 0.010586,
+  "pricingUsdPerMillionTokens": {
+    "input": 2,
+    "output": 10
+  },
+  "pricingSource": "https://platform.claude.com/docs/en/about-claude/pricing",
+  "costScope": "Computed from reported generation usage and published standard rates; not an invoice audit.",
+  "request": "Build a 3 by 3 platform using oak planks in my assigned work area.",
+  "plan": {
+    "kind": "plan",
+    "message": "I can build a 3x3 oak plank platform using real materials.",
+    "steps": [
+      {
+        "action": "build_platform",
+        "width": 3,
+        "depth": 3,
+        "material": "oak_planks"
+      }
+    ]
+  },
+  "contextScope": "Synthetic planning fixture using the real conversational prompt, schema, native adapter and receiving validator. No registered owner grant or game dispatch.",
+  "requestPayloadIdenticalOnReplay": true,
+  "requestBodySha256": "237a67cac50fc50fe5b1394ab708ca72cd76ad4f26ec6be4dec7abe80bb62ec3",
+  "rawResponseSha256": "3276d0fb01e1d8a8d30ecc4dcc1c3d744642c852b9f76ec2d19908e04485c94a",
+  "initialResponseHandling": "The paid request returned complete valid JSON text with end_turn. The original tool-only parser rejected it; that failed report remains preserved.",
+  "fixVerification": "The final adapter accepts complete JSON text or one return_plan tool result. The exact saved paid response passed the real interpreter and validation with an identical request body and no network call.",
+  "preflightFailures": [
+    {
+      "count": 2,
+      "reason": "Sonnet 5.5 requires between_tools rather than disabled thinking",
+      "generationSubmitted": false
+    },
+    {
+      "count": 1,
+      "reason": "Sonnet 5.5 does not support forced tool choice; switched to auto",
+      "generationSubmitted": false
+    }
+  ],
+  "sources": {
+    "backend/src/inference/anthropic.mjs": "1d6058af2d1161f7fe1a23f6ab228e94c5bf4de2fe4da2dfa58a35e0113b8dd5",
+    "backend/src/playable/intent-planner.mjs": "3b1e4bb7a102191e7cf43e618fda5b751781360aa9369e41d6ec2ba00ef11ab4",
+    "backend/src/playable/agents.mjs": "af90ffef2368c6e19a664a209f2cfd7b63bc5c66b6c36d2a0e891d89713e3cde",
+    "scripts/playable_worker.mjs": "9e2e205595970e2ed5726269d119d6b6f92c6fd83228b1ac5eb26e753dbd823f",
+    "tests/inference/anthropic.mjs": "f3c91a29263de05ae55cbc68d4b8eb779a155391c221d9c7beeba60b48d37f8d"
+  },
+  "worldActionsExecuted": 0,
+  "financialTransactionsExecuted": 0,
+  "liveHostChanged": false,
+  "live0GVerified": false,
+  "canonicalPhasePassed": false,
+  "limits": [
+    "Final parser was verified by replaying the real saved response, not a second fresh generation.",
+    "One real request does not establish broad model quality or a completed Minecraft build.",
+    "No ongoing API spending or live host activation was authorized."
+  ]
+}

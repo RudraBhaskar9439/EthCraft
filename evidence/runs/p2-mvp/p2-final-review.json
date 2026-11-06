@@ -1,0 +1,259 @@
+{
+  "schema": "agentcity.p2.independent-final-review.v1",
+  "reviewed_at": "2026-10-29T19:45:15.906495+00:00",
+  "reviewer": "/root/p2_scope_review (independent AI engineering peer)",
+  "decision": "approved_for_six_case_local_P2_MVP",
+  "release": "eb49114ccd6811bf323eaf9b8a891da6f002267e",
+  "scope": "One pinned calculator, one cooperative local worker and six focused cases. Approval uses disclosed same-world source-segmented evidence, not a clean 144-placement run of the final release.",
+  "execution_composition": [
+    {
+      "segment": "Original build 5b3f8a44",
+      "native_placements": 137,
+      "wrapper_status": "fail",
+      "evidence": {
+        "path": "evidence/runs/p2-construction/agentcity-construction-5b3f8a44/run-report.json",
+        "sha256": "76912eaee624a1ead27957637a60ac2ea7bdf79e580a0961fb4c6c7028efdbbe"
+      },
+      "interpretation": "Started with an empty circuit and exactly 144 controlled items. Initial client checkpointed 12 placements; another process reached 137. Thin-reference support then stopped safely. Actual native events and placement receipts establish 137; the stale saved progress hint was 136 and was not treated as authority."
+    },
+    {
+      "segment": "Tail 88033ad1",
+      "native_placements": 7,
+      "wrapper_status": "fail",
+      "evidence": {
+        "path": "evidence/runs/p2-construction/agentcity-continuation-88033ad1/run-report.json",
+        "sha256": "5f9363dd3b00712696a1461c72d3fd5af1b83b1e1c94bc11803622df734030c0"
+      },
+      "interpretation": "Same saved world, deployment and stock baseline. Four bricks, two redstone dust and one torch were consumed in seven native placements. The worker completed correctly; an immediate inspection request hit HTTP 429, so the wrapper remains failed."
+    },
+    {
+      "segment": "Inspection 53847de4",
+      "native_placements": 0,
+      "wrapper_status": "pass",
+      "evidence": {
+        "path": "evidence/runs/p2-construction/agentcity-continuation-53847de4/run-report.json",
+        "sha256": "1cfa30da8d18dccbd0af49f69e6cd99749a5f5999526dc938fd3767d754a9202"
+      },
+      "interpretation": "The completed-world baseline was transparently composed from retained final block/checkpoint/receipt evidence, then checked against a fresh live observation. No restoration or stock injection occurred. The worker consumed nothing and the protected checker passed all 16 rows at revision 144."
+    }
+  ],
+  "independent_checks": {
+    "unique_accepted_native_positions": 144,
+    "accepted_positions_match_blueprint": true,
+    "placement_receipts": 144,
+    "withdrawal_receipts": 7,
+    "unique_worker_operation_ids": 151,
+    "final_pending_operation": null,
+    "final_job_stock": {},
+    "final_builder_inventory": {},
+    "consumed_material_bill": {
+      "minecraft:stone_bricks": 65,
+      "minecraft:lever": 4,
+      "minecraft:repeater": 16,
+      "minecraft:redstone_torch": 37,
+      "minecraft:redstone": 19,
+      "minecraft:redstone_lamp": 3
+    },
+    "inspection_distinct_rows": 16,
+    "inspection_stable_samples": 80,
+    "transition_spacing_checked": true,
+    "unchanged_immutable_configuration": true,
+    "deadline_not_extended": true,
+    "source_and_artifact_counts_by_run": {
+      "p1": {
+        "source_snapshots": 40,
+        "retained_artifacts": 68
+      },
+      "original": {
+        "source_snapshots": 28,
+        "retained_artifacts": 48
+      },
+      "tail": {
+        "source_snapshots": 27,
+        "retained_artifacts": 93
+      },
+      "inspection": {
+        "source_snapshots": 27,
+        "retained_artifacts": 94
+      },
+      "shortage": {
+        "source_snapshots": 28,
+        "retained_artifacts": 44
+      },
+      "occupied": {
+        "source_snapshots": 28,
+        "retained_artifacts": 44
+      },
+      "blocked": {
+        "source_snapshots": 28,
+        "retained_artifacts": 43
+      },
+      "access": {
+        "source_snapshots": 28,
+        "retained_artifacts": 43
+      }
+    }
+  },
+  "case_judgments": [
+    {
+      "case_id": "P2-001",
+      "case_digest": "0a0320980eb7819696f00225f5277122e55f2d51999dca2dbee21a643b7c7eeb",
+      "decision": "approved_for_focused_local_P2",
+      "required_subcases_reviewed": 16,
+      "passed_subcases_reviewed": 16,
+      "judgment": "All 144 blueprint positions and static orientations are physically observed. Native accepted events are unique, withdrawal/placement receipts conserve the exact material bill, and the real 16-row checker passes. Evidence is the disclosed 137 + 7 + 0 composition.",
+      "evidence": [
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-5b3f8a44/run-report.json",
+          "sha256": "76912eaee624a1ead27957637a60ac2ea7bdf79e580a0961fb4c6c7028efdbbe"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-continuation-88033ad1/resume-client.json",
+          "sha256": "40834636c4c1a1ecec56b55d3e78030688c39aeb71495edb8cae968357eeec71"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-continuation-53847de4/run-report.json",
+          "sha256": "1cfa30da8d18dccbd0af49f69e6cd99749a5f5999526dc938fd3767d754a9202"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-continuation-53847de4/retained/reports/1d764720-4f55-4a69-bb64-acb8c3c6b3c2.json",
+          "sha256": "3b8f8529e396b5065daf39a5abcc34ceeb5665f564f541ad9b7a269a353b0455"
+        }
+      ]
+    },
+    {
+      "case_id": "P2-002",
+      "case_digest": "17bef6413c0f943ce35a7501bff25cba76d09fc75ff8f70745b82e844823fd02",
+      "decision": "approved_for_focused_local_P2",
+      "required_subcases_reviewed": 1,
+      "passed_subcases_reviewed": 1,
+      "judgment": "The 12-placement process restart, later 137-placement baseline, seven-item continuation and completed-world restart use the same durable job. Actual blocks and inventories are rechecked; prior placement receipts are not executed twice.",
+      "evidence": [
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-5b3f8a44/initial-client.json",
+          "sha256": "e1137d8fec20d609eb759cf3dfe188138ea5722396b2de60b44844f6cbd42b8c"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-5b3f8a44/resume-client.json",
+          "sha256": "e02e6af190a1f1d49b36c19f0357df09580bd2ead4b9c7c8c6f870a219e02d80"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-continuation-88033ad1/continuation-baseline.json",
+          "sha256": "9c656dc0e63f9a5150631b3f2c8a1fabaafd92ef6153d77e857deb93f7788414"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-continuation-88033ad1/resume-client.json",
+          "sha256": "40834636c4c1a1ecec56b55d3e78030688c39aeb71495edb8cae968357eeec71"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-continuation-53847de4/resume-client.json",
+          "sha256": "cb16248496a88ee411cb317efddcabf1b6ed750db030ab36df57da36b5a03798"
+        }
+      ]
+    },
+    {
+      "case_id": "P2-003",
+      "case_digest": "95f866825d8dceed313a814db013c7df3fa73e44b1da6263f18108cdeb8bfc10",
+      "decision": "approved_for_focused_local_P2",
+      "required_subcases_reviewed": 2,
+      "passed_subcases_reviewed": 2,
+      "judgment": "Actual shortage and occupied-target runs each wait with zero placements and no invented stock. Their old source snapshots remain retained. Subsequent adapter/plugin changes concern native placement and are unreachable before these waits; observation, stock, checkpoint and refusal paths are unchanged.",
+      "evidence": [
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-1b755aff/run-report.json",
+          "sha256": "6dfbd82c4da1cd18d0d8db4efd0cb17297248e27c14faca94093b14fbc129689"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-1b755aff/initial-client.json",
+          "sha256": "d020cab1f42874b9bd472a551101cd29b13b14bfd66d37de5b631c9ec32bedde"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-ef6dfdc3/run-report.json",
+          "sha256": "91c103ef920ec5f832222fb4f39105df448c43d036b346d748e86e6bb43ec86e"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-ef6dfdc3/initial-client.json",
+          "sha256": "9bf86005c22219bd24441c378b7f085ba83c1bcaa516ca08dcbe8d0e46e4f30a"
+        }
+      ]
+    },
+    {
+      "case_id": "P2-004",
+      "case_digest": "087b053479d66442dcafe04d45405c22178cd68447d79205c05e866106a08036",
+      "decision": "approved_for_focused_local_P2",
+      "required_subcases_reviewed": 1,
+      "passed_subcases_reviewed": 1,
+      "judgment": "An actual glass obstruction at the declared crossing produces a bounded navigation refusal while all 144 stock items, structure, inventories and revision remain unchanged. Later changes affect native placement, not the executed zero-placement navigation path.",
+      "evidence": [
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-4d581bae/run-report.json",
+          "sha256": "cfb8f292f5714cdd676e022a3febea338d99cad994fb3977fd1637200041d893"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-4d581bae/initial-client.json",
+          "sha256": "09417a4946701e2a1cdda9f47cbdcbc602940a5c88995d760ef05e3d99315e56"
+        }
+      ]
+    },
+    {
+      "case_id": "P2-005",
+      "case_digest": "9ada9df5569754ff092ffd1351eca7c82cf511f57c6869f88a5006faa17e4d51",
+      "decision": "approved_for_focused_local_P2",
+      "required_subcases_reviewed": 2,
+      "passed_subcases_reviewed": 2,
+      "judgment": "Unsupported orientation and blueprint hash are refused before retrieval or placement in the initial live fixture. The final ConstructionWorker constructor and manifest-validation code are byte-identical; no rotated physical build is claimed.",
+      "evidence": [
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-5b3f8a44/initial-client.json",
+          "sha256": "e1137d8fec20d609eb759cf3dfe188138ea5722396b2de60b44844f6cbd42b8c"
+        }
+      ]
+    },
+    {
+      "case_id": "P2-006",
+      "case_digest": "c5b6c79db7eb247e3a8611184728b949539251aeae3f625ae03a2ce3e3b6395b",
+      "decision": "approved_for_focused_local_P2",
+      "required_subcases_reviewed": 5,
+      "passed_subcases_reviewed": 5,
+      "judgment": "Actual guards cover wrong session, unauthorized role, stale revision, expiry and inspection lock. Expired PLACE uses a real borrowed/equipped item and returns it with exact final no-effects. Fresh current-source P1 native permissions and the denied unsneaked thin-reference operation supplement the unchanged prepare-time paths.",
+      "evidence": [
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-5b3f8a44/initial-client.json",
+          "sha256": "e1137d8fec20d609eb759cf3dfe188138ea5722396b2de60b44844f6cbd42b8c"
+        },
+        {
+          "path": "evidence/runs/p1-boundary/agentcity-boundary-bad12f21/run-report.json",
+          "sha256": "32c3ad06f75874bbd793a5c5c3942a23a7ad708a39e710ceca0f6324c5267f49"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-continuation-88033ad1/resume-client.json",
+          "sha256": "40834636c4c1a1ecec56b55d3e78030688c39aeb71495edb8cae968357eeec71"
+        }
+      ]
+    }
+  ],
+  "release_binding": {
+    "all_current_product_sources_match_final_inspection_snapshots": true,
+    "only_post_run_snapshot_difference": "tests/construction/continue.py changes one console sentence from original137-placement world to retained construction world. Exact comparison confirms no behavioral change.",
+    "prior_source_reuse": "Original solid-reference behavior retains priority; new thin-reference/sneak branches were not executed by the prior 137 successful placements or the zero-placement shortage, occupied and blocked scenarios. Continuation fixture mode is observation-only and forbids bootstrap on the preserved world."
+  },
+  "defect_review": {
+    "ledger": {
+      "path": "evidence/runs/p2-mvp/defects.json",
+      "sha256": "8b849d8ed913f1c702ca41995ddd090ebfcf46f9da7bad140907d4b7bfd4bd05"
+    },
+    "resolved_count": 14,
+    "judgment": "Startup/schema/admission and harness errors are closed by later actual startup and execution. Navigation/descent/arrival issues are closed by the 50-check live access run and completed construction. Orientation and thin-reference issues are closed by actual final block states and the 16-row inspection. The inspection-rate error is closed by the zero-placement inspection segment. Original failed reports remain retained; development notes describe historical pending states, not current open defects."
+  },
+  "deferred_requirements": "All fourteen original P2 families remain under P9-059 through P9-072. This local approval does not pass their unrun fault matrices or distributed lease requirement.",
+  "limitations": [
+    "Historical Paper 1.21.11 build 132 remains unsupported for production.",
+    "Offline identities and the 198 glass blocks plus nine bottom slabs are disclosed operator fixtures.",
+    "No independently controlled human, authenticated-account, live 0G/Arkiv, token-platform, funded-chain, wallet-signature or settlement approval is established.",
+    "No distributed task lease is proved; the worker is limited to cooperative exclusion on one host.",
+    "A clean build of all 144 placements using only the final release was not executed.",
+    "Scripted domain/adapter checks and constructor checks are distinguished from actual world evidence.",
+    "This review introduces no signature, funding, purchase, requester acceptance or readiness authority for the worker.",
+    "Root must bind evidence/P2.json and execute the gate before reporting gate readiness."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "scenario": "missing-lamp-s0-lamp_measurement",
+  "state": {
+    "revision": 0,
+    "lockMode": "INSPECTION",
+    "quarantined": true,
+    "readyForReview": false,
+    "passValidUntilMs": 0
+  },
+  "reports": {
+    "6e66c190-0c76-4bbb-87f6-64ec25c14358.json": "c30793c0d2aeefd101bd67b053a2255ce00de0b42f343aa3065abc0d510dfd3e"
+  }
+}

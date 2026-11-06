@@ -1,0 +1,126 @@
+{
+  "status": "fail",
+  "scope": "Actual isolated Paper26.3, pinned WorldGuard/WorldEdit and native gear/property receiving checks. Canonical chain proofs are explicitly synthetic adapter fixtures; no live NFT, human purchase or production world change.",
+  "checks": [
+    {
+      "name": "main-hand and explicit-slot previews preserve exact damaged enchanted named gear; substitution and generic Game Coin release are refused",
+      "status": "pass"
+    },
+    {
+      "name": "pinned-source mint/burn proof receiving fixture releases one native gear stack once, preserving full NBT fingerprint and metadata",
+      "status": "pass"
+    }
+  ],
+  "fixtureGrants": [
+    {
+      "actor": "EscSeller",
+      "item": "minecraft:oak_planks",
+      "count": 20,
+      "method": "isolated fixture plugin one-time native stock"
+    },
+    {
+      "actor": "EscSeller",
+      "item": "minecraft:oak_planks",
+      "count": 2,
+      "metadata": "custom_name fixture-modified",
+      "method": "isolated fixture plugin one-time native stock"
+    },
+    {
+      "actor": "EscSeller",
+      "item": "minecraft:diamond_sword",
+      "count": 1,
+      "metadata": {
+        "name": "Fixture blade",
+        "damage": 7,
+        "sharpness": 2,
+        "lore": true,
+        "persistentData": true
+      },
+      "method": "isolated fixture plugin native stock"
+    },
+    {
+      "actor": "EscSeller",
+      "item": "minecraft:stone",
+      "count": 2,
+      "method": "isolated fixture plugin native stock"
+    },
+    {
+      "actor": "EscSeller",
+      "item": "minecraft:chest",
+      "count": 1,
+      "method": "isolated fixture plugin native stock"
+    }
+  ],
+  "productionWorldMutations": 0,
+  "independentHumansVerified": 0,
+  "pluginSha256": "c9a108690fad15f8d15702b6d6c67468dab438c6ba5d6837fbf0938b28c02a69",
+  "container": "agentcity-escrow-fixture-9c4a18c9",
+  "fixtureRuntime": "C:\\Users\\Rudransh Shinghal\\agentcity-minecraft\\.local\\escrow-fixture\\9c4a18c9-3faa-45f4-9a1a-281a00ea57a4",
+  "paperSha256": "a836a016be7ac52352eb3a1efb6857bb42ee73a6c78d46e292f7e87742edb0e6",
+  "dependencies": [
+    {
+      "plugin": "WorldGuard",
+      "version": "7.0.20+2410-0b6c3f1",
+      "release": "7.0.20",
+      "file": "worldguard-bukkit-7.0.20.jar",
+      "url": "https://mediafilez.forgecdn.net/files/9219/599/worldguard-bukkit-7.0.20.jar",
+      "releasePage": "https://dev.bukkit.org/projects/worldguard/files/9219599",
+      "sha256": "8768a49bcbecbb7a413ad134ee72d9871cdf967b7d938e6b96bb0ca72bb1467b",
+      "officialReleaseMd5": "cf5da34dcd48d5b286b4a93b68383b93",
+      "license": "GPL-3.0-or-later",
+      "licenseUrl": "https://github.com/EngineHub/WorldGuard/blob/7.0.20/LICENSE.txt"
+    },
+    {
+      "plugin": "WorldEdit",
+      "version": "7.4.6+7648-00664b0",
+      "release": "7.4.6",
+      "file": "worldedit-bukkit-7.4.6.jar",
+      "url": "https://hangarcdn.papermc.io/plugins/EngineHub/WorldEdit/versions/7.4.6/PAPER/worldedit-bukkit-7.4.6.jar",
+      "releasePage": "https://hangar.papermc.io/EngineHub/WorldEdit/versions/7.4.6",
+      "sha256": "e0ce67d870ad1fef8a40dd9d7926360caf3bb44722438545d6b20b55f82a0c91",
+      "license": "GPL-3.0-or-later",
+      "licenseUrl": "https://github.com/EngineHub/WorldEdit/blob/7.4.6/LICENSE.txt"
+    }
+  ],
+  "equipment": {
+    "fingerprint": "fa0752a84d9e1526903ed2c3c9f35e35bf094b63b6d21ae8a8a16f470b318941",
+    "descriptor": {
+      "material": "minecraft:diamond_sword",
+      "amount": 1,
+      "maxStackSize": 1,
+      "name": "Fixture blade",
+      "damage": 7,
+      "maxDurability": 1561,
+      "enchantments": {
+        "minecraft:sharpness": 2
+      },
+      "lore": [
+        "Isolated native fixture stock"
+      ]
+    },
+    "actualSellerDelta": -1,
+    "actualBuyerDelta": 1,
+    "proofs": "Synthetic private-adapter proof fixtures only; no onchain verification claim"
+  },
+  "error": {
+    "message": "actual native movement refusal required",
+    "code": "ERR_ASSERTION"
+  },
+  "clientProfile": {
+    "version": "1.21.11",
+    "tickEndAtPhysicsCadence": true,
+    "fixtureOnlyPort": 25606,
+    "clients": [
+      {
+        "name": "EscSeller",
+        "tickBoundaries": 207
+      },
+      {
+        "name": "EscBuyer",
+        "tickBoundaries": 76
+      }
+    ]
+  },
+  "fixtureInfrastructure": "Fresh isolated PlayableExperience world initialization seeds its disclosed demonstration task-pad chests; the test does not withdraw those stocks.",
+  "finishedAt": "2026-10-31T17:42:39.213Z"
+}

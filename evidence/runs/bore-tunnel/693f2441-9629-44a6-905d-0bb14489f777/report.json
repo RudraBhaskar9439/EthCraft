@@ -1,0 +1,32 @@
+{
+  "startedAt": "2026-10-31T14:44:24.473Z",
+  "status": "pass",
+  "target": {
+    "host": "bore.pub",
+    "port": 51967,
+    "address": "159.223.110.159"
+  },
+  "scope": "Actual read-only standard Minecraft status and ping; no player login",
+  "checks": [
+    {
+      "name": "status protocol774",
+      "status": "pass",
+      "version": {
+        "name": "Paper 26.3",
+        "protocol": 774
+      },
+      "players": 1
+    },
+    {
+      "name": "ping42 echoed",
+      "status": "pass"
+    }
+  ],
+  "addresses": [
+    {
+      "address": "159.223.110.159",
+      "family": 4
+    }
+  ],
+  "finishedAt": "2026-10-31T14:44:25.863Z"
+}

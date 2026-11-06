@@ -1,0 +1,49 @@
+{
+  "purpose": "isolated physical compatibility spike only",
+  "started_at": "2026-10-29T12:55:37.144547+00:00",
+  "versions": {
+    "purpose": "isolated_non_token_fixture",
+    "bind": "127.0.0.1",
+    "port": 25576,
+    "minecraft": "1.21.11",
+    "paper": {
+      "build": 132,
+      "support": "UNSUPPORTED",
+      "support_ended": "2026-06-15",
+      "sha256": "5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba",
+      "url": "https://fill-data.papermc.io/v1/objects/5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba/paper-1.21.11-132.jar"
+    },
+    "java_image": "eclipse-temurin@sha256:5d90b26c0784ccf55af55f97cbcf7f3969c66a06299c93bdc72649219942a48f",
+    "mineflayer": "4.39.0",
+    "pathfinder": "2.4.5",
+    "authentication": "offline_fixture_only",
+    "independent_human_participants": 0,
+    "token_integration": false,
+    "production_supported": false
+  },
+  "independent_humans": 0,
+  "full_phase_gate_passed": false,
+  "steps": [
+    {
+      "step": "bootstrap",
+      "status": "pass",
+      "container": "e5b0aa7306dd6e2fcd358c03c3142eb9ffbbc7cd4f2a9f50d6f15aa763b3d985"
+    },
+    {
+      "step": "compile_fixture_plugin",
+      "status": "pass"
+    },
+    {
+      "step": "fixture",
+      "status": "pass",
+      "container": "419e8719e6e3f1f69cf001e4742fa733721200f79a5fb3de1fff5bbfb673f001"
+    }
+  ],
+  "java_runtime": "openjdk version \"21.0.12.1\" 2026-08-18 LTS\nOpenJDK Runtime Environment Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS)\nOpenJDK 64-Bit Server VM Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS, mixed mode, sharing)",
+  "node_runtime": "v26.3.1",
+  "actual_paper_sha256": "5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba",
+  "fixture_plugin_sha256": "73a1807cfdc9b1c7eba3a54147e7186f35b1489751b2fb89889a88501a2cef36",
+  "status": "fail",
+  "error": "node failed (1): {\"schema\":\"agentcity.p0.compatibility.v1\",\"status\":\"failed\",\"started_at\":\"2026-10-29T12:55:56.790Z\",\"environment\":{\"host\":\"127.0.0.1\",\"port\":25576,\"version\":\"1.21.11\",\"auth\":\"offline\"},\"identities\":\"FixtureBuilder and FixtureObserver are both agent-controlled test fixtures, not independent humans or licensed-account proof.\",\"steps\":[{\"name\":\"initial_off\",\"passed\":true,\"observations\":[{\"lever\":false,\"lamp\":false,\"wire\":0,\"stock\":2,\"target\":\"AIR\",\"server\":\"1.21.11-132-c5eb079 (MC: 1.21.11)\",\"plugin\":\"0.1.0\"},{\"lever\":false,\"lamp\":false,\"wire\":0,\"stock\":2,\"target\":\"AIR\",\"server\":\"1.21.11-132-c5eb079 (MC: 1.21.11)\",\"plugin\":\"0.1.0\"}],\"client_blocks\":[{\"player\":\"FixtureBuilder\",\"lever\":{\"powered\":false,\"facing\":\"east\",\"face\":\"floor\"},\"wire\":{\"west\":\"none\",\"south\":\"none\",\"power\":\"0\",\"north\":\"none\",\"east\":\"none\"},\"lamp\":{\"lit\":false}},{\"player\":\"FixtureObserver\",\"lever\":{\"powered\":false,\"facing\":\"east\",\"face\":\"floor\"},\"wire\":{\"west\":\"none\",\"south\":\"none\",\"power\":\"0\",\"north\":\"none\",\"east\":\"none\"},\"lamp\":{\"lit\":false}}]},{\"name\":\"lever_on\",\"passed\":true,\"observations\":[{\"lever\":true,\"lamp\":true,\"wire\":15,\"stock\":2,\"target\":\"AIR\",\"server\":\"1.21.11-132-c5eb079 (MC: 1.21.11)\",\"plugin\":\"0.1.0\"},{\"lever\":true,\"lamp\":true,\"wire\":15,\"stock\":2,\"target\":\"AIR\",\"server\":\"1.21.11-132-c5eb079 (MC: 1.21.11)\",\"plugin\":\"0.1.0\"}],\"client_blocks\":[{\"player\":\"FixtureBuilder\",\"lever\":{\"powered\":true,\"facing\":\"east\",\"face\":\"floor\"},\"wire\":{\"west\":\"side\",\"south\":\"none\",\"power\":\"15\",\"north\":\"none\",\"east\":\"side\"},\"lamp\":{\"lit\":true}},{\"player\":\"FixtureObserver\",\"lever\":{\"powered\":true,\"facing\":\"east\",\"face\":\"floor\"},\"wire\":{\"west\":\"side\",\"south\":\"none\",\"power\":\"15\",\"north\":\"none\",\"east\":\"side\"},\"lamp\":{\"lit\":true}}]},{\"name\":\"lever_off_again\",\"passed\":true,\"observations\":[{\"lever\":false,\"lamp\":false,\"wire\":0,\"stock\":2,\"target\":\"AIR\",\"server\":\"1.21.11-132-c5eb079 (MC: 1.21.11)\",\"plugin\":\"0.1.0\"},{\"lever\":false,\"lamp\":false,\"wire\":0,\"stock\":2,\"target\":\"AIR\",\"server\":\"1.21.11-132-c5eb079 (MC: 1.21.11)\",\"plugin\":\"0.1.0\"}],\"client_blocks\":[{\"player\":\"FixtureBuilder\",\"lever\":{\"powered\":false,\"facing\":\"east\",\"face\":\"floor\"},\"wire\":{\"west\":\"side\",\"south\":\"none\",\"power\":\"0\",\"north\":\"none\",\"east\":\"side\"},\"lamp\":{\"lit\":false}},{\"player\":\"FixtureObserver\",\"lever\":{\"powered\":false,\"facing\":\"east\",\"face\":\"floor\"},\"wire\":{\"west\":\"side\",\"south\":\"none\",\"power\":\"0\",\"north\":\"none\",\"east\":\"side\"},\"lamp\":{\"lit\":false}}]}],\"current_step\":\"withdraw_one_actual_item\",\"error\":{\"name\":\"AssertionError\",\"message\":\"builder must receive exactly one item\\n\\n0 !== 1\\n\"},\"finished_at\":\"2026-10-29T12:56:06.387Z\"}\n",
+  "finished_at": "2026-10-29T12:56:09.503468+00:00"
+}

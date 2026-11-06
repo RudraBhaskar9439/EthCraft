@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="agentcity-local-token" content="{{LOCAL_TOKEN}}">
+<title>AgentCity · Human test</title>
+<link rel="stylesheet" href="/wallet.css">
+<link rel="stylesheet" href="/human.css">
+<main>
+  <p class="badge">Unichain Sepolia · private human test</p>
+  <h1>Complete the human test</h1>
+  <p>Minecraft uses internal game materials. This separate contract demonstration uses test tokens, simulated materials and a simulated inspection. Real spending remains $0.</p>
+  <p id="status" role="status" aria-live="polite">Checking the current step…</p>
+  <section>
+    <h2>1. Link both game accounts</h2>
+    <p>Join <strong>127.0.0.1:25598</strong> with your Microsoft-authenticated Java account. Enter <strong>/walletlink</strong> followed by your public wallet address. Stay connected until your wallet link is recorded.</p>
+    <ul id="people"></ul>
+    <p id="identity-status"></p>
+  </section>
+  <section>
+    <h2>2. Review one agreement</h2>
+    <p>Fixed labor: <strong>6 test CRED</strong>. Maximum material purchase: <strong>3 test CRED</strong>. Both people approve the same terms before funding.</p>
+    <button id="start" type="button" disabled>Prepare final agreement</button>
+    <ul id="review-links"></ul>
+    <p id="agreement-status"></p>
+    <button id="register" type="button" hidden>Continue after both approvals</button>
+  </section>
+  <section>
+    <h2>3. Complete the contract demonstration</h2>
+    <p>Open this page in Brave. Select the expected wallet and Unichain Sepolia before preparing each transaction. Each person confirms their own wallet actions.</p>
+    <p id="funding"></p>
+    <ol id="transactions"></ol>
+    <button id="provision" type="button" hidden>Provide the planned test resources</button>
+    <button id="publish" type="button" hidden>Refresh the simulated market status</button>
+    <button id="advance" type="button" hidden>Run simulated delivery, build and inspection</button>
+    <button id="prepare" type="button" hidden>Prepare the next transaction</button>
+    <p id="wallet-status" role="status" aria-live="polite"></p>
+    <div id="transaction-review" hidden>
+      <h3 id="transaction-title"></h3>
+      <dl id="transaction-summary"></dl>
+      <details><summary>Exact transaction</summary><pre id="transaction-exact"></pre></details>
+      <p id="deadline"></p>
+      <label><input id="transaction-consent" type="checkbox"> I reviewed this exact test transaction and want to open its approval in my wallet.</label>
+      <button id="send" type="button" disabled>Review and confirm in MetaMask</button>
+    </div>
+    <div id="recovery" hidden>
+      <h3>Check an uncertain submission</h3>
+      <p>Keep the original intent. Find its transaction hash in your wallet activity and check it here. An uncertain result never starts another purchase or payment.</p>
+      <label for="transaction-hash">Original transaction hash</label>
+      <input id="transaction-hash" type="text" autocomplete="off" spellcheck="false" placeholder="0x…">
+      <button id="recover" type="button">Check the original transaction</button>
+    </div>
+    <button id="refresh" type="button">Refresh confirmed progress</button>
+  </section>
+  <p class="muted">Trusted local operator only. Keep this page private. A recorded game link is historical identity evidence; it does not keep a person signed into this console.</p>
+  <p><a href="/">Return to the pilot console</a></p>
+</main>
+<script type="module" src="/human.mjs"></script>
+</html>

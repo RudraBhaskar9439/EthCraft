@@ -1,0 +1,9 @@
+{"check":"fixed-access-waypoint-7,0,7","status":"pass"}
+{"check":"fixed-access-waypoint-13,3,7","status":"pass"}
+{"check":"fixed-access-waypoint-19,6,7","status":"pass"}
+{"check":"fixed-access-waypoint-25,9,7","status":"pass"}
+{"check":"fixed-access-waypoint-19,6,7","status":"pass"}
+{"check":"fixed-access-waypoint-13,3,7","status":"pass"}
+{"check":"fixed-access-waypoint-7,0,7","status":"pass"}
+{"check":"access-only-calibration-preserves-all144-stock-and-empty-circuit","status":"pass"}
+{"status":"pass","checks":8}

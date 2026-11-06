@@ -1,0 +1,550 @@
+{
+  "schema": "agentcity.construction-checkpoint.v1",
+  "binding": {
+    "serverId": "local-inspection-server",
+    "jobId": "agentcity-construction-9e47cccc",
+    "agreementVersion": 1,
+    "actorId": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+    "blueprintSha256": "c8704765464a574ec4c797ad78d5294cc167007f66a0abfebd742e0b06711c49",
+    "semanticSha256": "dd49b27812caf0572d9838bfdd134e013247c3d5f2fc228f1b76d3146b9d9d54",
+    "origin": [
+      -12,
+      81,
+      -4
+    ],
+    "constructionAccessSha256": "8b08d81a1830d65a9bc404fd1443c95b4dcb94e6665da779d61acfe446d1d2c3"
+  },
+  "completed": [
+    "-7,81,-3",
+    "-4,81,-3",
+    "-2,81,-4",
+    "-12,82,-4",
+    "-11,82,-4",
+    "-9,82,-3",
+    "-8,82,-3",
+    "-7,82,-3",
+    "-6,82,-4",
+    "-6,82,-3",
+    "-5,82,-3",
+    "-4,82,-3",
+    "-3,82,-3",
+    "-2,82,-4",
+    "-1,82,-4",
+    "0,82,-4",
+    "-12,83,-4",
+    "-11,83,-4",
+    "-11,83,-3",
+    "-10,83,-4",
+    "-10,83,-3",
+    "-9,83,-4",
+    "-6,83,-4",
+    "-6,83,-3",
+    "-5,83,-4",
+    "-5,83,-3",
+    "-4,83,-3",
+    "-3,83,-3",
+    "-1,83,-4",
+    "0,83,-4",
+    "1,83,-4",
+    "-12,84,-4",
+    "-12,84,-3",
+    "-11,84,-4",
+    "-11,84,-3",
+    "-10,84,-4",
+    "-10,84,-3",
+    "-9,84,-4",
+    "-8,84,-4",
+    "-8,84,-3",
+    "-7,84,-4",
+    "-7,84,-3",
+    "-6,84,-4",
+    "-6,84,-3",
+    "-5,84,-4",
+    "-5,84,-3",
+    "-4,84,-3",
+    "0,84,-3",
+    "1,84,-4"
+  ],
+  "receipts": [
+    {
+      "operationId": "2e63d712-4832-454e-89c0-449815049604",
+      "action": "WITHDRAW",
+      "revision": 0,
+      "item": "minecraft:stone_bricks",
+      "count": 64,
+      "target": null
+    },
+    {
+      "operationId": "5608929b-60de-464f-a540-7e5d22f96db2",
+      "action": "WITHDRAW",
+      "revision": 0,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": null
+    },
+    {
+      "operationId": "be6f51c4-49e3-4363-822f-3960143ddaf1",
+      "action": "WITHDRAW",
+      "revision": 0,
+      "item": "minecraft:lever",
+      "count": 4,
+      "target": null
+    },
+    {
+      "operationId": "e0a049f8-5f24-4967-9b0a-7aa252c166e6",
+      "action": "WITHDRAW",
+      "revision": 0,
+      "item": "minecraft:repeater",
+      "count": 16,
+      "target": null
+    },
+    {
+      "operationId": "b8f7ec12-a85a-42e2-98cc-896725cdae21",
+      "action": "WITHDRAW",
+      "revision": 0,
+      "item": "minecraft:redstone_torch",
+      "count": 37,
+      "target": null
+    },
+    {
+      "operationId": "350328da-d42a-4e4d-b4de-f518ef842973",
+      "action": "WITHDRAW",
+      "revision": 0,
+      "item": "minecraft:redstone",
+      "count": 19,
+      "target": null
+    },
+    {
+      "operationId": "c970774c-c616-4927-881b-a3dca5dd6697",
+      "action": "WITHDRAW",
+      "revision": 0,
+      "item": "minecraft:redstone_lamp",
+      "count": 3,
+      "target": null
+    },
+    {
+      "operationId": "f1cf02d8-a403-48f4-8e63-cf70801d511a",
+      "action": "PLACE",
+      "revision": 1,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": "-7,81,-3"
+    },
+    {
+      "operationId": "1cf4d0f0-4128-4819-baca-8139c2a83c19",
+      "action": "PLACE",
+      "revision": 2,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": "-4,81,-3"
+    },
+    {
+      "operationId": "20e5e281-771f-4346-8a3c-4e07c9c17417",
+      "action": "PLACE",
+      "revision": 3,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": "-2,81,-4"
+    },
+    {
+      "operationId": "4d2c259a-ffaf-4d8b-be39-807fd6d9f4c8",
+      "action": "PLACE",
+      "revision": 4,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": "-12,82,-4"
+    },
+    {
+      "operationId": "56826a9e-1475-46bc-9219-01539eda00af",
+      "action": "PLACE",
+      "revision": 5,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": "-11,82,-4"
+    },
+    {
+      "operationId": "5de4916f-c9f3-44b6-aa22-5e6b1ad0fb93",
+      "action": "PLACE",
+      "revision": 6,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": "-9,82,-3"
+    },
+    {
+      "operationId": "52473ed9-d3a8-4ff1-b51c-db4758978f1a",
+      "action": "PLACE",
+      "revision": 7,
+      "item": "minecraft:lever",
+      "count": 1,
+      "target": "-8,82,-3"
+    },
+    {
+      "operationId": "603fb325-45ec-432b-a5b7-fb0cfeaa6232",
+      "action": "PLACE",
+      "revision": 8,
+      "item": "minecraft:repeater",
+      "count": 1,
+      "target": "-7,82,-3"
+    },
+    {
+      "operationId": "3a5c4762-7da7-4597-8e95-d4d8dd090df9",
+      "action": "PLACE",
+      "revision": 9,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": "-6,82,-3"
+    },
+    {
+      "operationId": "148ac164-58f0-425d-bbab-39fefdda783e",
+      "action": "PLACE",
+      "revision": 10,
+      "item": "minecraft:redstone_torch",
+      "count": 1,
+      "target": "-6,82,-4"
+    },
+    {
+      "operationId": "11de01b0-c398-435c-9f81-b01148fb7932",
+      "action": "PLACE",
+      "revision": 11,
+      "item": "minecraft:redstone_torch",
+      "count": 1,
+      "target": "-5,82,-3"
+    },
+    {
+      "operationId": "165cef1d-5c0f-483a-bf0e-e568d7739d77",
+      "action": "PLACE",
+      "revision": 12,
+      "item": "minecraft:repeater",
+      "count": 1,
+      "target": "-4,82,-3"
+    },
+    {
+      "operationId": "75f06914-e6e4-4d3e-a8fd-8d409a7ada74",
+      "action": "PLACE",
+      "revision": 13,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": "-3,82,-3"
+    },
+    {
+      "operationId": "a8bfa850-0e3e-4fe3-949d-403c360c6802",
+      "action": "PLACE",
+      "revision": 14,
+      "item": "minecraft:redstone",
+      "count": 1,
+      "target": "-2,82,-4"
+    },
+    {
+      "operationId": "664ce38a-508e-4dea-8279-ea83cf9347c3",
+      "action": "PLACE",
+      "revision": 15,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": "-1,82,-4"
+    },
+    {
+      "operationId": "27966063-03b1-49b2-98d4-a98fd69e2ed1",
+      "action": "PLACE",
+      "revision": 16,
+      "item": "minecraft:redstone_torch",
+      "count": 1,
+      "target": "0,82,-4"
+    },
+    {
+      "operationId": "c9ab6708-844a-4b80-a4a4-57de955acf90",
+      "action": "PLACE",
+      "revision": 17,
+      "item": "minecraft:redstone",
+      "count": 1,
+      "target": "-12,83,-4"
+    },
+    {
+      "operationId": "caf34bde-9279-41f5-9907-7804271462c2",
+      "action": "PLACE",
+      "revision": 18,
+      "item": "minecraft:redstone",
+      "count": 1,
+      "target": "-11,83,-4"
+    },
+    {
+      "operationId": "9c89e7bf-1e89-401c-890a-ee30e2d4278f",
+      "action": "PLACE",
+      "revision": 19,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": "-11,83,-3"
+    },
+    {
+      "operationId": "516ecbec-00f8-428f-9a62-5af1728ee07f",
+      "action": "PLACE",
+      "revision": 20,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": "-10,83,-4"
+    },
+    {
+      "operationId": "923612e6-ab33-4a9d-a46a-8a8162e14962",
+      "action": "PLACE",
+      "revision": 21,
+      "item": "minecraft:redstone_torch",
+      "count": 1,
+      "target": "-10,83,-3"
+    },
+    {
+      "operationId": "c8019894-8a2b-46aa-9cad-a8d8b1ffaf51",
+      "action": "PLACE",
+      "revision": 22,
+      "item": "minecraft:redstone_torch",
+      "count": 1,
+      "target": "-9,83,-4"
+    },
+    {
+      "operationId": "ddef1ddf-3253-4e13-8a2d-65facd46ba0a",
+      "action": "PLACE",
+      "revision": 23,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": "-6,83,-4"
+    },
+    {
+      "operationId": "a701e9c1-a0df-46e5-b0e5-1f7ac74dacc6",
+      "action": "PLACE",
+      "revision": 24,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": "-6,83,-3"
+    },
+    {
+      "operationId": "0172a215-4238-41aa-9420-ee85a1acd38f",
+      "action": "PLACE",
+      "revision": 25,
+      "item": "minecraft:redstone_torch",
+      "count": 1,
+      "target": "-5,83,-4"
+    },
+    {
+      "operationId": "4d8a8392-ff5a-45b5-84b6-a791e89babfa",
+      "action": "PLACE",
+      "revision": 26,
+      "item": "minecraft:redstone",
+      "count": 1,
+      "target": "-3,83,-3"
+    },
+    {
+      "operationId": "20e021d7-a9ec-4e0d-a38b-af36bfaecbfe",
+      "action": "PLACE",
+      "revision": 27,
+      "item": "minecraft:redstone",
+      "count": 1,
+      "target": "-1,83,-4"
+    },
+    {
+      "operationId": "be0e3d0c-b137-4c3c-8000-8f8a3781b487",
+      "action": "PLACE",
+      "revision": 28,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": "1,83,-4"
+    },
+    {
+      "operationId": "4c362cfa-0b03-4bad-bff3-36bea2659025",
+      "action": "PLACE",
+      "revision": 29,
+      "item": "minecraft:redstone_torch",
+      "count": 1,
+      "target": "0,83,-4"
+    },
+    {
+      "operationId": "657026f8-10cf-4c1c-90e3-c54a15947bd5",
+      "action": "PLACE",
+      "revision": 30,
+      "item": "minecraft:repeater",
+      "count": 1,
+      "target": "-11,84,-3"
+    },
+    {
+      "operationId": "2ac0bcbf-ec9b-4491-9d29-30c0c8d3245f",
+      "action": "PLACE",
+      "revision": 31,
+      "item": "minecraft:redstone_torch",
+      "count": 1,
+      "target": "-10,84,-4"
+    },
+    {
+      "operationId": "99d0da2d-e6be-4af7-812b-e133f482cba2",
+      "action": "PLACE",
+      "revision": 32,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": "-11,84,-4"
+    },
+    {
+      "operationId": "4124b681-36b8-4b79-a1ce-b0b14235ff49",
+      "action": "PLACE",
+      "revision": 33,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": "-12,84,-4"
+    },
+    {
+      "operationId": "bfb791ab-9249-4de9-ac7c-ff9aed559f7b",
+      "action": "PLACE",
+      "revision": 34,
+      "item": "minecraft:lever",
+      "count": 1,
+      "target": "-12,84,-3"
+    },
+    {
+      "operationId": "54289ab5-cb97-43d1-9622-f57666fd8010",
+      "action": "PLACE",
+      "revision": 35,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": "-10,84,-3"
+    },
+    {
+      "operationId": "51477aa2-d116-4dd9-9fa5-49032579a865",
+      "action": "PLACE",
+      "revision": 36,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": "-9,84,-4"
+    },
+    {
+      "operationId": "6b9085fb-4158-4021-aade-9d23eca210bd",
+      "action": "PLACE",
+      "revision": 37,
+      "item": "minecraft:redstone_torch",
+      "count": 1,
+      "target": "-8,84,-4"
+    },
+    {
+      "operationId": "3c6afeae-7329-46be-a498-8449249c9275",
+      "action": "PLACE",
+      "revision": 38,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": "-7,84,-3"
+    },
+    {
+      "operationId": "70eb2c35-750f-4a1b-a6c1-644059afae62",
+      "action": "PLACE",
+      "revision": 39,
+      "item": "minecraft:lever",
+      "count": 1,
+      "target": "-8,84,-3"
+    },
+    {
+      "operationId": "eab866fe-13fb-4aed-88c7-fd33cb188cb4",
+      "action": "PLACE",
+      "revision": 40,
+      "item": "minecraft:redstone_torch",
+      "count": 1,
+      "target": "-7,84,-4"
+    },
+    {
+      "operationId": "5f9655c7-04cc-4ef3-84f2-86c112a864f9",
+      "action": "PLACE",
+      "revision": 41,
+      "item": "minecraft:repeater",
+      "count": 1,
+      "target": "-6,84,-4"
+    },
+    {
+      "operationId": "726c637a-07fd-46e0-8d8a-b3255531defb",
+      "action": "PLACE",
+      "revision": 42,
+      "item": "minecraft:repeater",
+      "count": 1,
+      "target": "-6,84,-3"
+    },
+    {
+      "operationId": "ca937178-1014-4963-b3cd-33dcc348d9ba",
+      "action": "PLACE",
+      "revision": 43,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": "-5,84,-4"
+    },
+    {
+      "operationId": "6555fcba-5360-48e1-9a1d-d0c6ce08f01a",
+      "action": "PLACE",
+      "revision": 44,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": "-5,84,-3"
+    },
+    {
+      "operationId": "cf05ce93-8ee3-464b-98b0-453f3bd4de90",
+      "action": "PLACE",
+      "revision": 45,
+      "item": "minecraft:redstone_torch",
+      "count": 1,
+      "target": "-4,84,-3"
+    },
+    {
+      "operationId": "609c194f-9967-4087-bbf0-7779f742346b",
+      "action": "PLACE",
+      "revision": 46,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": "-4,83,-3"
+    },
+    {
+      "operationId": "b1f64d03-e250-4348-9d69-0066633ec5c7",
+      "action": "PLACE",
+      "revision": 47,
+      "item": "minecraft:redstone_torch",
+      "count": 1,
+      "target": "-5,83,-3"
+    },
+    {
+      "operationId": "2da4b77a-8680-4fbb-8d99-4d2b2bcd6f08",
+      "action": "PLACE",
+      "revision": 48,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": "0,84,-3"
+    },
+    {
+      "operationId": "e8e35929-2cae-40d9-806e-431580279331",
+      "action": "PLACE",
+      "revision": 49,
+      "item": "minecraft:redstone",
+      "count": 1,
+      "target": "1,84,-4"
+    }
+  ],
+  "stages": [
+    {
+      "stage": 0,
+      "revision": 3,
+      "placements": 3
+    },
+    {
+      "stage": 1,
+      "revision": 16,
+      "placements": 13
+    },
+    {
+      "stage": 2,
+      "revision": 47,
+      "placements": 15
+    },
+    {
+      "stage": 3,
+      "revision": 49,
+      "placements": 18
+    }
+  ],
+  "pending": null,
+  "inventory": {
+    "minecraft:stone_bricks": 42,
+    "minecraft:lever": 1,
+    "minecraft:repeater": 11,
+    "minecraft:redstone_torch": 25,
+    "minecraft:redstone": 13,
+    "minecraft:redstone_lamp": 3
+  },
+  "status": "checkpointed"
+}

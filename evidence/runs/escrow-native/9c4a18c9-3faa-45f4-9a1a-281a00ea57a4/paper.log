@@ -1,0 +1,222 @@
+Starting org.bukkit.craftbukkit.Main
+[17:41:27 INFO]: [bootstrap] Running Java 25 (OpenJDK 64-Bit Server VM 25.0.5+8-LTS; Eclipse Adoptium Temurin-25.0.5+8) on Linux 5.15.167.4-microsoft-standard-WSL2 (amd64)
+[17:41:27 INFO]: [bootstrap] Loading Paper 26.3-231-main@8a170a3 (2026-10-30T01:53:29Z) for Minecraft 26.3
+[17:41:27 INFO]: [PluginInitializerManager] Initializing plugins...
+[17:41:28 INFO]: [PluginInitializerManager] Initialized 6 plugins
+[17:41:28 INFO]: [PluginInitializerManager] Bukkit plugins (6):
+ - AgentCity (0.1.0), AgentCityWorldFixture (1.0), ViaBackwards (5.12.2), ViaVersion (5.12.2), WorldEdit (7.4.6+7648-00664b0), WorldGuard (7.0.20+2410-0b6c3f1)
+[17:41:37 INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Initialising converters for DataConverter...
+[17:41:38 INFO]: [com.destroystokyo.paper.profile.PaperServicesDiscoveryService] Environment: Environment[discoveryUrl=https://discovery.minecraftservices.com/minecraft/client, name=PROD]
+[17:41:38 INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Finished initialising converters for DataConverter in 1,485.4ms
+[17:41:39 INFO]: Found new data pack paper, loading it automatically
+[17:41:42 INFO]: No existing world data, creating new world
+[17:41:42 WARN]: Failed to connect
+com.mojang.authlib.exceptions.MinecraftClientException: Failed to read from https://discovery.minecraftservices.com/minecraft/client due to Remote host terminated the handshake
+	at com.mojang.authlib.minecraft.client.MinecraftClient.readServiceResponse(MinecraftClient.java:151) ~[authlib-10.0.77.jar:?]
+	at com.mojang.authlib.minecraft.client.MinecraftClient.getWithEtag(MinecraftClient.java:81) ~[authlib-10.0.77.jar:?]
+	at com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:65) ~[authlib-10.0.77.jar:?]
+	at com.mojang.authlib.services.MinecraftServicesDiscoveryService.lambda$createDiscoverySupplier$1(MinecraftServicesDiscoveryService.java:76) ~[paper-26.3.jar:26.3-231-8a170a3]
+	at com.mojang.authlib.services.RetryableFetch$1.run(RetryableFetch.java:42) ~[authlib-10.0.77.jar:26.3-231-8a170a3]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[?:?]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:309) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[?:?]
+Caused by: javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake
+	at java.base/sun.security.ssl.SSLSocketImpl.handleEOF(SSLSocketImpl.java:1716) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1514) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1421) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426) ~[?:?]
+	at java.base/sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:490) ~[?:?]
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:190) ~[?:?]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1380) ~[?:?]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1306) ~[?:?]
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:493) ~[?:?]
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:307) ~[?:?]
+	at com.mojang.authlib.minecraft.client.MinecraftClient.readServiceResponse(MinecraftClient.java:130) ~[authlib-10.0.77.jar:?]
+	... 10 more
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:494) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:160) ~[?:?]
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1506) ~[?:?]
+	... 20 more
+[17:41:42 WARN]: Services are unavailable, unable to fetch uri for AUTHENTICATION/getPublicKeys
+[17:41:42 WARN]: Failed to connect
+com.mojang.authlib.exceptions.MinecraftClientException: Services are unavailable
+	at com.mojang.authlib.services.MinecraftServicesDiscoveryService.getEndpoint(MinecraftServicesDiscoveryService.java:139) ~[paper-26.3.jar:26.3-231-8a170a3]
+	at com.mojang.authlib.services.MinecraftServicesDiscoveryService.getUrl(MinecraftServicesDiscoveryService.java:125) ~[paper-26.3.jar:26.3-231-8a170a3]
+	at com.mojang.authlib.services.MinecraftServicesDiscoveryService.lambda$getServicesKeySet$0(MinecraftServicesDiscoveryService.java:117) ~[paper-26.3.jar:26.3-231-8a170a3]
+	at com.mojang.authlib.services.RetryableFetch$1.run(RetryableFetch.java:40) ~[authlib-10.0.77.jar:26.3-231-8a170a3]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[?:?]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:309) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[?:?]
+[17:41:42 WARN]: Services are unavailable, unable to fetch uri for AUTHENTICATION/getPublicKeys
+[17:41:42 WARN]: Failed to connect
+com.mojang.authlib.exceptions.MinecraftClientException: Services are unavailable
+	at com.mojang.authlib.services.MinecraftServicesDiscoveryService.getEndpoint(MinecraftServicesDiscoveryService.java:139) ~[paper-26.3.jar:26.3-231-8a170a3]
+	at com.mojang.authlib.services.MinecraftServicesDiscoveryService.getUrl(MinecraftServicesDiscoveryService.java:125) ~[paper-26.3.jar:26.3-231-8a170a3]
+	at com.mojang.authlib.services.MinecraftServicesDiscoveryService.lambda$getServicesKeySet$0(MinecraftServicesDiscoveryService.java:117) ~[paper-26.3.jar:26.3-231-8a170a3]
+	at com.mojang.authlib.services.RetryableFetch$1.run(RetryableFetch.java:40) ~[authlib-10.0.77.jar:26.3-231-8a170a3]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[?:?]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:309) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[?:?]
+[17:41:47 INFO]: Loaded 1866 advancements
+[17:41:47 INFO]: Starting minecraft server version 26.3
+[17:41:47 WARN]: ****************************
+[17:41:47 WARN]: YOU ARE RUNNING THIS SERVER AS AN ADMINISTRATIVE OR ROOT USER. THIS IS NOT ADVISED.
+[17:41:47 WARN]: YOU ARE OPENING YOURSELF UP TO POTENTIAL RISKS WHEN DOING THIS.
+[17:41:47 WARN]: FOR MORE INFORMATION, SEE https://madelinemiller.dev/blog/root-minecraft-server/
+[17:41:47 WARN]: ****************************
+[17:41:47 INFO]: Loading properties
+[17:41:48 INFO]: This server is running Paper version 26.3-231-main@8a170a3 (2026-10-30T01:53:29Z) (Implementing API version 26.3.build.231-stable)
+[17:41:48 INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[17:41:48 INFO]: Server Ping Player Sample Count: 12
+[17:41:48 INFO]: Using 4 threads for Netty based IO
+[17:41:49 INFO]: [MoonriseCommon] Paper is using 1 worker threads, 1 I/O threads
+[17:41:50 INFO]: Default game type: SURVIVAL
+[17:41:50 INFO]: Generating keypair
+[17:41:50 INFO]: Starting Minecraft server on *:25565
+[17:41:50 INFO]: Paper: Using libdeflate (Linux x86_64) compression from Velocity.
+[17:41:50 INFO]: Paper: Using OpenSSL 3.x.x (Linux x86_64) cipher from Velocity.
+[17:41:52 INFO]: [WorldEdit] Loading server plugin WorldEdit v7.4.6+7648-00664b0
+[17:41:53 INFO]: Got request to register class com.sk89q.worldedit.bukkit.BukkitServerInterface with WorldEdit [com.sk89q.worldedit.extension.platform.PlatformManager@1316472]
+[17:41:53 INFO]: [WorldEdit] Default configuration file written: config.yml
+[17:41:53 INFO]: [ViaVersion] Loading server plugin ViaVersion v5.12.2
+[17:41:53 INFO]: [ViaVersion] ViaVersion 5.12.2 is now loaded. Registering protocol transformers and injecting...
+[17:41:55 INFO]: [ViaBackwards] Loading translations...
+[17:41:55 INFO]: [ViaBackwards] Registering protocols...
+[17:41:56 INFO]: [WorldGuard] Loading server plugin WorldGuard v7.0.20+2410-0b6c3f1
+[17:41:56 INFO]: [ViaBackwards] Loading server plugin ViaBackwards v5.12.2
+[17:41:56 INFO]: [AgentCityWorldFixture] Loading server plugin AgentCityWorldFixture v1.0
+[17:41:56 INFO]: [AgentCity] Loading server plugin AgentCity v0.1.0
+[17:41:56 INFO]: [WorldEdit] Enabling WorldEdit v7.4.6+7648-00664b0
+[17:41:56 INFO]: Registering commands with com.sk89q.worldedit.bukkit.BukkitServerInterface
+[17:41:58 INFO]: WEPIF: Updated config file
+[17:41:58 INFO]: WEPIF: Using the Bukkit Permissions API.
+[17:42:00 INFO]: Using com.sk89q.worldedit.bukkit.adapter.impl.v26_3.PaperweightAdapter as the Bukkit adapter
+[17:42:00 WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[17:42:00 WARN]: The server will make no attempt to authenticate usernames. Beware.
+[17:42:00 WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[17:42:00 WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[17:42:00 INFO]: Preparing level "agentcity-fresh-c5a4bf5a"
+[17:42:01 INFO]: Selecting spawn point for level 'minecraft:overworld'...
+[17:42:02 INFO]: Selecting spawn point for level 'minecraft:the_nether'...
+[17:42:03 INFO]: Selecting spawn point for level 'minecraft:the_end'...
+[17:42:03 INFO]: Loading 0 persistent chunks for level 'minecraft:overworld'...
+[17:42:03 INFO]: Preparing spawn area: 100%
+[17:42:03 INFO]: Prepared spawn area in 2260 ms
+[17:42:03 INFO]: Loading 0 persistent chunks for level 'minecraft:the_nether'...
+[17:42:03 INFO]: Preparing spawn area: 100%
+[17:42:03 INFO]: Prepared spawn area in 1259 ms
+[17:42:03 INFO]: Loading 0 persistent chunks for level 'minecraft:the_end'...
+[17:42:03 INFO]: Preparing spawn area: 100%
+[17:42:03 INFO]: Prepared spawn area in 296 ms
+[17:42:03 INFO]: Done preparing level "agentcity-fresh-c5a4bf5a" (3.334s)
+[17:42:03 INFO]: [ViaVersion] Enabling ViaVersion v5.12.2
+[17:42:03 INFO]: [ViaVersion] ViaVersion detected server version: 26.3 (777)
+[17:42:04 WARN]: [ViaVersion] The Vanilla protocol of Minecraft 1.20.5-1.21.4 is easily exploitable. If you don't need to support these versions, consider adding them to block-versions in the ViaVersion config: "1.20.5-1.20.6", "1.21-1.21.1", "1.21.2-1.21.3", "1.21.4"
+[17:42:04 INFO]: [WorldGuard] Enabling WorldGuard v7.0.20+2410-0b6c3f1
+[17:42:04 INFO]: [WorldGuard] Default configuration file written: config.yml
+[17:42:04 INFO]: [WorldGuard] Default configuration file written: config_world.yml
+[17:42:04 INFO]: [WorldGuard] Default configuration file written: blacklist.txt
+[17:42:04 INFO]: [WorldGuard] (agentcity-fresh-c5a4bf5a) TNT ignition is PERMITTED.
+[17:42:04 INFO]: [WorldGuard] (agentcity-fresh-c5a4bf5a) Lighters are PERMITTED.
+[17:42:04 INFO]: [WorldGuard] (agentcity-fresh-c5a4bf5a) Lava fire is PERMITTED.
+[17:42:04 INFO]: [WorldGuard] (agentcity-fresh-c5a4bf5a) Fire spread is UNRESTRICTED.
+[17:42:04 INFO]: [WorldGuard] Loaded configuration for world 'agentcity-fresh-c5a4bf5a'
+[17:42:04 INFO]: [WorldGuard] Default configuration file written: config_world.yml
+[17:42:04 INFO]: [WorldGuard] Default configuration file written: blacklist.txt
+[17:42:04 INFO]: [WorldGuard] (agentcity-fresh-c5a4bf5a_nether) TNT ignition is PERMITTED.
+[17:42:04 INFO]: [WorldGuard] (agentcity-fresh-c5a4bf5a_nether) Lighters are PERMITTED.
+[17:42:04 INFO]: [WorldGuard] (agentcity-fresh-c5a4bf5a_nether) Lava fire is PERMITTED.
+[17:42:04 INFO]: [WorldGuard] (agentcity-fresh-c5a4bf5a_nether) Fire spread is UNRESTRICTED.
+[17:42:04 INFO]: [WorldGuard] Loaded configuration for world 'agentcity-fresh-c5a4bf5a_nether'
+[17:42:04 INFO]: [WorldGuard] Default configuration file written: config_world.yml
+[17:42:04 INFO]: [WorldGuard] Default configuration file written: blacklist.txt
+[17:42:04 INFO]: [WorldGuard] (agentcity-fresh-c5a4bf5a_the_end) TNT ignition is PERMITTED.
+[17:42:04 INFO]: [WorldGuard] (agentcity-fresh-c5a4bf5a_the_end) Lighters are PERMITTED.
+[17:42:04 INFO]: [WorldGuard] (agentcity-fresh-c5a4bf5a_the_end) Lava fire is PERMITTED.
+[17:42:04 INFO]: [WorldGuard] (agentcity-fresh-c5a4bf5a_the_end) Fire spread is UNRESTRICTED.
+[17:42:04 INFO]: [WorldGuard] Loaded configuration for world 'agentcity-fresh-c5a4bf5a_the_end'
+[17:42:04 INFO]: [WorldGuard] Loading region data...
+[17:42:04 INFO]: [WorldGuard] Unloading and saving region data that is currently loaded...
+[17:42:04 INFO]: [WorldGuard] Loading region data for loaded worlds...
+[17:42:04 INFO]: [WorldGuard] Loading region data...
+[17:42:04 INFO]: [WorldGuard] Regions saved after UUID migration! This won't happen again unless you change the relevant configuration option in WorldGuard's config.
+[17:42:05 INFO]: [ViaBackwards] Enabling ViaBackwards v5.12.2
+[17:42:05 INFO]: [AgentCityWorldFixture] Enabling AgentCityWorldFixture v1.0
+[17:42:05 INFO]: [AgentCity] Enabling AgentCity v0.1.0
+[17:42:08 INFO]: Selecting spawn point for level 'minecraft:agentcity_lobby'...
+[17:42:08 INFO]: Loading 0 persistent chunks for level 'minecraft:agentcity_lobby'...
+[17:42:08 INFO]: Preparing spawn area: 100%
+[17:42:08 INFO]: Prepared spawn area in 97 ms
+[17:42:08 INFO]: [WorldGuard] Default configuration file written: config_world.yml
+[17:42:08 INFO]: [WorldGuard] Default configuration file written: blacklist.txt
+[17:42:08 INFO]: [WorldGuard] (agentcity_lobby) TNT ignition is PERMITTED.
+[17:42:08 INFO]: [WorldGuard] (agentcity_lobby) Lighters are PERMITTED.
+[17:42:08 INFO]: [WorldGuard] (agentcity_lobby) Lava fire is PERMITTED.
+[17:42:08 INFO]: [WorldGuard] (agentcity_lobby) Fire spread is UNRESTRICTED.
+[17:42:08 INFO]: [WorldGuard] Loaded configuration for world 'agentcity_lobby'
+[17:42:08 INFO]: Selecting spawn point for level 'minecraft:agentcity_play'...
+[17:42:12 INFO]: Loading 0 persistent chunks for level 'minecraft:agentcity_play'...
+[17:42:12 INFO]: Preparing spawn area: 100%
+[17:42:12 INFO]: Prepared spawn area in 3537 ms
+[17:42:12 INFO]: [WorldGuard] Default configuration file written: config_world.yml
+[17:42:12 INFO]: [WorldGuard] Default configuration file written: blacklist.txt
+[17:42:12 INFO]: [WorldGuard] (agentcity_play) TNT ignition is PERMITTED.
+[17:42:12 INFO]: [WorldGuard] (agentcity_play) Lighters are PERMITTED.
+[17:42:12 INFO]: [WorldGuard] (agentcity_play) Lava fire is PERMITTED.
+[17:42:12 INFO]: [WorldGuard] (agentcity_play) Fire spread is UNRESTRICTED.
+[17:42:12 INFO]: [WorldGuard] Loaded configuration for world 'agentcity_play'
+[17:42:13 WARN]: A manual (plugin-induced) save has been detected while server is configured to auto-save. This may affect performance.
+[17:42:14 INFO]: [AgentCity] One-time local task stock grant for CityAgent1: 128 oak planks and 64 cobblestone. Not token backing.
+[17:42:15 INFO]: [AgentCity] One-time local task stock grant for CityAgent2: 128 oak planks and 64 cobblestone. Not token backing.
+[17:42:15 INFO]: Selecting spawn point for level 'minecraft:agentcity_estates'...
+[17:42:18 INFO]: Loading 0 persistent chunks for level 'minecraft:agentcity_estates'...
+[17:42:18 INFO]: Preparing spawn area: 100%
+[17:42:18 INFO]: Prepared spawn area in 3107 ms
+[17:42:18 INFO]: [WorldGuard] Default configuration file written: config_world.yml
+[17:42:18 INFO]: [WorldGuard] Default configuration file written: blacklist.txt
+[17:42:18 INFO]: [WorldGuard] (agentcity_estates) TNT ignition is PERMITTED.
+[17:42:18 INFO]: [WorldGuard] (agentcity_estates) Lighters are PERMITTED.
+[17:42:18 INFO]: [WorldGuard] (agentcity_estates) Lava fire is PERMITTED.
+[17:42:18 INFO]: [WorldGuard] (agentcity_estates) Fire spread is UNRESTRICTED.
+[17:42:19 INFO]: [WorldGuard] Loaded configuration for world 'agentcity_estates'
+[17:42:19 INFO]: [AgentCity] Local non-token AgentCity boundary active; control port must be published on host loopback only.
+[17:42:19 INFO]: [spark] Starting background profiler...
+[17:42:19 INFO]: Saving chunks for level 'ServerLevel[agentcity-fresh-c5a4bf5a]'/minecraft:overworld
+[17:42:20 INFO]: Saving chunks for level 'ServerLevel[agentcity-fresh-c5a4bf5a]'/minecraft:the_nether
+[17:42:20 INFO]: Saving chunks for level 'ServerLevel[agentcity-fresh-c5a4bf5a]'/minecraft:the_end
+[17:42:20 INFO]: Saving chunks for level 'ServerLevel[agentcity-fresh-c5a4bf5a]'/minecraft:agentcity_lobby
+[17:42:20 INFO]: Saving chunks for level 'ServerLevel[agentcity-fresh-c5a4bf5a]'/minecraft:agentcity_play
+[17:42:20 INFO]: Saving chunks for level 'ServerLevel[agentcity-fresh-c5a4bf5a]'/minecraft:agentcity_estates
+[17:42:20 INFO]: Running delayed init tasks
+[17:42:20 INFO]: [ViaVersion] Finished mapping loading, shutting down loader executor.
+[17:42:20 INFO]: Done (56.423s)! For help, type "help"
+[17:42:20 INFO]: *************************************************************************************
+[17:42:20 INFO]: This is the first time you're starting this server.
+[17:42:20 INFO]: It's recommended you read our 'Getting Started' documentation for guidance.
+[17:42:20 INFO]: View this and more helpful information here: https://docs.papermc.io/paper/next-steps
+[17:42:20 INFO]: *************************************************************************************
+[17:42:21 INFO]: UUID of player EscSeller is e63aeed3-4010-3e23-88e1-19e019f0a248
+[17:42:21 INFO]: [HorriblePlayerLoginEventHack] You have plugins listening to the PlayerLoginEvent, this will cause re-configuration APIs to be unavailable: [AgentCity, WorldGuard]
+[17:42:21 INFO]: *** Currently you are 4 builds behind ***
+[17:42:21 INFO]: *** It is highly recommended to download the latest build from https://papermc.io/downloads/paper ***
+[17:42:23 INFO]: System chat: EscSeller joined the game
+[17:42:23 INFO]: EscSeller[/172.17.0.1:52388] logged in with entity id 14 at ([minecraft:agentcity_lobby]32.5, 81.0, 4.5)
+[17:42:29 INFO]: UUID of player EscBuyer is 7bd9f890-10f6-3c18-90ec-5f4d45f465d6
+[17:42:29 INFO]: System chat: EscBuyer joined the game
+[17:42:29 INFO]: EscBuyer[/172.17.0.1:47920] logged in with entity id 15 at ([minecraft:agentcity_lobby]32.5, 81.0, 4.5)
+[17:42:31 INFO]: EscBuyer issued server command: /nativefixture op
+[17:42:31 INFO]: EscBuyer issued server command: /nativefixture road
+[17:42:32 INFO]: EscBuyer issued server command: /nativefixture inside

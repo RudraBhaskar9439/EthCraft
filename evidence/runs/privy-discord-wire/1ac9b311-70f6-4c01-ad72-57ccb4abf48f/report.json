@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "scope": "Actual @privy-io/node0.37.0 HTTP wire against local fake provider plus isolated PG; fixture JWT claims, no live user or provider mutation",
+  "checks": [
+    {
+      "name": "official SDK _get performs GET /v1/users/exact-DID after JWT verifier; get(string) is rejected and mismatched Discord subject stays refused",
+      "status": "pass"
+    },
+    {
+      "name": "setup UI safely distinguishes expired challenge wrong account invalid token provider outage and existing-owner conflict without echoing raw errors",
+      "status": "pass"
+    }
+  ],
+  "publicTransactions": 0,
+  "realProviderRequests": 0,
+  "sources": {
+    "backend/src/discord/identity.mjs": "d970ec7f22e4810cd36f8e35890c89394903a3f4a089d740bdd29f4184465238",
+    "backend/src/discord/runtime.mjs": "67c2e3feac652be05febf0ed532198977f90415586206011d9de1d2bd5e80263",
+    "companion/src/discord-setup.jsx": "b50959858c65ebf10d9baf02205f5c078fe257bd95538421c6f6f08055422a58"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "source": "original pinned Mumbai artifact; read-only region survey",
+  "boxes": [
+    [
+      1660,
+      68,
+      2799,
+      1722,
+      94,
+      2854
+    ],
+    [
+      1660,
+      68,
+      2793,
+      1718,
+      72,
+      2798
+    ],
+    [
+      1641,
+      68,
+      2780,
+      1645,
+      72,
+      2797
+    ],
+    [
+      1646,
+      68,
+      2793,
+      1659,
+      72,
+      2797
+    ],
+    [
+      1723,
+      68,
+      2814,
+      1757,
+      68,
+      2816
+    ],
+    [
+      1730,
+      68,
+      2810,
+      1741,
+      68,
+      2821
+    ],
+    [
+      1746,
+      68,
+      2810,
+      1757,
+      68,
+      2821
+    ]
+  ],
+  "checkedCells": 98219,
+  "occupiedCount": 0,
+  "occupiedSamples": [],
+  "chunks": 31,
+  "recordedAt": "2026-11-06T01:05:51.583991+00:00",
+  "artifactManifestSha256": "6161598cd5f4c3e8afec6ae76c3a6092f4c57577cc0f69d80dc891937c3925aa",
+  "scope": "Read-only original artifact survey, not a live-world verification",
+  "priorRefusedSites": [
+    {
+      "occupiedCount": 90,
+      "change": "Avoided original monument corner near1720,2793 by narrowing promenade"
+    },
+    {
+      "occupiedCount": 1,
+      "change": "Moved approach east from1640 to1641 to preserve smooth-stone prop"
+    }
+  ]
+}

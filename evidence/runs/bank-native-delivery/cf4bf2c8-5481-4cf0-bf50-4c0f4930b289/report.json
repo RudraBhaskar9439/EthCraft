@@ -1,0 +1,63 @@
+{
+  "observedAt": "2026-11-05T13:24:32.104Z",
+  "scope": "Read-only saved actual Paper player NBT after native saveData; not independent Mineflayer observation",
+  "observations": [
+    {
+      "role": "borrower",
+      "playerId": "23d62fe0-1c3f-311e-be1b-8e39156c501b",
+      "entries": [
+        {
+          "slot": 0,
+          "id": "minecraft:diamond_sword",
+          "count": 1,
+          "components": {
+            "minecraft:lore": [
+              {
+                "extra": [
+                  "Disclosed laptop fixture stock"
+                ],
+                "text": ""
+              },
+              {
+                "extra": [
+                  "Controlled actor and testnet assets only"
+                ],
+                "text": ""
+              }
+            ],
+            "minecraft:enchantments": {
+              "minecraft:sharpness": 2
+            },
+            "minecraft:custom_name": {
+              "extra": [
+                "BankSeller testnet collateral"
+              ],
+              "text": ""
+            },
+            "minecraft:custom_data": {
+              "PublicBukkitValues": {
+                "agentcityworldfixture:native_proof": "BankSeller"
+              }
+            },
+            "minecraft:damage": 7
+          }
+        }
+      ]
+    },
+    {
+      "role": "seller",
+      "playerId": "6762f7b4-50a9-33f9-a378-c5b0bbf2c2ca",
+      "entries": []
+    }
+  ],
+  "status": "pass",
+  "expectedFingerprint": "d41e0d6ac1cd88199dc49e6882ddd3cb117339da474297237e23de07ce4f828a",
+  "observedFingerprint": "d41e0d6ac1cd88199dc49e6882ddd3cb117339da474297237e23de07ce4f828a",
+  "checks": [
+    "Borrower actual saved inventory contains exactly one seller-identified sword",
+    "Seller actual saved inventory is empty",
+    "Canonical full-NBT fingerprint independently reconstructed from saved inventory matches canonical nativeDelivery receipt"
+  ],
+  "publicTransactions": 0,
+  "paidModelCalls": 0
+}

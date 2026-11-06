@@ -1,0 +1,79 @@
+{
+  "status": "pass",
+  "runId": "8adb6acb-7b15-4105-9913-d37ecfd4d805",
+  "scope": "Real PostgreSQL scoped signer refusals, plus read-only public code checks for immutable retained bindings.",
+  "publicTransactions": 0,
+  "privateKeysOpened": 0,
+  "signatures": 0,
+  "paidModelCalls": 0,
+  "realMoneySpentUsd": 0,
+  "checks": [
+    {
+      "name": "unknown actor and unexpected contract target are denied before chain or key access",
+      "status": "pass"
+    },
+    {
+      "name": "player cannot mint payment tokens or native-backed NFTs",
+      "status": "pass"
+    },
+    {
+      "name": "token and NFT approvals enforce permitted spender and finite amount caps",
+      "status": "pass"
+    },
+    {
+      "name": "native value and per-call gas budget escapes are denied",
+      "status": "pass"
+    },
+    {
+      "name": "registrar publisher inspector and lender privileges remain separated",
+      "status": "pass"
+    },
+    {
+      "name": "marketplace signer refuses lending, bank token/NFT approvals and GEM before RPC or key access",
+      "status": "pass"
+    },
+    {
+      "name": "retained intent rejects changed owner and calldata before key access",
+      "status": "pass"
+    },
+    {
+      "name": "marketplace permits bounded CITY and USDC router approvals up to the deliberately inaccessible key boundary",
+      "status": "pass"
+    },
+    {
+      "name": "all test operations produced zero signed intents and only the three deliberately retained fixture bindings",
+      "status": "pass"
+    }
+  ],
+  "testOperationIds": [
+    "980b60df-6f67-46c2-8077-b0ce860a0301",
+    "748b2971-4e4d-4e6a-a30c-d70936060553",
+    "2ef49609-4789-4dfa-8d9b-24cdd7fa8271",
+    "20ac710f-df3b-475a-b6b5-458419c13586",
+    "a516e2f1-0b1b-42a1-b3e9-900cfa69c8e4",
+    "3a592de2-1281-4caa-ad7d-3b08d211e77d",
+    "56f50b52-f3f3-48b2-ba73-b9763251d414",
+    "d44bbacd-7c8d-45e2-ab7d-b3cede582071",
+    "2149cba4-dec5-49f9-8768-c415058614ac",
+    "a7be3a76-1cb9-414a-9e0a-9d81e05ca5c1",
+    "ef35cea5-bdd2-460c-a283-94c7af48529e",
+    "e867b1bc-63c2-4d3e-ac8e-c259d1619717",
+    "f568aacf-b7cb-4cfe-9e0e-1d430e8976ee",
+    "a7da8ad4-92c0-4e14-b040-ecc7a6b9abd8",
+    "c84f450b-ce0a-4a3c-a2ee-edaaed676235",
+    "b3e80f72-2d61-4751-b0ed-06b9aff08e4b",
+    "d33aa317-f5a1-48a7-99f2-f022926edd0f",
+    "be8a5e69-be7a-47aa-aebc-de9bde24b21b",
+    "e73f22a3-fc4b-4e11-91d4-8860c421eade",
+    "38b09c1e-5715-40a2-a053-edec580003df",
+    "04a5b777-45f9-45fc-869f-d5eddd42f824",
+    "47d3a32b-2e2d-4818-912c-83e6788933a1",
+    "ce99642d-ef5e-45ec-a813-f8dabf489edf"
+  ],
+  "invalidGuardRpcCalls": 0,
+  "readOnlyRpcCalls": 34,
+  "sourceHashes": {
+    "backend/src/bank/operator-wallets.mjs": "46c8fde4ae9faaf73bd6d7d3dd9979c17c2347541db8be5de5c4de8f3816de24",
+    "tests/bank/operator-wallets.mjs": "1aa85f35c9a54c266a13d54385bc56983b1f3d23bb2fb98d462f20d2c5368759"
+  }
+}

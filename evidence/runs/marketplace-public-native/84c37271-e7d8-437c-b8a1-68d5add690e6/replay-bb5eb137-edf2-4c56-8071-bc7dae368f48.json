@@ -1,0 +1,219 @@
+{
+  "replayId": "bb5eb137-edf2-4c56-8071-bc7dae368f48",
+  "startedAt": "2026-11-05T16:25:20.030Z",
+  "calls": [
+    {
+      "name": "buy-city",
+      "input": {
+        "principalId": "144e8782-85d5-4ef4-989e-cb7a26040682",
+        "operationId": "4342e823-7886-4868-b227-e30a44f25d0e",
+        "termsDigest": "d770ba69eb29236d7ba86ad5da6592348a004de82994bd7f687a9ce0281ef818"
+      },
+      "requestedAt": "2026-11-05T16:25:22.397Z",
+      "status": "pass",
+      "proofs": [
+        {
+          "args": {
+            "trader": "0x0c5E09658141B4E931efEf2d1E825F22B7283B01",
+            "tokenIn": "0x9caa79A2B1E4420e45f0cF3bd47A90770136B3A4",
+            "amountIn": "1003111",
+            "tokenOut": "0x13431952927c79004Fc2fc5aaB576752552Fea12",
+            "amountOut": "1000000000000000000",
+            "operationId": "0x467d2ea64d0867ac29c0d7baac6ca9da90d7b715f59ee373ee85064d1e458cb5"
+          },
+          "chainId": 1301,
+          "logHash": "4d8827fac7d4927af8b926ab6a3757dc27916282ab642c488c76e59ec9420e27",
+          "logIndex": 4,
+          "registry": "0xf3037a6d2b68ee5832f53d9ff0bf22c22031af81",
+          "blockHash": "0x5f54840762603feff99450c130ed6b43641ca5701c7d07881fc21ff93ab3c4d8",
+          "confirmed": true,
+          "eventName": "SwapExecuted",
+          "blockNumber": "67043285",
+          "receiptHash": "c8d0a047a4a41f5519523a27c59320ab31a89c7a3696ef1eeb1debef8f4ead6b",
+          "deploymentId": "0xcaf3af7e40fda3478f2a5c75587ddf1219f6692645cc5f95fa1f37d5c3c67aff",
+          "observedAtMs": 1793895720446,
+          "confirmations": 5,
+          "transactionHash": "0xcb249de70245d930a2c1aeed8fa40c4c3a4e5e9b6e92c327d783eb57c13b7c9c"
+        },
+        {
+          "args": {},
+          "chainId": 1301,
+          "logHash": null,
+          "logIndex": null,
+          "registry": "0xf3037a6d2b68ee5832f53d9ff0bf22c22031af81",
+          "blockHash": "0x8a622d5ace1b0bb1c74fc9998385b2ce83fc68f96271e4b9cfdd58f6b968cf88",
+          "confirmed": true,
+          "eventName": null,
+          "blockNumber": "67043272",
+          "receiptHash": "8a6253521e4b70bd89b08b964c9b0032666cc016c53761f990843f66db2cf58d",
+          "deploymentId": "0xcaf3af7e40fda3478f2a5c75587ddf1219f6692645cc5f95fa1f37d5c3c67aff",
+          "observedAtMs": 1793895707493,
+          "confirmations": 6,
+          "transactionHash": "0x2d0880992e28e311bd32edd2eb8e59b1ae9edd433023ef6ee347b1d30e79a052"
+        }
+      ],
+      "nativeDelivery": null
+    },
+    {
+      "name": "usdc-equipment-checkout",
+      "input": {
+        "principalId": "fe40d57b-89a0-4eb4-922a-84d320c27609",
+        "operationId": "9eb703e8-f1bc-4677-b07c-c5e3f5d027e9",
+        "termsDigest": "1182e0e6b0592bb51c5b5d41e44b9e082400b6d4c091aef0a334d867513debe9"
+      },
+      "requestedAt": "2026-11-05T16:25:35.183Z",
+      "status": "pass",
+      "proofs": [
+        {
+          "args": {
+            "buyer": "0x92686A568fCDf0142F2d2448DD009A927111C80F",
+            "seller": "0x0c5E09658141B4E931efEf2d1E825F22B7283B01",
+            "tokenId": "3",
+            "tokenIn": "0x9caa79A2B1E4420e45f0cF3bd47A90770136B3A4",
+            "amountIn": "1003513",
+            "cityPrice": "1000000000000000000",
+            "operationId": "0x2b97633c383cc103b9d65cdb40b86604033f7c9fb0ef501b54604775fde7e0fb",
+            "listingNonce": "1",
+            "ownershipNonce": "3"
+          },
+          "chainId": 1301,
+          "logHash": "9de0e04c260e114d597410d24872b07777305db44a0d9b8f115ad80c48a0aee6",
+          "logIndex": 12,
+          "registry": "0xf3037a6d2b68ee5832f53d9ff0bf22c22031af81",
+          "blockHash": "0x5db12a4d50d11ba8a283e8897059d9591d24d6b2f31d8ac0d800e37c0b677bd6",
+          "confirmed": true,
+          "eventName": "CheckoutPurchased",
+          "blockNumber": "67043384",
+          "receiptHash": "c2afdac28ea8f08e2c61d5d7377f5c5f458d838246998cbf38d3826de046a4df",
+          "deploymentId": "0xcaf3af7e40fda3478f2a5c75587ddf1219f6692645cc5f95fa1f37d5c3c67aff",
+          "observedAtMs": 1793895819625,
+          "confirmations": 6,
+          "transactionHash": "0x171e835f5f18c59c456662b7d67e1d9549c734de057dbc5220bd64ef599b43c6"
+        },
+        {
+          "args": {},
+          "chainId": 1301,
+          "logHash": null,
+          "logIndex": null,
+          "registry": "0xf3037a6d2b68ee5832f53d9ff0bf22c22031af81",
+          "blockHash": "0x22678375eeff8eee01448d593251459e5ec83290ae3b735dca479f5d3dad1cc3",
+          "confirmed": true,
+          "eventName": null,
+          "blockNumber": "67043373",
+          "receiptHash": "08898fd04a233fad9ee3d8a387cfd58378a477f065316db06f926b95027615f3",
+          "deploymentId": "0xcaf3af7e40fda3478f2a5c75587ddf1219f6692645cc5f95fa1f37d5c3c67aff",
+          "observedAtMs": 1793895807306,
+          "confirmations": 5,
+          "transactionHash": "0xceb4130781f6953e90dd0751e4f0641ab12272fe1b0dca7c20834fe066ac22bc"
+        }
+      ],
+      "nativeDelivery": null
+    },
+    {
+      "name": "redeem-exact-sword",
+      "input": {
+        "principalId": "fe40d57b-89a0-4eb4-922a-84d320c27609",
+        "operationId": "ce33f611-31bd-4ce2-b221-1ac2deef3374",
+        "termsDigest": "b8e743e0a5fb2e7a4d0560b3fe3b16981020fc3b4d5e132c3b3476be378ea92b"
+      },
+      "requestedAt": "2026-11-05T16:25:48.376Z",
+      "status": "pass",
+      "proofs": [
+        {
+          "args": {
+            "owner": "0x92686A568fCDf0142F2d2448DD009A927111C80F",
+            "claimId": "0x43a21b1e25d8821b7182be272242436dbff18026513362cf5a225c0d883b24e7",
+            "tokenId": "3",
+            "ownershipNonce": "4"
+          },
+          "chainId": 1301,
+          "logHash": "a8f4478d6129c13f1466c567c6d121e81b66d13eaccf3fcd44a392a6fdd08242",
+          "logIndex": 0,
+          "registry": "0xf3037a6d2b68ee5832f53d9ff0bf22c22031af81",
+          "blockHash": "0xc9f6ddfe37d8143f0a4ff8ffef8da7ec538835a0bfd5def806ca4a2008b7e2e5",
+          "confirmed": true,
+          "eventName": "RedemptionRequested",
+          "blockNumber": "67043406",
+          "receiptHash": "42751bbaecb1f5eded149ef6ea8522413f006ca372d8b9f9a5b269b583ac5513",
+          "deploymentId": "0xcaf3af7e40fda3478f2a5c75587ddf1219f6692645cc5f95fa1f37d5c3c67aff",
+          "observedAtMs": 1793895841042,
+          "confirmations": 5,
+          "transactionHash": "0x01c63431c99a2fb63edc459ecff63eec5b1f1df69574532ab92d1585b0bf66d2"
+        },
+        {
+          "args": {
+            "owner": "0x92686A568fCDf0142F2d2448DD009A927111C80F",
+            "claimId": "0x43a21b1e25d8821b7182be272242436dbff18026513362cf5a225c0d883b24e7",
+            "tokenId": "3",
+            "nativeDeliveryReceiptId": "0xf4063e43064ffd7685af6b677d9fbb291602fa14221edbbfb1b37f7e907f4e4a"
+          },
+          "chainId": 1301,
+          "logHash": "1b94233977b9acfce81abbf6a83a0329d9a709de9d2b0b57e3148ba63fd1f4a5",
+          "logIndex": 2,
+          "registry": "0xf3037a6d2b68ee5832f53d9ff0bf22c22031af81",
+          "blockHash": "0x648ed8ca92c00424a86e2655f834e53aa9b96ae22da4783c6024f1021ff8128e",
+          "confirmed": true,
+          "eventName": "RedemptionFinalized",
+          "blockNumber": "67043423",
+          "receiptHash": "e9f8dadb7b3c16bbf9cdea051371179c769aabc2bf96aa59719cff49af67d16d",
+          "deploymentId": "0xcaf3af7e40fda3478f2a5c75587ddf1219f6692645cc5f95fa1f37d5c3c67aff",
+          "observedAtMs": 1793895857834,
+          "confirmations": 5,
+          "transactionHash": "0xd07d4658dbc203961fd6d1a3f0dbfdd04d67828adc5047812513593b0c5cb712"
+        }
+      ],
+      "nativeDelivery": {
+        "operationId": "316470c5-79e5-1d7d-c0db-4db7170cea91",
+        "mailboxId": "11d681f2-c30a-4361-a2e0-d7737cb9a6d6",
+        "ownerId": "fe40d57b-89a0-4eb4-922a-84d320c27609",
+        "playerId": "cc98e9a3-0b21-30a7-9509-817076d54d80",
+        "connectionId": "70ac5592-e697-437d-b159-1087dc1b5091",
+        "listingId": "11d681f2-c30a-4361-a2e0-d7737cb9a6d6",
+        "custodyId": "11d681f2-c30a-4361-a2e0-d7737cb9a6d6",
+        "fingerprint": "d41e0d6ac1cd88199dc49e6882ddd3cb117339da474297237e23de07ce4f828a",
+        "item": "minecraft:diamond_sword",
+        "count": 1,
+        "completedAtMs": 1793895857983,
+        "claimed": true
+      }
+    }
+  ],
+  "before": {
+    "borrower": {
+      "nonce": 26,
+      "tokens": {
+        "city": "3000000000000000000",
+        "usdc": "5985889",
+        "gem": "92948827839179742769"
+      }
+    },
+    "bidder": {
+      "nonce": 7,
+      "tokens": {
+        "city": "0",
+        "usdc": "96996487",
+        "gem": "0"
+      }
+    }
+  },
+  "after": {
+    "borrower": {
+      "nonce": 26,
+      "tokens": {
+        "city": "3000000000000000000",
+        "usdc": "5985889",
+        "gem": "92948827839179742769"
+      }
+    },
+    "bidder": {
+      "nonce": 7,
+      "tokens": {
+        "city": "0",
+        "usdc": "96996487",
+        "gem": "0"
+      }
+    }
+  },
+  "status": "pass",
+  "completedAt": "2026-11-05T16:25:58.692Z"
+}

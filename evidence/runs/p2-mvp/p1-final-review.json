@@ -1,0 +1,67 @@
+{
+  "schema": "agentcity.p1.independent-final-review.v1",
+  "reviewed_at": "2026-10-29T19:45:15.906495+00:00",
+  "reviewer": "/root/p2_scope_review (independent AI engineering peer)",
+  "decision": "approved_for_focused_local_P1_dependency_renewal",
+  "release": "eb49114ccd6811bf323eaf9b8a891da6f002267e",
+  "scope": "Renew the existing ten-case local P1 milestone for the additive fixed access and exact-arm thin-reference implementation. This is a dependency review with selected actual regressions; it does not claim all historical suites reran.",
+  "source_review": "Circuit, checker, parser, projection, protection, core journal, operation and lock logic are unchanged from the prior approved P1 implementation. The main plugin adds hash-bound fixed access and narrowly allows native placement using repeater/wire references only for an exact valid arm, main hand, Survival actor, matching item and actual sneaking. Final block/state and material checks remain authoritative.",
+  "verified_evidence": {
+    "current_physical_regression": {
+      "path": "evidence/runs/p1-boundary/agentcity-boundary-bad12f21/run-report.json",
+      "sha256": "32c3ad06f75874bbd793a5c5c3942a23a7ad708a39e710ceca0f6324c5267f49"
+    },
+    "current_physical_groups": {
+      "initial": 41,
+      "restart": 1
+    },
+    "final_inspection": {
+      "path": "evidence/runs/p2-construction/agentcity-continuation-53847de4/retained/reports/1d764720-4f55-4a69-bb64-acb8c3c6b3c2.json",
+      "sha256": "3b8f8529e396b5065daf39a5abcc34ceeb5665f564f541ad9b7a269a353b0455"
+    },
+    "original_case_digests_checked": 10,
+    "original_unique_artifact_hashes_checked": 11,
+    "current_source_snapshots_checked": 40,
+    "current_retained_artifact_hashes_checked": 68
+  },
+  "case_reuse_judgments": [
+    {
+      "cases": [
+        "P1-001",
+        "P1-002",
+        "P1-003",
+        "P1-009"
+      ],
+      "judgment": "Retained protected 16/10/16 reports remain unchanged actual evidence for the identical circuit/checker and solid-reference repair path. The new same-world final inspection separately confirms all 16 rows at revision 144, with 80 actual stable samples and valid transition spacing."
+    },
+    {
+      "cases": [
+        "P1-004",
+        "P1-005",
+        "P1-006"
+      ],
+      "judgment": "Fresh exact-current-source native primitives and restart renew actual stock transfer/consumption, receiving permissions, operation collision/replay and durable restart behavior. The successful tail additionally observes denied unsneaked thin-reference use and seven valid native placements."
+    },
+    {
+      "cases": [
+        "P1-007",
+        "P1-008"
+      ],
+      "judgment": "Historical inspection, protected review, local expiry and revision-bound repair observations remain applicable to unchanged lock/checker/lifecycle code. Fresh primitives renew representative native lock refusals; the complete old lifecycle was not rerun."
+    },
+    {
+      "cases": [
+        "P1-010"
+      ],
+      "judgment": "The four retained actual crash-cut results remain evidence for unchanged journal and native effect/receipt machinery. New exact-current-source restart replay supplements them; no new four-cut crash suite is claimed."
+    }
+  ],
+  "history_qualification": "Original lifecycle wrapper integrity failures retain their separate integrity-resolution/executable-binding qualifications. Original construction and tail wrappers remain failed; their particular successful observations are composed explicitly with the final passing inspection.",
+  "limitations": [
+    "Historical Paper 1.21.11 build 132 remains unsupported for production.",
+    "Offline identities and the 198 glass blocks plus nine bottom slabs are disclosed operator fixtures.",
+    "No independently controlled human, authenticated-account, live 0G/Arkiv, token-platform, funded-chain, wallet-signature or settlement approval is established.",
+    "No distributed task lease is proved; the worker is limited to cooperative exclusion on one host.",
+    "This artifact approves the scoped review. Root must bind the phase record and execute the phase gate; the artifact alone does not change gate status."
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "schema": "agentcity.bank-release-checks.v1",
+  "runId": "58790da7-501c-4211-a48e-de5ec8183e7e",
+  "recordedAt": "2026-11-05T13:45:16.870891+00:00",
+  "status": "fail",
+  "canonicalPhaseGate": "blocked",
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exitCode": 0,
+      "log": "evidence/runs/bank-release/58790da7-501c-4211-a48e-de5ec8183e7e/check-1.log",
+      "meaning": "Planning infrastructure or whitespace check"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_plan.py"
+      ],
+      "exitCode": 1,
+      "log": "evidence/runs/bank-release/58790da7-501c-4211-a48e-de5ec8183e7e/check-2.log",
+      "meaning": "Planning infrastructure or whitespace check"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_phase.py",
+        "P5"
+      ],
+      "exitCode": 1,
+      "log": "evidence/runs/bank-release/58790da7-501c-4211-a48e-de5ec8183e7e/check-3.log",
+      "meaning": "Canonical phase gate; failure remains a release limitation, not hidden"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exitCode": 0,
+      "log": "evidence/runs/bank-release/58790da7-501c-4211-a48e-de5ec8183e7e/check-4.log",
+      "meaning": "Planning infrastructure or whitespace check"
+    }
+  ],
+  "sources": {
+    "backend/src/bank/native-work.mjs": "cf4829051b03cf37f0c7136aea7c06027d57cdb6dab88045273171d1fa86b625",
+    "backend/src/bank/abis.mjs": "8b540c24b5ed4abfefbfdd35b36efe8aa85b3d906a2dc743e35d8d02c34e1e7c",
+    "backend/src/bank/laptop-runtime.mjs": "91578b99fe43544b823ffcd435945abf1f317e63da0d02a4bbea774d5c08bd99",
+    "backend/src/bank/health-publisher.mjs": "2dd5d1a0319c8bd2196a4d222e9696951d534cc825d840451b685208362faf04",
+    "backend/src/bank/managed-policy.mjs": "3bea988905367955973d03c7f8c5049e31024a33e61c5ee291a6d294ce18d6d9",
+    "backend/src/bank/operator-wallets.mjs": "6beb320ba37991fc883dab7136bce62fdba12fa92e39feaa4e73f7707196b764",
+    "backend/src/bank/canonical.mjs": "f1686d68c01936d07a62eb834ad40f8fef0c4bc0e301d9567e8c2edb506de2f0",
+    "backend/src/bank/service.mjs": "4e24e556544eea0b94a221a8277e4a073607ba6b8138f87e2923f5a4b081bc99",
+    "backend/src/bank/http.mjs": "b7cabce2c29f86bebbee4dd9ac8349ce7a038dafcb30f5ba12cce7c86a374015",
+    "backend/src/web/bank.mjs": "5696ed8376a740b28b70e43fd6a95adc2e47e22b5c8a2bff49713ab96a2af893",
+    "backend/src/web/bank.css": "a97c2e4692caabb2d3d8828c982eee623536565faa66094744f86ce03423c0bd",
+    "backend/src/web/bank.html": "b793ca9587c98a9ba8ad11d984c3d824eec1343847349ea06fcff0972143eaf4",
+    "scripts/bank_server.mjs": "41182b07be10fdf84545d1b577fa08435b668c11e1289969c92c876ed65c8eb6",
+    "scripts/bank_public_demo.mjs": "21eb4a16de5224d5c0a4d3923d8b2bb89c56259481dd13ffa7d83ea4a09dac1b",
+    "scripts/bank_deploy.mjs": "96f6ac3cd141e1180735a0c39a4fde58f9271d0932c9004971f0445041432c5a",
+    "scripts/laptop_host.py": "0a06e1937d47a150f34c023c50b112c07ac22d9a207be67947a5774be609f658"
+  },
+  "paidModelCalls": 0,
+  "publicTransactions": 0
+}

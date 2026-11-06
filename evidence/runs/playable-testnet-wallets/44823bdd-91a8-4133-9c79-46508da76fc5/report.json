@@ -1,0 +1,17 @@
+{
+  "scope": "Real isolated PostgreSQL and owned Anvil18559; explicit in-memory fixture signing provider and mocked Privy SDK API shape. No live provider wallet/signature, production qualification, public transaction or human-key proof.",
+  "status": "fail",
+  "checks": [
+    {
+      "name": "explicit local fixture wallets bind stably to players and separate roles without exporting keys",
+      "status": "pass"
+    },
+    {
+      "name": "exact request nonce and signed bytes persist before broadcast; retries and owner checks retain the same intent",
+      "status": "pass"
+    }
+  ],
+  "publicTransactions": 0,
+  "localTransactions": 0,
+  "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'reverted'\n- 'confirmed'\n"
+}

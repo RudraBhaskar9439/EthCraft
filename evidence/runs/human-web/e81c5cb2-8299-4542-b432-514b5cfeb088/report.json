@@ -1,0 +1,42 @@
+{
+  "runId": "e81c5cb2-8299-4542-b432-514b5cfeb088",
+  "status": "pass",
+  "checks": [
+    {
+      "name": "explicit preparation and consent precede server acquisition; double click opens one wallet request with the reviewed body",
+      "status": "pass"
+    },
+    {
+      "name": "wallet rejection requires another explicit consent and acquisition of the same unchanged intent",
+      "status": "pass"
+    },
+    {
+      "name": "uncertain submission and refresh preserve recovery without another wallet send",
+      "status": "pass"
+    },
+    {
+      "name": "wallet account or network changes clear consent and wrong contexts cannot acquire a transaction",
+      "status": "pass"
+    },
+    {
+      "name": "wallet change during server acquisition retains the acquired intent without opening a stale wallet request",
+      "status": "pass"
+    },
+    {
+      "name": "private identity review link survives status polling and manual refresh without opening a wallet",
+      "status": "pass"
+    },
+    {
+      "name": "synthetic market publication requires an explicit operator click; status refresh never publishes or opens a human wallet",
+      "status": "pass"
+    }
+  ],
+  "scope": "Minimal DOM/VM and scripted browser-provider/HTTP fixtures; no browser extension, public RPC, wallet signing or real transaction is used.",
+  "publicCalls": 0,
+  "publicTransactions": 0,
+  "realMoneySpent": 0,
+  "sources": {
+    "backend/src/web/human.mjs": "5aa9493a0b12a55889b6bc6f588852c4b95ec9b6d0cba111e9f8fa2b0c57a83e"
+  },
+  "finishedAt": "2026-10-30T15:33:24.500Z"
+}

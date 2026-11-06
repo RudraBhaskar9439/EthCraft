@@ -1,0 +1,21 @@
+{
+  "scenario": "unloaded-chunk-s1-lamp_measurement",
+  "state": {
+    "revision": 0,
+    "lockMode": "INSPECTION",
+    "quarantined": false,
+    "readyForReview": false,
+    "passValidUntilMs": 0
+  },
+  "reports": {
+    "13aa526f-a064-4972-872a-4eed6713a2dd.json": "1e81b241129fbc839aed5b4b90bb8c94e86dc521a1c46e564af753534889ced3"
+  },
+  "initial_stock": {
+    "minecraft:lever": 4,
+    "minecraft:redstone": 19,
+    "minecraft:redstone_lamp": 3,
+    "minecraft:redstone_torch": 37,
+    "minecraft:repeater": 16,
+    "minecraft:stone_bricks": 65
+  }
+}

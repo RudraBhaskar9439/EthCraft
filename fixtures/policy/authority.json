@@ -1,0 +1,423 @@
+{
+  "schema_version": 1,
+  "status": "adopted local engineering baseline; participant approval and runtime measurements pending",
+  "default": "deny",
+  "roles": [
+    "requester",
+    "builder",
+    "contributor",
+    "bot",
+    "supplier",
+    "liquidity_provider",
+    "delivery_worker",
+    "publisher",
+    "issuer",
+    "inspection_attestor",
+    "server_operator",
+    "workflow_coordinator",
+    "stranger",
+    "unauthenticated"
+  ],
+  "capabilities": [
+    {
+      "action": "accept_revision",
+      "roles": [
+        "requester"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "acquire_inspection_lock",
+      "roles": [
+        "inspection_attestor"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "approve_agreement",
+      "roles": [
+        "requester",
+        "builder",
+        "contributor"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "authorize_purchase",
+      "roles": [
+        "requester"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "claim_reward",
+      "roles": [
+        "builder",
+        "contributor"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "close_expired_unfunded",
+      "roles": [
+        "workflow_coordinator"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "configure_plot",
+      "roles": [
+        "server_operator"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "confirm_redemption",
+      "roles": [
+        "delivery_worker"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "control_inspection_inputs",
+      "roles": [
+        "inspection_attestor"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "create_coordinated_backup",
+      "roles": [
+        "server_operator"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "deposit_bundle",
+      "roles": [
+        "supplier"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "fulfill_confirmed_claim",
+      "roles": [
+        "delivery_worker"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "fund_labor",
+      "roles": [
+        "requester"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "invalidate_incomplete_inspection",
+      "roles": [
+        "inspection_attestor"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "issue_kit",
+      "roles": [
+        "issuer"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "issue_pass_attestation",
+      "roles": [
+        "inspection_attestor"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "manage_owned_liquidity",
+      "roles": [
+        "liquidity_provider"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "navigate",
+      "roles": [
+        "bot"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "observe_plot",
+      "roles": [
+        "bot"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "operate_review_inputs",
+      "roles": [
+        "requester"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "pause_mutations",
+      "roles": [
+        "server_operator"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "place_stage",
+      "roles": [
+        "bot"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "publish_job",
+      "roles": [
+        "requester"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "publish_offer",
+      "roles": [
+        "builder"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "publish_service",
+      "roles": [
+        "builder"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "publish_service_state",
+      "roles": [
+        "publisher"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "read_inspection_outputs",
+      "roles": [
+        "inspection_attestor"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "read_job_stock",
+      "roles": [
+        "bot"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "read_public_marketplace",
+      "roles": [
+        "requester",
+        "builder",
+        "contributor",
+        "bot",
+        "supplier",
+        "liquidity_provider",
+        "delivery_worker",
+        "publisher",
+        "issuer",
+        "inspection_attestor",
+        "server_operator",
+        "workflow_coordinator",
+        "stranger",
+        "unauthenticated"
+      ],
+      "scope": "public_intended_data_only"
+    },
+    {
+      "action": "read_public_status",
+      "roles": [
+        "requester",
+        "builder",
+        "contributor",
+        "bot",
+        "supplier",
+        "liquidity_provider",
+        "delivery_worker",
+        "publisher",
+        "issuer",
+        "inspection_attestor",
+        "server_operator",
+        "workflow_coordinator",
+        "stranger",
+        "unauthenticated"
+      ],
+      "scope": "public_intended_data_only"
+    },
+    {
+      "action": "reconcile_delivery",
+      "roles": [
+        "delivery_worker"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "reconcile_operation",
+      "roles": [
+        "server_operator"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "record_all_rewards_claimed",
+      "roles": [
+        "workflow_coordinator"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "record_authoritative_receipt",
+      "roles": [
+        "workflow_coordinator"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "record_failed_inspection",
+      "roles": [
+        "inspection_attestor"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "record_reconciled_delivery",
+      "roles": [
+        "delivery_worker"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "redeem_kit",
+      "roles": [
+        "requester"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "repair_region",
+      "roles": [
+        "bot"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "request_inspection",
+      "roles": [
+        "builder",
+        "bot"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "request_repair",
+      "roles": [
+        "builder",
+        "contributor"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "request_stage",
+      "roles": [
+        "builder",
+        "contributor"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "request_timeout_refund",
+      "roles": [
+        "requester"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "restore_with_quarantine",
+      "roles": [
+        "server_operator"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "select_offer",
+      "roles": [
+        "requester"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "submit_delivery_ack",
+      "roles": [
+        "delivery_worker"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "take_job_stock",
+      "roles": [
+        "bot"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "trade_owned_kit",
+      "roles": [
+        "requester",
+        "supplier",
+        "liquidity_provider"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    },
+    {
+      "action": "withdraw_unfunded",
+      "roles": [
+        "requester"
+      ],
+      "scope": "verified_named_job_or_owned_asset_and_receiving_boundary_guards"
+    }
+  ],
+  "public_actions": [
+    "read_public_marketplace",
+    "read_public_status"
+  ],
+  "unknown_role_or_action": "deny",
+  "identity_proof": "stable UUID and current authenticated session; linked-wallet authority when required",
+  "service_roles_separate": [
+    "issuer",
+    "publisher",
+    "inspection_attestor",
+    "server_operator"
+  ],
+  "every_mutating_command_requires": [
+    "operation_id",
+    "server_id",
+    "job_id",
+    "agreement_version",
+    "actor",
+    "authorization_reference",
+    "expected_revision",
+    "typed_action_parameters",
+    "expires_at_ms"
+  ],
+  "requester_acceptance_may_be_delegated_to_model_bot_or_admin": false,
+  "model_has_no_role_or_key_by_default": true,
+  "notes": [
+    "A role name in a fixture is a policy oracle, not a provisioned credential or independent participant.",
+    "Contributor and multi-allocation schema rules do not enable a team UI.",
+    "Workflow receipt projection is not authority to fabricate the underlying source event."
+  ]
+}

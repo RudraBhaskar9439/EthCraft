@@ -1,0 +1,74 @@
+{
+  "status": "pass",
+  "runId": "c3a4f2c7-fe6e-444b-8bb8-30695a74c876",
+  "scope": "Credential-free Docker container loopback HTTP packaging fixture only",
+  "tests": [
+    {
+      "name": "pinned-image-nonroot-readonly-no-credentials-no-docker-socket-no-published-ports",
+      "status": "pass"
+    },
+    {
+      "name": "actual-player-page-built-bundle-config-and-foreign-host-rejection",
+      "status": "pass",
+      "result": {
+        "uid": 10001,
+        "node": "v26.3.1",
+        "responses": [
+          {
+            "path": "/player-wallet",
+            "status": 200,
+            "bytes": 306
+          },
+          {
+            "path": "/player-wallet.js",
+            "status": 200,
+            "bytes": 5972910
+          },
+          {
+            "path": "/api/player-wallet/config",
+            "status": 200,
+            "bytes": 77
+          }
+        ],
+        "foreignHostStatus": 403
+      }
+    }
+  ],
+  "databaseWrites": 0,
+  "providerWallets": 0,
+  "publicTransactions": 0,
+  "realMoneySpentUsd": 0,
+  "independentHumans": 0,
+  "image": "sha256:b85d6f0e4816c40eb8b70788f96112321e2ab847252f88dedf1c13bef211c970",
+  "sourceHashes": {
+    "Dockerfile": "c98a33e1994656ab3dd57dcc58e67f4702f0cbc1d84849e498644effd17af87d",
+    "Dockerfile.dockerignore": "c78b2d2c99bd1254887dc64d943637113019ca4354d0c47651c5b814719dcfd7",
+    "entrypoint.mjs": "97b9a536272d9b6a1e64833f9a0d0ac93034756c968de7718458367bc49df974",
+    "compose.yaml": "fd0ac4c3d08ba647826211ac1c90fd0f88e32766285e3b95273a2b0e8d1c33a8",
+    "compose.infrastructure.yaml": "aef9309aeb99ade0624e0b39874b7795249e4c230eac0aeafd8c191ecddc5142",
+    "nginx.conf.example": "fc648b81fe79901287cde61137e1e536bb8c7718f62788f263bd63d473a18b90",
+    "wallet-upstream.conf": "e24b88c46e89f88adc9a121c75ff414a106aa5722951b40e17b59e2f70133da1"
+  },
+  "buildFindings": {
+    "botDependencyAudit": "npm ci reported 6 moderate vulnerabilities in existing lockfile",
+    "companionBefore": {
+      "info": 0,
+      "low": 0,
+      "moderate": 11,
+      "high": 20,
+      "critical": 0,
+      "total": 31
+    },
+    "companionAfter": {
+      "info": 0,
+      "low": 0,
+      "moderate": 7,
+      "high": 23,
+      "critical": 0,
+      "total": 30
+    },
+    "compatibleFix": "Only ws8.18.0 and8.18.3 overridden to8.21.0; no force or SDK major changes",
+    "unresolved": "Zod3->4 API major, decode-uri-component CJS->ESM and UUID buffer bounds; production release remains blocked pending supported upstream fixes and authentication verification"
+  },
+  "containerLog": "AgentCity laptop console: http://127.0.0.1:18789"
+}

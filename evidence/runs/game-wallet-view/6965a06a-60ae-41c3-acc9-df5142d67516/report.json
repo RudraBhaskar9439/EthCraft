@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "scope": "Read-only game wallet lookup with isolated PostgreSQL fixtures; no real user/provider/session mutation",
+  "checks": [
+    {
+      "name": "different canonical and Minecraft UUIDs resolve the existing approved Discord wallet using SELECT-only reads with zero provisioning or financial authority",
+      "status": "pass"
+    },
+    {
+      "name": "wrong principal stale event pending join and missing exact approved alias connection refuse wallet disclosure",
+      "status": "pass"
+    },
+    {
+      "name": "missing account directs setup to Discord without creating wallets or old game-auth sessions while unmapped identity permits explicit legacy routing",
+      "status": "pass"
+    }
+  ],
+  "walletWrites": 0,
+  "signatures": 0,
+  "publicTransactions": 0,
+  "sourceSha256": "5e2a97d8889e879f47fbc9851c035646360d51f705e6345ada5a4adc398bff38"
+}

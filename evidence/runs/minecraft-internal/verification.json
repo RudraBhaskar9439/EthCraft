@@ -1,0 +1,84 @@
+{
+  "status": "pass",
+  "recorded_at": "2026-10-30T07:25:45.700625+00:00",
+  "scope": "Minecraft internal materials and native game actions with temporary real local Ollama; separate from synthetic blockchain demonstration",
+  "fresh_run": "agentcity-construction-750b0aae",
+  "checks": {
+    "initial_segment": 6,
+    "resume_segment": 6,
+    "local_model_safety": 2,
+    "fresh_native_placements": 144,
+    "unique_placement_receipts": 144,
+    "actual_inspection_correct": 16,
+    "actual_inspection_total": 16,
+    "inspection_revision": 144,
+    "original_pending_operation_replayed_once": "95cc98bd-b66e-4480-9f8e-c17fb6054107",
+    "pending_operation": null,
+    "stock_and_builder_inventory_empty": true,
+    "world_gracefully_saved_and_owned_container_removed": true,
+    "economic_bridge": false,
+    "real_spend_usd": 0
+  },
+  "inference": {
+    "provider": "ollama_local",
+    "model": "qwen3:1.7b",
+    "actions": [
+      "construct",
+      "construct",
+      "inspect",
+      "wait"
+    ],
+    "live_0g_verified": false,
+    "independent_humans": 0
+  },
+  "changed_files_sha256": {
+    "backend/src/bot/minecraft-adapter.cjs": "23d5bce11bcc64e2f8925d75deafc518085d6128614ea98afe9d4d19b5753b6b",
+    "backend/src/bot/proposal-gate.mjs": "e3ca45fefeaa68623ef8629d1600c628000bae6974304cfcc3805d9635c79078",
+    "tests/construction/run.py": "33f169b90b42b57a20c39ed6beafc6bdbb566b1959fd7138e2ad06b60c142c71",
+    "tests/construction/probe.cjs": "df2ab2bcb0b3859fc10bf25ec065a745f5a2e255623569b5d876cd5fa4f70555",
+    "tests/construction/proposal-safety.mjs": "2d10ba2a02d0d2ddffb8ff0b3aa19e1d6f824346108f5e1576990ee7bb576881",
+    "docs/MINECRAFT_LOCAL_FLOW.md": "6d9a03ee1a613a33eb289b2548f0ea08f29137ae599e0b53179679839c568626"
+  },
+  "evidence_sha256": {
+    "evidence/runs/minecraft-internal/agentcity-construction-750b0aae/run-report.json": "5b0e612e184f9226a802ad140c5b07286344e76fbce063f33adc2a782864a728",
+    "evidence/runs/minecraft-internal/agentcity-construction-750b0aae/initial-client.json": "bfca1ab99d4327869a7a0662540a2b5736f5ed3db13f3e42da206a23daeb39a7",
+    "evidence/runs/minecraft-internal/agentcity-construction-750b0aae/resume-client.json": "6023631ec8735b152636068e7d846604f25216e1f6ff46cf8e71baa0be77b183",
+    "evidence/runs/minecraft-internal/agentcity-construction-750b0aae/retained/construction-checkpoint.json": "16ecbc1aad9ff590b0c5c3e256fa03d20db3c84f7aa24d1bf29e03b0aaddb7f4",
+    "evidence/runs/minecraft-internal/agentcity-construction-750b0aae/retained/construction-events.jsonl": "8a25f012445695d23567a6eb90e13423ddf5620890809da57969778351cb39d6",
+    "evidence/runs/minecraft-internal/agentcity-construction-750b0aae/retained/reports/d2e729e8-0fb3-40e5-96ab-fd07cd11cf13.json": "5a6617c306b35f5277287b257cab45ec20dd091652c57dec9c9cb09905078285",
+    "evidence/runs/minecraft-internal/agentcity-construction-750b0aae/final-server.log": "d4a446214fc598ec9f30a39478f91e1081a0ccf60918b32be8f7acf1b9a7d4e0",
+    "evidence/runs/minecraft-internal/proposal-safety.json": "3b51ed73de6bb8591e39c7b482f26ce4f060b49caa979add9d3726a996f58e50"
+  },
+  "retained_attempts": [
+    {
+      "name": "agentcity-construction-3ecf40bf",
+      "status": "fail",
+      "error": "Construction initial client failed; see retained client.json/log."
+    },
+    {
+      "name": "agentcity-construction-620d87a3",
+      "status": "fail",
+      "error": "Construction resume client failed; see retained client.json/log."
+    },
+    {
+      "name": "agentcity-construction-6f5c5826",
+      "status": "fail",
+      "error": "[Errno 48] Address already in use"
+    },
+    {
+      "name": "agentcity-construction-750b0aae",
+      "status": "pass",
+      "error": null
+    },
+    {
+      "name": "agentcity-construction-b02c550a",
+      "status": "fail",
+      "error": "Construction initial client failed; see retained client.json/log."
+    }
+  ],
+  "remaining": [
+    "Final independent human acceptance.",
+    "Live0G remains deferred; Ollama is the approved temporary local provider.",
+    "Current production Minecraft support and any token-linked Minecraft product are not established."
+  ]
+}

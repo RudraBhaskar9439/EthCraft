@@ -1,0 +1,47 @@
+{
+  "schema": "agentcity.mumbai-city-post-upgrade.v1",
+  "recordedAt": "2026-11-06T04:11:59.482784+00:00",
+  "status": "partial",
+  "scope": "Actual live laptop read-only post-upgrade observation. No new game connections, model requests, wallet signatures or chain transactions. Human approval is not synthesized.",
+  "backupReference": ".local/mumbai-city/backups/5d4945c875614bd5bfcc20d7edc7361a",
+  "checks": {
+    "sevenWorldIdentitiesPreserved": true,
+    "deployedPluginMatchesDescriptor": true,
+    "nativeV2BankReady": true,
+    "markerV2Ready": true,
+    "migrationJournalReady": true,
+    "archivedV1MarkerPreservesBackupExactly": true,
+    "migrationBlueprintsMatchMarkers": true,
+    "onboardingBackendHealthy": true,
+    "merchantApprovedOnline": true,
+    "bothHostedAgentsPresent": false
+  },
+  "health": {
+    "nativeHttpStatus": 200,
+    "backendHttpStatus": 200,
+    "bankTemplateVersion": 2,
+    "merchantSessionHttpStatus": 200,
+    "gameStatusPing": {
+      "ok": true,
+      "onlineCount": 2,
+      "zeroGAgentPresent": false,
+      "claudeAgentPresent": false,
+      "merchantPresent": true
+    },
+    "merchantStockObservation": "not attempted while merchant offline",
+    "humanApproval": "awaiting actual new Discord join approval"
+  },
+  "hashes": {
+    "deployedPluginSha256": "8c819953146a78718c3b455292ab3b1083f2214faf67fa02f88c68df51d21697",
+    "previousPluginSha256": "dbae3181529455171363734e436f99ab7e9d8bd6b91f6ac8c94fb71deb98d996",
+    "worldIdentityMapSha256": "ff884298a6960486b4569e5b7d9b867ac9380149fbb63250cb788b727f80b599",
+    "markerSha256": "17f6d8cbc1eff28343dfff15ac48ed144ab3a8ec534dfbe5e80d77af0dd9af4a",
+    "archivedV1MarkerSha256": "91b32b2b7bb46f8bac67529745c3215ecd76618f418056cccbbba85982b4fe06",
+    "migrationJournalSha256": "43c2f4224b2ee5265cc2b1692763609904444ed55b6fc6ae1e69cf5383091584"
+  },
+  "pending": [
+    "Reconnect the controlled merchant and hosted agents after the plugin restart.",
+    "Observe actual approved merchant stock once connected.",
+    "Verify the user-approved new connection separately."
+  ]
+}

@@ -1,0 +1,5 @@
+{"check":"fresh-empty-circuit-and-exact-controlled-stock","status":"pass"}
+{"check":"unsupported-orientation-and-blueprint-hash-refused-before-effects","status":"pass"}
+{"check":"bounded-obstructed-navigation-preserves-stock-and-structure","status":"pass"}
+{"check":"receiving-boundary-refuses-session-role-revision-expiry-and-lock-without-effects","status":"pass"}
+{"status":"fail","checks":4,"error":{"name":"AssertionError","message":"Expected values to be strictly equal:\n\n0 !== 11\n","stack":"AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n0 !== 11\n\n    at run (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/evidence/runs/minecraft-internal/agentcity-construction-3ecf40bf/source/tests/construction/probe.cjs:393:12)"}}

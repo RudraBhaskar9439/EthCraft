@@ -1,0 +1,40 @@
+{
+  "status": "pass",
+  "scope": "Actual local @agent conversation through Ollama and native delivery/collection/Game Coins sale; crypto authentication remains denied for this synthetic player",
+  "independentHumansVerified": 0,
+  "providerIdentitiesVerified": 0,
+  "publicTransactions": 0,
+  "checks": [
+    {
+      "name": "original-three-step-workflow-has-complete-native-transfer-receipts-and-exactly-one-real-inventory-backed-four-coin-sale",
+      "status": "pass",
+      "originalWorkflowId": "bb07d504-837b-4a4a-b33c-6decf7f5531a",
+      "sourceCobblestoneBefore": 56,
+      "sourceCobblestoneAfter": 50,
+      "destinationBefore": 4,
+      "destinationAfter": 6,
+      "saleReward": "4",
+      "actualSaleLedgerEntries": 1
+    },
+    {
+      "name": "completed-empty-agent-released-before-observer-approach-preserving-ruddy-agent",
+      "status": "pass"
+    },
+    {
+      "name": "native-observer-confirms-retained-source-and-destination-stock-no-fixture-crypto-records-or-task-locks",
+      "status": "pass",
+      "sourceCobblestone": 50,
+      "destinationCobblestone": 6,
+      "gameCoins": 108,
+      "fixtureProviderRecords": {
+        "wallets": 0,
+        "signingRequests": 0,
+        "swapPreviews": 0
+      }
+    }
+  ],
+  "startedAt": "2026-10-31T09:28:27.197Z",
+  "verifiedOriginalWorkflow": "bb07d504-837b-4a4a-b33c-6decf7f5531a",
+  "finishedAt": "2026-10-31T09:28:44.901Z",
+  "lastWorldName": "minecraft:agentcity_play"
+}

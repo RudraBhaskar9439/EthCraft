@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "tasks": [
+    {
+      "id": "17e8b684-d02a-45b7-b9c3-d1a583d8cccc",
+      "operationId": "14d69558-20ba-446b-95ce-568178782299",
+      "ownerId": "11111111-1111-4111-8111-111111111111",
+      "ownerName": "DisclosedFixture",
+      "slotName": "CityAgent2",
+      "plan": {
+        "action": "build_structure",
+        "structure": "custom",
+        "material": "oak_planks",
+        "offset": [
+          5,
+          0,
+          6
+        ],
+        "placements": [
+          {
+            "position": [
+              -40,
+              64,
+              10
+            ],
+            "material": "oak_planks"
+          },
+          {
+            "position": [
+              -38,
+              64,
+              10
+            ],
+            "material": "oak_planks"
+          },
+          {
+            "position": [
+              -40,
+              65,
+              10
+            ],
+            "material": "oak_planks"
+          },
+          {
+            "position": [
+              -38,
+              65,
+              10
+            ],
+            "material": "oak_planks"
+          },
+          {
+            "position": [
+              -40,
+              66,
+              10
+            ],
+            "material": "oak_planks"
+          },
+          {
+            "position": [
+              -39,
+              66,
+              10
+            ],
+            "material": "oak_planks"
+          },
+          {
+            "position": [
+              -38,
+              66,
+              10
+            ],
+            "material": "oak_planks"
+          }
+        ],
+        "bill": {
+          "oak_planks": 7
+        },
+        "clearances": [
+          [
+            -39,
+            64,
+            10
+          ],
+          [
+            -39,
+            65,
+            10
+          ]
+        ],
+        "source": [
+          -47,
+          64,
+          2
+        ]
+      },
+      "planHash": "3013d35627fde492fe47e5cc53e41832f9a933b71661cdff7b3d65ad9bf6afea",
+      "hashVersion": 2,
+      "status": "blocked",
+      "completed": [],
+      "preexisting": [],
+      "receipts": {},
+      "pending": null,
+      "withdrawn": false,
+      "delivered": false,
+      "createdAt": "2026-10-31T10:51:27.749Z",
+      "message": "A declared structure opening is occupied. No existing block was removed and no opening was claimed clear."
+    }
+  ]
+}

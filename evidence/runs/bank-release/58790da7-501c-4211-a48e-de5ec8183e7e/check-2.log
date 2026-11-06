@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/scripts/check_plan.py", line 79, in <module>
+    main()
+    ~~~~^^
+  File "/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/scripts/check_plan.py", line 74, in main
+    assert destination.exists(), f'broken link in {path.name}: {target}'
+           ~~~~~~~~~~~~~~~~~~^^
+AssertionError: broken link in UNISWAP_BANK_RUNBOOK.md: ../evidence/TESTNET_BANK_CHECKPOINT.json

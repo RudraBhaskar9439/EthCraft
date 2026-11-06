@@ -1,0 +1,85 @@
+{
+  "schema": "agentcity.discord-market-recovery-checkpoint.v1",
+  "status": "pass",
+  "observedAt": "2026-10-31T19:00:40.914Z",
+  "scope": "Focused Discord diagnostics/error copy patch and actual human-confirmed Game Coin stock listings; no full acceptance or transport root-cause claim",
+  "changes": [
+    "retain numeric Discord API errors, acknowledgement/authorization/command/reply stage, elapsed duration and received age without tokens/URLs/provider payloads",
+    "show an actionable own-listing purchase refusal instead of generic account setup guidance",
+    "document plain stock sources, stable confirmation retries and separate Discord acknowledgement failures"
+  ],
+  "checks": {
+    "coordinatorFixtureGroups": 11,
+    "failedAckDispatchesZeroMarketAssetAgentActions": true,
+    "liveNativeReadbackChecks": 3,
+    "actualReservedSticks": 2,
+    "humanReportedBrowseNormal": true,
+    "humanReportedOriginalOneStickListingOpen": true
+  },
+  "evidence": [
+    {
+      "path": "evidence/runs/discord-bot/a595360f-08e7-4c6b-8cc1-f50f6e952ddc/report.json",
+      "sha256": "a1876ec76cfccb3503c6bff8a5275ff303a51be7f32126702bfb3122cde4f693"
+    },
+    {
+      "path": "evidence/runs/discord-market-recovery/1e234632-c3cd-4972-a278-bc7aeeed3c1b/report.json",
+      "sha256": "62a6a1da59c6ee193e699cf92d51efa301eee7ca74049c359a9d7b56e1e5b4b6"
+    }
+  ],
+  "sourceSha256": {
+    "backend/src/discord/bot.mjs": "6473f6896173c454dc55baab34b21c21dbee79c746b0752fa6cd6e3b83b3c092",
+    "tests/playable/discord-bot.mjs": "355d8f5626b784a22dc6a34f044fbe19a70ecc5617792bb87babb8a1b4104833",
+    "docs/GAME_MARKETPLACE.md": "fed42bebcebfb8085b4d7f563cc9b058631f31e3523fd247bf5131119c536268"
+  },
+  "installed": {
+    "workerPid": 30446,
+    "workerReady": true,
+    "taskJournalUnchangedDuringReload": true,
+    "worldAndTunnelsRestarted": false,
+    "pluginSha256": "c9a108690fad15f8d15702b6d6c67468dab438c6ba5d6837fbf0938b28c02a69",
+    "nativePendingInventoryEffects": 0
+  },
+  "sourceQualification": "Actual native listings were read back under the predecessor diagnostic patch; the final source adds only clearer self-purchase error copy and its fixture test. Native plugin, custody, marketplace accounting and wallet authority logic did not change.",
+  "retainedFailure": {
+    "path": "evidence/runs/world-assets-host/63153314-fae4-4e6f-b097-6ae38b42ce59/report.json",
+    "status": "fail",
+    "meaning": "Strict pre-upgrade task/agent journal comparison failed after ongoing gameplay; no reset or original evidence replacement performed."
+  },
+  "timeout": {
+    "recovered": true,
+    "originalRootCause": "unproved; earlier generic logging lost the numeric transport code",
+    "laterObservedOwnPurchaseRefusals": {
+      "code": "GAME_MARKET_CANNOT_BUY_OWN_LISTING",
+      "stage": "command",
+      "elapsedMs": [
+        482,
+        626,
+        619
+      ],
+      "receivedAgeMs": [
+        229,
+        221,
+        235
+      ]
+    },
+    "qualification": "These later replies are expected business refusals, not evidence of the original timeout cause."
+  },
+  "canonicalPhase": {
+    "phase": "P0",
+    "gate": "blocked",
+    "observedCommand": "python3 scripts/check_phase.py P0",
+    "exitCode": 1,
+    "reasons": [
+      "changed implementation scope",
+      "P0-015 docs/UPSTREAM_REUSE.md artifact hash mismatch"
+    ],
+    "planningChecksRerun": false,
+    "planningInfrastructureChanged": false
+  },
+  "remaining": [
+    "recurrence/root-cause verification for earlier Discord transport timeouts",
+    "second independent player purchase/claim acceptance",
+    "public Privy asset trade acceptance and extended coordinated crash/restore"
+  ],
+  "nextStep": "Another player buys the backed stick listing and claims its mailbox entry. Owner may explicitly cancel the extra one-stick listing and claim the returned stock if only one sale was intended."
+}

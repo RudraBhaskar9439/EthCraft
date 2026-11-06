@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "scope": "Actual on-chain-only plugin/Discord/ledger/custody readback; negative retired-action requests have no effects. No player mint, purchase, withdrawal or wallet signature.",
+  "observedAt": "2026-10-31T19:34:02.510Z",
+  "checks": [
+    "installed verified plugin and permanent native mode expose CITY and on-chain-only economy",
+    "WorldGuard/WorldEdit release hashes, original estate world identity and fresh confirmed ownership projection retained",
+    "every archived coin table retains its exact pre-cutover row count and hash; no accounts, grants, payments or legacy trades created",
+    "both original backed stick lots and the complete native inventory journal survive unchanged, with zero unresolved effects",
+    "direct legacy native shop payout route refuses before effects",
+    "actual Discord command schema and market guide use CITY; earlier listings offer withdrawal only and no purchase button"
+  ],
+  "pluginSha256": "d65503b332a178c9ca501e3369fbb6baff310f6f98f298333ea4100e849644d2",
+  "backedLegacyLotsRetained": 2,
+  "economyMode": "ONCHAIN_ONLY",
+  "retiredPendingRequests": 0,
+  "publicTransactions": 0,
+  "playerInventoryChanges": 0
+}

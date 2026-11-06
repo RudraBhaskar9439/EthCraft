@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "scope": "Actual unsigned local-operator preparation and HTTP retrieval only; developer builder, no independent human",
+  "checks": [
+    {
+      "role": "requester",
+      "pending": true,
+      "requestId": "8f337508-eea4-4ed6-8b2b-4482fee41435",
+      "agreementHash": "0xcef707203c60ae7c062ee5e724e52f7a295dd331543216244886c9057d3ec3dc",
+      "chainId": 1301
+    },
+    {
+      "role": "builder",
+      "pending": true,
+      "requestId": "959e03f0-10de-42ed-9c5d-9cd4e1cc1a84",
+      "agreementHash": "0xcef707203c60ae7c062ee5e724e52f7a295dd331543216244886c9057d3ec3dc",
+      "chainId": 1301
+    }
+  ],
+  "realHumanApprovals": 0,
+  "transactionsSubmitted": 0
+}

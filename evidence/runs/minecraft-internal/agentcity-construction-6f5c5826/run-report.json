@@ -1,0 +1,40 @@
+{
+  "schema": "agentcity.p2.construction-run.v1",
+  "name": "agentcity-construction-6f5c5826",
+  "status": "fail",
+  "purpose": "development execution and affected regression; not a phase approval",
+  "started_at": "2026-10-30T07:11:39.038281+00:00",
+  "runtime_lock": {
+    "purpose": "isolated_non_token_fixture",
+    "bind": "127.0.0.1",
+    "port": 25576,
+    "minecraft": "1.21.11",
+    "paper": {
+      "build": 132,
+      "support": "UNSUPPORTED",
+      "support_ended": "2026-06-15",
+      "sha256": "5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba",
+      "url": "https://fill-data.papermc.io/v1/objects/5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba/paper-1.21.11-132.jar"
+    },
+    "java_image": "eclipse-temurin@sha256:5d90b26c0784ccf55af55f97cbcf7f3969c66a06299c93bdc72649219942a48f",
+    "mineflayer": "4.39.0",
+    "pathfinder": "2.4.5",
+    "authentication": "offline_fixture_only",
+    "independent_human_participants": 0,
+    "token_integration": false,
+    "production_supported": false
+  },
+  "independent_humans": 0,
+  "full_phase_gate_passed": false,
+  "scenario": "build",
+  "injected_resources": "Fixed hash-bound operator glass and nine calibrated bottom slabs; build gets144stockitems, shortage withholds65stonebricks in a separate operator reserve, occupied injects one wrong glass target, blocked puts one glass obstacle at the declared west/north ground crossing. No restoration or runtime edit API; no token backing.",
+  "ports": {
+    "host": "127.0.0.1",
+    "game": 25592,
+    "control_http": 25593
+  },
+  "steps": [],
+  "error": "[Errno 48] Address already in use",
+  "finished_at": "2026-10-30T07:11:39.038991+00:00",
+  "retained_artifacts": {}
+}

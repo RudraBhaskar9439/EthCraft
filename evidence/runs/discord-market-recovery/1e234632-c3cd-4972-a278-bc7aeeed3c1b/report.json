@@ -1,0 +1,102 @@
+{
+  "status": "pass",
+  "observedAt": "2026-10-31T18:57:36.828Z",
+  "scope": "Read-only actual live Game Coin listing/custody recovery. Human independently confirmed the listings; no listing, purchase, cancellation, inventory change or wallet signature was executed by this verifier.",
+  "checks": [
+    "original failed one-stick proposal now has an open database listing and exact matching actual native held stock",
+    "second human-created one-stick proposal independently has its own native backing; two total sticks reserved without merging their operation IDs",
+    "native inventory journal has zero unresolved effects"
+  ],
+  "listings": [
+    {
+      "listing_id": "39948e32-df8d-4d54-a148-3e527452b289",
+      "item": "minecraft:stick",
+      "count": 1,
+      "price": "4",
+      "source_kind": "player_inventory",
+      "state": "open",
+      "custody_id": "39948e32-df8d-4d54-a148-3e527452b289"
+    },
+    {
+      "listing_id": "b02063e0-bb53-4a04-a96b-860dc0b85126",
+      "item": "minecraft:stick",
+      "count": 1,
+      "price": "4",
+      "source_kind": "player_inventory",
+      "state": "open",
+      "custody_id": "b02063e0-bb53-4a04-a96b-860dc0b85126"
+    }
+  ],
+  "custody": [
+    {
+      "listingId": "39948e32-df8d-4d54-a148-3e527452b289",
+      "item": "minecraft:stick",
+      "count": 1,
+      "state": "held",
+      "fingerprint": "b4ff1782e2d8b24d86b5d983bbf8fc9be29f669b24bce82bfa03caac36e40202",
+      "sourceMatchesApprovedPlayer": true
+    },
+    {
+      "listingId": "b02063e0-bb53-4a04-a96b-860dc0b85126",
+      "item": "minecraft:stick",
+      "count": 1,
+      "state": "held",
+      "fingerprint": "b4ff1782e2d8b24d86b5d983bbf8fc9be29f669b24bce82bfa03caac36e40202",
+      "sourceMatchesApprovedPlayer": true
+    }
+  ],
+  "totalReservedSticks": 2,
+  "timeout": {
+    "before": "three slash requests and three controls logged only DISCORD_REQUEST_UNAVAILABLE; original numeric transport code was unavailable",
+    "after": "human reported /bazaar action:browse replies normally after owned worker reload",
+    "rootCause": "not established from the original redacted log; do not infer a proven transport fix from successful recovery",
+    "workerReload": {
+      "oldPid": 26951,
+      "newPid": 29872,
+      "readyObserved": true,
+      "taskJournalUnchanged": true,
+      "worldAndTunnelsRestarted": false
+    },
+    "diagnostics": "numeric code, failure stage, elapsed time and received age retained without tokens, URLs or provider payloads"
+  },
+  "inventorySnapshots": {
+    "earlierSavedAt": "2026-10-31T18:46:17.634Z",
+    "earlierSavedInventory": [],
+    "laterSavedAt": "2026-10-31T18:49:55.220Z",
+    "laterSavedInventory": [
+      {
+        "slot": 0,
+        "item": "minecraft:stick",
+        "count": 3
+      }
+    ],
+    "qualification": "Read-only player autosaves; neither proves the exact live inventory at an earlier failed confirmation."
+  },
+  "preUpgradeBaseline": {
+    "report": "evidence/runs/world-assets-host/63153314-fae4-4e6f-b097-6ae38b42ce59/report.json",
+    "status": "fail",
+    "qualification": "Strict comparison to pre-upgrade journals is not a general live-health assertion after gameplay; failure retained.",
+    "currentJournalMatches": {
+      "personal-agent-tasks.json": true,
+      "personal-agents.json": false,
+      "plugins/AgentCity/task-region-locks.json": true
+    }
+  },
+  "sourceSha256": {
+    "backend/src/discord/bot.mjs": "80503f405178173df97dad3835c29eaded790f44f09de45e5280f018251bde9a",
+    "tests/playable/discord-bot.mjs": "e23bfa265377c4ef0e0733208be6c5107c5bdcfea023f238870f115b198930ae",
+    "docs/GAME_MARKETPLACE.md": "b6669425410dab9a586cf4e04573254fdcd0b6558b4292f8c7d0f7bf1ee35bba"
+  },
+  "unitFixtureEvidence": "evidence/runs/discord-bot/9c9e2811-e666-4c9f-b1d4-941eb45c3768/report.json",
+  "unitFixtureGroupsPassed": 10,
+  "canonicalPhase": {
+    "phase": "P0",
+    "gate": "blocked",
+    "qualification": "Existing scope and upstream evidence mismatch retained; these focused operational checks do not pass a canonical phase."
+  },
+  "remaining": [
+    "earlier Discord timeout root cause and recurrence verification",
+    "second independent player purchase and actual mailbox claim",
+    "coordinated extended crash/restore and original live research requirements"
+  ]
+}

@@ -1,0 +1,4778 @@
+{
+  "status": "pass",
+  "runId": "0d3bb0ee-863b-40e8-af97-2bcf144a3b22",
+  "scope": "Disclosed TaskTester fixture: direct inspection and explicit-dimension natural-language arch, native gathering, 2-plank/4-stick crafting and carried-item delivery; no grants/resets/wallet actions",
+  "checks": [
+    {
+      "name": "existing-owner-and-task-history-preflight",
+      "status": "pass",
+      "ruddyAgent": "CityAgent1",
+      "fixtureSlot": "CityAgent2",
+      "retainedTasks": 6,
+      "execute": true
+    },
+    {
+      "name": "unused-arch-and-resource-cells-retained-shelter-and-real-stock-preflight",
+      "status": "pass",
+      "retainedBlocks": 200,
+      "existingPlanks": 72
+    },
+    {
+      "name": "resume-original-two-resource-blocks-and-zero-player-planks-without-replay",
+      "status": "pass"
+    },
+    {
+      "name": "direct-inspection-returns-fresh-native-inventory-and-stock",
+      "status": "pass"
+    },
+    {
+      "name": "natural-language-seven-block-custom-arch-native-world-result",
+      "status": "pass"
+    },
+    {
+      "name": "native-two-real-plank-blocks-picked-up-crafted-four-sticks-and-deposited-carried-items",
+      "status": "pass"
+    },
+    {
+      "name": "nine-existing-planks-accounted-retained-blocks-and-Ruddy-binding-preserved",
+      "status": "pass",
+      "delivered": "Four sticks observed in destination chest; no discarded cargo"
+    },
+    {
+      "name": "empty-fixture-agent-released-through-owner-command-with-task-history-preserved",
+      "status": "pass"
+    }
+  ],
+  "independentHumansVerified": 0,
+  "publicTransactions": 0,
+  "parentReport": "evidence\\runs\\playable-autonomy\\2cfe5ecd-3358-426e-b63d-fc1be0c72195\\report.json",
+  "resumeMode": "Prepared two physical resource blocks; no withdrawal or placement replay",
+  "preflight": {
+    "ruddyAgent": "CityAgent1",
+    "fixtureSlot": "CityAgent2",
+    "retainedTasks": 6,
+    "execute": true
+  },
+  "world": "agentcity_play",
+  "runtimeContainer": "agentcity-playable-ce946e82",
+  "region": {
+    "slotName": "CityAgent2",
+    "max": {
+      "z": 13,
+      "y": 71,
+      "x": -36
+    },
+    "destinationChest": [
+      -47,
+      64,
+      4
+    ],
+    "min": {
+      "z": 2,
+      "y": 64,
+      "x": -47
+    },
+    "sourceChest": [
+      -47,
+      64,
+      2
+    ],
+    "origin": [
+      -45,
+      64,
+      4
+    ]
+  },
+  "lastNavigation": {
+    "label": "Prepared north-row chest reach",
+    "target": [
+      -45,
+      64,
+      2
+    ],
+    "range": 0,
+    "from": [
+      -35.5,
+      64,
+      2.4999999999992166
+    ],
+    "startedAt": "2026-10-31T11:21:03.908Z",
+    "pathUpdate": {
+      "status": "success",
+      "nodes": [
+        {
+          "x": -36.5,
+          "y": 64,
+          "z": 2.5
+        },
+        {
+          "x": -37.5,
+          "y": 64,
+          "z": 2.5
+        },
+        {
+          "x": -38.5,
+          "y": 64,
+          "z": 2.5
+        },
+        {
+          "x": -39.5,
+          "y": 64,
+          "z": 2.5
+        }
+      ]
+    },
+    "arrived": [
+      -44.42287412564329,
+      64,
+      2.499999999999627
+    ]
+  },
+  "humanInventoryBefore": {},
+  "retainedBlocks": [
+    {
+      "position": [
+        -47,
+        63,
+        2
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -47,
+        63,
+        3
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -47,
+        63,
+        4
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -47,
+        63,
+        5
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -47,
+        63,
+        6
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -47,
+        63,
+        7
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -47,
+        63,
+        8
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -47,
+        63,
+        9
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -47,
+        63,
+        10
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -47,
+        63,
+        11
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -47,
+        63,
+        12
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -47,
+        63,
+        13
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -47,
+        64,
+        2
+      ],
+      "material": "chest"
+    },
+    {
+      "position": [
+        -47,
+        64,
+        4
+      ],
+      "material": "chest"
+    },
+    {
+      "position": [
+        -46,
+        63,
+        2
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -46,
+        63,
+        3
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -46,
+        63,
+        4
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -46,
+        63,
+        5
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -46,
+        63,
+        6
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -46,
+        63,
+        7
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -46,
+        63,
+        8
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -46,
+        63,
+        9
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -46,
+        63,
+        10
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -46,
+        63,
+        11
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -46,
+        63,
+        12
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -46,
+        63,
+        13
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -45,
+        63,
+        2
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -45,
+        63,
+        3
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -45,
+        63,
+        4
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -45,
+        63,
+        5
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -45,
+        63,
+        6
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -45,
+        63,
+        7
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -45,
+        63,
+        8
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -45,
+        63,
+        9
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -45,
+        63,
+        10
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -45,
+        63,
+        11
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -45,
+        63,
+        12
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -45,
+        63,
+        13
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -45,
+        64,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        64,
+        5
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        64,
+        6
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        64,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        65,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        65,
+        5
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        65,
+        6
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        65,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        66,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        66,
+        5
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        66,
+        6
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        66,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        67,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        67,
+        5
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        67,
+        6
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -45,
+        67,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -44,
+        63,
+        2
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -44,
+        63,
+        3
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -44,
+        63,
+        4
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -44,
+        63,
+        5
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -44,
+        63,
+        6
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -44,
+        63,
+        7
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -44,
+        63,
+        8
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -44,
+        63,
+        9
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -44,
+        63,
+        10
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -44,
+        63,
+        11
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -44,
+        63,
+        12
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -44,
+        63,
+        13
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -44,
+        64,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -44,
+        64,
+        5
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -44,
+        64,
+        6
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -44,
+        64,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -44,
+        65,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -44,
+        65,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -44,
+        66,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -44,
+        66,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -44,
+        67,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -44,
+        67,
+        5
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -44,
+        67,
+        6
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -44,
+        67,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -43,
+        63,
+        2
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -43,
+        63,
+        3
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -43,
+        63,
+        4
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -43,
+        63,
+        5
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -43,
+        63,
+        6
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -43,
+        63,
+        7
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -43,
+        63,
+        8
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -43,
+        63,
+        9
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -43,
+        63,
+        10
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -43,
+        63,
+        11
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -43,
+        63,
+        12
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -43,
+        63,
+        13
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -43,
+        64,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -43,
+        64,
+        5
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -43,
+        64,
+        6
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -43,
+        64,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -43,
+        65,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -43,
+        66,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -43,
+        67,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -43,
+        67,
+        5
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -43,
+        67,
+        6
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -43,
+        67,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        63,
+        2
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -42,
+        63,
+        3
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -42,
+        63,
+        4
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -42,
+        63,
+        5
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -42,
+        63,
+        6
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -42,
+        63,
+        7
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -42,
+        63,
+        8
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -42,
+        63,
+        9
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -42,
+        63,
+        10
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -42,
+        63,
+        11
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -42,
+        63,
+        12
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -42,
+        63,
+        13
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -42,
+        64,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        64,
+        5
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        64,
+        6
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        64,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        65,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        65,
+        5
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        65,
+        6
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        65,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        66,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        66,
+        5
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        66,
+        6
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        66,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        67,
+        4
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        67,
+        5
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        67,
+        6
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -42,
+        67,
+        7
+      ],
+      "material": "oak_planks"
+    },
+    {
+      "position": [
+        -41,
+        63,
+        2
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -41,
+        63,
+        3
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -41,
+        63,
+        4
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -41,
+        63,
+        5
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -41,
+        63,
+        6
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -41,
+        63,
+        7
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -41,
+        63,
+        8
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -41,
+        63,
+        9
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -41,
+        63,
+        10
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -41,
+        63,
+        11
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -41,
+        63,
+        12
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -41,
+        63,
+        13
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -40,
+        63,
+        2
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -40,
+        63,
+        3
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -40,
+        63,
+        4
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -40,
+        63,
+        5
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -40,
+        63,
+        6
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -40,
+        63,
+        7
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -40,
+        63,
+        8
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -40,
+        63,
+        9
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -40,
+        63,
+        10
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -40,
+        63,
+        11
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -40,
+        63,
+        12
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -40,
+        63,
+        13
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -39,
+        63,
+        2
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -39,
+        63,
+        3
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -39,
+        63,
+        4
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -39,
+        63,
+        5
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -39,
+        63,
+        6
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -39,
+        63,
+        7
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -39,
+        63,
+        8
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -39,
+        63,
+        9
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -39,
+        63,
+        10
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -39,
+        63,
+        11
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -39,
+        63,
+        12
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -39,
+        63,
+        13
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -38,
+        63,
+        2
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -38,
+        63,
+        3
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -38,
+        63,
+        4
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -38,
+        63,
+        5
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -38,
+        63,
+        6
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -38,
+        63,
+        7
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -38,
+        63,
+        8
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -38,
+        63,
+        9
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -38,
+        63,
+        10
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -38,
+        63,
+        11
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -38,
+        63,
+        12
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -38,
+        63,
+        13
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -37,
+        63,
+        2
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -37,
+        63,
+        3
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -37,
+        63,
+        4
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -37,
+        63,
+        5
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -37,
+        63,
+        6
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -37,
+        63,
+        7
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -37,
+        63,
+        8
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -37,
+        63,
+        9
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -37,
+        63,
+        10
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -37,
+        63,
+        11
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -37,
+        63,
+        12
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -37,
+        63,
+        13
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -36,
+        63,
+        2
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -36,
+        63,
+        3
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -36,
+        63,
+        4
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -36,
+        63,
+        5
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -36,
+        63,
+        6
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -36,
+        63,
+        7
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -36,
+        63,
+        8
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -36,
+        63,
+        9
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -36,
+        63,
+        10
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -36,
+        63,
+        11
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -36,
+        63,
+        12
+      ],
+      "material": "stone"
+    },
+    {
+      "position": [
+        -36,
+        63,
+        13
+      ],
+      "material": "stone"
+    }
+  ],
+  "expectedArch": [
+    [
+      -40,
+      64,
+      10
+    ],
+    [
+      -38,
+      64,
+      10
+    ],
+    [
+      -40,
+      65,
+      10
+    ],
+    [
+      -38,
+      65,
+      10
+    ],
+    [
+      -40,
+      66,
+      10
+    ],
+    [
+      -39,
+      66,
+      10
+    ],
+    [
+      -38,
+      66,
+      10
+    ]
+  ],
+  "resources": [
+    [
+      -39,
+      64,
+      8
+    ],
+    [
+      -38,
+      64,
+      8
+    ]
+  ],
+  "beforeSource": {
+    "oak_planks": 72,
+    "cobblestone": 50
+  },
+  "beforeDestination": {
+    "cobblestone": 6
+  },
+  "beforeInspection": {
+    "observedAt": "2026-10-31T11:18:32.170Z",
+    "inventory": {},
+    "source": {
+      "oak_planks": 70,
+      "cobblestone": 50
+    },
+    "destination": {
+      "cobblestone": 6
+    },
+    "resources": [
+      {
+        "item": "oak_planks",
+        "offset": [
+          6,
+          0,
+          4
+        ]
+      },
+      {
+        "item": "oak_planks",
+        "offset": [
+          7,
+          0,
+          4
+        ]
+      }
+    ],
+    "bounds": {
+      "min": [
+        -47,
+        64,
+        2
+      ],
+      "max": [
+        -36,
+        71,
+        13
+      ],
+      "origin": [
+        -45,
+        64,
+        4
+      ]
+    },
+    "capabilities": {
+      "structures": {
+        "action": "build_structure",
+        "maxBlocks": 256,
+        "maxHeight": 6,
+        "width": 8,
+        "depth": 8,
+        "materials": [
+          "oak_planks",
+          "cobblestone",
+          "stone_bricks",
+          "stone",
+          "dirt",
+          "glass",
+          "bricks",
+          "oak_log"
+        ],
+        "procedural": [
+          "house",
+          "tower",
+          "bridge",
+          "wall",
+          "stairs",
+          "arch"
+        ]
+      },
+      "gather": {
+        "items": [
+          "oak_log",
+          "oak_planks",
+          "dirt",
+          "sand"
+        ],
+        "maxCount": 16,
+        "registeredOwnPlotOnly": true,
+        "protectsRecordedStructures": true
+      },
+      "craft": {
+        "oak_planks": {
+          "ingredient": "oak_log",
+          "input": 1,
+          "output": 4
+        },
+        "stick": {
+          "ingredient": "oak_planks",
+          "input": 2,
+          "output": 4
+        },
+        "stone_bricks": {
+          "ingredient": "stone",
+          "input": 4,
+          "output": 4
+        }
+      },
+      "materialSources": [
+        "carried_inventory",
+        "registered_source_chest",
+        "safe_inventory_recipes"
+      ]
+    },
+    "recordedStructures": [
+      {
+        "taskId": "636e764c-cbad-4513-a8ef-3848f225c2f4",
+        "status": "complete",
+        "blocks": 4
+      },
+      {
+        "taskId": "c3d00d00-5e1b-4531-b1fa-829c8c975b8d",
+        "status": "complete",
+        "blocks": 54
+      }
+    ]
+  },
+  "requests": [
+    "Build a three-block-wide, three-block-high oak_planks arch, one block thick, at origin offset [5,0,6]. Leave the opening between its two pillars clear.",
+    "Harvest 2 loose oak_planks blocks in your plot, craft 4 sticks from those 2 planks, then deliver the 4 carried sticks to your destination chest. No chest collection; preserve completed structures."
+  ],
+  "archTasks": [
+    {
+      "id": "6443b247-d14e-4de6-b8f8-d1463e872ed4",
+      "operationId": "9349d765-29f4-41f7-bac4-533e5878bc12:step:0",
+      "ownerId": "50d0cfcd-2154-3460-a4cf-e6ccaa165a29",
+      "ownerName": "TaskTester",
+      "slotName": "CityAgent2",
+      "plan": {
+        "action": "build_structure",
+        "structure": "arch",
+        "material": "oak_planks",
+        "offset": [
+          5,
+          0,
+          6
+        ],
+        "placements": [
+          {
+            "position": [
+              -40,
+              64,
+              10
+            ],
+            "material": "oak_planks"
+          },
+          {
+            "position": [
+              -38,
+              64,
+              10
+            ],
+            "material": "oak_planks"
+          },
+          {
+            "position": [
+              -40,
+              65,
+              10
+            ],
+            "material": "oak_planks"
+          },
+          {
+            "position": [
+              -38,
+              65,
+              10
+            ],
+            "material": "oak_planks"
+          },
+          {
+            "position": [
+              -40,
+              66,
+              10
+            ],
+            "material": "oak_planks"
+          },
+          {
+            "position": [
+              -39,
+              66,
+              10
+            ],
+            "material": "oak_planks"
+          },
+          {
+            "position": [
+              -38,
+              66,
+              10
+            ],
+            "material": "oak_planks"
+          }
+        ],
+        "bill": {
+          "oak_planks": 7
+        },
+        "clearances": [
+          [
+            -39,
+            64,
+            10
+          ],
+          [
+            -39,
+            65,
+            10
+          ]
+        ],
+        "source": [
+          -47,
+          64,
+          2
+        ]
+      },
+      "planHash": "5d824a886b36abed78e16a188b552337af3d2bd516a2294dfa052ac4a56407d9",
+      "hashVersion": 2,
+      "status": "complete",
+      "completed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "preexisting": [],
+      "receipts": {
+        "9349d765-29f4-41f7-bac4-533e5878bc12:step:0:supply:0": {
+          "before": {
+            "inventory": {},
+            "chest": {
+              "oak_planks": 70,
+              "cobblestone": 50
+            }
+          },
+          "after": {
+            "inventory": {
+              "oak_planks": 7
+            },
+            "chest": {
+              "oak_planks": 63,
+              "cobblestone": 50
+            }
+          },
+          "observedAt": "2026-10-31T11:18:45.624Z"
+        },
+        "9349d765-29f4-41f7-bac4-533e5878bc12:step:0:place:0": {
+          "before": {
+            "inventory": {
+              "oak_planks": 7
+            },
+            "block": "air"
+          },
+          "after": {
+            "inventory": {
+              "oak_planks": 6
+            },
+            "block": "oak_planks"
+          },
+          "observedAt": "2026-10-31T11:19:28.927Z",
+          "navigation": {
+            "target": [
+              -40,
+              64,
+              10
+            ],
+            "attempts": [
+              {
+                "feet": [
+                  -38,
+                  64,
+                  10
+                ],
+                "from": [
+                  -45.35091605107482,
+                  64,
+                  3.495713273559537
+                ],
+                "result": "No safe walking path to the task target.",
+                "walk": {
+                  "target": [
+                    -38,
+                    64,
+                    10
+                  ],
+                  "range": 0,
+                  "from": [
+                    -44.5,
+                    64,
+                    3.4979396223015304
+                  ],
+                  "physicsEnabled": true,
+                  "physicsTicks": 401,
+                  "health": 20,
+                  "food": 20,
+                  "isAlive": true,
+                  "usingHeldItem": false,
+                  "attributes": {
+                    "player.entity_interaction_range": {
+                      "value": 3,
+                      "modifiers": []
+                    },
+                    "player.block_interaction_range": {
+                      "value": 4.5,
+                      "modifiers": []
+                    },
+                    "generic.movement_speed": {
+                      "value": 0.10000000149011612,
+                      "modifiers": []
+                    }
+                  },
+                  "blocks": [
+                    {
+                      "position": [
+                        -45,
+                        63,
+                        3
+                      ],
+                      "name": "stone",
+                      "box": "block",
+                      "shapes": [
+                        [
+                          0,
+                          0,
+                          0,
+                          1,
+                          1,
+                          1
+                        ]
+                      ]
+                    },
+                    {
+                      "position": [
+                        -45,
+                        64,
+                        3
+                      ],
+                      "name": "air",
+                      "box": "empty",
+                      "shapes": []
+                    },
+                    {
+                      "position": [
+                        -45,
+                        65,
+                        3
+                      ],
+                      "name": "air",
+                      "box": "empty",
+                      "shapes": []
+                    },
+                    {
+                      "position": [
+                        -46,
+                        64,
+                        3
+                      ],
+                      "name": "air",
+                      "box": "empty",
+                      "shapes": []
+                    },
+                    {
+                      "position": [
+                        -45,
+                        64,
+                        2
+                      ],
+                      "name": "air",
+                      "box": "empty",
+                      "shapes": []
+                    }
+                  ],
+                  "updates": [
+                    {
+                      "status": "success",
+                      "visited": 16,
+                      "generated": 44,
+                      "path": [
+                        {
+                          "x": -43.5,
+                          "y": 64,
+                          "z": 3.5
+                        },
+                        {
+                          "x": -42.5,
+                          "y": 64,
+                          "z": 3.5
+                        },
+                        {
+                          "x": -41.5,
+                          "y": 64,
+                          "z": 3.5
+                        },
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 4.5
+                        },
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 5.5
+                        },
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 6.5
+                        },
+                        {
+                          "x": -39.5,
+                          "y": 64,
+                          "z": 7.5
+                        },
+                        {
+                          "x": -39.5,
+                          "y": 64,
+                          "z": 8.5
+                        },
+                        {
+                          "x": -38.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -37.5,
+                          "y": 64,
+                          "z": 10.5
+                        }
+                      ]
+                    },
+                    {
+                      "status": "success",
+                      "visited": 13,
+                      "generated": 37,
+                      "path": [
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 4.5
+                        },
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 5.5
+                        },
+                        {
+                          "x": -39.5,
+                          "y": 64,
+                          "z": 6.5
+                        },
+                        {
+                          "x": -39.5,
+                          "y": 64,
+                          "z": 7.5
+                        },
+                        {
+                          "x": -39.5,
+                          "y": 64,
+                          "z": 8.5
+                        },
+                        {
+                          "x": -38.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -37.5,
+                          "y": 64,
+                          "z": 10.5
+                        }
+                      ]
+                    },
+                    {
+                      "status": "success",
+                      "visited": 13,
+                      "generated": 37,
+                      "path": [
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 4.5
+                        },
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 5.5
+                        },
+                        {
+                          "x": -39.5,
+                          "y": 64,
+                          "z": 6.5
+                        },
+                        {
+                          "x": -39.5,
+                          "y": 64,
+                          "z": 7.5
+                        },
+                        {
+                          "x": -39.5,
+                          "y": 64,
+                          "z": 8.5
+                        },
+                        {
+                          "x": -38.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -37.5,
+                          "y": 64,
+                          "z": 10.5
+                        }
+                      ]
+                    },
+                    {
+                      "status": "success",
+                      "visited": 13,
+                      "generated": 37,
+                      "path": [
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 4.5
+                        },
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 5.5
+                        },
+                        {
+                          "x": -39.5,
+                          "y": 64,
+                          "z": 6.5
+                        },
+                        {
+                          "x": -39.5,
+                          "y": 64,
+                          "z": 7.5
+                        },
+                        {
+                          "x": -39.5,
+                          "y": 64,
+                          "z": 8.5
+                        },
+                        {
+                          "x": -38.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -37.5,
+                          "y": 64,
+                          "z": 10.5
+                        }
+                      ]
+                    }
+                  ],
+                  "ticks": [
+                    {
+                      "position": [
+                        -42.310479378936975,
+                        64,
+                        3.499615715904598
+                      ],
+                      "controls": {
+                        "forward": true,
+                        "back": false,
+                        "left": false,
+                        "right": false,
+                        "jump": false,
+                        "sprint": true,
+                        "sneak": false
+                      },
+                      "velocity": [
+                        0.1525559906292627,
+                        -0.0784000015258789,
+                        0.00004098021428979132
+                      ],
+                      "moving": true,
+                      "onGround": true
+                    },
+                    {
+                      "position": [
+                        -41.456569339532166,
+                        64,
+                        3.6079188020485513
+                      ],
+                      "controls": {
+                        "forward": true,
+                        "back": false,
+                        "left": false,
+                        "right": false,
+                        "jump": false,
+                        "sprint": true,
+                        "sneak": false
+                      },
+                      "velocity": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "moving": true,
+                      "onGround": false
+                    },
+                    {
+                      "position": [
+                        -41.38590591580889,
+                        64,
+                        3.681353402587348
+                      ],
+                      "controls": {
+                        "forward": true,
+                        "back": false,
+                        "left": false,
+                        "right": false,
+                        "jump": false,
+                        "sprint": true,
+                        "sneak": false
+                      },
+                      "velocity": [
+                        0.015790636080068636,
+                        -0.0784000015258789,
+                        0.016978913582053324
+                      ],
+                      "moving": true,
+                      "onGround": false
+                    },
+                    {
+                      "position": [
+                        -41.3673247119244,
+                        64,
+                        3.6987881168724432
+                      ],
+                      "controls": {
+                        "forward": true,
+                        "back": false,
+                        "left": false,
+                        "right": false,
+                        "jump": false,
+                        "sprint": true,
+                        "sneak": false
+                      },
+                      "velocity": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "moving": true,
+                      "onGround": false
+                    }
+                  ],
+                  "finalPosition": [
+                    -41.3673247119244,
+                    64,
+                    3.6987881168724432
+                  ]
+                }
+              },
+              {
+                "feet": [
+                  -42,
+                  64,
+                  10
+                ],
+                "from": [
+                  -41.3673247119244,
+                  64,
+                  3.6987881168724432
+                ],
+                "result": "No safe walking path to the task target.",
+                "walk": {
+                  "target": [
+                    -42,
+                    64,
+                    10
+                  ],
+                  "range": 0,
+                  "from": [
+                    -41.3673247119244,
+                    64,
+                    3.6987881168724432
+                  ],
+                  "physicsEnabled": true,
+                  "physicsTicks": 400,
+                  "health": 20,
+                  "food": 20,
+                  "isAlive": true,
+                  "usingHeldItem": false,
+                  "attributes": {
+                    "player.entity_interaction_range": {
+                      "value": 3,
+                      "modifiers": []
+                    },
+                    "player.block_interaction_range": {
+                      "value": 4.5,
+                      "modifiers": []
+                    },
+                    "generic.movement_speed": {
+                      "value": 0.10000000149011612,
+                      "modifiers": []
+                    }
+                  },
+                  "blocks": [
+                    {
+                      "position": [
+                        -42,
+                        63,
+                        3
+                      ],
+                      "name": "stone",
+                      "box": "block",
+                      "shapes": [
+                        [
+                          0,
+                          0,
+                          0,
+                          1,
+                          1,
+                          1
+                        ]
+                      ]
+                    },
+                    {
+                      "position": [
+                        -42,
+                        64,
+                        3
+                      ],
+                      "name": "air",
+                      "box": "empty",
+                      "shapes": []
+                    },
+                    {
+                      "position": [
+                        -42,
+                        65,
+                        3
+                      ],
+                      "name": "air",
+                      "box": "empty",
+                      "shapes": []
+                    },
+                    {
+                      "position": [
+                        -43,
+                        64,
+                        3
+                      ],
+                      "name": "air",
+                      "box": "empty",
+                      "shapes": []
+                    },
+                    {
+                      "position": [
+                        -42,
+                        64,
+                        2
+                      ],
+                      "name": "air",
+                      "box": "empty",
+                      "shapes": []
+                    }
+                  ],
+                  "updates": [
+                    {
+                      "status": "success",
+                      "visited": 9,
+                      "generated": 27,
+                      "path": [
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 4.5
+                        },
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 5.5
+                        },
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 6.5
+                        },
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 7.5
+                        },
+                        {
+                          "x": -41.5,
+                          "y": 64,
+                          "z": 8.5
+                        },
+                        {
+                          "x": -41.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -41.5,
+                          "y": 64,
+                          "z": 10.5
+                        }
+                      ]
+                    },
+                    {
+                      "status": "success",
+                      "visited": 9,
+                      "generated": 27,
+                      "path": [
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 4.5
+                        },
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 5.5
+                        },
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 6.5
+                        },
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 7.5
+                        },
+                        {
+                          "x": -41.5,
+                          "y": 64,
+                          "z": 8.5
+                        },
+                        {
+                          "x": -41.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -41.5,
+                          "y": 64,
+                          "z": 10.5
+                        }
+                      ]
+                    },
+                    {
+                      "status": "success",
+                      "visited": 9,
+                      "generated": 27,
+                      "path": [
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 4.5
+                        },
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 5.5
+                        },
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 6.5
+                        },
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 7.5
+                        },
+                        {
+                          "x": -41.5,
+                          "y": 64,
+                          "z": 8.5
+                        },
+                        {
+                          "x": -41.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -41.5,
+                          "y": 64,
+                          "z": 10.5
+                        }
+                      ]
+                    },
+                    {
+                      "status": "success",
+                      "visited": 9,
+                      "generated": 27,
+                      "path": [
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 4.5
+                        },
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 5.5
+                        },
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 6.5
+                        },
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 7.5
+                        },
+                        {
+                          "x": -41.5,
+                          "y": 64,
+                          "z": 8.5
+                        },
+                        {
+                          "x": -41.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -41.5,
+                          "y": 64,
+                          "z": 10.5
+                        }
+                      ]
+                    }
+                  ],
+                  "ticks": [
+                    {
+                      "position": [
+                        -41.3673247119244,
+                        64,
+                        3.6987881168724432
+                      ],
+                      "controls": {
+                        "forward": true,
+                        "back": false,
+                        "left": false,
+                        "right": false,
+                        "jump": false,
+                        "sprint": true,
+                        "sneak": false
+                      },
+                      "velocity": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "moving": true,
+                      "onGround": false
+                    },
+                    {
+                      "position": [
+                        -41.3673247119244,
+                        64,
+                        3.6987881168724432
+                      ],
+                      "controls": {
+                        "forward": true,
+                        "back": false,
+                        "left": false,
+                        "right": false,
+                        "jump": false,
+                        "sprint": true,
+                        "sneak": false
+                      },
+                      "velocity": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "moving": true,
+                      "onGround": false
+                    },
+                    {
+                      "position": [
+                        -41.3673247119244,
+                        64,
+                        3.6987881168724432
+                      ],
+                      "controls": {
+                        "forward": true,
+                        "back": false,
+                        "left": false,
+                        "right": false,
+                        "jump": false,
+                        "sprint": true,
+                        "sneak": false
+                      },
+                      "velocity": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "moving": true,
+                      "onGround": false
+                    },
+                    {
+                      "position": [
+                        -41.3673247119244,
+                        64,
+                        3.6987881168724432
+                      ],
+                      "controls": {
+                        "forward": true,
+                        "back": false,
+                        "left": false,
+                        "right": false,
+                        "jump": false,
+                        "sprint": true,
+                        "sneak": false
+                      },
+                      "velocity": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "moving": true,
+                      "onGround": false
+                    }
+                  ],
+                  "finalPosition": [
+                    -41.3673247119244,
+                    64,
+                    3.6987881168724432
+                  ]
+                }
+              },
+              {
+                "feet": [
+                  -40,
+                  64,
+                  12
+                ],
+                "from": [
+                  -41.3673247119244,
+                  64,
+                  3.6987881168724432
+                ],
+                "result": "reached"
+              }
+            ]
+          }
+        },
+        "9349d765-29f4-41f7-bac4-533e5878bc12:step:0:place:1": {
+          "before": {
+            "inventory": {
+              "oak_planks": 6
+            },
+            "block": "air"
+          },
+          "after": {
+            "inventory": {
+              "oak_planks": 5
+            },
+            "block": "oak_planks"
+          },
+          "observedAt": "2026-10-31T11:19:31.025Z",
+          "navigation": {
+            "target": [
+              -38,
+              64,
+              10
+            ],
+            "attempts": [
+              {
+                "feet": [
+                  -36,
+                  64,
+                  10
+                ],
+                "from": [
+                  -39.69273682912294,
+                  64,
+                  12.409099442415544
+                ],
+                "result": "reached"
+              }
+            ]
+          }
+        },
+        "9349d765-29f4-41f7-bac4-533e5878bc12:step:0:place:2": {
+          "before": {
+            "inventory": {
+              "oak_planks": 5
+            },
+            "block": "air"
+          },
+          "after": {
+            "inventory": {
+              "oak_planks": 4
+            },
+            "block": "oak_planks"
+          },
+          "observedAt": "2026-10-31T11:19:33.289Z",
+          "navigation": {
+            "target": [
+              -40,
+              65,
+              10
+            ],
+            "attempts": [
+              {
+                "feet": [
+                  -42,
+                  64,
+                  10
+                ],
+                "from": [
+                  -35.66708689987256,
+                  64,
+                  10.5
+                ],
+                "result": "reached"
+              }
+            ]
+          }
+        },
+        "9349d765-29f4-41f7-bac4-533e5878bc12:step:0:place:3": {
+          "before": {
+            "inventory": {
+              "oak_planks": 4
+            },
+            "block": "air"
+          },
+          "after": {
+            "inventory": {
+              "oak_planks": 3
+            },
+            "block": "oak_planks"
+          },
+          "observedAt": "2026-10-31T11:19:55.451Z",
+          "navigation": {
+            "target": [
+              -38,
+              65,
+              10
+            ],
+            "attempts": [
+              {
+                "feet": [
+                  -36,
+                  64,
+                  10
+                ],
+                "from": [
+                  -41.435075547864486,
+                  64,
+                  10.329010245778361
+                ],
+                "result": "No safe walking path to the task target.",
+                "walk": {
+                  "target": [
+                    -36,
+                    64,
+                    10
+                  ],
+                  "range": 0,
+                  "from": [
+                    -41.435075547864486,
+                    64,
+                    10.329010245778361
+                  ],
+                  "physicsEnabled": true,
+                  "physicsTicks": 401,
+                  "health": 20,
+                  "food": 20,
+                  "isAlive": true,
+                  "usingHeldItem": false,
+                  "attributes": {
+                    "player.entity_interaction_range": {
+                      "value": 3,
+                      "modifiers": []
+                    },
+                    "player.block_interaction_range": {
+                      "value": 4.5,
+                      "modifiers": []
+                    },
+                    "generic.movement_speed": {
+                      "value": 0.10000000149011612,
+                      "modifiers": []
+                    }
+                  },
+                  "blocks": [
+                    {
+                      "position": [
+                        -42,
+                        63,
+                        10
+                      ],
+                      "name": "stone",
+                      "box": "block",
+                      "shapes": [
+                        [
+                          0,
+                          0,
+                          0,
+                          1,
+                          1,
+                          1
+                        ]
+                      ]
+                    },
+                    {
+                      "position": [
+                        -42,
+                        64,
+                        10
+                      ],
+                      "name": "air",
+                      "box": "empty",
+                      "shapes": []
+                    },
+                    {
+                      "position": [
+                        -42,
+                        65,
+                        10
+                      ],
+                      "name": "air",
+                      "box": "empty",
+                      "shapes": []
+                    },
+                    {
+                      "position": [
+                        -43,
+                        64,
+                        10
+                      ],
+                      "name": "air",
+                      "box": "empty",
+                      "shapes": []
+                    },
+                    {
+                      "position": [
+                        -42,
+                        64,
+                        9
+                      ],
+                      "name": "air",
+                      "box": "empty",
+                      "shapes": []
+                    }
+                  ],
+                  "updates": [
+                    {
+                      "status": "success",
+                      "visited": 11,
+                      "generated": 33,
+                      "path": [
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 10.5
+                        },
+                        {
+                          "x": -39.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -38.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -37.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -36.5,
+                          "y": 64,
+                          "z": 10.5
+                        },
+                        {
+                          "x": -35.5,
+                          "y": 64,
+                          "z": 10.5
+                        }
+                      ]
+                    },
+                    {
+                      "status": "success",
+                      "visited": 11,
+                      "generated": 31,
+                      "path": [
+                        {
+                          "x": -39.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -38.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -37.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -36.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -35.5,
+                          "y": 64,
+                          "z": 10.5
+                        }
+                      ]
+                    },
+                    {
+                      "status": "success",
+                      "visited": 11,
+                      "generated": 31,
+                      "path": [
+                        {
+                          "x": -39.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -38.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -37.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -36.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -35.5,
+                          "y": 64,
+                          "z": 10.5
+                        }
+                      ]
+                    },
+                    {
+                      "status": "success",
+                      "visited": 11,
+                      "generated": 31,
+                      "path": [
+                        {
+                          "x": -39.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -38.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -37.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -36.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -35.5,
+                          "y": 64,
+                          "z": 10.5
+                        }
+                      ]
+                    }
+                  ],
+                  "ticks": [
+                    {
+                      "position": [
+                        -40.374851608131955,
+                        64,
+                        10.410877764316828
+                      ],
+                      "controls": {
+                        "forward": true,
+                        "back": false,
+                        "left": false,
+                        "right": false,
+                        "jump": false,
+                        "sprint": true,
+                        "sneak": false
+                      },
+                      "velocity": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "moving": true,
+                      "onGround": false
+                    },
+                    {
+                      "position": [
+                        -40.300260318223025,
+                        64,
+                        10.341498419429168
+                      ],
+                      "controls": {
+                        "forward": true,
+                        "back": false,
+                        "left": false,
+                        "right": false,
+                        "jump": false,
+                        "sprint": true,
+                        "sneak": false
+                      },
+                      "velocity": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "moving": true,
+                      "onGround": false
+                    },
+                    {
+                      "position": [
+                        -40.300260318223025,
+                        64,
+                        10.341498419429168
+                      ],
+                      "controls": {
+                        "forward": true,
+                        "back": false,
+                        "left": false,
+                        "right": false,
+                        "jump": false,
+                        "sprint": true,
+                        "sneak": false
+                      },
+                      "velocity": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "moving": true,
+                      "onGround": false
+                    },
+                    {
+                      "position": [
+                        -40.300260318223025,
+                        64,
+                        10.341498419429168
+                      ],
+                      "controls": {
+                        "forward": true,
+                        "back": false,
+                        "left": false,
+                        "right": false,
+                        "jump": false,
+                        "sprint": true,
+                        "sneak": false
+                      },
+                      "velocity": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "moving": true,
+                      "onGround": false
+                    }
+                  ],
+                  "finalPosition": [
+                    -40.300260318223025,
+                    64,
+                    10.341498419429168
+                  ]
+                }
+              },
+              {
+                "feet": [
+                  -38,
+                  64,
+                  12
+                ],
+                "from": [
+                  -40.300260318223025,
+                  64,
+                  10.341498419429168
+                ],
+                "result": "reached"
+              }
+            ]
+          }
+        },
+        "9349d765-29f4-41f7-bac4-533e5878bc12:step:0:place:4": {
+          "before": {
+            "inventory": {
+              "oak_planks": 3
+            },
+            "block": "air"
+          },
+          "after": {
+            "inventory": {
+              "oak_planks": 2
+            },
+            "block": "oak_planks"
+          },
+          "observedAt": "2026-10-31T11:19:57.458Z",
+          "navigation": {
+            "target": [
+              -40,
+              66,
+              10
+            ],
+            "attempts": [
+              {
+                "feet": [
+                  -42,
+                  64,
+                  10
+                ],
+                "from": [
+                  -37.56598612973353,
+                  64,
+                  12.329797108722838
+                ],
+                "result": "reached"
+              }
+            ]
+          }
+        },
+        "9349d765-29f4-41f7-bac4-533e5878bc12:step:0:place:5": {
+          "before": {
+            "inventory": {
+              "oak_planks": 2
+            },
+            "block": "air"
+          },
+          "after": {
+            "inventory": {
+              "oak_planks": 1
+            },
+            "block": "oak_planks"
+          },
+          "observedAt": "2026-10-31T11:20:18.004Z",
+          "navigation": {
+            "target": [
+              -39,
+              66,
+              10
+            ],
+            "attempts": [
+              {
+                "feet": [
+                  -37,
+                  64,
+                  10
+                ],
+                "from": [
+                  -41.33024732142301,
+                  64,
+                  10.5
+                ],
+                "result": "No safe walking path to the task target.",
+                "walk": {
+                  "target": [
+                    -37,
+                    64,
+                    10
+                  ],
+                  "range": 0,
+                  "from": [
+                    -41.33024732142301,
+                    64,
+                    10.5
+                  ],
+                  "physicsEnabled": true,
+                  "physicsTicks": 400,
+                  "health": 20,
+                  "food": 20,
+                  "isAlive": true,
+                  "usingHeldItem": false,
+                  "attributes": {
+                    "player.entity_interaction_range": {
+                      "value": 3,
+                      "modifiers": []
+                    },
+                    "player.block_interaction_range": {
+                      "value": 4.5,
+                      "modifiers": []
+                    },
+                    "generic.movement_speed": {
+                      "value": 0.10000000149011612,
+                      "modifiers": []
+                    }
+                  },
+                  "blocks": [
+                    {
+                      "position": [
+                        -42,
+                        63,
+                        10
+                      ],
+                      "name": "stone",
+                      "box": "block",
+                      "shapes": [
+                        [
+                          0,
+                          0,
+                          0,
+                          1,
+                          1,
+                          1
+                        ]
+                      ]
+                    },
+                    {
+                      "position": [
+                        -42,
+                        64,
+                        10
+                      ],
+                      "name": "air",
+                      "box": "empty",
+                      "shapes": []
+                    },
+                    {
+                      "position": [
+                        -42,
+                        65,
+                        10
+                      ],
+                      "name": "air",
+                      "box": "empty",
+                      "shapes": []
+                    },
+                    {
+                      "position": [
+                        -43,
+                        64,
+                        10
+                      ],
+                      "name": "air",
+                      "box": "empty",
+                      "shapes": []
+                    },
+                    {
+                      "position": [
+                        -42,
+                        64,
+                        9
+                      ],
+                      "name": "air",
+                      "box": "empty",
+                      "shapes": []
+                    }
+                  ],
+                  "updates": [
+                    {
+                      "status": "success",
+                      "visited": 9,
+                      "generated": 27,
+                      "path": [
+                        {
+                          "x": -40.5,
+                          "y": 64,
+                          "z": 10.5
+                        },
+                        {
+                          "x": -39.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -38.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -37.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -36.5,
+                          "y": 64,
+                          "z": 10.5
+                        }
+                      ]
+                    },
+                    {
+                      "status": "success",
+                      "visited": 8,
+                      "generated": 25,
+                      "path": [
+                        {
+                          "x": -39.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -38.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -37.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -36.5,
+                          "y": 64,
+                          "z": 10.5
+                        }
+                      ]
+                    },
+                    {
+                      "status": "success",
+                      "visited": 8,
+                      "generated": 25,
+                      "path": [
+                        {
+                          "x": -39.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -38.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -37.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -36.5,
+                          "y": 64,
+                          "z": 10.5
+                        }
+                      ]
+                    },
+                    {
+                      "status": "success",
+                      "visited": 8,
+                      "generated": 25,
+                      "path": [
+                        {
+                          "x": -39.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -38.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -37.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -36.5,
+                          "y": 64,
+                          "z": 10.5
+                        }
+                      ]
+                    }
+                  ],
+                  "ticks": [
+                    {
+                      "position": [
+                        -40.30131857909541,
+                        64,
+                        10.27954503203163
+                      ],
+                      "controls": {
+                        "forward": true,
+                        "back": false,
+                        "left": false,
+                        "right": false,
+                        "jump": false,
+                        "sprint": true,
+                        "sneak": false
+                      },
+                      "velocity": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "moving": true,
+                      "onGround": false
+                    },
+                    {
+                      "position": [
+                        -40.30131857909541,
+                        64,
+                        10.27954503203163
+                      ],
+                      "controls": {
+                        "forward": true,
+                        "back": false,
+                        "left": false,
+                        "right": false,
+                        "jump": false,
+                        "sprint": true,
+                        "sneak": false
+                      },
+                      "velocity": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "moving": true,
+                      "onGround": false
+                    },
+                    {
+                      "position": [
+                        -40.30131857909541,
+                        64,
+                        10.27954503203163
+                      ],
+                      "controls": {
+                        "forward": true,
+                        "back": false,
+                        "left": false,
+                        "right": false,
+                        "jump": false,
+                        "sprint": true,
+                        "sneak": false
+                      },
+                      "velocity": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "moving": true,
+                      "onGround": false
+                    },
+                    {
+                      "position": [
+                        -40.30131857909541,
+                        64,
+                        10.27954503203163
+                      ],
+                      "controls": {
+                        "forward": true,
+                        "back": false,
+                        "left": false,
+                        "right": false,
+                        "jump": false,
+                        "sprint": true,
+                        "sneak": false
+                      },
+                      "velocity": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "moving": true,
+                      "onGround": false
+                    }
+                  ],
+                  "finalPosition": [
+                    -40.30131857909541,
+                    64,
+                    10.27954503203163
+                  ]
+                }
+              },
+              {
+                "feet": [
+                  -41,
+                  64,
+                  10
+                ],
+                "from": [
+                  -40.30131857909541,
+                  64,
+                  10.27954503203163
+                ],
+                "result": "reached"
+              }
+            ]
+          }
+        },
+        "9349d765-29f4-41f7-bac4-533e5878bc12:step:0:place:6": {
+          "before": {
+            "inventory": {
+              "oak_planks": 1
+            },
+            "block": "air"
+          },
+          "after": {
+            "inventory": {
+              "oak_planks": 0
+            },
+            "block": "oak_planks"
+          },
+          "observedAt": "2026-10-31T11:20:40.089Z",
+          "navigation": {
+            "target": [
+              -38,
+              66,
+              10
+            ],
+            "attempts": [
+              {
+                "feet": [
+                  -36,
+                  64,
+                  10
+                ],
+                "from": [
+                  -40.30131857909541,
+                  64,
+                  10.5
+                ],
+                "result": "No safe walking path to the task target.",
+                "walk": {
+                  "target": [
+                    -36,
+                    64,
+                    10
+                  ],
+                  "range": 0,
+                  "from": [
+                    -40.30131857909541,
+                    64,
+                    10.5
+                  ],
+                  "physicsEnabled": true,
+                  "physicsTicks": 401,
+                  "health": 20,
+                  "food": 20,
+                  "isAlive": true,
+                  "usingHeldItem": false,
+                  "attributes": {
+                    "player.entity_interaction_range": {
+                      "value": 3,
+                      "modifiers": []
+                    },
+                    "player.block_interaction_range": {
+                      "value": 4.5,
+                      "modifiers": []
+                    },
+                    "generic.movement_speed": {
+                      "value": 0.10000000149011612,
+                      "modifiers": []
+                    }
+                  },
+                  "blocks": [
+                    {
+                      "position": [
+                        -41,
+                        63,
+                        10
+                      ],
+                      "name": "stone",
+                      "box": "block",
+                      "shapes": [
+                        [
+                          0,
+                          0,
+                          0,
+                          1,
+                          1,
+                          1
+                        ]
+                      ]
+                    },
+                    {
+                      "position": [
+                        -41,
+                        64,
+                        10
+                      ],
+                      "name": "air",
+                      "box": "empty",
+                      "shapes": []
+                    },
+                    {
+                      "position": [
+                        -41,
+                        65,
+                        10
+                      ],
+                      "name": "air",
+                      "box": "empty",
+                      "shapes": []
+                    },
+                    {
+                      "position": [
+                        -42,
+                        64,
+                        10
+                      ],
+                      "name": "air",
+                      "box": "empty",
+                      "shapes": []
+                    },
+                    {
+                      "position": [
+                        -41,
+                        64,
+                        9
+                      ],
+                      "name": "air",
+                      "box": "empty",
+                      "shapes": []
+                    }
+                  ],
+                  "updates": [
+                    {
+                      "status": "success",
+                      "visited": 10,
+                      "generated": 29,
+                      "path": [
+                        {
+                          "x": -39.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -38.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -37.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -36.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -35.5,
+                          "y": 64,
+                          "z": 10.5
+                        }
+                      ]
+                    },
+                    {
+                      "status": "success",
+                      "visited": 10,
+                      "generated": 29,
+                      "path": [
+                        {
+                          "x": -39.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -38.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -37.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -36.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -35.5,
+                          "y": 64,
+                          "z": 10.5
+                        }
+                      ]
+                    },
+                    {
+                      "status": "success",
+                      "visited": 10,
+                      "generated": 29,
+                      "path": [
+                        {
+                          "x": -39.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -38.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -37.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -36.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -35.5,
+                          "y": 64,
+                          "z": 10.5
+                        }
+                      ]
+                    },
+                    {
+                      "status": "success",
+                      "visited": 10,
+                      "generated": 29,
+                      "path": [
+                        {
+                          "x": -39.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -38.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -37.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -36.5,
+                          "y": 64,
+                          "z": 9.5
+                        },
+                        {
+                          "x": -35.5,
+                          "y": 64,
+                          "z": 10.5
+                        }
+                      ]
+                    }
+                  ],
+                  "ticks": [
+                    {
+                      "position": [
+                        -40.30131857909541,
+                        64,
+                        10.5
+                      ],
+                      "controls": {
+                        "forward": true,
+                        "back": false,
+                        "left": false,
+                        "right": false,
+                        "jump": false,
+                        "sprint": true,
+                        "sneak": false
+                      },
+                      "velocity": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "moving": true,
+                      "onGround": false
+                    },
+                    {
+                      "position": [
+                        -40.30131857909541,
+                        64,
+                        10.5
+                      ],
+                      "controls": {
+                        "forward": true,
+                        "back": false,
+                        "left": false,
+                        "right": false,
+                        "jump": false,
+                        "sprint": true,
+                        "sneak": false
+                      },
+                      "velocity": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "moving": true,
+                      "onGround": false
+                    },
+                    {
+                      "position": [
+                        -40.30131857909541,
+                        64,
+                        10.5
+                      ],
+                      "controls": {
+                        "forward": true,
+                        "back": false,
+                        "left": false,
+                        "right": false,
+                        "jump": false,
+                        "sprint": true,
+                        "sneak": false
+                      },
+                      "velocity": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "moving": true,
+                      "onGround": false
+                    },
+                    {
+                      "position": [
+                        -40.30131857909541,
+                        64,
+                        10.5
+                      ],
+                      "controls": {
+                        "forward": true,
+                        "back": false,
+                        "left": false,
+                        "right": false,
+                        "jump": false,
+                        "sprint": true,
+                        "sneak": false
+                      },
+                      "velocity": [
+                        0,
+                        0,
+                        0
+                      ],
+                      "moving": true,
+                      "onGround": false
+                    }
+                  ],
+                  "finalPosition": [
+                    -40.30131857909541,
+                    64,
+                    10.5
+                  ]
+                }
+              },
+              {
+                "feet": [
+                  -38,
+                  64,
+                  12
+                ],
+                "from": [
+                  -40.30131857909541,
+                  64,
+                  10.5
+                ],
+                "result": "reached"
+              }
+            ]
+          }
+        }
+      },
+      "pending": null,
+      "withdrawn": true,
+      "delivered": false,
+      "createdAt": "2026-10-31T11:18:44.954Z",
+      "message": "Built and checked arch structure (7 blocks) with 7 real placements.",
+      "scanComplete": true,
+      "materialCount": 7,
+      "materialNeeds": {
+        "oak_planks": 7
+      },
+      "supplyPlans": [
+        {
+          "kind": "withdraw",
+          "item": "oak_planks",
+          "count": 7,
+          "position": [
+            -47,
+            64,
+            2
+          ]
+        }
+      ],
+      "lastNavigation": {
+        "target": [
+          -38,
+          64,
+          12
+        ],
+        "range": 0,
+        "from": [
+          -40.460058042900606,
+          64,
+          11.5
+        ],
+        "physicsEnabled": true,
+        "physicsTicks": 14,
+        "health": 20,
+        "food": 20,
+        "isAlive": true,
+        "usingHeldItem": false,
+        "attributes": {
+          "player.entity_interaction_range": {
+            "value": 3,
+            "modifiers": []
+          },
+          "player.block_interaction_range": {
+            "value": 4.5,
+            "modifiers": []
+          },
+          "generic.movement_speed": {
+            "value": 0.10000000149011612,
+            "modifiers": []
+          }
+        },
+        "blocks": [
+          {
+            "position": [
+              -41,
+              63,
+              11
+            ],
+            "name": "stone",
+            "box": "block",
+            "shapes": [
+              [
+                0,
+                0,
+                0,
+                1,
+                1,
+                1
+              ]
+            ]
+          },
+          {
+            "position": [
+              -41,
+              64,
+              11
+            ],
+            "name": "air",
+            "box": "empty",
+            "shapes": []
+          },
+          {
+            "position": [
+              -41,
+              65,
+              11
+            ],
+            "name": "air",
+            "box": "empty",
+            "shapes": []
+          },
+          {
+            "position": [
+              -42,
+              64,
+              11
+            ],
+            "name": "air",
+            "box": "empty",
+            "shapes": []
+          },
+          {
+            "position": [
+              -41,
+              64,
+              10
+            ],
+            "name": "air",
+            "box": "empty",
+            "shapes": []
+          }
+        ],
+        "updates": [
+          {
+            "status": "success",
+            "visited": 5,
+            "generated": 16,
+            "path": [
+              {
+                "x": -39.5,
+                "y": 64,
+                "z": 11.5
+              },
+              {
+                "x": -38.5,
+                "y": 64,
+                "z": 11.5
+              },
+              {
+                "x": -37.5,
+                "y": 64,
+                "z": 12.5
+              }
+            ]
+          }
+        ],
+        "ticks": [
+          {
+            "position": [
+              -38.57554304568952,
+              64,
+              11.57655479213715
+            ],
+            "controls": {
+              "forward": true,
+              "back": false,
+              "left": false,
+              "right": false,
+              "jump": false,
+              "sprint": true,
+              "sneak": false
+            },
+            "velocity": [
+              0.13802785703442907,
+              -0.0784000015258789,
+              0.041824907096814384
+            ],
+            "moving": true,
+            "onGround": true
+          }
+        ],
+        "finalPosition": [
+          -37.5,
+          64,
+          12.5
+        ]
+      }
+    }
+  ],
+  "gatherCraftTasks": [
+    {
+      "id": "adefc4dc-76a1-4d06-a8cc-a05026fc6a02",
+      "operationId": "c7938a92-b210-4e6f-aacf-1d765ebcb6a0:step:0",
+      "ownerId": "50d0cfcd-2154-3460-a4cf-e6ccaa165a29",
+      "ownerName": "TaskTester",
+      "slotName": "CityAgent2",
+      "plan": {
+        "action": "gather",
+        "item": "oak_planks",
+        "count": 2,
+        "positions": null,
+        "bounds": {
+          "min": [
+            -47,
+            64,
+            2
+          ],
+          "max": [
+            -36,
+            71,
+            13
+          ]
+        },
+        "source": [
+          -47,
+          64,
+          2
+        ]
+      },
+      "planHash": "e328af32e979f78ad7e08e4502634efa7e3772d803f4c7851704e65d31df3af1",
+      "hashVersion": 2,
+      "status": "complete",
+      "completed": [
+        0,
+        1
+      ],
+      "preexisting": [],
+      "receipts": {
+        "c7938a92-b210-4e6f-aacf-1d765ebcb6a0:step:0:gather:0": {
+          "before": {
+            "inventory": {},
+            "block": "oak_planks"
+          },
+          "after": {
+            "inventory": {
+              "oak_planks": 1
+            },
+            "block": "air"
+          },
+          "observedAt": "2026-10-31T11:20:49.430Z"
+        },
+        "c7938a92-b210-4e6f-aacf-1d765ebcb6a0:step:0:gather:1": {
+          "before": {
+            "inventory": {
+              "oak_planks": 1
+            },
+            "block": "oak_planks"
+          },
+          "after": {
+            "inventory": {
+              "oak_planks": 2
+            },
+            "block": "air"
+          },
+          "observedAt": "2026-10-31T11:20:53.040Z"
+        }
+      },
+      "pending": null,
+      "withdrawn": false,
+      "delivered": false,
+      "createdAt": "2026-10-31T11:20:44.611Z",
+      "message": "Harvested and picked up 2 oak_planks from your authorized plot.",
+      "gatherPositions": [
+        [
+          -39,
+          64,
+          8
+        ],
+        [
+          -38,
+          64,
+          8
+        ]
+      ],
+      "lastNavigation": {
+        "target": [
+          -38,
+          64,
+          8
+        ],
+        "range": 0,
+        "from": [
+          -38.50370036599495,
+          64,
+          8.698241209696375
+        ],
+        "physicsEnabled": true,
+        "physicsTicks": 6,
+        "health": 20,
+        "food": 20,
+        "isAlive": true,
+        "usingHeldItem": false,
+        "attributes": {
+          "player.entity_interaction_range": {
+            "value": 3,
+            "modifiers": []
+          },
+          "player.block_interaction_range": {
+            "value": 4.5,
+            "modifiers": []
+          },
+          "generic.movement_speed": {
+            "value": 0.10000000149011612,
+            "modifiers": []
+          }
+        },
+        "blocks": [
+          {
+            "position": [
+              -39,
+              63,
+              8
+            ],
+            "name": "stone",
+            "box": "block",
+            "shapes": [
+              [
+                0,
+                0,
+                0,
+                1,
+                1,
+                1
+              ]
+            ]
+          },
+          {
+            "position": [
+              -39,
+              64,
+              8
+            ],
+            "name": "air",
+            "box": "empty",
+            "shapes": []
+          },
+          {
+            "position": [
+              -39,
+              65,
+              8
+            ],
+            "name": "air",
+            "box": "empty",
+            "shapes": []
+          },
+          {
+            "position": [
+              -40,
+              64,
+              8
+            ],
+            "name": "air",
+            "box": "empty",
+            "shapes": []
+          },
+          {
+            "position": [
+              -39,
+              64,
+              7
+            ],
+            "name": "air",
+            "box": "empty",
+            "shapes": []
+          }
+        ],
+        "updates": [
+          {
+            "status": "success",
+            "visited": 1,
+            "generated": 8,
+            "path": [
+              {
+                "x": -37.5,
+                "y": 64,
+                "z": 8.5
+              }
+            ]
+          }
+        ],
+        "ticks": [],
+        "finalPosition": [
+          -37.5,
+          64,
+          8.540101041691159
+        ]
+      }
+    },
+    {
+      "id": "c735775c-792d-4fe8-8838-e7a448a39fc6",
+      "operationId": "c7938a92-b210-4e6f-aacf-1d765ebcb6a0:step:1",
+      "ownerId": "50d0cfcd-2154-3460-a4cf-e6ccaa165a29",
+      "ownerName": "TaskTester",
+      "slotName": "CityAgent2",
+      "plan": {
+        "action": "craft",
+        "item": "stick",
+        "count": 4,
+        "batches": 1,
+        "outputCount": 4,
+        "recipe": {
+          "ingredient": "oak_planks",
+          "input": 2,
+          "output": 4
+        },
+        "source": [
+          -47,
+          64,
+          2
+        ]
+      },
+      "planHash": "7d4e5a1159591b2fe4ace177a84c94209c207187c40367a8118c00a56d12b083",
+      "hashVersion": 2,
+      "status": "complete",
+      "completed": [
+        "craft"
+      ],
+      "preexisting": [],
+      "receipts": {
+        "c7938a92-b210-4e6f-aacf-1d765ebcb6a0:step:1:craft": {
+          "before": {
+            "inventory": {
+              "oak_planks": 2
+            }
+          },
+          "after": {
+            "inventory": {
+              "oak_planks": 0,
+              "stick": 4
+            }
+          },
+          "observedAt": "2026-10-31T11:20:53.435Z"
+        }
+      },
+      "pending": null,
+      "withdrawn": false,
+      "delivered": false,
+      "createdAt": "2026-10-31T11:20:53.284Z",
+      "message": "Crafted 4 stick from consumed real ingredients.",
+      "supplyPlans": []
+    },
+    {
+      "id": "1fdfa545-67d6-46ee-8f59-92f114b9edb2",
+      "operationId": "c7938a92-b210-4e6f-aacf-1d765ebcb6a0:step:2",
+      "ownerId": "50d0cfcd-2154-3460-a4cf-e6ccaa165a29",
+      "ownerName": "TaskTester",
+      "slotName": "CityAgent2",
+      "plan": {
+        "action": "deliver",
+        "item": "stick",
+        "count": 4,
+        "source": [
+          -47,
+          64,
+          2
+        ],
+        "destination": [
+          -47,
+          64,
+          4
+        ]
+      },
+      "planHash": "245231b81ca167f175ccd5bc7187b9560359d4d2f6ac7b3f7efc8045c5e2a3f3",
+      "hashVersion": 2,
+      "status": "complete",
+      "completed": [
+        "delivery"
+      ],
+      "preexisting": [],
+      "receipts": {
+        "c7938a92-b210-4e6f-aacf-1d765ebcb6a0:step:2:deposit": {
+          "before": {
+            "inventory": {
+              "stick": 4
+            },
+            "chest": {
+              "cobblestone": 6
+            }
+          },
+          "after": {
+            "inventory": {
+              "stick": 0
+            },
+            "chest": {
+              "cobblestone": 6,
+              "stick": 4
+            }
+          },
+          "observedAt": "2026-10-31T11:20:56.466Z"
+        }
+      },
+      "pending": null,
+      "withdrawn": true,
+      "delivered": true,
+      "createdAt": "2026-10-31T11:20:53.539Z",
+      "message": "Delivered 4 stick into your destination chest.",
+      "deliveryWithdrawCount": 0,
+      "lastNavigation": {
+        "target": [
+          -46,
+          64,
+          3
+        ],
+        "range": 0,
+        "from": [
+          -37.49988416720024,
+          64,
+          3.5
+        ],
+        "physicsEnabled": true,
+        "physicsTicks": 31,
+        "health": 20,
+        "food": 20,
+        "isAlive": true,
+        "usingHeldItem": false,
+        "attributes": {
+          "player.entity_interaction_range": {
+            "value": 3,
+            "modifiers": []
+          },
+          "player.block_interaction_range": {
+            "value": 4.5,
+            "modifiers": []
+          },
+          "generic.movement_speed": {
+            "value": 0.10000000149011612,
+            "modifiers": []
+          }
+        },
+        "blocks": [
+          {
+            "position": [
+              -38,
+              63,
+              3
+            ],
+            "name": "stone",
+            "box": "block",
+            "shapes": [
+              [
+                0,
+                0,
+                0,
+                1,
+                1,
+                1
+              ]
+            ]
+          },
+          {
+            "position": [
+              -38,
+              64,
+              3
+            ],
+            "name": "air",
+            "box": "empty",
+            "shapes": []
+          },
+          {
+            "position": [
+              -38,
+              65,
+              3
+            ],
+            "name": "air",
+            "box": "empty",
+            "shapes": []
+          },
+          {
+            "position": [
+              -39,
+              64,
+              3
+            ],
+            "name": "air",
+            "box": "empty",
+            "shapes": []
+          },
+          {
+            "position": [
+              -38,
+              64,
+              2
+            ],
+            "name": "air",
+            "box": "empty",
+            "shapes": []
+          }
+        ],
+        "updates": [
+          {
+            "status": "success",
+            "visited": 8,
+            "generated": 26,
+            "path": [
+              {
+                "x": -38.5,
+                "y": 64,
+                "z": 3.5
+              },
+              {
+                "x": -39.5,
+                "y": 64,
+                "z": 3.5
+              },
+              {
+                "x": -40.5,
+                "y": 64,
+                "z": 3.5
+              },
+              {
+                "x": -41.5,
+                "y": 64,
+                "z": 3.5
+              },
+              {
+                "x": -42.5,
+                "y": 64,
+                "z": 3.5
+              },
+              {
+                "x": -43.5,
+                "y": 64,
+                "z": 3.5
+              },
+              {
+                "x": -44.5,
+                "y": 64,
+                "z": 3.5
+              },
+              {
+                "x": -45.5,
+                "y": 64,
+                "z": 3.5
+              }
+            ]
+          }
+        ],
+        "ticks": [
+          {
+            "position": [
+              -39.68940757944181,
+              64,
+              3.499775317376864
+            ],
+            "controls": {
+              "forward": true,
+              "back": false,
+              "left": false,
+              "right": false,
+              "jump": false,
+              "sprint": true,
+              "sneak": false
+            },
+            "velocity": [
+              -0.152555926473629,
+              -0.0784000015258789,
+              -0.00007433365103225094
+            ],
+            "moving": true,
+            "onGround": true
+          },
+          {
+            "position": [
+              -42.494121789781005,
+              64,
+              3.499748024982032
+            ],
+            "controls": {
+              "forward": true,
+              "back": false,
+              "left": false,
+              "right": false,
+              "jump": false,
+              "sprint": true,
+              "sneak": false
+            },
+            "velocity": [
+              -0.15321512778763532,
+              -0.0784000015258789,
+              -0.00007433365103225094
+            ],
+            "moving": true,
+            "onGround": true
+          }
+        ],
+        "finalPosition": [
+          -45.3002844851424,
+          64,
+          3.5000542650335116
+        ]
+      }
+    }
+  ],
+  "afterSource": {
+    "oak_planks": 63,
+    "cobblestone": 50
+  },
+  "afterDestination": {
+    "cobblestone": 6,
+    "stick": 4
+  },
+  "fixtureAgentReleasedEmpty": true,
+  "messages": [
+    "TaskTester joined the game",
+    "Entered agentcity_play. Explore, collect materials and use your agent's assigned task area. /lobby returns to the NPCs.",
+    "Request queued: agent_follow (a694933a).",
+    "CityAgent2 joined the game",
+    "CityAgent2 will follow you inside the safe hub.",
+    "Request queued: agent_wait (eb094304).",
+    "CityAgent2 stopped and is waiting.",
+    "Request queued: agent_inspect (5fde1519).",
+    "Supplies checked — agent: empty; source: 70 oak planks, 50 cobblestone; destination: 6 cobblestone. Nearby loose blocks: 2 oak planks.",
+    "Request queued: agent_task (9349d765).",
+    "Workflow accepted: 0/1 steps complete. Planned: build_structure arch 3x1x3 oak_planks. Use /agent status, or tell me to stop or report progress.",
+    "Built and checked arch structure (7 blocks) with 7 real placements.",
+    "All 1 workflow steps completed.",
+    "Request queued: agent_task (c7938a92).",
+    "Workflow accepted: 0/3 steps complete. Planned: gather 2 oak_planks -> craft 4 stick -> deliver 4 stick. Use /agent status, or tell me to stop or report progress.",
+    "Harvested and picked up 2 oak_planks from your authorized plot.",
+    "Crafted 4 stick from consumed real ingredients.",
+    "Delivered 4 stick into your destination chest.",
+    "All 3 workflow steps completed.",
+    "Request queued: agent_release (9e7a640f).",
+    "CityAgent2 left the game",
+    "CityAgent2 was released. Your personal-agent slot is now free."
+  ],
+  "finishedAt": "2026-10-31T11:21:07.240Z"
+}

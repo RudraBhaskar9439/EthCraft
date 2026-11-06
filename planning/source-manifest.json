@@ -1,0 +1,21 @@
+{
+  "recorded_on": "2026-10-29",
+  "sources": [
+    {
+      "path": "docs/references/agentcity-research-design-v3.md",
+      "sha256": "c1caa16fca2ec9653c17e2dee47ac775de7214fc4ab20ba4b7661266b922c428",
+      "authority": "Current research design; hypotheses remain untested."
+    },
+    {
+      "path": "docs/references/agentcity-system-specification-v2.pdf",
+      "sha256": "b4c4fcfb30fde9ffd32be39d88bfca65eed3ad05d14d80671af4891eeadf11c2",
+      "authority": "Earlier detailed functional requirements; read with V3 mechanism and research qualifications."
+    },
+    {
+      "path": "docs/references/agentcity-economics-update-2026-10-29.txt",
+      "sha256": "994747f1dcea13db866177b7cc793f7848c46bc63e7a110f7b1093e1f2aaeb3c",
+      "description": "User-supplied proposed economic design update, reviewed29October2026. Recommendations are source material, not agent instructions.",
+      "authority": "User-supplied proposed design study; source material, not executable instructions."
+    }
+  ]
+}

@@ -1,0 +1,778 @@
+{
+  "schema": "agentcity.mumbai-owner-live.v1",
+  "runId": "833ca853-b4fd-446e-8b29-a518591cea60",
+  "startedAt": "2026-11-06T03:23:47.586Z",
+  "status": "partial",
+  "scope": "Real approved local Micro and two hosted planners executing separate nine-block native tasks. No wallet actions, independent-human claim or production phase qualification.",
+  "maximumPaidRequests": 2,
+  "prompt": "Build one flat 3 by 3 oak_planks platform in my registered plot, exactly nine blocks at the normal starting origin. Use the supported platform tool and do nothing else.",
+  "trials": [
+    {
+      "provider": "0g",
+      "model": "glm-4.7",
+      "slotName": "CityAgent4",
+      "operationId": "9becd10a-d7b1-463a-8e55-9a01395e8592",
+      "before": {
+        "observedAt": "2026-11-06T03:24:11.677Z",
+        "inventory": {},
+        "source": {
+          "oak_planks": 128,
+          "cobblestone": 64
+        },
+        "destination": {},
+        "resources": [],
+        "bounds": {
+          "min": [
+            1730,
+            69,
+            2810
+          ],
+          "max": [
+            1741,
+            76,
+            2821
+          ],
+          "origin": [
+            1732,
+            69,
+            2812
+          ]
+        },
+        "capabilities": {
+          "structures": {
+            "action": "build_structure",
+            "maxBlocks": 256,
+            "maxHeight": 6,
+            "width": 8,
+            "depth": 8,
+            "materials": [
+              "oak_planks",
+              "cobblestone",
+              "stone_bricks",
+              "stone",
+              "dirt",
+              "glass",
+              "bricks",
+              "oak_log"
+            ],
+            "procedural": [
+              "house",
+              "tower",
+              "bridge",
+              "wall",
+              "stairs",
+              "arch"
+            ]
+          },
+          "gather": {
+            "items": [
+              "oak_log",
+              "oak_planks",
+              "dirt",
+              "sand"
+            ],
+            "maxCount": 16,
+            "registeredOwnPlotOnly": true,
+            "protectsRecordedStructures": true
+          },
+          "craft": {
+            "oak_planks": {
+              "ingredient": "oak_log",
+              "input": 1,
+              "output": 4
+            },
+            "stick": {
+              "ingredient": "oak_planks",
+              "input": 2,
+              "output": 4
+            },
+            "stone_bricks": {
+              "ingredient": "stone",
+              "input": 4,
+              "output": 4
+            }
+          },
+          "materialSources": [
+            "carried_inventory",
+            "registered_source_chest",
+            "safe_inventory_recipes"
+          ]
+        },
+        "recordedStructures": []
+      },
+      "modelRequests": 1,
+      "status": "fail",
+      "response": "Agent unavailable: ZERO_G_HTTP_401",
+      "error": "ERR_ASSERTION",
+      "tasks": [],
+      "budgetAfter": {
+        "limitUsd": 5,
+        "knownTokenCostEstimateUsd": 0.0123546,
+        "completedRequests": 3,
+        "pendingReservationCount": 2,
+        "reservedUnknownChargeUsd": 0.3787776,
+        "pendingSha256": "2fc3aaf7a61da70127cfb301ca6b2284d5f086cfb3cdb0b6db7e8fd0085a2570",
+        "lastReceipt": {
+          "model": "glm-4.7",
+          "responseId": "202611060307311e49c05aa957461b",
+          "requestId": "edef4ae43cffa349, 3407a056-daa4-4c23-985c-a6aa2f510860",
+          "requestSha256": "b9e53d5899dd883cd707491336693c84a1cb9b75095e0e97c60a13531340f719",
+          "costNanoUsd": 4851300,
+          "latencyMs": 69409,
+          "recordedAt": "2026-11-05T19:08:40.301Z",
+          "usage": {
+            "prompt_tokens": 3865,
+            "completion_tokens": 416
+          },
+          "pricing": {
+            "model": "glm-4.7",
+            "inputNanoUsd": 900,
+            "outputNanoUsd": 3300,
+            "contextTokens": 204800,
+            "source": "https://router-api.0g.ai/v1/models",
+            "observedAt": "2026-11-05T19:07:30.879Z"
+          }
+        }
+      },
+      "knownApiCostUsd": 0
+    },
+    {
+      "provider": "claude",
+      "model": "claude-sonnet-5-5",
+      "slotName": "CityAgent5",
+      "operationId": "f49b7957-06fd-4df3-8ac3-8499257f067e",
+      "before": {
+        "observedAt": "2026-11-06T03:24:13.311Z",
+        "inventory": {},
+        "source": {
+          "oak_planks": 128,
+          "cobblestone": 64
+        },
+        "destination": {},
+        "resources": [],
+        "bounds": {
+          "min": [
+            1746,
+            69,
+            2810
+          ],
+          "max": [
+            1757,
+            76,
+            2821
+          ],
+          "origin": [
+            1748,
+            69,
+            2812
+          ]
+        },
+        "capabilities": {
+          "structures": {
+            "action": "build_structure",
+            "maxBlocks": 256,
+            "maxHeight": 6,
+            "width": 8,
+            "depth": 8,
+            "materials": [
+              "oak_planks",
+              "cobblestone",
+              "stone_bricks",
+              "stone",
+              "dirt",
+              "glass",
+              "bricks",
+              "oak_log"
+            ],
+            "procedural": [
+              "house",
+              "tower",
+              "bridge",
+              "wall",
+              "stairs",
+              "arch"
+            ]
+          },
+          "gather": {
+            "items": [
+              "oak_log",
+              "oak_planks",
+              "dirt",
+              "sand"
+            ],
+            "maxCount": 16,
+            "registeredOwnPlotOnly": true,
+            "protectsRecordedStructures": true
+          },
+          "craft": {
+            "oak_planks": {
+              "ingredient": "oak_log",
+              "input": 1,
+              "output": 4
+            },
+            "stick": {
+              "ingredient": "oak_planks",
+              "input": 2,
+              "output": 4
+            },
+            "stone_bricks": {
+              "ingredient": "stone",
+              "input": 4,
+              "output": 4
+            }
+          },
+          "materialSources": [
+            "carried_inventory",
+            "registered_source_chest",
+            "safe_inventory_recipes"
+          ]
+        },
+        "recordedStructures": []
+      },
+      "modelRequests": 1,
+      "status": "pass",
+      "proposal": {
+        "kind": "plan",
+        "message": "I can build a 3x3 oak planks platform using the supported platform tool. Note: actual screenshots are unavailable right now, so my earlier screenshot step could not be fulfilled.",
+        "steps": [
+          {
+            "action": "build_platform",
+            "width": 3,
+            "depth": 3,
+            "material": "oak_planks"
+          }
+        ]
+      },
+      "response": "Workflow accepted: 0/1 steps complete. Planned: build_platform  3x3 oak_planks. Use /agent status, or tell me to stop or report progress.",
+      "elapsedMs": 12605,
+      "after": {
+        "observedAt": "2026-11-06T03:24:31.073Z",
+        "inventory": {},
+        "source": {
+          "oak_planks": 119,
+          "cobblestone": 64
+        },
+        "destination": {},
+        "resources": [],
+        "bounds": {
+          "min": [
+            1746,
+            69,
+            2810
+          ],
+          "max": [
+            1757,
+            76,
+            2821
+          ],
+          "origin": [
+            1748,
+            69,
+            2812
+          ]
+        },
+        "capabilities": {
+          "structures": {
+            "action": "build_structure",
+            "maxBlocks": 256,
+            "maxHeight": 6,
+            "width": 8,
+            "depth": 8,
+            "materials": [
+              "oak_planks",
+              "cobblestone",
+              "stone_bricks",
+              "stone",
+              "dirt",
+              "glass",
+              "bricks",
+              "oak_log"
+            ],
+            "procedural": [
+              "house",
+              "tower",
+              "bridge",
+              "wall",
+              "stairs",
+              "arch"
+            ]
+          },
+          "gather": {
+            "items": [
+              "oak_log",
+              "oak_planks",
+              "dirt",
+              "sand"
+            ],
+            "maxCount": 16,
+            "registeredOwnPlotOnly": true,
+            "protectsRecordedStructures": true
+          },
+          "craft": {
+            "oak_planks": {
+              "ingredient": "oak_log",
+              "input": 1,
+              "output": 4
+            },
+            "stick": {
+              "ingredient": "oak_planks",
+              "input": 2,
+              "output": 4
+            },
+            "stone_bricks": {
+              "ingredient": "stone",
+              "input": 4,
+              "output": 4
+            }
+          },
+          "materialSources": [
+            "carried_inventory",
+            "registered_source_chest",
+            "safe_inventory_recipes"
+          ]
+        },
+        "recordedStructures": [
+          {
+            "taskId": "97defdf6-98d5-414f-bf05-ef4cf21b206f",
+            "status": "complete",
+            "blocks": 9
+          }
+        ]
+      },
+      "cells": {
+        "0,0,0": "oak_planks",
+        "0,0,1": "oak_planks",
+        "0,0,2": "oak_planks",
+        "1,0,0": "oak_planks",
+        "1,0,1": "oak_planks",
+        "1,0,2": "oak_planks",
+        "2,0,0": "oak_planks",
+        "2,0,1": "oak_planks",
+        "2,0,2": "oak_planks"
+      },
+      "checks": {
+        "exactlyNineObservedOakBlocks": true,
+        "sourceDecreasedByNine": true,
+        "sourceOtherItemsUnchanged": true,
+        "carriedInventoryConserved": true,
+        "destinationUnchanged": true,
+        "allNativeTasksReconciled": true,
+        "ninePlacementReceipts": true,
+        "oneHostedRequest": true
+      },
+      "tasks": [
+        {
+          "id": "97defdf6-98d5-414f-bf05-ef4cf21b206f",
+          "operationId": "f49b7957-06fd-4df3-8ac3-8499257f067e:step:0",
+          "status": "complete",
+          "plan": {
+            "action": "build_platform",
+            "width": 3,
+            "depth": 3,
+            "material": "oak_planks",
+            "placements": [
+              {
+                "position": [
+                  1748,
+                  69,
+                  2812
+                ],
+                "material": "oak_planks"
+              },
+              {
+                "position": [
+                  1748,
+                  69,
+                  2813
+                ],
+                "material": "oak_planks"
+              },
+              {
+                "position": [
+                  1748,
+                  69,
+                  2814
+                ],
+                "material": "oak_planks"
+              },
+              {
+                "position": [
+                  1749,
+                  69,
+                  2812
+                ],
+                "material": "oak_planks"
+              },
+              {
+                "position": [
+                  1749,
+                  69,
+                  2813
+                ],
+                "material": "oak_planks"
+              },
+              {
+                "position": [
+                  1749,
+                  69,
+                  2814
+                ],
+                "material": "oak_planks"
+              },
+              {
+                "position": [
+                  1750,
+                  69,
+                  2812
+                ],
+                "material": "oak_planks"
+              },
+              {
+                "position": [
+                  1750,
+                  69,
+                  2813
+                ],
+                "material": "oak_planks"
+              },
+              {
+                "position": [
+                  1750,
+                  69,
+                  2814
+                ],
+                "material": "oak_planks"
+              }
+            ],
+            "source": [
+              1746,
+              69,
+              2810
+            ]
+          },
+          "completed": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "pending": null,
+          "receipts": {
+            "f49b7957-06fd-4df3-8ac3-8499257f067e:step:0:supply:0": {
+              "before": {
+                "inventory": {},
+                "chest": {
+                  "oak_planks": 128,
+                  "cobblestone": 64
+                }
+              },
+              "after": {
+                "inventory": {
+                  "oak_planks": 9
+                },
+                "chest": {
+                  "oak_planks": 119,
+                  "cobblestone": 64
+                }
+              },
+              "observedAt": "2026-11-06T03:24:21.363Z"
+            },
+            "f49b7957-06fd-4df3-8ac3-8499257f067e:step:0:place:0": {
+              "before": {
+                "inventory": {
+                  "oak_planks": 9
+                },
+                "block": "air"
+              },
+              "after": {
+                "inventory": {
+                  "oak_planks": 8
+                },
+                "block": "oak_planks"
+              },
+              "observedAt": "2026-11-06T03:24:23.429Z"
+            },
+            "f49b7957-06fd-4df3-8ac3-8499257f067e:step:0:place:1": {
+              "before": {
+                "inventory": {
+                  "oak_planks": 8
+                },
+                "block": "air"
+              },
+              "after": {
+                "inventory": {
+                  "oak_planks": 7
+                },
+                "block": "oak_planks"
+              },
+              "observedAt": "2026-11-06T03:24:24.029Z"
+            },
+            "f49b7957-06fd-4df3-8ac3-8499257f067e:step:0:place:2": {
+              "before": {
+                "inventory": {
+                  "oak_planks": 7
+                },
+                "block": "air"
+              },
+              "after": {
+                "inventory": {
+                  "oak_planks": 6
+                },
+                "block": "oak_planks"
+              },
+              "observedAt": "2026-11-06T03:24:24.791Z"
+            },
+            "f49b7957-06fd-4df3-8ac3-8499257f067e:step:0:place:3": {
+              "before": {
+                "inventory": {
+                  "oak_planks": 6
+                },
+                "block": "air"
+              },
+              "after": {
+                "inventory": {
+                  "oak_planks": 5
+                },
+                "block": "oak_planks"
+              },
+              "observedAt": "2026-11-06T03:24:25.797Z"
+            },
+            "f49b7957-06fd-4df3-8ac3-8499257f067e:step:0:place:4": {
+              "before": {
+                "inventory": {
+                  "oak_planks": 5
+                },
+                "block": "air"
+              },
+              "after": {
+                "inventory": {
+                  "oak_planks": 4
+                },
+                "block": "oak_planks"
+              },
+              "observedAt": "2026-11-06T03:24:26.306Z"
+            },
+            "f49b7957-06fd-4df3-8ac3-8499257f067e:step:0:place:5": {
+              "before": {
+                "inventory": {
+                  "oak_planks": 4
+                },
+                "block": "air"
+              },
+              "after": {
+                "inventory": {
+                  "oak_planks": 3
+                },
+                "block": "oak_planks"
+              },
+              "observedAt": "2026-11-06T03:24:26.915Z"
+            },
+            "f49b7957-06fd-4df3-8ac3-8499257f067e:step:0:place:6": {
+              "before": {
+                "inventory": {
+                  "oak_planks": 3
+                },
+                "block": "air"
+              },
+              "after": {
+                "inventory": {
+                  "oak_planks": 2
+                },
+                "block": "oak_planks"
+              },
+              "observedAt": "2026-11-06T03:24:27.924Z"
+            },
+            "f49b7957-06fd-4df3-8ac3-8499257f067e:step:0:place:7": {
+              "before": {
+                "inventory": {
+                  "oak_planks": 2
+                },
+                "block": "air"
+              },
+              "after": {
+                "inventory": {
+                  "oak_planks": 1
+                },
+                "block": "oak_planks"
+              },
+              "observedAt": "2026-11-06T03:24:28.585Z"
+            },
+            "f49b7957-06fd-4df3-8ac3-8499257f067e:step:0:place:8": {
+              "before": {
+                "inventory": {
+                  "oak_planks": 1
+                },
+                "block": "air"
+              },
+              "after": {
+                "inventory": {
+                  "oak_planks": 0
+                },
+                "block": "oak_planks"
+              },
+              "observedAt": "2026-11-06T03:24:29.246Z"
+            }
+          }
+        }
+      ],
+      "budgetAfter": {
+        "limitUsd": 0.25,
+        "knownTokenCostEstimateUsd": 0.068162,
+        "completedRequests": 5,
+        "pendingReservationCount": 0,
+        "reservedUnknownChargeUsd": 0,
+        "pendingSha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "lastReceipt": {
+          "model": "claude-sonnet-5-5",
+          "responseId": "msg_011Cgkxaf2KxfBdHfMEPSnje",
+          "requestId": "req_011CgkxaeNPENZPaBaVxbPNW",
+          "costNanoUsd": 13934000,
+          "recordedAt": "2026-11-06T03:24:20.283Z",
+          "usage": {
+            "input_tokens": 5712,
+            "output_tokens": 251,
+            "cache_creation_input_tokens": 0,
+            "cache_read_input_tokens": 0
+          }
+        }
+      },
+      "knownApiCostUsd": 0.013934000000000002
+    }
+  ],
+  "modelCalls": 2,
+  "publicTransactions": 0,
+  "legacyPhysicalBuildReobservation": "Unrun: no legacy bot connected and no arbitrary block-read endpoint added. Native namespace/world preservation is qualified separately.",
+  "identity": {
+    "playerName": "Micro",
+    "actualApprovedConnection": true,
+    "canonicalPrincipalSha256": "8d5252e970180866ae90fe971075ea55606f24c02f3e083c69dcaef2e44b70c6",
+    "syntheticIdentityCreated": false
+  },
+  "budgetsBefore": {
+    "0g": {
+      "limitUsd": 5,
+      "knownTokenCostEstimateUsd": 0.0123546,
+      "completedRequests": 3,
+      "pendingReservationCount": 1,
+      "reservedUnknownChargeUsd": 0.1893888,
+      "pendingSha256": "8be49bba685d8b0ffb5015054c1b8e96dba67fb8755742d048a95bdbedaa18a2",
+      "lastReceipt": {
+        "model": "glm-4.7",
+        "responseId": "202611060307311e49c05aa957461b",
+        "requestId": "edef4ae43cffa349, 3407a056-daa4-4c23-985c-a6aa2f510860",
+        "requestSha256": "b9e53d5899dd883cd707491336693c84a1cb9b75095e0e97c60a13531340f719",
+        "costNanoUsd": 4851300,
+        "latencyMs": 69409,
+        "recordedAt": "2026-11-05T19:08:40.301Z",
+        "usage": {
+          "prompt_tokens": 3865,
+          "completion_tokens": 416
+        },
+        "pricing": {
+          "model": "glm-4.7",
+          "inputNanoUsd": 900,
+          "outputNanoUsd": 3300,
+          "contextTokens": 204800,
+          "source": "https://router-api.0g.ai/v1/models",
+          "observedAt": "2026-11-05T19:07:30.879Z"
+        }
+      }
+    },
+    "claude": {
+      "limitUsd": 0.25,
+      "knownTokenCostEstimateUsd": 0.054228,
+      "completedRequests": 4,
+      "pendingReservationCount": 0,
+      "reservedUnknownChargeUsd": 0,
+      "pendingSha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "lastReceipt": {
+        "model": "claude-sonnet-5-5",
+        "responseId": "msg_011CgkJx1iSHKKGySDRUjAAM",
+        "requestId": "req_011CgkJx1aFWNJaFitp5qcQy",
+        "costNanoUsd": 8690000,
+        "recordedAt": "2026-11-05T19:10:50.852Z",
+        "usage": {
+          "input_tokens": 2800,
+          "output_tokens": 309,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        }
+      }
+    }
+  },
+  "legacyFilesBefore": {
+    "personal-agents.json": "a9a2352e1f6f854b760cc671f98deb72530566c011738dad511b86a5065da7b3",
+    "personal-agent-tasks.json": "eaa23c08c2144223573570c57ff5091df0b82175e31af8b9d434b646f1860618",
+    "agent-conversations.json": "d3ad92807b98f58a5ed76d07bcab05b4ceb6c6529aef905c8b1a5c9ab23f974f"
+  },
+  "legacyFilesAfter": {
+    "personal-agents.json": "a9a2352e1f6f854b760cc671f98deb72530566c011738dad511b86a5065da7b3",
+    "personal-agent-tasks.json": "eaa23c08c2144223573570c57ff5091df0b82175e31af8b9d434b646f1860618",
+    "agent-conversations.json": "d3ad92807b98f58a5ed76d07bcab05b4ceb6c6529aef905c8b1a5c9ab23f974f"
+  },
+  "legacyFilesUnchanged": true,
+  "budgetsAfter": {
+    "0g": {
+      "limitUsd": 5,
+      "knownTokenCostEstimateUsd": 0.0123546,
+      "completedRequests": 3,
+      "pendingReservationCount": 2,
+      "reservedUnknownChargeUsd": 0.3787776,
+      "pendingSha256": "2fc3aaf7a61da70127cfb301ca6b2284d5f086cfb3cdb0b6db7e8fd0085a2570",
+      "lastReceipt": {
+        "model": "glm-4.7",
+        "responseId": "202611060307311e49c05aa957461b",
+        "requestId": "edef4ae43cffa349, 3407a056-daa4-4c23-985c-a6aa2f510860",
+        "requestSha256": "b9e53d5899dd883cd707491336693c84a1cb9b75095e0e97c60a13531340f719",
+        "costNanoUsd": 4851300,
+        "latencyMs": 69409,
+        "recordedAt": "2026-11-05T19:08:40.301Z",
+        "usage": {
+          "prompt_tokens": 3865,
+          "completion_tokens": 416
+        },
+        "pricing": {
+          "model": "glm-4.7",
+          "inputNanoUsd": 900,
+          "outputNanoUsd": 3300,
+          "contextTokens": 204800,
+          "source": "https://router-api.0g.ai/v1/models",
+          "observedAt": "2026-11-05T19:07:30.879Z"
+        }
+      }
+    },
+    "claude": {
+      "limitUsd": 0.25,
+      "knownTokenCostEstimateUsd": 0.068162,
+      "completedRequests": 5,
+      "pendingReservationCount": 0,
+      "reservedUnknownChargeUsd": 0,
+      "pendingSha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "lastReceipt": {
+        "model": "claude-sonnet-5-5",
+        "responseId": "msg_011Cgkxaf2KxfBdHfMEPSnje",
+        "requestId": "req_011CgkxaeNPENZPaBaVxbPNW",
+        "costNanoUsd": 13934000,
+        "recordedAt": "2026-11-06T03:24:20.283Z",
+        "usage": {
+          "input_tokens": 5712,
+          "output_tokens": 251,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 0
+        }
+      }
+    }
+  },
+  "existingZeroGReservationsUnchanged": true,
+  "sourceHashes": {
+    "tests/playable/mumbai-owner-live.mjs": "4b3888743cc8750bfa854726fddc2c380420101beb76bff76c896053a3d1dd90",
+    "scripts/mumbai_agents.mjs": "f4ac9be8198091b56dfc4b5c823acf935c82a382dd5e43c834451f76ea451bb5",
+    "backend/src/playable/agents.mjs": "14a4cdef47a130d4b36cb58c0ba508f2566e85615f0ca13be6607bba42776aa4"
+  },
+  "finishedAt": "2026-11-06T03:24:31.176Z"
+}

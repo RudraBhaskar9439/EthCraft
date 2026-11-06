@@ -1,0 +1,60 @@
+{
+  "schema": "agentcity.bank-deployment-verification.v1",
+  "runId": "7a9a0b0d-4e2d-444d-96b9-a473f488ded2",
+  "chainId": 1301,
+  "manifestSha256": "c58d3e07a02ec282b4cd4d5508bd984723201c0c07dadf7141c0ea81c8f2c23d",
+  "publicTransactions": 0,
+  "walletSignatures": 0,
+  "nativeItemsRegistered": 0,
+  "independentHumans": 0,
+  "realMoneySpentUsd": 0,
+  "checks": [
+    {
+      "name": "Pinned chain and genesis",
+      "status": "pass"
+    },
+    {
+      "name": "All manifest runtime code hashes",
+      "status": "pass"
+    },
+    {
+      "name": "Bank, marketplace, authenticated router and publisher bindings",
+      "status": "pass"
+    },
+    {
+      "name": "Mock USDC6 and CITY/GEM18 identities",
+      "status": "pass"
+    },
+    {
+      "name": "Official quotes reflect18/6decimal seed price without requiring native health for exits",
+      "status": "pass"
+    },
+    {
+      "name": "Actual official PositionManager LP ownership and funded token deposits",
+      "status": "pass"
+    },
+    {
+      "name": "Bootstrap native cost includes all chain fees and remains within its test ETH budget",
+      "status": "pass"
+    }
+  ],
+  "quotes": {
+    "CITY": {
+      "amountInBaseUnits": "1003109338015045237",
+      "outputMockUsdcBaseUnits": "1000000"
+    },
+    "GEM": {
+      "amountInBaseUnits": "1003109338015045237",
+      "outputMockUsdcBaseUnits": "1000000"
+    }
+  },
+  "nativeFeeAccounting": {
+    "fromBlock": "67030500",
+    "throughBlock": "67030826",
+    "walletCount": 11,
+    "actualTotalNativeCostWei": "23025090087982",
+    "maximumNativeBudgetWei": "4000000000000000",
+    "method": "Aggregate historical balances before/after bootstrap; internal funding cancels and chain data fees remain included."
+  },
+  "status": "pass"
+}

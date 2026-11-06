@@ -1,0 +1,11 @@
+{
+  "name": "agentcity-construction-750b0aae",
+  "owner": "6d4af3c1c8824374b78de953c374ee27",
+  "labels": {
+    "agentcity.inspection.boundary": "true",
+    "agentcity.inspection.owner": "6d4af3c1c8824374b78de953c374ee27"
+  },
+  "gamePort": 25592,
+  "controlPort": 25593,
+  "runtime": "/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/.local/construction/runs/agentcity-construction-750b0aae"
+}

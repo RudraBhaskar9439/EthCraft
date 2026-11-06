@@ -1,0 +1,31 @@
+﻿{
+    "observedAt":  "2026-10-31T14:39:00.1132144Z",
+    "method":  "Read-only Playit IPC and official scoped-agent rundata",
+    "agentVersion":  "1.1.0",
+    "state":  "running",
+    "publicHostname":  "domination-uid.tun.ply.gg",
+    "publicPort":  31628,
+    "destination":  "127.0.0.1:25565",
+    "disabled":  false,
+    "pending":  0,
+    "noticeCount":  0,
+    "lastError":  null,
+    "bytesIn":  0,
+    "bytesOut":  0,
+    "activeTcp":  0,
+    "activeUdp":  0,
+    "localTcpConnect":  {
+                            "25596":  "ok",
+                            "8796":  "ok",
+                            "25565":  "ok"
+                        },
+    "currentBootLabels":  [
+                              "IPv6 ping NetworkUnreachable",
+                              "control SessionNotSetup reconnect",
+                              "connected; tunnels loaded1"
+                          ],
+    "latestLocalConnectionRefused":  "historical previous boot only",
+    "dnsCheck":  "Windows Resolve-DnsName returned no answers/error",
+    "configurationChanges":  0,
+    "secretValuesCaptured":  false
+}

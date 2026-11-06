@@ -1,0 +1,133 @@
+{
+  "schema": "agentcity.p2.thin-reference-diagnosis.v1",
+  "status": "diagnosed",
+  "recorded_at": "2026-10-29T19:33:32.729945+00:00",
+  "scope": "Read-only diagnosis of retained failed live attempts and pinned-server bytecode. This does not claim the proposed correction passed.",
+  "runs": [
+    {
+      "run": "agentcity-continuation-48ecbd0d",
+      "client_report": {
+        "path": "evidence/runs/p2-construction/agentcity-continuation-48ecbd0d/resume-client.json",
+        "sha256": "996bb7740a105824a1f96e58b1487f146702ae8bf2b0b23e1c2f04fb9c285ca6"
+      },
+      "event_log": {
+        "path": "evidence/runs/p2-construction/agentcity-continuation-48ecbd0d/retained/construction-events.jsonl",
+        "sha256": "418718f8df61d6005d1c30ea5e8f1d866cec65cdf724f852b35fa97793a15726"
+      },
+      "worker_result": {
+        "status": "waiting",
+        "reason": "NATIVE_OPERATION_NOT_APPLIED",
+        "completed": 137,
+        "placedThisRun": 0,
+        "readiness": false
+      },
+      "last_negative_interaction": {
+        "actor": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+        "action": "RIGHT_CLICK_BLOCK",
+        "use_block": "DENY",
+        "position": [
+          -11,
+          85,
+          -4
+        ],
+        "event": "native_interact",
+        "use_item": "DENY",
+        "tick": 519,
+        "cancelled": true
+      },
+      "last_authorized_interaction": {
+        "actor": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+        "action": "RIGHT_CLICK_BLOCK",
+        "use_block": "DENY",
+        "position": [
+          -11,
+          85,
+          -4
+        ],
+        "event": "native_interact",
+        "use_item": "DEFAULT",
+        "tick": 692,
+        "cancelled": true
+      },
+      "retained_applied_native_placements": 137,
+      "placement_event_after_last_interaction": false,
+      "finding": "The clicked reference was the intended repeater; sneaking passed its scoped guard, but block use remained DENY and no item placement event followed."
+    },
+    {
+      "run": "agentcity-continuation-a8debbd5",
+      "client_report": {
+        "path": "evidence/runs/p2-construction/agentcity-continuation-a8debbd5/resume-client.json",
+        "sha256": "a357c3989c02e397c27487ee8f994b5457966e25ebb96cf7e361da3f45a590df"
+      },
+      "event_log": {
+        "path": "evidence/runs/p2-construction/agentcity-continuation-a8debbd5/retained/construction-events.jsonl",
+        "sha256": "5b2a9d67e62e6d818427e45dc2f9cb3695c025a305046d821c01543c5bf75fc5"
+      },
+      "worker_result": {
+        "status": "waiting",
+        "reason": "NATIVE_OPERATION_NOT_APPLIED",
+        "completed": 137,
+        "placedThisRun": 0,
+        "readiness": false
+      },
+      "last_negative_interaction": {
+        "tick": 307,
+        "use_item": "DENY",
+        "event": "native_interact",
+        "position": [
+          -11,
+          85,
+          -4
+        ],
+        "use_block": "DENY",
+        "action": "RIGHT_CLICK_BLOCK",
+        "actor": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+        "cancelled": true
+      },
+      "last_authorized_interaction": {
+        "tick": 489,
+        "use_item": "ALLOW",
+        "event": "native_interact",
+        "position": [
+          -11,
+          85,
+          -4
+        ],
+        "use_block": "DENY",
+        "action": "RIGHT_CLICK_BLOCK",
+        "actor": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+        "cancelled": true
+      },
+      "retained_applied_native_placements": 137,
+      "placement_event_after_last_interaction": false,
+      "finding": "The clicked reference was the intended repeater; sneaking passed its scoped guard, but block use remained DENY and no item placement event followed."
+    }
+  ],
+  "pinned_bytecode_provenance": {
+    "server_jar": ".local/compatibility/server/versions/1.21.11/paper-1.21.11.jar",
+    "server_jar_sha256": "3a73f0cc4020a5eb45629a67629b14263331c68de45552f8505df8060fa8ed43",
+    "class_entry": "net/minecraft/server/level/ServerPlayerGameMode.class",
+    "class_sha256": "342eec53caa30343786cac83f99a30195156963adf8522f855afea7fc4830d94",
+    "jdk_image": "eclipse-temurin@sha256:5d90b26c0784ccf55af55f97cbcf7f3969c66a06299c93bdc72649219942a48f",
+    "inspection_command": [
+      "javap",
+      "-classpath",
+      "/server/versions/1.21.11/paper-1.21.11.jar",
+      "-c",
+      "-p",
+      "net.minecraft.server.level.ServerPlayerGameMode"
+    ],
+    "execution": "Read-only server cache mount; Docker --network none; no game process, transaction or provider call.",
+    "method": "useItemOn(ServerPlayer, Level, ItemStack, InteractionHand, BlockHitResult)",
+    "control_flow": [
+      "Offset167 reads PlayerInteractEvent.useInteractedBlock; DENY selects the branch that returns at323. Non-DENY continues at324.",
+      "Offsets305-311 compare useItemInHand with ALLOW. ALLOW selects PASS at320; other values select SUCCESS at314. Both return at323.",
+      "Therefore item ALLOW alone does not bypass the block-DENY early return or reach normal item-on-block placement."
+    ]
+  },
+  "narrow_correction_for_live_verification": "Within the exact authenticated native arm, require Survival, held-item match and actual sneaking for repeater/wire references; retain block use DEFAULT and explicitly allow item use. Existing final BlockPlaceEvent target/state/material/revision checks remain authoritative.",
+  "limitations": [
+    "The event isCancelled flag alone does not distinguish block-use denial from item-use permission; both fields and actual placement events were inspected.",
+    "No new test, source change, world mutation or passing live claim was made by this diagnosis artifact."
+  ]
+}

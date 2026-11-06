@@ -1,0 +1,487 @@
+{
+  "date": "2026-10-31",
+  "implementationRelease": "14c9abeeaf1c6dd2afb28cf9a637b4f40066e44b",
+  "scope": "Private playable testnet integration; production qualification and canonical original gates are not passed",
+  "canonicalGate": {
+    "phase": "P0",
+    "status": "blocked",
+    "reason": "implementation scope changed; original evidence retained"
+  },
+  "runtime": {
+    "minecraft": "127.0.0.1:25596",
+    "playerLogin": "http://127.0.0.1:8789/player-wallet",
+    "pluginSha256": "e5c495b2dfae540d0a293b833582c66b13f2adf9297d3a97fded2e6503e2d78e",
+    "node": "26.3.1",
+    "ollamaModel": "qwen3:4b",
+    "managedProvider": "Privy official SDK0.37.0",
+    "playerSDK": "Privy React3.51.0",
+    "testnetBroadcastEnabled": true,
+    "mainnetEnabled": false,
+    "containerImage": "sha256:c29f72f9a7ce6ce06d5a184501374a9c51fe41174dadc51136521a407c313788"
+  },
+  "verified": {
+    "actualLanguageCases": 8,
+    "actualNativeConversation": {
+      "sameWorkflow": true,
+      "steps": 3,
+      "sourceCobblestone": [
+        56,
+        50
+      ],
+      "destinationCobblestone": [
+        4,
+        6
+      ],
+      "gameCoins": [
+        104,
+        108
+      ],
+      "cityAgent2ReleasedEmpty": true,
+      "ruddyPreserved": true
+    },
+    "actualPublicUniswap": {
+      "deployment": "new capped CITY/GEM pair and fixed router on official v4",
+      "developerSwap": "0x561ad772c923cba69ee5730482f5b55060d326525eea758dd4a37875db07eaaa",
+      "repeatExtraEffects": 0,
+      "scope": "developer fixture; no human or managed-player swap claim"
+    },
+    "actualPrivy": {
+      "apiAuthentication": true,
+      "separateOwnerDelegateQuorums": true,
+      "restrictedPlayerPolicy": true,
+      "restrictedTreasuryRecipientPolicy": true,
+      "humanLoginBindingVerified": true,
+      "managedPlayerProvisioned": true,
+      "treasuryProvisioned": true,
+      "ownerKeyAbsentFromWorkerCredentials": true,
+      "signingTransaction": "0x8c9844a700bb3bbd3dc10a2825a45dc71a3b7e7adaf0ab1739496ae425429924",
+      "repeatExtraEffects": 0,
+      "signingScope": "one authorized operator treasury grant; not Minecraft item sale or user wallet spending"
+    },
+    "funding": {
+      "finiteTreasuryCITY": "10000",
+      "playerStarterCITY": "20",
+      "treasuryAfterSigningGrantCITY": "9999",
+      "playerAfterSigningGrantCITY": "21",
+      "nativeAllocationPerWalletETH": "0.002",
+      "originalDeveloperBudgetETH": "0.008",
+      "realMoneySpentUsd": 0
+    },
+    "fixtures": {
+      "plannerGroups": 8,
+      "agentGroups": 5,
+      "taskGroups": 7,
+      "walletGroups": 9,
+      "walletAuthPostgresGroups": 3,
+      "cryptoSalePostgresGroups": 5,
+      "actualLocalUniswapGroups": 6,
+      "scope": "Fixtures remain labelled; PostgreSQL authority tests do not prove an actual Minecraft-to-CITY sale"
+    },
+    "planning": {
+      "unitTests": 56,
+      "integrity": "pass",
+      "productGateApproval": false
+    },
+    "packaging": {
+      "credentialFreeHttpGroups": 2,
+      "sourceImageHashesMatched": 85,
+      "ownerOrDelegateSecretsMounted": false,
+      "productionDeployment": false
+    }
+  },
+  "unrun": [
+    "Actual Minecraft inventory removal followed by CITY payment",
+    "Human-confirmed swap from the managed player wallet",
+    "Independent second-human acceptance",
+    "Provider dashboard export-control review and exposed App Secret rotation",
+    "Native-Linux TLS/game-transport/secret-mount/backup-restore qualification and independent security review"
+  ],
+  "productionBlockers": [
+    "Known unresolved upstream Zod, decode-uri-component and UUID advisories; compatible ws patches applied without unsupported major overrides",
+    "Current private offline Minecraft host is not a production identity/transport deployment",
+    "Owner admin file is separated in code but remains under the same WSL Unix identity; production runtime must exclude its mount",
+    "End-to-end managed-player financial flows remain unrun"
+  ],
+  "failureHistory": "All failed model, fixture, policy-normalization, route and image attempts are retained. Read-only post-verification composes original native effects without rerunning or resetting them.",
+  "artifacts": [
+    {
+      "path": "evidence/runs/playable-conversation/117a71e3-94a0-4867-a321-849600f361fa/report.json",
+      "sha256": "a757afdd4c59294e471b2b4c840b5fcf664009df2cda968566d0acfbfb90301e",
+      "status": "fail",
+      "checks": 0
+    },
+    {
+      "path": "evidence/runs/playable-conversation/859e9b22-a062-470b-b375-3525633e6264/report.json",
+      "sha256": "a56c15b691e0fcbf585c1388b0df692bb5dd82eaeaa4f6982acb7c83a34f06d0",
+      "status": "fail",
+      "checks": 2
+    },
+    {
+      "path": "evidence/runs/playable-conversation/8f0fc346-8daf-4423-a910-c627a62aeffb/report.json",
+      "sha256": "415cb0063c7fd1e63e0ad1e4dd47e80d3fcd8d0200e27101b5d3386ff4afed00",
+      "status": "fail",
+      "checks": 2
+    },
+    {
+      "path": "evidence/runs/playable-conversation/c021dee3-837f-47f4-88d3-a622d7f21be1/report.json",
+      "sha256": "154c22565b0eefe5d872ae1c502ebbf604defdc8b4ebeffe4eda752c7e5e4a1e",
+      "status": "pass",
+      "checks": 3
+    },
+    {
+      "path": "evidence/runs/playable-crypto-sales/2108ef21-240d-4e57-a38f-65f1efc6424d/report.json",
+      "sha256": "16ffe2175f82ca7eaf090361c9236429f94bc5edd9d2dabefaebe45aee83d93f",
+      "status": "pass",
+      "checks": 5
+    },
+    {
+      "path": "evidence/runs/playable-crypto-sales/7a56d7c1-0b85-4c4a-bb89-4e775c69ca8e/report.json",
+      "sha256": "16ffe2175f82ca7eaf090361c9236429f94bc5edd9d2dabefaebe45aee83d93f",
+      "status": "pass",
+      "checks": 5
+    },
+    {
+      "path": "evidence/runs/playable-crypto-sales/d8138be7-55bb-4436-902a-75a569c0e0cd/report.json",
+      "sha256": "16ffe2175f82ca7eaf090361c9236429f94bc5edd9d2dabefaebe45aee83d93f",
+      "status": "pass",
+      "checks": 5
+    },
+    {
+      "path": "evidence/runs/playable-language/03b091f4-28d9-4d5a-ba93-f9b5f4bdbb38/report.json",
+      "sha256": "6e1faa9a79268bf362d9e841a6352927dbd3c2c8da749ba21b080526d32ca18a",
+      "status": "pass",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-language/0ad9527f-80e0-42ee-ac4d-e142c84b0425/report.json",
+      "sha256": "c1817f3d7c3cb415e9f9c845c9eef9c59904af21b573f25ee81fde955ec5b9b4",
+      "status": "fail",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-language/0bd0fe60-8f1b-4ca0-a3c0-affb132729b2/report.json",
+      "sha256": "44164ca629e2d2a91bfd3d07d49dba0652aeefcd3d9076b1cc44994c62c88de7",
+      "status": "fail",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-language/0fc3e7eb-79b0-436b-a8ff-4ac5801ad856/report.json",
+      "sha256": "bd325946f15b1581354c59561459d08539547b165cddcd99c36b29efc7b091fb",
+      "status": "fail",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-language/10fe703b-0ec7-4c66-bec9-454d939c3254/report.json",
+      "sha256": "2b8db98266f6d678da97b73ea4206d78824ca22f282144e1f403ea5b7bfef7ce",
+      "status": "pass",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-language/17994a86-2ac1-4591-9166-46a274298eff/report.json",
+      "sha256": "f7980b91126fd8fde3bc6f64ff0d048857ab438783f4df5a148ced1efeafa1a0",
+      "status": "pass",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-language/35c484d1-75dc-483c-a5cb-e9b732f36c5d/report.json",
+      "sha256": "9fcbbdd31ef30d39ee543064a22a663521a9e03a771d206ffed64ee7924dcf4d",
+      "status": "fail",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-language/39e09764-8670-4041-a25a-d1f613662843/report.json",
+      "sha256": "4b12e67a9806d681cf6fa0fa156fa15e201c23d39ee80b534b0d00cd19d7d45b",
+      "status": "fail",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-language/3a243248-9b46-4285-9277-45c2c389d373/report.json",
+      "sha256": "c1817f3d7c3cb415e9f9c845c9eef9c59904af21b573f25ee81fde955ec5b9b4",
+      "status": "fail",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-language/3e489ce5-e46e-483a-93d5-ae5b45a2e1c8/report.json",
+      "sha256": "2c684f0cef13c69ec969507cb4045d3d966dd55a80eeae6a6be542586c5fb6dd",
+      "status": "fail",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-language/58eb9517-b5f2-46d7-8e66-48f7a9939eaf/report.json",
+      "sha256": "7a1d699969c59507398c7c85f0b3e73f4bb17dd0c0be47ed716f0c0b90b03939",
+      "status": "pass",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-language/701d3fe5-2fe3-41e9-a6fa-26455824674e/report.json",
+      "sha256": "83d975e4ad3c94d2c13589fa17a01527387622d71dffe0c65637f48fc491cdba",
+      "status": "fail",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-language/7aa86f16-20a4-4050-bcf8-670af3f129b5/report.json",
+      "sha256": "c8c58504da73876ea4f3b0e986599cf78668af567380c4ea414a6b9d95365c37",
+      "status": "fail",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-language/8e0371d7-ff6a-4ce6-8167-2a21b4c3f857/report.json",
+      "sha256": "b0e066514ed932883b5dda0265004fea60c9702a97628bb369b8064b85a8cd14",
+      "status": "review_required",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-language/9bb3a3f6-8f44-44f3-9a34-05dea7747373/report.json",
+      "sha256": "e7abfd372203df01458c1842df20ddaf100eff831a04b0674a0edc108761ab11",
+      "status": "fail",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-language/9ce1ce89-3d85-45d0-938f-1fad8b28b321/report.json",
+      "sha256": "65cc4d241a62b058474b0a74fec9689a4ecf61fbd43ac20eb103ab6f98bf7d3b",
+      "status": "pass",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-language/9fbf5239-32fe-4de7-94a8-3e125def3a29/report.json",
+      "sha256": "117cf8baf14e1245030e8f5e4282b65dede0695beb535fd4d7583caf8ea027e4",
+      "status": "fail",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-language/b3b5530d-5a74-40cc-9a08-688e52a29032/report.json",
+      "sha256": "c1817f3d7c3cb415e9f9c845c9eef9c59904af21b573f25ee81fde955ec5b9b4",
+      "status": "fail",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-language/cc4bc734-e855-46bf-a95d-46c67c35de1f/report.json",
+      "sha256": "eb20198cc5ed8c43e1b3fd53e08bba0d945b8548a9e616bf4521a9cc2ec34c61",
+      "status": "fail",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-language/f350458d-1671-4ce2-86e4-72e7f973efc3/report.json",
+      "sha256": "5576732fcd826d2cff4854b3301c00a795ddca0b2cf6adacc2c2bc49e6747d8c",
+      "status": "fail",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-managed-funding/e1fcdbf2-6fc5-4e41-926e-fb4bd5ba2668/report.json",
+      "sha256": "7535427369d29e0dac9af828d7aa3f1bf7796e438768b215e63aa99200b6f376",
+      "status": "pass",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-managed-signing/8706211d-a1c8-4da3-be7b-c59a93f925cc/9a626245-41ee-4c50-949c-db723948c0e5.json",
+      "sha256": "d3ccb9fdb399d676a3adef5c111c4fe5d16f20e4286bd42e7ba578f9277e2272",
+      "status": "pass",
+      "checks": 3
+    },
+    {
+      "path": "evidence/runs/playable-packaging/0c17fc35-4d4f-4580-b986-67930c6e5067/companion-audit-after.json",
+      "sha256": "4fc5ade75d92450fd4c2ff9f044c8bab63433aff1ca7483f451c985be9017ae8",
+      "status": "supporting",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-packaging/0c17fc35-4d4f-4580-b986-67930c6e5067/companion-audit-before.json",
+      "sha256": "3de0562cb2b4e1c38e3f8b35644e8515df74878c41d04ecd7211ba34865f837a",
+      "status": "supporting",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-packaging/0c17fc35-4d4f-4580-b986-67930c6e5067/report.json",
+      "sha256": "f099ff6d5385eace28c319270bb9d003ea7d47759d91110197f3fc7629e5ce0d",
+      "status": "pass",
+      "checks": 2
+    },
+    {
+      "path": "evidence/runs/playable-packaging/84e01026-3b03-47ae-8a5d-3fd6e7fed3ff/report.json",
+      "sha256": "0380c41a16e1a647605e0253d44902730a9e1db316f9d34474dbaf84dee4faf0",
+      "status": "fail",
+      "checks": 0
+    },
+    {
+      "path": "evidence/runs/playable-packaging/c3a4f2c7-fe6e-444b-8bb8-30695a74c876/companion-audit-after.json",
+      "sha256": "4fc5ade75d92450fd4c2ff9f044c8bab63433aff1ca7483f451c985be9017ae8",
+      "status": "supporting",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-packaging/c3a4f2c7-fe6e-444b-8bb8-30695a74c876/companion-audit-before.json",
+      "sha256": "3de0562cb2b4e1c38e3f8b35644e8515df74878c41d04ecd7211ba34865f837a",
+      "status": "supporting",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-packaging/c3a4f2c7-fe6e-444b-8bb8-30695a74c876/report.json",
+      "sha256": "01ad20abf9cbfc34c9240ce7649519c9b23ace3ccedca1e7064a3065a1d1913e",
+      "status": "pass",
+      "checks": 2
+    },
+    {
+      "path": "evidence/runs/playable-packaging/c7cc2be2-5d37-49ff-b46a-d41eb13812a6/report.json",
+      "sha256": "6e5e0ea7952a94b2b6430d0dc0aeac4048dabb425f88d84e4a841cb49fcafa53",
+      "status": "fail",
+      "checks": 0
+    },
+    {
+      "path": "evidence/runs/playable-packaging/da6a4a9b-199e-4ad4-9672-c0cc7c8fb55b/companion-audit-after.json",
+      "sha256": "4fc5ade75d92450fd4c2ff9f044c8bab63433aff1ca7483f451c985be9017ae8",
+      "status": "supporting",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-packaging/da6a4a9b-199e-4ad4-9672-c0cc7c8fb55b/companion-audit-before.json",
+      "sha256": "3de0562cb2b4e1c38e3f8b35644e8515df74878c41d04ecd7211ba34865f837a",
+      "status": "supporting",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-packaging/da6a4a9b-199e-4ad4-9672-c0cc7c8fb55b/report.json",
+      "sha256": "551cae129303a71b487d438b4bab1a0844647bb11054c9f6542965edb2eb4c0d",
+      "status": "pass",
+      "checks": 2
+    },
+    {
+      "path": "evidence/runs/playable-packaging/da6feef1-1e09-4de8-ae48-0a5388c6debf/companion-audit-after.json",
+      "sha256": "4fc5ade75d92450fd4c2ff9f044c8bab63433aff1ca7483f451c985be9017ae8",
+      "status": "supporting",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-packaging/da6feef1-1e09-4de8-ae48-0a5388c6debf/companion-audit-before.json",
+      "sha256": "3de0562cb2b4e1c38e3f8b35644e8515df74878c41d04ecd7211ba34865f837a",
+      "status": "supporting",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-packaging/da6feef1-1e09-4de8-ae48-0a5388c6debf/report.json",
+      "sha256": "68901ff22ad7bf0f796d5ea15b6955dad5d8bd0d0aa1f1600faa0a700299c881",
+      "status": "pass",
+      "checks": 2
+    },
+    {
+      "path": "evidence/runs/playable-privy-authority/b4c32651-d441-477c-bbd5-916acfbd98df/report.json",
+      "sha256": "39a5fcb153a992be968e53a1620585899ffc3f1ecefb721f5275aa504e3cbdd5",
+      "status": "pass",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-privy-provisioning/7640d8c5-84cc-4d7a-8dd4-ceeb48e0abdd/report.json",
+      "sha256": "14181b23d53ed2972b7cd23e71a7f8df7e877012876dd9ff9ba522471d573197",
+      "status": "pass",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-privy-read-verification/a77ae5cd-2ae4-45b6-82df-ffa4aa95f952/report.json",
+      "sha256": "c4552e9304812c7cd73b9b266ca8cd86eefe84908ee3a4baf191a2dacbd4733d",
+      "status": "pass",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-privy-setup/ff3cc1ad-c31b-4c07-a896-1e0f9af7965c/report.json",
+      "sha256": "43b8c6852da582c16929ed7572b8c881d1252624fab3ce9703c611e59eda1bb5",
+      "status": "pass",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-public-market/a8248484-c129-4325-b593-159a9d713506/report.json",
+      "sha256": "ae6aa4693ec6c3cb71c1e27ef766fb4645cce93fa25e90eab6a06583a88dc309",
+      "status": "pass",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-public-swap/edc664fd-a0b9-43ac-97c2-7f6afd58bf2c/report.json",
+      "sha256": "cd832ffb9d4da222b7dc0b867830963ce6c3ae5345132990e9af1dfa32828924",
+      "status": "pass",
+      "checks": 3
+    },
+    {
+      "path": "evidence/runs/playable-testnet-wallets/3b04738b-d429-465e-b6d0-e04eb21b15cf/report.json",
+      "sha256": "4eb05b99f03da4a39304b9d0280d12083cf429accac778aac6812d32f82ea027",
+      "status": "pass",
+      "checks": 8
+    },
+    {
+      "path": "evidence/runs/playable-testnet-wallets/44823bdd-91a8-4133-9c79-46508da76fc5/report.json",
+      "sha256": "11517c5934f3c3b6a45878c19e882165016d315ef62d38dde9d8584b1f60a0f2",
+      "status": "fail",
+      "checks": 2
+    },
+    {
+      "path": "evidence/runs/playable-testnet-wallets/5679336e-6384-4f5b-8765-94b026334baa/report.json",
+      "sha256": "3648cb91fd4c4c20d77e656568ec46c4d8ab42413712b390ae6bf9d48f880b76",
+      "status": "fail",
+      "checks": 8
+    },
+    {
+      "path": "evidence/runs/playable-testnet-wallets/69e88af8-d3d7-45ca-92da-543f9e603e96/report.json",
+      "sha256": "4eb05b99f03da4a39304b9d0280d12083cf429accac778aac6812d32f82ea027",
+      "status": "pass",
+      "checks": 8
+    },
+    {
+      "path": "evidence/runs/playable-testnet-wallets/815fe080-b7af-48a0-8970-d9652378f187/report.json",
+      "sha256": "cd5331666a03b06ebb32e556bb957978d5867a8e921dbb3ff756a527239f6b6c",
+      "status": "pass",
+      "checks": 8
+    },
+    {
+      "path": "evidence/runs/playable-testnet-wallets/8c482bdd-d787-4dff-955d-f2e583b68cd6/report.json",
+      "sha256": "cd5331666a03b06ebb32e556bb957978d5867a8e921dbb3ff756a527239f6b6c",
+      "status": "pass",
+      "checks": 8
+    },
+    {
+      "path": "evidence/runs/playable-testnet-wallets/a1a1d7ac-c4b0-4b05-8b47-081229810c73/report.json",
+      "sha256": "92ff88b1c6eb5ce3079eee932f6ff4c1be050ab46b5acec2f42c43466b7db301",
+      "status": "pass",
+      "checks": 7
+    },
+    {
+      "path": "evidence/runs/playable-testnet-wallets/b03e5e7c-bacd-41fa-8a67-01d3b12b1008/report.json",
+      "sha256": "4eb05b99f03da4a39304b9d0280d12083cf429accac778aac6812d32f82ea027",
+      "status": "pass",
+      "checks": 8
+    },
+    {
+      "path": "evidence/runs/playable-testnet-wallets/cafa89b0-153e-457b-bdbd-b2ab7fb83195/report.json",
+      "sha256": "83b639a727f8d67aaca66d48fcc818bd1edafa5dbc997a88d02c75559afd5068",
+      "status": "pass",
+      "checks": 9
+    },
+    {
+      "path": "evidence/runs/playable-testnet-wallets/e20f3f9f-7ea1-49fc-bd5f-1adecd156c7f/report.json",
+      "sha256": "c1445ed1e289f0dfa4fed12479e14d670057ebfe3790d11f8b4b1bacb6512b2b",
+      "status": "pass",
+      "checks": 6
+    },
+    {
+      "path": "evidence/runs/playable-testnet-wallets/f7ee82cc-f03e-42cf-8b5a-174025d4a667/report.json",
+      "sha256": "83b639a727f8d67aaca66d48fcc818bd1edafa5dbc997a88d02c75559afd5068",
+      "status": "pass",
+      "checks": 9
+    },
+    {
+      "path": "evidence/runs/playable-uniswap/0a84258a-009a-4e7e-a967-d93863388cee/report.json",
+      "sha256": "699696675df877eb40bdc1b3098b4c51a4ab1d55119751b2c53f16b19048ddc0",
+      "status": "pass",
+      "checks": 6
+    },
+    {
+      "path": "evidence/runs/playable-uniswap/226ea8a7-3261-4f4d-81d1-01e526ad2976/report.json",
+      "sha256": "ff7321879f7b11bfe6bf6f1ab1a4889f1fff0605c3b01a62dd3f5540bc9f0783",
+      "status": "pass",
+      "checks": 6
+    },
+    {
+      "path": "evidence/runs/playable-wallet-ui/49368972-6f1c-4289-889b-84c9381d766a/report.json",
+      "sha256": "a805062ebdc83b98a1c1b00c91fe582058de7b69e30266128bdee0a04b7cca98",
+      "status": "partial",
+      "checks": 6
+    }
+  ],
+  "privateCredentialsCommitted": false
+}

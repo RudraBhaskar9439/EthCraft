@@ -1,0 +1,2 @@
+{"step":"restart_preserves_no_readiness_and_report_bytes"}
+{"status":"pass","scenario":"missing-lamp-s0-lamp_measurement"}

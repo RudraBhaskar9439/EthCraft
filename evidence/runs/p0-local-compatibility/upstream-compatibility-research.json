@@ -1,0 +1,131 @@
+{
+  "review_date": "2026-10-29",
+  "scope": "Read-only primary-source metadata research; no dependency installation, server execution, accounts, downloads of Paper jars or application verification.",
+  "finding": "No currently SUPPORTED Paper release intersects the exact testedVersions declared by packaged Mineflayer 4.39.0. A downloadable old release can support an explicitly isolated local compatibility spike but cannot be represented as currently supported or already tested in AgentCity.",
+  "candidate": {
+    "purpose": "Isolated local compatibility spike only; not production or a completed phase gate.",
+    "minecraft": "1.21.11",
+    "paper_build": 132,
+    "paper_channel": "STABLE",
+    "paper_support": {
+      "status": "UNSUPPORTED",
+      "ended": "2026-06-15"
+    },
+    "paper_java_minimum": 21,
+    "paper_artifact": {
+      "name": "paper-1.21.11-132.jar",
+      "size": 54846016,
+      "expected_sha256": "5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba",
+      "url": "https://fill-data.papermc.io/v1/objects/5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba/paper-1.21.11-132.jar",
+      "hash_scope": "Expected checksum supplied by official Paper API; jar not downloaded or locally hashed in this research."
+    },
+    "mineflayer": {
+      "version": "4.39.0",
+      "node_engine": ">=22",
+      "tested_version_match": "1.21.11",
+      "npm_integrity": "sha512-HptE++dIG55aRmT7GIj3QComS6MhEXstE3RJSuYMFhLtobsQhJJsqWmY9ObfiLp84MrS6Q4Em+wUH0rVQMXLJw==",
+      "tarball": "https://registry.npmjs.org/mineflayer/-/mineflayer-4.39.0.tgz"
+    },
+    "pathfinder": {
+      "version": "2.4.5",
+      "declared_node_engine": null,
+      "peer_dependencies": null,
+      "development_mineflayer_range": "^4.3.0",
+      "npm_integrity": "sha512-Jh3JnUgRLwhMh2Dugo4SPza68C41y+NPP5sdsgxRu35ydndo70i1JJGxauVWbXrpNwIxYNztUw78aFyb7icw8g==",
+      "tarball": "https://registry.npmjs.org/mineflayer-pathfinder/-/mineflayer-pathfinder-2.4.5.tgz"
+    },
+    "node_candidate": {
+      "version": "24.22.2",
+      "release_date": "2026-10-27",
+      "lts": "Krypton",
+      "architecture": "linux-arm64 or osx-arm64; select actual execution environment and pin artifact/image digest",
+      "status": "Meets declared Mineflayer engine; not run-tested here."
+    }
+  },
+  "paper_release_comparison": [
+    {
+      "version": "26.3",
+      "support": "SUPPORTED",
+      "java_minimum": 25,
+      "build": 230,
+      "expected_sha256": "c0df92ce1d93617dd406b50aa823c85f0bdc3cee7528ee9a60a80df0fad5d350",
+      "mineflayer_tested_version_match": false
+    },
+    {
+      "version": "26.2",
+      "support": "DEPRECATED",
+      "java_minimum": 25,
+      "build": 135,
+      "mineflayer_tested_version_match": false
+    },
+    {
+      "version": "26.1.2",
+      "support": "UNSUPPORTED",
+      "support_end": "2026-07-26",
+      "java_minimum": 25,
+      "build": 74,
+      "expected_sha256": "1d70b1dab9cf4a6de615209a536f3a45a2186240253c428213ce2188ab95e5f7",
+      "mineflayer_tested_version_match": "Only base 26.1 declared; patch/protocol compatibility not inferred or tested."
+    },
+    {
+      "version": "1.21.11",
+      "support": "UNSUPPORTED",
+      "support_end": "2026-06-15",
+      "java_minimum": 21,
+      "build": 132,
+      "mineflayer_tested_version_match": true
+    }
+  ],
+  "packaged_mineflayer_tested_versions": [
+    "1.8.8",
+    "1.9.4",
+    "1.10.2",
+    "1.11.2",
+    "1.12.2",
+    "1.13.2",
+    "1.14.4",
+    "1.15.2",
+    "1.16.5",
+    "1.17.1",
+    "1.18.2",
+    "1.19",
+    "1.19.2",
+    "1.19.3",
+    "1.19.4",
+    "1.20.1",
+    "1.20.2",
+    "1.20.4",
+    "1.20.6",
+    "1.21.1",
+    "1.21.3",
+    "1.21.4",
+    "1.21.5",
+    "1.21.6",
+    "1.21.8",
+    "1.21.9",
+    "1.21.11",
+    "26.1"
+  ],
+  "sources": [
+    "https://fill.papermc.io/v3/projects/paper",
+    "https://fill.papermc.io/v3/projects/paper/versions",
+    "https://fill.papermc.io/v3/projects/paper/versions/1.21.11/builds",
+    "https://fill.papermc.io/v3/projects/paper/versions/26.1.2/builds",
+    "https://fill.papermc.io/v3/projects/paper/versions/26.3/builds",
+    "https://registry.npmjs.org/mineflayer/latest",
+    "https://registry.npmjs.org/mineflayer/-/mineflayer-4.39.0.tgz (package/lib/version.js and package/package.json inspected in memory)",
+    "https://raw.githubusercontent.com/PrismarineJS/mineflayer/master/lib/version.js",
+    "https://registry.npmjs.org/mineflayer-pathfinder/latest",
+    "https://registry.npmjs.org/mineflayer-pathfinder/-/mineflayer-pathfinder-2.4.5.tgz (package/package.json inspected in memory)",
+    "https://nodejs.org/dist/index.json"
+  ],
+  "required_next_checks": [
+    "Download selected Paper artifact and compare actual SHA-256 before execution.",
+    "Pin actual Java and Node Docker image digests or runtime artifact hashes, not mutable tags alone.",
+    "Commit exact npm dependency graph/integrities and run installation/runtime tests.",
+    "Run actual Paper/Mineflayer connection, lever, lamp, movement, inventory and placement smoke tests; metadata compatibility is not sufficient.",
+    "Keep a historical unsupported server isolated from untrusted networking and real economic obligations.",
+    "If a currently supported Paper release is mandatory, resolve Mineflayer support instead of relabeling a historical candidate as supported.",
+    "An offline test bot is not evidence of licensed Microsoft authentication or independent human participants."
+  ]
+}

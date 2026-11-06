@@ -1,0 +1,225 @@
+{
+  "version": 1,
+  "tasks": [
+    {
+      "id": "6da5acf3-2610-493b-bfe8-6f93f757b805",
+      "operationId": "39a64c88-6561-42f7-aa6e-34f9be8108e6",
+      "ownerId": "11111111-1111-4111-8111-111111111111",
+      "ownerName": "DisclosedFixture",
+      "slotName": "CityAgent2",
+      "plan": {
+        "action": "build_structure",
+        "material": "oak_planks",
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "placements": [
+          {
+            "position": [
+              -45,
+              64,
+              4
+            ],
+            "material": "oak_planks"
+          },
+          {
+            "position": [
+              -44,
+              64,
+              4
+            ],
+            "material": "oak_planks"
+          },
+          {
+            "position": [
+              -43,
+              64,
+              4
+            ],
+            "material": "oak_planks"
+          },
+          {
+            "position": [
+              -42,
+              64,
+              4
+            ],
+            "material": "cobblestone"
+          }
+        ],
+        "bill": {
+          "oak_planks": 3,
+          "cobblestone": 1
+        },
+        "source": [
+          -47,
+          64,
+          2
+        ]
+      },
+      "planHash": "e5ae1425515ae61f2d3d31cc50f4c97f1247c54e54b292a983f93ef737be3a3f",
+      "hashVersion": 2,
+      "status": "complete",
+      "completed": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "preexisting": [],
+      "receipts": {
+        "39a64c88-6561-42f7-aa6e-34f9be8108e6:supply:0": {
+          "before": {
+            "inventory": {
+              "oak_planks": 1,
+              "oak_log": 1,
+              "cobblestone": 1
+            },
+            "chest": {
+              "oak_planks": 1
+            }
+          },
+          "after": {
+            "inventory": {
+              "oak_planks": 2,
+              "oak_log": 1,
+              "cobblestone": 1
+            },
+            "chest": {
+              "oak_planks": 0
+            }
+          },
+          "observedAt": "2026-10-31T10:56:17.706Z"
+        },
+        "39a64c88-6561-42f7-aa6e-34f9be8108e6:supply:1": {
+          "before": {
+            "inventory": {
+              "oak_planks": 2,
+              "oak_log": 1,
+              "cobblestone": 1
+            }
+          },
+          "after": {
+            "inventory": {
+              "oak_planks": 6,
+              "oak_log": 0,
+              "cobblestone": 1
+            }
+          },
+          "observedAt": "2026-10-31T10:56:17.714Z"
+        },
+        "39a64c88-6561-42f7-aa6e-34f9be8108e6:place:0": {
+          "before": {
+            "inventory": {
+              "oak_planks": 6,
+              "oak_log": 0,
+              "cobblestone": 1
+            },
+            "block": "air"
+          },
+          "after": {
+            "inventory": {
+              "oak_planks": 5,
+              "oak_log": 0,
+              "cobblestone": 1
+            },
+            "block": "oak_planks"
+          },
+          "observedAt": "2026-10-31T10:56:17.748Z"
+        },
+        "39a64c88-6561-42f7-aa6e-34f9be8108e6:place:1": {
+          "before": {
+            "inventory": {
+              "oak_planks": 5,
+              "oak_log": 0,
+              "cobblestone": 1
+            },
+            "block": "air"
+          },
+          "after": {
+            "inventory": {
+              "oak_planks": 4,
+              "oak_log": 0,
+              "cobblestone": 1
+            },
+            "block": "oak_planks"
+          },
+          "observedAt": "2026-10-31T10:56:17.758Z"
+        },
+        "39a64c88-6561-42f7-aa6e-34f9be8108e6:place:2": {
+          "before": {
+            "inventory": {
+              "oak_planks": 4,
+              "oak_log": 0,
+              "cobblestone": 1
+            },
+            "block": "air"
+          },
+          "after": {
+            "inventory": {
+              "oak_planks": 3,
+              "oak_log": 0,
+              "cobblestone": 1
+            },
+            "block": "oak_planks"
+          },
+          "observedAt": "2026-10-31T10:56:17.774Z"
+        },
+        "39a64c88-6561-42f7-aa6e-34f9be8108e6:place:3": {
+          "before": {
+            "inventory": {
+              "oak_planks": 3,
+              "oak_log": 0,
+              "cobblestone": 1
+            },
+            "block": "air"
+          },
+          "after": {
+            "inventory": {
+              "oak_planks": 3,
+              "oak_log": 0,
+              "cobblestone": 0
+            },
+            "block": "cobblestone"
+          },
+          "observedAt": "2026-10-31T10:56:17.787Z"
+        }
+      },
+      "pending": null,
+      "withdrawn": true,
+      "delivered": false,
+      "createdAt": "2026-10-31T10:56:17.682Z",
+      "message": "Built and checked custom structure (4 blocks) with 4 real placements.",
+      "scanComplete": true,
+      "materialCount": 4,
+      "materialNeeds": {
+        "oak_planks": 3,
+        "cobblestone": 1
+      },
+      "supplyPlans": [
+        {
+          "kind": "withdraw",
+          "item": "oak_planks",
+          "count": 1,
+          "position": [
+            -47,
+            64,
+            2
+          ]
+        },
+        {
+          "kind": "craft",
+          "item": "oak_planks",
+          "batches": 1,
+          "recipe": {
+            "ingredient": "oak_log",
+            "input": 1,
+            "output": 4
+          }
+        }
+      ]
+    }
+  ]
+}

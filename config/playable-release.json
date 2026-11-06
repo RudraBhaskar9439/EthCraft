@@ -1,0 +1,12 @@
+{
+  "schema": "agentcity.playable-release.v1",
+  "economyMode": "ONCHAIN_ONLY",
+  "chainId": 1301,
+  "currency": "CITY",
+  "paper": "26.3 build231",
+  "java": "25",
+  "pluginSha256": "49dd1e7ca583efedeca4c95cc70db743389494cce78bd5d2c8320bfe1332c52c",
+  "dependencyPins": "config/property-dependencies.json",
+  "assetManifest": "contracts/world-assets-public-testnet-deployment.json",
+  "qualification": "Focused artifact and live cutover results are recorded separately; this manifest alone does not pass a phase or prove production readiness."
+}

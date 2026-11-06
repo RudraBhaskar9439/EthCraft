@@ -1,0 +1,28 @@
+{
+  "scope": "isolated local technical P0 only",
+  "system": "Darwin",
+  "architecture": "arm64",
+  "python": "3.15.2",
+  "node": "v26.3.1",
+  "live_run": "evidence/runs/p0-local-compatibility/attempt-06/run-report.json",
+  "physical_sources_confirmed_unchanged_since_passing_run": true,
+  "physical_source_sha256": {
+    "tests/compatibility/run.py": "9854d303a4158b268fd6c54d630927195705693af06c2268a0a970fd6f403889",
+    "tests/compatibility/probe.cjs": "499e795686211c65aef35140549632f26561f4dbb5be9d28f741bba30e44695e",
+    "tests/compatibility/package.json": "f495f1b08d7579a45ee9ae7ec7758cdebfc6cb4fc5ed10928c01f42cdcb0dfbd",
+    "tests/compatibility/package-lock.json": "644d0168c7bd3d406eeb489e55469fdf2f0e70fe40debcdbe18c9f0b1a1fa915",
+    "tests/compatibility/versions.json": "f9ee9617748df8545cadd5469d383b11f68ec43af6c9181d4259fcd1bb913502",
+    "tests/compatibility/plugin/CompatibilityPlugin.java": "998df25cdd39d05f4e9d694e29e392c2a66560df7d7811125b0c94746bae8bf8",
+    "tests/compatibility/plugin/plugin.yml": "7442cd56b0615fe88610db2e1d5afe1624cd9d97e31e5bd9d34dc9b61cdf9701"
+  },
+  "readiness_artifact_sha256": {
+    "config/p0-policy.json": "5ccc40514792b3e8079685716b5f616bfe58dad04151b74404bf79205c60e2aa",
+    "fixtures/policy/authority.json": "0d9be53f124480de53f77ee6e84eb4cb7cff303bea8081d5b4cbba33421b786d",
+    "fixtures/policy/transitions.json": "2497603144aa1de01021386664698743b47fbe7b648e9df69f4a8b3874775a81",
+    "fixtures/candidates/redstone-compiler/calculator-candidate-v1.json": "d14cc0956831efeb68df4b9aba588e946bbd3b546d6a2d37be02194378b1922b",
+    "fixtures/candidates/redstone-compiler/calculator-tests-candidate-v1.json": "8ec4afb0f561370cf74fc686a3683a01c6d0758fe6f0c15e33c8e1b5926e5897"
+  },
+  "independent_humans_established": false,
+  "token_integration": false,
+  "production_supported": false
+}

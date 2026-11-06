@@ -1,0 +1,346 @@
+{
+  "schema_version": 1,
+  "status": "adopted local engineering baseline; participant approval and runtime measurements pending",
+  "default": "deny",
+  "states": [
+    "Draft",
+    "Open",
+    "Agreed",
+    "Funded",
+    "Procuring",
+    "DeliveryPending",
+    "Building",
+    "Inspecting",
+    "RepairRequired",
+    "ReadyForReview",
+    "Accepted",
+    "Paid",
+    "Cancelled",
+    "Refunded"
+  ],
+  "terminal_job_states": [
+    "Paid",
+    "Cancelled",
+    "Refunded"
+  ],
+  "waiting_reasons_are_substates": true,
+  "self_transition_rule": "No new lifecycle self-transition; identical completed retry returns original evidence. Unknown outcome reconciles; changed ID payload rejects. Reads are not lifecycle transitions.",
+  "guard_semantics": "All listed guards must be independently established by the owning authority; guard names are oracles, not implemented runtime enforcement.",
+  "guards": {
+    "supported_complete_terms": "Supported manifest, plot and complete proposed terms are valid.",
+    "unfunded_no_unknown_funding": "No canonical funding and no unknown pending funding outcome.",
+    "current_independent_offer": "Offer owner/authorization and current version are verified in the correct namespace.",
+    "all_required_approvals": "All required parties approved the same current canonical digest.",
+    "canonical_exact_funding": "Confirmed canonical funding matches exact token, parties, immutable allocations and agreed deadlines.",
+    "before_work_deadline": "Authoritative now is strictly before fixed workDeadline.",
+    "approval_expired": "The adopted unfunded approval validity has expired.",
+    "journaled_bounded_purchase": "One requester-authorized capped route/recipient purchase intent is durable.",
+    "canonical_bound_whole_kit_claim": "A sufficiently confirmed atomic whole-KIT burn and fixed-target claim is canonical.",
+    "actual_reconciled_delivery": "Durable plugin receipt and exact actual stock reconcile with the fixed claim and backing ledger.",
+    "current_revision_and_lease": "Current revision and actor/region task lease are valid at execution.",
+    "structural_lock_acquired": "Structural lock is durably acquired before inspection begins.",
+    "actual_complete_failed_report": "Actual pinned inspection has a complete failure report and no pass was issued.",
+    "explicit_incomplete_reason": "Inspection is incomplete/invalidated with retained actual evidence and reason.",
+    "no_usable_pass_or_unknown_acceptance": "No issued pass remains usable and no acceptance outcome is unknown.",
+    "stock_and_region_permitted": "Required actual job stock and approved task region permit the bounded action.",
+    "complete_16_case_pass": "Exactly all 16 distinct cases pass from actual lamp observations for the pinned run.",
+    "protected_matching_agreement_revision": "Signed report, agreement, manifest and still-protected structural revision match.",
+    "valid_pass_review_and_escrow_time": "Execution time is before every applicable pass/review/absolute expiry.",
+    "canonical_requester_acceptance": "Canonical confirmed contract outcome carries bound requester authorization.",
+    "all_fixed_rewards_confirmed_claimed": "Every immutable recipient allocation has a canonical successful actual claim.",
+    "absolute_expiry_reached": "Authoritative chain time is at or beyond immutable absolute expiry.",
+    "escrow_unaccepted": "Escrow has not selected Accepted/Paid terminal labor outcome.",
+    "canonical_refund_to_requester": "Canonical successful allowed refund pays original requester once."
+  },
+  "allowed": [
+    {
+      "from": "Draft",
+      "to": "Open",
+      "action": "publish_job",
+      "roles": [
+        "requester"
+      ],
+      "guards": [
+        "supported_complete_terms"
+      ]
+    },
+    {
+      "from": "Draft",
+      "to": "Cancelled",
+      "action": "withdraw_unfunded",
+      "roles": [
+        "requester"
+      ],
+      "guards": [
+        "unfunded_no_unknown_funding"
+      ]
+    },
+    {
+      "from": "Open",
+      "to": "Cancelled",
+      "action": "withdraw_unfunded",
+      "roles": [
+        "requester"
+      ],
+      "guards": [
+        "unfunded_no_unknown_funding"
+      ]
+    },
+    {
+      "from": "Open",
+      "to": "Agreed",
+      "action": "approve_agreement",
+      "roles": [
+        "requester",
+        "builder",
+        "contributor"
+      ],
+      "guards": [
+        "supported_complete_terms",
+        "current_independent_offer",
+        "all_required_approvals"
+      ]
+    },
+    {
+      "from": "Agreed",
+      "to": "Funded",
+      "action": "fund_labor",
+      "roles": [
+        "requester"
+      ],
+      "guards": [
+        "canonical_exact_funding",
+        "all_required_approvals",
+        "before_work_deadline"
+      ]
+    },
+    {
+      "from": "Agreed",
+      "to": "Cancelled",
+      "action": "close_expired_unfunded",
+      "roles": [
+        "workflow_coordinator"
+      ],
+      "guards": [
+        "approval_expired",
+        "unfunded_no_unknown_funding"
+      ]
+    },
+    {
+      "from": "Funded",
+      "to": "Procuring",
+      "action": "authorize_purchase",
+      "roles": [
+        "requester"
+      ],
+      "guards": [
+        "canonical_exact_funding",
+        "journaled_bounded_purchase",
+        "before_work_deadline"
+      ]
+    },
+    {
+      "from": "Procuring",
+      "to": "DeliveryPending",
+      "action": "confirm_redemption",
+      "roles": [
+        "delivery_worker"
+      ],
+      "guards": [
+        "canonical_bound_whole_kit_claim"
+      ]
+    },
+    {
+      "from": "DeliveryPending",
+      "to": "Building",
+      "action": "record_reconciled_delivery",
+      "roles": [
+        "delivery_worker"
+      ],
+      "guards": [
+        "actual_reconciled_delivery"
+      ]
+    },
+    {
+      "from": "Building",
+      "to": "Inspecting",
+      "action": "request_inspection",
+      "roles": [
+        "builder",
+        "bot"
+      ],
+      "guards": [
+        "current_revision_and_lease",
+        "structural_lock_acquired",
+        "before_work_deadline"
+      ]
+    },
+    {
+      "from": "Inspecting",
+      "to": "RepairRequired",
+      "action": "record_failed_inspection",
+      "roles": [
+        "inspection_attestor"
+      ],
+      "guards": [
+        "actual_complete_failed_report"
+      ]
+    },
+    {
+      "from": "Inspecting",
+      "to": "Building",
+      "action": "invalidate_incomplete_inspection",
+      "roles": [
+        "inspection_attestor"
+      ],
+      "guards": [
+        "explicit_incomplete_reason",
+        "no_usable_pass_or_unknown_acceptance"
+      ]
+    },
+    {
+      "from": "RepairRequired",
+      "to": "Building",
+      "action": "request_repair",
+      "roles": [
+        "builder"
+      ],
+      "guards": [
+        "current_revision_and_lease",
+        "no_usable_pass_or_unknown_acceptance",
+        "stock_and_region_permitted",
+        "before_work_deadline"
+      ]
+    },
+    {
+      "from": "Inspecting",
+      "to": "ReadyForReview",
+      "action": "issue_pass_attestation",
+      "roles": [
+        "inspection_attestor"
+      ],
+      "guards": [
+        "complete_16_case_pass",
+        "protected_matching_agreement_revision",
+        "before_work_deadline"
+      ]
+    },
+    {
+      "from": "ReadyForReview",
+      "to": "Accepted",
+      "action": "accept_revision",
+      "roles": [
+        "requester"
+      ],
+      "guards": [
+        "protected_matching_agreement_revision",
+        "valid_pass_review_and_escrow_time",
+        "canonical_requester_acceptance"
+      ]
+    },
+    {
+      "from": "Accepted",
+      "to": "Paid",
+      "action": "record_all_rewards_claimed",
+      "roles": [
+        "workflow_coordinator"
+      ],
+      "guards": [
+        "all_fixed_rewards_confirmed_claimed"
+      ]
+    },
+    {
+      "from": "Funded",
+      "to": "Refunded",
+      "action": "request_timeout_refund",
+      "roles": [
+        "requester"
+      ],
+      "guards": [
+        "absolute_expiry_reached",
+        "escrow_unaccepted",
+        "canonical_refund_to_requester"
+      ]
+    },
+    {
+      "from": "Procuring",
+      "to": "Refunded",
+      "action": "request_timeout_refund",
+      "roles": [
+        "requester"
+      ],
+      "guards": [
+        "absolute_expiry_reached",
+        "escrow_unaccepted",
+        "canonical_refund_to_requester"
+      ]
+    },
+    {
+      "from": "DeliveryPending",
+      "to": "Refunded",
+      "action": "request_timeout_refund",
+      "roles": [
+        "requester"
+      ],
+      "guards": [
+        "absolute_expiry_reached",
+        "escrow_unaccepted",
+        "canonical_refund_to_requester"
+      ]
+    },
+    {
+      "from": "Building",
+      "to": "Refunded",
+      "action": "request_timeout_refund",
+      "roles": [
+        "requester"
+      ],
+      "guards": [
+        "absolute_expiry_reached",
+        "escrow_unaccepted",
+        "canonical_refund_to_requester"
+      ]
+    },
+    {
+      "from": "Inspecting",
+      "to": "Refunded",
+      "action": "request_timeout_refund",
+      "roles": [
+        "requester"
+      ],
+      "guards": [
+        "absolute_expiry_reached",
+        "escrow_unaccepted",
+        "canonical_refund_to_requester"
+      ]
+    },
+    {
+      "from": "RepairRequired",
+      "to": "Refunded",
+      "action": "request_timeout_refund",
+      "roles": [
+        "requester"
+      ],
+      "guards": [
+        "absolute_expiry_reached",
+        "escrow_unaccepted",
+        "canonical_refund_to_requester"
+      ]
+    },
+    {
+      "from": "ReadyForReview",
+      "to": "Refunded",
+      "action": "request_timeout_refund",
+      "roles": [
+        "requester"
+      ],
+      "guards": [
+        "absolute_expiry_reached",
+        "escrow_unaccepted",
+        "canonical_refund_to_requester"
+      ]
+    }
+  ],
+  "all_other_state_pairs_denied": true,
+  "cancelled_or_refunded_material_obligations_survive": true
+}

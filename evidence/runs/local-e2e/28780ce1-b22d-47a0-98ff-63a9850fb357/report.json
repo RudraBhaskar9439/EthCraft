@@ -1,0 +1,90 @@
+{
+  "runId": "28780ce1-b22d-47a0-98ff-63a9850fb357",
+  "status": "pass",
+  "mode": "LOCAL_SYNTHETIC_ONLY",
+  "phases": [
+    {
+      "phase": "P4",
+      "detail": "real local signatures, durable wallet links and one canonical funded agreement",
+      "status": "pass"
+    },
+    {
+      "phase": "P5",
+      "detail": "actual local CRED/KIT bytecode and item-level synthetic backing verified",
+      "status": "pass"
+    },
+    {
+      "phase": "P6",
+      "detail": "fresh state and the correctly attached hook permit a real v4 exact-output swap",
+      "status": "pass"
+    },
+    {
+      "phase": "P7",
+      "detail": "bounded purchase, atomic burn/claim and one durable six-material delivery with replay",
+      "status": "pass"
+    },
+    {
+      "phase": "P3",
+      "detail": "scripted proposal passes fresh policy, durable action budget and fenced receiving execution",
+      "status": "pass"
+    },
+    {
+      "phase": "P8",
+      "detail": "typed inspection, retained pass lock, explicit requester acceptance and exact one-time labor claim",
+      "status": "pass"
+    }
+  ],
+  "transactions": [
+    {
+      "operationId": "66daf16c-cb39-4e6c-a7a7-4208de0f0785",
+      "functionName": "fund",
+      "hash": "0xd4911824f4202c08952f7ed0c5171770bdf3889fac0bcebf78abadc7e4721adc",
+      "blockNumber": "37"
+    },
+    {
+      "operationId": "34d42474-9f2d-4666-8c5c-416361346954",
+      "functionName": "publish",
+      "hash": "0x4c17d9ca8954587e88743bd5e09b5e9f516dd1da2b97ad1ec5360adbd7d18405",
+      "blockNumber": "38"
+    },
+    {
+      "operationId": "fb251889-e592-422e-9ddd-db5677f4033a",
+      "functionName": "markDelivered",
+      "hash": "0x71069b0189c0174b02647a855395377a94832319285177574ddde09b31dfd1e8",
+      "blockNumber": "40"
+    }
+  ],
+  "realMoneySpent": 0,
+  "limits": [
+    "Scripted inference, local test wallets and synthetic inventory/world observations.",
+    "No independent humans, live 0G or token-linked Minecraft operation."
+  ],
+  "jobId": "05851082-d0aa-44ed-b83c-2452899c7db1",
+  "agreementHash": "0xa7b1b5296064b4b1413196b3d5cecbacbbab98dbea2d07ba7c2e8f89f2c13004",
+  "schema": "local_demo_28780ce1b22d47a098ff63a9850fb357",
+  "chainGenesisHash": "0xa337789bdc5a15bf29d62ee85cef65c5751da9b8344be6643b547ad209f9fc56",
+  "purchase": {
+    "operation_id": "d8e164ba-daa1-4001-9afe-8218a2be3a7f",
+    "agreement_hash": "0xa7b1b5296064b4b1413196b3d5cecbacbbab98dbea2d07ba7c2e8f89f2c13004",
+    "job_id": "0xf818b3df8530173322661d37285bed31f3a48df6a508a3a9cbf2f265c83406e7",
+    "requester": "0x15d34aaf54267db7d7c367839aaf71a00a2c6a65",
+    "destination_hash": "0xdabed4cabf11a4754c607d2b2881772343494b036a72a7592b0550da24e0e518",
+    "kits": "1",
+    "max_cred": "3000000000000000000",
+    "deadline": "1793312874",
+    "status": "confirmed",
+    "transaction_hash": "0x76f43c69cd423a3dd9e18f9fbd28183386b6bdfe74c0d34cfd68a950f3bde23b",
+    "claim_id": "0xa66afcad97d32b40aff68d890b2e3778c65a3b3e91a2eccbe4208f6c1882f4fd",
+    "spent_cred": "1045335616498368583"
+  },
+  "deliveryReceipt": "0x600979e08322c3921e02efb575b04504c10d041b60343c4300e89c1cfc70e668",
+  "inspectionSource": "local_synthetic_world",
+  "settlement": {
+    "status": "settled",
+    "acceptanceOperationId": "2cf2819c-a458-4041-bf60-931770cb2efd",
+    "claimOperationId": "bfa26aa2-9508-4759-b42d-637972a6679a",
+    "claimed": "6000000000000000000",
+    "claimTransactionHash": "0x03ede44a12e0264c602bcf7611ba1a191b4fecabd11f54684351c29e96e06030"
+  },
+  "finishedAt": "2026-10-29T22:39:18.019Z"
+}

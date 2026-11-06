@@ -1,0 +1,109 @@
+{
+  "status": "fail",
+  "runId": "da58c3a6-6686-4004-b197-fad828182e00",
+  "scope": "Disclosed TaskTester fixture: natural-language inspection/custom arch, native gathering, 2-plank/4-stick crafting and carried-item delivery; no grants/resets/wallet actions",
+  "checks": [
+    {
+      "name": "existing-owner-and-task-history-preflight",
+      "status": "pass",
+      "ruddyAgent": "CityAgent1",
+      "fixtureSlot": "CityAgent2",
+      "retainedTasks": 6,
+      "execute": true
+    }
+  ],
+  "independentHumansVerified": 0,
+  "publicTransactions": 0,
+  "parentReport": "evidence\\runs\\playable-autonomy\\2cfe5ecd-3358-426e-b63d-fc1be0c72195\\report.json",
+  "resumeMode": "Prepared two physical resource blocks; no withdrawal or placement replay",
+  "preflight": {
+    "ruddyAgent": "CityAgent1",
+    "fixtureSlot": "CityAgent2",
+    "retainedTasks": 6,
+    "execute": true
+  },
+  "world": "agentcity_play",
+  "runtimeContainer": "agentcity-playable-ce946e82",
+  "region": {
+    "origin": [
+      -45,
+      64,
+      4
+    ],
+    "sourceChest": [
+      -47,
+      64,
+      2
+    ],
+    "min": {
+      "x": -47,
+      "y": 64,
+      "z": 2
+    },
+    "destinationChest": [
+      -47,
+      64,
+      4
+    ],
+    "max": {
+      "x": -36,
+      "y": 71,
+      "z": 13
+    },
+    "slotName": "CityAgent2"
+  },
+  "lastNavigation": {
+    "label": "Prepared connector approach",
+    "target": [
+      -36,
+      64,
+      8
+    ],
+    "range": 0,
+    "from": [
+      -15.5,
+      64,
+      8.5
+    ],
+    "startedAt": "2026-10-31T11:06:39.805Z",
+    "pathUpdate": {
+      "status": "success",
+      "nodes": [
+        {
+          "x": -16.5,
+          "y": 64,
+          "z": 8.5
+        },
+        {
+          "x": -17.5,
+          "y": 64,
+          "z": 8.5
+        },
+        {
+          "x": -18.5,
+          "y": 64,
+          "z": 8.5
+        },
+        {
+          "x": -19.5,
+          "y": 64,
+          "z": 8.5
+        }
+      ]
+    },
+    "arrived": [
+      -35.3669312914503,
+      64,
+      8.500000000000895
+    ]
+  },
+  "error": "Timed out: /agent follow",
+  "messages": [
+    "TaskTester joined the game",
+    "Entered agentcity_play. Explore, collect materials and use your agent's assigned task area. /lobby returns to the NPCs.",
+    "Request queued: agent_follow (62aec7a0).",
+    "CityAgent2 joined the game",
+    "Your agent cannot see your bound player. Join the hub and try again."
+  ],
+  "finishedAt": "2026-10-31T11:08:14.255Z"
+}

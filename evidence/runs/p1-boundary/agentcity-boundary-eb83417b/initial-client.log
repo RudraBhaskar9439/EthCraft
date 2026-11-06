@@ -1,0 +1,26 @@
+{"step":"physical_fixture_baseline","status":"pass"}
+{"step":"missing_control_authority_refused","status":"pass"}
+{"step":"wrong_live_actor_session","status":"pass"}
+{"step":"missing_parameters","status":"pass"}
+{"step":"null_actor","status":"pass"}
+{"step":"extra_envelope_field","status":"pass"}
+{"step":"cross_context_serverId","status":"pass"}
+{"step":"cross_context_jobId","status":"pass"}
+{"step":"cross_context_agreementVersion","status":"pass"}
+{"step":"cross_context_authorizationReference","status":"pass"}
+{"step":"requester_cannot_build","status":"pass"}
+{"step":"requester_cannot_lock","status":"pass"}
+{"step":"out_of_bounds_placement","status":"pass"}
+{"step":"server_confirmed_navigation","status":"pass"}
+{"step":"forged_display_name_cannot_place","status":"pass"}
+{"step":"server_confirmed_navigation","status":"pass"}
+{"step":"actual_job_stock_withdraw_once","status":"pass"}
+{"step":"withdraw_replay_after_window_closed","status":"pass"}
+{"step":"server_confirmed_navigation","status":"pass"}
+{"step":"actual_job_stock_return_once","status":"pass"}
+{"step":"return_replay_after_window_closed","status":"pass"}
+{"step":"server_confirmed_navigation","status":"pass"}
+{"step":"actual_stock_shortage_refused","status":"pass"}
+{"step":"forged_client_stock_field_refused","status":"pass"}
+{"step":"server_confirmed_navigation","status":"pass"}
+{"status":"fail","assertion_groups":25,"error":{"name":"Error","message":"WorldBuilder bounded navigation: timeout after 18000 ms","stack":"Error: WorldBuilder bounded navigation: timeout after 18000 ms\n    at Timeout.<anonymous> (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/inspection/probe.cjs:51:39)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}}

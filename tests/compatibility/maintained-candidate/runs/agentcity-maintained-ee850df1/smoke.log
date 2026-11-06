@@ -1,0 +1,2 @@
+{"status":"fail","checks":3,"error":{"name":"AssertionError","message":"The unchanged protection plugin must record refusal of the actual native dig."}}
+{"candidateClientProfile":"1.21.11-tick-end-at-physics-cadence","counts":[{"player":"WorldBuilder","physicsTickBoundaries":676},{"player":"WorldRequester","physicsTickBoundaries":573},{"player":"WorldInspector","physicsTickBoundaries":466}]}

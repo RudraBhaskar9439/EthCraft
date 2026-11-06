@@ -1,0 +1,9 @@
+{
+  "sources": {
+    "scripts/local_host.py": "fe8e867a2f7e5077ea0154f907f69ffb33c9d8c516105747782bd606143ff65a",
+    "ops/postgres_snapshot.mjs": "9c8381df1c38ece662fe896ee67f44a72aabc4df24502ae29181e7592dd331ce",
+    "tests/recovery/smoke.py": "a4e4b62fcbc12c968834b88f7ddabcc5cbf3fba8da2ca67af2cf9ff1203cafbd",
+    "docs/HOST_OPERATIONS.md": "8a9b2d4aea30025b00f763e82032931c80955432d11cf6b012859066043c3868"
+  },
+  "scope": "Source snapshot for the successful focused recovery run; the operations document is explanatory."
+}

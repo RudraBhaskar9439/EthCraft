@@ -1,0 +1,334 @@
+{
+  "phase": "P4",
+  "release": null,
+  "environment": null,
+  "open_defects": [],
+  "review": {
+    "status": "pending",
+    "reviewer": null,
+    "release": null,
+    "evidence": []
+  },
+  "cases": {
+    "P4-001": {
+      "status": "not_run",
+      "case_digest": "9a45a221a09ce433715d997ca305a2728527e76b3f6c3725e27972e19e7e3be6",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-002": {
+      "status": "not_run",
+      "case_digest": "a9c5be4fa001268c9102ba706b07f3bf4f52968e85cd3193609b109c86080cb9",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-003": {
+      "status": "not_run",
+      "case_digest": "5a5f3cabea32105ad5172a34cfa09ad39ce97072ca34d02324c7857ddf3b7464",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-004": {
+      "status": "not_run",
+      "case_digest": "e7d1fbde3b992bfb0906f83cbd5eefd23bf586458212bef5932608fdeeb82b8c",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-005": {
+      "status": "not_run",
+      "case_digest": "83b52f7674b809bd968da7e42897362a0c8846c67efd82253ccde615569c1777",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-006": {
+      "status": "not_run",
+      "case_digest": "1ad7f58a5b1ab0d73324b4b167572c731d1319b9d4713fa0e1ba4092c832925a",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-007": {
+      "status": "not_run",
+      "case_digest": "b3bb5205431ab2df5d9ec80b753b7c10c690dc50eb3a7a030918512fbacd0db0",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-008": {
+      "status": "not_run",
+      "case_digest": "b2f4313e39cc4169ad777e40760165fee18c2de1f8567b1c05726c658b849133",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-009": {
+      "status": "not_run",
+      "case_digest": "d5c51833efe1314b98706aaed60eafe70d79ce27f1990eb9f39fb07aa19a6075",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-010": {
+      "status": "not_run",
+      "case_digest": "f543aee4d631fd1e32bb74a1aa39f964a29336a97e2cf6029ed15ed8dd926a9e",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-011": {
+      "status": "not_run",
+      "case_digest": "739e3048193c627319a7b8722616d71042b5d762d1dab952c3a1fcf8cf173b9f",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-012": {
+      "status": "not_run",
+      "case_digest": "d0bfb619b44a236b1525d493c8ad23dcaeb0b22799c69cdaac1fb82e0ac011df",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-013": {
+      "status": "not_run",
+      "case_digest": "cb956625e9e05ab6b10503df057b1e0e4c60fef94a4b8d4a3357e6cdc9be808e",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-014": {
+      "status": "not_run",
+      "case_digest": "f904be6809b9c6e1dadde24bcbc1f190d8f51f8ca34ee69f93e9e9bc8c5e03e6",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-015": {
+      "status": "not_run",
+      "case_digest": "fef32c476d24cd37c77f0f99cd981ad358a53e938c83f0b90ad776507492cfe0",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-016": {
+      "status": "not_run",
+      "case_digest": "29c7c02f6e76e420030f6895a49f22851fdd4af71449f1a46f122465b1e1406b",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-017": {
+      "status": "not_run",
+      "case_digest": "d90e14c4e11a8e05bc999d51a8187335ec0902dde0c5b192004db2446107d9d1",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-018": {
+      "status": "not_run",
+      "case_digest": "c4becd00cf930811e15fa4853e0859c48a47019aef85711baaa86c0ff62732f5",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-019": {
+      "status": "not_run",
+      "case_digest": "371a17aa90f6100decaf7715aaf24434f6f42e4c4c33857dbc56cd6ac0a19f3e",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-020": {
+      "status": "not_run",
+      "case_digest": "e314e6c3835017b08ec5a61ddc5a11aac794b4dd6822cd5819c22f85bbc103da",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-021": {
+      "status": "not_run",
+      "case_digest": "d58580e55e481dab7bb5335cd27444ef62cd1b146a712b774254d50b2ca8131d",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-022": {
+      "status": "not_run",
+      "case_digest": "37fd3a92020fa38b09b7cc10b588ffdf5761b3c827f7998d8ceb2ac3e532d661",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-023": {
+      "status": "not_run",
+      "case_digest": "9c7c90af6c47be85f78464904d9aa9e7e6ec2bed8236e53b46a25f61e4279bcc",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-024": {
+      "status": "not_run",
+      "case_digest": "eaead0fb70e819a8d3d51498e9a9563ae058a33c52922ff6487d28183b2a4f4c",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-025": {
+      "status": "not_run",
+      "case_digest": "c3d2417b3e20038ee969cfc091917f3a8ac5a2c39bbb2a39c001930ff6ddc7cf",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-026": {
+      "status": "not_run",
+      "case_digest": "fb4652ce42b19b7bb0f203e65744e1ba1ffa537adca53eeb515d2b0e3e7ea002",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-027": {
+      "status": "not_run",
+      "case_digest": "d266357424ba4bc0f150eb0738443f72d5f575801d0e6577dbf2a3f16e9c1c36",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-028": {
+      "status": "not_run",
+      "case_digest": "49348d5a01a723d9f7e3be75e625e21a706503e9a4a7a5a12352306e827e3bd0",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P4-029": {
+      "status": "blocked",
+      "case_digest": "0b245b87152a10eb6e2f7b1d18c00dcd5acd8c41439a20b6a2cf8066bbb9f696",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      },
+      "reason": "Independent human participants and authenticated game accounts are not established by local fixture bots."
+    }
+  }
+}

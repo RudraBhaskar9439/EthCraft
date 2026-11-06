@@ -1,0 +1,35 @@
+{
+  "status": "fail",
+  "scope": "Actual isolated PostgreSQL plus explicitly simulated Discord REST/Gateway/interactions; zero external posts, provider wallets or human verification",
+  "checks": [
+    {
+      "name": "command-schema-and-own-versus-foreign-agent-panel-controls",
+      "status": "pass"
+    },
+    {
+      "name": "existing-writable-channel-fallback-owner-gates-and-stable-command-replay",
+      "status": "pass"
+    },
+    {
+      "name": "work-request-quote-revision-and-requester-acceptance-retain-immutable-references-without-execution",
+      "status": "pass"
+    },
+    {
+      "name": "screenshot-attachments-stay-owner-private-and-use-observation-timestamp",
+      "status": "pass"
+    },
+    {
+      "name": "cancel-control-is-owner-only-and-interaction-retries-do-not-repeat-agent-command",
+      "status": "pass"
+    },
+    {
+      "name": "asynchronous-ready-errors-are-caught-and-do-not-mark-the-bridge-ready",
+      "status": "pass"
+    }
+  ],
+  "publicDiscordPosts": 0,
+  "actualGatewayConnections": 0,
+  "independentHumansVerified": 0,
+  "publicTransactions": 0,
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n0 !== 1\n\n    at file:///C:/Users/Rudransh%20Shinghal/agentcity-minecraft/tests/playable/discord-bot.mjs:112:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)"
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "agentcity.p2.construction-client.v1",
+  "phase": "initial",
+  "status": "pass",
+  "started_at": "2026-10-29T19:11:00.687Z",
+  "independent_humans": 0,
+  "scripted_roles": true,
+  "checks": [
+    {
+      "name": "fresh-empty-circuit-and-exact-controlled-stock",
+      "final_blocks_seeded": 0,
+      "stock_total": 144,
+      "operator_glass": 198,
+      "status": "pass",
+      "at": "2026-10-29T19:11:14.256Z"
+    },
+    {
+      "name": "unsupported-orientation-and-blueprint-hash-refused-before-effects",
+      "refused": 2,
+      "status": "pass",
+      "at": "2026-10-29T19:11:14.257Z"
+    },
+    {
+      "name": "bounded-obstructed-navigation-preserves-stock-and-structure",
+      "target_relative": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "at": "2026-10-29T19:11:14.544Z"
+    },
+    {
+      "name": "receiving-boundary-refuses-session-role-revision-expiry-and-lock-without-effects",
+      "wrong_session": "ACTOR_SESSION",
+      "unauthorized_role": "FORBIDDEN",
+      "stale": "STALE_REVISION",
+      "expired_withdrawal": "EXPIRED_OR_OVERLONG",
+      "expired_placement": "EXPIRED_OR_OVERLONG",
+      "locked": "LOCKED",
+      "status": "pass",
+      "at": "2026-10-29T19:11:21.261Z"
+    },
+    {
+      "name": "native12-placement-checkpoint-and-stock-conservation",
+      "completed": 12,
+      "carried": 132,
+      "stock": 0,
+      "revision": 3,
+      "status": "pass",
+      "at": "2026-10-29T19:12:04.072Z"
+    }
+  ],
+  "live0GVerified": false,
+  "spending": 0,
+  "worker": {
+    "status": "checkpointed",
+    "completed": 12,
+    "placedThisRun": 12,
+    "readiness": false
+  },
+  "finished_at": "2026-10-29T19:12:04.573Z"
+}

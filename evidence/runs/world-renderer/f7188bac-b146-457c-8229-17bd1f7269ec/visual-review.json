@@ -1,0 +1,13 @@
+{
+  "scope": "Synthetic native renderer fixture only; no live Minecraft capture",
+  "reviewed": true,
+  "method": "view_image tool",
+  "imageSha256": "205c8040224ebd15f54a312fbbe1b08bf34780a00eb84557f66cd06d15d0be97",
+  "observations": [
+    "960x640 textured native frame",
+    "Stone floor visible",
+    "Two oak pillars and three-block top beam form the expected seven-block arch",
+    "No generated imagery or browser used"
+  ],
+  "liveWorldVerification": "pending root-owned bot snapshot"
+}

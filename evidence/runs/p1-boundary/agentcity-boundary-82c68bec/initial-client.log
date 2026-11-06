@@ -1,0 +1,25 @@
+{"step":"physical_fixture_baseline","status":"pass"}
+{"step":"missing_control_authority_refused","status":"pass"}
+{"step":"wrong_live_actor_session","status":"pass"}
+{"step":"missing_parameters","status":"pass"}
+{"step":"null_actor","status":"pass"}
+{"step":"extra_envelope_field","status":"pass"}
+{"step":"cross_context_serverId","status":"pass"}
+{"step":"cross_context_jobId","status":"pass"}
+{"step":"cross_context_agreementVersion","status":"pass"}
+{"step":"cross_context_authorizationReference","status":"pass"}
+{"step":"requester_cannot_build","status":"pass"}
+{"step":"requester_cannot_lock","status":"pass"}
+{"step":"out_of_bounds_placement","status":"pass"}
+{"step":"forged_display_name_cannot_place","status":"pass"}
+{"step":"actual_job_stock_withdraw_once","status":"pass"}
+{"step":"withdraw_replay_after_window_closed","status":"pass"}
+{"step":"actual_job_stock_return_once","status":"pass"}
+{"step":"return_replay_after_window_closed","status":"pass"}
+{"step":"actual_stock_shortage_refused","status":"pass"}
+{"step":"forged_client_stock_field_refused","status":"pass"}
+{"step":"stale_revision_refused","status":"pass"}
+{"step":"expired_command_refused","status":"pass"}
+{"step":"creative_native_placement_prevented","status":"pass"}
+{"step":"creative_placement_refused_before_mutation","status":"pass"}
+{"status":"fail","assertion_groups":24,"error":{"name":"Error","message":"Server did not answer the placement at (-2, 82, -4): Event blockUpdate:(-2, 82, -4) did not fire within timeout of 5000ms","stack":"Error: Server did not answer the placement at (-2, 82, -4): Event blockUpdate:(-2, 82, -4) did not fire within timeout of 5000ms\n    at /Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/mineflayer/lib/plugins/place_block.js:33:27\n    at async placeBlockWithOptions (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/mineflayer/lib/plugins/place_block.js:28:26)\n    at async EventEmitter.placeBlock (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/mineflayer/lib/plugins/place_block.js:48:5)\n    at async bounded (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/inspection/probe.cjs:49:12)\n    at async initial (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/inspection/probe.cjs:338:3)\n    at async run (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/inspection/probe.cjs:446:28)"}}

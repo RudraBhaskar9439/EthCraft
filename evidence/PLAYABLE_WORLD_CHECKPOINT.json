@@ -1,0 +1,304 @@
+{
+  "date": "2026-10-31",
+  "implementationRelease": "c4f3ba0be74f25747e335638ed81f125d319f625",
+  "scope": "Verified local playable expansion; not unrestricted agent behavior, a crypto wallet release, independent-human proof or canonical phase approval",
+  "environment": {
+    "paper": "26.3 build231",
+    "javaImage": "eclipse-temurin@sha256:83f4a7fc27df94dcc7b8de04d14cbbba8da14406f921e966969c3b09000aa507",
+    "node": "26.3.1",
+    "mineflayer": "4.39.0 with 1.21.11 client through ViaVersion/ViaBackwards5.12.2",
+    "pluginSha256": "228a5c1ab4865f42a9294a0fc24cd4e2a43344403cad5e7dcd71d36ebccb9bf5",
+    "gameAddress": "127.0.0.1:25596",
+    "identityMode": "local allowlisted fixture names",
+    "blockchainLinked": false
+  },
+  "verified": {
+    "lobby": {
+      "actualChecks": 9,
+      "world": "agentcity_lobby",
+      "npcs": 5,
+      "playWorld": "agentcity_play",
+      "calculatorEntry": "optional /museum"
+    },
+    "platformAndDelivery": {
+      "reportOverallStatus": "fail",
+      "actualPassedEffects": "4 real plank placements and 4 real cobblestone delivered; later manual item handoff failed without a reward"
+    },
+    "agentCollectionAndSale": {
+      "actualChecks": 5,
+      "sourceCobblestoneMoved": 4,
+      "coinsPaid": 4
+    },
+    "shelter": {
+      "actualChecks": 4,
+      "templateBlocks": 54,
+      "preexisting": 4,
+      "newPlacements": 50,
+      "withdrawals": 1,
+      "sourcePlanksBefore": 124,
+      "sourcePlanksAfter": 74,
+      "receipts": 51,
+      "recovery": "same original job and pending operation; no reset or extra material grant"
+    },
+    "playerSale": {
+      "actualChecks": 5,
+      "sourcePlanksBefore": 74,
+      "sourcePlanksAfter": 72,
+      "itemsRemoved": 2,
+      "coinsPaid": 4,
+      "shopTreasuryBefore": 9996,
+      "shopTreasuryAfter": 9992,
+      "retryExtraEffects": 0,
+      "insufficientItems": "cancelled with no payment or leaked hold"
+    },
+    "upgrade": {
+      "sameContainer": true,
+      "completedTasksRetained": 4,
+      "verifiedCanonicalMigrations": 2,
+      "unmigratedLegacyRecordsPreserved": 2,
+      "completedTaskReplaysWithoutAdapterDispatch": 2,
+      "ruddyOwnershipPreserved": true,
+      "taskLocks": 0,
+      "apiHealthy": true
+    },
+    "calculatorRevisionPreserved": 144,
+    "fixtures": {
+      "agentGroups": 5,
+      "taskGroups": 6,
+      "realPostgresGroups": 10,
+      "receiptScope": "PostgreSQL tests use explicit inventory-receipt fixtures, not Minecraft proof"
+    },
+    "planning": {
+      "unitTests": 56,
+      "integrity": "pass",
+      "productPhaseApproval": false
+    }
+  },
+  "coverageComposition": "Retained live lobby/platform/delivery/collection evidence plus same-job shelter recovery, final read-only block/material verification, final-JAR player sales and restart replay checks. These do not replace a complete canonical release qualification.",
+  "walletAudit": {
+    "gameCoins": "server ledger; no EVM signature",
+    "browserWallet": "eth_signTypedData_v4 with consent",
+    "humanTransactions": "eth_sendTransaction with consent",
+    "operatorRoles": "protected keystores sign programmatically; no browser popup does not mean unsigned crypto",
+    "freshWindowsPublicTestnetSignerConfigured": false,
+    "newPublicDeployment": false
+  },
+  "canonicalGate": {
+    "phase": "P0",
+    "status": "blocked",
+    "reason": "implementation scope changed since approved release; check_phase.py P0 failed as expected",
+    "originalLiveGates": "pending; unchanged"
+  },
+  "limitations": [
+    "Mining, crafting, arbitrary blueprints, paid player jobs and a player web dashboard remain unimplemented",
+    "Current sales pay internal Game Coins; requested in-game testnet wallets/token integration remain unimplemented",
+    "No independent human or Microsoft-authenticated acceptance proof",
+    "Friends LAN exposure/additional allowlisted names are not configured",
+    "Calculator functional lamp inspection was not rerun after playable plugin changes",
+    "Human already-open chest lock rejection is implemented but was not separately verified live",
+    "Historical public-testnet evidence remains separate from this Windows pilot"
+  ],
+  "attemptNotes": [
+    "Failed lobby world-name parser, item handoff, shelter navigation, observer return navigation and sale reply-matcher attempts remain retained",
+    "An upgrade preflight expected four migratable legacy records, observed two and stopped before changing server/JAR; final upgrade preserved both unverifiable legacy records without forcing migration"
+  ],
+  "nativeGitPush": "blocked: local Git cannot obtain GitHub credentials; connected-app snapshot publication handled separately",
+  "nextStep": "Broaden physical task tools, then implement the requested no-popup testnet wallet after local signer/funding setup",
+  "sourceFiles": [
+    {
+      "path": "backend/src/playable/agents.mjs",
+      "sha256": "c1a88e0a2972cf63319c6b906618ac9e94fa3c8dc6357949c9d07a67722d5075"
+    },
+    {
+      "path": "backend/src/playable/task-tools.mjs",
+      "sha256": "89c2e68dde30cb9ecca86fb28cd1235a36e1e702648dbdfe333c6a23e8d9091b"
+    },
+    {
+      "path": "backend/src/playable/economy.mjs",
+      "sha256": "2c22d7c23723151028256812f44b9f5dbfebc8f5c07b2cd96a284755ec4bb634"
+    },
+    {
+      "path": "backend/src/playable/economy.sql",
+      "sha256": "77fa9cbfa966643781fea1dc11db445b5102876026bcd1b295e4ebe8a127de61"
+    },
+    {
+      "path": "scripts/playable_worker.mjs",
+      "sha256": "b8fd73393ab91e43e76405e1993444ee130bc9bf7cedefc8092b54342c041b3f"
+    },
+    {
+      "path": "plugin/src/main/java/org/agentcity/paper/AgentCityPlugin.java",
+      "sha256": "b9aec4b4b4d4dc86d74984a465c89101b6a2af4d61097a938770d21318a9c703"
+    },
+    {
+      "path": "plugin/src/main/java/org/agentcity/paper/PlayableExperience.java",
+      "sha256": "39b1ae9f62cadfdd6ca1cd90e06741d77d3978775bfd9dd9570132aecf111bb3"
+    },
+    {
+      "path": "plugin/src/main/java/org/agentcity/paper/InventorySales.java",
+      "sha256": "8125e6c2c17d70fd51ffec481c5e1aa4c8e2e0a1ab323f687f33ef9e43fbbef1"
+    },
+    {
+      "path": "plugin/src/main/java/org/agentcity/paper/AgentTaskProtection.java",
+      "sha256": "3a3c6c3c0288096365fc640f15d5bba5f77802c509960278e2298fc351823a68"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "evidence/runs/playable-lobby/7d5b4aae-0dce-401d-b232-b2e0a95abf33/report.json",
+      "sha256": "d86325328e109583e70cb2db6f4045b1695f3c235fe0d5c8e79717610ce0dcd5",
+      "status": "fail",
+      "checks": 0
+    },
+    {
+      "path": "evidence/runs/playable-lobby/e33d5e73-8534-4769-867e-617771353f84/report.json",
+      "sha256": "bf18df92b016d92aca945d67c37f0033fb3f81df4e0112bc19dbe3b97cb84eaa",
+      "status": "pass",
+      "checks": 9
+    },
+    {
+      "path": "evidence/runs/playable-tasks/7789d699-e7aa-4560-81bf-b287597b1311/report.json",
+      "sha256": "1389fb177568e8501ff79001552eb62645e0037bec35f71a0fd6c3cb59f415c9",
+      "status": "fail",
+      "checks": 0
+    },
+    {
+      "path": "evidence/runs/playable-tasks/7e81fc63-66a7-4524-bfd7-5c708df6bd9f/report.json",
+      "sha256": "7ec2bfdce1dc9898c2c90e6c692e66d7ea00f225f5e699acb2cbdea6b59ea6f8",
+      "status": "fail",
+      "checks": 3
+    },
+    {
+      "path": "evidence/runs/playable-tasks/material-audit-f338ea80-7876-47a3-8a92-eba75e402b8b/report.json",
+      "sha256": "a162f2363526c642fd141ea97ce353bb6762bf44b2671f92cf009a3c95a3b85d",
+      "status": "observed",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-tasks/material-recovery-873c7a68-86f8-4dbd-9d8c-100f9895c869/report.json",
+      "sha256": "90057679866c93b363068cbea5443918729cb2afd264fe128a89d9146f4dc806",
+      "status": "observed",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-tasks/material-return-a85aaaa9-bb4c-4902-83d9-640675fbb40b/report.json",
+      "sha256": "c65e05ea47c181e1c19b85d07f1425f229a4b1707dde33dcbe18438afd8873bc",
+      "status": "pass",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-collect-sale/509e480f-b9f3-409d-b956-d944d2732c8e/report.json",
+      "sha256": "6b8acd5beebd86da70e36740c58a070e68fd2ef273a004086c0084132aae1d41",
+      "status": "pass",
+      "checks": 5
+    },
+    {
+      "path": "evidence/runs/playable-shelter/27bfa7b8-2ae5-4881-b2d0-5c6e0a464f31/report.json",
+      "sha256": "9c91eb9e2305080bebb9aae1e8c388cd28704f7ccd0df91133047e3f72bf533b",
+      "status": "fail",
+      "checks": 1
+    },
+    {
+      "path": "evidence/runs/playable-shelter/67177f30-e068-4d53-8bef-5b3bb0448dcc/report.json",
+      "sha256": "b322109db82d9a78165b079bce8a8fcf9c1ccea8aa97a0411e8c9b91b4c90152",
+      "status": "fail",
+      "checks": 0
+    },
+    {
+      "path": "evidence/runs/playable-shelter/a4ee020b-2383-4998-8ec6-6c7511f6537c/report.json",
+      "sha256": "cb423f05e3aacf833122422349c279be9b11fa04b2a34c5a9a4f6d787dba2b73",
+      "status": "aborted",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-shelter-resume/05b8862e-b345-4907-8541-0fa757fca8ae/report.json",
+      "sha256": "1822ab3868d856d2a2d84f4bbf0c74ca6a6b36d080255d3390a556cfc1212eff",
+      "status": "fail",
+      "checks": 1
+    },
+    {
+      "path": "evidence/runs/playable-shelter-resume/69776cb8-281b-4397-b968-a8a872b3c47d/report.json",
+      "sha256": "b1e5bdb227f7d4eab46dc433866207a81ee6972a0b8d2bfdf22e26eef541f44b",
+      "status": "fail",
+      "checks": 1
+    },
+    {
+      "path": "evidence/runs/playable-shelter-resume/70bba6c0-373c-42cd-a1c7-9eff9d9e3f41/report.json",
+      "sha256": "2f5aaa7ceaefdc438be614fe3d7a088386ab4a4b7aea45a2db93d0756f7c1cee",
+      "status": "fail",
+      "checks": 1
+    },
+    {
+      "path": "evidence/runs/playable-shelter-verify/a7b9613c-7619-4540-b7c5-283604b4e978/report.json",
+      "sha256": "9701955ae3735f8a68311b59ef97e5e9d2ec1f01494ccf3a56b8ea7913abfc85",
+      "status": "pass",
+      "checks": 4
+    },
+    {
+      "path": "evidence/runs/playable-upgrade/f2ce4027-236b-42f6-ab19-b13b6f3ae72f/report.json",
+      "sha256": "772d4be5ebf614205697b51a77cf0d14cbf78491726210508eef86b3b64382de",
+      "status": "pass",
+      "checks": null
+    },
+    {
+      "path": "evidence/runs/playable-sales/a3dccb5a-2b5f-42e5-8443-eb66658cdc2b/report.json",
+      "sha256": "a6d14137f9cf76835a014c47f153c0c078c3e5804c11d0ac72b8fc635a50b98f",
+      "status": "pass",
+      "checks": 5
+    },
+    {
+      "path": "evidence/runs/playable-sales/c3c06ae6-18d2-4abd-acbe-0b589766a0ff/report.json",
+      "sha256": "e3e73f4aff98e3203c4d4b45afe00fc1ba5b9500cf979e9ab6d3f0005f440244",
+      "status": "fail",
+      "checks": 0
+    },
+    {
+      "path": "evidence/runs/playable-economy/00f95b8e-1f77-44da-8e79-46d30a6b93cc/report.json",
+      "sha256": "d66506ea74d283908dab2558823a397bb4355de6d266763967443f889a56fc32",
+      "status": "pass",
+      "checks": 9
+    },
+    {
+      "path": "evidence/runs/playable-economy/4620f9cc-ad5a-4c7d-955f-21855e9ff5a4/report.json",
+      "sha256": "72d51f77a4de91e51f4a5c99cde0d44abb9e6f6a8d2a1ce3fc73cb2d8590028e",
+      "status": "fail",
+      "checks": 0
+    },
+    {
+      "path": "evidence/runs/playable-economy/74eef9c4-87ca-4cb6-82bb-c87beb2b139a/report.json",
+      "sha256": "7f18dc6e33b31bb37e47e56464c654383e3f1c9b42b2a7ed9c42e115d033f59d",
+      "status": "pass",
+      "checks": 10
+    },
+    {
+      "path": "evidence/runs/playable-economy/797e1994-0220-4d3d-a703-2414489fc362/report.json",
+      "sha256": "586fdd0861bb8ff46a5b428a4949ecce720d1774ceada2c6609e5180bbd954b1",
+      "status": "fail",
+      "checks": 0
+    },
+    {
+      "path": "evidence/runs/playable-economy/8ad2f24e-fab3-4bb6-985f-0e3b3d1b3f50/report.json",
+      "sha256": "9ac70badad71b04cc2612c2f4a1a9d924dcd2541606e82b0d36fc224581693fc",
+      "status": "pass",
+      "checks": 10
+    },
+    {
+      "path": "evidence/runs/playable-economy/d6c2728b-7aa9-413c-945e-12de723d12c3/report.json",
+      "sha256": "286bd373d62501ec5aaf04c0854797c472de23f3e98619904617674eb9fb7581",
+      "status": "pass",
+      "checks": 5
+    },
+    {
+      "path": "evidence/runs/playable-economy/e2f46ede-a159-474e-abb0-8e65e2500472/report.json",
+      "sha256": "17915251fe7bdd0e69390bf1ff5db80dbb5e52eefadffe39ee9e9415c666cf62",
+      "status": "pass",
+      "checks": 10
+    },
+    {
+      "path": "evidence/runs/playable-economy/f0d1e289-de0a-43e9-bca3-899fe9a03375/report.json",
+      "sha256": "856e545499ec30b19bde39dcf388d1b885399e8df72727e6b2505b83e0e361d5",
+      "status": "pass",
+      "checks": 5
+    }
+  ],
+  "privateRuntimeCommitted": false
+}

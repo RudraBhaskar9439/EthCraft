@@ -1,0 +1,17 @@
+{
+  "operationId": "f4e183ed-6bbc-4a77-89ba-7d1961d6b0da",
+  "serverId": "local-inspection-server",
+  "jobId": "agentcity-fault-e960a531",
+  "agreementVersion": 1,
+  "actorId": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+  "expectedRevision": 0,
+  "authorizationReference": "local-boundary-authorization",
+  "expiresAtMs": 1793288565046,
+  "action": "PLACE",
+  "params": {
+    "x": -2,
+    "y": 82,
+    "z": -4,
+    "state": "minecraft:redstone_wire"
+  }
+}

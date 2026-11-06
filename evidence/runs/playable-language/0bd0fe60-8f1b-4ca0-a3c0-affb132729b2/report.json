@@ -1,0 +1,87 @@
+{
+  "status": "fail",
+  "model": "qwen3:1.7b",
+  "scope": "Actual Ollama language samples only; no Minecraft clients, inventory effects or independent-human proof",
+  "samples": [
+    {
+      "request": "make me a small wooden shelter, put four cobble in destination and sell four more",
+      "status": "pass",
+      "intent": {
+        "kind": "plan",
+        "message": "I can build, put four cobblestone in destination, then collect and sell four cobblestone.",
+        "steps": [
+          {
+            "action": "build_shelter",
+            "width": 4,
+            "depth": 4,
+            "material": "oak_planks"
+          },
+          {
+            "action": "deliver",
+            "item": "cobblestone",
+            "count": 4
+          },
+          {
+            "action": "collect",
+            "item": "cobblestone",
+            "count": 4
+          },
+          {
+            "action": "sell",
+            "item": "cobblestone",
+            "count": 4
+          }
+        ]
+      }
+    },
+    {
+      "request": "what are you doing?",
+      "status": "pass",
+      "intent": {
+        "kind": "progress",
+        "message": "I will report observed task progress.",
+        "steps": []
+      }
+    },
+    {
+      "request": "stop that",
+      "status": "pass",
+      "intent": {
+        "kind": "stop",
+        "message": "Stopping the active task to resolve the conflict with the new request.",
+        "steps": []
+      }
+    },
+    {
+      "request": "deliver some stuff",
+      "status": "fail",
+      "intent": {
+        "kind": "plan",
+        "message": "I can deliver some stuff.",
+        "steps": [
+          {
+            "action": "deliver",
+            "item": "cobblestone",
+            "count": 2
+          },
+          {
+            "action": "build_shelter",
+            "width": 4,
+            "depth": 4,
+            "material": "stone"
+          }
+        ]
+      },
+      "failure": "Expected values to be strictly equal:\n\n'plan' !== 'clarify'\n"
+    },
+    {
+      "request": "use stone instead",
+      "status": "pass",
+      "intent": {
+        "kind": "clarify",
+        "message": "Your active task uses oak_planks. Stop and reconcile it first; do you want to request a new stone task afterward?",
+        "steps": []
+      }
+    }
+  ]
+}

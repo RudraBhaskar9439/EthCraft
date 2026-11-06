@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "scope": "Focused disclosed native-effect fixtures; no live Minecraft, human participation, wallet or chain claims",
+  "checks": [
+    {
+      "name": "explicit mixed custom arch and procedural fallback compile with bounded bill and refuse reserved foreign or duplicate cells",
+      "status": "pass"
+    },
+    {
+      "name": "compact solid unions deduplicate same-material overlap subtract an actual arch opening and reject false bounding dimensions or material conflicts",
+      "status": "pass"
+    },
+    {
+      "name": "mixed build uses carried stock first safe real-ingredient recipe and exact chest shortfall; lost placement resumes without extra effects",
+      "status": "pass"
+    },
+    {
+      "name": "native harvest fixture reconciles lost reply from exact block and picked-up item delta without digging twice or touching protected access",
+      "status": "pass"
+    },
+    {
+      "name": "gathered two planks craft four canonical stick then deliver carried output from empty source chest exactly once",
+      "status": "pass"
+    },
+    {
+      "name": "fresh read-only inspection records actual fixture stock inventory and resources under short own plot lock with no material mutation or unfinished task",
+      "status": "pass"
+    }
+  ],
+  "sourceSha256": "f412ef0e0371e1a298ea6982d31a29b79999da0520f0fb56d2716acf50251ae9"
+}

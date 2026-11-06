@@ -1,0 +1,29 @@
+{
+  "status": "pass",
+  "scope": "Focused isolated PostgreSQL fixtures only; no real external identity or wallet creation",
+  "checks": [
+    {
+      "name": "Discord setup requires verified matching Privy OAuth subject consumes opaque challenge once and creates no fake Minecraft identity",
+      "status": "pass"
+    },
+    {
+      "name": "existing funded wallet row address provider ID and legacy owner UUID remain unchanged while Discord adds aliases",
+      "status": "pass"
+    },
+    {
+      "name": "verified Discord owner receives bounded own-agent physical grant before first Minecraft join without inventing a live connection",
+      "status": "pass"
+    },
+    {
+      "name": "reserved name ignores case while exact connection and different-name checks remain enforced; lost receipt reconciles once without claiming Microsoft verification",
+      "status": "pass"
+    },
+    {
+      "name": "remote grants refuse another owner financial tools expiry and revocation without granting wallet spending",
+      "status": "pass"
+    }
+  ],
+  "walletWrites": 0,
+  "publicTransactions": 0,
+  "sourceSha256": "bb752a3c158dd1c63e61ef9a8edb84b24ce8c30f6ee219390c940bd0f4c9a8a4"
+}

@@ -1,0 +1,56 @@
+{
+  "status": "pass",
+  "chainId": 1301,
+  "observedBlock": "66492364",
+  "scope": "Separate synthetic contract demonstration; no token effects in Minecraft",
+  "deploymentFileSha256": "2aa443dbb49d6ecbd50a60ad9e9773f905a78e60aa491772c366e2a7ffcb35fd",
+  "codeHashes": {
+    "creditToken": "0xd8cd1820624b2e5babd46de7265315e033e70425f1e8ffff1979cb522d2de986",
+    "kitCustody": "0xaa4b8e36eea72a656cdfce050a3545e34159fe95683b2ebb7f9b38430e275a38",
+    "stateRegistry": "0xd92bd9db3bd5ee295e7a83ffe45cfa4cde4718dff00d410bfb6aeff14ec7ae46",
+    "hook": "0x504b64755198ff22a8319846a9b18740d1ac0cd75fc1bb6fb4b733e5e845b1fa",
+    "procurement": "0x635e7b28bc2f95f56b0d00168b9fd2e9ee44db7212f791eea86e484cb5230919",
+    "jobEscrow": "0x68b8b1fe6a6e115f82a351d489c5e49f9d2b7346a4697f756d78c953cbb71da5"
+  },
+  "quantities": [
+    {
+      "item": 0,
+      "bill": "65",
+      "controlled": "65000"
+    },
+    {
+      "item": 1,
+      "bill": "4",
+      "controlled": "4000"
+    },
+    {
+      "item": 2,
+      "bill": "16",
+      "controlled": "16000"
+    },
+    {
+      "item": 3,
+      "bill": "37",
+      "controlled": "37000"
+    },
+    {
+      "item": 4,
+      "bill": "19",
+      "controlled": "19000"
+    },
+    {
+      "item": 5,
+      "bill": "3",
+      "controlled": "3000"
+    }
+  ],
+  "supply": "1000000000000000000000",
+  "pending": "0",
+  "checks": [
+    "chain/genesis identity",
+    "separate immutable roles and contract bindings",
+    "six-item circulating plus pending backing",
+    "official v4 deployment code hashes"
+  ],
+  "realMoneySpentUsd": 0
+}

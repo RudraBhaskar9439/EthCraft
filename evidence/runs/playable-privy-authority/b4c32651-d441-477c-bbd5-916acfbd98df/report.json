@@ -1,0 +1,22 @@
+{
+  "schema": "agentcity.playable-privy-authority.v1",
+  "recordedAt": "2026-10-31T09:15:10.570Z",
+  "status": "pass",
+  "scope": "Actual Privy API distinct owner and delegate quorum registration; runtime config migration. No actual wallet action/signature/export test.",
+  "sdk": "@privy-io/node@0.37.0",
+  "ownerQuorumId": "eggn8irg9axry1f97lhopmer",
+  "delegateQuorumId": "zptbxggvqckkpsu2wj9mrwys",
+  "distinctOwnerDelegate": true,
+  "quorumThresholds": 1,
+  "ownerKeyExcludedFromRuntimeCredentialFile": true,
+  "ownerPrivateFileLoadedOnlyBySetupCli": true,
+  "playerWalletsCreated": 0,
+  "publicTransactions": 0,
+  "fixtureVerification": "evidence/runs/playable-testnet-wallets/8c482bdd-d787-4dff-955d-f2e583b68cd6/report.json",
+  "officialPermissionSource": "https://docs.privy.io/controls/authorization-keys/owners/overview",
+  "limitations": [
+    "Separate private admin file under same Unix user is not an OS security boundary. Production requires offline admin or separate operator identity.",
+    "Actual managed player wallet creation, scoped delegate signing, and canonical receipt checks remain pending.",
+    "Provider dashboard administrative/export controls remain to be reviewed; no EVM keys were exported or export tested."
+  ]
+}

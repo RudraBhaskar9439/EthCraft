@@ -1,0 +1,110 @@
+{
+  "scope": "Actual local player inventory sale for Game Coins, using SaleTester and disclosed existing operator task-chest stock; no injected items, wallets, blockchain calls or independent-human claim",
+  "username": "SaleTester",
+  "taskSlot": "CityAgent2",
+  "status": "pass",
+  "startedAt": "2026-10-31T08:02:07.247Z",
+  "independentHumansVerified": 0,
+  "publicTransactions": 0,
+  "checks": [
+    {
+      "name": "sale-fixture-enters-real-survival-world",
+      "status": "pass"
+    },
+    {
+      "name": "two-real-planks-withdrawn-from-existing-registered-test-stock",
+      "status": "pass",
+      "stockBefore": 74,
+      "stockAfter": 72,
+      "inventoryBefore": 0,
+      "inventoryAfter": 2
+    },
+    {
+      "name": "actual-two-item-removal-pays-four-coins-from-finite-shop-treasury",
+      "status": "pass",
+      "before": "100",
+      "after": "104",
+      "treasuryBefore": "9996",
+      "treasuryAfter": "9992"
+    },
+    {
+      "name": "same-sale-retry-removes-zero-extra-items-and-pays-zero-extra-coins",
+      "status": "pass"
+    },
+    {
+      "name": "insufficient-items-receipt-cancels-without-coins-items-or-reservation-leak",
+      "status": "pass"
+    }
+  ],
+  "commands": [
+    {
+      "command": "/play",
+      "replies": [
+        "Entered agentcity_play. Explore, collect materials and use your agent's assigned task area. /lobby returns to the NPCs."
+      ]
+    },
+    {
+      "command": "/wallet",
+      "replies": [
+        "Your wallet contains internal Game Coins only; no cryptocurrency or cash-out.",
+        "Request queued: balance (71241ca2).",
+        "Welcome! You received your one-time 100 Game Coins starter grant. | Game Coins exist only on this server and have no real-world value. | Recent starter grant: +100 Game Coins."
+      ]
+    },
+    {
+      "command": "/wallet",
+      "replies": [
+        "Your wallet contains internal Game Coins only; no cryptocurrency or cash-out.",
+        "Request queued: balance (b1d6ce73).",
+        "SaleTester: 100 Game Coins available, 0 held. | Game Coins exist only on this server and have no real-world value. | Recent starter grant: +100 Game Coins."
+      ]
+    },
+    {
+      "command": "/sell oak_planks 2",
+      "replies": [
+        "Request queued: sell (c91f9dc0).",
+        "Sold 2 minecraft:oak_planks for 4 Game Coins."
+      ]
+    },
+    {
+      "command": "/wallet",
+      "replies": [
+        "Your wallet contains internal Game Coins only; no cryptocurrency or cash-out.",
+        "Request queued: balance (75e3ee70).",
+        "SaleTester: 104 Game Coins available, 0 held. | Game Coins exist only on this server and have no real-world value. | Recent shop sale: +4 Game Coins. | Recent starter grant: +100 Game Coins."
+      ]
+    },
+    {
+      "command": "/sell retry <redacted-id>",
+      "replies": [
+        "Request queued: sell (c444a111).",
+        "Sale <redacted-id> was already paid. No additional items or coins moved."
+      ]
+    },
+    {
+      "command": "/wallet",
+      "replies": [
+        "Your wallet contains internal Game Coins only; no cryptocurrency or cash-out.",
+        "Request queued: balance (61c72a39).",
+        "SaleTester: 104 Game Coins available, 0 held. | Game Coins exist only on this server and have no real-world value. | Recent shop sale: +4 Game Coins. | Recent starter grant: +100 Game Coins."
+      ]
+    },
+    {
+      "command": "/sell oak_planks 1",
+      "replies": [
+        "Request queued: sell (b1a09123).",
+        "Sale cancelled after confirmed no item removal. No coins were paid."
+      ]
+    },
+    {
+      "command": "/wallet",
+      "replies": [
+        "Your wallet contains internal Game Coins only; no cryptocurrency or cash-out.",
+        "Request queued: balance (681fe8bf).",
+        "SaleTester: 104 Game Coins available, 0 held. | Game Coins exist only on this server and have no real-world value. | Recent shop sale: +4 Game Coins. | Recent starter grant: +100 Game Coins."
+      ]
+    }
+  ],
+  "saleReferenceSha256": "c6220507c15b530f66554ce4b85696d0eba4ac22ce2f9976160ae639b6723aa4",
+  "finishedAt": "2026-10-31T08:02:25.436Z"
+}

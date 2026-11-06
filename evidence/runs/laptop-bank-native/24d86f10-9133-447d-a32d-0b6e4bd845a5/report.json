@@ -1,0 +1,6 @@
+{
+  "status": "fail",
+  "error": "client timed out after 30000 milliseconds",
+  "recordedAt": "2026-11-05T14:45:06.135Z",
+  "scope": "Laptop native fixture readiness; no chain transactions"
+}

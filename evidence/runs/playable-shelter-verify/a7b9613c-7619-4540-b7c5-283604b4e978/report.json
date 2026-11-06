@@ -1,0 +1,40 @@
+{
+  "status": "pass",
+  "scope": "Read-only verification and empty-agent release after original shelter task completed; no rebuild, withdrawal or stock reset",
+  "independentHumansVerified": 0,
+  "publicTransactions": 0,
+  "startedAt": "2026-10-31T07:54:11.195Z",
+  "checks": [
+    {
+      "name": "all54-real-shelter-blocks-observed-on-original-completed-task",
+      "status": "pass",
+      "originalTaskId": "c3d00d00-5e1b-4531-b1fa-829c8c975b8d",
+      "retainedOldBlocks": 4,
+      "actualNewPlacements": 50
+    },
+    {
+      "name": "actual-shelter-complete-with-exact50-new-survival-placements",
+      "status": "pass",
+      "actualTemplateBlocks": 54,
+      "retainedOldBlocks": 4,
+      "sourcePlanksAfter": 74,
+      "actualMaterialConsumption": 50
+    },
+    {
+      "name": "native-shelter-task-retains-one-withdrawal-and50-placement-receipts",
+      "status": "pass"
+    },
+    {
+      "name": "empty-tasktester-agent-released-without-changing-ruddy-agent",
+      "status": "pass"
+    }
+  ],
+  "originalTaskId": "c3d00d00-5e1b-4531-b1fa-829c8c975b8d",
+  "outsidePerimeterPosition": {
+    "x": -45.50046555481255,
+    "y": 64,
+    "z": 3.670240697099817
+  },
+  "finishedAt": "2026-10-31T07:54:26.136Z",
+  "lastWorldName": "minecraft:agentcity_play"
+}

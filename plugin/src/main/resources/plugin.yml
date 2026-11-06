@@ -1,0 +1,45 @@
+name: AgentCity
+version: 0.1.0
+main: org.agentcity.paper.AgentCityPlugin
+api-version: '1.21.11'
+description: Protected AgentCity world with on-chain testnet economy
+softdepend: [WorldEdit, WorldGuard]
+commands:
+  agentcity:
+    description: Request the local fixture session credential
+    usage: /agentcity session
+  agent:
+    description: Your personal agent and supported tasks
+  jobs:
+    description: View supported jobs
+  wallet:
+    description: View your server-managed testnet wallet
+  balance:
+    description: View on-chain CITY and GEM balances
+  bazaar:
+    description: Recover earlier native escrow; new trades use Discord Assets
+    usage: /bazaar claim
+  assets:
+    description: Find the on-chain Assets flow in Discord
+  estate:
+    description: Inspect verified parcel ownership or visit estates
+    usage: /estate ownership
+  pay:
+    description: Find the confirmed on-chain wallet flow in Discord
+  accept:
+    description: Find transaction confirmation in Discord
+  play:
+    description: Leave the onboarding lobby and enter the play world
+  lobby:
+    description: Return to onboarding and the NPC menus
+  museum:
+    description: Visit the preserved calculator demonstration
+  mumbai:
+    description: Visit the read-only South Mumbai map
+    usage: /mumbai
+  sell:
+    description: Find on-chain item listing in Discord Assets
+  market:
+    description: Testnet wallet and Uniswap swaps
+  swap:
+    description: Preview, confirm or reconcile a testnet Uniswap swap

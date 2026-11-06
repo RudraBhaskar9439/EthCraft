@@ -1,0 +1,32 @@
+{
+  "status": "reviewed",
+  "scope": "Visual review of the actual owned CityAgent2 loaded-world capture only; not whole-workflow approval",
+  "method": "view_image",
+  "pngSha256": "f91a07dd58a0836f76051d33e2fe33fe15364b9011431805ad8233b86626c1ba",
+  "captureId": "45da90b5-e201-446d-8b6c-bf24bb9c3d2f",
+  "world": "agentcity_play",
+  "agent": "CityAgent2",
+  "observedAt": "2026-10-31T12:30:26.522Z",
+  "renderedAt": "2026-10-31T12:30:31.116Z",
+  "observedBlockHash": "9c112999e3e9ed0df51bc8eb4726ce299245156f0a4dbd4eadd3b8bca09ebdf6",
+  "chunkHashes": {
+    "-3,0": "0eea2092b6c6b870e2635f606f2a29da6072a592ca0ddb3542afc341bbcc6b94"
+  },
+  "observations": [
+    "960x640 textured stone platform is visible",
+    "Cobblestone wall is visible beside the retained wooden structures",
+    "Wooden arch with a clear opening is visible",
+    "Exterior walls and roof of retained wooden shelter are visible",
+    "Frame is consistent with a bounded native world view rather than a planned blueprint"
+  ],
+  "limitations": [
+    "Independent fixed overview camera; not a Minecraft application framebuffer",
+    "Only the supplied observed region and this camera angle are shown; backsides, chest contents and shelter interior are occluded",
+    "Textures/models use the disclosed1.21.4 asset mapping for observed1.21.11 semantic states",
+    "No agent avatar is visibly identifiable in this frame; metadata agentModel=true records a renderer attempt, not verified visibility",
+    "Visual inspection alone does not establish exact material counts, permission correctness or task completion",
+    "Parent live fixture passed native construction checkpoints but overall report failed later final-inspection navigation; recovery remains separate and this review does not change that report"
+  ],
+  "browserUsed": false,
+  "generatedImageryUsed": false
+}

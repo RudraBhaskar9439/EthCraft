@@ -1,0 +1,5 @@
+{
+  "schema": "agentcity.candidate.calibration-diagnosis.v1",
+  "reason": "Intentionally superseded: parkNanos is interruptible by Paper unparks and cannot establish the declared per-tick lag. Thread.sleep-based monotonic delay will be rerun. No lag-profile verification claimed.",
+  "full_phase_gate_passed": false
+}

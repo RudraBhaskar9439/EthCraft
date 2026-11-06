@@ -1,0 +1,12 @@
+{
+  "status": "fail",
+  "scope": "Actual local @agent conversation through Ollama and native delivery/collection/Game Coins sale; crypto authentication remains denied for this synthetic player",
+  "independentHumansVerified": 0,
+  "providerIdentitiesVerified": 0,
+  "publicTransactions": 0,
+  "checks": [],
+  "startedAt": "2026-10-31T09:15:59.219Z",
+  "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   signingRequests: 0,\n+   swapPreviews: 0,\n+   wallets: 0\n-   signingRequests: null,\n-   swapPreviews: null,\n-   wallets: null\n  }\n",
+  "finishedAt": "2026-10-31T09:16:52.431Z",
+  "lastWorldName": "minecraft:agentcity_play"
+}

@@ -1,0 +1,29 @@
+{
+  "status": "pass",
+  "scope": "Actual isolated PostgreSQL; simulated Discord guild/API only; zero external channel writes or Gateway connections",
+  "checks": [
+    {
+      "name": "permission preflight reports exact missing permissions before any Discord write",
+      "status": "pass"
+    },
+    {
+      "name": "categories and five public channels reconcile by durable IDs without duplicate creation; boards readonly and general chat writable",
+      "status": "pass"
+    },
+    {
+      "name": "private rooms deny every role, permit only exact owner/coordinator/own bot, and recheck live ACL before private sends",
+      "status": "pass"
+    },
+    {
+      "name": "private job rooms bind immutable participant sets and retry without adopting unrelated named channels",
+      "status": "pass"
+    },
+    {
+      "name": "uncertain channel create persists marker and refuses duplicate retry",
+      "status": "pass"
+    }
+  ],
+  "discordWritesAreFixtures": true,
+  "actualPublicWrites": 0,
+  "finishedAt": "2026-10-31T15:29:38.256Z"
+}

@@ -1,0 +1,105 @@
+{
+  "status": "pass",
+  "scope": "Actual read-only PostgreSQL/native cutover readiness; zero funds, stock or blockchain changes",
+  "schema": "agentcity.onchain-cutover-baseline.v1",
+  "observedAt": "2026-10-31T19:24:43.135Z",
+  "state": {
+    "mode": "ONCHAIN_ONLY_NO_CONVERSION",
+    "accounts": {
+      "accounts": 7,
+      "available": "712",
+      "held": "0"
+    },
+    "listings": [
+      {
+        "state": "open",
+        "count": 2
+      },
+      {
+        "state": "stock_pending",
+        "count": 2
+      }
+    ],
+    "purchases": [],
+    "preparedShopSales": 0,
+    "cutoverReady": true
+  },
+  "tableSnapshots": {
+    "ac_game_events": {
+      "rows": 115,
+      "sha256": "d1c6a6bfac1562a8ec78076588db464ec32441112fc739fc7453c79c1e6d4d7c"
+    },
+    "ac_game_ledger": {
+      "rows": 12,
+      "sha256": "1b59607661690df8a5de76d63bca03fb38a1596f251a59668b2ab137eb81e2c1"
+    },
+    "ac_game_market_ledger": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ac_game_market_listings": {
+      "rows": 4,
+      "sha256": "f7043358d49808fb9d6a64377112bad461d1f039b49aafa089ce35a99e642df8"
+    },
+    "ac_game_market_purchases": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ac_game_players": {
+      "rows": 7,
+      "sha256": "4177e82286466ea64db5143c9d31797b4e6cd2e67a74d2c142fd8a5f8fcd2634"
+    },
+    "ac_game_sales": {
+      "rows": 4,
+      "sha256": "a636203a612b0eaf767d8379066e092db134d511a6f3d4adf542768541ea04da"
+    },
+    "ac_game_shop_ledger": {
+      "rows": 9,
+      "sha256": "bbc666302598599335948f96fcdc3786100c45f217f4b0678d6d093d0b24053c"
+    },
+    "ac_game_shop_treasury": {
+      "rows": 1,
+      "sha256": "94a28f0e2405ff3fdc847ae6d9ae052823dfdb7decdb3671c34864306fcc8fd0"
+    },
+    "ac_game_transfers": {
+      "rows": 1,
+      "sha256": "b86d84ab90e2726fa83a5e55429b43ed76ae7ce345b48d29cf6beafbe2f10d3e"
+    }
+  },
+  "backed": [
+    {
+      "listingId": "39948e32-df8d-4d54-a148-3e527452b289",
+      "item": "minecraft:stick",
+      "count": 1,
+      "state": "held",
+      "fingerprint": "b4ff1782e2d8b24d86b5d983bbf8fc9be29f669b24bce82bfa03caac36e40202"
+    },
+    {
+      "listingId": "b02063e0-bb53-4a04-a96b-860dc0b85126",
+      "item": "minecraft:stick",
+      "count": 1,
+      "state": "held",
+      "fingerprint": "b4ff1782e2d8b24d86b5d983bbf8fc9be29f669b24bce82bfa03caac36e40202"
+    }
+  ],
+  "drafts": [
+    {
+      "listingId": "b0a53672-d571-4819-a173-95e785104d75",
+      "stockOperationId": "9cda5cd1-c1eb-fc88-91f9-452d39cd436b",
+      "nativeKnown": false,
+      "noNativeIntent": true
+    },
+    {
+      "listingId": "f9ba00cb-3eac-4f5b-aa8b-749199c875f0",
+      "stockOperationId": "5fc4e5d6-8686-66b3-fadc-69ba96faa931",
+      "nativeKnown": false,
+      "noNativeIntent": true
+    }
+  ],
+  "journals": {
+    "inventory-escrow.jsonl": "c2a8173b089ca1c3dbc987aaa6de27595ef2c91ae0c912dedc97578f25a35f05",
+    "task-region-locks.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+  },
+  "pluginSha256": "c9a108690fad15f8d15702b6d6c67468dab438c6ba5d6837fbf0938b28c02a69",
+  "retirementCreatesNoCurrency": true
+}

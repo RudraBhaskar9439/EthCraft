@@ -1,0 +1,10 @@
+{
+  "status": "fail",
+  "scope": "Focused isolated PostgreSQL Game Coin accounting with fixture native escrow/mailbox receipts; no live inventory or balances mutated, no blockchain",
+  "checks": [],
+  "error": "syntax error at or near \"authorization\"",
+  "sources": {
+    "backend/src/playable/game-marketplace.mjs": "032869f53d8a45923525dac83e25c961a3ca13779c300f2ca5b38eb60cc49a02",
+    "backend/src/playable/game-marketplace.sql": "beccff2988b0cdd0f3ca6d658a0c355beccadcc5679864717846e671520600eb"
+  }
+}

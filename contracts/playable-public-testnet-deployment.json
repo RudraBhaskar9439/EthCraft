@@ -1,0 +1,73 @@
+{
+  "schema": "agentcity.playable-market.v1",
+  "environment": "UNICHAIN_SEPOLIA_PLAYABLE",
+  "chainId": 1301,
+  "rpcUrl": "https://sepolia.unichain.org",
+  "genesisHash": "0xb7fe0bc9f98ca03294ca0094ff9374cc3e64130b6ec85850d6e260191f48bfe7",
+  "poolManager": "0x9cb26a7183b2f4515945dc52cb4195b0d2d06c95",
+  "quoter": "0xb2b34025a07af3925313b6b46f8046ee8ffba30b",
+  "router": "0x85ded2dece45ba255565fb6f4a83430ee3eeeac4",
+  "tokens": {
+    "CITY": {
+      "address": "0x789dab2f22f0161401523ebe858ce88a3b14fae8",
+      "decimals": 18
+    },
+    "GEM": {
+      "address": "0x83ea7c33c6787e80ad6a0a78c66eb36ee355344d",
+      "decimals": 18
+    }
+  },
+  "poolKey": {
+    "currency0": "0x789dab2f22f0161401523ebe858ce88a3b14fae8",
+    "currency1": "0x83ea7c33c6787e80ad6a0a78c66eb36ee355344d",
+    "fee": 3000,
+    "tickSpacing": 60,
+    "hooks": "0x0000000000000000000000000000000000000000"
+  },
+  "codeHashes": {
+    "poolManager": "0x2566e42d45723eef05d7253a7b7c140a6da61992594525fc66d06b4a973b5d0b",
+    "quoter": "0x7fd1ee3f8e9172cb587fd1c8a190271615ca7e5d4c874ee3f4bd46ceb8c334da",
+    "router": "0x537fc7ca31f68e92727b1caf98c96e81a75f5569fad2cbda9cb752a0ab0eb39e",
+    "CITY": "0xf9eebf13f96d7b246e30cadd39bbfcf908086d15fdb328ac522e52fa71fb2821",
+    "GEM": "0xf9eebf13f96d7b246e30cadd39bbfcf908086d15fdb328ac522e52fa71fb2821"
+  },
+  "maxInputBaseUnits": "100000000000000000000",
+  "maxNativeCostWei": "2000000000000000",
+  "official": {
+    "PoolManager": {
+      "address": "0x9cb26a7183b2f4515945dc52cb4195b0d2d06c95",
+      "codeHash": "0x2566e42d45723eef05d7253a7b7c140a6da61992594525fc66d06b4a973b5d0b",
+      "sourceRef": "77d52a7"
+    },
+    "PositionManager": {
+      "address": "0x12a98709bb5d0641d61458f85dcafbe17ac2d05c",
+      "codeHash": "0xb2c86861af8fd6940106d15098ac04383d121b388044878a0d7d9117535f6885",
+      "sourceRef": "77d52a7"
+    },
+    "Permit2": {
+      "address": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+      "codeHash": "0x6df9d9804d74bce5ad57c8145936ec9cdb3d91a655da68b9b1b1c4ea8e001433",
+      "sourceRef": "permit2@1.0.0"
+    },
+    "V4Quoter": {
+      "address": "0xb2b34025a07af3925313b6b46f8046ee8ffba30b",
+      "codeHash": "0x7fd1ee3f8e9172cb587fd1c8a190271615ca7e5d4c874ee3f4bd46ceb8c334da",
+      "sourceRef": "77d52a7"
+    }
+  },
+  "sourceHashes": {
+    "contracts/src/PlayableMarketToken.sol": "264f6f933e1e2b376708e53d37723d436893bbb34199d75e304e5e706ac74ddd",
+    "contracts/src/PlayableMarketRouter.sol": "ce5ce6247d197fc58ecaac63f93b1ed166a0322a0860e107f01ad29102947c38",
+    "contracts/package-lock.json": "80312c2b2b961d9094131a38097f043c67d14731a186ba7d91894cea527ebb8c",
+    "contracts/out/PlayableMarketToken.sol/PlayableMarketToken.json": "b0af40b2f2250b1623a539ab0cadd4d4913c5c0288bcbaf51840a10f3561e7f6",
+    "contracts/out/PlayableMarketRouter.sol/PlayableMarketRouter.json": "97235a8d273cc337a6cd6f3ae64863d7e049b9598f0fe3dd0a6f8eac698661be"
+  },
+  "developer": "0x5cAEC1fD260Ad8bB747A3984752D7943BcDc4A54",
+  "issuer": "0x38A0E8e276c9D4EeB8dE2bB2f438a0814fD54448",
+  "positionManager": "0x12a98709bb5d0641d61458f85dcafbe17ac2d05c",
+  "permit2": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+  "gameCoinsBacked": false,
+  "minecraftInventoryBacked": false,
+  "confirmations": 2,
+  "deploymentRunId": "a8248484-c129-4325-b593-159a9d713506"
+}

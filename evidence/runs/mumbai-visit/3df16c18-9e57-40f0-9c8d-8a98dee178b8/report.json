@@ -1,0 +1,17 @@
+{
+  "runId": "3df16c18-9e57-40f0-9c8d-8a98dee178b8",
+  "status": "fail",
+  "scope": "Actual isolated Paper load and copied controlled bidder; no active host, human or financial qualification.",
+  "publicTransactions": 0,
+  "walletSignatures": 0,
+  "paidModelCalls": 0,
+  "checks": [],
+  "messages": [],
+  "error": "candidate_client_profile_binding_required",
+  "sources": {
+    "plugin/src/main/java/org/agentcity/paper/MumbaiWorld.java": "0b2ce402fc5de23f7654d383138b84fe83937c3016bb031238eb804b804ce2f6",
+    "plugin/src/main/java/org/agentcity/paper/MumbaiWorldStorage.java": "9e39fed7cb06ed33a3e9bbdb153bb9a7ee9c7f7519b0f68f2cfbf2e38144b827",
+    "scripts/mumbai_host.py": "0a8cb327a952f81851c9372b8ad56d9f1332a6d1dc1db752d47051f21f8ae242",
+    "tests/maps/mumbai-visit.mjs": "e02a1edae4f0cf322ae03b172f7c0229e95b16c82fd3a08975ac5b8dc4f85338"
+  }
+}

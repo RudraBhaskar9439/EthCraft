@@ -1,0 +1,4 @@
+/source/NativeProbe.java:60: warning: [removal] PlayerSpawnLocationEvent in org.spigotmc.event.player has been deprecated and marked for removal
+    @EventHandler public void spawn(PlayerSpawnLocationEvent event) {
+                                    ^
+1 warning

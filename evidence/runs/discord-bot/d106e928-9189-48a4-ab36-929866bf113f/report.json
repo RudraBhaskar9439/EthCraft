@@ -1,0 +1,51 @@
+{
+  "status": "pass",
+  "scope": "Actual isolated PostgreSQL plus explicitly simulated Discord REST/Gateway/interactions; zero external posts, provider wallets or human verification",
+  "checks": [
+    {
+      "name": "command-schema-and-own-versus-foreign-agent-panel-controls",
+      "status": "pass"
+    },
+    {
+      "name": "existing-writable-channel-fallback-owner-gates-and-stable-command-replay",
+      "status": "pass"
+    },
+    {
+      "name": "work-request-quote-revision-and-requester-acceptance-retain-immutable-references-without-execution",
+      "status": "pass"
+    },
+    {
+      "name": "screenshot-attachments-stay-owner-private-and-use-observation-timestamp",
+      "status": "pass"
+    },
+    {
+      "name": "cancel-control-is-owner-only-and-interaction-retries-do-not-repeat-agent-command",
+      "status": "pass"
+    },
+    {
+      "name": "Game Coin marketplace uses explicit listing and purchase previews with separate verified-user confirmation interactions",
+      "status": "pass"
+    },
+    {
+      "name": "blockchain asset registration previews and explicit confirmations retain the actual Discord actor and original opaque operation ID",
+      "status": "pass"
+    },
+    {
+      "name": "expired initial acknowledgements execute no inventory/payment/agent operation and diagnostics retain numeric Discord codes without private provider payloads",
+      "status": "pass"
+    },
+    {
+      "name": "asynchronous-ready-errors-are-caught-and-do-not-mark-the-bridge-ready",
+      "status": "pass"
+    },
+    {
+      "name": "organized mode links the persistent private agent room and routes notifications without general-channel panels",
+      "status": "pass"
+    }
+  ],
+  "publicDiscordPosts": 0,
+  "actualGatewayConnections": 0,
+  "independentHumansVerified": 0,
+  "publicTransactions": 0,
+  "schema": "discord_bot_fixture_d106e928918948a4ab36929866bf113f"
+}

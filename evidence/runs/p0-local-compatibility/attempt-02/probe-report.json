@@ -1,0 +1,18 @@
+{
+  "schema": "agentcity.p0.compatibility.v1",
+  "status": "failed",
+  "started_at": "2026-10-29T12:53:13.307Z",
+  "environment": {
+    "host": "127.0.0.1",
+    "port": 25576,
+    "version": "1.21.11",
+    "auth": "offline"
+  },
+  "identities": "FixtureBuilder and FixtureObserver are both agent-controlled test fixtures, not independent humans or licensed-account proof.",
+  "steps": [],
+  "error": {
+    "name": "Error",
+    "message": "FixtureObserver: kicked: \"Connection throttled! Please wait before reconnecting.\""
+  },
+  "finished_at": "2026-10-29T12:53:13.427Z"
+}

@@ -1,0 +1,104 @@
+{
+  "schema": "agentcity.construction-checkpoint.v1",
+  "binding": {
+    "serverId": "local-inspection-server",
+    "jobId": "agentcity-construction-10fbdd4e",
+    "agreementVersion": 1,
+    "actorId": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+    "blueprintSha256": "c8704765464a574ec4c797ad78d5294cc167007f66a0abfebd742e0b06711c49",
+    "semanticSha256": "dd49b27812caf0572d9838bfdd134e013247c3d5f2fc228f1b76d3146b9d9d54",
+    "origin": [
+      -12,
+      81,
+      -4
+    ],
+    "constructionAccessSha256": "de8daa6231ef8b7054b5c1c0ca44314fe4cb343f84550b6cc16d00916e843be5"
+  },
+  "completed": [
+    "-7,81,-3"
+  ],
+  "receipts": [
+    {
+      "operationId": "aa9f4b7b-9daa-4109-a8da-8d7afbf31bc1",
+      "action": "WITHDRAW",
+      "revision": 0,
+      "item": "minecraft:stone_bricks",
+      "count": 64,
+      "target": null
+    },
+    {
+      "operationId": "d5e76bd4-4bc0-4f6b-83d8-96357ca064f0",
+      "action": "WITHDRAW",
+      "revision": 0,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": null
+    },
+    {
+      "operationId": "1d13e139-c58a-4a5f-a2cd-61e08abfa407",
+      "action": "WITHDRAW",
+      "revision": 0,
+      "item": "minecraft:lever",
+      "count": 4,
+      "target": null
+    },
+    {
+      "operationId": "9e6b4658-68fa-4a1a-9ab1-f485bc2db836",
+      "action": "WITHDRAW",
+      "revision": 0,
+      "item": "minecraft:repeater",
+      "count": 16,
+      "target": null
+    },
+    {
+      "operationId": "82669f6e-4f9e-4dd6-b455-d21d1b340528",
+      "action": "WITHDRAW",
+      "revision": 0,
+      "item": "minecraft:redstone_torch",
+      "count": 37,
+      "target": null
+    },
+    {
+      "operationId": "ac327da8-7304-4a5e-a633-9654740eeff8",
+      "action": "WITHDRAW",
+      "revision": 0,
+      "item": "minecraft:redstone",
+      "count": 19,
+      "target": null
+    },
+    {
+      "operationId": "9a8c19f6-5a72-4835-ba3e-88872289597f",
+      "action": "WITHDRAW",
+      "revision": 0,
+      "item": "minecraft:redstone_lamp",
+      "count": 3,
+      "target": null
+    },
+    {
+      "operationId": "cee1d53f-3b43-476d-aff6-5f5240d80c80",
+      "action": "PLACE",
+      "revision": 1,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": "-7,81,-3"
+    },
+    {
+      "operationId": "562d13f6-19f1-45e6-ac21-05ba0b64895a",
+      "action": "PLACE",
+      "revision": 2,
+      "item": "minecraft:stone_bricks",
+      "count": 1,
+      "target": "-4,81,-3"
+    }
+  ],
+  "stages": [],
+  "pending": null,
+  "inventory": {
+    "minecraft:stone_bricks": 63,
+    "minecraft:lever": 4,
+    "minecraft:repeater": 16,
+    "minecraft:redstone_torch": 37,
+    "minecraft:redstone": 19,
+    "minecraft:redstone_lamp": 3
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "status": "pass",
+  "scope": "Local synthetic P5-P8 implementation checks using actual official v4 contracts; live external gates remain pending",
+  "recorded_at": "2026-10-29T22:15:30.981971+00:00",
+  "source_sha256": {
+    "contracts/README.md": "9f0a35e6bf7d10542dedd7a309b981fe0540e1196d5a3e5d3db6a32844417438",
+    "contracts/abi/AgentCityHook.json": "27ebd6cde16737992f959e872794a6779230ae2a443ca4694addfbffbfb539b1",
+    "contracts/abi/CreditToken.json": "1bc7cc8f1727ac5d044753af482eeb0b9055af39c5669f1b461e3f52213e5cc5",
+    "contracts/abi/JobEscrow.json": "b3ed63e74eeeb1e0d3ebda52366300ea6a9c244a470f2ff2f34795200e5387da",
+    "contracts/abi/KitCustody.json": "fc9b3188eb9ff8fc2ff48ef6f2dbbcc690256eac17ee6e40d291a2757166bca3",
+    "contracts/abi/Procurement.json": "97f4de7ae46c075f2b8717654be4924f6712a1e24acb16838908b4ec96b0167d",
+    "contracts/abi/StateRegistry.json": "d7605d23ef2919809e5c30e61a436c67b545910ca0d1f8ce0f0913760c335dd5",
+    "contracts/foundry.toml": "ab129a1362f1fd1854c07cb8917a42da08faa9cd7d0eeb161d62c6cdda9c5754",
+    "contracts/package-lock.json": "80312c2b2b961d9094131a38097f043c67d14731a186ba7d91894cea527ebb8c",
+    "contracts/package.json": "f152fd4ce9da995e46bf00a747b1eb51c6b9196466884d4e2eda6109003e075f",
+    "contracts/script/LocalDeploy.s.sol": "20f7b8d19926aaa7328002c1007ff91b0e4c7d13983d68322ff95e675c9adf42",
+    "contracts/src/AgentCityHook.sol": "3ce6700d7966aebdf7bca19d8a3fe68ab320acc8fbc8c614051b686622b1ce28",
+    "contracts/src/CreditToken.sol": "9190c83daee2d6bab4f708eef47aa0371526e03d4717037904cb3ab708b4a672",
+    "contracts/src/JobEscrow.sol": "f3446af01d021c831ff784aaff2f6ed1a68175cc8ca2923164fc3ee7dab37804",
+    "contracts/src/KitCustody.sol": "6c74e42b64650f9ad53fe76fcf17a2312dbae42cf71bdf295ef71734c7cc3156",
+    "contracts/src/Procurement.sol": "c2790116a21cd710ccd512dbbb1e3a597356644211edcccd055685938ff18781",
+    "contracts/src/StateRegistry.sol": "f0b37057da5e219b7ab85d2dd78657577d17d320749fb28af2f202cbaa19aad3",
+    "tests/contracts/AgentCity.t.sol": "5b84789e3b2dd0ab96b2453eb324940058711231c034f878319dfa4de02333e6"
+  },
+  "forge_version": "forge Version: 1.7.1\nCommit SHA: 4072e48705af9d93e3c0f6e29e93b5e9a40caed8\nBuild Timestamp: 2026-05-08T07:54:31.470926000Z (1778226871)\nBuild Profile: dist",
+  "command": [
+    "forge",
+    "test",
+    "--json"
+  ],
+  "tests": [
+    {
+      "test": "testActualV4ExactOutputPurchaseBurnAndDelivery()",
+      "status": "Success",
+      "reason": null
+    },
+    {
+      "test": "testExactApprovalsAcceptancePullClaimsAndLateEntitlement()",
+      "status": "Success",
+      "reason": null
+    },
+    {
+      "test": "testExactTimeoutRefundExcludesAcceptanceAndReplay()",
+      "status": "Success",
+      "reason": null
+    },
+    {
+      "test": "testFractionalTransfersRetainBackingAndCannotRedeemPartialKit()",
+      "status": "Success",
+      "reason": null
+    },
+    {
+      "test": "testFundingRejectsChangedApprovedTerms()",
+      "status": "Success",
+      "reason": null
+    },
+    {
+      "test": "testInvalidatedOrFailedReportCannotAuthorizeDirectAcceptance()",
+      "status": "Success",
+      "reason": null
+    },
+    {
+      "test": "testPurchaseCapAndInvalidClaimRevertEntireSwap()",
+      "status": "Success",
+      "reason": null
+    },
+    {
+      "test": "testRegistryRejectsUnauthorizedReplayAndExactExpiry()",
+      "status": "Success",
+      "reason": null
+    },
+    {
+      "test": "testSymmetricHaltLeavesActualLiquidityWithdrawalAvailable()",
+      "status": "Success",
+      "reason": null
+    },
+    {
+      "test": "testUnauthorizedAndIncompleteDepositsRefused()",
+      "status": "Success",
+      "reason": null
+    },
+    {
+      "test": "testWholeIssueReplayAndPendingBacking()",
+      "status": "Success",
+      "reason": null
+    }
+  ],
+  "actual_test_count": 11,
+  "external_spending_usd": 0,
+  "public_deployment": false,
+  "minecraft_token_integration": false,
+  "independent_human_proof": false,
+  "limitations": [
+    "Issuer stock and attestor inspection/lock are synthetic local fixtures.",
+    "The liquidity router used for local seeding/removal is an official v4 test utility, not a production deployment claim.",
+    "This focused suite is not an audit or an exhaustive edge-case matrix."
+  ],
+  "resolved_fixture_issue": "An initial expectRevert was consumed by an inline external hash helper; signatures are now prepared before the expectation, and the final failed/invalidated-report checks both pass."
+}

@@ -1,0 +1,56 @@
+--- production/plugin/src/main/java/org/agentcity/paper/AgentCityPlugin.java
++++ candidate/plugin/src/main/java/org/agentcity/paper/AgentCityPlugin.java
+@@ -64,7 +64,7 @@
+     @Override public void onEnable() {
+         try {
+             if(!getServer().getOnlineMode() && !Boolean.getBoolean("agentcity.localFixture")) throw new IllegalStateException("offline_mode_requires_local_fixture");
+-            if(!Bukkit.getMinecraftVersion().equals("1.21.11"))throw new IllegalStateException("unsupported_game_version");
++            if(!java.util.Set.of("1.21.11","26.3").contains(Bukkit.getMinecraftVersion()))throw new IllegalStateException("unsupported_game_version");
+             apiToken=System.getenv("AGENTCITY_API_TOKEN");
+             if(apiToken==null||apiToken.length()<32)throw new IllegalStateException("api_credential_required");
+             getDataFolder().mkdirs();
+@@ -390,7 +390,16 @@
+     @EventHandler(priority=EventPriority.HIGHEST) public void commands(ServerCommandEvent event){String command=event.getCommand().split(" ",2)[0].toLowerCase(Locale.ROOT);if(!Set.of("stop","list","save-all").contains(command))event.setCancelled(true);}
+     @EventHandler public void plugin(PluginEnableEvent event){if(!allowedPlugin(event.getPlugin().getName())){disabled=true;unavailable("unapproved_plugin");getServer().shutdown();}}
+     @Override public boolean onCommand(CommandSender sender,org.bukkit.command.Command command,String label,String[] args){if(sender instanceof Player player&&registered(player)&&args.length==1&&args[0].equals("session"))session(player);return true;}
+-    private boolean allowedPlugin(String name){return name.equals("AgentCity")||(Boolean.getBoolean("agentcity.localFixture")&&name.equals("AgentCityWorldFixture"));}
++    private boolean allowedPlugin(String name){
++        if(name.equals("AgentCity"))return true;
++        if(!Boolean.getBoolean("agentcity.localFixture"))return false;
++        if(name.equals("AgentCityWorldFixture")||name.equals("AgentCityMaintainedNativeProbe"))return true;
++        if(Bukkit.getMinecraftVersion().equals("26.3")&&(name.equals("ViaVersion")||name.equals("ViaBackwards"))){
++            var plugin=getServer().getPluginManager().getPlugin(name);
++            return plugin!=null&&plugin.getDescription().getVersion().equals("5.12.2");
++        }
++        return false;
++    }
+     private boolean validSession(UUID actor,String supplied){return sessions.containsKey(actor)&&constant(sessions.get(actor),supplied,"");}
+     private static boolean constant(String expected,String supplied,String prefix){return expected!=null&&supplied!=null&&supplied.startsWith(prefix)&&MessageDigest.isEqual(expected.getBytes(StandardCharsets.UTF_8),supplied.substring(prefix.length()).getBytes(StandardCharsets.UTF_8));}
+     private static String safe(Throwable error){Throwable current=error;while(current.getCause()!=null)current=current.getCause();return current.getMessage()==null?current.getClass().getSimpleName():current.getMessage();}
+--- production/plugin/src/main/java/org/agentcity/paper/NativeLever.java
++++ candidate/plugin/src/main/java/org/agentcity/paper/NativeLever.java
+@@ -4,6 +4,8 @@
+ import org.bukkit.block.Block;
+ import org.bukkit.craftbukkit.block.CraftBlock;
+ import org.bukkit.block.data.Powerable;
++import org.bukkit.Bukkit;
++import net.minecraft.world.level.block.state.BlockState;
+ 
+ /** Pinned Paper native path: Bukkit data writes omit the lever's support notifications. */
+ final class NativeLever {
+@@ -11,8 +13,13 @@
+         if(!(block.getBlockData() instanceof Powerable state)||block.getType()!=org.bukkit.Material.LEVER)throw new IllegalStateException("input_missing_or_wrong_type");
+         if(state.isPowered()==powered)return;
+         CraftBlock craft=(CraftBlock)block;
+-        if(!(craft.getNMS().getBlock() instanceof LeverBlock lever))throw new IllegalStateException("unsupported_native_lever");
+-        lever.pull(craft.getNMS(),craft.getCraftWorld().getHandle(),craft.getPosition(),null);
++        BlockState nativeState;
++        try {
++            String accessor=switch(Bukkit.getMinecraftVersion()) {case "1.21.11" -> "getNMS";case "26.3" -> "getBlockState";default -> throw new IllegalStateException("unsupported_native_lever_version");};
++            nativeState=(BlockState)CraftBlock.class.getMethod(accessor).invoke(craft);
++        } catch(ReflectiveOperationException error) {throw new IllegalStateException("unsupported_native_lever",error);}
++        if(!(nativeState.getBlock() instanceof LeverBlock lever))throw new IllegalStateException("unsupported_native_lever");
++        lever.pull(nativeState,craft.getCraftWorld().getHandle(),craft.getPosition(),null);
+         if(!(((Powerable)block.getBlockData()).isPowered()==powered))throw new IllegalStateException("input_did_not_change");
+     }
+ }

@@ -1,0 +1,62 @@
+{
+  "runId": "c0d26a0e-7791-459c-92ef-5997535ce60f",
+  "status": "fail",
+  "mode": "LOCAL_SYNTHETIC_ONLY",
+  "phases": [
+    {
+      "phase": "P4",
+      "detail": "real local signatures, durable wallet links and one canonical funded agreement",
+      "status": "pass"
+    },
+    {
+      "phase": "P5",
+      "detail": "actual local CRED/KIT bytecode and item-level synthetic backing verified",
+      "status": "pass"
+    },
+    {
+      "phase": "P6",
+      "detail": "fresh state and the correctly attached hook permit a real v4 exact-output swap",
+      "status": "pass"
+    },
+    {
+      "phase": "P7",
+      "detail": "bounded purchase, atomic burn/claim and one durable six-material delivery with replay",
+      "status": "pass"
+    },
+    {
+      "phase": "P3",
+      "detail": "scripted proposal passes fresh policy, durable action budget and fenced receiving execution",
+      "status": "pass"
+    }
+  ],
+  "transactions": [
+    {
+      "operationId": "94b6ae56-2c00-421d-b09c-09a8a33e0108",
+      "functionName": "fund",
+      "hash": "0xcca4b38e8aded446ed9c6344587516bcc4d2517318193c51c3dbdbb4b438ee4a",
+      "blockNumber": "22"
+    },
+    {
+      "operationId": "47d0caca-9f2b-4760-afc3-cd3bf9877e8d",
+      "functionName": "publish",
+      "hash": "0xad953dc2cd3a1717a115ef741844bd731446a8d63a570ceaac59e8a45733e6b9",
+      "blockNumber": "23"
+    },
+    {
+      "operationId": "4d09c5e9-ccd5-4689-bc7b-00c85fcf6290",
+      "functionName": "markDelivered",
+      "hash": "0x5243f132df3959645bd56ac0c5a1b63d383b3ea83623233d925f18571e8d764c",
+      "blockNumber": "25"
+    }
+  ],
+  "realMoneySpent": 0,
+  "limits": [
+    "Scripted inference, local test wallets and synthetic inventory/world observations.",
+    "No independent humans, live 0G or token-linked Minecraft operation."
+  ],
+  "error": {
+    "name": "AssertionError",
+    "message": "The input did not match the regular expression /usable_pass_lock_required/. Input:\n\n'Error: unknown_transaction_intent'\n"
+  },
+  "finishedAt": "2026-10-29T22:26:23.129Z"
+}

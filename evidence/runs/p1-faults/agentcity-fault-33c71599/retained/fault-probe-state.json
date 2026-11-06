@@ -1,0 +1,11 @@
+{
+  "scenario": "missing-lamp-s0-preflight",
+  "state": {
+    "revision": 0,
+    "lockMode": "NONE",
+    "quarantined": false,
+    "readyForReview": false,
+    "passValidUntilMs": 0
+  },
+  "reports": {}
+}

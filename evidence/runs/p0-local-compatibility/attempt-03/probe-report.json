@@ -1,0 +1,19 @@
+{
+  "schema": "agentcity.p0.compatibility.v1",
+  "status": "failed",
+  "started_at": "2026-10-29T12:54:50.289Z",
+  "environment": {
+    "host": "127.0.0.1",
+    "port": 25576,
+    "version": "1.21.11",
+    "auth": "offline"
+  },
+  "identities": "FixtureBuilder and FixtureObserver are both agent-controlled test fixtures, not independent humans or licensed-account proof.",
+  "steps": [],
+  "current_step": "initial_off",
+  "error": {
+    "name": "AssertionError",
+    "message": "initial_off: client wire\n\n'0' !== 0\n"
+  },
+  "finished_at": "2026-10-29T12:54:58.307Z"
+}

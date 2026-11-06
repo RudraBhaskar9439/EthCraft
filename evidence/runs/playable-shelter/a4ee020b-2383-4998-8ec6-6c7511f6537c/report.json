@@ -1,0 +1,8 @@
+﻿{
+    "newShelterTaskDispatched":  false,
+    "scope":  "Retained shelter fixture preparation, no shelter request or native material effect dispatched",
+    "priorBuildAndDelivery":  "complete",
+    "preservedWorld":  true,
+    "reason":  "Observer navigation stalled before reading source chest; parent requested material reconciliation first",
+    "status":  "aborted"
+}

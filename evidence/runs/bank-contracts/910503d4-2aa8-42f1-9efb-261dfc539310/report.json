@@ -1,0 +1,30 @@
+{
+  "schema": "agentcity.bank-contract-check.v1",
+  "status": "pass",
+  "observedAt": "2026-11-05T13:44:46.779283+00:00",
+  "command": [
+    "/Users/rudrabhaskar/.foundry/bin/forge",
+    "test",
+    "--match-contract",
+    "^(AgentCityBankTest|AgentCityReputationHookTest|BankPaymentsTest)$",
+    "-v"
+  ],
+  "exitCode": 0,
+  "logSha256": "26e8f3e82cf76f12d7a0dbb3d096f86b0c9b769ffaf68aa96b651dd9ed20f0d2",
+  "sourceHashes": {
+    "contracts/src/AgentCityBank.sol": "a0e9090b46563c6df112893e990e046832e96bef82a3fc488835811cf48361be",
+    "contracts/src/AgentCityReputationHook.sol": "a1d64ab184da0bf643eb4159f59b5902ef68b1a13856bab8fed5d3a4516e116e",
+    "contracts/src/BankPaymentRouter.sol": "fc3db20b9b3f7eab14a8b35986bd964c1f66f34aa72735651ec349d32f77666e",
+    "contracts/src/BankTestUSDC.sol": "f34159a7cfae151c6f237066122f656c434d2bda513fae299df3a56573849d60",
+    "contracts/src/AgentCityWorkEscrow.sol": "3b8a0e1152a4a0d9fc0ef05e60284c1e707d909a1003b5b6befe4e1c141d7811",
+    "contracts/src/WorldAssetRegistry.sol": "394a1159fcd1c06d589e84f46502987e402346ce3dbec69ed217d7d498245ce5",
+    "contracts/src/WorldAssetMarket.sol": "63b79da91e7fff2eeb15ee400bcf43e22334b08388cf00fbceb968ca38113f77",
+    "contracts/src/PlayableMarketToken.sol": "264f6f933e1e2b376708e53d37723d436893bbb34199d75e304e5e706ac74ddd",
+    "contracts/src/StateRegistry.sol": "f0b37057da5e219b7ab85d2dd78657577d17d320749fb28af2f202cbaa19aad3",
+    "contracts/src/DemoHookFactory.sol": "74cee97b1f7ab2a6c1e1b680d5ad05b0b1fa934277164f4e7c3d1cfb3e2df6dd",
+    "contracts/package-lock.json": "80312c2b2b961d9094131a38097f043c67d14731a186ba7d91894cea527ebb8c"
+  },
+  "publicTransactions": 0,
+  "nativeWorldChanges": 0,
+  "scope": "Actual isolated EVM tests with official pinned v4 contracts; disclosed native receipts and actors are fixtures."
+}

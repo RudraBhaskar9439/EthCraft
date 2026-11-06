@@ -1,0 +1,2 @@
+{"step":"active_fault_produces_retained_incomplete_no_readiness"}
+{"status":"pass","scenario":"adapter-unavailable-input_setting"}

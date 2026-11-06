@@ -1,0 +1,44 @@
+{
+  "status": "pass",
+  "checks": [
+    "offline/proxy authority is refused; a valid fixture binding uses a public login UUID rather than a bearer credential",
+    "logout, expiry, changed login/boot/server and changed requested wallet invalidate a session",
+    "owned pinned direct online-mode probe is healthy with zero human sessions; API requires its private token and existing game artifacts stay unchanged",
+    "an actual unauthenticated offline client cannot join and creates no authenticated player session"
+  ],
+  "scope": "Focused pure session-authority fixtures plus actual empty online-mode software and an unauthenticated offline client refusal; no genuine human session or wallet signature claimed.",
+  "realHumanSessionsVerified": false,
+  "humanWalletLinksVerified": false,
+  "launcherStarted": false,
+  "blockchainTransactions": 0,
+  "realMoneySpent": 0,
+  "software": {
+    "ready": true,
+    "serverId": "agentcity-online-auth-fefdeeaec0e14dbcb4fc39ecdd1565b1",
+    "serverBootId": "faca2799-86ad-486e-8f90-06580371f02c",
+    "gameAddress": "127.0.0.1:25598",
+    "onlineMode": true,
+    "directAuthentication": true,
+    "connectedAuthenticatedProfiles": 0,
+    "walletLinksVerified": false,
+    "humanVerification": "Pending actual online-mode joins, player pairing and wallet signatures",
+    "economicBridge": false
+  },
+  "protectedArtifactHashesUnchanged": {
+    "config/minecraft-runtime.json": "6ced906da4564401590b6dc7011ec53e74ebe072c34e9cd71942814524f3e20d",
+    ".local/inspection/AgentCity.jar": "0edd1f1958ef3aa3cc74bc84f7ff5418696dfc3db0c50bc8bb361bd4f6ae78be",
+    ".local/access-check/active.json": "8c84843dcb26e90429e322fb2224aae69e83e3c2afb3134f9fa8cccc0caea35d",
+    ".local/maintained-world/active.json": "8b871b0ccc62b2f81bcc1f35113b5b06e9e9316e16daa4854534d5d6752518d4"
+  },
+  "finishedAt": "2026-10-30T12:27:58.199Z",
+  "sources": {
+    "tests/identity/online-auth-probe/AgentCityOnlineAuth.java": "f99d3cc277d42cea917e563dbf139b7b98a6113cedc381fb2bf40afa6d4d4c7a",
+    "tests/identity/online-auth-probe/plugin.yml": "6df56ec7f7a3f6e41ed8e648b53e93f453d499c23a2f50321c34f24d30050279",
+    "tests/identity/online-auth-probe/build.py": "ff345822f9a12974ea6225fcbce081c62dce36d80f5523de1cac3a57afad773f",
+    "tests/identity/online-auth-probe/checks.mjs": "fb466099942db691ef4b5488649c82e6f7aa83be7fd604fab53191be5bfb8ae8",
+    "scripts/online_auth_probe.py": "a975dd61423a82fc021ff0c8f38ff8f4eaf50669050da59745ef9446ae89db1f",
+    "backend/src/identity/minecraft-sessions.mjs": "47fc451f3f9c732e5331b2b8a6ce068a8cbfaf8636993553768682c6afe9a3e6",
+    "backend/src/identity/http-runtime.mjs": "2282d2928f93341cecec91c2714da2e49c81b7aab668eb76041c16b0f696d1f0",
+    "scripts/prepare_human_identity.mjs": "3f4ce7eb538dae6dcf9d262f37c2c61c020e0147e463b00581ba772bdd542166"
+  }
+}

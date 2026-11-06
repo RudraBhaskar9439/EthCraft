@@ -1,0 +1,147 @@
+Starting org.bukkit.craftbukkit.Main
+[16:32:55 INFO]: [bootstrap] Running Java 25 (OpenJDK 64-Bit Server VM 25.0.5+8-LTS; Eclipse Adoptium Temurin-25.0.5+8) on Linux 5.15.167.4-microsoft-standard-WSL2 (amd64)
+[16:32:55 INFO]: [bootstrap] Loading Paper 26.3-231-main@8a170a3 (2026-10-30T01:53:29Z) for Minecraft 26.3
+[16:32:55 INFO]: [PluginInitializerManager] Initializing plugins...
+[16:32:56 INFO]: [PluginInitializerManager] Initialized 4 plugins
+[16:32:56 INFO]: [PluginInitializerManager] Bukkit plugins (4):
+ - AgentCity (0.1.0), AgentCityWorldFixture (1.0), ViaBackwards (5.12.2), ViaVersion (5.12.2)
+[16:33:06 INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Initialising converters for DataConverter...
+[16:33:06 INFO]: [com.destroystokyo.paper.profile.PaperServicesDiscoveryService] Environment: Environment[discoveryUrl=https://discovery.minecraftservices.com/minecraft/client, name=PROD]
+[16:33:07 INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Finished initialising converters for DataConverter in 1,568.0ms
+[16:33:07 INFO]: Found new data pack paper, loading it automatically
+[16:33:11 INFO]: No existing world data, creating new world
+[16:33:11 WARN]: Failed to connect
+com.mojang.authlib.exceptions.MinecraftClientException: Failed to read from https://discovery.minecraftservices.com/minecraft/client due to Remote host terminated the handshake
+	at com.mojang.authlib.minecraft.client.MinecraftClient.readServiceResponse(MinecraftClient.java:151) ~[authlib-10.0.77.jar:?]
+	at com.mojang.authlib.minecraft.client.MinecraftClient.getWithEtag(MinecraftClient.java:81) ~[authlib-10.0.77.jar:?]
+	at com.mojang.authlib.minecraft.client.MinecraftClient.get(MinecraftClient.java:65) ~[authlib-10.0.77.jar:?]
+	at com.mojang.authlib.services.MinecraftServicesDiscoveryService.lambda$createDiscoverySupplier$1(MinecraftServicesDiscoveryService.java:76) ~[paper-26.3.jar:26.3-231-8a170a3]
+	at com.mojang.authlib.services.RetryableFetch$1.run(RetryableFetch.java:42) ~[authlib-10.0.77.jar:26.3-231-8a170a3]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[?:?]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:309) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[?:?]
+Caused by: javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake
+	at java.base/sun.security.ssl.SSLSocketImpl.handleEOF(SSLSocketImpl.java:1716) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1514) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1421) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426) ~[?:?]
+	at java.base/sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:490) ~[?:?]
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:190) ~[?:?]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1380) ~[?:?]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1306) ~[?:?]
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:493) ~[?:?]
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:307) ~[?:?]
+	at com.mojang.authlib.minecraft.client.MinecraftClient.readServiceResponse(MinecraftClient.java:130) ~[authlib-10.0.77.jar:?]
+	... 10 more
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:494) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:160) ~[?:?]
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111) ~[?:?]
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1506) ~[?:?]
+	... 20 more
+[16:33:11 WARN]: Services are unavailable, unable to fetch uri for AUTHENTICATION/getPublicKeys
+[16:33:11 WARN]: Failed to connect
+com.mojang.authlib.exceptions.MinecraftClientException: Services are unavailable
+	at com.mojang.authlib.services.MinecraftServicesDiscoveryService.getEndpoint(MinecraftServicesDiscoveryService.java:139) ~[paper-26.3.jar:26.3-231-8a170a3]
+	at com.mojang.authlib.services.MinecraftServicesDiscoveryService.getUrl(MinecraftServicesDiscoveryService.java:125) ~[paper-26.3.jar:26.3-231-8a170a3]
+	at com.mojang.authlib.services.MinecraftServicesDiscoveryService.lambda$getServicesKeySet$0(MinecraftServicesDiscoveryService.java:117) ~[paper-26.3.jar:26.3-231-8a170a3]
+	at com.mojang.authlib.services.RetryableFetch$1.run(RetryableFetch.java:40) ~[authlib-10.0.77.jar:26.3-231-8a170a3]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[?:?]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:309) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[?:?]
+[16:33:11 WARN]: Services are unavailable, unable to fetch uri for AUTHENTICATION/getPublicKeys
+[16:33:11 WARN]: Failed to connect
+com.mojang.authlib.exceptions.MinecraftClientException: Services are unavailable
+	at com.mojang.authlib.services.MinecraftServicesDiscoveryService.getEndpoint(MinecraftServicesDiscoveryService.java:139) ~[paper-26.3.jar:26.3-231-8a170a3]
+	at com.mojang.authlib.services.MinecraftServicesDiscoveryService.getUrl(MinecraftServicesDiscoveryService.java:125) ~[paper-26.3.jar:26.3-231-8a170a3]
+	at com.mojang.authlib.services.MinecraftServicesDiscoveryService.lambda$getServicesKeySet$0(MinecraftServicesDiscoveryService.java:117) ~[paper-26.3.jar:26.3-231-8a170a3]
+	at com.mojang.authlib.services.RetryableFetch$1.run(RetryableFetch.java:40) ~[authlib-10.0.77.jar:26.3-231-8a170a3]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545) ~[?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[?:?]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:309) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[?:?]
+[16:33:15 INFO]: Loaded 1866 advancements
+[16:33:16 INFO]: Starting minecraft server version 26.3
+[16:33:16 WARN]: ****************************
+[16:33:16 WARN]: YOU ARE RUNNING THIS SERVER AS AN ADMINISTRATIVE OR ROOT USER. THIS IS NOT ADVISED.
+[16:33:16 WARN]: YOU ARE OPENING YOURSELF UP TO POTENTIAL RISKS WHEN DOING THIS.
+[16:33:16 WARN]: FOR MORE INFORMATION, SEE https://madelinemiller.dev/blog/root-minecraft-server/
+[16:33:16 WARN]: ****************************
+[16:33:16 INFO]: Loading properties
+[16:33:16 INFO]: This server is running Paper version 26.3-231-main@8a170a3 (2026-10-30T01:53:29Z) (Implementing API version 26.3.build.231-stable)
+[16:33:16 INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[16:33:17 INFO]: Server Ping Player Sample Count: 12
+[16:33:17 INFO]: Using 4 threads for Netty based IO
+[16:33:17 INFO]: [MoonriseCommon] Paper is using 1 worker threads, 1 I/O threads
+[16:33:18 INFO]: Default game type: SURVIVAL
+[16:33:18 INFO]: Generating keypair
+[16:33:18 INFO]: Starting Minecraft server on *:25565
+[16:33:18 INFO]: Paper: Using libdeflate (Linux x86_64) compression from Velocity.
+[16:33:18 INFO]: Paper: Using OpenSSL 3.x.x (Linux x86_64) cipher from Velocity.
+[16:33:20 INFO]: [ViaVersion] Loading server plugin ViaVersion v5.12.2
+[16:33:20 INFO]: [ViaVersion] ViaVersion 5.12.2 is now loaded. Registering protocol transformers and injecting...
+[16:33:22 INFO]: [ViaBackwards] Loading translations...
+[16:33:22 INFO]: [ViaBackwards] Registering protocols...
+[16:33:23 INFO]: [ViaBackwards] Loading server plugin ViaBackwards v5.12.2
+[16:33:23 INFO]: [AgentCityWorldFixture] Loading server plugin AgentCityWorldFixture v1.0
+[16:33:23 INFO]: [AgentCity] Loading server plugin AgentCity v0.1.0
+[16:33:23 WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[16:33:23 WARN]: The server will make no attempt to authenticate usernames. Beware.
+[16:33:23 WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[16:33:23 WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[16:33:23 INFO]: Preparing level "agentcity-fresh-c5a4bf5a"
+[16:33:24 INFO]: Selecting spawn point for level 'minecraft:overworld'...
+[16:33:25 INFO]: Selecting spawn point for level 'minecraft:the_nether'...
+[16:33:26 INFO]: Selecting spawn point for level 'minecraft:the_end'...
+[16:33:26 INFO]: Loading 0 persistent chunks for level 'minecraft:overworld'...
+[16:33:26 INFO]: Preparing spawn area: 100%
+[16:33:26 INFO]: Prepared spawn area in 2257 ms
+[16:33:26 INFO]: Loading 0 persistent chunks for level 'minecraft:the_nether'...
+[16:33:26 INFO]: Preparing spawn area: 100%
+[16:33:26 INFO]: Prepared spawn area in 1280 ms
+[16:33:26 INFO]: Loading 0 persistent chunks for level 'minecraft:the_end'...
+[16:33:26 INFO]: Preparing spawn area: 100%
+[16:33:26 INFO]: Prepared spawn area in 271 ms
+[16:33:26 INFO]: Done preparing level "agentcity-fresh-c5a4bf5a" (3.305s)
+[16:33:26 INFO]: [ViaVersion] Enabling ViaVersion v5.12.2
+[16:33:26 INFO]: [ViaVersion] ViaVersion detected server version: 26.3 (777)
+[16:33:26 WARN]: [ViaVersion] The Vanilla protocol of Minecraft 1.20.5-1.21.4 is easily exploitable. If you don't need to support these versions, consider adding them to block-versions in the ViaVersion config: "1.20.5-1.20.6", "1.21-1.21.1", "1.21.2-1.21.3", "1.21.4"
+[16:33:26 INFO]: [ViaBackwards] Enabling ViaBackwards v5.12.2
+[16:33:26 INFO]: [AgentCityWorldFixture] Enabling AgentCityWorldFixture v1.0
+[16:33:26 INFO]: [AgentCity] Enabling AgentCity v0.1.0
+[16:33:29 INFO]: Selecting spawn point for level 'minecraft:agentcity_lobby'...
+[16:33:29 INFO]: Loading 0 persistent chunks for level 'minecraft:agentcity_lobby'...
+[16:33:29 INFO]: Preparing spawn area: 100%
+[16:33:29 INFO]: Prepared spawn area in 89 ms
+[16:33:29 INFO]: Selecting spawn point for level 'minecraft:agentcity_play'...
+[16:33:33 INFO]: Loading 0 persistent chunks for level 'minecraft:agentcity_play'...
+[16:33:33 INFO]: Preparing spawn area: 100%
+[16:33:33 INFO]: Prepared spawn area in 3857 ms
+[16:33:34 WARN]: A manual (plugin-induced) save has been detected while server is configured to auto-save. This may affect performance.
+[16:33:34 INFO]: [AgentCity] One-time local task stock grant for CityAgent1: 128 oak planks and 64 cobblestone. Not token backing.
+[16:33:35 INFO]: [AgentCity] One-time local task stock grant for CityAgent2: 128 oak planks and 64 cobblestone. Not token backing.
+[16:33:36 INFO]: [AgentCity] Local non-token AgentCity boundary active; control port must be published on host loopback only.
+[16:33:36 INFO]: [spark] Starting background profiler...
+[16:33:37 INFO]: Saving chunks for level 'ServerLevel[agentcity-fresh-c5a4bf5a]'/minecraft:overworld
+[16:33:37 INFO]: Saving chunks for level 'ServerLevel[agentcity-fresh-c5a4bf5a]'/minecraft:the_nether
+[16:33:37 INFO]: Saving chunks for level 'ServerLevel[agentcity-fresh-c5a4bf5a]'/minecraft:the_end
+[16:33:37 INFO]: Saving chunks for level 'ServerLevel[agentcity-fresh-c5a4bf5a]'/minecraft:agentcity_lobby
+[16:33:37 INFO]: Saving chunks for level 'ServerLevel[agentcity-fresh-c5a4bf5a]'/minecraft:agentcity_play
+[16:33:37 INFO]: Running delayed init tasks
+[16:33:37 INFO]: [ViaVersion] Finished mapping loading, shutting down loader executor.
+[16:33:37 INFO]: Done (45.213s)! For help, type "help"
+[16:33:37 INFO]: *************************************************************************************
+[16:33:37 INFO]: This is the first time you're starting this server.
+[16:33:37 INFO]: It's recommended you read our 'Getting Started' documentation for guidance.
+[16:33:37 INFO]: View this and more helpful information here: https://docs.papermc.io/paper/next-steps
+[16:33:37 INFO]: *************************************************************************************

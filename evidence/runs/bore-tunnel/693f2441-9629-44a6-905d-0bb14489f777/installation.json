@@ -1,0 +1,17 @@
+﻿{
+    "upstream":  "https://github.com/ekzhang/bore",
+    "release":  "v0.6.0",
+    "asset":  "https://github.com/ekzhang/bore/releases/download/v0.6.0/bore-v0.6.0-x86_64-unknown-linux-musl.tar.gz",
+    "archiveSha256":  "e484d1e3acba77169b773f31a5bfb34192d4b660f44a094a658a2522cd2270f7",
+    "binarySha256":  "60548b7a145ba334981b19fda7cd0210d24a108a3d0dc113919b33fd2eaa90ab",
+    "extraction":  "Only exact bore or ./bore regular member read and written; no archive extraction paths",
+    "tmuxSocket":  "agentcity-host",
+    "session":  "agentcity-bore-test",
+    "command":  "bore local 25565 --to bore.pub",
+    "publicEndpoint":  "bore.pub:51967",
+    "cost":  0,
+    "accountRequired":  false,
+    "worldMutations":  0,
+    "playerLogins":  0,
+    "note":  "Public shared broker; TCP payload encryption not provided by Bore itself; temporary endpoint, no availability guarantee"
+}

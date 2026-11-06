@@ -1,0 +1,34 @@
+{
+  "serverId": "local-inspection-server",
+  "jobId": "agentcity-construction-9e26a924",
+  "agreementVersion": 1,
+  "authorizationReference": "local-boundary-authorization",
+  "world": "agentcity-construction-9e26a924",
+  "plotMin": [
+    -16,
+    80,
+    -8
+  ],
+  "plotMax": [
+    15,
+    95,
+    7
+  ],
+  "chest": [
+    -14,
+    81,
+    5
+  ],
+  "actors": {
+    "43a86a2e-ba2e-350a-a576-a65b67aa87d1": "BOT",
+    "a56f0418-1cf4-3f1e-a0ab-9b34ba31f192": "REQUESTER",
+    "563add28-410b-350e-9001-a9be4cc7bd00": "INSPECTOR"
+  },
+  "blueprintSha256": "c8704765464a574ec4c797ad78d5294cc167007f66a0abfebd742e0b06711c49",
+  "testManifestSha256": "cfb5986bf2f5bfea89075ffee8e38eb1652f3fad15503935d1f134a776d309cf",
+  "workDeadlineMs": 1793302231014,
+  "reviewDeadlineMs": 1793303131014,
+  "obligationMode": "LOCAL_NO_EXTERNAL_OBLIGATIONS",
+  "localPassValidityMs": 30000,
+  "constructionAccessSha256": "be9b2956fd2f1ad8b6616cacaeaa186e9a2b010f29db6adc0b11f041082a8fce"
+}

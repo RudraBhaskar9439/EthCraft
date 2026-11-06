@@ -1,0 +1,29 @@
+{
+  "scope": "P3 preparation only; scripted local HTTP fixture, not an LLM, not 0G, no execution or billing proof",
+  "sourceReport": "ff91399e-cdcb-4d64-a32f-772ad34a042d",
+  "results": [
+    {
+      "check": "real_10_of_16_report_to_scoped_repair_proposal",
+      "status": "pass"
+    },
+    {
+      "check": "inspection_proposal",
+      "status": "pass"
+    },
+    {
+      "check": "money_action_refused",
+      "status": "pass"
+    },
+    {
+      "check": "missing_materials_wait",
+      "status": "pass"
+    },
+    {
+      "check": "provider_unavailable_wait",
+      "status": "pass"
+    }
+  ],
+  "executedMinecraftActions": 0,
+  "externalCalls": 0,
+  "providerSpend": 0
+}

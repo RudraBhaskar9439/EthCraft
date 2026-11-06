@@ -1,0 +1,13 @@
+{
+  "runId": "0a0164e1-d9d7-495d-ac95-8b908a34f438",
+  "status": "fail",
+  "recordedAt": "2026-11-05T13:53:25.767Z",
+  "scope": "Actual Unichain Sepolia funded native2x2platform, forged-result refusal and lost-reply recovery using operator-controlled wallets. No human/Privy/0G qualification.",
+  "checks": [],
+  "paidModelCalls": 0,
+  "error": "Event windowOpen did not fire within timeout of 20000ms",
+  "sources": {
+    "backend/src/bank/native-work.mjs": "cd38b41f31508fc3f9363e35b3d62c401e75b599a1cb57a01038e3408ce47c51",
+    "tests/bank/native-work.mjs": "510eab7a23297f20d3acb9651b555144e10bdb7ea183bc293c25c00be5925684"
+  }
+}

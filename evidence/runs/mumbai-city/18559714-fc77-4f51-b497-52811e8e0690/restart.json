@@ -1,0 +1,13 @@
+{
+  "schema": "agentcity.unirock-v2-restart-check.v1",
+  "status": "pass",
+  "isolatedId": "93eca99116734e37a8bd3c29c074e671",
+  "pluginSha256": "8c819953146a78718c3b455292ab3b1083f2214faf67fa02f88c68df51d21697",
+  "worldUuid": "be915875-64ec-4498-ae2a-1a6800dd1e53",
+  "markerHashes": {
+    "unirock-bank.json": "17f6d8cbc1eff28343dfff15ac48ed144ab3a8ec534dfbe5e80d77af0dd9af4a",
+    "unirock-bank-v1.json": "91b32b2b7bb46f8bac67529745c3215ecd76618f418056cccbbba85982b4fe06",
+    "unirock-bank-migration-v1-v2.json": "43c2f4224b2ee5265cc2b1692763609904444ed55b6fc6ae1e69cf5383091584"
+  },
+  "nativeTemplateVersion": 2
+}

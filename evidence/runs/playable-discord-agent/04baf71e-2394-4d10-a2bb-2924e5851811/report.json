@@ -1,0 +1,138 @@
+{
+  "status": "fail",
+  "scope": "Actual native offline-Minecraft-owner wall construction, receiving isolation and observed-world PNG; trusted Discord authorization is a synthetic injected fixture",
+  "authentication": "SYNTHETIC TRUSTED CALLBACK; no Discord OAuth or live Discord delivery proof",
+  "independentHumansVerified": 0,
+  "liveDiscordIdentitiesVerified": 0,
+  "publicTransactions": 0,
+  "startedAt": "2026-10-31T12:27:33.195Z",
+  "checks": [
+    {
+      "name": "native-agent-connects-and-inspects-real-stock-with-requester-offline-and-all-retained-builds-preserved",
+      "status": "pass",
+      "sourceCobblestone": 50,
+      "sourceOakPlanks": 63,
+      "retainedCompletedTasks": 10
+    },
+    {
+      "name": "wrong-owner-and-expired-trusted-fixture-grants-authorize-no-new-task",
+      "status": "pass"
+    },
+    {
+      "name": "actual-natural-language-offline-wall-has-four-real-cells-one-four-item-withdrawal-four-placement-receipts-and-zero-extra-retry-effects",
+      "status": "pass",
+      "taskId": "d2e377b8-f0ec-4e94-9819-9cdfa6667411",
+      "workflowId": "8426d172-5e92-4a48-9317-cf9f7f9c112d",
+      "sourceCobblestoneBefore": 50,
+      "sourceCobblestoneAfter": 46,
+      "realPlacements": 4,
+      "receivingReceipts": 5
+    },
+    {
+      "name": "actual-update-plus-screenshot-intent-renders-current-native-observations-with-png-hash-and-provenance",
+      "status": "pass",
+      "file": "evidence/runs/playable-discord-agent/04baf71e-2394-4d10-a2bb-2924e5851811/45da90b5-e201-446d-8b6c-bf24bb9c3d2f.png",
+      "metadataFile": "evidence/runs/playable-discord-agent/04baf71e-2394-4d10-a2bb-2924e5851811/45da90b5-e201-446d-8b6c-bf24bb9c3d2f.png.json",
+      "pngSha256": "f91a07dd58a0836f76051d33e2fe33fe15364b9011431805ad8233b86626c1ba",
+      "observedBlockHash": "9c112999e3e9ed0df51bc8eb4726ce299245156f0a4dbd4eadd3b8bca09ebdf6",
+      "provenance": "Actual loaded Mineflayer client world cache; independent overview camera; not a Minecraft client framebuffer",
+      "captureId": "45da90b5-e201-446d-8b6c-bf24bb9c3d2f"
+    }
+  ],
+  "buildOperationId": "8426d172-5e92-4a48-9317-cf9f7f9c112d",
+  "buildWorkflow": {
+    "id": "8426d172-5e92-4a48-9317-cf9f7f9c112d",
+    "status": "complete",
+    "message": "All 1 workflow steps completed."
+  },
+  "image": {
+    "file": "evidence/runs/playable-discord-agent/04baf71e-2394-4d10-a2bb-2924e5851811/45da90b5-e201-446d-8b6c-bf24bb9c3d2f.png",
+    "metadataFile": "evidence/runs/playable-discord-agent/04baf71e-2394-4d10-a2bb-2924e5851811/45da90b5-e201-446d-8b6c-bf24bb9c3d2f.png.json",
+    "pngSha256": "f91a07dd58a0836f76051d33e2fe33fe15364b9011431805ad8233b86626c1ba",
+    "observedBlockHash": "9c112999e3e9ed0df51bc8eb4726ce299245156f0a4dbd4eadd3b8bca09ebdf6",
+    "provenance": "Actual loaded Mineflayer client world cache; independent overview camera; not a Minecraft client framebuffer",
+    "captureId": "45da90b5-e201-446d-8b6c-bf24bb9c3d2f"
+  },
+  "error": "Expected values to be strictly equal:\n\n50 !== 46\n",
+  "finishedAt": "2026-10-31T12:30:51.868Z",
+  "requesterOfflineObservations": 379,
+  "retainedTasks": [
+    {
+      "id": "636e764c-cbad-4513-a8ef-3848f225c2f4",
+      "action": "build_platform",
+      "status": "complete",
+      "completed": 4,
+      "total": 4
+    },
+    {
+      "id": "4695948f-b6ea-4147-b0eb-3f1037919376",
+      "action": "deliver",
+      "status": "complete",
+      "completed": 1,
+      "total": 1
+    },
+    {
+      "id": "1799d442-c00c-45c0-aafd-f4dcc4ee0a06",
+      "action": "collect",
+      "status": "complete",
+      "completed": 1,
+      "total": 1
+    },
+    {
+      "id": "c3d00d00-5e1b-4531-b1fa-829c8c975b8d",
+      "action": "build_shelter",
+      "status": "complete",
+      "completed": 54,
+      "total": 54
+    },
+    {
+      "id": "02955f26-13a2-4d87-833c-376c8105d4a7",
+      "action": "deliver",
+      "status": "complete",
+      "completed": 1,
+      "total": 1
+    },
+    {
+      "id": "8bc588cf-e380-4c17-ae74-aba693ec317f",
+      "action": "collect",
+      "status": "complete",
+      "completed": 1,
+      "total": 1
+    },
+    {
+      "id": "6443b247-d14e-4de6-b8f8-d1463e872ed4",
+      "action": "build_structure",
+      "status": "complete",
+      "completed": 7,
+      "total": 7
+    },
+    {
+      "id": "adefc4dc-76a1-4d06-a8cc-a05026fc6a02",
+      "action": "gather",
+      "status": "complete",
+      "completed": 2,
+      "total": 1
+    },
+    {
+      "id": "c735775c-792d-4fe8-8838-e7a448a39fc6",
+      "action": "craft",
+      "status": "complete",
+      "completed": 1,
+      "total": 1
+    },
+    {
+      "id": "1fdfa545-67d6-46ee-8f59-92f114b9edb2",
+      "action": "deliver",
+      "status": "complete",
+      "completed": 1,
+      "total": 1
+    },
+    {
+      "id": "d2e377b8-f0ec-4e94-9819-9cdfa6667411",
+      "action": "build_structure",
+      "status": "complete",
+      "completed": 4,
+      "total": 4
+    }
+  ]
+}

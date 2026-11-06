@@ -1,0 +1,17 @@
+Compiling 2 files with Solc 0.8.26
+Solc 0.8.26 finished in 7.14s
+Compiler run successful!
+
+Ran 9 tests for /Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/contracts/AgentCityMarketplaceHook.t.sol:AgentCityMarketplaceHookTest
+[PASS] testBootstrapCannotBeFabricatedInSameBlock() (gas: 326211)
+[PASS] testEffectivePriceIncludesFeesAndMarketFeeHasNoUserTiers() (gas: 592060)
+[PASS] testLiquidityLossResetsCoverageAndPriceImpactIsBounded() (gas: 661469)
+[PASS] testObservationRingRemainsBoundedWithRealPoolState() (gas: 2166237)
+[PASS] testOfficialQuoteAndBothDecimalDirectionsMatchActualExecution() (gas: 530668)
+[PASS] testRouterAuthorityPauseAndHealthKeepLPWithdrawalAvailable() (gas: 994851)
+[PASS] testSizeAndPerBlockCapsRevertWithoutChangingBalancesOrHistory() (gas: 615844)
+[PASS] testStaleAnchorsFailClosedAndCheckpointRestoresAFullWindow() (gas: 342172)
+[PASS] testTimeWeightedTicksUseRealElapsedTimeAndFloorNegativeMeans() (gas: 266764)
+Suite result: ok. 9 passed; 0 failed; 0 skipped; finished in 7.90ms (11.48ms CPU time)
+
+Ran 1 test suite in 12.75ms (7.90ms CPU time): 9 tests passed, 0 failed, 0 skipped (9 total tests)

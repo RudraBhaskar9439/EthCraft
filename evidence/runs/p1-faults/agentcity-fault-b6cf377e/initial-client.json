@@ -1,0 +1,312 @@
+{
+  "schema": "agentcity.p1.fault-client.v1",
+  "status": "fail",
+  "phase": "initial",
+  "started_at": "2026-10-29T15:36:20.150Z",
+  "full_phase_gate_passed": false,
+  "steps": [],
+  "scenario": "unloaded-chunk-s1-lamp_measurement",
+  "declared_variant_ids": [
+    "P1-006/unloaded-chunk-s1-lamp_measurement"
+  ],
+  "initial_durable_state": {
+    "refusals": [
+      "awaiting_player_inventory"
+    ],
+    "state": {
+      "revision": 0,
+      "lockMode": "NONE",
+      "quarantined": false,
+      "readyForReview": false,
+      "passValidUntilMs": 0
+    }
+  },
+  "initial_actual_observation": {
+    "at_ms": 1793288198570,
+    "checker": {},
+    "chunk_snapshot_freeze": false,
+    "fault_applied": false,
+    "players": {
+      "WorldBuilder": {
+        "mode": "SURVIVAL",
+        "items": {},
+        "position": [
+          512.5,
+          81,
+          513.5
+        ],
+        "uuid": "43a86a2e-ba2e-350a-a576-a65b67aa87d1"
+      },
+      "WorldInspector": {
+        "mode": "SURVIVAL",
+        "items": {},
+        "position": [
+          514.5,
+          81,
+          513.5
+        ],
+        "uuid": "563add28-410b-350e-9001-a9be4cc7bd00"
+      },
+      "WorldRequester": {
+        "mode": "SURVIVAL",
+        "items": {
+          "minecraft:lava_bucket": 1,
+          "minecraft:water_bucket": 1
+        },
+        "position": [
+          513.5,
+          81,
+          513.5
+        ],
+        "uuid": "a56f0418-1cf4-3f1e-a0ab-9b34ba31f192"
+      },
+      "WorldStranger": {
+        "mode": "SURVIVAL",
+        "items": {
+          "minecraft:cobblestone": 1
+        },
+        "position": [
+          515.5,
+          81,
+          513.5
+        ],
+        "uuid": "3febf1ac-21e5-394e-bb24-e8731e755afa"
+      }
+    },
+    "ports": {
+      "a0": {
+        "actual": "minecraft:lever[face=floor,facing=north,powered=false]",
+        "position": [
+          -12,
+          85,
+          -4
+        ]
+      },
+      "a0_support": {
+        "actual": "minecraft:stone_bricks",
+        "position": [
+          -12,
+          84,
+          -4
+        ]
+      },
+      "a1": {
+        "actual": "minecraft:lever[face=wall,facing=west,powered=false]",
+        "position": [
+          -8,
+          84,
+          -3
+        ]
+      },
+      "b0": {
+        "actual": "minecraft:lever[face=wall,facing=south,powered=false]",
+        "position": [
+          -12,
+          84,
+          -3
+        ]
+      },
+      "b1": {
+        "actual": "minecraft:lever[face=wall,facing=east,powered=false]",
+        "position": [
+          -8,
+          82,
+          -3
+        ]
+      },
+      "c1": {
+        "actual": "minecraft:redstone_lamp[lit=false]",
+        "position": [
+          -1,
+          87,
+          -5
+        ]
+      },
+      "s0": {
+        "actual": "minecraft:redstone_lamp[lit=false]",
+        "position": [
+          -8,
+          88,
+          -5
+        ]
+      },
+      "s1": {
+        "actual": "minecraft:redstone_lamp[lit=false]",
+        "position": [
+          1,
+          90,
+          -2
+        ]
+      }
+    },
+    "scenario": "unloaded-chunk-s1-lamp_measurement",
+    "stock": {
+      "minecraft:lever": 4,
+      "minecraft:redstone": 19,
+      "minecraft:redstone_lamp": 3,
+      "minecraft:redstone_torch": 37,
+      "minecraft:repeater": 16,
+      "minecraft:stone_bricks": 65
+    },
+    "target_actual": "minecraft:redstone_lamp[lit=false]",
+    "target_chunk_loaded": true,
+    "tick": 379
+  },
+  "initial_client_port_materials": {
+    "a0": "UNAVAILABLE_CLIENT_CHUNK",
+    "a0_support": "UNAVAILABLE_CLIENT_CHUNK",
+    "a1": "UNAVAILABLE_CLIENT_CHUNK",
+    "b0": "UNAVAILABLE_CLIENT_CHUNK",
+    "b1": "UNAVAILABLE_CLIENT_CHUNK",
+    "c1": "UNAVAILABLE_CLIENT_CHUNK",
+    "s0": "UNAVAILABLE_CLIENT_CHUNK",
+    "s1": "UNAVAILABLE_CLIENT_CHUNK"
+  },
+  "error": {
+    "name": "AssertionError",
+    "message": "sealed observation fault does not charge stock\n+ actual - expected\n\n+ undefined\n- {\n-   'minecraft:lever': 4,\n-   'minecraft:redstone': 19,\n-   'minecraft:redstone_lamp': 3,\n-   'minecraft:redstone_torch': 37,\n-   'minecraft:repeater': 16,\n-   'minecraft:stone_bricks': 65\n- }\n",
+    "stack": "AssertionError [ERR_ASSERTION]: sealed observation fault does not charge stock\n+ actual - expected\n\n+ undefined\n- {\n-   'minecraft:lever': 4,\n-   'minecraft:redstone': 19,\n-   'minecraft:redstone_lamp': 3,\n-   'minecraft:redstone_torch': 37,\n-   'minecraft:repeater': 16,\n-   'minecraft:stone_bricks': 65\n- }\n\n    at run (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/evidence/runs/p1-faults/agentcity-fault-b6cf377e/source/tests/inspection/faults/probe.cjs:135:12)"
+  },
+  "final_state": {
+    "refusals": [
+      "awaiting_player_inventory",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "inspection_report_rejected"
+    ],
+    "state": {
+      "revision": 0,
+      "lockMode": "INSPECTION",
+      "quarantined": false,
+      "readyForReview": false,
+      "passValidUntilMs": 0
+    }
+  },
+  "final_observation": {
+    "at_ms": 1793288215314,
+    "checker": {},
+    "chunk_snapshot_freeze": true,
+    "fault_applied": true,
+    "players": {
+      "WorldBuilder": {
+        "mode": "SURVIVAL",
+        "items": {},
+        "position": [
+          512.5,
+          81,
+          513.5
+        ],
+        "uuid": "43a86a2e-ba2e-350a-a576-a65b67aa87d1"
+      },
+      "WorldInspector": {
+        "mode": "SURVIVAL",
+        "items": {},
+        "position": [
+          514.5,
+          81,
+          513.5
+        ],
+        "uuid": "563add28-410b-350e-9001-a9be4cc7bd00"
+      },
+      "WorldRequester": {
+        "mode": "SURVIVAL",
+        "items": {
+          "minecraft:lava_bucket": 1,
+          "minecraft:water_bucket": 1
+        },
+        "position": [
+          513.5,
+          81,
+          513.5
+        ],
+        "uuid": "a56f0418-1cf4-3f1e-a0ab-9b34ba31f192"
+      },
+      "WorldStranger": {
+        "mode": "SURVIVAL",
+        "items": {
+          "minecraft:cobblestone": 1
+        },
+        "position": [
+          515.5,
+          81,
+          513.5
+        ],
+        "uuid": "3febf1ac-21e5-394e-bb24-e8731e755afa"
+      }
+    },
+    "ports": {
+      "a0": {
+        "actual": "UNAVAILABLE_CHUNK",
+        "position": [
+          -12,
+          85,
+          -4
+        ]
+      },
+      "a0_support": {
+        "actual": "UNAVAILABLE_CHUNK",
+        "position": [
+          -12,
+          84,
+          -4
+        ]
+      },
+      "a1": {
+        "actual": "UNAVAILABLE_CHUNK",
+        "position": [
+          -8,
+          84,
+          -3
+        ]
+      },
+      "b0": {
+        "actual": "UNAVAILABLE_CHUNK",
+        "position": [
+          -12,
+          84,
+          -3
+        ]
+      },
+      "b1": {
+        "actual": "UNAVAILABLE_CHUNK",
+        "position": [
+          -8,
+          82,
+          -3
+        ]
+      },
+      "c1": {
+        "actual": "UNAVAILABLE_CHUNK",
+        "position": [
+          -1,
+          87,
+          -5
+        ]
+      },
+      "s0": {
+        "actual": "UNAVAILABLE_CHUNK",
+        "position": [
+          -8,
+          88,
+          -5
+        ]
+      },
+      "s1": {
+        "actual": "UNAVAILABLE_CHUNK",
+        "position": [
+          1,
+          90,
+          -2
+        ]
+      }
+    },
+    "scenario": "unloaded-chunk-s1-lamp_measurement",
+    "stock_unavailable": true,
+    "target_actual": "UNAVAILABLE_CHUNK",
+    "target_chunk_loaded": false,
+    "tick": 714
+  },
+  "finished_at": "2026-10-29T15:36:55.464Z"
+}

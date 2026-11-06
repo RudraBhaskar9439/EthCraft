@@ -1,0 +1,142 @@
+{
+  "status": "prepared_human_verification_blocked",
+  "recordedAt": "2026-10-30T15:35:00.856067+00:00",
+  "parentCommit": "4049bbab0978ab2864574e5a37bba8a87064926b",
+  "scope": "User-approved local Minecraft materials and separate synthetic Unichain demonstration; Ollama inference; no economic bridge",
+  "operatorPage": "http://127.0.0.1:8789/human",
+  "historicalPreparation": "evidence/HUMAN_VERIFICATION_PREPARATION.json",
+  "implementation": [
+    "Verified game-wallet identities precede timed final agreement",
+    "Pinned participants and immutable transaction requests with explicit wallet prompts",
+    "Unknown submissions retain original nonce, quote and reservations",
+    "Bounded explicit test-resource plan with no repeat top-up",
+    "Explicit publisher refresh retains unknown report operation until canonical reconciliation",
+    "Manual requester acceptance and builder claim with canonical receipt verification"
+  ],
+  "tests": [
+    {
+      "command": "node tests/identity/external-wallet.mjs",
+      "status": "pass",
+      "groups": 12,
+      "scope": "Mocked chain, real isolated PostgreSQL and ephemeral fixture signatures"
+    },
+    {
+      "command": "node tests/workflow/human-demo.mjs",
+      "status": "pass",
+      "groups": 7,
+      "scope": "Real isolated PostgreSQL and local Ollama; scripted identities, chain and operator outcomes"
+    },
+    {
+      "command": "node tests/workflow/human-health.mjs",
+      "status": "pass",
+      "groups": 3,
+      "scope": "Real isolated PostgreSQL; mocked freshness and publication outcomes"
+    },
+    {
+      "command": "node tests/workflow/human-session.mjs",
+      "status": "pass",
+      "groups": 3,
+      "scope": "Pure authority-boundary fixtures"
+    },
+    {
+      "command": "node tests/workflow/human-web.mjs",
+      "status": "pass",
+      "groups": 7,
+      "scope": "Scripted DOM, HTTP and EIP1193 provider"
+    },
+    {
+      "command": "node tests/workflow/human-http.mjs",
+      "status": "pass",
+      "groups": 4,
+      "scope": "Actual local HTTP authority and read-only status"
+    },
+    {
+      "command": "node tests/identity/wallet-expiry.mjs",
+      "status": "pass",
+      "scope": "Expired signing refusal"
+    },
+    {
+      "command": "python3 -m unittest discover -s tests -v",
+      "status": "pass",
+      "tests": 56,
+      "scope": "Planning and infrastructure unit checks"
+    },
+    {
+      "command": "python3 scripts/check_plan.py",
+      "status": "pass",
+      "scope": "Planning integrity only; no product gate"
+    }
+  ],
+  "evidence": {
+    "human-workflow": {
+      "path": "evidence/runs/human-workflow/95ce2323-6c17-4ae5-bfca-49fc176b1213/report.json",
+      "sha256": "828e7d31820fa0d9abb35bab59e0eef4cd883da5a9e8eece8310a258fc999c38"
+    },
+    "human-web": {
+      "path": "evidence/runs/human-web/e81c5cb2-8299-4542-b432-514b5cfeb088/report.json",
+      "sha256": "020e7f60ef686eb6b0de28cac5973d02b0b36aa3bf2540a71f75ec4275e712c4"
+    },
+    "human-http": {
+      "path": "evidence/runs/human-http/7c0ce2cd-d275-4868-9449-85494a0a096f/report.json",
+      "sha256": "72b57f0910c89214ac3e2104e3af0f84aac3e7279f96f170cd1e595a9e7e30d8"
+    },
+    "human-recovery": {
+      "path": "evidence/runs/human-recovery/3ddc50e093cf4009b01c82d78e4a2384/report.json",
+      "sha256": "9a6e30c6bdab8a12e0fe94a85f1ddfc55be3ecd56f9d4bfed4e99c97943e3e24"
+    }
+  },
+  "sourceHashes": {
+    "backend/src/server.mjs": "f9988cfbe479b71a723dfde24d16bdd524760812072fb980fa2c959146b1dbf1",
+    "backend/src/web/human.mjs": "5aa9493a0b12a55889b6bc6f588852c4b95ec9b6d0cba111e9f8fa2b0c57a83e",
+    "backend/src/web/human.html": "3cd4f5f5082eac31dbcbef2f360970688f8432c9ce651624e06091d6fc6a4fac",
+    "backend/src/web/human.css": "d1096e9b291d0afb1e8f7b04f68f8e3c570e0ddfd7637355b2fc8b0272d62005",
+    "backend/src/web/console.mjs": "ee5d511c94cabb3151663d6beeab04a49d9b384241f89120028cfba0d1d94917",
+    "backend/src/web/console.html": "902677f7ee5b899bdb9f658ffa2736a4f45e3c3fd7c87e59f5175b6c65f02520",
+    "backend/src/chain/external-wallet.mjs": "728f5f9cf508cc4bf075a2d9c52d7b2f1d607aea52a822ecb5b3085326721cc9",
+    "backend/src/chain/external-wallet.sql": "5ee36401cf02f033d1268b9c0db45893531ba3a7e8c45c4f33f4126404d9820a",
+    "backend/src/workflow/human-demo.mjs": "db59c264689076f61920d387e1239f7d4c92409e4b5504d10e76f1543ec70be2",
+    "backend/src/workflow/human-demo.sql": "27484a25fb8b9167bc146fc88f597b6220d9ba7ddafa1e86d1c567b7268e6170",
+    "backend/src/workflow/human-demo-runtime.mjs": "d1e13a177aba95091aa608f351db275ef4d1a9bc1c307f830f9fe08a63d6ff1f",
+    "backend/src/workflow/human-demo-operator.mjs": "02a53ebddd21e74b955f90242a97c6890448bfc57aea82c52948a7c3371013a1",
+    "backend/src/workflow/human-demo-operator.sql": "af6e575fe83b0bc902542e647fba217432b4ad9bbf5effaa1faa5c6b60d540ba",
+    "backend/src/workflow/human-session.mjs": "41eba70e78520ee442e5c4b32835af71aedfd1646d2c7c831a8523655acde471",
+    "scripts/human_demo.mjs": "28cd2e8a478734c7cd03941d5dd02c56f31c14a9404ac094eee4909675c50586",
+    "docs/HUMAN_DEMO.md": "16c79d7f952a8876d9ac74ed3e115c846e0140de8c27f622cfe74c3252dd5c08",
+    "tests/identity/external-wallet.mjs": "74ec6ddaa76508fd55535a0a882e4f5742b0142a5f839818150bb3b326b96d68",
+    "tests/workflow/human-demo.mjs": "4199d4378f26d54d13104b38bf9eed47450783d13a2ad6e9480bbdf99de2fe3a",
+    "tests/workflow/human-health.mjs": "eeb6846933ed57d76483bb71fdfada30a1ba40106188c6fe2f235b2324c21640",
+    "tests/workflow/human-session.mjs": "4aa22830b7a711894be663042d30d71dace6a0ecf6c32d4cf457bb3892a0f1bb",
+    "tests/workflow/human-web.mjs": "c5502e6c1f6ad432091afb922952aedb7e21acd24b5d3a89f1cd02433384c348",
+    "tests/workflow/human-http.mjs": "ae833c7a26697ebd42643372b5700fc5dc1f9a991441d6fdb92d008a385dab8e",
+    "planning/phases.json": "ef1f654aa2ac9b4c6dc29fb9b1f017dca8aa1db4e1f2451ff4735e21ccae2ad7"
+  },
+  "humanPreflight": {
+    "verifiedGameWalletLinks": 0,
+    "authenticatedProfilesConnected": 0,
+    "onlineMode": true,
+    "agreementStarted": false,
+    "selectedMicrosoftAccountJavaEntitlementVerified": false,
+    "launcherObservation": "User screenshot reports selected Microsoft profile does not contain Minecraft; earlier screenshot selected authorization without a password",
+    "independentHumanParticipationVerified": false
+  },
+  "recovery": {
+    "isolatedRestoreTablesVerified": 381,
+    "isolatedRestoreRowsVerified": 801,
+    "liveDatabaseReplaced": false,
+    "offLaptopCopyVerified": false,
+    "fullMachineRebootVerified": false
+  },
+  "currentWorkPublicTransactions": 0,
+  "currentWorkRealSpendUsd": 0,
+  "canonicalGatesRenewed": false,
+  "productionQualified": false,
+  "remaining": [
+    "Two actual entitled Java account logins and player-initiated wallet pairing",
+    "Each person signs their own WalletLink and the final exact agreement",
+    "Actual participant funding, procurement, requester acceptance, builder claim and zero-extra-payment replay",
+    "Live execution of the new bounded operator provisioning and publisher actions",
+    "Off-laptop disaster copy and full machine reboot verification",
+    "Shared or public user authentication before any shared/public exposure"
+  ],
+  "originalIntegratedSpecification": "Historical gates retained; no original 0G or Minecraft-token integration claim"
+}

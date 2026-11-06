@@ -1,0 +1,212 @@
+{
+  "/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/contracts/AgentCity.t.sol:AgentCityTest": {
+    "duration": "29ms 178\u00b5s 250ns",
+    "test_results": {
+      "testActualV4ExactOutputPurchaseBurnAndDelivery()": {
+        "status": "Success",
+        "reason": null,
+        "counterexample": null,
+        "logs": [],
+        "decoded_logs": [],
+        "kind": {
+          "Unit": {
+            "gas": 317626
+          }
+        },
+        "traces": [],
+        "labeled_addresses": {},
+        "duration": "1ms 310\u00b5s 208ns",
+        "breakpoints": {},
+        "gas_snapshots": {}
+      },
+      "testExactApprovalsAcceptancePullClaimsAndLateEntitlement()": {
+        "status": "Success",
+        "reason": null,
+        "counterexample": null,
+        "logs": [],
+        "decoded_logs": [],
+        "kind": {
+          "Unit": {
+            "gas": 568317
+          }
+        },
+        "traces": [],
+        "labeled_addresses": {},
+        "duration": "7ms 491\u00b5s",
+        "breakpoints": {},
+        "gas_snapshots": {}
+      },
+      "testExactTimeoutRefundExcludesAcceptanceAndReplay()": {
+        "status": "Success",
+        "reason": null,
+        "counterexample": null,
+        "logs": [],
+        "decoded_logs": [],
+        "kind": {
+          "Unit": {
+            "gas": 533053
+          }
+        },
+        "traces": [],
+        "labeled_addresses": {},
+        "duration": "7ms 103\u00b5s 500ns",
+        "breakpoints": {},
+        "gas_snapshots": {}
+      },
+      "testFractionalTransfersRetainBackingAndCannotRedeemPartialKit()": {
+        "status": "Success",
+        "reason": null,
+        "counterexample": null,
+        "logs": [],
+        "decoded_logs": [],
+        "kind": {
+          "Unit": {
+            "gas": 76988
+          }
+        },
+        "traces": [],
+        "labeled_addresses": {},
+        "duration": "727\u00b5s 375ns",
+        "breakpoints": {},
+        "gas_snapshots": {}
+      },
+      "testFundingRejectsChangedApprovedTerms()": {
+        "status": "Success",
+        "reason": null,
+        "counterexample": null,
+        "logs": [],
+        "decoded_logs": [],
+        "kind": {
+          "Unit": {
+            "gas": 52021
+          }
+        },
+        "traces": [],
+        "labeled_addresses": {},
+        "duration": "6ms 465\u00b5s 459ns",
+        "breakpoints": {},
+        "gas_snapshots": {}
+      },
+      "testInvalidatedOrFailedReportCannotAuthorizeDirectAcceptance()": {
+        "status": "Success",
+        "reason": null,
+        "counterexample": null,
+        "logs": [],
+        "decoded_logs": [],
+        "kind": {
+          "Unit": {
+            "gas": 556268
+          }
+        },
+        "traces": [],
+        "labeled_addresses": {},
+        "duration": "7ms 470\u00b5s 125ns",
+        "breakpoints": {},
+        "gas_snapshots": {}
+      },
+      "testIssuerSeparatedFromAdministratorAndOtherRoles()": {
+        "status": "Success",
+        "reason": null,
+        "counterexample": null,
+        "logs": [],
+        "decoded_logs": [],
+        "kind": {
+          "Unit": {
+            "gas": 191211
+          }
+        },
+        "traces": [],
+        "labeled_addresses": {},
+        "duration": "1ms 124\u00b5s 625ns",
+        "breakpoints": {},
+        "gas_snapshots": {}
+      },
+      "testPurchaseCapAndInvalidClaimRevertEntireSwap()": {
+        "status": "Success",
+        "reason": null,
+        "counterexample": null,
+        "logs": [],
+        "decoded_logs": [],
+        "kind": {
+          "Unit": {
+            "gas": 238456
+          }
+        },
+        "traces": [],
+        "labeled_addresses": {},
+        "duration": "1ms 221\u00b5s 875ns",
+        "breakpoints": {},
+        "gas_snapshots": {}
+      },
+      "testRegistryRejectsUnauthorizedReplayAndExactExpiry()": {
+        "status": "Success",
+        "reason": null,
+        "counterexample": null,
+        "logs": [],
+        "decoded_logs": [],
+        "kind": {
+          "Unit": {
+            "gas": 123708
+          }
+        },
+        "traces": [],
+        "labeled_addresses": {},
+        "duration": "552\u00b5s 125ns",
+        "breakpoints": {},
+        "gas_snapshots": {}
+      },
+      "testSymmetricHaltLeavesActualLiquidityWithdrawalAvailable()": {
+        "status": "Success",
+        "reason": null,
+        "counterexample": null,
+        "logs": [],
+        "decoded_logs": [],
+        "kind": {
+          "Unit": {
+            "gas": 262562
+          }
+        },
+        "traces": [],
+        "labeled_addresses": {},
+        "duration": "1ms 58\u00b5s 292ns",
+        "breakpoints": {},
+        "gas_snapshots": {}
+      },
+      "testUnauthorizedAndIncompleteDepositsRefused()": {
+        "status": "Success",
+        "reason": null,
+        "counterexample": null,
+        "logs": [],
+        "decoded_logs": [],
+        "kind": {
+          "Unit": {
+            "gas": 68497
+          }
+        },
+        "traces": [],
+        "labeled_addresses": {},
+        "duration": "1ms 13\u00b5s 209ns",
+        "breakpoints": {},
+        "gas_snapshots": {}
+      },
+      "testWholeIssueReplayAndPendingBacking()": {
+        "status": "Success",
+        "reason": null,
+        "counterexample": null,
+        "logs": [],
+        "decoded_logs": [],
+        "kind": {
+          "Unit": {
+            "gas": 287030
+          }
+        },
+        "traces": [],
+        "labeled_addresses": {},
+        "duration": "176\u00b5s 709ns",
+        "breakpoints": {},
+        "gas_snapshots": {}
+      }
+    },
+    "warnings": []
+  }
+}

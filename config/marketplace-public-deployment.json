@@ -1,0 +1,106 @@
+{
+  "schema": "agentcity.marketplace-public.v1",
+  "mode": "marketplace",
+  "chainId": 1301,
+  "rpcUrl": "https://sepolia.unichain.org",
+  "deploymentId": "0x3f7fc51e18c3bb704db3ed4a96dccee0457a898cea3b540c460571b3c5790b61",
+  "sourceHashes": {
+    "contracts/src/AgentCityBank.sol": "a0e9090b46563c6df112893e990e046832e96bef82a3fc488835811cf48361be",
+    "contracts/src/AgentCityReputationHook.sol": "a1d64ab184da0bf643eb4159f59b5902ef68b1a13856bab8fed5d3a4516e116e",
+    "contracts/src/BankPaymentRouter.sol": "fc3db20b9b3f7eab14a8b35986bd964c1f66f34aa72735651ec349d32f77666e",
+    "contracts/src/BankTestUSDC.sol": "f34159a7cfae151c6f237066122f656c434d2bda513fae299df3a56573849d60",
+    "contracts/src/AgentCityWorkEscrow.sol": "3b8a0e1152a4a0d9fc0ef05e60284c1e707d909a1003b5b6befe4e1c141d7811",
+    "contracts/src/WorldAssetRegistry.sol": "394a1159fcd1c06d589e84f46502987e402346ce3dbec69ed217d7d498245ce5",
+    "contracts/src/WorldAssetMarket.sol": "63b79da91e7fff2eeb15ee400bcf43e22334b08388cf00fbceb968ca38113f77",
+    "contracts/src/PlayableMarketToken.sol": "264f6f933e1e2b376708e53d37723d436893bbb34199d75e304e5e706ac74ddd",
+    "contracts/src/StateRegistry.sol": "f0b37057da5e219b7ab85d2dd78657577d17d320749fb28af2f202cbaa19aad3",
+    "contracts/src/DemoHookFactory.sol": "74cee97b1f7ab2a6c1e1b680d5ad05b0b1fa934277164f4e7c3d1cfb3e2df6dd",
+    "contracts/package-lock.json": "80312c2b2b961d9094131a38097f043c67d14731a186ba7d91894cea527ebb8c",
+    "contracts/src/AgentCityMarketplaceHook.sol": "eca22673e987cd9a07e3865dcd3e3d803778aaf0c5f2dbb9994adf1c622444eb"
+  },
+  "tokens": {
+    "CITY": {
+      "address": "0x13431952927c79004fc2fc5aab576752552fea12",
+      "decimals": 18
+    },
+    "USDC": {
+      "address": "0x9caa79a2b1e4420e45f0cf3bd47a90770136b3a4",
+      "decimals": 6,
+      "symbol": "tUSDC",
+      "mock": true,
+      "circleIssued": false
+    }
+  },
+  "contracts": {
+    "registry": "0xf3037a6d2b68ee5832f53d9ff0bf22c22031af81",
+    "market": "0xb2b515bbbaf0b65a011e1523563601c00fbf0d53",
+    "router": "0x6d00ad99e68508cd4cae4fe93eab8b03af8efcaf",
+    "hook": "0x6faf5918c8fd0af9716d300ce8f7e9310cc11fc0",
+    "workEscrow": "0x33f627279ffb9e87253a5635fa76da748a76d050",
+    "poolManager": "0x9cb26a7183b2f4515945dc52cb4195b0d2d06c95",
+    "quoter": "0xb2b34025a07af3925313b6b46f8046ee8ffba30b"
+  },
+  "poolKey": {
+    "currency0": "0x13431952927c79004fc2fc5aab576752552fea12",
+    "currency1": "0x9caa79a2b1e4420e45f0cf3bd47a90770136b3a4",
+    "fee": 8388608,
+    "tickSpacing": 60,
+    "hooks": "0x6fAf5918c8fD0aF9716d300CE8f7E9310CC11FC0"
+  },
+  "codeHashes": {
+    "registry": "0x9825094905f226df9f11f142b1f876b56adc56de6215fba350c05d34fb57cc9a",
+    "market": "0x2c351bb797938b213b0979619d1374cac616fc38d5a3586d455d610b2a2a03fc",
+    "city": "0xf9eebf13f96d7b246e30cadd39bbfcf908086d15fdb328ac522e52fa71fb2821",
+    "usdc": "0xbad597e8112aba7f7e29880b1128fffe0e7ed71e29c6f8133ad33988d0dcea38",
+    "gem": "0xf9eebf13f96d7b246e30cadd39bbfcf908086d15fdb328ac522e52fa71fb2821",
+    "bank": "0x40f497e5c553c264b5654ec55b36fbf53ca7d32f9037292221fea1c5e24d58be",
+    "router": "0xefc386abe89a76c52b2127a9abfea1db71d2b32d8fac18e2a6d27e932df67237",
+    "hook": "0xa7faff8b09faf6b6fc521a251959386f003975788204ed22e66e264b18c3e8f6",
+    "stateRegistry": "0x9cd52d7c2be101ac01bca81ef3798731e742aa554c05b39efb666e8e2a0b160f",
+    "workEscrow": "0x336826c1ab37ac67371732e8e95e42232c537f783eb325038d45086cf8fef861",
+    "poolManager": "0x2566e42d45723eef05d7253a7b7c140a6da61992594525fc66d06b4a973b5d0b",
+    "quoter": "0x7fd1ee3f8e9172cb587fd1c8a190271615ca7e5d4c874ee3f4bd46ceb8c334da"
+  },
+  "marketplace": {
+    "guard": {
+      "WINDOW": "300",
+      "MAX_REFERENCE_AGE": "600",
+      "SAMPLE_INTERVAL": "30",
+      "MAX_DEVIATION_TICKS": "200",
+      "MAX_IMPACT_TICKS": "50",
+      "MAX_EXECUTION_DEVIATION_BPS": "200",
+      "MAX_CITY_OUTPUT": "10000000000000000000",
+      "MAX_USDC_OUTPUT": "10000000",
+      "BLOCK_CITY_OUTPUT": "20000000000000000000",
+      "BLOCK_USDC_OUTPUT": "20000000",
+      "BASE_FEE": "3000",
+      "MAX_FEE": "10000"
+    },
+    "minActiveLiquidity": "1000000000000000",
+    "supportedActiveTokens": [
+      "USDC",
+      "CITY"
+    ],
+    "activeCreditFeatures": false,
+    "average": "Geometric time-weighted mean tick over a matured300–600second anchor interval; not an arithmetic average or manipulation-proof price.",
+    "checkpointIntervalSeconds": 30,
+    "sourceHook": "AgentCityMarketplaceHook",
+    "initialLiquidity": {
+      "owner": "0xb25898f5e4907e6925741b10dea46f351104a0e4",
+      "positionId": "21",
+      "deposited": {
+        "0x13431952927c79004fc2fc5aab576752552fea12": "278060058800808995177",
+        "0x9caa79a2b1e4420e45f0cf3bd47a90770136b3a4": "312968766"
+      },
+      "liquidity": "10000000000000000",
+      "minActiveLiquidity": "1000000000000000",
+      "tickLower": -276960,
+      "tickUpper": -275760,
+      "transactionHash": "0xd2723cd4306e46d973c394d653a5faeffcf80d68d51168fb23143bb55058b1b5",
+      "disclosure": "Unused operator test funds, initial seed near1wholeCITY=1mocktUSDC; not a peg, independent fair-value oracle or production liquidity promise."
+    }
+  },
+  "mockUSDC": true,
+  "circleIssuedUSDC": false,
+  "disclosure": "Operator-controlled testnet marketplace; lending/borrowing/auctions/credit reputation are archived and disabled in the active application."
+}

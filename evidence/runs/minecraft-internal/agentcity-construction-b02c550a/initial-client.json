@@ -1,0 +1,18 @@
+{
+  "schema": "agentcity.p2.construction-client.v1",
+  "phase": "initial",
+  "status": "fail",
+  "started_at": "2026-10-30T07:11:12.325Z",
+  "independent_humans": 0,
+  "scripted_roles": true,
+  "checks": [],
+  "live0GVerified": false,
+  "spending": 0,
+  "connection_error": "WorldRequester: kicked: \"Connection throttled! Please wait before reconnecting.\"",
+  "error": {
+    "name": "Error",
+    "message": "WorldRequester: kicked before spawn: \"Connection throttled! Please wait before reconnecting.\"",
+    "stack": "Error: WorldRequester: kicked before spawn: \"Connection throttled! Please wait before reconnecting.\"\n    at EventEmitter.kicked (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/evidence/runs/minecraft-internal/agentcity-construction-b02c550a/source/tests/construction/probe.cjs:65:39)\n    at Object.onceWrapper (node:events:631:12)\n    at EventEmitter.emit (node:events:521:24)\n    at Client.<anonymous> (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/mineflayer/lib/plugins/kick.js:8:9)\n    at Client.emit (node:events:521:24)\n    at emitPacket (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/minecraft-protocol/src/client.js:85:12)\n    at FullPacketParser.<anonymous> (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/minecraft-protocol/src/client.js:114:9)\n    at FullPacketParser.emit (node:events:509:20)\n    at addChunk (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/readable-stream/lib/internal/streams/readable.js:323:12)\n    at readableAddChunk (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/readable-stream/lib/internal/streams/readable.js:300:9)"
+  },
+  "finished_at": "2026-10-30T07:11:22.474Z"
+}

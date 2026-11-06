@@ -1,0 +1,5 @@
+{
+  "status": "fail",
+  "scope": "Actual live PostgreSQL schema and original Game Coin account balance readback after marketplace upgrade; zero test trades or coin writes",
+  "error": "market_tables_missing"
+}

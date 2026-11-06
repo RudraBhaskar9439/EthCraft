@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "scope": "Actual local PostgreSQL with scripted inference and claim-source fixtures; no Minecraft token integration or live provider claim.",
+  "checks": [
+    {
+      "name": "strict proposal fields reject duplicates, escaped duplicates and privilege-changing actions",
+      "status": "pass"
+    },
+    {
+      "name": "fresh authority/material checks precede a durable operation with a distinct id",
+      "status": "pass"
+    },
+    {
+      "name": "concurrent attempts respect the durable last allowed inference request",
+      "status": "pass"
+    },
+    {
+      "name": "two workers and a lost acknowledgement produce one synthetic bundle and one receipt",
+      "status": "pass"
+    },
+    {
+      "name": "the receiving transaction fences an expired worker and conserves every material",
+      "status": "pass"
+    },
+    {
+      "name": "a mismatched recipient cannot create a delivery receipt",
+      "status": "pass"
+    }
+  ],
+  "providerSpend": 0
+}

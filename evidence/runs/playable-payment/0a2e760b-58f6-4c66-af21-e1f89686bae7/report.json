@@ -1,0 +1,15 @@
+{
+  "scope": "Actual in-game Game Coins transfer between two disclosed Mineflayer fixtures; no agents created, real wallets, blockchain action or independently verified people",
+  "players": [
+    "PlayTester",
+    "PlayReceiver"
+  ],
+  "status": "fail",
+  "independentHumansVerified": 0,
+  "publicTransactions": 0,
+  "startedAt": "2026-10-31T06:19:48.633Z",
+  "checks": [],
+  "commands": [],
+  "error": "PlayReceiver login timed out",
+  "finishedAt": "2026-10-31T06:20:38.415Z"
+}

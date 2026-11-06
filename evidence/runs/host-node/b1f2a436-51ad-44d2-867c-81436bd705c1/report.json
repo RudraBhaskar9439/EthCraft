@@ -1,0 +1,107 @@
+{
+  "status": "public_transport_verified_human_enrollment_pending",
+  "date": "2026-10-31T13:53:14.937Z",
+  "baseRelease": "3a0c7aa26d6d3b47b18217d6394da1ce3061e0df",
+  "sourceSha256": {
+    "backend/src/discord/minecraft-ingress.mjs": "9a7e7476d7a20ec04934e1e3892d35fc10235fc2da447933fc8682546f43621a",
+    "backend/src/discord/public-gateway.mjs": "2706a5d2d9a896e09033e62ff875ff6b7aab3c753ed244b8b03a8c080ad4e15e",
+    "backend/src/server.mjs": "ca4c3d88f805c9137ab47b3df292640f4cec0c3388a03102760b2025fc130406",
+    "companion/src/discord-setup.jsx": "b688de8e5a4144fa02bede594a2c068d01a5a6d36ace0be9531e49928da02c43",
+    "companion/src/player-wallet.jsx": "35d3efa787d804a8b86c1709364781a373ed38564cda6b4a3fb8607ccd49cbe8",
+    "docs/PUBLIC_MINECRAFT_TUNNEL.md": "5831a7385ee411df493712397a73da1788437d31e91833275ad72818a2f92bd6",
+    "docs/UPSTREAM_REUSE.md": "551e79ffcecee2f7e4088e927b6a2e1a72acadef8f69a9452ddbc3e883c73cda",
+    "planning/phases.json": "d06cb9cc3bd2fde59666cec30d4ef2b046bb5276313abc7f04cdc7cf433f54b7",
+    "planning/scope.json": "05ec5031707d5227130b64fb9d98eefe32f62a48b3401f81225cc1fbe31d8c25",
+    "scripts/host_node.py": "c4ccfbe6e0f3504400c262ea3e504b8e4848ae1122e8802ced105cf0b7d2d830",
+    "scripts/host_node_windows.ps1": "12898ee3db26037dbac0de80fbd289db123928590c11d5475279c15c7a747c78",
+    "scripts/playable_playit_setup.mjs": "ae70a89a85e15506b903ca043659fd9ede379bef1ab4c771e016074b3ddf15df",
+    "tests/playable/host-node-stop.py": "14699ff89b25c79ac59089e6166345a28eeef206ec2f809d5581c6bc97edc30a",
+    "tests/playable/minecraft-ingress-live.mjs": "8a0d4f29c81606362e5d710eaa642ddffa9895dc7bae76dc444ec650da3a891e",
+    "tests/playable/minecraft-ingress.mjs": "1c5ac6a2f3cd770f8d4968b7b96f5a877471c04f9fae3e4ecf45d083eb955323",
+    "tests/playable/public-gateway.mjs": "571cba2a932b6593f828f454d9f8e900263be34294031a24fb4347f272a450f9",
+    "tests/playable/public-tunnel-live.mjs": "77c6a595f3db80c780a01ad6b4bff3ec2d4dfb2b7728d8ec371c34d932007d07"
+  },
+  "public": {
+    "onboardingOrigin": "https://assessing-catalogs-acute-oasis.trycloudflare.com",
+    "minecraftAddress": "domination-uid.tun.ply.gg:31628",
+    "playitLocalPort": 25565,
+    "bothIngressPortsUseSameAuthorization": [
+      25565,
+      8796
+    ]
+  },
+  "hosting": {
+    "tmuxSocket": "agentcity-host",
+    "services": [
+      "console",
+      "worker",
+      "gateway",
+      "minecraft-ingress",
+      "web-tunnel",
+      "playit"
+    ],
+    "windowsLoginShortcutInstalled": true,
+    "windowsKeepAwakeProcessVerified": true,
+    "ownedContainerRestartPolicies": "unless-stopped",
+    "privatePorts": [
+      25596,
+      25597,
+      8793,
+      55432
+    ],
+    "budget": "$0"
+  },
+  "verification": {
+    "publicHttps": {
+      "status": "pass",
+      "checks": 3,
+      "file": "evidence/runs/public-tunnel/d9de99f6-3cf0-4b1d-b753-dbe9d0af7408/report.json"
+    },
+    "publicMinecraft": {
+      "status": "pass",
+      "checks": 6,
+      "file": "evidence/runs/minecraft-ingress/73b1b362-a333-4490-b848-429e7e52c3fe/report.json"
+    },
+    "gatewayFixture": {
+      "status": "pass",
+      "checks": 4,
+      "file": "evidence/runs/public-gateway/211e3fa4-d4fa-4c06-afbe-032326a57b30/report.json"
+    },
+    "ingressFixture": {
+      "status": "pass",
+      "groups": 5
+    },
+    "tmuxStop": {
+      "status": "pass",
+      "scope": "Real isolated tmux supervisor and Node child; no orphan or respawn; production untouched"
+    },
+    "planning": {
+      "tests": 56,
+      "status": "pass",
+      "checkPlan": "pass; planning infrastructure only"
+    }
+  },
+  "scope": {
+    "canonicalPhase": "P0",
+    "canonicalGate": "blocked; changed implementation scope and prior upstream-document artifact mismatch",
+    "canonicalEvidenceRewritten": false,
+    "realDiscordOAuth": "pending human",
+    "authorizedHumanMinecraftLogin": "pending",
+    "independentHumanAcceptance": "pending",
+    "publicTransactions": 0,
+    "newProviderWalletCreation": 0
+  },
+  "notes": [
+    "HTTPS exposes only onboarding routes; operator root, financial demo and native control routes are refused.",
+    "Both Minecraft listeners require verified Discord/Privy and native name reservations; internal bots and synthetic profiles are refused before Paper login.",
+    "A public status response is transport evidence, not an authenticated human or Microsoft ownership claim.",
+    "Playit scoped-key mapping update was denied401 and preserved; guarded local25565 support keeps the user-created tunnel unchanged.",
+    "Initial networking failures and all earlier world histories remain preserved.",
+    "Windows must remain powered and connected; Quick Tunnel URL may change after a tunnel restart."
+  ],
+  "retained": {
+    "ownedWorld": "agentcity-playable-ce946e82",
+    "tasks": 11,
+    "taskLocks": {}
+  }
+}

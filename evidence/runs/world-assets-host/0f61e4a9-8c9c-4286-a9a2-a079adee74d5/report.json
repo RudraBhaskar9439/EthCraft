@@ -1,0 +1,35 @@
+{
+  "status": "pass",
+  "observedAt": "2026-10-31T18:24:32.283Z",
+  "scope": "Actual installed native plugin, confirmed ownership projection, Discord controls and pre-upgrade Game Coin balance readback; zero wallet signatures, grants, user inventory changes or independent-human trades",
+  "checks": [
+    "installed native escrow has no unresolved inventory effect; four estate rows apply fresh confirmed chain source pins",
+    "installed application and both protection dependencies match the actual tested release hashes",
+    "pre-upgrade Game Coin accounts and original personal-agent/task/lock journals retain their exact snapshots",
+    "versioned Privy migration and current configuration agree for all existing managed-wallet identities",
+    "actual guild slash command offers equipment, estate, funding, listing, purchase, redemption, swap and recovery actions",
+    "read-only market/transaction boards contain one current blockchain guide and no checked private fields"
+  ],
+  "pluginSha256": "c9a108690fad15f8d15702b6d6c67468dab438c6ba5d6837fbf0938b28c02a69",
+  "originalGameAccountsUnchanged": 7,
+  "originalJournalsPreserved": {
+    "personal-agent-tasks.json": true,
+    "personal-agents.json": true,
+    "plugins/AgentCity/task-region-locks.json": true
+  },
+  "migratedExistingWallets": 2,
+  "nativeProjection": {
+    "active": true,
+    "revision": 113,
+    "world": "agentcity_estates",
+    "worldUUID": "6ff9a1da-a800-4c5e-bf69-de747b3a870e",
+    "blockNumber": 66618629,
+    "blockHash": "0x36202a510735dd64808059ef986036297d05552af67bda5a5b0e3ed267d47e52",
+    "expiresAtMs": 1793471090753,
+    "parcels": 4
+  },
+  "backups": {
+    "privateWorldArchiveSha256": "9ec25b5a27aa0cbd4c822b6cddadeaf6771ff0f62a74d9cea6cdf59cecdc0659",
+    "privateDatabaseSha256": "714a8d2f0e29a8c7397ef4e63c3d7e6d65c72f344cb8fe076cb32eaa9d99a63e"
+  }
+}

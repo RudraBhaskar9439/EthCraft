@@ -1,0 +1,17 @@
+{
+  "name": "agentcity-player-wallet-companion",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "node build.mjs" },
+  "dependencies": {
+    "@privy-io/react-auth": "3.51.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": { "esbuild": "0.28.2" },
+  "overrides": {
+    "ws@8.18.0": "8.21.0",
+    "ws@8.18.3": "8.21.0"
+  }
+}

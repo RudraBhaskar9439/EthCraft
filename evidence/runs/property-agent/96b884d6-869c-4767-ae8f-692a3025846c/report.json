@@ -1,0 +1,36 @@
+{
+  "status": "pass",
+  "scope": "Actual owned-agent native estate entry/denial/eviction in retained isolated Paper fixture, with synthetic private-adapter chain snapshot; no human or live-chain proof",
+  "checks": [
+    {
+      "name": "actual owned agent enters its canonical owner parcel, cannot enter another parcel, and loses entry on paused projection",
+      "status": "pass"
+    }
+  ],
+  "productionMutations": 0,
+  "parent": {
+    "report": "evidence\\runs\\escrow-native\\b3e74222-af4d-4f2e-806c-c00b3032db74\\report.json",
+    "sha256": "7cd4d2d7026af88d3285428fd1a09db1269366c1f6b89d0dc3ca6a4894bd58dd"
+  },
+  "pluginSha256": "c9a108690fad15f8d15702b6d6c67468dab438c6ba5d6837fbf0938b28c02a69",
+  "container": "agentcity-escrow-fixture-9c4a18c9",
+  "fixtureRuntime": "C:\\Users\\Rudransh Shinghal\\agentcity-minecraft\\.local\\escrow-fixture\\9c4a18c9-3faa-45f4-9a1a-281a00ea57a4",
+  "agent": {
+    "name": "CityAgent2",
+    "playerId": "d10f9a61-9d5d-3771-a71c-65739f0ba9bd",
+    "ownerPrincipalId": "5e603b3c-83a9-46c2-bb48-f341414dcd35",
+    "world": "minecraft:agentcity_estates",
+    "ownedVisitReceipt": {
+      "parcelId": 1,
+      "visited": true,
+      "world": "agentcity_estates"
+    },
+    "positionInside": {
+      "x": 8.5,
+      "y": 65,
+      "z": 8.5
+    },
+    "fixtureGrant": "One-time six cobblestone from the disclosed isolated stock plugin; not withdrawn, listed, or spent"
+  },
+  "finishedAt": "2026-10-31T17:56:33.692Z"
+}

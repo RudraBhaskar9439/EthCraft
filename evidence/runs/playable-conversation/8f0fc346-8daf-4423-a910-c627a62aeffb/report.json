@@ -1,0 +1,56 @@
+{
+  "status": "fail",
+  "scope": "Actual local @agent conversation through Ollama and native delivery/collection/Game Coins sale; crypto authentication remains denied for this synthetic player",
+  "independentHumansVerified": 0,
+  "providerIdentitiesVerified": 0,
+  "publicTransactions": 0,
+  "checks": [
+    {
+      "name": "wallet-login-capability-binds-current-connection-and-unauthenticated-swap-adds-no-wallet-request-or-preview-records",
+      "status": "pass",
+      "providerRecordsBefore": {
+        "wallets": 0,
+        "signingRequests": 0,
+        "swapPreviews": 0
+      },
+      "providerRecordsAfter": {
+        "wallets": 0,
+        "signingRequests": 0,
+        "swapPreviews": 0
+      }
+    },
+    {
+      "name": "actual-at-agent-chat-produced-exact-three-step-conversational-plan",
+      "status": "pass",
+      "steps": [
+        {
+          "action": "deliver",
+          "item": "cobblestone",
+          "count": 2
+        },
+        {
+          "action": "collect",
+          "item": "cobblestone",
+          "count": 4
+        },
+        {
+          "action": "sell",
+          "item": "cobblestone",
+          "count": 4
+        }
+      ]
+    }
+  ],
+  "startedAt": "2026-10-31T09:24:54.959Z",
+  "resumedOriginalWorkflow": "bb07d504-837b-4a4a-b33c-6decf7f5531a",
+  "workflowId": "bb07d504-837b-4a4a-b33c-6decf7f5531a",
+  "workflow": {
+    "status": "complete",
+    "completedSteps": 3,
+    "totalSteps": 3,
+    "message": "All 3 workflow steps completed."
+  },
+  "error": "No path to the goal!",
+  "finishedAt": "2026-10-31T09:26:21.723Z",
+  "lastWorldName": "minecraft:agentcity_play"
+}

@@ -1,0 +1,57 @@
+{
+  "status": "pass",
+  "runId": "9fa48f68-8633-4fbb-8a06-e34929f8ce73",
+  "schema": "bank_test_9fa48f6886334fbb8a06e34929f8ce73",
+  "publicTransactions": 0,
+  "paidModelCalls": 0,
+  "realMoneySpentUsd": 0,
+  "independentHumans": 0,
+  "scope": "Actual isolated PostgreSQL/Anvil fork and official v4 contracts; synthetic native custody and inspector context; controlled signers.",
+  "checks": [
+    {
+      "name": "owner confirmation and immutable preview gate lender capital",
+      "status": "pass"
+    },
+    {
+      "name": "service recreation reconciles original signed borrow and never lends twice",
+      "status": "pass"
+    },
+    {
+      "name": "official two-pool exact-output quote and swap enforce exact receipt and cap",
+      "status": "pass"
+    },
+    {
+      "name": "atomic item checkout pays seller and verifies final buyer after two NFT transfers",
+      "status": "pass"
+    },
+    {
+      "name": "funded work requires inspector result and requester acceptance and pays once",
+      "status": "pass"
+    },
+    {
+      "name": "repayment credits lender exactly and collateral and cash claims release once",
+      "status": "pass"
+    },
+    {
+      "name": "two qualifying controlled repayments produce the contract-recorded discount",
+      "status": "pass"
+    },
+    {
+      "name": "overdue auctions account for borrower surplus and lender shortfall and remove discount",
+      "status": "pass"
+    },
+    {
+      "name": "expired partial checkout intent reconciles approval without new signing or token spending",
+      "status": "pass"
+    }
+  ],
+  "sourceHashes": {
+    "backend/src/bank/service.mjs": "4e24e556544eea0b94a221a8277e4a073607ba6b8138f87e2923f5a4b081bc99",
+    "backend/src/bank/canonical.mjs": "f1686d68c01936d07a62eb834ad40f8fef0c4bc0e301d9567e8c2edb506de2f0",
+    "backend/src/bank/abis.mjs": "8b540c24b5ed4abfefbfdd35b36efe8aa85b3d906a2dc743e35d8d02c34e1e7c",
+    "backend/src/world-assets/canonical.mjs": "83df3765a087c5a8dd8fd951e82c7fb10c7f54e0eb0c8bd1516e436fe734259b",
+    "tests/bank/service.mjs": "40af3fd1a48abd6aabb3c7210aa9ee37524bf342c081d2cbc8abfd8fbfb01c0b"
+  },
+  "controlledSignatures": 43,
+  "sourceChainUnchangedByFixture": true
+}

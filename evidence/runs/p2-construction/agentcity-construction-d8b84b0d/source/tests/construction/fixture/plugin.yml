@@ -1,0 +1,7 @@
+name: AgentCityConstructionFixture
+version: 0.1.0
+main: org.agentcity.construction.fixture.ConstructionFixture
+api-version: '1.21.11'
+load: POSTWORLD
+loadbefore: [AgentCity]
+description: One-shot non-token operator access and controlled construction stock

@@ -1,0 +1,33 @@
+{
+  "schema": "agentcity.playable-privy-read-verification.v1",
+  "recordedAt": "2026-10-31T09:18:36.896Z",
+  "status": "pass",
+  "scope": "Actual official Privy SDK GET verification; zero wallet creation or signing attempts",
+  "sdk": "@privy-io/node@0.37.0",
+  "ownerQuorumId": "eggn8irg9axry1f97lhopmer",
+  "delegateQuorumId": "zptbxggvqckkpsu2wj9mrwys",
+  "policyId": "pyil3yzu5jinniuunt5bljgh",
+  "policySha256": "5ae68d1cb9afd7cc18136650d2209918e37490533ea3e0da2645830d85818180",
+  "verified": {
+    "ownerQuorumSinglePinnedPublicKey": true,
+    "delegateQuorumSingleDistinctPinnedPublicKey": true,
+    "quorumThresholdsExactlyOne": true,
+    "noNestedQuorumsOrUsers": true,
+    "policyOwnerEqualsOfflineOwnerQuorum": true,
+    "policyFingerprintEqualsRestrictedTemplate": true,
+    "onlyEthSignTransactionAllowed": true,
+    "chain1301ZeroValueAndConfiguredContractsOnly": true,
+    "calldataRestrictionsPresent": true
+  },
+  "walletCreationAttempted": false,
+  "signatureAttempted": false,
+  "publicTransactions": 0,
+  "policyReplacementRequired": false,
+  "sourceSha256": "a44026593be6c90430e2723f7c161753b6219c12d166b18300fa7f4fe90dcb30",
+  "pending": [
+    "Actual human authenticated managed wallet creation",
+    "Actual delegated signing and canonical transaction reconciliation",
+    "Separate admin operating-system identity/offline key custody before production",
+    "Provider dashboard administrative and export access review"
+  ]
+}

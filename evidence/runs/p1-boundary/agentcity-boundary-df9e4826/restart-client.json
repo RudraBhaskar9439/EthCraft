@@ -1,0 +1,5048 @@
+{
+  "schema": "agentcity.p1.boundary-client.v1",
+  "status": "fail",
+  "phase": "restart",
+  "suite": "lifecycle",
+  "started_at": "2026-10-29T15:07:44.352Z",
+  "full_phase_gate_passed": false,
+  "identities": "All four clients are agent-controlled offline fixtures. No independent-human, licensed-account or production authentication claim.",
+  "steps": [
+    {
+      "payload": {
+        "operationId": "7dc522cd-48f2-42e7-b128-8dc0af06a037",
+        "serverId": "local-inspection-server",
+        "jobId": "agentcity-boundary-df9e4826",
+        "agreementVersion": 1,
+        "actorId": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+        "expectedRevision": 0,
+        "authorizationReference": "local-boundary-authorization",
+        "expiresAtMs": 1793286455466,
+        "action": "PLACE",
+        "params": {
+          "x": -2,
+          "y": 82,
+          "z": -4,
+          "state": "minecraft:redstone_wire"
+        }
+      },
+      "response": {
+        "http_status": 200,
+        "body": {
+          "status": "REPLAY",
+          "code": "RECORDED_APPLIED",
+          "operationId": "7dc522cd-48f2-42e7-b128-8dc0af06a037",
+          "revision": 1
+        }
+      },
+      "before": {
+        "state": {
+          "revision": 1,
+          "lockMode": "NONE",
+          "quarantined": false,
+          "readyForReview": false,
+          "passValidUntilMs": 0
+        },
+        "refusals": [
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "awaiting_player_inventory"
+        ],
+        "tick": 450,
+        "observed_at_ms": 1793286485993,
+        "target": "minecraft:redstone_wire[east=up,north=none,power=14,south=none,west=side]",
+        "stock": {
+          "minecraft:lever": 4,
+          "minecraft:redstone": 18,
+          "minecraft:redstone_lamp": 3,
+          "minecraft:redstone_torch": 37,
+          "minecraft:repeater": 16,
+          "minecraft:stone_bricks": 65
+        },
+        "players": {
+          "WorldBuilder": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldBuilder",
+            "uuid": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+            "position": [
+              -14.5,
+              81,
+              3.5
+            ],
+            "items": {},
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              -14.5,
+              82.62000000476837,
+              3.5
+            ]
+          },
+          "WorldInspector": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldInspector",
+            "uuid": "563add28-410b-350e-9001-a9be4cc7bd00",
+            "position": [
+              12.5,
+              81,
+              5.5
+            ],
+            "items": {},
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              12.5,
+              82.62000000476837,
+              5.5
+            ]
+          },
+          "WorldRequester": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldRequester",
+            "uuid": "a56f0418-1cf4-3f1e-a0ab-9b34ba31f192",
+            "position": [
+              -12.5,
+              81,
+              -6.5
+            ],
+            "items": {
+              "minecraft:lava_bucket": 1,
+              "minecraft:water_bucket": 1
+            },
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              -12.5,
+              82.62000000476837,
+              -6.5
+            ]
+          },
+          "WorldStranger": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldBuilder",
+            "uuid": "3febf1ac-21e5-394e-bb24-e8731e755afa",
+            "position": [
+              12.5,
+              81,
+              -6.5
+            ],
+            "items": {
+              "minecraft:cobblestone": 1
+            },
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              12.5,
+              82.62000000476837,
+              -6.5
+            ]
+          }
+        },
+        "structural_sha256": "3ad37a2c8081485255d3e702949a66feb611d1e1d7119b6eacfc35443414aed9"
+      },
+      "after": {
+        "state": {
+          "revision": 1,
+          "lockMode": "NONE",
+          "quarantined": false,
+          "readyForReview": false,
+          "passValidUntilMs": 0
+        },
+        "refusals": [
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "awaiting_player_inventory"
+        ],
+        "tick": 450,
+        "observed_at_ms": 1793286485993,
+        "target": "minecraft:redstone_wire[east=up,north=none,power=14,south=none,west=side]",
+        "stock": {
+          "minecraft:lever": 4,
+          "minecraft:redstone": 18,
+          "minecraft:redstone_lamp": 3,
+          "minecraft:redstone_torch": 37,
+          "minecraft:repeater": 16,
+          "minecraft:stone_bricks": 65
+        },
+        "players": {
+          "WorldBuilder": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldBuilder",
+            "uuid": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+            "position": [
+              -14.5,
+              81,
+              3.5
+            ],
+            "items": {},
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              -14.5,
+              82.62000000476837,
+              3.5
+            ]
+          },
+          "WorldInspector": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldInspector",
+            "uuid": "563add28-410b-350e-9001-a9be4cc7bd00",
+            "position": [
+              12.5,
+              81,
+              5.5
+            ],
+            "items": {},
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              12.5,
+              82.62000000476837,
+              5.5
+            ]
+          },
+          "WorldRequester": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldRequester",
+            "uuid": "a56f0418-1cf4-3f1e-a0ab-9b34ba31f192",
+            "position": [
+              -12.5,
+              81,
+              -6.5
+            ],
+            "items": {
+              "minecraft:lava_bucket": 1,
+              "minecraft:water_bucket": 1
+            },
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              -12.5,
+              82.62000000476837,
+              -6.5
+            ]
+          },
+          "WorldStranger": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldBuilder",
+            "uuid": "3febf1ac-21e5-394e-bb24-e8731e755afa",
+            "position": [
+              12.5,
+              81,
+              -6.5
+            ],
+            "items": {
+              "minecraft:cobblestone": 1
+            },
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              12.5,
+              82.62000000476837,
+              -6.5
+            ]
+          }
+        },
+        "structural_sha256": "3ad37a2c8081485255d3e702949a66feb611d1e1d7119b6eacfc35443414aed9"
+      },
+      "name": "restart_retry_returns_durable_original_receipt",
+      "status": "pass",
+      "at": "2026-10-29T15:08:06.279Z"
+    },
+    {
+      "payload": {
+        "operationId": "724fe743-2ee5-4d9c-b4b8-7907c4c8a31e",
+        "serverId": "local-inspection-server",
+        "jobId": "agentcity-boundary-df9e4826",
+        "agreementVersion": 1,
+        "actorId": "563add28-410b-350e-9001-a9be4cc7bd00",
+        "expectedRevision": 1,
+        "authorizationReference": "local-boundary-authorization",
+        "expiresAtMs": 1793286494328,
+        "action": "INSPECT",
+        "params": {}
+      },
+      "response": {
+        "http_status": 200,
+        "body": {
+          "status": "APPLIED",
+          "code": "OBSERVED_APPLIED",
+          "operationId": "724fe743-2ee5-4d9c-b4b8-7907c4c8a31e",
+          "revision": 1
+        }
+      },
+      "name": "protected_normal_checker_started",
+      "status": "pass",
+      "at": "2026-10-29T15:08:06.937Z"
+    },
+    {
+      "payload": {
+        "operationId": "85024b43-3140-4cc9-abc0-f81e2e9ef349",
+        "serverId": "local-inspection-server",
+        "jobId": "agentcity-boundary-df9e4826",
+        "agreementVersion": 1,
+        "actorId": "563add28-410b-350e-9001-a9be4cc7bd00",
+        "expectedRevision": 1,
+        "authorizationReference": "local-boundary-authorization",
+        "expiresAtMs": 1793286495454,
+        "action": "UNLOCK",
+        "params": {}
+      },
+      "response": {
+        "http_status": 200,
+        "body": {
+          "status": "REFUSED",
+          "code": "CHECKER_OWNS_LOCK",
+          "operationId": "85024b43-3140-4cc9-abc0-f81e2e9ef349",
+          "revision": 1
+        }
+      },
+      "before": {
+        "state": {
+          "revision": 1,
+          "lockMode": "INSPECTION",
+          "quarantined": false,
+          "readyForReview": false,
+          "passValidUntilMs": 0
+        },
+        "refusals": [
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "awaiting_player_inventory"
+        ],
+        "tick": 475,
+        "observed_at_ms": 1793286487240,
+        "target": "minecraft:redstone_wire[east=up,north=none,power=14,south=none,west=side]",
+        "stock": {
+          "minecraft:lever": 4,
+          "minecraft:redstone": 18,
+          "minecraft:redstone_lamp": 3,
+          "minecraft:redstone_torch": 37,
+          "minecraft:repeater": 16,
+          "minecraft:stone_bricks": 65
+        },
+        "players": {
+          "WorldBuilder": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldBuilder",
+            "uuid": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+            "position": [
+              -14.5,
+              81,
+              3.5
+            ],
+            "items": {},
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              -14.5,
+              82.62000000476837,
+              3.5
+            ]
+          },
+          "WorldInspector": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldInspector",
+            "uuid": "563add28-410b-350e-9001-a9be4cc7bd00",
+            "position": [
+              12.5,
+              81,
+              5.5
+            ],
+            "items": {},
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              12.5,
+              82.62000000476837,
+              5.5
+            ]
+          },
+          "WorldRequester": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldRequester",
+            "uuid": "a56f0418-1cf4-3f1e-a0ab-9b34ba31f192",
+            "position": [
+              -12.5,
+              81,
+              -6.5
+            ],
+            "items": {
+              "minecraft:lava_bucket": 1,
+              "minecraft:water_bucket": 1
+            },
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              -12.5,
+              82.62000000476837,
+              -6.5
+            ]
+          },
+          "WorldStranger": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldBuilder",
+            "uuid": "3febf1ac-21e5-394e-bb24-e8731e755afa",
+            "position": [
+              12.5,
+              81,
+              -6.5
+            ],
+            "items": {
+              "minecraft:cobblestone": 1
+            },
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              12.5,
+              82.62000000476837,
+              -6.5
+            ]
+          }
+        },
+        "structural_sha256": "3ad37a2c8081485255d3e702949a66feb611d1e1d7119b6eacfc35443414aed9"
+      },
+      "after": {
+        "state": {
+          "revision": 1,
+          "lockMode": "INSPECTION",
+          "quarantined": false,
+          "readyForReview": false,
+          "passValidUntilMs": 0
+        },
+        "refusals": [
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "awaiting_player_inventory"
+        ],
+        "tick": 485,
+        "observed_at_ms": 1793286487739,
+        "target": "minecraft:redstone_wire[east=up,north=none,power=14,south=none,west=side]",
+        "stock": {
+          "minecraft:lever": 4,
+          "minecraft:redstone": 18,
+          "minecraft:redstone_lamp": 3,
+          "minecraft:redstone_torch": 37,
+          "minecraft:repeater": 16,
+          "minecraft:stone_bricks": 65
+        },
+        "players": {
+          "WorldBuilder": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldBuilder",
+            "uuid": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+            "position": [
+              -14.5,
+              81,
+              3.5
+            ],
+            "items": {},
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              -14.5,
+              82.62000000476837,
+              3.5
+            ]
+          },
+          "WorldInspector": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldInspector",
+            "uuid": "563add28-410b-350e-9001-a9be4cc7bd00",
+            "position": [
+              12.5,
+              81,
+              5.5
+            ],
+            "items": {},
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              12.5,
+              82.62000000476837,
+              5.5
+            ]
+          },
+          "WorldRequester": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldRequester",
+            "uuid": "a56f0418-1cf4-3f1e-a0ab-9b34ba31f192",
+            "position": [
+              -12.5,
+              81,
+              -6.5
+            ],
+            "items": {
+              "minecraft:lava_bucket": 1,
+              "minecraft:water_bucket": 1
+            },
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              -12.5,
+              82.62000000476837,
+              -6.5
+            ]
+          },
+          "WorldStranger": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldBuilder",
+            "uuid": "3febf1ac-21e5-394e-bb24-e8731e755afa",
+            "position": [
+              12.5,
+              81,
+              -6.5
+            ],
+            "items": {
+              "minecraft:cobblestone": 1
+            },
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              12.5,
+              82.62000000476837,
+              -6.5
+            ]
+          }
+        },
+        "structural_sha256": "3ad37a2c8081485255d3e702949a66feb611d1e1d7119b6eacfc35443414aed9"
+      },
+      "name": "active_checker_cannot_unlock",
+      "status": "pass",
+      "at": "2026-10-29T15:08:07.844Z"
+    },
+    {
+      "payload": {
+        "operationId": "37b7238e-53bf-40a7-b7ab-4e0dd6876866",
+        "serverId": "local-inspection-server",
+        "jobId": "agentcity-boundary-df9e4826",
+        "agreementVersion": 1,
+        "actorId": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+        "expectedRevision": 1,
+        "authorizationReference": "local-boundary-authorization",
+        "expiresAtMs": 1793286495848,
+        "action": "BREAK",
+        "params": {
+          "x": -2,
+          "y": 82,
+          "z": -4
+        }
+      },
+      "response": {
+        "http_status": 200,
+        "body": {
+          "status": "REFUSED",
+          "code": "LOCKED",
+          "operationId": "37b7238e-53bf-40a7-b7ab-4e0dd6876866",
+          "revision": 1
+        }
+      },
+      "before": {
+        "state": {
+          "revision": 1,
+          "lockMode": "INSPECTION",
+          "quarantined": false,
+          "readyForReview": false,
+          "passValidUntilMs": 0
+        },
+        "refusals": [
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "awaiting_player_inventory"
+        ],
+        "tick": 485,
+        "observed_at_ms": 1793286487739,
+        "target": "minecraft:redstone_wire[east=up,north=none,power=14,south=none,west=side]",
+        "stock": {
+          "minecraft:lever": 4,
+          "minecraft:redstone": 18,
+          "minecraft:redstone_lamp": 3,
+          "minecraft:redstone_torch": 37,
+          "minecraft:repeater": 16,
+          "minecraft:stone_bricks": 65
+        },
+        "players": {
+          "WorldBuilder": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldBuilder",
+            "uuid": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+            "position": [
+              -14.5,
+              81,
+              3.5
+            ],
+            "items": {},
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              -14.5,
+              82.62000000476837,
+              3.5
+            ]
+          },
+          "WorldInspector": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldInspector",
+            "uuid": "563add28-410b-350e-9001-a9be4cc7bd00",
+            "position": [
+              12.5,
+              81,
+              5.5
+            ],
+            "items": {},
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              12.5,
+              82.62000000476837,
+              5.5
+            ]
+          },
+          "WorldRequester": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldRequester",
+            "uuid": "a56f0418-1cf4-3f1e-a0ab-9b34ba31f192",
+            "position": [
+              -12.5,
+              81,
+              -6.5
+            ],
+            "items": {
+              "minecraft:lava_bucket": 1,
+              "minecraft:water_bucket": 1
+            },
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              -12.5,
+              82.62000000476837,
+              -6.5
+            ]
+          },
+          "WorldStranger": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldBuilder",
+            "uuid": "3febf1ac-21e5-394e-bb24-e8731e755afa",
+            "position": [
+              12.5,
+              81,
+              -6.5
+            ],
+            "items": {
+              "minecraft:cobblestone": 1
+            },
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              12.5,
+              82.62000000476837,
+              -6.5
+            ]
+          }
+        },
+        "structural_sha256": "3ad37a2c8081485255d3e702949a66feb611d1e1d7119b6eacfc35443414aed9"
+      },
+      "after": {
+        "state": {
+          "revision": 1,
+          "lockMode": "INSPECTION",
+          "quarantined": false,
+          "readyForReview": false,
+          "passValidUntilMs": 0
+        },
+        "refusals": [
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "awaiting_player_inventory"
+        ],
+        "tick": 495,
+        "observed_at_ms": 1793286488238,
+        "target": "minecraft:redstone_wire[east=up,north=none,power=14,south=none,west=side]",
+        "stock": {
+          "minecraft:lever": 4,
+          "minecraft:redstone": 18,
+          "minecraft:redstone_lamp": 3,
+          "minecraft:redstone_torch": 37,
+          "minecraft:repeater": 16,
+          "minecraft:stone_bricks": 65
+        },
+        "players": {
+          "WorldBuilder": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldBuilder",
+            "uuid": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+            "position": [
+              -14.5,
+              81,
+              3.5
+            ],
+            "items": {},
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              -14.5,
+              82.62000000476837,
+              3.5
+            ]
+          },
+          "WorldInspector": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldInspector",
+            "uuid": "563add28-410b-350e-9001-a9be4cc7bd00",
+            "position": [
+              12.5,
+              81,
+              5.5
+            ],
+            "items": {},
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              12.5,
+              82.62000000476837,
+              5.5
+            ]
+          },
+          "WorldRequester": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldRequester",
+            "uuid": "a56f0418-1cf4-3f1e-a0ab-9b34ba31f192",
+            "position": [
+              -12.5,
+              81,
+              -6.5
+            ],
+            "items": {
+              "minecraft:lava_bucket": 1,
+              "minecraft:water_bucket": 1
+            },
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              -12.5,
+              82.62000000476837,
+              -6.5
+            ]
+          },
+          "WorldStranger": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldBuilder",
+            "uuid": "3febf1ac-21e5-394e-bb24-e8731e755afa",
+            "position": [
+              12.5,
+              81,
+              -6.5
+            ],
+            "items": {
+              "minecraft:cobblestone": 1
+            },
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              12.5,
+              82.62000000476837,
+              -6.5
+            ]
+          }
+        },
+        "structural_sha256": "3ad37a2c8081485255d3e702949a66feb611d1e1d7119b6eacfc35443414aed9"
+      },
+      "name": "active_checker_structure_edit_denied",
+      "status": "pass",
+      "at": "2026-10-29T15:08:08.452Z"
+    },
+    {
+      "actor_name": "WorldRequester",
+      "goal": [
+        -8,
+        81,
+        -7
+      ],
+      "before": [
+        -12.5,
+        81,
+        -6.5
+      ],
+      "client_position": {
+        "x": -7.5,
+        "y": 81,
+        "z": -6.5000000000006715
+      },
+      "client_mode": "survival",
+      "physics_enabled": true,
+      "alive": true,
+      "telemetry": {
+        "received_teleports": [
+          {
+            "x": -7.5,
+            "y": 81,
+            "z": -6.5000000000006715,
+            "teleport_id": 1,
+            "at_ms": 1793286470244
+          },
+          {
+            "x": -12.5,
+            "y": 81,
+            "z": -6.5,
+            "teleport_id": 2,
+            "at_ms": 1793286470250
+          }
+        ],
+        "sent_teleport_confirmations": [
+          {
+            "teleport_id": 1,
+            "at_ms": 1793286470244
+          },
+          {
+            "teleport_id": 2,
+            "at_ms": 1793286470250
+          }
+        ],
+        "sent_positions": [
+          {
+            "x": -10.310474878709384,
+            "y": 81,
+            "z": -6.500000000000336,
+            "at_ms": 1793286488967
+          },
+          {
+            "x": -10.030518782851747,
+            "y": 81,
+            "z": -6.500000000000373,
+            "at_ms": 1793286489019
+          },
+          {
+            "x": -9.75026270442112,
+            "y": 81,
+            "z": -6.50000000000041,
+            "at_ms": 1793286489072
+          },
+          {
+            "x": -9.46984283550564,
+            "y": 81,
+            "z": -6.500000000000448,
+            "at_ms": 1793286489122
+          },
+          {
+            "x": -9.18933353698543,
+            "y": 81,
+            "z": -6.500000000000485,
+            "at_ms": 1793286489173
+          },
+          {
+            "x": -8.908775409901038,
+            "y": 81,
+            "z": -6.500000000000522,
+            "at_ms": 1793286489225
+          },
+          {
+            "x": -8.628190622420602,
+            "y": 81,
+            "z": -6.5000000000005596,
+            "at_ms": 1793286489275
+          },
+          {
+            "x": -8.347591278363927,
+            "y": 81,
+            "z": -6.500000000000597,
+            "at_ms": 1793286489327
+          },
+          {
+            "x": -8.066983986416624,
+            "y": 81,
+            "z": -6.500000000000634,
+            "at_ms": 1793286489379
+          },
+          {
+            "x": -7.5,
+            "y": 81,
+            "z": -6.5000000000006715,
+            "at_ms": 1793286489429
+          }
+        ],
+        "position_packet_count": 39,
+        "packet_counts": {
+          "teleport_confirm": 2,
+          "position_look": 12,
+          "player_loaded": 1,
+          "position": 27,
+          "flying": 1
+        }
+      },
+      "server_position": [
+        -7.5,
+        81,
+        -6.5000000000006715
+      ],
+      "observed_at_ms": 1793286489489,
+      "name": "server_confirmed_navigation",
+      "status": "pass",
+      "at": "2026-10-29T15:08:09.684Z"
+    },
+    {
+      "name": "active_checker_external_input_event_denied",
+      "status": "pass",
+      "at": "2026-10-29T15:08:10.205Z"
+    },
+    {
+      "state": {
+        "revision": 1,
+        "lockMode": "REVIEW",
+        "quarantined": false,
+        "readyForReview": true,
+        "passValidUntilMs": 1793286616345
+      },
+      "report": {
+        "runId": "14e0a08e-48a3-42c3-9348-08c60527a3a1",
+        "context": {
+          "serverId": "local-inspection-server",
+          "jobId": "agentcity-boundary-df9e4826",
+          "agreementVersion": 1,
+          "blueprintHash": "c8704765464a574ec4c797ad78d5294cc167007f66a0abfebd742e0b06711c49",
+          "testVersion": "cfb5986bf2f5bfea89075ffee8e38eb1652f3fad15503935d1f134a776d309cf"
+        },
+        "revision": 1,
+        "startedAtMs": 1793286486938,
+        "completedAtMs": 1793286586345,
+        "status": "PASS",
+        "initialization": [
+          {
+            "tick": 123,
+            "elapsedNs": 6157274087,
+            "controls": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "lamps": [
+              true,
+              false,
+              true
+            ]
+          },
+          {
+            "tick": 238,
+            "elapsedNs": 11900715172,
+            "controls": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "lamps": [
+              false,
+              false,
+              false
+            ]
+          }
+        ],
+        "rows": [
+          {
+            "a": 0,
+            "b": 0,
+            "expected": 0,
+            "observed": 0,
+            "lamps": [
+              false,
+              false,
+              false
+            ],
+            "elapsedMs": 4307,
+            "resetElapsedNs": 2049722876,
+            "settleElapsedNs": 2257417084,
+            "stableObservations": [
+              {
+                "tick": 321,
+                "elapsedNs": 4103989085,
+                "controls": [
+                  false,
+                  false,
+                  false,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "tick": 322,
+                "elapsedNs": 4150098418,
+                "controls": [
+                  false,
+                  false,
+                  false,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "tick": 323,
+                "elapsedNs": 4201886043,
+                "controls": [
+                  false,
+                  false,
+                  false,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "tick": 324,
+                "elapsedNs": 4253093585,
+                "controls": [
+                  false,
+                  false,
+                  false,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  false,
+                  false
+                ]
+              },
+              {
+                "tick": 325,
+                "elapsedNs": 4307001627,
+                "controls": [
+                  false,
+                  false,
+                  false,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  false,
+                  false
+                ]
+              }
+            ]
+          },
+          {
+            "a": 0,
+            "b": 1,
+            "expected": 1,
+            "observed": 1,
+            "lamps": [
+              false,
+              true,
+              false
+            ],
+            "elapsedMs": 4344,
+            "resetElapsedNs": 2045640834,
+            "settleElapsedNs": 2298569293,
+            "stableObservations": [
+              {
+                "tick": 409,
+                "elapsedNs": 4149773710,
+                "controls": [
+                  false,
+                  false,
+                  true,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  false
+                ]
+              },
+              {
+                "tick": 410,
+                "elapsedNs": 4193570002,
+                "controls": [
+                  false,
+                  false,
+                  true,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  false
+                ]
+              },
+              {
+                "tick": 411,
+                "elapsedNs": 4254089668,
+                "controls": [
+                  false,
+                  false,
+                  true,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  false
+                ]
+              },
+              {
+                "tick": 412,
+                "elapsedNs": 4292737294,
+                "controls": [
+                  false,
+                  false,
+                  true,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  false
+                ]
+              },
+              {
+                "tick": 413,
+                "elapsedNs": 4344094335,
+                "controls": [
+                  false,
+                  false,
+                  true,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  false
+                ]
+              }
+            ]
+          },
+          {
+            "a": 0,
+            "b": 2,
+            "expected": 2,
+            "observed": 2,
+            "lamps": [
+              false,
+              false,
+              true
+            ],
+            "elapsedMs": 4396,
+            "resetElapsedNs": 2104275417,
+            "settleElapsedNs": 2292253876,
+            "stableObservations": [
+              {
+                "tick": 498,
+                "elapsedNs": 4196311085,
+                "controls": [
+                  false,
+                  false,
+                  false,
+                  true
+                ],
+                "lamps": [
+                  false,
+                  false,
+                  true
+                ]
+              },
+              {
+                "tick": 499,
+                "elapsedNs": 4248396877,
+                "controls": [
+                  false,
+                  false,
+                  false,
+                  true
+                ],
+                "lamps": [
+                  false,
+                  false,
+                  true
+                ]
+              },
+              {
+                "tick": 500,
+                "elapsedNs": 4296139168,
+                "controls": [
+                  false,
+                  false,
+                  false,
+                  true
+                ],
+                "lamps": [
+                  false,
+                  false,
+                  true
+                ]
+              },
+              {
+                "tick": 501,
+                "elapsedNs": 4346282502,
+                "controls": [
+                  false,
+                  false,
+                  false,
+                  true
+                ],
+                "lamps": [
+                  false,
+                  false,
+                  true
+                ]
+              },
+              {
+                "tick": 502,
+                "elapsedNs": 4396520877,
+                "controls": [
+                  false,
+                  false,
+                  false,
+                  true
+                ],
+                "lamps": [
+                  false,
+                  false,
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "a": 0,
+            "b": 3,
+            "expected": 3,
+            "observed": 3,
+            "lamps": [
+              false,
+              true,
+              true
+            ],
+            "elapsedMs": 4902,
+            "resetElapsedNs": 2109115668,
+            "settleElapsedNs": 2793218543,
+            "stableObservations": [
+              {
+                "tick": 597,
+                "elapsedNs": 4701704919,
+                "controls": [
+                  false,
+                  false,
+                  true,
+                  true
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  true
+                ]
+              },
+              {
+                "tick": 598,
+                "elapsedNs": 4750096627,
+                "controls": [
+                  false,
+                  false,
+                  true,
+                  true
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  true
+                ]
+              },
+              {
+                "tick": 599,
+                "elapsedNs": 4800069086,
+                "controls": [
+                  false,
+                  false,
+                  true,
+                  true
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  true
+                ]
+              },
+              {
+                "tick": 600,
+                "elapsedNs": 4850550419,
+                "controls": [
+                  false,
+                  false,
+                  true,
+                  true
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  true
+                ]
+              },
+              {
+                "tick": 601,
+                "elapsedNs": 4902330544,
+                "controls": [
+                  false,
+                  false,
+                  true,
+                  true
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "a": 1,
+            "b": 0,
+            "expected": 1,
+            "observed": 1,
+            "lamps": [
+              false,
+              true,
+              false
+            ],
+            "elapsedMs": 4951,
+            "resetElapsedNs": 2650025293,
+            "settleElapsedNs": 2301703084,
+            "stableObservations": [
+              {
+                "tick": 697,
+                "elapsedNs": 4752160294,
+                "controls": [
+                  true,
+                  false,
+                  false,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  false
+                ]
+              },
+              {
+                "tick": 698,
+                "elapsedNs": 4803735461,
+                "controls": [
+                  true,
+                  false,
+                  false,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  false
+                ]
+              },
+              {
+                "tick": 699,
+                "elapsedNs": 4851209419,
+                "controls": [
+                  true,
+                  false,
+                  false,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  false
+                ]
+              },
+              {
+                "tick": 700,
+                "elapsedNs": 4906794169,
+                "controls": [
+                  true,
+                  false,
+                  false,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  false
+                ]
+              },
+              {
+                "tick": 701,
+                "elapsedNs": 4951725628,
+                "controls": [
+                  true,
+                  false,
+                  false,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  false
+                ]
+              }
+            ]
+          },
+          {
+            "a": 1,
+            "b": 1,
+            "expected": 2,
+            "observed": 2,
+            "lamps": [
+              false,
+              false,
+              true
+            ],
+            "elapsedMs": 4891,
+            "resetElapsedNs": 2094886959,
+            "settleElapsedNs": 2796656626,
+            "stableObservations": [
+              {
+                "tick": 796,
+                "elapsedNs": 4701823794,
+                "controls": [
+                  true,
+                  false,
+                  true,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  false,
+                  true
+                ]
+              },
+              {
+                "tick": 797,
+                "elapsedNs": 4744726294,
+                "controls": [
+                  true,
+                  false,
+                  true,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  false,
+                  true
+                ]
+              },
+              {
+                "tick": 798,
+                "elapsedNs": 4797592169,
+                "controls": [
+                  true,
+                  false,
+                  true,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  false,
+                  true
+                ]
+              },
+              {
+                "tick": 799,
+                "elapsedNs": 4842584794,
+                "controls": [
+                  true,
+                  false,
+                  true,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  false,
+                  true
+                ]
+              },
+              {
+                "tick": 800,
+                "elapsedNs": 4891528419,
+                "controls": [
+                  true,
+                  false,
+                  true,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  false,
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "a": 1,
+            "b": 2,
+            "expected": 3,
+            "observed": 3,
+            "lamps": [
+              false,
+              true,
+              true
+            ],
+            "elapsedMs": 5447,
+            "resetElapsedNs": 2649465709,
+            "settleElapsedNs": 2798223210,
+            "stableObservations": [
+              {
+                "tick": 906,
+                "elapsedNs": 5246894252,
+                "controls": [
+                  true,
+                  false,
+                  false,
+                  true
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  true
+                ]
+              },
+              {
+                "tick": 907,
+                "elapsedNs": 5299208418,
+                "controls": [
+                  true,
+                  false,
+                  false,
+                  true
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  true
+                ]
+              },
+              {
+                "tick": 908,
+                "elapsedNs": 5346119085,
+                "controls": [
+                  true,
+                  false,
+                  false,
+                  true
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  true
+                ]
+              },
+              {
+                "tick": 909,
+                "elapsedNs": 5397513918,
+                "controls": [
+                  true,
+                  false,
+                  false,
+                  true
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  true
+                ]
+              },
+              {
+                "tick": 910,
+                "elapsedNs": 5447685377,
+                "controls": [
+                  true,
+                  false,
+                  false,
+                  true
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "a": 1,
+            "b": 3,
+            "expected": 4,
+            "observed": 4,
+            "lamps": [
+              true,
+              false,
+              false
+            ],
+            "elapsedMs": 5997,
+            "resetElapsedNs": 2598619626,
+            "settleElapsedNs": 3398576793,
+            "stableObservations": [
+              {
+                "tick": 1027,
+                "elapsedNs": 5798800420,
+                "controls": [
+                  true,
+                  false,
+                  true,
+                  true
+                ],
+                "lamps": [
+                  true,
+                  false,
+                  false
+                ]
+              },
+              {
+                "tick": 1028,
+                "elapsedNs": 5850869128,
+                "controls": [
+                  true,
+                  false,
+                  true,
+                  true
+                ],
+                "lamps": [
+                  true,
+                  false,
+                  false
+                ]
+              },
+              {
+                "tick": 1029,
+                "elapsedNs": 5903721211,
+                "controls": [
+                  true,
+                  false,
+                  true,
+                  true
+                ],
+                "lamps": [
+                  true,
+                  false,
+                  false
+                ]
+              },
+              {
+                "tick": 1030,
+                "elapsedNs": 5954642920,
+                "controls": [
+                  true,
+                  false,
+                  true,
+                  true
+                ],
+                "lamps": [
+                  true,
+                  false,
+                  false
+                ]
+              },
+              {
+                "tick": 1031,
+                "elapsedNs": 5997192795,
+                "controls": [
+                  true,
+                  false,
+                  true,
+                  true
+                ],
+                "lamps": [
+                  true,
+                  false,
+                  false
+                ]
+              }
+            ]
+          },
+          {
+            "a": 2,
+            "b": 0,
+            "expected": 2,
+            "observed": 2,
+            "lamps": [
+              false,
+              false,
+              true
+            ],
+            "elapsedMs": 5500,
+            "resetElapsedNs": 3210711793,
+            "settleElapsedNs": 2290277918,
+            "stableObservations": [
+              {
+                "tick": 1138,
+                "elapsedNs": 5301762002,
+                "controls": [
+                  false,
+                  true,
+                  false,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  false,
+                  true
+                ]
+              },
+              {
+                "tick": 1139,
+                "elapsedNs": 5348438961,
+                "controls": [
+                  false,
+                  true,
+                  false,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  false,
+                  true
+                ]
+              },
+              {
+                "tick": 1140,
+                "elapsedNs": 5409320336,
+                "controls": [
+                  false,
+                  true,
+                  false,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  false,
+                  true
+                ]
+              },
+              {
+                "tick": 1141,
+                "elapsedNs": 5452723627,
+                "controls": [
+                  false,
+                  true,
+                  false,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  false,
+                  true
+                ]
+              },
+              {
+                "tick": 1142,
+                "elapsedNs": 5500985877,
+                "controls": [
+                  false,
+                  true,
+                  false,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  false,
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "a": 2,
+            "b": 1,
+            "expected": 3,
+            "observed": 3,
+            "lamps": [
+              false,
+              true,
+              true
+            ],
+            "elapsedMs": 4950,
+            "resetElapsedNs": 2100027543,
+            "settleElapsedNs": 2850257835,
+            "stableObservations": [
+              {
+                "tick": 1238,
+                "elapsedNs": 4750202836,
+                "controls": [
+                  false,
+                  true,
+                  true,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  true
+                ]
+              },
+              {
+                "tick": 1239,
+                "elapsedNs": 4798773211,
+                "controls": [
+                  false,
+                  true,
+                  true,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  true
+                ]
+              },
+              {
+                "tick": 1240,
+                "elapsedNs": 4849293794,
+                "controls": [
+                  false,
+                  true,
+                  true,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  true
+                ]
+              },
+              {
+                "tick": 1241,
+                "elapsedNs": 4899839044,
+                "controls": [
+                  false,
+                  true,
+                  true,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  true
+                ]
+              },
+              {
+                "tick": 1242,
+                "elapsedNs": 4950281544,
+                "controls": [
+                  false,
+                  true,
+                  true,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "a": 2,
+            "b": 2,
+            "expected": 4,
+            "observed": 4,
+            "lamps": [
+              true,
+              false,
+              false
+            ],
+            "elapsedMs": 5449,
+            "resetElapsedNs": 2652910835,
+            "settleElapsedNs": 2796320085,
+            "stableObservations": [
+              {
+                "tick": 1348,
+                "elapsedNs": 5254565586,
+                "controls": [
+                  false,
+                  true,
+                  false,
+                  true
+                ],
+                "lamps": [
+                  true,
+                  false,
+                  false
+                ]
+              },
+              {
+                "tick": 1349,
+                "elapsedNs": 5301487878,
+                "controls": [
+                  false,
+                  true,
+                  false,
+                  true
+                ],
+                "lamps": [
+                  true,
+                  false,
+                  false
+                ]
+              },
+              {
+                "tick": 1350,
+                "elapsedNs": 5350881128,
+                "controls": [
+                  false,
+                  true,
+                  false,
+                  true
+                ],
+                "lamps": [
+                  true,
+                  false,
+                  false
+                ]
+              },
+              {
+                "tick": 1351,
+                "elapsedNs": 5401476878,
+                "controls": [
+                  false,
+                  true,
+                  false,
+                  true
+                ],
+                "lamps": [
+                  true,
+                  false,
+                  false
+                ]
+              },
+              {
+                "tick": 1352,
+                "elapsedNs": 5449227294,
+                "controls": [
+                  false,
+                  true,
+                  false,
+                  true
+                ],
+                "lamps": [
+                  true,
+                  false,
+                  false
+                ]
+              }
+            ]
+          },
+          {
+            "a": 2,
+            "b": 3,
+            "expected": 5,
+            "observed": 5,
+            "lamps": [
+              true,
+              true,
+              false
+            ],
+            "elapsedMs": 6005,
+            "resetElapsedNs": 2648471418,
+            "settleElapsedNs": 3357240085,
+            "stableObservations": [
+              {
+                "tick": 1469,
+                "elapsedNs": 5806321003,
+                "controls": [
+                  false,
+                  true,
+                  true,
+                  true
+                ],
+                "lamps": [
+                  true,
+                  true,
+                  false
+                ]
+              },
+              {
+                "tick": 1470,
+                "elapsedNs": 5846582794,
+                "controls": [
+                  false,
+                  true,
+                  true,
+                  true
+                ],
+                "lamps": [
+                  true,
+                  true,
+                  false
+                ]
+              },
+              {
+                "tick": 1471,
+                "elapsedNs": 5898922753,
+                "controls": [
+                  false,
+                  true,
+                  true,
+                  true
+                ],
+                "lamps": [
+                  true,
+                  true,
+                  false
+                ]
+              },
+              {
+                "tick": 1472,
+                "elapsedNs": 5951231128,
+                "controls": [
+                  false,
+                  true,
+                  true,
+                  true
+                ],
+                "lamps": [
+                  true,
+                  true,
+                  false
+                ]
+              },
+              {
+                "tick": 1473,
+                "elapsedNs": 6005708670,
+                "controls": [
+                  false,
+                  true,
+                  true,
+                  true
+                ],
+                "lamps": [
+                  true,
+                  true,
+                  false
+                ]
+              }
+            ]
+          },
+          {
+            "a": 3,
+            "b": 0,
+            "expected": 3,
+            "observed": 3,
+            "lamps": [
+              false,
+              true,
+              true
+            ],
+            "elapsedMs": 5959,
+            "resetElapsedNs": 3152514627,
+            "settleElapsedNs": 2806733002,
+            "stableObservations": [
+              {
+                "tick": 1589,
+                "elapsedNs": 5757890545,
+                "controls": [
+                  true,
+                  true,
+                  false,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  true
+                ]
+              },
+              {
+                "tick": 1590,
+                "elapsedNs": 5802550378,
+                "controls": [
+                  true,
+                  true,
+                  false,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  true
+                ]
+              },
+              {
+                "tick": 1591,
+                "elapsedNs": 5858293545,
+                "controls": [
+                  true,
+                  true,
+                  false,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  true
+                ]
+              },
+              {
+                "tick": 1592,
+                "elapsedNs": 5906387836,
+                "controls": [
+                  true,
+                  true,
+                  false,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  true
+                ]
+              },
+              {
+                "tick": 1593,
+                "elapsedNs": 5959139378,
+                "controls": [
+                  true,
+                  true,
+                  false,
+                  false
+                ],
+                "lamps": [
+                  false,
+                  true,
+                  true
+                ]
+              }
+            ]
+          },
+          {
+            "a": 3,
+            "b": 1,
+            "expected": 4,
+            "observed": 4,
+            "lamps": [
+              true,
+              false,
+              false
+            ],
+            "elapsedMs": 5959,
+            "resetElapsedNs": 2649907459,
+            "settleElapsedNs": 3309714252,
+            "stableObservations": [
+              {
+                "tick": 1709,
+                "elapsedNs": 5754184461,
+                "controls": [
+                  true,
+                  true,
+                  true,
+                  false
+                ],
+                "lamps": [
+                  true,
+                  false,
+                  false
+                ]
+              },
+              {
+                "tick": 1710,
+                "elapsedNs": 5809275003,
+                "controls": [
+                  true,
+                  true,
+                  true,
+                  false
+                ],
+                "lamps": [
+                  true,
+                  false,
+                  false
+                ]
+              },
+              {
+                "tick": 1711,
+                "elapsedNs": 5851451503,
+                "controls": [
+                  true,
+                  true,
+                  true,
+                  false
+                ],
+                "lamps": [
+                  true,
+                  false,
+                  false
+                ]
+              },
+              {
+                "tick": 1712,
+                "elapsedNs": 5906052711,
+                "controls": [
+                  true,
+                  true,
+                  true,
+                  false
+                ],
+                "lamps": [
+                  true,
+                  false,
+                  false
+                ]
+              },
+              {
+                "tick": 1713,
+                "elapsedNs": 5959619711,
+                "controls": [
+                  true,
+                  true,
+                  true,
+                  false
+                ],
+                "lamps": [
+                  true,
+                  false,
+                  false
+                ]
+              }
+            ]
+          },
+          {
+            "a": 3,
+            "b": 2,
+            "expected": 5,
+            "observed": 5,
+            "lamps": [
+              true,
+              true,
+              false
+            ],
+            "elapsedMs": 6541,
+            "resetElapsedNs": 3191795293,
+            "settleElapsedNs": 3349304043,
+            "stableObservations": [
+              {
+                "tick": 1841,
+                "elapsedNs": 6344915462,
+                "controls": [
+                  true,
+                  true,
+                  false,
+                  true
+                ],
+                "lamps": [
+                  true,
+                  true,
+                  false
+                ]
+              },
+              {
+                "tick": 1842,
+                "elapsedNs": 6395362253,
+                "controls": [
+                  true,
+                  true,
+                  false,
+                  true
+                ],
+                "lamps": [
+                  true,
+                  true,
+                  false
+                ]
+              },
+              {
+                "tick": 1843,
+                "elapsedNs": 6440406128,
+                "controls": [
+                  true,
+                  true,
+                  false,
+                  true
+                ],
+                "lamps": [
+                  true,
+                  true,
+                  false
+                ]
+              },
+              {
+                "tick": 1844,
+                "elapsedNs": 6490246545,
+                "controls": [
+                  true,
+                  true,
+                  false,
+                  true
+                ],
+                "lamps": [
+                  true,
+                  true,
+                  false
+                ]
+              },
+              {
+                "tick": 1845,
+                "elapsedNs": 6541096003,
+                "controls": [
+                  true,
+                  true,
+                  false,
+                  true
+                ],
+                "lamps": [
+                  true,
+                  true,
+                  false
+                ]
+              }
+            ]
+          },
+          {
+            "a": 3,
+            "b": 3,
+            "expected": 6,
+            "observed": 6,
+            "lamps": [
+              true,
+              false,
+              true
+            ],
+            "elapsedMs": 7101,
+            "resetElapsedNs": 3150142710,
+            "settleElapsedNs": 3950868210,
+            "stableObservations": [
+              {
+                "tick": 1984,
+                "elapsedNs": 6903916420,
+                "controls": [
+                  true,
+                  true,
+                  true,
+                  true
+                ],
+                "lamps": [
+                  true,
+                  false,
+                  true
+                ]
+              },
+              {
+                "tick": 1985,
+                "elapsedNs": 6949557337,
+                "controls": [
+                  true,
+                  true,
+                  true,
+                  true
+                ],
+                "lamps": [
+                  true,
+                  false,
+                  true
+                ]
+              },
+              {
+                "tick": 1986,
+                "elapsedNs": 7000580920,
+                "controls": [
+                  true,
+                  true,
+                  true,
+                  true
+                ],
+                "lamps": [
+                  true,
+                  false,
+                  true
+                ]
+              },
+              {
+                "tick": 1987,
+                "elapsedNs": 7056828295,
+                "controls": [
+                  true,
+                  true,
+                  true,
+                  true
+                ],
+                "lamps": [
+                  true,
+                  false,
+                  true
+                ]
+              },
+              {
+                "tick": 1988,
+                "elapsedNs": 7101007295,
+                "controls": [
+                  true,
+                  true,
+                  true,
+                  true
+                ],
+                "lamps": [
+                  true,
+                  false,
+                  true
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "sha256": "e2db17f2051b42c5bf68fdf394841c65ed126adac02e8aab3d000542233de403",
+      "name": "protected_normal_complete_actual_report",
+      "status": "pass",
+      "at": "2026-10-29T15:09:46.558Z"
+    },
+    {
+      "actor_name": "WorldRequester",
+      "goal": [
+        -12,
+        81,
+        -7
+      ],
+      "before": [
+        -7.5,
+        81,
+        -6.5000000000006715
+      ],
+      "client_position": {
+        "x": -11.371809377579396,
+        "y": 81,
+        "z": -6.500000000000485
+      },
+      "client_mode": "survival",
+      "physics_enabled": true,
+      "alive": true,
+      "telemetry": {
+        "received_teleports": [
+          {
+            "x": -7.5,
+            "y": 81,
+            "z": -6.5000000000006715,
+            "teleport_id": 1,
+            "at_ms": 1793286470244
+          },
+          {
+            "x": -12.5,
+            "y": 81,
+            "z": -6.5,
+            "teleport_id": 2,
+            "at_ms": 1793286470250
+          }
+        ],
+        "sent_teleport_confirmations": [
+          {
+            "teleport_id": 1,
+            "at_ms": 1793286470244
+          },
+          {
+            "teleport_id": 2,
+            "at_ms": 1793286470250
+          }
+        ],
+        "sent_positions": [
+          {
+            "x": -8.855160581360872,
+            "y": 81,
+            "z": -6.500000000000597,
+            "at_ms": 1793286586919
+          },
+          {
+            "x": -9.131718028069539,
+            "y": 81,
+            "z": -6.500000000000584,
+            "at_ms": 1793286586969
+          },
+          {
+            "x": -9.410118444064828,
+            "y": 81,
+            "z": -6.500000000000572,
+            "at_ms": 1793286587020
+          },
+          {
+            "x": -9.689525121290615,
+            "y": 81,
+            "z": -6.5000000000005596,
+            "at_ms": 1793286587072
+          },
+          {
+            "x": -9.969481217148251,
+            "y": 81,
+            "z": -6.500000000000547,
+            "at_ms": 1793286587121
+          },
+          {
+            "x": -10.249737295578878,
+            "y": 81,
+            "z": -6.500000000000535,
+            "at_ms": 1793286587173
+          },
+          {
+            "x": -10.530157164494359,
+            "y": 81,
+            "z": -6.500000000000522,
+            "at_ms": 1793286587225
+          },
+          {
+            "x": -10.810666463014568,
+            "y": 81,
+            "z": -6.50000000000051,
+            "at_ms": 1793286587275
+          },
+          {
+            "x": -11.09122459009896,
+            "y": 81,
+            "z": -6.500000000000497,
+            "at_ms": 1793286587327
+          },
+          {
+            "x": -11.371809377579396,
+            "y": 81,
+            "z": -6.500000000000485,
+            "at_ms": 1793286587379
+          }
+        ],
+        "position_packet_count": 150,
+        "packet_counts": {
+          "teleport_confirm": 2,
+          "position_look": 22,
+          "player_loaded": 1,
+          "position": 128,
+          "flying": 1
+        }
+      },
+      "server_position": [
+        -11.371809377579396,
+        81,
+        -6.500000000000485
+      ],
+      "observed_at_ms": 1793286587490,
+      "name": "server_confirmed_navigation",
+      "status": "pass",
+      "at": "2026-10-29T15:09:47.632Z"
+    },
+    {
+      "position": [
+        -12,
+        85,
+        -4
+      ],
+      "before": true,
+      "after": false,
+      "state": {
+        "revision": 1,
+        "lockMode": "REVIEW",
+        "quarantined": false,
+        "readyForReview": true,
+        "passValidUntilMs": 1793286616345
+      },
+      "name": "approved_review_toggle_a0",
+      "status": "pass",
+      "at": "2026-10-29T15:09:48.971Z"
+    },
+    {
+      "actor_name": "WorldRequester",
+      "goal": [
+        -8,
+        81,
+        -7
+      ],
+      "before": [
+        -11.371809377579396,
+        81,
+        -6.500000000000485
+      ],
+      "client_position": {
+        "x": -7.5,
+        "y": 81,
+        "z": -6.500000000001007
+      },
+      "client_mode": "survival",
+      "physics_enabled": true,
+      "alive": true,
+      "telemetry": {
+        "received_teleports": [
+          {
+            "x": -7.5,
+            "y": 81,
+            "z": -6.5000000000006715,
+            "teleport_id": 1,
+            "at_ms": 1793286470244
+          },
+          {
+            "x": -12.5,
+            "y": 81,
+            "z": -6.5,
+            "teleport_id": 2,
+            "at_ms": 1793286470250
+          }
+        ],
+        "sent_teleport_confirmations": [
+          {
+            "teleport_id": 1,
+            "at_ms": 1793286470244
+          },
+          {
+            "teleport_id": 2,
+            "at_ms": 1793286470250
+          }
+        ],
+        "sent_positions": [
+          {
+            "x": -10.289830841303338,
+            "y": 81,
+            "z": -6.5000000000006715,
+            "at_ms": 1793286589279
+          },
+          {
+            "x": -10.016648796218522,
+            "y": 81,
+            "z": -6.500000000000709,
+            "at_ms": 1793286589332
+          },
+          {
+            "x": -9.740091349509855,
+            "y": 81,
+            "z": -6.500000000000746,
+            "at_ms": 1793286589384
+          },
+          {
+            "x": -9.461690933514566,
+            "y": 81,
+            "z": -6.500000000000783,
+            "at_ms": 1793286589434
+          },
+          {
+            "x": -9.18228425628878,
+            "y": 81,
+            "z": -6.500000000000821,
+            "at_ms": 1793286589488
+          },
+          {
+            "x": -8.902328160431143,
+            "y": 81,
+            "z": -6.500000000000858,
+            "at_ms": 1793286589538
+          },
+          {
+            "x": -8.622072082000516,
+            "y": 81,
+            "z": -6.500000000000895,
+            "at_ms": 1793286589590
+          },
+          {
+            "x": -8.341652213085036,
+            "y": 81,
+            "z": -6.500000000000933,
+            "at_ms": 1793286589641
+          },
+          {
+            "x": -8.061142914564826,
+            "y": 81,
+            "z": -6.50000000000097,
+            "at_ms": 1793286589694
+          },
+          {
+            "x": -7.5,
+            "y": 81,
+            "z": -6.500000000001007,
+            "at_ms": 1793286589695
+          }
+        ],
+        "position_packet_count": 165,
+        "packet_counts": {
+          "teleport_confirm": 2,
+          "position_look": 33,
+          "player_loaded": 1,
+          "position": 132,
+          "flying": 1
+        }
+      },
+      "server_position": [
+        -7.5,
+        81,
+        -6.500000000001007
+      ],
+      "observed_at_ms": 1793286589740,
+      "name": "server_confirmed_navigation",
+      "status": "pass",
+      "at": "2026-10-29T15:09:49.948Z"
+    },
+    {
+      "position": [
+        -8,
+        84,
+        -3
+      ],
+      "before": true,
+      "after": false,
+      "state": {
+        "revision": 1,
+        "lockMode": "REVIEW",
+        "quarantined": false,
+        "readyForReview": true,
+        "passValidUntilMs": 1793286616345
+      },
+      "name": "approved_review_toggle_a1",
+      "status": "pass",
+      "at": "2026-10-29T15:09:51.284Z"
+    },
+    {
+      "actor_name": "WorldRequester",
+      "goal": [
+        -12,
+        81,
+        -7
+      ],
+      "before": [
+        -7.5,
+        81,
+        -6.500000000001007
+      ],
+      "client_position": {
+        "x": -11.371809377579396,
+        "y": 81,
+        "z": -6.500000000000821
+      },
+      "client_mode": "survival",
+      "physics_enabled": true,
+      "alive": true,
+      "telemetry": {
+        "received_teleports": [
+          {
+            "x": -7.5,
+            "y": 81,
+            "z": -6.5000000000006715,
+            "teleport_id": 1,
+            "at_ms": 1793286470244
+          },
+          {
+            "x": -12.5,
+            "y": 81,
+            "z": -6.5,
+            "teleport_id": 2,
+            "at_ms": 1793286470250
+          }
+        ],
+        "sent_teleport_confirmations": [
+          {
+            "teleport_id": 1,
+            "at_ms": 1793286470244
+          },
+          {
+            "teleport_id": 2,
+            "at_ms": 1793286470250
+          }
+        ],
+        "sent_positions": [
+          {
+            "x": -8.855160581360872,
+            "y": 81,
+            "z": -6.500000000000933,
+            "at_ms": 1793286591594
+          },
+          {
+            "x": -9.131718028069539,
+            "y": 81,
+            "z": -6.50000000000092,
+            "at_ms": 1793286591644
+          },
+          {
+            "x": -9.410118444064828,
+            "y": 81,
+            "z": -6.500000000000908,
+            "at_ms": 1793286591694
+          },
+          {
+            "x": -9.689525121290615,
+            "y": 81,
+            "z": -6.500000000000895,
+            "at_ms": 1793286591744
+          },
+          {
+            "x": -9.969481217148251,
+            "y": 81,
+            "z": -6.500000000000883,
+            "at_ms": 1793286591794
+          },
+          {
+            "x": -10.249737295578878,
+            "y": 81,
+            "z": -6.50000000000087,
+            "at_ms": 1793286591844
+          },
+          {
+            "x": -10.530157164494359,
+            "y": 81,
+            "z": -6.500000000000858,
+            "at_ms": 1793286591894
+          },
+          {
+            "x": -10.810666463014568,
+            "y": 81,
+            "z": -6.5000000000008455,
+            "at_ms": 1793286591944
+          },
+          {
+            "x": -11.09122459009896,
+            "y": 81,
+            "z": -6.500000000000833,
+            "at_ms": 1793286591994
+          },
+          {
+            "x": -11.371809377579396,
+            "y": 81,
+            "z": -6.500000000000821,
+            "at_ms": 1793286592044
+          }
+        ],
+        "position_packet_count": 181,
+        "packet_counts": {
+          "teleport_confirm": 2,
+          "position_look": 44,
+          "player_loaded": 1,
+          "position": 137,
+          "flying": 1
+        }
+      },
+      "server_position": [
+        -11.371809377579396,
+        81,
+        -6.500000000000821
+      ],
+      "observed_at_ms": 1793286592238,
+      "name": "server_confirmed_navigation",
+      "status": "pass",
+      "at": "2026-10-29T15:09:52.296Z"
+    },
+    {
+      "position": [
+        -12,
+        84,
+        -3
+      ],
+      "before": true,
+      "after": false,
+      "state": {
+        "revision": 1,
+        "lockMode": "REVIEW",
+        "quarantined": false,
+        "readyForReview": true,
+        "passValidUntilMs": 1793286616345
+      },
+      "name": "approved_review_toggle_b0",
+      "status": "pass",
+      "at": "2026-10-29T15:09:53.639Z"
+    },
+    {
+      "actor_name": "WorldRequester",
+      "goal": [
+        -8,
+        81,
+        -7
+      ],
+      "before": [
+        -11.371809377579396,
+        81,
+        -6.500000000000821
+      ],
+      "client_position": {
+        "x": -7.5,
+        "y": 81,
+        "z": -6.500000000001343
+      },
+      "client_mode": "survival",
+      "physics_enabled": true,
+      "alive": true,
+      "telemetry": {
+        "received_teleports": [
+          {
+            "x": -7.5,
+            "y": 81,
+            "z": -6.5000000000006715,
+            "teleport_id": 1,
+            "at_ms": 1793286470244
+          },
+          {
+            "x": -12.5,
+            "y": 81,
+            "z": -6.5,
+            "teleport_id": 2,
+            "at_ms": 1793286470250
+          }
+        ],
+        "sent_teleport_confirmations": [
+          {
+            "teleport_id": 1,
+            "at_ms": 1793286470244
+          },
+          {
+            "teleport_id": 2,
+            "at_ms": 1793286470250
+          }
+        ],
+        "sent_positions": [
+          {
+            "x": -10.289830841303338,
+            "y": 81,
+            "z": -6.500000000001007,
+            "at_ms": 1793286593891
+          },
+          {
+            "x": -10.016648796218522,
+            "y": 81,
+            "z": -6.5000000000010445,
+            "at_ms": 1793286593943
+          },
+          {
+            "x": -9.740091349509855,
+            "y": 81,
+            "z": -6.500000000001082,
+            "at_ms": 1793286593995
+          },
+          {
+            "x": -9.461690933514566,
+            "y": 81,
+            "z": -6.500000000001119,
+            "at_ms": 1793286594047
+          },
+          {
+            "x": -9.18228425628878,
+            "y": 81,
+            "z": -6.500000000001156,
+            "at_ms": 1793286594099
+          },
+          {
+            "x": -8.902328160431143,
+            "y": 81,
+            "z": -6.500000000001194,
+            "at_ms": 1793286594150
+          },
+          {
+            "x": -8.622072082000516,
+            "y": 81,
+            "z": -6.500000000001231,
+            "at_ms": 1793286594200
+          },
+          {
+            "x": -8.341652213085036,
+            "y": 81,
+            "z": -6.500000000001268,
+            "at_ms": 1793286594251
+          },
+          {
+            "x": -8.061142914564826,
+            "y": 81,
+            "z": -6.500000000001306,
+            "at_ms": 1793286594302
+          },
+          {
+            "x": -7.5,
+            "y": 81,
+            "z": -6.500000000001343,
+            "at_ms": 1793286594354
+          }
+        ],
+        "position_packet_count": 196,
+        "packet_counts": {
+          "teleport_confirm": 2,
+          "position_look": 55,
+          "player_loaded": 1,
+          "position": 141,
+          "flying": 1
+        }
+      },
+      "server_position": [
+        -7.5,
+        81,
+        -6.500000000001343
+      ],
+      "observed_at_ms": 1793286594491,
+      "name": "server_confirmed_navigation",
+      "status": "pass",
+      "at": "2026-10-29T15:09:54.609Z"
+    },
+    {
+      "position": [
+        -8,
+        82,
+        -3
+      ],
+      "before": true,
+      "after": false,
+      "state": {
+        "revision": 1,
+        "lockMode": "REVIEW",
+        "quarantined": false,
+        "readyForReview": true,
+        "passValidUntilMs": 1793286616345
+      },
+      "name": "approved_review_toggle_b1",
+      "status": "pass",
+      "at": "2026-10-29T15:09:55.902Z"
+    },
+    {
+      "actor_name": "WorldRequester",
+      "goal": [
+        -8,
+        81,
+        -7
+      ],
+      "before": [
+        -7.5,
+        81,
+        -6.500000000001343
+      ],
+      "client_position": {
+        "x": -7.5,
+        "y": 81,
+        "z": -6.500000000001343
+      },
+      "client_mode": "survival",
+      "physics_enabled": true,
+      "alive": true,
+      "telemetry": {
+        "received_teleports": [
+          {
+            "x": -7.5,
+            "y": 81,
+            "z": -6.5000000000006715,
+            "teleport_id": 1,
+            "at_ms": 1793286470244
+          },
+          {
+            "x": -12.5,
+            "y": 81,
+            "z": -6.5,
+            "teleport_id": 2,
+            "at_ms": 1793286470250
+          }
+        ],
+        "sent_teleport_confirmations": [
+          {
+            "teleport_id": 1,
+            "at_ms": 1793286470244
+          },
+          {
+            "teleport_id": 2,
+            "at_ms": 1793286470250
+          }
+        ],
+        "sent_positions": [
+          {
+            "x": -10.016648796218522,
+            "y": 81,
+            "z": -6.5000000000010445,
+            "at_ms": 1793286593943
+          },
+          {
+            "x": -9.740091349509855,
+            "y": 81,
+            "z": -6.500000000001082,
+            "at_ms": 1793286593995
+          },
+          {
+            "x": -9.461690933514566,
+            "y": 81,
+            "z": -6.500000000001119,
+            "at_ms": 1793286594047
+          },
+          {
+            "x": -9.18228425628878,
+            "y": 81,
+            "z": -6.500000000001156,
+            "at_ms": 1793286594099
+          },
+          {
+            "x": -8.902328160431143,
+            "y": 81,
+            "z": -6.500000000001194,
+            "at_ms": 1793286594150
+          },
+          {
+            "x": -8.622072082000516,
+            "y": 81,
+            "z": -6.500000000001231,
+            "at_ms": 1793286594200
+          },
+          {
+            "x": -8.341652213085036,
+            "y": 81,
+            "z": -6.500000000001268,
+            "at_ms": 1793286594251
+          },
+          {
+            "x": -8.061142914564826,
+            "y": 81,
+            "z": -6.500000000001306,
+            "at_ms": 1793286594302
+          },
+          {
+            "x": -7.5,
+            "y": 81,
+            "z": -6.500000000001343,
+            "at_ms": 1793286594354
+          },
+          {
+            "x": -7.5,
+            "y": 81,
+            "z": -6.500000000001343,
+            "at_ms": 1793286595334
+          }
+        ],
+        "position_packet_count": 197,
+        "packet_counts": {
+          "teleport_confirm": 2,
+          "position_look": 56,
+          "player_loaded": 1,
+          "position": 141,
+          "flying": 1
+        }
+      },
+      "server_position": [
+        -7.5,
+        81,
+        -6.500000000001343
+      ],
+      "observed_at_ms": 1793286595992,
+      "name": "server_confirmed_navigation",
+      "status": "pass",
+      "at": "2026-10-29T15:09:56.201Z"
+    },
+    {
+      "native_client_outcome": "native call acknowledged but refused by authoritative state",
+      "denied_event_evidence": [
+        {
+          "action": "RIGHT_CLICK_BLOCK",
+          "actor": "a56f0418-1cf4-3f1e-a0ab-9b34ba31f192",
+          "at_ms": 1793286596213,
+          "cancelled": true,
+          "event": "interact",
+          "name": "WorldRequester",
+          "position": [
+            -8,
+            82,
+            -3
+          ],
+          "tick": 2654,
+          "use_block": "DENY",
+          "use_item": "DENY"
+        }
+      ],
+      "before": {
+        "state": {
+          "revision": 1,
+          "lockMode": "REVIEW",
+          "quarantined": false,
+          "readyForReview": true,
+          "passValidUntilMs": 1793286616345
+        },
+        "refusals": [
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "awaiting_player_inventory",
+          "interaction_not_authorized"
+        ],
+        "tick": 2650,
+        "observed_at_ms": 1793286595992,
+        "target": "minecraft:redstone_wire[east=up,north=none,power=0,south=none,west=side]",
+        "stock": {
+          "minecraft:lever": 4,
+          "minecraft:redstone": 18,
+          "minecraft:redstone_lamp": 3,
+          "minecraft:redstone_torch": 37,
+          "minecraft:repeater": 16,
+          "minecraft:stone_bricks": 65
+        },
+        "players": {
+          "WorldBuilder": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldBuilder",
+            "uuid": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+            "position": [
+              -14.5,
+              81,
+              3.5
+            ],
+            "items": {},
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              -14.5,
+              82.62000000476837,
+              3.5
+            ]
+          },
+          "WorldInspector": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldInspector",
+            "uuid": "563add28-410b-350e-9001-a9be4cc7bd00",
+            "position": [
+              12.5,
+              81,
+              5.5
+            ],
+            "items": {},
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              12.5,
+              82.62000000476837,
+              5.5
+            ]
+          },
+          "WorldRequester": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldRequester",
+            "uuid": "a56f0418-1cf4-3f1e-a0ab-9b34ba31f192",
+            "position": [
+              -7.5,
+              81,
+              -6.500000000001343
+            ],
+            "items": {
+              "minecraft:lava_bucket": 1,
+              "minecraft:water_bucket": 1
+            },
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              -7.5,
+              82.62000000476837,
+              -6.500000000001343
+            ]
+          },
+          "WorldStranger": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldBuilder",
+            "uuid": "3febf1ac-21e5-394e-bb24-e8731e755afa",
+            "position": [
+              12.5,
+              81,
+              -6.5
+            ],
+            "items": {
+              "minecraft:cobblestone": 1
+            },
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              12.5,
+              82.62000000476837,
+              -6.5
+            ]
+          }
+        },
+        "structural_sha256": "3ad37a2c8081485255d3e702949a66feb611d1e1d7119b6eacfc35443414aed9"
+      },
+      "after": {
+        "state": {
+          "revision": 1,
+          "lockMode": "REVIEW",
+          "quarantined": false,
+          "readyForReview": true,
+          "passValidUntilMs": 1793286616345
+        },
+        "refusals": [
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "awaiting_player_inventory",
+          "interaction_not_authorized",
+          "interaction_not_authorized"
+        ],
+        "tick": 2665,
+        "observed_at_ms": 1793286596741,
+        "target": "minecraft:redstone_wire[east=up,north=none,power=0,south=none,west=side]",
+        "stock": {
+          "minecraft:lever": 4,
+          "minecraft:redstone": 18,
+          "minecraft:redstone_lamp": 3,
+          "minecraft:redstone_torch": 37,
+          "minecraft:repeater": 16,
+          "minecraft:stone_bricks": 65
+        },
+        "players": {
+          "WorldBuilder": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldBuilder",
+            "uuid": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+            "position": [
+              -14.5,
+              81,
+              3.5
+            ],
+            "items": {},
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              -14.5,
+              82.62000000476837,
+              3.5
+            ]
+          },
+          "WorldInspector": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldInspector",
+            "uuid": "563add28-410b-350e-9001-a9be4cc7bd00",
+            "position": [
+              12.5,
+              81,
+              5.5
+            ],
+            "items": {},
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              12.5,
+              82.62000000476837,
+              5.5
+            ]
+          },
+          "WorldRequester": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldRequester",
+            "uuid": "a56f0418-1cf4-3f1e-a0ab-9b34ba31f192",
+            "position": [
+              -7.5,
+              81,
+              -6.500000000001343
+            ],
+            "items": {
+              "minecraft:lava_bucket": 1,
+              "minecraft:water_bucket": 1
+            },
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              -7.5,
+              82.26999998092651,
+              -6.500000000001343
+            ]
+          },
+          "WorldStranger": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldBuilder",
+            "uuid": "3febf1ac-21e5-394e-bb24-e8731e755afa",
+            "position": [
+              12.5,
+              81,
+              -6.5
+            ],
+            "items": {
+              "minecraft:cobblestone": 1
+            },
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              12.5,
+              82.62000000476837,
+              -6.5
+            ]
+          }
+        },
+        "structural_sha256": "3ad37a2c8081485255d3e702949a66feb611d1e1d7119b6eacfc35443414aed9"
+      },
+      "name": "review_sneaking_water_bucket_prevented",
+      "status": "pass",
+      "at": "2026-10-29T15:09:56.816Z"
+    },
+    {
+      "native_client_outcome": "native call acknowledged but refused by authoritative state",
+      "denied_event_evidence": [
+        {
+          "action": "RIGHT_CLICK_BLOCK",
+          "actor": "a56f0418-1cf4-3f1e-a0ab-9b34ba31f192",
+          "at_ms": 1793286596872,
+          "cancelled": true,
+          "event": "interact",
+          "name": "WorldRequester",
+          "position": [
+            -8,
+            82,
+            -3
+          ],
+          "tick": 2667,
+          "use_block": "DENY",
+          "use_item": "DENY"
+        }
+      ],
+      "before": {
+        "state": {
+          "revision": 1,
+          "lockMode": "REVIEW",
+          "quarantined": false,
+          "readyForReview": true,
+          "passValidUntilMs": 1793286616345
+        },
+        "refusals": [
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "awaiting_player_inventory",
+          "interaction_not_authorized",
+          "interaction_not_authorized"
+        ],
+        "tick": 2665,
+        "observed_at_ms": 1793286596741,
+        "target": "minecraft:redstone_wire[east=up,north=none,power=0,south=none,west=side]",
+        "stock": {
+          "minecraft:lever": 4,
+          "minecraft:redstone": 18,
+          "minecraft:redstone_lamp": 3,
+          "minecraft:redstone_torch": 37,
+          "minecraft:repeater": 16,
+          "minecraft:stone_bricks": 65
+        },
+        "players": {
+          "WorldBuilder": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldBuilder",
+            "uuid": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+            "position": [
+              -14.5,
+              81,
+              3.5
+            ],
+            "items": {},
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              -14.5,
+              82.62000000476837,
+              3.5
+            ]
+          },
+          "WorldInspector": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldInspector",
+            "uuid": "563add28-410b-350e-9001-a9be4cc7bd00",
+            "position": [
+              12.5,
+              81,
+              5.5
+            ],
+            "items": {},
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              12.5,
+              82.62000000476837,
+              5.5
+            ]
+          },
+          "WorldRequester": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldRequester",
+            "uuid": "a56f0418-1cf4-3f1e-a0ab-9b34ba31f192",
+            "position": [
+              -7.5,
+              81,
+              -6.500000000001343
+            ],
+            "items": {
+              "minecraft:lava_bucket": 1,
+              "minecraft:water_bucket": 1
+            },
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              -7.5,
+              82.26999998092651,
+              -6.500000000001343
+            ]
+          },
+          "WorldStranger": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldBuilder",
+            "uuid": "3febf1ac-21e5-394e-bb24-e8731e755afa",
+            "position": [
+              12.5,
+              81,
+              -6.5
+            ],
+            "items": {
+              "minecraft:cobblestone": 1
+            },
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              12.5,
+              82.62000000476837,
+              -6.5
+            ]
+          }
+        },
+        "structural_sha256": "3ad37a2c8081485255d3e702949a66feb611d1e1d7119b6eacfc35443414aed9"
+      },
+      "after": {
+        "state": {
+          "revision": 1,
+          "lockMode": "REVIEW",
+          "quarantined": false,
+          "readyForReview": true,
+          "passValidUntilMs": 1793286616345
+        },
+        "refusals": [
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "awaiting_player_inventory",
+          "interaction_not_authorized",
+          "interaction_not_authorized",
+          "interaction_not_authorized"
+        ],
+        "tick": 2675,
+        "observed_at_ms": 1793286597240,
+        "target": "minecraft:redstone_wire[east=up,north=none,power=14,south=none,west=side]",
+        "stock": {
+          "minecraft:lever": 4,
+          "minecraft:redstone": 18,
+          "minecraft:redstone_lamp": 3,
+          "minecraft:redstone_torch": 37,
+          "minecraft:repeater": 16,
+          "minecraft:stone_bricks": 65
+        },
+        "players": {
+          "WorldBuilder": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldBuilder",
+            "uuid": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+            "position": [
+              -14.5,
+              81,
+              3.5
+            ],
+            "items": {},
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              -14.5,
+              82.62000000476837,
+              3.5
+            ]
+          },
+          "WorldInspector": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldInspector",
+            "uuid": "563add28-410b-350e-9001-a9be4cc7bd00",
+            "position": [
+              12.5,
+              81,
+              5.5
+            ],
+            "items": {},
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              12.5,
+              82.62000000476837,
+              5.5
+            ]
+          },
+          "WorldRequester": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldRequester",
+            "uuid": "a56f0418-1cf4-3f1e-a0ab-9b34ba31f192",
+            "position": [
+              -7.5,
+              81,
+              -6.500000000001343
+            ],
+            "items": {
+              "minecraft:lava_bucket": 1,
+              "minecraft:water_bucket": 1
+            },
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              -7.5,
+              82.26999998092651,
+              -6.500000000001343
+            ]
+          },
+          "WorldStranger": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldBuilder",
+            "uuid": "3febf1ac-21e5-394e-bb24-e8731e755afa",
+            "position": [
+              12.5,
+              81,
+              -6.5
+            ],
+            "items": {
+              "minecraft:cobblestone": 1
+            },
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              12.5,
+              82.62000000476837,
+              -6.5
+            ]
+          }
+        },
+        "structural_sha256": "3ad37a2c8081485255d3e702949a66feb611d1e1d7119b6eacfc35443414aed9"
+      },
+      "name": "review_sneaking_lava_bucket_prevented",
+      "status": "pass",
+      "at": "2026-10-29T15:09:57.476Z"
+    },
+    {
+      "payload": {
+        "operationId": "b29b2e14-40e1-49c2-9023-6022e0fa0885",
+        "serverId": "local-inspection-server",
+        "jobId": "agentcity-boundary-df9e4826",
+        "agreementVersion": 1,
+        "actorId": "563add28-410b-350e-9001-a9be4cc7bd00",
+        "expectedRevision": 1,
+        "authorizationReference": "local-boundary-authorization",
+        "expiresAtMs": 1793286605521,
+        "action": "UNLOCK",
+        "params": {}
+      },
+      "response": {
+        "http_status": 200,
+        "body": {
+          "status": "REFUSED",
+          "code": "NO_EARLY_UNLOCK",
+          "operationId": "b29b2e14-40e1-49c2-9023-6022e0fa0885",
+          "revision": 1
+        }
+      },
+      "before": {
+        "state": {
+          "revision": 1,
+          "lockMode": "REVIEW",
+          "quarantined": false,
+          "readyForReview": true,
+          "passValidUntilMs": 1793286616345
+        },
+        "refusals": [
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "awaiting_player_inventory",
+          "interaction_not_authorized",
+          "interaction_not_authorized",
+          "interaction_not_authorized"
+        ],
+        "tick": 2680,
+        "observed_at_ms": 1793286597491,
+        "target": "minecraft:redstone_wire[east=up,north=none,power=14,south=none,west=side]",
+        "stock": {
+          "minecraft:lever": 4,
+          "minecraft:redstone": 18,
+          "minecraft:redstone_lamp": 3,
+          "minecraft:redstone_torch": 37,
+          "minecraft:repeater": 16,
+          "minecraft:stone_bricks": 65
+        },
+        "players": {
+          "WorldBuilder": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldBuilder",
+            "uuid": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+            "position": [
+              -14.5,
+              81,
+              3.5
+            ],
+            "items": {},
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              -14.5,
+              82.62000000476837,
+              3.5
+            ]
+          },
+          "WorldInspector": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldInspector",
+            "uuid": "563add28-410b-350e-9001-a9be4cc7bd00",
+            "position": [
+              12.5,
+              81,
+              5.5
+            ],
+            "items": {},
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              12.5,
+              82.62000000476837,
+              5.5
+            ]
+          },
+          "WorldRequester": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldRequester",
+            "uuid": "a56f0418-1cf4-3f1e-a0ab-9b34ba31f192",
+            "position": [
+              -7.5,
+              81,
+              -6.500000000001343
+            ],
+            "items": {
+              "minecraft:lava_bucket": 1,
+              "minecraft:water_bucket": 1
+            },
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              -7.5,
+              82.26999998092651,
+              -6.500000000001343
+            ]
+          },
+          "WorldStranger": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldBuilder",
+            "uuid": "3febf1ac-21e5-394e-bb24-e8731e755afa",
+            "position": [
+              12.5,
+              81,
+              -6.5
+            ],
+            "items": {
+              "minecraft:cobblestone": 1
+            },
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              12.5,
+              82.62000000476837,
+              -6.5
+            ]
+          }
+        },
+        "structural_sha256": "3ad37a2c8081485255d3e702949a66feb611d1e1d7119b6eacfc35443414aed9"
+      },
+      "after": {
+        "state": {
+          "revision": 1,
+          "lockMode": "REVIEW",
+          "quarantined": false,
+          "readyForReview": true,
+          "passValidUntilMs": 1793286616345
+        },
+        "refusals": [
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "awaiting_player_inventory",
+          "interaction_not_authorized",
+          "interaction_not_authorized",
+          "interaction_not_authorized"
+        ],
+        "tick": 2685,
+        "observed_at_ms": 1793286597740,
+        "target": "minecraft:redstone_wire[east=up,north=none,power=14,south=none,west=side]",
+        "stock": {
+          "minecraft:lever": 4,
+          "minecraft:redstone": 18,
+          "minecraft:redstone_lamp": 3,
+          "minecraft:redstone_torch": 37,
+          "minecraft:repeater": 16,
+          "minecraft:stone_bricks": 65
+        },
+        "players": {
+          "WorldBuilder": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldBuilder",
+            "uuid": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+            "position": [
+              -14.5,
+              81,
+              3.5
+            ],
+            "items": {},
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              -14.5,
+              82.62000000476837,
+              3.5
+            ]
+          },
+          "WorldInspector": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldInspector",
+            "uuid": "563add28-410b-350e-9001-a9be4cc7bd00",
+            "position": [
+              12.5,
+              81,
+              5.5
+            ],
+            "items": {},
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              12.5,
+              82.62000000476837,
+              5.5
+            ]
+          },
+          "WorldRequester": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldRequester",
+            "uuid": "a56f0418-1cf4-3f1e-a0ab-9b34ba31f192",
+            "position": [
+              -7.5,
+              81,
+              -6.500000000001343
+            ],
+            "items": {
+              "minecraft:lava_bucket": 1,
+              "minecraft:water_bucket": 1
+            },
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              -7.5,
+              82.62000000476837,
+              -6.500000000001343
+            ]
+          },
+          "WorldStranger": {
+            "mode": "SURVIVAL",
+            "display_name": "WorldBuilder",
+            "uuid": "3febf1ac-21e5-394e-bb24-e8731e755afa",
+            "position": [
+              12.5,
+              81,
+              -6.5
+            ],
+            "items": {
+              "minecraft:cobblestone": 1
+            },
+            "block_interaction_range": 4.5,
+            "eye_position": [
+              12.5,
+              82.62000000476837,
+              -6.5
+            ]
+          }
+        },
+        "structural_sha256": "3ad37a2c8081485255d3e702949a66feb611d1e1d7119b6eacfc35443414aed9"
+      },
+      "name": "usable_review_pass_cannot_unlock_early",
+      "status": "pass",
+      "at": "2026-10-29T15:09:57.900Z"
+    },
+    {
+      "expired": {
+        "revision": 1,
+        "lockMode": "REVIEW",
+        "quarantined": false,
+        "readyForReview": false,
+        "passValidUntilMs": 1793286616345
+      },
+      "response": {
+        "http_status": 200,
+        "body": {
+          "status": "APPLIED",
+          "code": "OBSERVED_APPLIED",
+          "operationId": "7fc65993-2296-4556-85ed-ee1f114e7d27",
+          "revision": 1
+        }
+      },
+      "name": "expired_local_pass_unlock_without_external_obligation",
+      "status": "pass",
+      "at": "2026-10-29T15:10:16.523Z"
+    },
+    {
+      "actor_name": "WorldBuilder",
+      "goal": [
+        -14,
+        81,
+        -7
+      ],
+      "before": [
+        -14.5,
+        81,
+        3.5
+      ],
+      "client_position": {
+        "x": -13.67299485468405,
+        "y": 81,
+        "z": -6.433836786751018
+      },
+      "client_mode": "survival",
+      "physics_enabled": true,
+      "alive": true,
+      "telemetry": {
+        "received_teleports": [
+          {
+            "x": -1.5,
+            "y": 81,
+            "z": -6.500323974827124,
+            "teleport_id": 1,
+            "at_ms": 1793286464990
+          },
+          {
+            "x": -14.5,
+            "y": 81,
+            "z": 3.5,
+            "teleport_id": 2,
+            "at_ms": 1793286464991
+          }
+        ],
+        "sent_teleport_confirmations": [
+          {
+            "teleport_id": 1,
+            "at_ms": 1793286464990
+          },
+          {
+            "teleport_id": 2,
+            "at_ms": 1793286464991
+          }
+        ],
+        "sent_positions": [
+          {
+            "x": -14.500000000000721,
+            "y": 81,
+            "z": -4.300406731300685,
+            "at_ms": 1793286617998
+          },
+          {
+            "x": -14.500000000000746,
+            "y": 81,
+            "z": -4.581023578060907,
+            "at_ms": 1793286618048
+          },
+          {
+            "x": -14.500000000000771,
+            "y": 81,
+            "z": -4.861640426484346,
+            "at_ms": 1793286618098
+          },
+          {
+            "x": -14.500000000000796,
+            "y": 81,
+            "z": -5.1422572758159015,
+            "at_ms": 1793286618149
+          },
+          {
+            "x": -14.50000000000082,
+            "y": 81,
+            "z": -5.422874125643289,
+            "at_ms": 1793286618200
+          },
+          {
+            "x": -14.413276127196564,
+            "y": 81,
+            "z": -5.669416927649376,
+            "at_ms": 1793286618250
+          },
+          {
+            "x": -14.27169585409532,
+            "y": 81,
+            "z": -5.889771125478652,
+            "at_ms": 1793286618300
+          },
+          {
+            "x": -14.094550439261695,
+            "y": 81,
+            "z": -6.0892187758156755,
+            "at_ms": 1793286618352
+          },
+          {
+            "x": -13.893024599558695,
+            "y": 81,
+            "z": -6.270552001163866,
+            "at_ms": 1793286618404
+          },
+          {
+            "x": -13.67299485468405,
+            "y": 81,
+            "z": -6.433836786751018,
+            "at_ms": 1793286618456
+          }
+        ],
+        "position_packet_count": 191,
+        "packet_counts": {
+          "teleport_confirm": 2,
+          "position_look": 28,
+          "player_loaded": 1,
+          "position": 163,
+          "flying": 1
+        }
+      },
+      "server_position": [
+        -13.67299485468405,
+        81,
+        -6.433836786751018
+      ],
+      "observed_at_ms": 1793286618491,
+      "name": "server_confirmed_navigation",
+      "status": "pass",
+      "at": "2026-10-29T15:10:18.710Z"
+    },
+    {
+      "actor_name": "WorldBuilder",
+      "goal": [
+        -14,
+        81,
+        -10
+      ],
+      "before": [
+        -13.67299485468405,
+        81,
+        -6.433836786751018
+      ],
+      "client_position": {
+        "x": -13.49305546005815,
+        "y": 81,
+        "z": -9.5
+      },
+      "client_mode": "survival",
+      "physics_enabled": true,
+      "alive": true,
+      "telemetry": {
+        "received_teleports": [
+          {
+            "x": -1.5,
+            "y": 81,
+            "z": -6.500323974827124,
+            "teleport_id": 1,
+            "at_ms": 1793286464990
+          },
+          {
+            "x": -14.5,
+            "y": 81,
+            "z": 3.5,
+            "teleport_id": 2,
+            "at_ms": 1793286464991
+          }
+        ],
+        "sent_teleport_confirmations": [
+          {
+            "teleport_id": 1,
+            "at_ms": 1793286464990
+          },
+          {
+            "teleport_id": 2,
+            "at_ms": 1793286464991
+          }
+        ],
+        "sent_positions": [
+          {
+            "x": -13.621085926104547,
+            "y": 81,
+            "z": -6.754016490938426,
+            "at_ms": 1793286618818
+          },
+          {
+            "x": -13.583546012336338,
+            "y": 81,
+            "z": -6.985938246787877,
+            "at_ms": 1793286618869
+          },
+          {
+            "x": -13.542460884515238,
+            "y": 81,
+            "z": -7.238292993185839,
+            "at_ms": 1793286618920
+          },
+          {
+            "x": -13.515693318566456,
+            "y": 81,
+            "z": -7.503404957701311,
+            "at_ms": 1793286618972
+          },
+          {
+            "x": -13.499077114546104,
+            "y": 81,
+            "z": -7.7755404233911,
+            "at_ms": 1793286619022
+          },
+          {
+            "x": -13.490004667151016,
+            "y": 81,
+            "z": -8.051526437750082,
+            "at_ms": 1793286619074
+          },
+          {
+            "x": -13.488052626093289,
+            "y": 81,
+            "z": -8.329579489278313,
+            "at_ms": 1793286619126
+          },
+          {
+            "x": -13.48938673191428,
+            "y": 81,
+            "z": -8.608789520079505,
+            "at_ms": 1793286619178
+          },
+          {
+            "x": -13.491054347045782,
+            "y": 81,
+            "z": -8.888627332317949,
+            "at_ms": 1793286619230
+          },
+          {
+            "x": -13.49305546005815,
+            "y": 81,
+            "z": -9.5,
+            "at_ms": 1793286619282
+          }
+        ],
+        "position_packet_count": 202,
+        "packet_counts": {
+          "teleport_confirm": 2,
+          "position_look": 38,
+          "player_loaded": 1,
+          "position": 164,
+          "flying": 1
+        }
+      },
+      "server_position": [
+        -13.49305546005815,
+        81,
+        -9.5
+      ],
+      "observed_at_ms": 1793286619490,
+      "name": "server_confirmed_navigation",
+      "status": "pass",
+      "at": "2026-10-29T15:10:19.537Z"
+    }
+  ],
+  "last_navigation": {
+    "actor_name": "WorldBuilder",
+    "goal": [
+      -9,
+      86,
+      -9
+    ],
+    "before": [
+      -13.49305546005815,
+      81,
+      -9.5
+    ],
+    "client_position": {
+      "x": -13.317970468839942,
+      "y": 81,
+      "z": -9.547252713814226
+    },
+    "client_mode": "survival",
+    "physics_enabled": true,
+    "alive": true,
+    "telemetry": {
+      "received_teleports": [
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "teleport_id": 324,
+          "at_ms": 1793286637018
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "teleport_id": 325,
+          "at_ms": 1793286637070
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "teleport_id": 326,
+          "at_ms": 1793286637126
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "teleport_id": 327,
+          "at_ms": 1793286637178
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "teleport_id": 328,
+          "at_ms": 1793286637227
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "teleport_id": 329,
+          "at_ms": 1793286637275
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "teleport_id": 330,
+          "at_ms": 1793286637325
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "teleport_id": 331,
+          "at_ms": 1793286637375
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "teleport_id": 332,
+          "at_ms": 1793286637430
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "teleport_id": 333,
+          "at_ms": 1793286637537
+        }
+      ],
+      "sent_teleport_confirmations": [
+        {
+          "teleport_id": 324,
+          "at_ms": 1793286637018
+        },
+        {
+          "teleport_id": 325,
+          "at_ms": 1793286637070
+        },
+        {
+          "teleport_id": 326,
+          "at_ms": 1793286637126
+        },
+        {
+          "teleport_id": 327,
+          "at_ms": 1793286637178
+        },
+        {
+          "teleport_id": 328,
+          "at_ms": 1793286637227
+        },
+        {
+          "teleport_id": 329,
+          "at_ms": 1793286637275
+        },
+        {
+          "teleport_id": 330,
+          "at_ms": 1793286637325
+        },
+        {
+          "teleport_id": 331,
+          "at_ms": 1793286637375
+        },
+        {
+          "teleport_id": 332,
+          "at_ms": 1793286637430
+        },
+        {
+          "teleport_id": 333,
+          "at_ms": 1793286637537
+        }
+      ],
+      "sent_positions": [
+        {
+          "x": -13.3,
+          "y": 81,
+          "z": -9.545828198240141,
+          "at_ms": 1793286637274
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "at_ms": 1793286637275
+        },
+        {
+          "x": -13.3,
+          "y": 81,
+          "z": -9.545828198240141,
+          "at_ms": 1793286637324
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "at_ms": 1793286637325
+        },
+        {
+          "x": -13.3,
+          "y": 81,
+          "z": -9.545828198240141,
+          "at_ms": 1793286637374
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "at_ms": 1793286637375
+        },
+        {
+          "x": -13.3,
+          "y": 81,
+          "z": -9.545828198240141,
+          "at_ms": 1793286637429
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "at_ms": 1793286637430
+        },
+        {
+          "x": -13.3,
+          "y": 81,
+          "z": -9.545761601044955,
+          "at_ms": 1793286637536
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "at_ms": 1793286637537
+        }
+      ],
+      "position_packet_count": 887,
+      "packet_counts": {
+        "teleport_confirm": 333,
+        "position_look": 394,
+        "player_loaded": 1,
+        "position": 493,
+        "flying": 1
+      }
+    }
+  },
+  "error": {
+    "name": "Error",
+    "message": "WorldBuilder bounded navigation: timeout after 18000 ms",
+    "stack": "Error: WorldBuilder bounded navigation: timeout after 18000 ms\n    at Timeout.<anonymous> (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/inspection/probe.cjs:51:39)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"
+  },
+  "final_observation": {
+    "state": {
+      "revision": 1,
+      "lockMode": "NONE",
+      "quarantined": false,
+      "readyForReview": false,
+      "passValidUntilMs": 1793286616345
+    },
+    "refusals": [
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "awaiting_player_inventory",
+      "interaction_not_authorized",
+      "interaction_not_authorized",
+      "interaction_not_authorized"
+    ],
+    "tick": 3480,
+    "observed_at_ms": 1793286637491,
+    "target": "minecraft:redstone_wire[east=up,north=none,power=14,south=none,west=side]",
+    "stock": {
+      "minecraft:lever": 4,
+      "minecraft:redstone": 18,
+      "minecraft:redstone_lamp": 3,
+      "minecraft:redstone_torch": 37,
+      "minecraft:repeater": 16,
+      "minecraft:stone_bricks": 65
+    },
+    "players": {
+      "WorldBuilder": {
+        "mode": "SURVIVAL",
+        "display_name": "WorldBuilder",
+        "uuid": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+        "position": [
+          -13.317970468839942,
+          81,
+          -9.547252713814226
+        ],
+        "items": {},
+        "block_interaction_range": 4.5,
+        "eye_position": [
+          -13.317970468839942,
+          82.62000000476837,
+          -9.547252713814226
+        ]
+      },
+      "WorldInspector": {
+        "mode": "SURVIVAL",
+        "display_name": "WorldInspector",
+        "uuid": "563add28-410b-350e-9001-a9be4cc7bd00",
+        "position": [
+          12.5,
+          81,
+          5.5
+        ],
+        "items": {},
+        "block_interaction_range": 4.5,
+        "eye_position": [
+          12.5,
+          82.62000000476837,
+          5.5
+        ]
+      },
+      "WorldRequester": {
+        "mode": "SURVIVAL",
+        "display_name": "WorldRequester",
+        "uuid": "a56f0418-1cf4-3f1e-a0ab-9b34ba31f192",
+        "position": [
+          -7.5,
+          81,
+          -6.500000000001343
+        ],
+        "items": {
+          "minecraft:lava_bucket": 1,
+          "minecraft:water_bucket": 1
+        },
+        "block_interaction_range": 4.5,
+        "eye_position": [
+          -7.5,
+          82.62000000476837,
+          -6.500000000001343
+        ]
+      },
+      "WorldStranger": {
+        "mode": "SURVIVAL",
+        "display_name": "WorldBuilder",
+        "uuid": "3febf1ac-21e5-394e-bb24-e8731e755afa",
+        "position": [
+          12.5,
+          81,
+          -6.5
+        ],
+        "items": {
+          "minecraft:cobblestone": 1
+        },
+        "block_interaction_range": 4.5,
+        "eye_position": [
+          12.5,
+          82.62000000476837,
+          -6.5
+        ]
+      }
+    },
+    "structural_sha256": "3ad37a2c8081485255d3e702949a66feb611d1e1d7119b6eacfc35443414aed9"
+  },
+  "movement_telemetry": {
+    "WorldBuilder": {
+      "received_teleports": [
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "teleport_id": 324,
+          "at_ms": 1793286637018
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "teleport_id": 325,
+          "at_ms": 1793286637070
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "teleport_id": 326,
+          "at_ms": 1793286637126
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "teleport_id": 327,
+          "at_ms": 1793286637178
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "teleport_id": 328,
+          "at_ms": 1793286637227
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "teleport_id": 329,
+          "at_ms": 1793286637275
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "teleport_id": 330,
+          "at_ms": 1793286637325
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "teleport_id": 331,
+          "at_ms": 1793286637375
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "teleport_id": 332,
+          "at_ms": 1793286637430
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "teleport_id": 333,
+          "at_ms": 1793286637537
+        }
+      ],
+      "sent_teleport_confirmations": [
+        {
+          "teleport_id": 324,
+          "at_ms": 1793286637018
+        },
+        {
+          "teleport_id": 325,
+          "at_ms": 1793286637070
+        },
+        {
+          "teleport_id": 326,
+          "at_ms": 1793286637126
+        },
+        {
+          "teleport_id": 327,
+          "at_ms": 1793286637178
+        },
+        {
+          "teleport_id": 328,
+          "at_ms": 1793286637227
+        },
+        {
+          "teleport_id": 329,
+          "at_ms": 1793286637275
+        },
+        {
+          "teleport_id": 330,
+          "at_ms": 1793286637325
+        },
+        {
+          "teleport_id": 331,
+          "at_ms": 1793286637375
+        },
+        {
+          "teleport_id": 332,
+          "at_ms": 1793286637430
+        },
+        {
+          "teleport_id": 333,
+          "at_ms": 1793286637537
+        }
+      ],
+      "sent_positions": [
+        {
+          "x": -13.3,
+          "y": 81,
+          "z": -9.545828198240141,
+          "at_ms": 1793286637274
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "at_ms": 1793286637275
+        },
+        {
+          "x": -13.3,
+          "y": 81,
+          "z": -9.545828198240141,
+          "at_ms": 1793286637324
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "at_ms": 1793286637325
+        },
+        {
+          "x": -13.3,
+          "y": 81,
+          "z": -9.545828198240141,
+          "at_ms": 1793286637374
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "at_ms": 1793286637375
+        },
+        {
+          "x": -13.3,
+          "y": 81,
+          "z": -9.545828198240141,
+          "at_ms": 1793286637429
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "at_ms": 1793286637430
+        },
+        {
+          "x": -13.3,
+          "y": 81,
+          "z": -9.545761601044955,
+          "at_ms": 1793286637536
+        },
+        {
+          "x": -13.317970468839942,
+          "y": 81,
+          "z": -9.547252713814226,
+          "at_ms": 1793286637537
+        }
+      ],
+      "position_packet_count": 887,
+      "packet_counts": {
+        "teleport_confirm": 333,
+        "position_look": 394,
+        "player_loaded": 1,
+        "position": 493,
+        "flying": 1
+      }
+    },
+    "WorldRequester": {
+      "received_teleports": [
+        {
+          "x": -7.5,
+          "y": 81,
+          "z": -6.5000000000006715,
+          "teleport_id": 1,
+          "at_ms": 1793286470244
+        },
+        {
+          "x": -12.5,
+          "y": 81,
+          "z": -6.5,
+          "teleport_id": 2,
+          "at_ms": 1793286470250
+        }
+      ],
+      "sent_teleport_confirmations": [
+        {
+          "teleport_id": 1,
+          "at_ms": 1793286470244
+        },
+        {
+          "teleport_id": 2,
+          "at_ms": 1793286470250
+        }
+      ],
+      "sent_positions": [
+        {
+          "x": -7.5,
+          "y": 81,
+          "z": -6.500000000001343,
+          "at_ms": 1793286628429
+        },
+        {
+          "x": -7.5,
+          "y": 81,
+          "z": -6.500000000001343,
+          "at_ms": 1793286629404
+        },
+        {
+          "x": -7.5,
+          "y": 81,
+          "z": -6.500000000001343,
+          "at_ms": 1793286630383
+        },
+        {
+          "x": -7.5,
+          "y": 81,
+          "z": -6.500000000001343,
+          "at_ms": 1793286631361
+        },
+        {
+          "x": -7.5,
+          "y": 81,
+          "z": -6.500000000001343,
+          "at_ms": 1793286632340
+        },
+        {
+          "x": -7.5,
+          "y": 81,
+          "z": -6.500000000001343,
+          "at_ms": 1793286633365
+        },
+        {
+          "x": -7.5,
+          "y": 81,
+          "z": -6.500000000001343,
+          "at_ms": 1793286634342
+        },
+        {
+          "x": -7.5,
+          "y": 81,
+          "z": -6.500000000001343,
+          "at_ms": 1793286635332
+        },
+        {
+          "x": -7.5,
+          "y": 81,
+          "z": -6.500000000001343,
+          "at_ms": 1793286636358
+        },
+        {
+          "x": -7.5,
+          "y": 81,
+          "z": -6.500000000001343,
+          "at_ms": 1793286637380
+        }
+      ],
+      "position_packet_count": 239,
+      "packet_counts": {
+        "teleport_confirm": 2,
+        "position_look": 56,
+        "player_loaded": 1,
+        "position": 183,
+        "flying": 1
+      }
+    },
+    "WorldInspector": {
+      "received_teleports": [
+        {
+          "x": 12.5,
+          "y": 81,
+          "z": 5.5,
+          "teleport_id": 1,
+          "at_ms": 1793286475506
+        },
+        {
+          "x": 12.5,
+          "y": 81,
+          "z": 5.5,
+          "teleport_id": 2,
+          "at_ms": 1793286475507
+        }
+      ],
+      "sent_teleport_confirmations": [
+        {
+          "teleport_id": 1,
+          "at_ms": 1793286475506
+        },
+        {
+          "teleport_id": 2,
+          "at_ms": 1793286475507
+        }
+      ],
+      "sent_positions": [
+        {
+          "x": 12.5,
+          "y": 81,
+          "z": 5.5,
+          "at_ms": 1793286628170
+        },
+        {
+          "x": 12.5,
+          "y": 81,
+          "z": 5.5,
+          "at_ms": 1793286629151
+        },
+        {
+          "x": 12.5,
+          "y": 81,
+          "z": 5.5,
+          "at_ms": 1793286630174
+        },
+        {
+          "x": 12.5,
+          "y": 81,
+          "z": 5.5,
+          "at_ms": 1793286631153
+        },
+        {
+          "x": 12.5,
+          "y": 81,
+          "z": 5.5,
+          "at_ms": 1793286632133
+        },
+        {
+          "x": 12.5,
+          "y": 81,
+          "z": 5.5,
+          "at_ms": 1793286633109
+        },
+        {
+          "x": 12.5,
+          "y": 81,
+          "z": 5.5,
+          "at_ms": 1793286634086
+        },
+        {
+          "x": 12.5,
+          "y": 81,
+          "z": 5.5,
+          "at_ms": 1793286635063
+        },
+        {
+          "x": 12.5,
+          "y": 81,
+          "z": 5.5,
+          "at_ms": 1793286636045
+        },
+        {
+          "x": 12.5,
+          "y": 81,
+          "z": 5.5,
+          "at_ms": 1793286637070
+        }
+      ],
+      "position_packet_count": 164,
+      "packet_counts": {
+        "teleport_confirm": 2,
+        "position_look": 2,
+        "player_loaded": 1,
+        "position": 162,
+        "flying": 1
+      }
+    },
+    "WorldStranger": {
+      "received_teleports": [
+        {
+          "x": 12.50000000000005,
+          "y": 81,
+          "z": -3.5,
+          "teleport_id": 1,
+          "at_ms": 1793286480822
+        },
+        {
+          "x": 12.5,
+          "y": 81,
+          "z": -6.5,
+          "teleport_id": 2,
+          "at_ms": 1793286480823
+        }
+      ],
+      "sent_teleport_confirmations": [
+        {
+          "teleport_id": 1,
+          "at_ms": 1793286480822
+        },
+        {
+          "teleport_id": 2,
+          "at_ms": 1793286480823
+        }
+      ],
+      "sent_positions": [
+        {
+          "x": 12.5,
+          "y": 81,
+          "z": -6.5,
+          "at_ms": 1793286628163
+        },
+        {
+          "x": 12.5,
+          "y": 81,
+          "z": -6.5,
+          "at_ms": 1793286629140
+        },
+        {
+          "x": 12.5,
+          "y": 81,
+          "z": -6.5,
+          "at_ms": 1793286630166
+        },
+        {
+          "x": 12.5,
+          "y": 81,
+          "z": -6.5,
+          "at_ms": 1793286631146
+        },
+        {
+          "x": 12.5,
+          "y": 81,
+          "z": -6.5,
+          "at_ms": 1793286632126
+        },
+        {
+          "x": 12.5,
+          "y": 81,
+          "z": -6.5,
+          "at_ms": 1793286633102
+        },
+        {
+          "x": 12.5,
+          "y": 81,
+          "z": -6.5,
+          "at_ms": 1793286634128
+        },
+        {
+          "x": 12.5,
+          "y": 81,
+          "z": -6.5,
+          "at_ms": 1793286635107
+        },
+        {
+          "x": 12.5,
+          "y": 81,
+          "z": -6.5,
+          "at_ms": 1793286636088
+        },
+        {
+          "x": 12.5,
+          "y": 81,
+          "z": -6.5,
+          "at_ms": 1793286637064
+        }
+      ],
+      "position_packet_count": 159,
+      "packet_counts": {
+        "teleport_confirm": 2,
+        "position_look": 2,
+        "player_loaded": 1,
+        "position": 157,
+        "flying": 1
+      }
+    }
+  },
+  "finished_at": "2026-10-29T15:10:37.554Z"
+}

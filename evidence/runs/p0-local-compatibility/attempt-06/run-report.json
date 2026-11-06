@@ -1,0 +1,471 @@
+{
+  "purpose": "isolated physical compatibility spike only",
+  "status": "pass",
+  "started_at": "2026-10-29T13:07:33.928079+00:00",
+  "versions": {
+    "purpose": "isolated_non_token_fixture",
+    "bind": "127.0.0.1",
+    "port": 25576,
+    "minecraft": "1.21.11",
+    "paper": {
+      "build": 132,
+      "support": "UNSUPPORTED",
+      "support_ended": "2026-06-15",
+      "sha256": "5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba",
+      "url": "https://fill-data.papermc.io/v1/objects/5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba/paper-1.21.11-132.jar"
+    },
+    "java_image": "eclipse-temurin@sha256:5d90b26c0784ccf55af55f97cbcf7f3969c66a06299c93bdc72649219942a48f",
+    "mineflayer": "4.39.0",
+    "pathfinder": "2.4.5",
+    "authentication": "offline_fixture_only",
+    "independent_human_participants": 0,
+    "token_integration": false,
+    "production_supported": false
+  },
+  "independent_humans": 0,
+  "full_phase_gate_passed": false,
+  "steps": [
+    {
+      "step": "bootstrap",
+      "status": "pass",
+      "container": "ecc54dcfaf0055e78101b48d5a5838e87180328e0776575b24664f45a52400d9"
+    },
+    {
+      "step": "compile_fixture_plugin",
+      "status": "pass"
+    },
+    {
+      "step": "fixture",
+      "status": "pass",
+      "container": "8f0716779279828c22e0f7e8c8cb457895ae9d0d3f34746728454b51cfd933f6"
+    }
+  ],
+  "java_runtime": "openjdk version \"21.0.12.1\" 2026-08-18 LTS\nOpenJDK Runtime Environment Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS)\nOpenJDK 64-Bit Server VM Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS, mixed mode, sharing)",
+  "node_runtime": "v26.3.1",
+  "actual_paper_sha256": "5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba",
+  "fixture_plugin_sha256": "6af40f13f37ca42063e90488fb04515b1858ce1cfdef57f30d5f40e44156db08",
+  "probe": {
+    "schema": "agentcity.p0.compatibility.v1",
+    "status": "passed",
+    "started_at": "2026-10-29T13:07:52.552Z",
+    "environment": {
+      "host": "127.0.0.1",
+      "port": 25576,
+      "version": "1.21.11",
+      "auth": "offline"
+    },
+    "identities": "FixtureBuilder and FixtureObserver are both agent-controlled test fixtures, not independent humans or licensed-account proof.",
+    "steps": [
+      {
+        "name": "initial_off",
+        "passed": true,
+        "observations": [
+          {
+            "lever": false,
+            "lamp": false,
+            "wire": 0,
+            "stock": 2,
+            "target": "AIR",
+            "server": "1.21.11-132-c5eb079 (MC: 1.21.11)",
+            "plugin": "0.1.0"
+          },
+          {
+            "lever": false,
+            "lamp": false,
+            "wire": 0,
+            "stock": 2,
+            "target": "AIR",
+            "server": "1.21.11-132-c5eb079 (MC: 1.21.11)",
+            "plugin": "0.1.0"
+          }
+        ],
+        "client_blocks": [
+          {
+            "player": "FixtureBuilder",
+            "lever": {
+              "powered": false,
+              "facing": "east",
+              "face": "floor"
+            },
+            "wire": {
+              "west": "none",
+              "south": "none",
+              "power": "0",
+              "north": "none",
+              "east": "none"
+            },
+            "lamp": {
+              "lit": false
+            }
+          },
+          {
+            "player": "FixtureObserver",
+            "lever": {
+              "powered": false,
+              "facing": "east",
+              "face": "floor"
+            },
+            "wire": {
+              "west": "none",
+              "south": "none",
+              "power": "0",
+              "north": "none",
+              "east": "none"
+            },
+            "lamp": {
+              "lit": false
+            }
+          }
+        ]
+      },
+      {
+        "name": "lever_on",
+        "passed": true,
+        "observations": [
+          {
+            "lever": true,
+            "lamp": true,
+            "wire": 15,
+            "stock": 2,
+            "target": "AIR",
+            "server": "1.21.11-132-c5eb079 (MC: 1.21.11)",
+            "plugin": "0.1.0"
+          },
+          {
+            "lever": true,
+            "lamp": true,
+            "wire": 15,
+            "stock": 2,
+            "target": "AIR",
+            "server": "1.21.11-132-c5eb079 (MC: 1.21.11)",
+            "plugin": "0.1.0"
+          }
+        ],
+        "client_blocks": [
+          {
+            "player": "FixtureBuilder",
+            "lever": {
+              "powered": true,
+              "facing": "east",
+              "face": "floor"
+            },
+            "wire": {
+              "west": "side",
+              "south": "none",
+              "power": "15",
+              "north": "none",
+              "east": "side"
+            },
+            "lamp": {
+              "lit": true
+            }
+          },
+          {
+            "player": "FixtureObserver",
+            "lever": {
+              "powered": true,
+              "facing": "east",
+              "face": "floor"
+            },
+            "wire": {
+              "west": "side",
+              "south": "none",
+              "power": "15",
+              "north": "none",
+              "east": "side"
+            },
+            "lamp": {
+              "lit": true
+            }
+          }
+        ]
+      },
+      {
+        "name": "lever_off_again",
+        "passed": true,
+        "observations": [
+          {
+            "lever": false,
+            "lamp": false,
+            "wire": 0,
+            "stock": 2,
+            "target": "AIR",
+            "server": "1.21.11-132-c5eb079 (MC: 1.21.11)",
+            "plugin": "0.1.0"
+          },
+          {
+            "lever": false,
+            "lamp": false,
+            "wire": 0,
+            "stock": 2,
+            "target": "AIR",
+            "server": "1.21.11-132-c5eb079 (MC: 1.21.11)",
+            "plugin": "0.1.0"
+          }
+        ],
+        "client_blocks": [
+          {
+            "player": "FixtureBuilder",
+            "lever": {
+              "powered": false,
+              "facing": "east",
+              "face": "floor"
+            },
+            "wire": {
+              "west": "side",
+              "south": "none",
+              "power": "0",
+              "north": "none",
+              "east": "side"
+            },
+            "lamp": {
+              "lit": false
+            }
+          },
+          {
+            "player": "FixtureObserver",
+            "lever": {
+              "powered": false,
+              "facing": "east",
+              "face": "floor"
+            },
+            "wire": {
+              "west": "side",
+              "south": "none",
+              "power": "0",
+              "north": "none",
+              "east": "side"
+            },
+            "lamp": {
+              "lit": false
+            }
+          }
+        ]
+      },
+      {
+        "name": "one_item_withdrawn",
+        "passed": true,
+        "observations": [
+          {
+            "lever": false,
+            "lamp": false,
+            "wire": 0,
+            "stock": 1,
+            "target": "AIR",
+            "server": "1.21.11-132-c5eb079 (MC: 1.21.11)",
+            "plugin": "0.1.0"
+          },
+          {
+            "lever": false,
+            "lamp": false,
+            "wire": 0,
+            "stock": 1,
+            "target": "AIR",
+            "server": "1.21.11-132-c5eb079 (MC: 1.21.11)",
+            "plugin": "0.1.0"
+          }
+        ],
+        "client_blocks": [
+          {
+            "player": "FixtureBuilder",
+            "lever": {
+              "powered": false,
+              "facing": "east",
+              "face": "floor"
+            },
+            "wire": {
+              "west": "side",
+              "south": "none",
+              "power": "0",
+              "north": "none",
+              "east": "side"
+            },
+            "lamp": {
+              "lit": false
+            }
+          },
+          {
+            "player": "FixtureObserver",
+            "lever": {
+              "powered": false,
+              "facing": "east",
+              "face": "floor"
+            },
+            "wire": {
+              "west": "side",
+              "south": "none",
+              "power": "0",
+              "north": "none",
+              "east": "side"
+            },
+            "lamp": {
+              "lit": false
+            }
+          }
+        ]
+      },
+      {
+        "name": "one_item_consumed_in_world",
+        "passed": true,
+        "observations": [
+          {
+            "lever": false,
+            "lamp": false,
+            "wire": 0,
+            "stock": 1,
+            "target": "COBBLESTONE",
+            "server": "1.21.11-132-c5eb079 (MC: 1.21.11)",
+            "plugin": "0.1.0"
+          },
+          {
+            "lever": false,
+            "lamp": false,
+            "wire": 0,
+            "stock": 1,
+            "target": "COBBLESTONE",
+            "server": "1.21.11-132-c5eb079 (MC: 1.21.11)",
+            "plugin": "0.1.0"
+          }
+        ],
+        "client_blocks": [
+          {
+            "player": "FixtureBuilder",
+            "lever": {
+              "powered": false,
+              "facing": "east",
+              "face": "floor"
+            },
+            "wire": {
+              "west": "side",
+              "south": "none",
+              "power": "0",
+              "north": "none",
+              "east": "side"
+            },
+            "lamp": {
+              "lit": false
+            }
+          },
+          {
+            "player": "FixtureObserver",
+            "lever": {
+              "powered": false,
+              "facing": "east",
+              "face": "floor"
+            },
+            "wire": {
+              "west": "side",
+              "south": "none",
+              "power": "0",
+              "north": "none",
+              "east": "side"
+            },
+            "lamp": {
+              "lit": false
+            }
+          }
+        ]
+      },
+      {
+        "name": "bounded_navigation",
+        "passed": true,
+        "before": {
+          "x": 0.5,
+          "y": 81,
+          "z": 0.5
+        },
+        "after": {
+          "x": -2,
+          "y": 81,
+          "z": 0
+        },
+        "can_dig": false,
+        "scaffold_items": 0
+      },
+      {
+        "name": "world_unchanged_after_navigation",
+        "passed": true,
+        "observations": [
+          {
+            "lever": false,
+            "lamp": false,
+            "wire": 0,
+            "stock": 1,
+            "target": "COBBLESTONE",
+            "server": "1.21.11-132-c5eb079 (MC: 1.21.11)",
+            "plugin": "0.1.0"
+          },
+          {
+            "lever": false,
+            "lamp": false,
+            "wire": 0,
+            "stock": 1,
+            "target": "COBBLESTONE",
+            "server": "1.21.11-132-c5eb079 (MC: 1.21.11)",
+            "plugin": "0.1.0"
+          }
+        ],
+        "client_blocks": [
+          {
+            "player": "FixtureBuilder",
+            "lever": {
+              "powered": false,
+              "facing": "east",
+              "face": "floor"
+            },
+            "wire": {
+              "west": "side",
+              "south": "none",
+              "power": "0",
+              "north": "none",
+              "east": "side"
+            },
+            "lamp": {
+              "lit": false
+            }
+          },
+          {
+            "player": "FixtureObserver",
+            "lever": {
+              "powered": false,
+              "facing": "east",
+              "face": "floor"
+            },
+            "wire": {
+              "west": "side",
+              "south": "none",
+              "power": "0",
+              "north": "none",
+              "east": "side"
+            },
+            "lamp": {
+              "lit": false
+            }
+          }
+        ]
+      }
+    ],
+    "last_readings": [
+      {
+        "lever": false,
+        "lamp": false,
+        "wire": 0,
+        "stock": 1,
+        "target": "COBBLESTONE",
+        "server": "1.21.11-132-c5eb079 (MC: 1.21.11)",
+        "plugin": "0.1.0"
+      },
+      {
+        "lever": false,
+        "lamp": false,
+        "wire": 0,
+        "stock": 1,
+        "target": "COBBLESTONE",
+        "server": "1.21.11-132-c5eb079 (MC: 1.21.11)",
+        "plugin": "0.1.0"
+      }
+    ],
+    "finished_at": "2026-10-29T13:08:04.247Z"
+  },
+  "finished_at": "2026-10-29T13:08:07.135880+00:00"
+}

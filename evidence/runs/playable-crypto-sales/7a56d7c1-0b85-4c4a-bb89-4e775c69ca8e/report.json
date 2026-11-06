@@ -1,0 +1,26 @@
+{
+  "status": "pass",
+  "scope": "Real isolated PostgreSQL, explicit inventory and chain fixtures. No actual Minecraft or public-chain payment proof.",
+  "checks": [
+    {
+      "name": "exact inventory and finite token debit; original operation replay has zero extra effects",
+      "status": "pass"
+    },
+    {
+      "name": "owner and immutable item/count bindings reject a different player or changed sale",
+      "status": "pass"
+    },
+    {
+      "name": "insufficient items cancel and release holds; missing gas/funds fail before item removal",
+      "status": "pass"
+    },
+    {
+      "name": "lost payout reply reconciles the original transfer without another removal or payment",
+      "status": "pass"
+    },
+    {
+      "name": "unconfirmed payouts retain finite treasury reservations and prevent oversubscribed item removal",
+      "status": "pass"
+    }
+  ]
+}

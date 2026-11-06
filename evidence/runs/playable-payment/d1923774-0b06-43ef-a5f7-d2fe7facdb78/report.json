@@ -1,0 +1,133 @@
+{
+  "scope": "Actual in-game Game Coins transfer between two disclosed Mineflayer fixtures; no agents created, real wallets, blockchain action or independently verified people",
+  "players": [
+    "PlayTester",
+    "PlayReceiver"
+  ],
+  "status": "pass",
+  "independentHumansVerified": 0,
+  "publicTransactions": 0,
+  "startedAt": "2026-10-31T06:23:03.340Z",
+  "checks": [
+    {
+      "name": "both-fixtures-read-actual-existing-wallet-balances",
+      "status": "pass",
+      "senderAvailable": "100",
+      "recipientAvailable": "100"
+    },
+    {
+      "name": "in-game-payment-preview-does-not-spend-or-reserve-coins",
+      "status": "pass"
+    },
+    {
+      "name": "actual-in-game-confirmation-transfers-exactly-seven-coins",
+      "status": "pass",
+      "senderAvailable": "93",
+      "recipientAvailable": "107"
+    },
+    {
+      "name": "repeating-the-same-preview-confirmation-pays-zero-extra",
+      "status": "pass"
+    }
+  ],
+  "commands": [
+    {
+      "player": "PlayTester",
+      "command": "/wallet",
+      "replies": [
+        "Your wallet contains internal Game Coins only; no cryptocurrency or cash-out.",
+        "Request queued: balance (b6fbc96e).",
+        "PlayTester: 100 Game Coins available, 0 held. | Game Coins exist only on this server and have no real-world value. | Recent starter grant: +100 Game Coins."
+      ]
+    },
+    {
+      "player": "PlayReceiver",
+      "command": "/wallet",
+      "replies": [
+        "Your wallet contains internal Game Coins only; no cryptocurrency or cash-out.",
+        "Request queued: balance (c267ef31).",
+        "PlayReceiver: 100 Game Coins available, 0 held. | Game Coins exist only on this server and have no real-world value. | Recent starter grant: +100 Game Coins."
+      ]
+    },
+    {
+      "player": "PlayTester",
+      "command": "/pay PlayReceiver 7",
+      "replies": [
+        "Request queued: pay (6e42cfc4).",
+        "Pay 7 Game Coins to PlayReceiver? | Confirm within 5 minutes: /accept <redacted-id> | This preview has not spent or reserved coins."
+      ]
+    },
+    {
+      "player": "PlayTester",
+      "command": "/wallet",
+      "replies": [
+        "Your wallet contains internal Game Coins only; no cryptocurrency or cash-out.",
+        "Request queued: balance (a6fe599c).",
+        "PlayTester: 100 Game Coins available, 0 held. | Game Coins exist only on this server and have no real-world value. | Recent starter grant: +100 Game Coins."
+      ]
+    },
+    {
+      "player": "PlayReceiver",
+      "command": "/wallet",
+      "replies": [
+        "Your wallet contains internal Game Coins only; no cryptocurrency or cash-out.",
+        "Request queued: balance (db6008e8).",
+        "PlayReceiver: 100 Game Coins available, 0 held. | Game Coins exist only on this server and have no real-world value. | Recent starter grant: +100 Game Coins."
+      ]
+    },
+    {
+      "player": "PlayTester",
+      "command": "/accept <redacted-id>",
+      "replies": [
+        "Request queued: accept (6ad0a738).",
+        "Paid 7 Game Coins to PlayReceiver."
+      ]
+    },
+    {
+      "player": "PlayTester",
+      "command": "/wallet",
+      "replies": [
+        "Your wallet contains internal Game Coins only; no cryptocurrency or cash-out.",
+        "Request queued: balance (bf18794c).",
+        "PlayTester: 93 Game Coins available, 0 held. | Game Coins exist only on this server and have no real-world value. | Recent transfer: -7 Game Coins. | Recent starter grant: +100 Game Coins."
+      ]
+    },
+    {
+      "player": "PlayReceiver",
+      "command": "/wallet",
+      "replies": [
+        "Your wallet contains internal Game Coins only; no cryptocurrency or cash-out.",
+        "Request queued: balance (36527f9a).",
+        "PlayReceiver: 107 Game Coins available, 0 held. | Game Coins exist only on this server and have no real-world value. | Recent transfer: +7 Game Coins. | Recent starter grant: +100 Game Coins."
+      ]
+    },
+    {
+      "player": "PlayTester",
+      "command": "/accept <redacted-id>",
+      "replies": [
+        "Request queued: accept (47e38068).",
+        "This payment was already completed. No additional coins were sent."
+      ]
+    },
+    {
+      "player": "PlayTester",
+      "command": "/wallet",
+      "replies": [
+        "Your wallet contains internal Game Coins only; no cryptocurrency or cash-out.",
+        "Request queued: balance (563daa46).",
+        "PlayTester: 93 Game Coins available, 0 held. | Game Coins exist only on this server and have no real-world value. | Recent transfer: -7 Game Coins. | Recent starter grant: +100 Game Coins."
+      ]
+    },
+    {
+      "player": "PlayReceiver",
+      "command": "/wallet",
+      "replies": [
+        "Your wallet contains internal Game Coins only; no cryptocurrency or cash-out.",
+        "Request queued: balance (8d852b3f).",
+        "PlayReceiver: 107 Game Coins available, 0 held. | Game Coins exist only on this server and have no real-world value. | Recent transfer: +7 Game Coins. | Recent starter grant: +100 Game Coins."
+      ]
+    }
+  ],
+  "previewReferenceSha256": "bf929e1b76b51c3b91ad7b05567b3ff1694ebee5e315d245b49e451e0efdf8bc",
+  "finishedAt": "2026-10-31T06:23:26.700Z"
+}

@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "scope": "Three focused isolated PostgreSQL and Discord-adapter fixtures; no actual posting, financial writes or live blockchain verification",
+  "checks": [
+    {
+      "name": "redacted dynamic-agent jobs and distinct Game Coin versus verified public-testnet receipts omit private data invalid accounting submitted and local fixtures",
+      "status": "pass"
+    },
+    {
+      "name": "durable unknown-send nonce marker reconciliation survives restart and edits each existing job card without duplicate posts",
+      "status": "pass"
+    },
+    {
+      "name": "loss of canonical verification edits prior confirmation to reconciliation and absent verifier publishes no testnet confirmation while all economic records stay unchanged",
+      "status": "pass"
+    }
+  ],
+  "sourceSha256": "1c09f0762f7a0c5a96f906adc6e9004d550d47d0ef795e75b5e298c011332b8d"
+}

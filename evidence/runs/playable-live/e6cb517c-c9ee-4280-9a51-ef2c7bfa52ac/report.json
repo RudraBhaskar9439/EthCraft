@@ -1,0 +1,72 @@
+{
+  "scope": "local playable fixture; no independently verified human or blockchain action",
+  "username": "PlayTester",
+  "status": "pass",
+  "independentHumansVerified": 0,
+  "startedAt": "2026-10-31T06:18:44.232Z",
+  "checks": [
+    {
+      "name": "fixture-player-joins-in-survival",
+      "status": "pass",
+      "mode": "survival"
+    },
+    {
+      "name": "four-clickable-npc-entities-visible",
+      "status": "pass",
+      "npcNames": [
+        "Guide",
+        "Agent Desk",
+        "Job Board",
+        "Game Coins"
+      ]
+    },
+    {
+      "name": "guide-menu-opens-without-transferring-menu-items",
+      "status": "pass"
+    },
+    {
+      "name": "internal-wallet-shows-one-time100-game-coins",
+      "status": "pass"
+    },
+    {
+      "name": "personal-agent-created-and-visible",
+      "status": "pass",
+      "agent": "CityAgent1"
+    },
+    {
+      "name": "agent-status-confirms-live-connection",
+      "status": "pass"
+    },
+    {
+      "name": "owned-agent-follows-with-actual-movement",
+      "status": "pass"
+    },
+    {
+      "name": "owned-agent-waits-on-explicit-command",
+      "status": "pass"
+    },
+    {
+      "name": "natural-language-come-executes-after-local-model-selection",
+      "status": "pass"
+    },
+    {
+      "name": "empty-fixture-agent-released-with-owner-command",
+      "status": "pass"
+    }
+  ],
+  "guideInteraction": {
+    "playerPosition": {
+      "x": 27.50520465812035,
+      "y": 81,
+      "z": -3.239191443602218
+    },
+    "npcPosition": {
+      "x": 27.5,
+      "y": 81,
+      "z": -4.5
+    },
+    "distance": 1.2608192988497633
+  },
+  "agent": "CityAgent1",
+  "finishedAt": "2026-10-31T06:19:16.558Z"
+}

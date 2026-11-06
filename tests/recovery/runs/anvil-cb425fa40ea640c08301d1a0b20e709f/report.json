@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "scope": "Actual local Anvil dump/load into an isolated loopback process; no main-chain reset or public network",
+  "realMoneySpent": 0,
+  "mainChainModified": false,
+  "checks": [
+    "main local chain and a successful prior labor-claim receipt identified; dump captured at an unchanged head",
+    "actual anvil_loadState preserves every captured account balance, nonce, contract bytecode and storage slot",
+    "receipt, transaction, block, genesis and historical-state availability explicitly compared; missing history requires reconciliation"
+  ],
+  "accountCount": 32,
+  "history": {
+    "knownReceiptPreserved": true,
+    "knownTransactionPreserved": true,
+    "knownBlockPreserved": true,
+    "genesisIdentityPreserved": true,
+    "historicalStatePreserved": false,
+    "historicalStatesIncludedInDump": false
+  },
+  "requiresReconciliation": true,
+  "archiveSha256": "430be2b467029220064956fec8301cd5344c96425cc14928b49dbd76a13bfcf8",
+  "backupDirectory": ".local/ops/chain-backups/cb425fa40ea640c08301d1a0b20e709f",
+  "knownTransactionHash": "0xfad4a81c7798e4e73a8fbea470ff1b2b1ee16f7351c8472a0c5b4f1936da0f12",
+  "sourceReport": "evidence/runs/local-e2e/aa81923f-9ee5-4686-9548-ad62971047f5/report.json",
+  "mainHeadUnchanged": true,
+  "isolatedProcessStopped": true,
+  "finishedAt": "2026-10-30T07:16:42.143175+00:00",
+  "sources": {
+    "ops/chain_recovery.py": "933839969d8e89ea0d81b6a0ad1eb399a56f79d5bfdb0124785d1c060980720f",
+    "scripts/local_host.py": "fe8e867a2f7e5077ea0154f907f69ffb33c9d8c516105747782bd606143ff65a"
+  }
+}

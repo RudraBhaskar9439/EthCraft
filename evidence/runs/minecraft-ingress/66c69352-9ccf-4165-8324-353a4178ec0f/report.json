@@ -1,0 +1,19 @@
+{
+  "runId": "66c69352-9ccf-4165-8324-353a4178ec0f",
+  "startedAt": "2026-10-31T13:36:10.534Z",
+  "status": "fail",
+  "scope": "Actual ingress status and denial only; no Discord-profile login or independent-human claim",
+  "target": {
+    "host": "domination-uid.tun.ply.gg",
+    "address": "147.185.221.20",
+    "port": 31628
+  },
+  "checks": [],
+  "process": {
+    "pid": 45617,
+    "bind": "127.0.0.1:8796",
+    "privateUpstream": "127.0.0.1:25596"
+  },
+  "error": "read ECONNRESET",
+  "finishedAt": "2026-10-31T13:36:11.874Z"
+}

@@ -1,0 +1,12 @@
+{
+  "status": "fail",
+  "observedAt": "2026-10-31T18:35:45.947Z",
+  "scope": "Actual installed native plugin, confirmed ownership projection, Discord controls and pre-upgrade Game Coin balance readback; zero wallet signatures, grants, user inventory changes or independent-human trades",
+  "checks": [
+    "installed native escrow has no unresolved inventory effect; four estate rows apply fresh confirmed chain source pins",
+    "installed application and both protection dependencies match the actual tested release hashes"
+  ],
+  "pluginSha256": "c9a108690fad15f8d15702b6d6c67468dab438c6ba5d6837fbf0938b28c02a69",
+  "originalGameAccountsUnchanged": 7,
+  "error": "ERR_ASSERTION"
+}

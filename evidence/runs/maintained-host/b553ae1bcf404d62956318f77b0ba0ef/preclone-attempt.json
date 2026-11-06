@@ -1,0 +1,10 @@
+{
+  "status": "fail",
+  "scope": "first pre-clone managed-host invocation",
+  "error": "container_inspection_failed",
+  "cause": "Docker returned lowercase no such object; exact missing-object comparison normalized before retry",
+  "cloneCreated": false,
+  "serverStarted": false,
+  "sourceWorldModified": false,
+  "recordedAt": "2026-10-30T09:05:25.809044+00:00"
+}

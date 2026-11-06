@@ -1,0 +1,17 @@
+{
+  "schema": "agentcity.p2.construction-client.v1",
+  "phase": "initial",
+  "status": "fail",
+  "started_at": "2026-10-29T17:42:23.316Z",
+  "independent_humans": 0,
+  "scripted_roles": true,
+  "checks": [],
+  "live0GVerified": false,
+  "spending": 0,
+  "error": {
+    "name": "Error",
+    "message": "WorldBuilder_SPAWN_TIMEOUT",
+    "stack": "Error: WorldBuilder_SPAWN_TIMEOUT\n    at Timeout.<anonymous> (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/evidence/runs/p2-construction/agentcity-construction-d8b84b0d/source/backend/src/bot/minecraft-adapter.cjs:15:37)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"
+  },
+  "finished_at": "2026-10-29T17:42:38.888Z"
+}

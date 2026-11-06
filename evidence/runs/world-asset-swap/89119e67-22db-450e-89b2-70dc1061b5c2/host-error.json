@@ -1,0 +1,7 @@
+{
+  "status": "fail",
+  "scope": "Windows readonly preflight wrapper; actual RPC binding/health reads completed, zero public transactions",
+  "error": "EPERM: operation not permitted, fsync",
+  "diagnosis": "The shared durable checkpoint helper requires Unix directory fsync. Its Windows evidence write failed after the RPC preflight had printed ready. Operator execution was subsequently run in WSL and passed; the Windows command itself is not recorded as a successful run.",
+  "publicTransactions": 0
+}

@@ -1,0 +1,49 @@
+{
+  "purpose": "isolated physical compatibility spike only",
+  "started_at": "2026-10-29T12:50:49.920177+00:00",
+  "versions": {
+    "purpose": "isolated_non_token_fixture",
+    "bind": "127.0.0.1",
+    "port": 25576,
+    "minecraft": "1.21.11",
+    "paper": {
+      "build": 132,
+      "support": "UNSUPPORTED",
+      "support_ended": "2026-06-15",
+      "sha256": "5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba",
+      "url": "https://fill-data.papermc.io/v1/objects/5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba/paper-1.21.11-132.jar"
+    },
+    "java_image": "eclipse-temurin@sha256:5d90b26c0784ccf55af55f97cbcf7f3969c66a06299c93bdc72649219942a48f",
+    "mineflayer": "4.39.0",
+    "pathfinder": "2.4.5",
+    "authentication": "offline_fixture_only",
+    "independent_human_participants": 0,
+    "token_integration": false,
+    "production_supported": false
+  },
+  "independent_humans": 0,
+  "full_phase_gate_passed": false,
+  "steps": [
+    {
+      "step": "bootstrap",
+      "status": "pass",
+      "container": "71a4554880f1797cd98e3c0420cf42bfb5eca2a5ae143b6249504887aa7d9fbd"
+    },
+    {
+      "step": "compile_fixture_plugin",
+      "status": "pass"
+    },
+    {
+      "step": "fixture",
+      "status": "pass",
+      "container": "2fec5304be069744cfbdd5bcbd6645d469a5552d0466eb99da4cede8ecdedbe1"
+    }
+  ],
+  "java_runtime": "openjdk version \"21.0.12.1\" 2026-08-18 LTS\nOpenJDK Runtime Environment Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS)\nOpenJDK 64-Bit Server VM Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS, mixed mode, sharing)",
+  "node_runtime": "v26.3.1",
+  "actual_paper_sha256": "5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba",
+  "fixture_plugin_sha256": "d1554c96c97f8d4e93731ba18b58c46e38b10a56584ab4fc558e26e1f16871a4",
+  "status": "fail",
+  "error": "node failed (1): node:internal/modules/cjs/loader:1522\n  throw err;\n  ^\n\nError: Cannot find module '/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/probe.cjs'\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1519:15)\n    at wrapResolveFilename (node:internal/modules/cjs/loader:1073:27)\n    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1097:10)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1124:12)\n    at Module._load (node:internal/modules/cjs/loader:1296:5)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\n    at node:internal/main/run_main_module:33:47 {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: []\n}\n\nNode.js v26.3.1\n",
+  "finished_at": "2026-10-29T12:51:22.758308+00:00"
+}

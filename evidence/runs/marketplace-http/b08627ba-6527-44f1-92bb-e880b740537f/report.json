@@ -1,0 +1,34 @@
+{
+  "runId": "b08627ba-6527-44f1-92bb-e880b740537f",
+  "scope": "Actual loopback HTTP/static delivery and read-only application state, no browser rendering, signatures or financial actions.",
+  "status": "pass",
+  "publicTransactions": 0,
+  "walletSignatures": 0,
+  "browserVerification": false,
+  "recordedAt": "2026-11-05T15:59:35.209814+00:00",
+  "checks": [
+    "Marketplace HTML serves without loan controls",
+    "Authenticated read-only state returns current marketplace deployment and price-reference status",
+    "Lender actor, loan records and legacy bank address are not exposed in active state"
+  ],
+  "deployment": {
+    "chainId": 1301,
+    "deploymentId": "0x3f7fc51e18c3bb704db3ed4a96dccee0457a898cea3b540c460571b3c5790b61",
+    "registry": "0xf3037a6d2b68ee5832f53d9ff0bf22c22031af81",
+    "router": "0x6d00ad99e68508cd4cae4fe93eab8b03af8efcaf",
+    "hook": "0x6faf5918c8fd0af9716d300ce8f7e9310cc11fc0",
+    "workEscrow": "0x33f627279ffb9e87253a5635fa76da748a76d050",
+    "mockUsdc": "0x9caa79a2b1e4420e45f0cf3bd47a90770136b3a4",
+    "disclosure": "New laptop namespace. Operator test wallets; no real USD backing or independent-human qualification."
+  },
+  "actorCount": 4,
+  "priceProtection": {
+    "ready": false,
+    "meanTick": 0,
+    "anchorTimestamp": 0,
+    "age": 0,
+    "feePips": 3000,
+    "usdcPerCity": null,
+    "message": "Trading needs a mature funded reference. Record a pool observation and allow at least five minutes of sufficient liquidity; a long idle period requires warming the reference again."
+  }
+}

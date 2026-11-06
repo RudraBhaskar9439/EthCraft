@@ -1,0 +1,20 @@
+{
+  "status": "fail",
+  "scope": "Actual 4x4 shelter added to the retained TaskTester task plot with real source materials; no stock reset or independent-human claim",
+  "independentHumansVerified": 0,
+  "publicTransactions": 0,
+  "startedAt": "2026-10-31T07:25:52.159Z",
+  "checks": [
+    {
+      "name": "retained-platform-and-real-existing-material-bill-observed",
+      "status": "pass",
+      "preexistingBlocks": 4,
+      "requiredNewBlocks": 50,
+      "sourcePlanksBefore": 124
+    }
+  ],
+  "fixturePlayerInventoryBefore": [],
+  "error": "Timed out: 54 actual shelter blocks",
+  "finishedAt": "2026-10-31T07:34:07.038Z",
+  "lastWorldName": "minecraft:agentcity_play"
+}

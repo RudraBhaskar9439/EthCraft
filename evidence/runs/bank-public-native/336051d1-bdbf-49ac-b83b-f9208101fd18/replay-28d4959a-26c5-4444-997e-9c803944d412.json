@@ -1,0 +1,130 @@
+{
+  "replayId": "28d4959a-26c5-4444-997e-9c803944d412",
+  "startedAt": "2026-11-05T13:46:45.849Z",
+  "calls": [
+    {
+      "step": "borrow-1",
+      "request": {
+        "principalId": "144e8782-85d5-4ef4-989e-cb7a26040682",
+        "operationId": "5fe73fe1-ed84-4fd9-b852-497f55e5bca2",
+        "termsDigest": "32dab924e40d9804e36931682b90b10be099b915796a48342ef55e42d9a4b2b0"
+      },
+      "requestedAt": "2026-11-05T13:46:48.048Z",
+      "status": "pass",
+      "transactionHashes": [
+        "0x165466dc25911bd763d0bfbfb7bf441c0f013f6d71b6ee06db48a979b1a8c976",
+        "0xe82937d8ef72ecb8adac80b1ac8da780258a02bdcc7cb125c833f35b164852ef"
+      ],
+      "nativeDelivery": null
+    },
+    {
+      "step": "gem-checkout",
+      "request": {
+        "principalId": "144e8782-85d5-4ef4-989e-cb7a26040682",
+        "operationId": "f856587a-720b-4c69-aaad-bcba453bae7f",
+        "termsDigest": "b9387a5938f7bf75fc9b32b7b5d92a7c9ecaf534ff6ce77f2bbd8de079379320"
+      },
+      "requestedAt": "2026-11-05T13:47:05.630Z",
+      "status": "pass",
+      "transactionHashes": [
+        "0xc5e6cba6ba8188d1f158f8e1c7987f525df86d5e908f23c3da50bd121702f642",
+        "0xb544a1176284240228e17bc8b0fe0085bb0dcdd4dc760037a11af7f9316d033e"
+      ],
+      "nativeDelivery": null
+    },
+    {
+      "step": "redeem-purchased-sword",
+      "request": {
+        "principalId": "144e8782-85d5-4ef4-989e-cb7a26040682",
+        "operationId": "001a49c6-8505-4aa7-b25c-74710e2a1469",
+        "termsDigest": "6f8e0e21edbb923f8f67de206e31cb2921584847594a84f5870ecede1684eb19"
+      },
+      "requestedAt": "2026-11-05T13:47:19.094Z",
+      "status": "pass",
+      "transactionHashes": [
+        "0x2ca260afd956dd361aba845cf66c4cbdc17c719f37edf4ff92db1b039e70d938",
+        "0xa4c8c07abb393d0785a00fd1ce7ce84aa2c886fad2c4e40bb7fbfa28965f9b09"
+      ],
+      "nativeDelivery": {
+        "operationId": "5ccbf8cd-17f9-5a10-8c5d-7ec0be09021d",
+        "mailboxId": "658fa11d-3eb5-4694-aa9f-5d9aee618faa",
+        "ownerId": "144e8782-85d5-4ef4-989e-cb7a26040682",
+        "playerId": "23d62fe0-1c3f-311e-be1b-8e39156c501b",
+        "connectionId": "74e7e2f6-cf95-46cb-84d7-1e9a65c56dcc",
+        "listingId": "658fa11d-3eb5-4694-aa9f-5d9aee618faa",
+        "custodyId": "658fa11d-3eb5-4694-aa9f-5d9aee618faa",
+        "fingerprint": "d41e0d6ac1cd88199dc49e6882ddd3cb117339da474297237e23de07ce4f828a",
+        "item": "minecraft:diamond_sword",
+        "count": 1,
+        "completedAtMs": 1793884913024,
+        "claimed": true
+      }
+    },
+    {
+      "step": "redeem-auctioned-original",
+      "request": {
+        "principalId": "fe40d57b-89a0-4eb4-922a-84d320c27609",
+        "operationId": "089e0dfd-f982-4bb5-b543-e093a0db87b0",
+        "termsDigest": "4017ab6ad86eca147e336b83372563dff6feffbee0e77ed9b890f3178e8503f8"
+      },
+      "requestedAt": "2026-11-05T13:47:26.563Z",
+      "status": "pass",
+      "transactionHashes": [
+        "0x1311e66e1ce95d6a2cf8dc65e669783d2a66e88c553955e3c0b858a8942e6a4f",
+        "0x9a644f7fc36d1fbf129f72a3c61e0ed489f4b70287afb63fc0a4b4c60654da29"
+      ],
+      "nativeDelivery": {
+        "operationId": "731baca7-5df5-6ec1-6b35-13e5cd493dc8",
+        "mailboxId": "a59e0fd4-f556-4b93-a8d8-db52e2d7525a",
+        "ownerId": "fe40d57b-89a0-4eb4-922a-84d320c27609",
+        "playerId": "cc98e9a3-0b21-30a7-9509-817076d54d80",
+        "connectionId": "95bf2426-804e-4e69-9451-49f05a078500",
+        "listingId": "a59e0fd4-f556-4b93-a8d8-db52e2d7525a",
+        "custodyId": "a59e0fd4-f556-4b93-a8d8-db52e2d7525a",
+        "fingerprint": "37a461141daaef09a37a94b794eec115cfe05a5998c08476a47fe0a1266d617c",
+        "item": "minecraft:diamond_sword",
+        "count": 1,
+        "completedAtMs": 1793885874492,
+        "claimed": true
+      }
+    }
+  ],
+  "before": {
+    "borrower": {
+      "nonce": 19,
+      "tokens": {
+        "city": "2000000000000000000",
+        "usdc": "6989000",
+        "gem": "92948827839179742769"
+      }
+    },
+    "bidder": {
+      "nonce": 4,
+      "tokens": {
+        "city": "0",
+        "usdc": "98000000",
+        "gem": "0"
+      }
+    }
+  },
+  "after": {
+    "borrower": {
+      "nonce": 19,
+      "tokens": {
+        "city": "2000000000000000000",
+        "usdc": "6989000",
+        "gem": "92948827839179742769"
+      }
+    },
+    "bidder": {
+      "nonce": 4,
+      "tokens": {
+        "city": "0",
+        "usdc": "98000000",
+        "gem": "0"
+      }
+    }
+  },
+  "status": "pass",
+  "completedAt": "2026-11-05T13:47:36.324Z"
+}

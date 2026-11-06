@@ -1,0 +1,140 @@
+{
+  "status": "pass",
+  "mode": "PUBLIC_TESTNET_SYNTHETIC_ONLY",
+  "realMoneySpent": 0,
+  "economyBoundary": "Separate synthetic contract demonstration; no token effects in Minecraft",
+  "runId": "6b90f49e-8a39-4fae-9b06-b959c0a70cdd",
+  "recoveredFrom": {
+    "path": "/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/evidence/runs/public-testnet-e2e/6b90f49e-8a39-4fae-9b06-b959c0a70cdd/report.json",
+    "sha256": "93f6a938b04283547f347766c7cd7c15cda747f51fb6ebfa4ee77c0a7320e49b"
+  },
+  "inference": {
+    "mode": "ollama_local",
+    "executed": false,
+    "live0GVerified": false,
+    "billingVerified": false,
+    "model": "qwen3:1.7b",
+    "responseId": "2026-10-30T07:47:59.933649Z",
+    "generatedTokens": 13,
+    "paidCalls": 0
+  },
+  "inspectionSource": "local_synthetic_world",
+  "settlement": {
+    "status": "settled",
+    "acceptanceOperationId": null,
+    "claimOperationId": "3f723d17-f578-492f-98de-552d6c585a08",
+    "claimed": "0",
+    "replay": true,
+    "claimTransactionHash": "0xd5b3e67c6abb5104c7eea94c023c48518a94483b25d62e95f64d034e88257aef"
+  },
+  "deliveryReceipt": "0x55f8fa6a1515f10f71047964c0e09a6776f8d792a591dc8fe99202a7f6ecfd6e",
+  "phases": [
+    {
+      "phase": "P4",
+      "detail": "real public signatures, durable wallet links and live Arkiv profile/job/offer discovery",
+      "status": "pass"
+    },
+    {
+      "phase": "P5",
+      "detail": "actual CRED/KIT bytecode and item-level synthetic backing verified",
+      "status": "pass"
+    },
+    {
+      "phase": "P6",
+      "detail": "the original signed public purchase is canonically confirmed and its claim retained",
+      "status": "pass"
+    },
+    {
+      "phase": "P7",
+      "detail": "one canonical purchase claim supplies the synthetic destination exactly once",
+      "status": "pass"
+    },
+    {
+      "phase": "P3",
+      "detail": "actual local Ollama decision executes only through fresh authority and a fenced receiver",
+      "status": "pass"
+    },
+    {
+      "phase": "P8",
+      "detail": "protected synthetic inspection, requester acceptance and one fixed payment; replay pays zero",
+      "status": "pass"
+    }
+  ],
+  "arkiv": {
+    "status": "pass",
+    "chainId": 7738577,
+    "namespace": "agentcity-contract-demo-0xd5ac13f9d73b0505325dd93a84cdde09c55a889ddfb965ae5f7987b1c41b4cbd",
+    "serverId": "0x59579c2e4afc825e918b444d42ce0ea96b1f4361a962d5d850c63e071d79fd58",
+    "jobId": "0xd5ac13f9d73b0505325dd93a84cdde09c55a889ddfb965ae5f7987b1c41b4cbd",
+    "agreementHash": "0x670ee93861387dfe2c776ac5a452b1eea4e7efff1aedd0e10277f0b3a7957582",
+    "blueprintHash": "0xc8704765464a574ec4c797ad78d5294cc167007f66a0abfebd742e0b06711c49",
+    "entities": {
+      "profile": "0xa31c0988b7c47cf21278b7889bd087adfd84293e3baecd74e61d546db030ba9a",
+      "job": "0x162487a8c4007c66abc002b5dfbaf31effcba7c767e99047016f31abb79a94f0",
+      "offer": "0xeeb53a0dda1e07006bc61b1116a759aac48bcb2bdaf14637a2775c4bd7a5b60a"
+    },
+    "transactions": [
+      "0xf6d8f7ce743c6af7aeedead27cf94ad929cae8765485345376bd1bd267f415c2",
+      "0x4bf7edfaa83951d9281e85c8d7774dfcb10ece989889f44c7e076756d3ed4949",
+      "0xef25194c3dc1d852a9fa2c3352a3d2f7137cd4f2935c7934d02f89d4c4f496c3"
+    ],
+    "checks": [
+      "official SDK public profile, job and offer publication",
+      "actual Arkiv owner and signed agreement binding",
+      "same publication reuses its retained entity"
+    ],
+    "independentHumans": 0,
+    "scope": "Agent-controlled test wallets; independent synthetic contract demonstration"
+  },
+  "jobId": "f0145b1c-bd03-4cb8-bd4e-030bfcfb8c1f",
+  "agreementHash": "0x670ee93861387dfe2c776ac5a452b1eea4e7efff1aedd0e10277f0b3a7957582",
+  "schema": "public_testnet_1301",
+  "sources": {
+    "backend/src/workflow/recover-public-job.mjs": "cd9ce12c767b77e657291fe35e507f65cfd7e63277474981c104f44d78e4e013",
+    "backend/src/workflow/complete-job.mjs": "be3b05dcbbee1a3c762c6fbcc3ca6dbfeb0ac3a6311f015cf48ac4cc965ec607",
+    "backend/src/workflow/repository.mjs": "e4a8b4e1428fe773e54bedc69c2f3a56ce15d2f2a1d18713ff1a08162f72775e",
+    "backend/src/chain/durable-evm.mjs": "4bed8c439f463b52f64b848456662d7fec088a77327b46b42ea0f83120494cf9",
+    "backend/src/chain/public-testnet.mjs": "e47d63acfee6dd8f8e61235058213cc283514c6e9c83089fbe39ade1cc220691",
+    "backend/src/delivery/evm-claims.mjs": "a7991c4e1e7ce15cc8b0440f60cbc5ee2657beb7689cf65479a86f1df449c816",
+    "backend/src/delivery/synthetic-inventory.mjs": "410c403662a5a90a30874f481d3244050ab94a839b6decd1905e74c1080321b5",
+    "backend/src/procurement/service.mjs": "73bb0c3a56d9023005cf7473d370ac05d2870f6dbe783d0b10aa67210f1cc92d",
+    "backend/src/inspection/settlement-service.mjs": "769ccda04405a79294fec760e5109d267e90194b4e058cb91049cc4167c69d7f",
+    "backend/src/inspection/coordinator.mjs": "ac8e741336cd525bdc58c6f07684d11b26fa1db5f6f1e59496ca86a29f0e5891",
+    "backend/src/inspection/synthetic-world.mjs": "7b71499e59b230be13f7c7cbbb337236e75542f0eef80c285914038f6958ad0f",
+    "backend/src/inference/proposal.mjs": "1747c94923e3cced34a84b6dd606c5899f9763c3315f56adeadaf4720d07248b",
+    "backend/src/inference/providers.mjs": "f220fca5300b1befa41819dd843089d6370ecb232e5896304f0c616a42b29df4",
+    "backend/package-lock.json": "02a2b075d16d16e767b5671a64a41936f17152d8c0538e10822c400fc9779c18",
+    ".local/public-testnet/deployment.json": "2aa443dbb49d6ecbd50a60ad9e9773f905a78e60aa491772c366e2a7ffcb35fd"
+  },
+  "settledAmount": "6000000000000000000",
+  "transactions": [
+    {
+      "operationId": "41aba63d-724f-47df-80f3-64d9cf53000e",
+      "functionName": "fund",
+      "hash": "0x38f35ede4c4fe8139aebd6d527a839b924bf12806136235ccda156d7241510c6",
+      "blockNumber": "66493954"
+    },
+    {
+      "operationId": "dfa72bf5-2341-4dd8-b141-7dfabaea28d9",
+      "functionName": "publish",
+      "hash": "0xe6bb71998993c72d7f9e9859a437b66f9799ad0bd1fbea4be603f9ece910ebb3",
+      "blockNumber": "66494017"
+    }
+  ],
+  "purchase": {
+    "operationId": "2b1bd654-7826-4c6e-afaf-e64856510eb7",
+    "transactionHash": "0x793c2fc51dfe91e61ab23dc211cecd8df5c162876fc6d8a2338cd1c8718bb3cc",
+    "claimId": "0x43a9ee37a17b9204239a184de53bfb9816711edfb3473163157beccfce99f420",
+    "spentCred": "1006025090301969036"
+  },
+  "newPurchases": 0,
+  "recoveryTransactions": 0,
+  "repeatedRecoveryTransactions": 0,
+  "repeatedPayment": "0",
+  "sourceIntegrityPassed": true,
+  "limits": [
+    "Actual public-testnet contracts and Arkiv; agent-controlled wallets and synthetic inventory/inspection.",
+    "Ollama replaces0G temporarily. Independent human acceptance and authenticated Minecraft access remain final checks."
+  ],
+  "finishedAt": "2026-10-30T07:50:42.928Z"
+}

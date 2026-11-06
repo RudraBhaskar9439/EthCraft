@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "scope": "Actual local Ollama interpretation only; no bot, game mutation, wallet or remote Discord interaction",
+  "request": "build a nice home and get some food",
+  "model": "qwen3:4b",
+  "sourceSha256": "38fb890b13a9b67db3e0257ab47e945abb67787b91a3c476d88a9a3f2c3e8b0b",
+  "result": {
+    "kind": "clarify",
+    "message": "I don't have food harvesting, farming, or cooking implemented. Can you specify which supported materials you want for the home? I can build a house with oak_planks, cobblestone, or stone_bricks.",
+    "steps": []
+  },
+  "elapsedMs": 1801
+}

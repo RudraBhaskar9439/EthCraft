@@ -1,0 +1,331 @@
+{
+  "status": "approved",
+  "release": "194ceb3bccea87d42548012e830d80a3bdfe3816",
+  "reviewer": "/root/p2_harness (requester-side AI engineering peer; not an independent human participant)",
+  "recordedAt": "2026-10-29T22:55:12.497642+00:00",
+  "approvalScope": "User-approved $0 local component track through P8 only. Canonical live P3-P8 gates are not passed by this approval.",
+  "canonicalLiveGateApproval": false,
+  "canonicalP3P8Passed": false,
+  "independentHumanVerified": false,
+  "verificationMethod": "Read-only final-release source/evidence binding and focused implementation review, following the earlier requester review. No new physical Minecraft run or broad edge-case suite was performed.",
+  "finalEndToEnd": {
+    "evidence": {
+      "path": "evidence/runs/local-e2e/84feb68e-2741-4814-8063-dcae9c62504a/report.json",
+      "sha256": "3237d4c92f90d5e1ed793279334724f9e309f8f6a8610f39685fa255193abbed"
+    },
+    "sourceCount": 41,
+    "allSourceHashesMatchRelease": true,
+    "sourceHashes": {
+      "backend/package-lock.json": "02a2b075d16d16e767b5671a64a41936f17152d8c0538e10822c400fc9779c18",
+      "backend/src/agreements/schema.sql": "3ad488a2ab0f50118c4600332ebc633463147d447480a3ee9b3f71bd82f224d3",
+      "backend/src/agreements/service.mjs": "5ced57d1715d6a17633a60bab31bd39f26a09b66e2860c43f5be757b6ec92a0e",
+      "backend/src/bot/checkpoint-store.cjs": "bd857c0b57ca4533c5bde3eb643b99500c35c98fd107b6ce865014c4702654e4",
+      "backend/src/bot/construction-worker.cjs": "4effac5a0100bb9a6c51461b5790e7e0848294304fb6398e849e3f20f2790297",
+      "backend/src/bot/minecraft-adapter.cjs": "3bd86142c1679cd68a7755a7357bbc12313f18ffcfc30f07bf958d6cde32413a",
+      "backend/src/chain/local-evm.mjs": "40bbe1b88dd201d4c80a9ca82859a154a5c2fba487c78b0018c2f43f518d02c7",
+      "backend/src/chain/schema.sql": "e0cb642738561e97465ca31ab609993768d79020bdbce941eafedb99b2f143e2",
+      "backend/src/delivery/evm-claims.mjs": "55490a12eca92a72ece640230b4673064a05030d80ba4254f3da9d331d108e99",
+      "backend/src/delivery/schema.sql": "e3a58800fc8f79b26f91cd16a271a172b1533b9cdd71e4cba72c76960ee9651f",
+      "backend/src/delivery/synthetic-inventory.mjs": "410c403662a5a90a30874f481d3244050ab94a839b6decd1905e74c1080321b5",
+      "backend/src/discovery/adapters.mjs": "eaa076926dc57ca82113a5348ad5263a2824707a48122cc932a23cb21ddf158b",
+      "backend/src/discovery/schema.sql": "115d4b2ab2a9b2d9b42eca37a5bdab18c9af554b78e64ef7265968790abbc6d5",
+      "backend/src/discovery/service.mjs": "c68399731807b1f18de261ba9c6a794931f99ebbda7204a86923b1b8d8148ae3",
+      "backend/src/identity/schema.sql": "fff60d418a0f689fc57a36eff3eec5a41c1ec6e4d06eb85505053ba4331352fd",
+      "backend/src/identity/service.mjs": "6257e8c9618d9bac4ede1a3f2c39beb5c0b2394286f80ad1ba7b6ece183b08db",
+      "backend/src/inference/decision-service.mjs": "edcb0f476a356b75d8f236309728def53621051f72ab63a60ae95b3cdd5bfdc4",
+      "backend/src/inference/proposal.mjs": "cc7f6f1aa0e11460e5b39bebeaa3aa04b4d3570364dcfacdfa740f40a77720c1",
+      "backend/src/inspection/coordinator.mjs": "ac8e741336cd525bdc58c6f07684d11b26fa1db5f6f1e59496ca86a29f0e5891",
+      "backend/src/inspection/schema.sql": "6879658358e272b81c4a252796b9e6b993d2ccc3d503e5054613317ee3c73970",
+      "backend/src/inspection/settlement-service.mjs": "96eb1fdf34e7444826f527b588f501fcc88d04ba668e6f4a1cf250d0bd13e40d",
+      "backend/src/inspection/synthetic-world.mjs": "7b71499e59b230be13f7c7cbbb337236e75542f0eef80c285914038f6958ad0f",
+      "backend/src/procurement/README.md": "8cb4130152bd4c3aadfb370a0a2bab4331d36fc8c940f18ec60d746196c0133a",
+      "backend/src/procurement/schema.sql": "b3f31e03be327662ade8d6af9ea96dbf8cac394ccaa01103d30463589fc4b7bd",
+      "backend/src/procurement/service.mjs": "05d36442476355f3a47d28eb768191943408413ec75b258584ef7e5c15e6a932",
+      "backend/src/server.mjs": "4784962710fad0157ca6983e07f761e21fc796beac592e22b7400d636be624a2",
+      "backend/src/storage/postgres.mjs": "5271a083481834728f8aacf948747ef5f2eff438c5d93b52d3fb77e5426f5ae9",
+      "backend/src/workflow/repository.mjs": "038d16c47370e463ff5b3bf2f09f5a9812632c3ec7456284006f2ac50cd4c521",
+      "backend/src/workflow/schema.sql": "b5494fc7b710748d05b2ea2ea30ae5745f75f98df817da43819f2704cce690ab",
+      "contracts/abi/AgentCityHook.json": "27ebd6cde16737992f959e872794a6779230ae2a443ca4694addfbffbfb539b1",
+      "contracts/abi/CreditToken.json": "4c1cfff1f2d34be7d07b091af2d4f897fc8d576d8d520e8cb2a68d22acecb93b",
+      "contracts/abi/JobEscrow.json": "b3ed63e74eeeb1e0d3ebda52366300ea6a9c244a470f2ff2f34795200e5387da",
+      "contracts/abi/KitCustody.json": "fc9b3188eb9ff8fc2ff48ef6f2dbbcc690256eac17ee6e40d291a2757166bca3",
+      "contracts/abi/Procurement.json": "97f4de7ae46c075f2b8717654be4924f6712a1e24acb16838908b4ec96b0167d",
+      "contracts/abi/StateRegistry.json": "d7605d23ef2919809e5c30e61a436c67b545910ca0d1f8ce0f0913760c335dd5",
+      "contracts/local-deployment.json": "1297830f72103370700b8fd99b3adcbec5a72b346bee59705df8c0b8f28f42c3",
+      "contracts/package-lock.json": "80312c2b2b961d9094131a38097f043c67d14731a186ba7d91894cea527ebb8c",
+      "fixtures/blueprints/calculator-v1.json": "c8704765464a574ec4c797ad78d5294cc167007f66a0abfebd742e0b06711c49",
+      "fixtures/construction/access-v1.json": "8b08d81a1830d65a9bc404fd1443c95b4dcb94e6665da779d61acfe446d1d2c3",
+      "fixtures/test-manifests/calculator-v1.json": "cfb5986bf2f5bfea89075ffee8e38eb1652f3fad15503935d1f134a776d309cf",
+      "scripts/local_demo.mjs": "6a9223f9ba015390c8eadf9bb613e0887c0ec480e6367d2fb86ee28a05b73878"
+    },
+    "sixLocalPhaseFlowsPassed": true,
+    "phases": [
+      {
+        "phase": "P4",
+        "detail": "real local signatures, durable wallet links and one canonical funded agreement",
+        "status": "pass"
+      },
+      {
+        "phase": "P5",
+        "detail": "actual local CRED/KIT bytecode and item-level synthetic backing verified",
+        "status": "pass"
+      },
+      {
+        "phase": "P6",
+        "detail": "fresh state and the correctly attached hook permit a real v4 exact-output swap",
+        "status": "pass"
+      },
+      {
+        "phase": "P7",
+        "detail": "bounded purchase, atomic burn/claim and one durable six-material delivery with replay",
+        "status": "pass"
+      },
+      {
+        "phase": "P3",
+        "detail": "scripted proposal passes fresh policy, durable action budget and fenced receiving execution",
+        "status": "pass"
+      },
+      {
+        "phase": "P8",
+        "detail": "typed inspection, retained pass lock, explicit requester acceptance and exact one-time labor claim",
+        "status": "pass"
+      }
+    ],
+    "realMoneySpent": 0,
+    "mode": "LOCAL_SYNTHETIC_ONLY",
+    "inspectionSource": "local_synthetic_world",
+    "deploymentVersion": 2,
+    "distinctFixtureRoles": {
+      "admin": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+      "issuer": "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+      "warehouse": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "publisher": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "attestor": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+      "requester": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+      "builder": "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc"
+    }
+  },
+  "contractVerification": {
+    "summary": {
+      "path": "evidence/runs/local-p5-p8-v2/contract-checks.json",
+      "sha256": "1f8690f529d7de7410cf782356a8233bbb58087a2f826f56da73237a56bd74e1"
+    },
+    "forgeEvidence": {
+      "path": "evidence/runs/local-p5-p8-v2/forge-tests.json",
+      "sha256": "9d4e7bee33d4ce05f8cb231ffe06471d6d09b22753091317f3b2cbb2beb19f7a"
+    },
+    "casesPassed": 12,
+    "casesFailed": 0,
+    "sevenDistinctRolesVerified": true,
+    "sourceBindings": [
+      {
+        "path": "contracts/src/CreditToken.sol",
+        "recordedSha256": "4300ac9c16b03b268c67a5e3d91ea62d70bd5ffeb9ef8da9cd2caf4a4aebd202",
+        "releaseSha256": "4300ac9c16b03b268c67a5e3d91ea62d70bd5ffeb9ef8da9cd2caf4a4aebd202",
+        "matches": true
+      },
+      {
+        "path": "contracts/src/KitCustody.sol",
+        "recordedSha256": "6c74e42b64650f9ad53fe76fcf17a2312dbae42cf71bdf295ef71734c7cc3156",
+        "releaseSha256": "6c74e42b64650f9ad53fe76fcf17a2312dbae42cf71bdf295ef71734c7cc3156",
+        "matches": true
+      },
+      {
+        "path": "contracts/src/StateRegistry.sol",
+        "recordedSha256": "f0b37057da5e219b7ab85d2dd78657577d17d320749fb28af2f202cbaa19aad3",
+        "releaseSha256": "f0b37057da5e219b7ab85d2dd78657577d17d320749fb28af2f202cbaa19aad3",
+        "matches": true
+      },
+      {
+        "path": "contracts/src/AgentCityHook.sol",
+        "recordedSha256": "3ce6700d7966aebdf7bca19d8a3fe68ab320acc8fbc8c614051b686622b1ce28",
+        "releaseSha256": "3ce6700d7966aebdf7bca19d8a3fe68ab320acc8fbc8c614051b686622b1ce28",
+        "matches": true
+      },
+      {
+        "path": "contracts/src/Procurement.sol",
+        "recordedSha256": "c2790116a21cd710ccd512dbbb1e3a597356644211edcccd055685938ff18781",
+        "releaseSha256": "c2790116a21cd710ccd512dbbb1e3a597356644211edcccd055685938ff18781",
+        "matches": true
+      },
+      {
+        "path": "contracts/src/JobEscrow.sol",
+        "recordedSha256": "f3446af01d021c831ff784aaff2f6ed1a68175cc8ca2923164fc3ee7dab37804",
+        "releaseSha256": "f3446af01d021c831ff784aaff2f6ed1a68175cc8ca2923164fc3ee7dab37804",
+        "matches": true
+      },
+      {
+        "path": "contracts/script/LocalDeploy.s.sol",
+        "recordedSha256": "10e8b6617fe4f9aea44f7f8b940b57b1d77d39c520b8103e9fda54f11a2c6430",
+        "releaseSha256": "10e8b6617fe4f9aea44f7f8b940b57b1d77d39c520b8103e9fda54f11a2c6430",
+        "matches": true
+      },
+      {
+        "path": "tests/contracts/AgentCity.t.sol",
+        "recordedSha256": "a591c4478c41b175ac33635c90235b6a8544b7b8d73eb808e5cf7a29116409a0",
+        "releaseSha256": "a591c4478c41b175ac33635c90235b6a8544b7b8d73eb808e5cf7a29116409a0",
+        "matches": true
+      },
+      {
+        "path": "scripts/local_anvil.py",
+        "recordedSha256": "a9afbc61451d8b4c1c69ac5bcc964869a81b77e077d99cbbf4e1dbb7cee5ae27",
+        "releaseSha256": "ed37c865592e592051a7ac98bd7150a85ae8806b2fec066973e13d0b7049449a",
+        "matches": false
+      },
+      {
+        "path": "scripts/local_verify_contract_deployment.mjs",
+        "recordedSha256": "433f60b53f0665f878c15d0d8425b4958284979c7c93e532a4a9cfe2cb9a6174",
+        "releaseSha256": "e691c1613cb77671654afbe5e0ca2051b8b6e4f9c9ccb6422fa1057ede4df588",
+        "matches": false
+      }
+    ],
+    "qualification": "The Solidity, deployment-script and contract-test hashes match this release. Two later setup/verification script edits differ from hashes in the v2 contract-check report: scripts/local_anvil.py and scripts/local_verify_contract_deployment.mjs. Their current paths were inspected; do not describe those legacy source hashes as current or the current fresh-bootstrap path as fully executed. The final six-phase runtime report separately binds its 41 sources to this release."
+  },
+  "componentChecks": [
+    {
+      "name": "identity",
+      "passed": 6,
+      "failed": 0,
+      "evidence": {
+        "path": "evidence/runs/local-p4/identity-0e3b2abf-e78b-45db-a932-e6b42b2dd0ba/report.json",
+        "sha256": "cbe5e9deed273c7764e4ad1f0338732df489072a6cdb247e891753c3f6ebf4a6"
+      }
+    },
+    {
+      "name": "agreements",
+      "passed": 6,
+      "failed": 0,
+      "evidence": {
+        "path": "evidence/runs/local-p4/agreements-d9c09492-1902-4f8b-bb63-51582ec3fd41/report.json",
+        "sha256": "e3ad9f0693ceca0303b014a474bf4c9adce35f8f924c03272f313e4106fe775b"
+      }
+    },
+    {
+      "name": "discovery",
+      "passed": 6,
+      "failed": 0,
+      "evidence": {
+        "path": "evidence/runs/local-p4/discovery-254d9187-8790-4fa1-9eb7-b809a1cccec3/report.json",
+        "sha256": "94c09bd712189b7a482f235a8a2046f4a356bb27768c2a31582941976d25fbf0"
+      }
+    },
+    {
+      "name": "procurement",
+      "passed": 5,
+      "failed": 0,
+      "evidence": {
+        "path": "evidence/runs/local-procurement/procurement-efd2563d-e0ec-4190-8349-aa77c754f8ea/report.json",
+        "sha256": "0ffc980a63de1d70e8fc57a5a4da8dc56b8f7e1015ec613248eb469e35948432"
+      }
+    },
+    {
+      "name": "procurement-authorization",
+      "passed": 3,
+      "failed": 0,
+      "evidence": {
+        "path": "evidence/runs/local-procurement/authorization-bc3a19fe-f28e-4e7a-9b02-b5b19c5de4f3/report.json",
+        "sha256": "bacc79f4547c5872757868eb12249422faf3c1d5358ff4c6f7963403d6db4560"
+      }
+    },
+    {
+      "name": "workflow",
+      "passed": 6,
+      "failed": 0,
+      "evidence": {
+        "path": "evidence/runs/local-workflow/614d08a0-1130-40cc-b522-a087a5513747/report.json",
+        "sha256": "4f1814da8bd2e6bbcf47c53f757d9c49696b4994b1291caf3e0f1b524abe9c39"
+      }
+    },
+    {
+      "name": "settlement-locks",
+      "passed": 3,
+      "failed": 0,
+      "evidence": {
+        "path": "evidence/runs/local-settlement/f13bc146-d5f0-47b4-abb9-2923af8969bb/report.json",
+        "sha256": "d8efd454e363ef01c834ef6af61345db12aad4014d70dcb4bf24d6aa7ccdd290"
+      }
+    },
+    {
+      "name": "console",
+      "passed": 4,
+      "failed": 0,
+      "evidence": {
+        "path": "evidence/runs/local-console/a85bd46a-62f8-4a4d-bb61-1a1ca4b7c20f/report.json",
+        "sha256": "1a4365ad6ec5936b4e7c400c989a47e22cb887a28b254743a221cb7fcd4b4f55"
+      }
+    }
+  ],
+  "componentReportQualification": "Retain component reports with their actual run scope and provenance. Older procurement and same-job recovery evidence exercises the preserved v1 deployment. The final source-bound role-separated v2 flow establishes the current combined runtime path; older reports do not prove every component refusal was rerun against v2.",
+  "sameJobRecovery": {
+    "evidence": {
+      "path": "evidence/runs/local-e2e/resume-178f3176-8e3d-459e-a359-77c8529a9954/report.json",
+      "sha256": "297488ae4fb79e969239835558c08bcdff7e9a078f4934c0ae01961ee474a551"
+    },
+    "newPurchases": 0,
+    "extraClaimOnReplay": "0",
+    "scope": "Preserved earlier v1 job; no second material purchase or labor payment. Final v2 E2E separately asserts one-time settlement replay."
+  },
+  "resolvedReviewFinding": {
+    "id": "AC-LOCAL-REVIEW-001",
+    "status": "resolved",
+    "review": "Unknown acceptance remains locked. Canonically reverted acceptance may be cleared without unlocking a usable pass; expiry permits release after reconciliation. The three PostgreSQL lock checks use an explicitly scripted canonical-outcome verifier."
+  },
+  "openProductFindingsWithinFocusedScope": [],
+  "bootstrapReview": {
+    "currentSetupSources": {
+      "scripts/local_database.py": "8c256af8f0d29cdec937a47051975371834b6b92187b465cac44f6aeb5177697",
+      "scripts/local_arkiv.py": "38bf23a522e5a1fe004a902b2f1e73a90dd7cc99269e590ad6898ecd80e88108",
+      "scripts/local_anvil.py": "ed37c865592e592051a7ac98bd7150a85ae8806b2fec066973e13d0b7049449a",
+      "scripts/local_verify_contract_deployment.mjs": "e691c1613cb77671654afbe5e0ca2051b8b6e4f9c9ccb6422fa1057ede4df588"
+    },
+    "scope": "Current paths inspected. Existing owned service reuse was checked, including two same-container Arkiv reuses, exact owner/mount binding, loopback RPC chain/accounts and private environment-file permissions. Existing Anvil pointer/bytecode reuse is separately recorded. A completely fresh clone/node/bootstrap was not started by this review. No existing container, database or world was reset or removed.",
+    "fullyFreshStarted": false
+  },
+  "ancestorDependencyReview": {
+    "status": "approved-for-reviewed-evidence-reuse",
+    "anchor": "5adbc827d000f24424678586142ac6ce369431c2",
+    "boundRelease": "194ceb3bccea87d42548012e830d80a3bdfe3816",
+    "runtimeFilesCompared": 76,
+    "runtimeFilesChanged": [],
+    "retainedEvidenceFilesVerified": 50,
+    "evidenceMismatches": [],
+    "runtimeManifest": {
+      "path": "evidence/runs/local-review/requester-review-20261029T223321Z/ancestor-runtime-manifest.json",
+      "sha256": "c4043efbcf6938be0ddb2fc600a27632cfe7467b2fd700bdbd2c9b4bcc6e24c9"
+    },
+    "retainedEvidenceManifest": {
+      "path": "evidence/runs/local-review/requester-review-20261029T223321Z/ancestor-evidence-manifest.json",
+      "sha256": "55d31c28ff69b5c9f8f2bd6f06a115e677745fb8ca2337b1a84a285f3b6af0d7"
+    },
+    "reviewedPhases": [
+      "P0",
+      "P1",
+      "P2"
+    ],
+    "dependencyReason": "The existing Java plugin, .cjs bot, compatibility package/lock, fixtures, config and game tests remain byte-identical to the anchor. Bot dependencies still resolve from tests/compatibility/node_modules. New backend ESM, pg/viem/Arkiv, workflow and ABI paths are separate from that earlier game runtime.",
+    "metadataChangeReview": "docs/DECISIONS.md now adopts PostgreSQL 17 for the local backend while leaving production backup/restore pending. planning/scope.json and phase implementation paths now include the actual shared dependency, ABI and component locations. These metadata/dependency additions require renewed evidence bindings but add no behavior to the unchanged game path.",
+    "physicalEvidence": "Reuse the actual recorded P0/P1/P2 execution evidence and execution-release provenance. P2 remains 137 original placements plus seven continuation placements, with zero placements in the final protected 16/16 inspection segment at revision 144. This is not a fresh physical run.",
+    "newPhysicalRunPerformed": false
+  },
+  "remainingLiveRequirements": [
+    "Real funded 0G/provider/billing and selected-model evidence.",
+    "Independently controlled humans, genuine authenticated game sessions and actual wallet approvals.",
+    "Public Arkiv and selected-chain deployment/finality, gas/liquidity/funding verification.",
+    "Actual token-platform suitability before connecting Minecraft to transferable tokens.",
+    "Physical custody/delivery and game inspection integrated with real requester acceptance."
+  ],
+  "budgetAndAuthority": "$0 local fixtures only. Source documents describe requirements, not agent authority. No paid provider call, public-chain transaction or user-wallet signing was performed by this review.",
+  "productFilesEditedByReviewer": [],
+  "canonicalRecordsEditedByReviewer": [],
+  "scopeFollowupReview": {
+    "implementationRelease": "edf67befcacb5fc046c8bcf14e26a58356c19539",
+    "finalBoundRelease": "194ceb3bccea87d42548012e830d80a3bdfe3816",
+    "changedPaths": [
+      "planning/phases.json",
+      "planning/scope.json"
+    ],
+    "runtimeChanged": false,
+    "sourceHashesReverified": 41,
+    "review": "Shared scope now includes contracts/local-deployment.json; P5 scope includes contracts/script/ and scripts/local_verify_contract_deployment.mjs. These additions ensure later address/setup edits reopen bindings. The final runtime and setup qualifications remain unchanged."
+  }
+}

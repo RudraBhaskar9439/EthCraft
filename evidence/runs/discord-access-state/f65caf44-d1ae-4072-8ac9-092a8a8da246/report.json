@@ -1,0 +1,12 @@
+{
+  "status": "pass",
+  "scope": "Focused Java persisted-state parser regression and read-only actual failed hold; no server boot, clients or state migration",
+  "stdout": "PASS finite-decimal private state round-trip, duplicate/nonfinite refusal, command decimals still refused\nPASS actual retained private hold state parsed read-only without rewriting it\n",
+  "stderr": "",
+  "stateHashBefore": "490ff82f9c0154df15059da1b7b86b69ce3d9b44d802fb5050fde7c9edb182e4",
+  "stateHashAfter": "490ff82f9c0154df15059da1b7b86b69ce3d9b44d802fb5050fde7c9edb182e4",
+  "stateUnchanged": true,
+  "jarSha256": "c8161e45ef107c97b868deaf2bce686a0351cbb0ca44f96ed7482993992820e1",
+  "priorNativeStartupFailure": "playable_start_failed caused by integer-only reader rejecting persisted fractional Bukkit locations",
+  "commandJsonValidation": "integer-only StrictJson unchanged"
+}

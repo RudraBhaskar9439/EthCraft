@@ -1,0 +1,47 @@
+{
+  "scope": "User-approved local split route through Phase 8; Minecraft internal materials and separate synthetic contract demonstration. Original canonical live gates remain pending.",
+  "recordedOn": "2026-10-30",
+  "timezone": "Asia/Calcutta",
+  "realMoneyBudgetUsd": 0,
+  "postgres": {
+    "major": 17,
+    "image": "postgres@sha256:b0f9560a2de083e2cc7382e75f808c7381a32852a7ec49117deedb300e552b24",
+    "host": "127.0.0.1",
+    "port": 55432
+  },
+  "arkiv": {
+    "chainId": 1337,
+    "image": "ghcr.io/arkiv-network/arkiv-reth-dev@sha256:f10af16f18f9bcff7b5e809fc74d200867dc552619b05ee352257b542101ea13",
+    "rpc": "http://127.0.0.1:8557",
+    "publicNetwork": false
+  },
+  "settlement": {
+    "chainId": 31337,
+    "rpc": "http://127.0.0.1:8547",
+    "confirmations": 1,
+    "finalityScope": "Local fixture only; no public-chain finality claim.",
+    "deployment": "contracts/local-deployment.json"
+  },
+  "inference": {
+    "provider": "ollama",
+    "remoteCallsAllowedByDefault": false,
+    "live0GVerified": false,
+    "billingVerified": false,
+    "baseUrl": "http://127.0.0.1:11434/api",
+    "model": "qwen3:1.7b",
+    "temporaryUntil": "0G access becomes available",
+    "apiKeyRequired": false
+  },
+  "market": {
+    "halt": "both swap directions on stale or unhealthy state",
+    "lpWithdrawal": "available",
+    "feePips": 3000,
+    "localPolicyOnly": true
+  },
+  "fixtureBoundaries": [
+    "all participants are agent-controlled local fixtures",
+    "inventory, construction and inspection in the token flow are synthetic",
+    "Blockchain ownership, claims and payouts must not affect Minecraft gameplay",
+    "no real wallet keys or supplied API keys are needed by local tests"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "scope": "Isolated PostgreSQL retirement fixtures; no live accounts, inventory, chain or provider effects",
+  "checks": [],
+  "status": "fail",
+  "error": "inconsistent types deduced for parameter $1",
+  "sourceSha256": "19312398317e0f23eb580fec7efec2d4817aea473b651dbcce8b79f60b6d43e1"
+}

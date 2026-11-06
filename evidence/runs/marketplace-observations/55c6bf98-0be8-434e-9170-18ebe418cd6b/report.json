@@ -1,0 +1,16 @@
+{
+  "runId": "55c6bf98-0be8-434e-9170-18ebe418cd6b",
+  "status": "pass",
+  "publicTransactions": 0,
+  "walletSignatures": 0,
+  "scope": "In-memory lost-reply and canonical-result fixtures; no real RPC or signer.",
+  "checks": [
+    "Lost submitted reply and service recreation reuse one persisted checkpoint and signature",
+    "Missing receipt or canonical confirmation preserves the original pending operation",
+    "Canonical revert is retained; an explicit later checkpoint receives a fresh operation ID"
+  ],
+  "sourceHashes": {
+    "backend/src/bank/pool-observations.mjs": "e47f5e2a0df2ad87f4675196d09152076f88066e6a4748cf1eb5e897aea0f0b1",
+    "tests/bank/pool-observations.mjs": "8a4a7c57a060a65a0375bab9443ee863880c5786d4abd2cc3c44011d002c30c1"
+  }
+}

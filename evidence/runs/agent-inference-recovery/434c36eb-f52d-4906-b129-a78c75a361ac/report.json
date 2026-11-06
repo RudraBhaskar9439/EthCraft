@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "scope": "Actual local Ollama through WSL bridge; synthetic health prompt only, no game actions, wallets or 0G claim",
+  "model": "qwen3:4b",
+  "paidCalls": 0,
+  "actualModel": "qwen3:4b",
+  "generatedTokens": 10,
+  "responseVerified": true,
+  "elapsedSeconds": 3.87
+}

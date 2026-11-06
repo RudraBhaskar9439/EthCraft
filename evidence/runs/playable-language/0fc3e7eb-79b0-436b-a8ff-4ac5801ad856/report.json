@@ -1,0 +1,7 @@
+{
+  "status": "fail",
+  "scope": "Actual local Ollama conversational language samples only; no Minecraft effects or independent humans",
+  "model": "qwen3:1.7b",
+  "samples": [],
+  "failure": "INVALID_CONVERSATIONAL_PLAN"
+}

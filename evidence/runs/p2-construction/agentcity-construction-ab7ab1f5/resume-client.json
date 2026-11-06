@@ -1,0 +1,40 @@
+{
+  "schema": "agentcity.p2.construction-client.v1",
+  "phase": "resume",
+  "status": "fail",
+  "started_at": "2026-10-29T18:00:48.169Z",
+  "independent_humans": 0,
+  "scripted_roles": true,
+  "checks": [
+    {
+      "name": "new-process-reconnect-preserves-real-carried-stock",
+      "carried": {
+        "minecraft:lever": 3,
+        "minecraft:redstone": 19,
+        "minecraft:redstone_lamp": 3,
+        "minecraft:redstone_torch": 35,
+        "minecraft:repeater": 14,
+        "minecraft:stone_bricks": 58
+      },
+      "stock": {},
+      "revision": 12,
+      "status": "pass",
+      "at": "2026-10-29T18:01:01.758Z"
+    }
+  ],
+  "live0GVerified": false,
+  "spending": 0,
+  "worker": {
+    "status": "waiting",
+    "reason": "NAVIGATION_BLOCKED:No path to the goal!;goal=[-10,81,0];observed=[-10.44,81,-6.432]",
+    "completed": 20,
+    "placedThisRun": 8,
+    "readiness": false
+  },
+  "error": {
+    "name": "AssertionError",
+    "message": "{\"status\":\"waiting\",\"reason\":\"NAVIGATION_BLOCKED:No path to the goal!;goal=[-10,81,0];observed=[-10.44,81,-6.432]\",\"completed\":20,\"placedThisRun\":8,\"readiness\":false}\n\n'waiting' !== 'built'\n",
+    "stack": "AssertionError [ERR_ASSERTION]: {\"status\":\"waiting\",\"reason\":\"NAVIGATION_BLOCKED:No path to the goal!;goal=[-10,81,0];observed=[-10.44,81,-6.432]\",\"completed\":20,\"placedThisRun\":8,\"readiness\":false}\n\n'waiting' !== 'built'\n\n    at run (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/evidence/runs/p2-construction/agentcity-construction-ab7ab1f5/source/tests/construction/probe.cjs:237:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)"
+  },
+  "finished_at": "2026-10-29T18:01:22.810Z"
+}

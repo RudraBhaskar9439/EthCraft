@@ -1,0 +1,17 @@
+{
+  "runId": "e7348358-a234-40f3-a842-53ce90531729",
+  "status": "fail",
+  "mode": "LOCAL_SYNTHETIC_ONLY",
+  "phases": [],
+  "transactions": [],
+  "realMoneySpent": 0,
+  "limits": [
+    "Scripted inference, local test wallets and synthetic inventory/world observations.",
+    "No independent humans, live 0G or token-linked Minecraft operation."
+  ],
+  "error": {
+    "name": "Error",
+    "message": "INVALID_IDENTITY_FIELD"
+  },
+  "finishedAt": "2026-10-29T22:25:57.539Z"
+}

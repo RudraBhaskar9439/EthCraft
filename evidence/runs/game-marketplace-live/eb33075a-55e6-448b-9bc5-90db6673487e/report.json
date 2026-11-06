@@ -1,0 +1,20 @@
+{
+  "status": "pass",
+  "scope": "Actual live PostgreSQL schema and original Game Coin account balance readback after marketplace upgrade; zero test trades or coin writes",
+  "existingGameAccountsUnchanged": true,
+  "gameAccounts": 7,
+  "gameAccountSnapshotSha256": "7a0173b91149287f8c8c19da0f6e589a61e4661cf2fc369a6cdc69e55a27326b",
+  "marketTables": [
+    "ac_discord_market_authorities",
+    "ac_discord_market_authority_revisions",
+    "ac_game_market_ledger",
+    "ac_game_market_listings",
+    "ac_game_market_purchases"
+  ],
+  "marketRows": {
+    "listings": 0,
+    "purchases": 0,
+    "ledger": 0
+  },
+  "backupDatabaseSha256": "e2c196f75f3894632ff5c8fc328adaffc8ff0036c0fdc42d28f76f8194706709"
+}

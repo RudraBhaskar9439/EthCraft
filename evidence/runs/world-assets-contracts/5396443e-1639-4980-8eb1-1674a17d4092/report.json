@@ -1,0 +1,100 @@
+{
+  "schema": "agentcity.world-assets-contract-tests.v1",
+  "recordedAt": "2026-10-31T17:14:23.392Z",
+  "status": "pass",
+  "scope": "Actual isolated Foundry EVM tests with disclosed trusted-registrar native receipt fixtures; no public deployment or live Minecraft custody proof",
+  "command": "forge test --root contracts --match-contract WorldAssetContractsTest -vv",
+  "foundry": {
+    "version": "1.7.1",
+    "commit": "4072e48705af9d93e3c0f6e29e93b5e9a40caed8"
+  },
+  "openzeppelin": "5.4.0",
+  "tests": [
+    {
+      "name": "testRegistrarUniqueCustodyCanonicalParcelAndDistinctAdmin",
+      "status": "pass"
+    },
+    {
+      "name": "testFixedPriceAtomicCityAndNftTradeReplay",
+      "status": "pass"
+    },
+    {
+      "name": "testTransferAwayBackAndParcelRevisionInvalidateOldTerms",
+      "status": "pass"
+    },
+    {
+      "name": "testRedemptionLocksOriginalClaimAndFinalizesOnce",
+      "status": "pass"
+    },
+    {
+      "name": "testSafeReceiverRejectionRollsBackAndReentryCannotPayTwice",
+      "status": "pass"
+    }
+  ],
+  "sources": {
+    "contracts/src/WorldAssetRegistry.sol": "394a1159fcd1c06d589e84f46502987e402346ce3dbec69ed217d7d498245ce5",
+    "contracts/src/WorldAssetMarket.sol": "63b79da91e7fff2eeb15ee400bcf43e22334b08388cf00fbceb968ca38113f77",
+    "tests/contracts/WorldAssets.t.sol": "80111efacf170260c52d2c8f4f64b06c6b94b6cab804797438e104b466482583",
+    "contracts/foundry.toml": "ab129a1362f1fd1854c07cb8917a42da08faa9cd7d0eeb161d62c6cdda9c5754",
+    "contracts/package.json": "f152fd4ce9da995e46bf00a747b1eb51c6b9196466884d4e2eda6109003e075f",
+    "contracts/package-lock.json": "80312c2b2b961d9094131a38097f043c67d14731a186ba7d91894cea527ebb8c"
+  },
+  "artifacts": {
+    "WorldAssetRegistry": {
+      "path": "contracts/out/WorldAssetRegistry.sol/WorldAssetRegistry.json",
+      "fileSha256": "84d33d45e661ef4ec979356e3d0d80e21bbb06ec2b26217272d236c34e84d060",
+      "abiSha256": "a4505476e075f32a21876946273c724f4bf671554cb59aadb99f76f51dd2f362",
+      "creationBytecodeKeccak256": "0x6f90b6ef3ab60968f80ca65fe5a1811bcb01558f13ed117cfb5ccb36d112f150",
+      "runtimeTemplateKeccak256": "0x9825094905f226df9f11f142b1f876b56adc56de6215fba350c05d34fb57cc9a",
+      "compiler": {
+        "version": "0.8.26+commit.8a97fa7a"
+      },
+      "settings": {
+        "evmVersion": "cancun",
+        "optimizer": {
+          "enabled": true,
+          "runs": 200
+        },
+        "viaIR": true
+      }
+    },
+    "WorldAssetMarket": {
+      "path": "contracts/out/WorldAssetMarket.sol/WorldAssetMarket.json",
+      "fileSha256": "094e96fa8cdbe926992d5defb6030fb27e955a25a4603dcfc06704a16b5dfa51",
+      "abiSha256": "a1166acd423a5c7eb9ee7ecca55a490e5d2feb9efbf252ce719ad7f797e0fb27",
+      "creationBytecodeKeccak256": "0x172ec95dceb15d42b9a14989e36a5b11cdb6889fb5cdbedebf60eee6593121d2",
+      "runtimeTemplateKeccak256": "0xe7dac147b6860b23fa250d9f3ba86e3878b36d8cf33263cabee10ad87f743440",
+      "compiler": {
+        "version": "0.8.26+commit.8a97fa7a"
+      },
+      "settings": {
+        "evmVersion": "cancun",
+        "optimizer": {
+          "enabled": true,
+          "runs": 200
+        },
+        "viaIR": true
+      }
+    }
+  },
+  "retainedFailures": [
+    "evidence/runs/world-assets-contracts/777cd29c-24b8-45ba-973f-2814bd235d14/report.json",
+    "evidence/runs/world-assets-contracts/2f405fe3-2754-4222-b55e-f75563cf9c69/report.json"
+  ],
+  "canonicalP0": {
+    "status": "blocked",
+    "reasons": [
+      "Implementation scope changed since approved release",
+      "P0-015 artifact hash mismatch docs/UPSTREAM_REUSE.md"
+    ]
+  },
+  "publicTransactions": 0,
+  "realMinecraftEffects": 0,
+  "limitations": [
+    "Trusted registrar asserts actual native rights/custody; fixture hashes do not prove real backing.",
+    "Parcels are fixed16x16 cells; house rights are bundled into their parcel deed.",
+    "Item redemption remains locked until exact native delivery is attested and finalized.",
+    "No public deployment, provider signing or production qualification established.",
+    "Runtime template hashes contain immutable placeholders and are not deployed-address identity proof."
+  ]
+}

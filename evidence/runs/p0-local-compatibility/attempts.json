@@ -1,0 +1,44 @@
+[
+  {
+    "attempt": 1,
+    "path": "evidence/runs/p0-local-compatibility/attempt-01/run-report.json",
+    "status": "fail",
+    "probe_status": null,
+    "full_phase_gate_passed": false
+  },
+  {
+    "attempt": 2,
+    "path": "evidence/runs/p0-local-compatibility/attempt-02/run-report.json",
+    "status": "fail",
+    "probe_status": null,
+    "full_phase_gate_passed": false
+  },
+  {
+    "attempt": 3,
+    "path": "evidence/runs/p0-local-compatibility/attempt-03/run-report.json",
+    "status": "fail",
+    "probe_status": null,
+    "full_phase_gate_passed": false
+  },
+  {
+    "attempt": 4,
+    "path": "evidence/runs/p0-local-compatibility/attempt-04/run-report.json",
+    "status": "fail",
+    "probe_status": null,
+    "full_phase_gate_passed": false
+  },
+  {
+    "attempt": 5,
+    "path": "evidence/runs/p0-local-compatibility/attempt-05/run-report.json",
+    "status": "fail",
+    "probe_status": null,
+    "full_phase_gate_passed": false
+  },
+  {
+    "attempt": 6,
+    "path": "evidence/runs/p0-local-compatibility/attempt-06/run-report.json",
+    "status": "pass",
+    "probe_status": "passed",
+    "full_phase_gate_passed": false
+  }
+]

@@ -1,0 +1,10 @@
+{"tick":283,"use_item":"DENY","event":"native_interact","position":[-14,81,5],"use_block":"ALLOW","action":"RIGHT_CLICK_BLOCK","actor":"43a86a2e-ba2e-350a-a576-a65b67aa87d1","cancelled":false}
+{"tick":292,"use_item":"DENY","event":"native_interact","position":[-14,81,5],"use_block":"ALLOW","action":"RIGHT_CLICK_BLOCK","actor":"43a86a2e-ba2e-350a-a576-a65b67aa87d1","cancelled":false}
+{"tick":306,"use_item":"DENY","event":"native_interact","position":[-14,81,5],"use_block":"ALLOW","action":"RIGHT_CLICK_BLOCK","actor":"43a86a2e-ba2e-350a-a576-a65b67aa87d1","cancelled":false}
+{"tick":322,"use_item":"DENY","event":"native_interact","position":[-14,81,5],"use_block":"ALLOW","action":"RIGHT_CLICK_BLOCK","actor":"43a86a2e-ba2e-350a-a576-a65b67aa87d1","cancelled":false}
+{"tick":337,"use_item":"DENY","event":"native_interact","position":[-14,81,5],"use_block":"ALLOW","action":"RIGHT_CLICK_BLOCK","actor":"43a86a2e-ba2e-350a-a576-a65b67aa87d1","cancelled":false}
+{"tick":352,"use_item":"DENY","event":"native_interact","position":[-14,81,5],"use_block":"ALLOW","action":"RIGHT_CLICK_BLOCK","actor":"43a86a2e-ba2e-350a-a576-a65b67aa87d1","cancelled":false}
+{"tick":367,"use_item":"DENY","event":"native_interact","position":[-14,81,5],"use_block":"ALLOW","action":"RIGHT_CLICK_BLOCK","actor":"43a86a2e-ba2e-350a-a576-a65b67aa87d1","cancelled":false}
+{"tick":430,"use_item":"DEFAULT","event":"native_interact","position":[-7,80,-3],"use_block":"ALLOW","action":"RIGHT_CLICK_BLOCK","actor":"43a86a2e-ba2e-350a-a576-a65b67aa87d1","cancelled":false}
+{"position":[-7,81,-3],"actor":"43a86a2e-ba2e-350a-a576-a65b67aa87d1","cancelled":false,"event":"native_place","state":"minecraft:stone_bricks","tick":430}
+{"tick":559,"use_item":"DENY","event":"native_interact","position":[-7,81,-3],"use_block":"DENY","action":"LEFT_CLICK_BLOCK","actor":"a56f0418-1cf4-3f1e-a0ab-9b34ba31f192","cancelled":true}

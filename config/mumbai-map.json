@@ -1,0 +1,23 @@
+{
+  "schema": "agentcity.mumbai-map.v1",
+  "name": "South Mumbai",
+  "generator": {
+    "version": "3.4.0",
+    "url": "https://github.com/louis-e/arnis/releases/download/v3.4.0/arnis-mac-universal.tar.gz",
+    "sha256": "aa964164e60de7c4d62fd304e8c5c48ba393c1632c84b320d58cae5118d8eb80",
+    "binary": "arnis-mac-universal"
+  },
+  "bbox": [18.918, 72.818, 18.947, 72.843],
+  "spawn": {"latitude": 18.922, "longitude": 72.8336},
+  "world": "agentcity_mumbai",
+  "disclosure": "South Mumbai district generated from real map data. Architecture and stadium models are approximations; this is not a complete or exact replica of Mumbai.",
+  "credits": [
+    {"name": "Arnis 3.4.0", "url": "https://github.com/louis-e/arnis", "license": "Apache-2.0"},
+    {"name": "OpenStreetMap contributors", "url": "https://www.openstreetmap.org/copyright", "license": "ODbL"},
+    {"name": "Overture Maps", "url": "https://docs.overturemaps.org/attribution/", "license": "See dataset attribution"},
+    {"name": "Mapterhorn terrain", "url": "https://mapterhorn.com/", "license": "See upstream source attribution"},
+    {"name": "ESA WorldCover 2021", "url": "https://esa-worldcover.org/en/data-access", "license": "CC BY 4.0"},
+    {"name": "Meta/WRI canopy height", "url": "https://github.com/louis-e/arnis/blob/v3.4.0/src/gui/js/license.js", "license": "See upstream dataset and asset credits"},
+    {"name": "Arnis regional tree and 3D model assets", "url": "https://github.com/louis-e/arnis/blob/v3.4.0/src/gui/js/license.js", "license": "Individual assets retain their licenses"}
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "schema": "agentcity.local-discord-runtime.v1",
+  "recordedAt": "2026-11-05T21:54:49.881Z",
+  "scope": "Actual read-only local services and Discord command registration; user approval is not simulated",
+  "services": {
+    "setup": {
+      "http": 200
+    },
+    "bundle": {
+      "http": 200
+    },
+    "config": {
+      "http": 200,
+      "configured": true,
+      "walletSetupAvailable": false
+    },
+    "marketplace": {
+      "http": 200
+    }
+  },
+  "identity": {
+    "principals": 1,
+    "identities": 1,
+    "setup_challenges": 2,
+    "name_reservations": 1,
+    "join_approvals": 0,
+    "minecraft_aliases": 0,
+    "challengesConsumed": 2
+  },
+  "preservation": {
+    "discordApprovalRequired": true,
+    "identityOnly": true,
+    "secondaryBotInactive": true,
+    "modelCallsMade": 0,
+    "financialActionsMade": 0,
+    "teammateComputerAccessed": false
+  },
+  "discord": {
+    "applicationId": "1566059596865609758",
+    "guildId": "1566060288111943722",
+    "http": 200,
+    "commands": [
+      "agents",
+      "join",
+      "profile",
+      "start"
+    ]
+  },
+  "minecraft": {
+    "http": 200,
+    "playerName": "Micro",
+    "online": false,
+    "principalPresent": false
+  },
+  "userReportedSetupCompleted": true,
+  "userReportVerifiedByServer": false,
+  "status": "actual_local_approval_not_yet_verified"
+}

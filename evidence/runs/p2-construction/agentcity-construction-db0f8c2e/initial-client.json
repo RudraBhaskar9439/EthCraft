@@ -1,0 +1,42 @@
+{
+  "schema": "agentcity.p2.construction-client.v1",
+  "phase": "initial",
+  "status": "fail",
+  "started_at": "2026-10-29T17:46:20.640Z",
+  "independent_humans": 0,
+  "scripted_roles": true,
+  "checks": [
+    {
+      "name": "fresh-empty-circuit-and-exact-controlled-stock",
+      "final_blocks_seeded": 0,
+      "stock_total": 144,
+      "operator_glass": 185,
+      "status": "pass",
+      "at": "2026-10-29T17:46:34.208Z"
+    },
+    {
+      "name": "unsupported-orientation-and-blueprint-hash-refused-before-effects",
+      "refused": 2,
+      "status": "pass",
+      "at": "2026-10-29T17:46:34.209Z"
+    },
+    {
+      "name": "bounded-obstructed-navigation-preserves-stock-and-structure",
+      "target_relative": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "at": "2026-10-29T17:46:34.483Z"
+    }
+  ],
+  "live0GVerified": false,
+  "spending": 0,
+  "error": {
+    "name": "Error",
+    "message": "NAVIGATION_BLOCKED:Path was stopped before it could be completed! Thus, the desired goal was not reached.",
+    "stack": "Error: NAVIGATION_BLOCKED:Path was stopped before it could be completed! Thus, the desired goal was not reached.\n    at MinecraftAdapter.go (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/evidence/runs/p2-construction/agentcity-construction-db0f8c2e/source/backend/src/bot/minecraft-adapter.cjs:167:13)\n    at async MinecraftAdapter.openStock (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/evidence/runs/p2-construction/agentcity-construction-db0f8c2e/source/backend/src/bot/minecraft-adapter.cjs:173:5)\n    at async guards (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/evidence/runs/p2-construction/agentcity-construction-db0f8c2e/source/tests/construction/probe.cjs:110:3)\n    at async run (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/evidence/runs/p2-construction/agentcity-construction-db0f8c2e/source/tests/construction/probe.cjs:208:5)"
+  },
+  "finished_at": "2026-10-29T17:46:34.987Z"
+}

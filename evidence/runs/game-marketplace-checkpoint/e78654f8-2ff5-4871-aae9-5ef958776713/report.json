@@ -1,0 +1,164 @@
+{
+  "checkpoint": "Minecraft item marketplace for internal Game Coins",
+  "status": "local_implementation_installed",
+  "recordedAt": "2026-10-31T16:51:16.090Z",
+  "baseRelease": "4298fbc4de0c92064ec5fc6eb2e88437bcdaf004",
+  "sourceSha256": {
+    "backend/src/discord/activity-feed.mjs": "d856b818466c20290ead64bb0c19af5900324c89c3c78b726fe9c76aaa748087",
+    "backend/src/discord/bot.mjs": "d6edbf6abedfa8e9b618a93fc616d91fbf097aea9a89258b2dff14723cc6bb4f",
+    "backend/src/discord/marketplace-runtime.mjs": "6eeed2f1b3728650cbccaa34cdb43fd206d4cc86ad7b3f3e0cafa80099815a3a",
+    "backend/src/discord/server-experience.mjs": "bd56c74899e48c2c3f72207f0a0af6dfd4d24f3b21dc0286566a87e61c3542d7",
+    "backend/src/discord/server-layout.mjs": "cf47fe8c9d95d5ec777cfcc054663e605550002b4283a3663a0b46068108a691",
+    "backend/src/discord/settings.mjs": "6f0d2b612e047c9d0878404722e015743903f5088f76cf323a211893658c213d",
+    "backend/src/playable/game-marketplace.mjs": "8cb993461f60c1416db70e0f232c6dcb2845646292d1e9fd8c6047efdc820918",
+    "backend/src/playable/game-marketplace.sql": "25f53b095d7f2c589fb817ef8725660289538131408637dae6555c8f29760173",
+    "backend/src/playable/market-runtime.mjs": "a2fece8adc57e10628dbd26b4df26bbccfc000184fe5b8ed3e5a4b92d412a6c1",
+    "docs/AGENT_CAPABILITIES.md": "e70592455844ec043c273de71a4b84f8452eb46639e5085ba18f0c3c1571cbf4",
+    "docs/DISCORD_ONBOARDING.md": "58228d1cbb55ffcd111c6aebab83a2f2478fae5744d2144993cd082b66a944c0",
+    "docs/GAME_MARKETPLACE.md": "38bf59f85fda5c7610309f9c2e360dbc92a4de495f52cfeb0a3079ce0ba8989e",
+    "planning/phases.json": "0f2006b137b568137611414596a01668aab443e0c7fb400360bc17bffd145361",
+    "planning/scope.json": "4daa8a098c160962858877bbdf049822e03cce2183db2cfc05ce0de3aad34641",
+    "plugin/src/main/java/org/agentcity/paper/AgentCityPlugin.java": "d658443d1f723c8c04bd4453698e3d6a61ecfe371d9bd75c4f6be11402df1984",
+    "plugin/src/main/java/org/agentcity/paper/InventoryEscrow.java": "3b3a75e4f01c2dd318dccdb395fb4581c40c2417f2c9ec5c40fd232546dcb981",
+    "plugin/src/main/java/org/agentcity/paper/PlayableExperience.java": "ffb8361e3be23e04eaad3e08961c39d4ffd496346a361d1de2dc4afa944955bd",
+    "plugin/src/main/resources/plugin.yml": "27ee0a5868b7a90777dab42b8514bc083ae042f1a029fee6936b7a9e3fbbe646",
+    "scripts/host_node.py": "d0382dda40105bd956c0e95b3358c98395a61f242dcc7ff712518f24268bb685",
+    "scripts/playable_worker.mjs": "316468d044467bc7f08ef42f1554e25c7521d9f76605c0c0ab56bdabd2aab8d4",
+    "tests/inspection/EscrowNativeStockPlugin.java": "7ad8eff45497a94e956fe8b6f38ec484c54a6da2d1049d7ad17dd51cfa7b5fe8",
+    "tests/playable/activity-feed.mjs": "cfbb021b35adeaffe542ce97ddc348400220ba94dcbe17a8ae87f1bef027465c",
+    "tests/playable/discord-bot.mjs": "c473e466a77f3b6c8868a3e08083af21bb8978c8da1426340a861d39d780ee93",
+    "tests/playable/discord-layout.mjs": "91fc829ac6a71b71ac563564d4275b997968d54a3c2a09b59d612fa76f6bafe0",
+    "tests/playable/discord-marketplace-runtime.mjs": "10ddf1fa811c24e0fa5c0d0366c16ac8ce3de8d80642b701d48ea5a6b36fa4a1",
+    "tests/playable/escrow-native-live.cjs": "5078882c9ab1f57bac6d305ebc766b4bae29543927ed44cf01fcf7745264f1ec",
+    "tests/playable/game-marketplace.mjs": "ee67f2c419aa4bea6166264fe16c7d6c9c786faa6a42ad7e5687d01d1e6552e7",
+    "tests/playable/host-market-idle.py": "37a921605935b788423295c7118a77a9de73c38cdf91296ba0ffc36de00cf979",
+    "tests/playable/market-route.mjs": "9573f7c8251f67c23afa74fb01bf8ca52169345a144571a52a2bcaf10f371840"
+  },
+  "artifacts": [
+    {
+      "path": "evidence/runs/game-marketplace/771484d1-c2e3-4e75-a062-a6cfe1993d77/report.json",
+      "sha256": "04a45c5b5c44c89df0b8366b8cf1f313897272f3fab42136fe94fa021356780b"
+    },
+    {
+      "path": "evidence/runs/discord-bot/16a8eb7d-c1df-41ed-98e4-d94d56299f40/report.json",
+      "sha256": "82c753b166494c4f9b1d6eedd54185e4cf48ab6ce0cc93b2bb50a791bb7b8367"
+    },
+    {
+      "path": "evidence/runs/discord-layout/e45f0f70-ff0c-40cd-9a0b-d931618d7d9b/report.json",
+      "sha256": "5b4f1984e8eb4b715ed338a87fb5edfc8b68008216fa6555339105893501b875"
+    },
+    {
+      "path": "evidence/runs/discord-activity-feed/802d1a1c-948b-4050-8fa9-a7d12772a0dd/report.json",
+      "sha256": "8abc45d3b2252220cea1b54156770465779e1f819a0e117f2cae61c02f01311e"
+    },
+    {
+      "path": "evidence/runs/escrow-native/704166b9-7bae-4135-b7f7-8901e4e07db4/report.json",
+      "sha256": "3fddd01f1f2727d33a9a862a2ba12048fdb72377449032e94920eaab70da4728"
+    },
+    {
+      "path": "evidence/runs/escrow-native/2453829d-801e-4397-a2c2-82d06d1ffa3b/report.json",
+      "sha256": "d79065a2a238d34eb25a849e2b508fcf3b452b0bf3a7101293bb43d1b444f105"
+    },
+    {
+      "path": "evidence/runs/escrow-native/2453829d-801e-4397-a2c2-82d06d1ffa3b/build.json",
+      "sha256": "8e24fc767b6143be92e25ab978f60312c7a1841de1acb24d409c82ecabc6879d"
+    },
+    {
+      "path": "evidence/runs/game-marketplace-live/65f4cef3-e928-4413-8459-4587d43602b1/report.json",
+      "sha256": "b48d0502008f721ba253076b31b0b09d0af026e3b289a27af8edf8e182903be4"
+    },
+    {
+      "path": "evidence/runs/game-marketplace-live/eb33075a-55e6-448b-9bc5-90db6673487e/report.json",
+      "sha256": "7b57669725c6b74330fb9f2d7c0c33cfd551f7214f130af98945c312cd189c1c"
+    }
+  ],
+  "phase": {
+    "current": "Revised local marketplace extension across P2/P4/P8/P9; original phase progression remains blocked at P0",
+    "gate": "blocked",
+    "reasons": [
+      "implementation scope changed since approved release",
+      "P0-015 docs/UPSTREAM_REUSE.md artifact hash mismatch"
+    ],
+    "canonicalEvidenceRewritten": false
+  },
+  "behavior": [
+    "full lots of 1..64 plain resources; total positive whole Game Coin price",
+    "explicit verified owner confirmation for player or owned connected bot stock",
+    "real native stock custody before listing opens; balanced buyer hold and seller settlement after backed mailbox assignment",
+    "offline buyers; approved online human claims; owner cancellation returns exact stock",
+    "stable operation IDs, append-only authority renewals only before native intent, original pending-effect reconciliation",
+    "Discord marketplace board, confirmation controls, verified Game Coin receipt feed and in-game bazaar/NPC entry",
+    "legacy player/agent item-for-token sales refused before effects; separate wallet/Uniswap demonstration retained"
+  ],
+  "focusedChecks": {
+    "postgresAccounting": 3,
+    "discordRuntimeInjectedFixtures": 6,
+    "discordCoordinatorFixtures": 8,
+    "discordLayoutFixtures": 7,
+    "activityFeedPostgresFixtures": 4,
+    "hostPendingEffectGuard": 1,
+    "itemTokenRouteRefusal": 1,
+    "nodeSyntax": "pass",
+    "planningUnittests": 56,
+    "planningIntegrity": "pass; no product phase established"
+  },
+  "actualMinecraft": {
+    "scope": "Isolated actual Paper 26.3-231 / Java25 / Via5.12.2; synthetic registrations, Mineflayer clients and seeded fixture stock; zero independent humans",
+    "predecessorJar": "a7a3771a4e84fa3a484f1cadb4c61f6b883c53a1a11aa2db9d5b4bdd30bd1d26",
+    "predecessorPassedChecks": 5,
+    "predecessorOverall": "fail at bot source path; previous passed checks retained",
+    "composedTrade": {
+      "actualNativeItems": 2,
+      "priceGameCoins": 7,
+      "sellerFinal": 107,
+      "buyerFinal": 93,
+      "totalCoins": 200,
+      "ledgerNet": 0,
+      "lostAssignmentReplyRetriedWithoutDuplicateEffects": true
+    },
+    "finalJar": "bf285997b2e5569888a25c7cd51907558bb2c6e4e637923686d806c1c9091840",
+    "finalJarResumeChecks": 3,
+    "qualification": "Final JAR fixes only the relative runtime ownership lookup. Resume verifies retained stock, actual offline-owner agent escrow/return, foreign-owner refusal and restart/new-connection claim replay. Five earlier checks remain predecessor-JAR evidence."
+  },
+  "liveDeployment": {
+    "installedJar": "bf285997b2e5569888a25c7cd51907558bb2c6e4e637923686d806c1c9091840",
+    "minecraftContainer": "agentcity-playable-ce946e82",
+    "workerReady": true,
+    "nativeEscrowReady": true,
+    "nativePendingEffects": 0,
+    "marketplaceChannelId": "1566131784847196160",
+    "liveDiscordReadbackChecks": 6,
+    "existingGameCoinAccounts": 7,
+    "allOriginalBalancesUnchanged": true,
+    "originalPersonalAgentAndTaskAndLockJournalsUnchanged": true,
+    "marketRows": {
+      "listings": 0,
+      "purchases": 0,
+      "ledger": 0
+    },
+    "userInventoryTradesPerformed": 0,
+    "otherServicesOrTunnelsStopped": false,
+    "privateCoordinatedBackupCreated": true,
+    "backupDirectoryMode": "0700",
+    "worldBackupSha256": "d55c38c8acba1e863bfde54e17786f2862873d2287c4c8e1a317cccd40c6cc63",
+    "databaseBackupSha256": "e2c196f75f3894632ff5c8fc328adaffc8ff0036c0fdc42d28f76f8194706709",
+    "worldFixtureBootstrap": "Existing fixture plugin reported observe-only continuation with no bootstrap effects"
+  },
+  "preservedFailures": [
+    "initial isolated SQL fixture reserved-keyword DDL error, fixed before passing rerun",
+    "initial Paper fixture bootstrap name refused; fixture corrected without widening production allowlist",
+    "isolated client profile refused alternate fixture port before join; scoped tick-boundary fixture shim adopted",
+    "fixture client connection throttle; legitimate join spacing added",
+    "actual bot stock source lookup relative-path NullPointerException, corrected and verified by same-world resume",
+    "first worker stop helper raced process exit after stopping its verified supervisor; readonly inspection confirmed worker PID absent; no unverified process killed",
+    "early live schema probe before worker startup reported missing tables; retained failure and later actual ready/schema readback passed",
+    "25-second worker readiness probe elapsed during dependency loading; later actual worker/native/Discord ready checks passed"
+  ],
+  "remaining": [
+    "independent-human live listing/buy/claim acceptance on this deployment",
+    "intentional crash-window fault injection and coordinated restore of the newly extended marketplace state",
+    "original canonical phase approvals, independent participants, Microsoft authentication and 0G remain unproved; marketplace tests do not replace them",
+    "dedicated per-agent Discord applications and their live DM verification remain pending from prior work"
+  ],
+  "review": "Local pilot functionality installed, not production qualification. No crypto purchase, blockchain payout, additional starter grant or live user item sale was executed."
+}

@@ -1,0 +1,24 @@
+{
+  "status": "pass",
+  "scope": "Actual PostgreSQL row-authorization regression with a synthetic reserved row; chain is read-only, no snapshot or transaction",
+  "checks": [
+    {
+      "name": "bound-requester-can-read-own-operation-and-budget",
+      "status": "pass"
+    },
+    {
+      "name": "other-requester-cannot-read-send-or-reconcile-original-operation",
+      "status": "pass"
+    },
+    {
+      "name": "different-chain-instance-cannot-reuse-reserved-operation",
+      "status": "pass"
+    }
+  ],
+  "finishedAt": "2026-10-29T22:28:41.567Z",
+  "sourceSha256": {
+    "backend/src/procurement/service.mjs": "05d36442476355f3a47d28eb768191943408413ec75b258584ef7e5c15e6a932",
+    "backend/src/procurement/schema.sql": "b3f31e03be327662ade8d6af9ea96dbf8cac394ccaa01103d30463589fc4b7bd",
+    "tests/procurement/authorization.mjs": "f56c8b9996109ab4a950234cac70acd1a0cf90ef71da92ecda1646817340d939"
+  }
+}

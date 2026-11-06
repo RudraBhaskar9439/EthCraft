@@ -1,0 +1,272 @@
+{
+  "status": "adopted local engineering baseline; participant approval and runtime measurements pending",
+  "recorded_on": "2026-10-29",
+  "product_cases_executed_by_this_draft": 0,
+  "scope": {
+    "servers": 1,
+    "active_jobs": 1,
+    "protected_plots": 1,
+    "registered_bots": 1,
+    "requesters": 1,
+    "paid_builders": 1,
+    "player_flow_allocations": 1,
+    "kits_per_job": 1,
+    "contract_max_fixed_allocations": 8,
+    "team_ui_enabled": false
+  },
+  "expiry": {
+    "validity_comparison": "authority_now < expires_at",
+    "refund_comparison": "chain_timestamp >= absolute_expiry",
+    "chain_unit": "integer Unix seconds",
+    "backend_game_unit": "integer Unix milliseconds",
+    "challenge_seconds": 300,
+    "quote_seconds": 60,
+    "command_seconds": 10,
+    "task_lease_seconds": 30,
+    "lease_renewal_seconds": 10,
+    "schedule_anchor": "fixed agreement start epoch approved before signatures and funding",
+    "work_seconds_after_fixed_approved_start_epoch": 3600,
+    "review_seconds_after_fixed_work_deadline": 900,
+    "absolute_expiry": "fixed_review_deadline",
+    "pass_valid_until": "no_later_than_fixed_review_deadline",
+    "late_passing_inspection": "record outcome but do not issue readiness/pass",
+    "funding_requires_before_work_deadline": true,
+    "passing_report_requires_completion_before_work_deadline": true,
+    "outage_extends_deadlines": false,
+    "client_clock_is_authority": false,
+    "elapsed_timeout_clock": "monotonic; never persisted as a cross-process timestamp",
+    "uncertain_or_reversed_server_clock": "pause and reauthorize",
+    "resubmission_extends_deadlines": false
+  },
+  "locks": {
+    "default_early_unlock": false,
+    "retain_while_any_pass_usable": true,
+    "retain_during_unknown_acceptance": true,
+    "release_requires_canonical_settlement_or_no_usable_pass_and_no_unknown_acceptance": true,
+    "review_input_toggles_allowed": true,
+    "inspection_external_input_toggles_allowed": false,
+    "persist_before_inspection": true,
+    "new_pass_or_repair_while_pass_usable": false,
+    "release_after_finalized_acceptance_waits_for_reward_withdrawal": false,
+    "lost_lock_evidence": "disable mutation and quarantine"
+  },
+  "tokens": {
+    "cred_decimals_proposed": 18,
+    "kit_decimals_proposed": 18,
+    "issuance_whole_kit_only": true,
+    "redemption_whole_kit_only": true,
+    "fractional_transfer_liabilities_retained": true,
+    "circulating_supply_includes_pool_holdings_once": true,
+    "material_cap_cred_example": "3",
+    "labor_cred_example": "6",
+    "unallocated_cred_example": "1",
+    "controlled_initial_supply_cred_candidate": "1000",
+    "actual_token_addresses": null,
+    "actual_balances_or_minting_established": false
+  },
+  "settlement": {
+    "funded_early_cancellation_supported_initially": false,
+    "funded_terminal_paths": [
+      "requester_acceptance_then_fixed_claims",
+      "unaccepted_absolute_timeout_refund"
+    ],
+    "accepted_late_claims_remain_entitlements": true,
+    "requester_refusal_can_leave_builder_unpaid": true,
+    "arbitration_or_partial_payment_supported": false,
+    "selected_network": null,
+    "confirmation_count": 12,
+    "require_finalized_block_covering_source_event": true,
+    "unsupported_or_uncertain_finality": "block irreversible delivery and reconcile",
+    "deep_reorganization": "pause affected issuance purchases delivery and acceptance preparation; preserve obligations and receipts; reconcile canonical chain and world evidence",
+    "automatic_physical_replay_or_clawback": false,
+    "incident_coordinator": "server_operator",
+    "remediation_requires_explicit_authority": true,
+    "automatic_compensation_or_replacement_funding_promised": false,
+    "authority_granted_by_fixture_identifiers": false
+  },
+  "limits_and_targets": {
+    "values_are_measured_results": false,
+    "max_conflicting_executable_leases": 1,
+    "max_game_interactions_per_second": 2,
+    "max_placements_per_stage": 128,
+    "max_queued_commands": 32,
+    "max_command_utf8_bytes": 65536,
+    "max_inference_attempts_per_job_candidate": 20,
+    "safe_retry_total_attempts": 3,
+    "retry_delays_seconds": [
+      1,
+      2
+    ],
+    "retry_unknown_side_effect": false,
+    "normal_tps_target": 20,
+    "inspection_reset_ticks_candidate": 40,
+    "inspection_settle_ticks_candidate": 40,
+    "inspection_stable_observations_candidate": 5,
+    "inspection_case_wall_seconds_ceiling_candidate": 15,
+    "inspection_run_wall_seconds_ceiling_candidate": 180,
+    "coordinated_snapshot_seconds_target": 300,
+    "restore_seconds_target": 1800,
+    "lost_acknowledged_obligations_target": 0,
+    "network_or_database_wait_on_game_thread_allowed": false,
+    "p95_game_command_ack_ms_target": 1000,
+    "p95_backend_read_ms_target": 500,
+    "minimum_free_disk_bytes_before_mutation": 1073741824,
+    "retain_all_unreconciled_receipts": true
+  },
+  "schema_version": 1,
+  "runtime_enforcement_implemented": false,
+  "runtime_measurements_complete": false,
+  "participant_agreement_approval_complete": false,
+  "authority": {
+    "default": "deny",
+    "only_requester_accepts": true,
+    "model_output_is_authorization": false,
+    "receiving_boundary_recheck": true,
+    "display_names_are_identity": false,
+    "service_roles_separate": [
+      "issuer",
+      "publisher",
+      "inspection_attestor",
+      "server_operator"
+    ],
+    "service_keys_provisioned": false
+  },
+  "leases": {
+    "max_conflicting_executable_leases": 1,
+    "fencing_revision_required": true,
+    "recheck_at_execution": true,
+    "expired_worker_may_mutate": false,
+    "unknown_recovered_lease": "pause and reconcile"
+  },
+  "identity": {
+    "game_identity": "server_id plus stable player_uuid plus authenticated live session",
+    "wallet_challenge_fields": [
+      "domain",
+      "server_id",
+      "player_uuid",
+      "session_id",
+      "wallet",
+      "nonce",
+      "issued_at_ms",
+      "expires_at_ms"
+    ],
+    "challenge_single_use": true,
+    "current_wallets_per_player_server": 1,
+    "current_players_per_wallet_server": 1,
+    "normal_relink_requires": [
+      "live_game_session",
+      "current_wallet_consent",
+      "replacement_wallet_consent"
+    ],
+    "lost_wallet_recovery_supported": false,
+    "relink_changes_existing_funded_parties": false
+  },
+  "allocations": {
+    "minimum_contract_recipients": 1,
+    "maximum_contract_recipients": 8,
+    "maximum_ui_recipients": 1,
+    "recipient_addresses_nonzero_unique": true,
+    "amounts_positive_integer_base_units": true,
+    "parallel_array_lengths_match": true,
+    "sum_must_not_overflow_uint256": true,
+    "exact_funding_only": true,
+    "funded_terms_mutable": false,
+    "claim_pays_immutable_recipient": true,
+    "permissionless_claim_for_recipient_supported": false
+  },
+  "ownership": {
+    "unspent_authorization": "requester retains funds; cap is not a charge",
+    "purchased_unredeemed_kit": "purchase recipient",
+    "burned_pending_claim": "fixed claim recipient; obligation persists until reconciled fulfillment",
+    "delivered_unused_stock": "requester with limited assigned builder and bot work access",
+    "placed_materials_and_structure": "requester under signed agreement",
+    "accepted_unclaimed_labor": "immutable contributor entitlement without withdrawal deadline",
+    "refund_reverses_material_purchase_or_delivery_claim": false,
+    "termination_revokes_builder_work_access": true,
+    "unused_stock_return_requires_audited_operation": true
+  },
+  "external_requirements": {
+    "independent_human_participants": "P4 before independent marketplace verification",
+    "token_platform_suitability": "P5 before integrated token deployment",
+    "funded_chain_preflight": "P5 before accepting economic obligations",
+    "local_fixture_identities_prove_independent_humans": false,
+    "private_or_testnet_implies_platform_exemption": false
+  },
+  "research": {
+    "protocol": "docs/RESEARCH_PROTOCOL.md",
+    "preregister_before_comparison_outcomes": true,
+    "held_out_exceptions_separate_from_prompt_development": true,
+    "trial_counts_follow_documented_pilot": true,
+    "retain_failed_null_negative_results": true,
+    "actual_users_required_for_comprehension": true,
+    "research_favorable_result_required": false,
+    "cost_domains": [
+      "CRED",
+      "native gas",
+      "compute credit",
+      "hosting and operations"
+    ],
+    "subsidies_disclosed": true
+  },
+  "world_controls": {
+    "plot_relative_min": [
+      0,
+      0,
+      0
+    ],
+    "plot_relative_max": [
+      31,
+      15,
+      15
+    ],
+    "candidate_origin_relative": [
+      4,
+      1,
+      4
+    ],
+    "supported_orientation": "identity",
+    "supported_mutation_paths": "assigned current bounded game commands only",
+    "structural_mutation_during_inspection_or_review": "deny",
+    "natural_redstone_power_changes_are_structural": false,
+    "indirect_hazards_must_be_denied_at_protected_plot": [
+      "piston_extension",
+      "piston_retraction",
+      "entity_explosion",
+      "block_explosion",
+      "fire_ignite",
+      "fire_burn",
+      "fire_spread",
+      "fluid_flow",
+      "falling_block",
+      "entity_block_change"
+    ],
+    "unvalidated_admin_or_plugin_edit_paths": "disabled at protected plot"
+  },
+  "fault_injection_points": {
+    "plugin_mutation": [
+      "before_durable_intent",
+      "after_intent_before_mutation",
+      "after_mutation_before_receipt",
+      "after_receipt_before_acknowledgement"
+    ],
+    "worker": [
+      "after_task_lease",
+      "during_interaction",
+      "after_checkpoint_before_workflow_ack",
+      "after_lease_expiry"
+    ],
+    "database": [
+      "before_intent_transaction_commit",
+      "after_outbox_commit_before_dispatch",
+      "after_dispatch_before_dispatch_ack",
+      "after_receipt_before_inbox_commit"
+    ],
+    "chain": [
+      "after_submission_before_hash_persistence",
+      "included_before_confirmation",
+      "confirmed_before_projection",
+      "reorganization_before_delivery",
+      "deep_reorganization_after_delivery"
+    ]
+  }
+}

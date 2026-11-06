@@ -1,0 +1,87 @@
+{
+  "status": "pass",
+  "scope": "Disclosed one-time faucet test grants to actual Privy-managed treasury and Ruddy wallet; not item-sale proceeds or a human trade",
+  "realMoneySpentUsd": 0,
+  "independentHumans": 0,
+  "preflight": {
+    "maximumCombinedBudgetWei": "8000000000000000",
+    "alreadyReservedWei": "55475659200000",
+    "remainingNativeGrantWei": "4000000000000000",
+    "conservativeNewGasHeadroomWei": "1000000000000000"
+  },
+  "recipients": [
+    {
+      "label": "treasury",
+      "address": "0x245167cc2cd6ddb264adb83b49f1b3d910a51f67",
+      "cityBaseUnits": "10000000000000000000000",
+      "nativeWei": "2000000000000000",
+      "actualCityBaseUnits": "10000000000000000000000",
+      "actualNativeWei": "2000000000000000"
+    },
+    {
+      "label": "Ruddy",
+      "address": "0x27f53660a409d14a3acc5f2e82ba9a7077090c96",
+      "cityBaseUnits": "20000000000000000000",
+      "nativeWei": "2000000000000000",
+      "actualCityBaseUnits": "20000000000000000000",
+      "actualNativeWei": "2000000000000000"
+    }
+  ],
+  "terms": {
+    "chainId": 1301,
+    "genesisHash": "0xb7fe0bc9f98ca03294ca0094ff9374cc3e64130b6ec85850d6e260191f48bfe7",
+    "developer": "0x5caec1fd260ad8bb747a3984752d7943bcdc4a54",
+    "token": "0x789dab2f22f0161401523ebe858ce88a3b14fae8",
+    "allocations": [
+      {
+        "label": "treasury",
+        "address": "0x245167cc2cd6ddb264adb83b49f1b3d910a51f67",
+        "cityBaseUnits": "10000000000000000000000",
+        "nativeWei": "2000000000000000"
+      },
+      {
+        "label": "Ruddy",
+        "address": "0x27f53660a409d14a3acc5f2e82ba9a7077090c96",
+        "cityBaseUnits": "20000000000000000000",
+        "nativeWei": "2000000000000000"
+      }
+    ]
+  },
+  "operations": {
+    "treasury-CITY": {
+      "id": "0d97fc1d-4f6c-4541-836b-60f539616a33",
+      "hash": "0xea4656a0770ffcda0cfef45396f434dcd5a84fb3cda0560197e72f418bd9180f",
+      "blockNumber": "66586736",
+      "kind": "CITY",
+      "recipient": "0x245167cc2cd6ddb264adb83b49f1b3d910a51f67",
+      "amount": "10000000000000000000000"
+    },
+    "treasury-native": {
+      "id": "c3b3fe5c-503f-477f-a5f2-ca19d8f0bb69",
+      "hash": "0x861ddbb81d4b93af53ebeb9566b5a0cb682db612fad252f412d70b732d4a9343",
+      "blockNumber": "66586744",
+      "kind": "native",
+      "recipient": "0x245167cc2cd6ddb264adb83b49f1b3d910a51f67",
+      "amount": "2000000000000000"
+    },
+    "Ruddy-CITY": {
+      "id": "29eed661-521a-4bf8-9bea-fbed7db61120",
+      "hash": "0x7f057862b04157080460e657f526a08aa4150714f09d2076e6e63548db307214",
+      "blockNumber": "66586752",
+      "kind": "CITY",
+      "recipient": "0x27f53660a409d14a3acc5f2e82ba9a7077090c96",
+      "amount": "20000000000000000000"
+    },
+    "Ruddy-native": {
+      "id": "bca592e7-e796-4a71-82ad-63bbed35ed4f",
+      "hash": "0x9d42b4f3f9cf28e6ea0d96a0a154911f5a4f2099478cdf0d32900b1f127789dd",
+      "blockNumber": "66586760",
+      "kind": "native",
+      "recipient": "0x27f53660a409d14a3acc5f2e82ba9a7077090c96",
+      "amount": "2000000000000000"
+    }
+  },
+  "grantsOnly": true,
+  "inventoryRemoved": 0,
+  "userSpendingAuthorized": false
+}

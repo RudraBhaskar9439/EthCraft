@@ -1,0 +1,31 @@
+No files changed, compilation skipped
+
+Ran 4 tests for /Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/contracts/AgentCityReputationHook.t.sol:AgentCityReputationHookTest
+[PASS] testForeignRouterCannotBorrowAnotherWalletFeeOrCallHookDirectly() (gas: 2691263)
+[PASS] testOfficialQuoteAndRealSwapUseOnlyActualWalletHistory() (gas: 1913858)
+[PASS] testRouterBindingIsOneTimeAndStaticOrForeignPoolCannotUseHook() (gas: 40453)
+[PASS] testStaleUnavailableReportsHaltCityPurchasesButPreserveRepaymentExits() (gas: 2358737)
+Suite result: ok. 4 passed; 0 failed; 0 skipped; finished in 6.78ms (2.77ms CPU time)
+
+Ran 8 tests for /Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/contracts/AgentCityBank.t.sol:AgentCityBankTest
+[PASS] testAuctionUsesFundedBidsPullRefundsSurplusAndOneSettlement() (gas: 1027015)
+[PASS] testCapsAssetNonceAndOneActiveLoanRefuseWithoutMovingFunds() (gas: 1907063)
+[PASS] testFundingCannotOvercommitAndCancelledReserveHasSinglePullRefund() (gas: 1091654)
+[PASS] testLateRepaymentWithoutAuctionStillRecordsDefaultAndInstantRepaymentDoesNotFarmHistory() (gas: 1406575)
+[PASS] testRepaymentClosesOnceAndRejectedReceiverCannotBlockDebtSettlement() (gas: 969434)
+[PASS] testRepaymentDuringAuctionRefundsBidAndDefaultIsRecordedOnce() (gas: 912127)
+[PASS] testReservedPrincipalRequiresExactBorrowerConsentAndLocksCustody() (gas: 783292)
+[PASS] testShortfallAndUnsoldForeclosureRecordCashLossWithoutInventingRecovery() (gas: 1516499)
+Suite result: ok. 8 passed; 0 failed; 0 skipped; finished in 6.78ms (5.65ms CPU time)
+
+Ran 6 tests for /Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/contracts/BankPayments.t.sol:BankPaymentsTest
+[PASS] testChangedListingRevertsTheEntireSwap() (gas: 766886)
+[PASS] testCompletedWorkKeepsReviewWindowAndExclusiveRefund() (gas: 188843)
+[PASS] testInputCapAndStaleHealthCannotSpend() (gas: 155578)
+[PASS] testOfficialQuoterAndThreeTokenRoutesConserveExactAmounts() (gas: 925259)
+[PASS] testSwapAndBuyDeliversExactNftAndActualSellerPrice() (gas: 879941)
+[PASS] testWorkNeedsFundingInspectionAndRequesterAcceptance() (gas: 218953)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 7.16ms (1.91ms CPU time)
+
+Ran 3 test suites in 11.45ms (20.73ms CPU time): 18 tests passed, 0 failed, 0 skipped (18 total tests)
+2026-11-05T13:44:46.775306Z  WARN evm::traces: failed to flush signature cache err=failed to create file "/Users/rudrabhaskar/.foundry/cache/signatures": Operation not permitted (os error 1)

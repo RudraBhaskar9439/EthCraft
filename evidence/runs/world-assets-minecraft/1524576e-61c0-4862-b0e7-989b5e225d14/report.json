@@ -1,0 +1,744 @@
+{
+  "runId": "1524576e-61c0-4862-b0e7-989b5e225d14",
+  "status": "pass",
+  "scope": "Actual isolated Paper26.3 gear escrow/claim + Anvil31337 contracts + PostgreSQL translation service. Synthetic Discord/Privy principals and unlocked local signers; no real human, live Privy, public-chain or production action.",
+  "checks": [
+    {
+      "name": "REAL Paper named damaged enchanted sword preview/reserve→actual canonical Anvil NFT mint→REAL native token/custody binding",
+      "status": "pass"
+    },
+    {
+      "name": "Actual NFT listing and exact3CITY atomic purchase transfer canonical ownership to the second fixture principal while original equipment stays in native custody",
+      "status": "pass"
+    },
+    {
+      "name": "Actual canonical redemption lock→REAL native asset-release mailbox→Anvil burn→REAL recipient claim preserves byte-exact named Damage7 Sharpness2 equipment with zero extra items/transactions on retry",
+      "status": "pass"
+    }
+  ],
+  "publicTransactions": 0,
+  "productionMinecraftWrites": 0,
+  "sourceHashes": {
+    "service.mjs": "85eeed613bfe4c59fa0f008b1c1103f3812acea4b8641e4938143d1f21bff1af",
+    "canonical.mjs": "49c5a63385e1807dd426db0522f940793cd37f28f7db475b2de8b959d2b12620",
+    "store.mjs": "484501cec1801d989bb7b56263b123f14b92ef23c567c53334cb3953ffe107b3",
+    "managed-policy.mjs": "960bac6a1053c8f3e8595118a79eefbaed0c96d80a1faebae88ee4547808849e",
+    "abis.mjs": "c88114bc728e1014b171b47754329dee474d3830a82d3807fdddc0a94a8d33de"
+  },
+  "ownedAnvil": {
+    "pid": 26915,
+    "address": "127.0.0.1:18559",
+    "chainId": 31337
+  },
+  "manifest": {
+    "schema": "agentcity.world-assets.v1",
+    "environment": "LOCAL_TEST_FIXTURE",
+    "chainId": 31337,
+    "rpcUrl": "http://127.0.0.1:18559",
+    "genesisHash": "0x6e21158588f6a9c387a620b729f4f62b86f611780484a2978749c052e9839af4",
+    "serverId": "0x38685fda2563d2067b680f496326986c74111b87b91ed0b6e237e93ac1b178c9",
+    "deploymentId": "0x2c8add819d6a57cd79ecda8819bc4d281394f71feb2ace67ec04b21fee12f922",
+    "registry": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+    "market": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+    "city": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+    "codeHashes": {
+      "registry": "0x9825094905f226df9f11f142b1f876b56adc56de6215fba350c05d34fb57cc9a",
+      "market": "0x2606a5977585ef49f674127bbfb28563badad4d7b89011b107c9a781e1af866c",
+      "city": "0x4f8a291c047fd92795055b9bfe83fcb8e77058851f1834e0a103f687dea734c1"
+    },
+    "confirmations": 2,
+    "maxPriceBaseUnits": "100000000000000000000",
+    "maxGas": "1000000",
+    "maxNativeCostWei": "8000000000000000"
+  },
+  "paper": {
+    "owner": "world-assets-seam-fixture",
+    "container": "agentcity-world-assets-seam-51a0b601",
+    "runtime": "/mnt/c/Users/Rudransh Shinghal/agentcity-minecraft/.local/world-assets-seam/51a0b601-cfb6-421c-8391-0a92b0093820",
+    "pluginSha256": "c9a108690fad15f8d15702b6d6c67468dab438c6ba5d6837fbf0938b28c02a69",
+    "gamePort": 25606,
+    "apiPort": 25607,
+    "stock": "Exactly one declared plugin-granted named diamond sword, Damage7 Sharpness2 in EscSeller slot8. No other stock introduced by this test.",
+    "infrastructureDisclosure": "New PlayableExperience initializes its disclosed demonstration task-pad chests; seam test must not withdraw them. No original world or inventory was copied.",
+    "fixtureGrant": {
+      "actor": "EscSeller",
+      "count": 1,
+      "item": "minecraft:diamond_sword",
+      "slot": 8,
+      "damage": 7,
+      "sharpness": 2,
+      "name": "Seam fixture blade",
+      "lore": true,
+      "persistentData": true
+    },
+    "dependencies": [
+      {
+        "plugin": "WorldGuard",
+        "version": "7.0.20+2410-0b6c3f1",
+        "release": "7.0.20",
+        "file": "worldguard-bukkit-7.0.20.jar",
+        "url": "https://mediafilez.forgecdn.net/files/9219/599/worldguard-bukkit-7.0.20.jar",
+        "releasePage": "https://dev.bukkit.org/projects/worldguard/files/9219599",
+        "sha256": "8768a49bcbecbb7a413ad134ee72d9871cdf967b7d938e6b96bb0ca72bb1467b",
+        "officialReleaseMd5": "cf5da34dcd48d5b286b4a93b68383b93",
+        "license": "LGPL-3.0-or-later",
+        "licenseUrl": "https://github.com/EngineHub/WorldGuard/blob/7.0.20/LICENSE.txt"
+      },
+      {
+        "plugin": "WorldEdit",
+        "version": "7.4.6+7648-00664b0",
+        "release": "7.4.6",
+        "file": "worldedit-bukkit-7.4.6.jar",
+        "url": "https://hangarcdn.papermc.io/plugins/EngineHub/WorldEdit/versions/7.4.6/PAPER/worldedit-bukkit-7.4.6.jar",
+        "releasePage": "https://hangar.papermc.io/EngineHub/WorldEdit/versions/7.4.6",
+        "sha256": "e0ce67d870ad1fef8a40dd9d7926360caf3bb44722438545d6b20b55f82a0c91",
+        "license": "GPL-3.0-or-later",
+        "licenseUrl": "https://github.com/EngineHub/WorldEdit/blob/7.4.6/LICENSE.txt"
+      }
+    ]
+  },
+  "originalEquipment": {
+    "fingerprint": "79ded3cd684a247dfd99a06add72a07c55072d762669bd0e1d36218ab35008fb",
+    "descriptor": {
+      "material": "minecraft:diamond_sword",
+      "amount": 1,
+      "maxStackSize": 1,
+      "name": "Seam fixture blade",
+      "damage": 7,
+      "maxDurability": 1561,
+      "enchantments": {
+        "minecraft:sharpness": 2
+      },
+      "lore": [
+        "Actual isolated Paper stock; synthetic test owners."
+      ]
+    },
+    "worldName": "agentcity_lobby",
+    "worldUUID": "410465c3-ef6a-4173-a1cf-8def3ee6d163",
+    "selectionSlot": 8
+  },
+  "mint": {
+    "operationId": "real-paper-sword-1524576e-61c0-4862-b0e7-989b5e225d14",
+    "previewId": "d67a0192-c80f-442a-ac46-fb9f5ffbcf25",
+    "action": "mint",
+    "termsDigest": "40477858bf841d8e44067940086415aeff67f8b3081f9a5eca9f4dc5d1368354",
+    "status": "complete",
+    "expiresAtMs": 1793471291628,
+    "terms": {
+      "kind": "item",
+      "worldId": "0xbb1c338eb01120c7c9b5e07f001dbc5e7e93e1b64c6ac33bdb416cba23991dd1",
+      "custodyId": "0x020566cda00231c799605279cf70f32a40ac85051d91a0f6bb6fb3860c940eb8",
+      "inventory": {
+        "sourceId": "e63aeed3-4010-3e23-88e1-19e019f0a248",
+        "sourceKind": "player_inventory",
+        "connectionId": "c7d97264-c439-41e2-af1b-903d6b440abd"
+      },
+      "snapshotHash": "0x79ded3cd684a247dfd99a06add72a07c55072d762669bd0e1d36218ab35008fb",
+      "nativePreview": {
+        "item": "minecraft:diamond_sword",
+        "count": 1,
+        "sellerId": "f5e4cfb1-0600-4e01-93b7-af7f8d0f16af",
+        "sourceId": "e63aeed3-4010-3e23-88e1-19e019f0a248",
+        "previewId": "d67a0192-c80f-442a-ac46-fb9f5ffbcf25",
+        "worldName": "agentcity_lobby",
+        "worldUUID": "410465c3-ef6a-4173-a1cf-8def3ee6d163",
+        "descriptor": {
+          "lore": [
+            "Actual isolated Paper stock; synthetic test owners."
+          ],
+          "name": "Seam fixture blade",
+          "amount": 1,
+          "damage": 7,
+          "material": "minecraft:diamond_sword",
+          "enchantments": {
+            "minecraft:sharpness": 2
+          },
+          "maxStackSize": 1,
+          "maxDurability": 1561
+        },
+        "sourceKind": "player_inventory",
+        "expiresAtMs": 1793471291628,
+        "fingerprint": "79ded3cd684a247dfd99a06add72a07c55072d762669bd0e1d36218ab35008fb",
+        "connectionId": "c7d97264-c439-41e2-af1b-903d6b440abd",
+        "ownerPlayerId": "e63aeed3-4010-3e23-88e1-19e019f0a248",
+        "requestedSlot": 8,
+        "selectionSlot": 8,
+        "sellerAccountId": "e63aeed3-4010-3e23-88e1-19e019f0a248"
+      }
+    },
+    "tokenId": "1",
+    "proofs": [
+      {
+        "confirmed": true,
+        "chainId": 31337,
+        "registry": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+        "deploymentId": "0x2c8add819d6a57cd79ecda8819bc4d281394f71feb2ace67ec04b21fee12f922",
+        "transactionHash": "0xc525eed90daa836fc0679105447539ad67dd6dbd4733784d649eefdf72b1f552",
+        "blockNumber": "8",
+        "blockHash": "0x576acbfcfbb1c11238848e8f42d4966bc4473af40de5b5bae48aa21c351a7c65",
+        "confirmations": 2,
+        "observedAtMs": 1793470992065,
+        "logIndex": 2,
+        "eventName": "AssetRegistered",
+        "args": {
+          "tokenId": "1",
+          "kind": 1,
+          "serverId": "0x38685fda2563d2067b680f496326986c74111b87b91ed0b6e237e93ac1b178c9",
+          "worldId": "0xbb1c338eb01120c7c9b5e07f001dbc5e7e93e1b64c6ac33bdb416cba23991dd1",
+          "custodyId": "0x020566cda00231c799605279cf70f32a40ac85051d91a0f6bb6fb3860c940eb8",
+          "snapshotHash": "0x79ded3cd684a247dfd99a06add72a07c55072d762669bd0e1d36218ab35008fb",
+          "nativeReceiptId": "0xdf7c12d0c8d3607a4c90706b92d5fbc3a728058173a76b130b1309b685b582fa",
+          "parcelKey": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "receiptHash": "f106538628e00894b17fcbd4e3f4ca79c79980d22a46ea5c9d76754dd1445ebf",
+        "logHash": "79454fc76e42253c21b54bb269d62c1d92a8f6cccb84547c68787c5de3a5c821"
+      }
+    ],
+    "message": "Confirmed on the pinned test chain; rights still require a fresh canonical native projection."
+  },
+  "listing": {
+    "operationId": "real-paper-sword-list-1524576e-61c0-4862-b0e7-989b5e225d14",
+    "previewId": "56cecffa-8135-4d97-a170-13e87f89c470",
+    "action": "list",
+    "termsDigest": "35b087e37536d2cc6f71d35b1f8245bf07a301159e04d4b72f33f9fdf9e1721f",
+    "status": "complete",
+    "expiresAtMs": 1793471292281,
+    "terms": {
+      "asset": {
+        "kind": 1,
+        "cellX": 0,
+        "cellZ": 0,
+        "owner": "0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc",
+        "tokenId": "1",
+        "worldId": "0xbb1c338eb01120c7c9b5e07f001dbc5e7e93e1b64c6ac33bdb416cba23991dd1",
+        "redeemed": false,
+        "revision": "1",
+        "serverId": "0x38685fda2563d2067b680f496326986c74111b87b91ed0b6e237e93ac1b178c9",
+        "custodyId": "0x020566cda00231c799605279cf70f32a40ac85051d91a0f6bb6fb3860c940eb8",
+        "parcelKey": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "snapshotHash": "0x79ded3cd684a247dfd99a06add72a07c55072d762669bd0e1d36218ab35008fb",
+        "ownershipNonce": "1",
+        "nativeReceiptId": "0xdf7c12d0c8d3607a4c90706b92d5fbc3a728058173a76b130b1309b685b582fa",
+        "redemptionPending": false
+      },
+      "price": "3000000000000000000",
+      "expiry": 1793474592,
+      "backing": {
+        "kind": "item",
+        "proof": {
+          "args": {
+            "kind": 1,
+            "tokenId": "1",
+            "worldId": "0xbb1c338eb01120c7c9b5e07f001dbc5e7e93e1b64c6ac33bdb416cba23991dd1",
+            "serverId": "0x38685fda2563d2067b680f496326986c74111b87b91ed0b6e237e93ac1b178c9",
+            "custodyId": "0x020566cda00231c799605279cf70f32a40ac85051d91a0f6bb6fb3860c940eb8",
+            "parcelKey": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "snapshotHash": "0x79ded3cd684a247dfd99a06add72a07c55072d762669bd0e1d36218ab35008fb",
+            "nativeReceiptId": "0xdf7c12d0c8d3607a4c90706b92d5fbc3a728058173a76b130b1309b685b582fa"
+          },
+          "chainId": 31337,
+          "logHash": "79454fc76e42253c21b54bb269d62c1d92a8f6cccb84547c68787c5de3a5c821",
+          "logIndex": 2,
+          "registry": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+          "blockHash": "0x576acbfcfbb1c11238848e8f42d4966bc4473af40de5b5bae48aa21c351a7c65",
+          "confirmed": true,
+          "eventName": "AssetRegistered",
+          "blockNumber": "8",
+          "receiptHash": "f106538628e00894b17fcbd4e3f4ca79c79980d22a46ea5c9d76754dd1445ebf",
+          "deploymentId": "0x2c8add819d6a57cd79ecda8819bc4d281394f71feb2ace67ec04b21fee12f922",
+          "observedAtMs": 1793470992065,
+          "confirmations": 2,
+          "transactionHash": "0xc525eed90daa836fc0679105447539ad67dd6dbd4733784d649eefdf72b1f552"
+        },
+        "tokenId": "1",
+        "worldId": "0xbb1c338eb01120c7c9b5e07f001dbc5e7e93e1b64c6ac33bdb416cba23991dd1",
+        "parcelId": null,
+        "revision": "1",
+        "descriptor": {
+          "lore": [
+            "Actual isolated Paper stock; synthetic test owners."
+          ],
+          "name": "Seam fixture blade",
+          "amount": 1,
+          "damage": 7,
+          "material": "minecraft:diamond_sword",
+          "enchantments": {
+            "minecraft:sharpness": 2
+          },
+          "maxStackSize": 1,
+          "maxDurability": 1561
+        },
+        "fingerprint": "79ded3cd684a247dfd99a06add72a07c55072d762669bd0e1d36218ab35008fb",
+        "termsDigest": "40477858bf841d8e44067940086415aeff67f8b3081f9a5eca9f4dc5d1368354",
+        "snapshotHash": "0x79ded3cd684a247dfd99a06add72a07c55072d762669bd0e1d36218ab35008fb",
+        "nativeListingId": "d67a0192-c80f-442a-ac46-fb9f5ffbcf25",
+        "nativeReceiptId": "0xdf7c12d0c8d3607a4c90706b92d5fbc3a728058173a76b130b1309b685b582fa",
+        "catalogTermsDigest": null
+      }
+    },
+    "tokenId": null,
+    "proofs": [
+      {
+        "confirmed": true,
+        "chainId": 31337,
+        "registry": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+        "deploymentId": "0x2c8add819d6a57cd79ecda8819bc4d281394f71feb2ace67ec04b21fee12f922",
+        "transactionHash": "0x7fe98c738e6928858f5b02057674e53de232eb08a7f11463c9c33bc7eb901f92",
+        "blockNumber": "10",
+        "blockHash": "0xf628d58668a77a5e4554ee83e105bffa2b294ec9d13506bfeb685ce7b86789e7",
+        "confirmations": 2,
+        "observedAtMs": 1793470993043,
+        "logIndex": null,
+        "eventName": null,
+        "args": {},
+        "receiptHash": "e485acb2b959d740dd5324b5b4a172a5c7f2ea9acd409197fd40de21ca4802f0",
+        "logHash": null
+      },
+      {
+        "confirmed": true,
+        "chainId": 31337,
+        "registry": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+        "deploymentId": "0x2c8add819d6a57cd79ecda8819bc4d281394f71feb2ace67ec04b21fee12f922",
+        "transactionHash": "0x9d4da956e4b627791f97c321d8d30d52eb84b0d5545e2bc7b3947b751b301f87",
+        "blockNumber": "12",
+        "blockHash": "0xaf91fbe8d22800dabef699d8b1e6ece155e70fb3cf97230df362ca1631e76c58",
+        "confirmations": 2,
+        "observedAtMs": 1793470994047,
+        "logIndex": 0,
+        "eventName": "AssetListed",
+        "args": {
+          "tokenId": "1",
+          "seller": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+          "listingNonce": "1",
+          "price": "3000000000000000000",
+          "expiry": "1793474592",
+          "ownershipNonce": "1",
+          "revision": "1"
+        },
+        "receiptHash": "db7a9e92714168fb0837400c2ce8e0b2db37570673963aebb878af33e44f9334",
+        "logHash": "be8f12ce181e6d07e2fb3c4151e52616d4a2bdb910a3adfc8f12c1d1714c0989"
+      }
+    ],
+    "message": "Confirmed on the pinned test chain; rights still require a fresh canonical native projection."
+  },
+  "purchase": {
+    "operationId": "real-paper-sword-buy-1524576e-61c0-4862-b0e7-989b5e225d14",
+    "previewId": "844c8bc8-acec-431d-a603-4ef0cd52d2c4",
+    "action": "buy",
+    "termsDigest": "f5b38f28f05b3763aee4c7dd651a013f931387c7b51931be2715cb555d8d8484",
+    "status": "complete",
+    "expiresAtMs": 1793471294097,
+    "terms": {
+      "asset": {
+        "kind": 1,
+        "cellX": 0,
+        "cellZ": 0,
+        "owner": "0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc",
+        "tokenId": "1",
+        "worldId": "0xbb1c338eb01120c7c9b5e07f001dbc5e7e93e1b64c6ac33bdb416cba23991dd1",
+        "redeemed": false,
+        "revision": "1",
+        "serverId": "0x38685fda2563d2067b680f496326986c74111b87b91ed0b6e237e93ac1b178c9",
+        "custodyId": "0x020566cda00231c799605279cf70f32a40ac85051d91a0f6bb6fb3860c940eb8",
+        "parcelKey": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "snapshotHash": "0x79ded3cd684a247dfd99a06add72a07c55072d762669bd0e1d36218ab35008fb",
+        "ownershipNonce": "1",
+        "nativeReceiptId": "0xdf7c12d0c8d3607a4c90706b92d5fbc3a728058173a76b130b1309b685b582fa",
+        "redemptionPending": false
+      },
+      "backing": {
+        "kind": "item",
+        "proof": {
+          "args": {
+            "kind": 1,
+            "tokenId": "1",
+            "worldId": "0xbb1c338eb01120c7c9b5e07f001dbc5e7e93e1b64c6ac33bdb416cba23991dd1",
+            "serverId": "0x38685fda2563d2067b680f496326986c74111b87b91ed0b6e237e93ac1b178c9",
+            "custodyId": "0x020566cda00231c799605279cf70f32a40ac85051d91a0f6bb6fb3860c940eb8",
+            "parcelKey": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "snapshotHash": "0x79ded3cd684a247dfd99a06add72a07c55072d762669bd0e1d36218ab35008fb",
+            "nativeReceiptId": "0xdf7c12d0c8d3607a4c90706b92d5fbc3a728058173a76b130b1309b685b582fa"
+          },
+          "chainId": 31337,
+          "logHash": "79454fc76e42253c21b54bb269d62c1d92a8f6cccb84547c68787c5de3a5c821",
+          "logIndex": 2,
+          "registry": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+          "blockHash": "0x576acbfcfbb1c11238848e8f42d4966bc4473af40de5b5bae48aa21c351a7c65",
+          "confirmed": true,
+          "eventName": "AssetRegistered",
+          "blockNumber": "8",
+          "receiptHash": "f106538628e00894b17fcbd4e3f4ca79c79980d22a46ea5c9d76754dd1445ebf",
+          "deploymentId": "0x2c8add819d6a57cd79ecda8819bc4d281394f71feb2ace67ec04b21fee12f922",
+          "observedAtMs": 1793470992065,
+          "confirmations": 2,
+          "transactionHash": "0xc525eed90daa836fc0679105447539ad67dd6dbd4733784d649eefdf72b1f552"
+        },
+        "tokenId": "1",
+        "worldId": "0xbb1c338eb01120c7c9b5e07f001dbc5e7e93e1b64c6ac33bdb416cba23991dd1",
+        "parcelId": null,
+        "revision": "1",
+        "descriptor": {
+          "lore": [
+            "Actual isolated Paper stock; synthetic test owners."
+          ],
+          "name": "Seam fixture blade",
+          "amount": 1,
+          "damage": 7,
+          "material": "minecraft:diamond_sword",
+          "enchantments": {
+            "minecraft:sharpness": 2
+          },
+          "maxStackSize": 1,
+          "maxDurability": 1561
+        },
+        "fingerprint": "79ded3cd684a247dfd99a06add72a07c55072d762669bd0e1d36218ab35008fb",
+        "termsDigest": "40477858bf841d8e44067940086415aeff67f8b3081f9a5eca9f4dc5d1368354",
+        "snapshotHash": "0x79ded3cd684a247dfd99a06add72a07c55072d762669bd0e1d36218ab35008fb",
+        "nativeListingId": "d67a0192-c80f-442a-ac46-fb9f5ffbcf25",
+        "nativeReceiptId": "0xdf7c12d0c8d3607a4c90706b92d5fbc3a728058173a76b130b1309b685b582fa",
+        "catalogTermsDigest": null
+      },
+      "listing": {
+        "nonce": "1",
+        "price": "3000000000000000000",
+        "expiry": "1793474592",
+        "seller": "0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc",
+        "revision": "1",
+        "ownershipNonce": "1"
+      }
+    },
+    "tokenId": null,
+    "proofs": [
+      {
+        "confirmed": true,
+        "chainId": 31337,
+        "registry": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+        "deploymentId": "0x2c8add819d6a57cd79ecda8819bc4d281394f71feb2ace67ec04b21fee12f922",
+        "transactionHash": "0xdc74529d47d10b0b2f24bd6a1ce035262b3a3730073a47e5ddb03d169a30b11b",
+        "blockNumber": "14",
+        "blockHash": "0xcada0cc0aa27332459f396b4f7c51abc74ba222b3fd61b08853f0a7fadbae9b6",
+        "confirmations": 2,
+        "observedAtMs": 1793470995050,
+        "logIndex": null,
+        "eventName": null,
+        "args": {},
+        "receiptHash": "f85142aacb6cacb5a4b6fbae3f404c834a7ae9b8e60361f24c0c407fed2ca86d",
+        "logHash": null
+      },
+      {
+        "confirmed": true,
+        "chainId": 31337,
+        "registry": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+        "deploymentId": "0x2c8add819d6a57cd79ecda8819bc4d281394f71feb2ace67ec04b21fee12f922",
+        "transactionHash": "0x11cf10a23c61ca2fa724c524165488710356d32d95f699a8141a443274ed50cf",
+        "blockNumber": "16",
+        "blockHash": "0x7235f35accd514459e579090e753abe349320d2eeed020b29bacb0aff03e48c0",
+        "confirmations": 2,
+        "observedAtMs": 1793471000064,
+        "logIndex": 3,
+        "eventName": "AssetPurchased",
+        "args": {
+          "tokenId": "1",
+          "seller": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+          "buyer": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+          "price": "3000000000000000000",
+          "listingNonce": "1",
+          "ownershipNonce": "2",
+          "revision": "1"
+        },
+        "receiptHash": "4e301d79d48e448cde3146a538f34a6e8e40b645783d598a6c8078157142d1c9",
+        "logHash": "c1e5dc68998843125007ca58ce748bb067d556fc75fb91673a122530d55d615a"
+      }
+    ],
+    "message": "Confirmed on the pinned test chain; rights still require a fresh canonical native projection."
+  },
+  "redemption": {
+    "operationId": "real-paper-sword-redeem-1524576e-61c0-4862-b0e7-989b5e225d14",
+    "previewId": "1b0ed880-d1df-4544-a0cd-30065d09010b",
+    "action": "redeem",
+    "termsDigest": "23a13e2702aa3215a420e2649cd1f2aa0c9dec5b393893299bdd6abfde09281b",
+    "status": "complete",
+    "expiresAtMs": 1793471300165,
+    "terms": {
+      "asset": {
+        "kind": 1,
+        "cellX": 0,
+        "cellZ": 0,
+        "owner": "0x90f79bf6eb2c4f870365e785982e1f101e93b906",
+        "tokenId": "1",
+        "worldId": "0xbb1c338eb01120c7c9b5e07f001dbc5e7e93e1b64c6ac33bdb416cba23991dd1",
+        "redeemed": false,
+        "revision": "1",
+        "serverId": "0x38685fda2563d2067b680f496326986c74111b87b91ed0b6e237e93ac1b178c9",
+        "custodyId": "0x020566cda00231c799605279cf70f32a40ac85051d91a0f6bb6fb3860c940eb8",
+        "parcelKey": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "snapshotHash": "0x79ded3cd684a247dfd99a06add72a07c55072d762669bd0e1d36218ab35008fb",
+        "ownershipNonce": "2",
+        "nativeReceiptId": "0xdf7c12d0c8d3607a4c90706b92d5fbc3a728058173a76b130b1309b685b582fa",
+        "redemptionPending": false
+      },
+      "backing": {
+        "kind": "item",
+        "proof": {
+          "args": {
+            "kind": 1,
+            "tokenId": "1",
+            "worldId": "0xbb1c338eb01120c7c9b5e07f001dbc5e7e93e1b64c6ac33bdb416cba23991dd1",
+            "serverId": "0x38685fda2563d2067b680f496326986c74111b87b91ed0b6e237e93ac1b178c9",
+            "custodyId": "0x020566cda00231c799605279cf70f32a40ac85051d91a0f6bb6fb3860c940eb8",
+            "parcelKey": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "snapshotHash": "0x79ded3cd684a247dfd99a06add72a07c55072d762669bd0e1d36218ab35008fb",
+            "nativeReceiptId": "0xdf7c12d0c8d3607a4c90706b92d5fbc3a728058173a76b130b1309b685b582fa"
+          },
+          "chainId": 31337,
+          "logHash": "79454fc76e42253c21b54bb269d62c1d92a8f6cccb84547c68787c5de3a5c821",
+          "logIndex": 2,
+          "registry": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+          "blockHash": "0x576acbfcfbb1c11238848e8f42d4966bc4473af40de5b5bae48aa21c351a7c65",
+          "confirmed": true,
+          "eventName": "AssetRegistered",
+          "blockNumber": "8",
+          "receiptHash": "f106538628e00894b17fcbd4e3f4ca79c79980d22a46ea5c9d76754dd1445ebf",
+          "deploymentId": "0x2c8add819d6a57cd79ecda8819bc4d281394f71feb2ace67ec04b21fee12f922",
+          "observedAtMs": 1793470992065,
+          "confirmations": 2,
+          "transactionHash": "0xc525eed90daa836fc0679105447539ad67dd6dbd4733784d649eefdf72b1f552"
+        },
+        "tokenId": "1",
+        "worldId": "0xbb1c338eb01120c7c9b5e07f001dbc5e7e93e1b64c6ac33bdb416cba23991dd1",
+        "parcelId": null,
+        "revision": "1",
+        "descriptor": {
+          "lore": [
+            "Actual isolated Paper stock; synthetic test owners."
+          ],
+          "name": "Seam fixture blade",
+          "amount": 1,
+          "damage": 7,
+          "material": "minecraft:diamond_sword",
+          "enchantments": {
+            "minecraft:sharpness": 2
+          },
+          "maxStackSize": 1,
+          "maxDurability": 1561
+        },
+        "fingerprint": "79ded3cd684a247dfd99a06add72a07c55072d762669bd0e1d36218ab35008fb",
+        "termsDigest": "40477858bf841d8e44067940086415aeff67f8b3081f9a5eca9f4dc5d1368354",
+        "snapshotHash": "0x79ded3cd684a247dfd99a06add72a07c55072d762669bd0e1d36218ab35008fb",
+        "nativeListingId": "d67a0192-c80f-442a-ac46-fb9f5ffbcf25",
+        "nativeReceiptId": "0xdf7c12d0c8d3607a4c90706b92d5fbc3a728058173a76b130b1309b685b582fa",
+        "catalogTermsDigest": null
+      }
+    },
+    "tokenId": null,
+    "proofs": [
+      {
+        "confirmed": true,
+        "chainId": 31337,
+        "registry": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+        "deploymentId": "0x2c8add819d6a57cd79ecda8819bc4d281394f71feb2ace67ec04b21fee12f922",
+        "transactionHash": "0x58bf944a0db3721aea6f44e927b80f7df0742daa08625ee058203ba85f77a743",
+        "blockNumber": "18",
+        "blockHash": "0x8b12ae069a6135c3fa32ba2bd937533343c27bf7b1843ff87046863cf1ae8bb2",
+        "confirmations": 2,
+        "observedAtMs": 1793471001049,
+        "logIndex": 0,
+        "eventName": "RedemptionRequested",
+        "args": {
+          "tokenId": "1",
+          "claimId": "0xdab21aa772fd9dacb1d4e5af29b5747c1b6d14370ca87b610794b8c90aa70a63",
+          "owner": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+          "ownershipNonce": "3"
+        },
+        "receiptHash": "ea29121083f3fa6ecfe59cae135802cc7a81f7040bb2bb22fb32bc6b5d3658d2",
+        "logHash": "f1c1d45ae44e8cd5a2fc33529f4d882c20a429dd0b6cf4babcccb9a5ce04c9a3"
+      },
+      {
+        "confirmed": true,
+        "chainId": 31337,
+        "registry": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+        "deploymentId": "0x2c8add819d6a57cd79ecda8819bc4d281394f71feb2ace67ec04b21fee12f922",
+        "transactionHash": "0xc1eebf2e46c58332aad396e7e8aa653fe5b7a8161abd21c0f6c8b428fd08e62f",
+        "blockNumber": "20",
+        "blockHash": "0x9670a729eb2a9fad0be0e78ede576d402348e4a8504c95f7e7f40b6077c80c83",
+        "confirmations": 2,
+        "observedAtMs": 1793471002049,
+        "logIndex": 2,
+        "eventName": "RedemptionFinalized",
+        "args": {
+          "tokenId": "1",
+          "claimId": "0xdab21aa772fd9dacb1d4e5af29b5747c1b6d14370ca87b610794b8c90aa70a63",
+          "nativeDeliveryReceiptId": "0xed690ac1a6071863cc888ba9dcdf4c7cd292762d172883e0fb2a3d26d977120a",
+          "owner": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+        },
+        "receiptHash": "042563d52e04101e769ad3c9339419d3ffe226d60466614c48f0c59c7c305e91",
+        "logHash": "ff94c08f5df13d67065154f073c8de32790bd08383850d6278fa36eb5b625aad"
+      }
+    ],
+    "message": "Canonical redemption finalized. Exact native items remain backed in the owner mailbox until claimed."
+  },
+  "claim": {
+    "operationId": "d9c6782b-56cd-4d59-a1f1-3e47cae21900",
+    "mailboxId": "d67a0192-c80f-442a-ac46-fb9f5ffbcf25",
+    "ownerId": "11ada7e8-9bb3-4f74-b4e6-cad8e2df6f30",
+    "playerId": "7bd9f890-10f6-3c18-90ec-5f4d45f465d6",
+    "connectionId": "cd9f77bc-8c4c-47c3-942f-e2890176238b",
+    "listingId": "d67a0192-c80f-442a-ac46-fb9f5ffbcf25",
+    "custodyId": "d67a0192-c80f-442a-ac46-fb9f5ffbcf25",
+    "fingerprint": "79ded3cd684a247dfd99a06add72a07c55072d762669bd0e1d36218ab35008fb",
+    "item": "minecraft:diamond_sword",
+    "count": 1,
+    "completedAtMs": 1793471002343,
+    "claimed": true
+  },
+  "finalEquipment": {
+    "fingerprint": "79ded3cd684a247dfd99a06add72a07c55072d762669bd0e1d36218ab35008fb",
+    "descriptor": {
+      "material": "minecraft:diamond_sword",
+      "amount": 1,
+      "maxStackSize": 1,
+      "name": "Seam fixture blade",
+      "damage": 7,
+      "maxDurability": 1561,
+      "enchantments": {
+        "minecraft:sharpness": 2
+      },
+      "lore": [
+        "Actual isolated Paper stock; synthetic test owners."
+      ]
+    }
+  },
+  "conservation": {
+    "declaredFixtureSwords": 1,
+    "finalSeller": 0,
+    "finalBuyer": 1,
+    "repeatedClaimAdditionalItems": 0,
+    "sameOperationAdditionalTransactions": 0
+  },
+  "chainTransactions": [
+    {
+      "operationId": "9a422c40-b3d1-4a67-ae68-49a13f91ea21",
+      "transactionHash": "0xc525eed90daa836fc0679105447539ad67dd6dbd4733784d649eefdf72b1f552"
+    },
+    {
+      "operationId": "1ada8c91-d76f-42fc-a8b8-b4f3e9a7c41a",
+      "transactionHash": "0x7fe98c738e6928858f5b02057674e53de232eb08a7f11463c9c33bc7eb901f92"
+    },
+    {
+      "operationId": "d98a34bc-f899-48e0-af1e-38f53b41d57d",
+      "transactionHash": "0x9d4da956e4b627791f97c321d8d30d52eb84b0d5545e2bc7b3947b751b301f87"
+    },
+    {
+      "operationId": "2cf1a1bd-feb3-4b48-a65e-8ef17070626f",
+      "transactionHash": "0xdc74529d47d10b0b2f24bd6a1ce035262b3a3730073a47e5ddb03d169a30b11b"
+    },
+    {
+      "operationId": "35ba77a5-b59b-479c-af34-ee91d46b8e23",
+      "transactionHash": "0x11cf10a23c61ca2fa724c524165488710356d32d95f699a8141a443274ed50cf"
+    },
+    {
+      "operationId": "d601e1cb-f951-4eb5-a302-96258026f819",
+      "transactionHash": "0x58bf944a0db3721aea6f44e927b80f7df0742daa08625ee058203ba85f77a743"
+    },
+    {
+      "operationId": "21c53bc6-0d01-4aa7-aa38-3695e56c7866",
+      "transactionHash": "0xc1eebf2e46c58332aad396e7e8aa653fe5b7a8161abd21c0f6c8b428fd08e62f"
+    }
+  ],
+  "nativeCalls": [
+    {
+      "path": "discord/reserve",
+      "operationId": null
+    },
+    {
+      "path": "session?playerId=e63aeed3-4010-3e23-88e1-19e019f0a248",
+      "operationId": null
+    },
+    {
+      "path": "discord/approve",
+      "operationId": null
+    },
+    {
+      "path": "session?playerId=e63aeed3-4010-3e23-88e1-19e019f0a248",
+      "operationId": null
+    },
+    {
+      "path": "discord/reserve",
+      "operationId": null
+    },
+    {
+      "path": "session?playerId=7bd9f890-10f6-3c18-90ec-5f4d45f465d6",
+      "operationId": null
+    },
+    {
+      "path": "discord/approve",
+      "operationId": null
+    },
+    {
+      "path": "session?playerId=7bd9f890-10f6-3c18-90ec-5f4d45f465d6",
+      "operationId": null
+    },
+    {
+      "path": "session?playerId=e63aeed3-4010-3e23-88e1-19e019f0a248",
+      "operationId": null
+    },
+    {
+      "path": "escrow/preview",
+      "operationId": "d67a0192-c80f-442a-ac46-fb9f5ffbcf25"
+    },
+    {
+      "path": "escrow/status",
+      "operationId": "327b9da8-b4dc-4a79-aff6-9442a9153ca5"
+    },
+    {
+      "path": "escrow/authorize",
+      "operationId": "327b9da8-b4dc-4a79-aff6-9442a9153ca5"
+    },
+    {
+      "path": "escrow/reserve",
+      "operationId": "327b9da8-b4dc-4a79-aff6-9442a9153ca5"
+    },
+    {
+      "path": "escrow/asset-configure",
+      "operationId": "e41bab60-7935-4c85-a9c0-60d338ab777a"
+    },
+    {
+      "path": "escrow/asset-bind",
+      "operationId": "61d71807-7f45-49c7-a737-970b74f6c933"
+    },
+    {
+      "path": "escrow/asset-configure",
+      "operationId": "e41bab60-7935-4c85-a9c0-60d338ab777a"
+    },
+    {
+      "path": "escrow/asset-release",
+      "operationId": "5a034b58-f123-434b-aa69-4c84674afd89"
+    },
+    {
+      "path": "escrow/mailbox",
+      "operationId": null
+    },
+    {
+      "path": "session?playerId=7bd9f890-10f6-3c18-90ec-5f4d45f465d6",
+      "operationId": null
+    },
+    {
+      "path": "escrow/claim",
+      "operationId": "d9c6782b-56cd-4d59-a1f1-3e47cae21900"
+    },
+    {
+      "path": "escrow/preview",
+      "operationId": "b51dfdd1-d7f5-4092-a5d6-e58944432707"
+    },
+    {
+      "path": "escrow/claim",
+      "operationId": "d9c6782b-56cd-4d59-a1f1-3e47cae21900"
+    },
+    {
+      "path": "escrow/status",
+      "operationId": null
+    }
+  ],
+  "localTransactions": 7,
+  "finishedAt": "2026-10-31T18:23:22.898Z"
+}

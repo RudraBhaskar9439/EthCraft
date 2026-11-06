@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "checks": [
+    "fixed wallet assets and strict browser headers",
+    "unprepared or missing-capability request refused",
+    "foreign submission origin refused",
+    "oversized signing submission refused"
+  ],
+  "realHumanApprovals": 0,
+  "blockchainTransactions": 0
+}

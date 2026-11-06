@@ -1,0 +1,15 @@
+{
+  "status": "fail",
+  "scope": "Actual owned Paper startup after a real pending join was persisted; no state reset",
+  "pluginSha256": "f0896de0ec08660c013bf3e5276785dd645c7857050e4d3e0937e1a7794335d7",
+  "observedLog": [
+    "[12:49:41 INFO]: [AgentCity] Enabling AgentCity v0.1.0",
+    "[12:49:44 ERROR]: [AgentCity] AgentCity startup failed closed: playable_start_failed",
+    "[12:49:45 INFO]: Stopping server",
+    "[12:49:45 INFO]: [AgentCity] Disabling AgentCity v0.1.0"
+  ],
+  "persistedStateSha256": "490ff82f9c0154df15059da1b7b86b69ce3d9b44d802fb5050fde7c9edb182e4",
+  "diagnosis": "StrictJson.object rejects decimal numeric tokens, while persisted Bukkit locations contain decimal positions. This is an inference from the actual persisted state and parser source; a focused parser check and restart will verify the correction.",
+  "worldAndPlayerStatePreserved": true,
+  "publicTransactions": 0
+}

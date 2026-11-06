@@ -1,0 +1,36 @@
+{
+  "schema": "agentcity.mumbai-city-native-check.v1",
+  "runId": "69c448f9-1c4b-4fb3-84e4-9723ace93fe7",
+  "status": "fail",
+  "isolatedId": "b3148af2d9a146aa8bfcfa5a1a4be235",
+  "pluginSha256": "33cd8c66744b4890e1290f0f74a47778e15fce8af0979ef2d8359388d41e9420",
+  "serverId": "laptop-bank-1ce53d39d114410b90f72599ebae8b07",
+  "scope": "Actual isolated Paper and disclosed offline controlled native clients; no real user or independent-human qualification",
+  "publicTransactions": 0,
+  "walletSignatures": 0,
+  "paidModelCalls": 0,
+  "checks": [
+    {
+      "name": "Actual Paper parses the template block states; seven world identities, economic namespace and three legacy task regions are preserved with separate new Mumbai slots",
+      "status": "pass",
+      "nativeValidatedBlockStates": 22
+    },
+    {
+      "name": "Unapproved visitor remains frozen in the Mumbai arrival gate without an agent request or inventory change",
+      "status": "pass"
+    }
+  ],
+  "messages": [],
+  "fixtureShopResponses": true,
+  "error": "The expression evaluated to a falsy value:\n\n  assert(floor&&floor.boundingBox==='block')\n",
+  "finishedAt": "2026-11-06T02:22:38.208Z",
+  "sources": {
+    "plugin/src/main/java/org/agentcity/paper/UniRockBank.java": "9a968e4fa54714db65b9bc5ec7c47605c0dc5399222ff5f0a2d4a046c6dd6964",
+    "plugin/src/main/java/org/agentcity/paper/MumbaiWorld.java": "377eafd37a9795f0141530a53cc249e3cab20829f6ac43bc6501bcdff7f63d62",
+    "plugin/src/main/java/org/agentcity/paper/PlayableExperience.java": "61d58ca0a4be83eff7d42547808bf2046dc674553371276591b18e21f20f11e1",
+    "plugin/src/main/java/org/agentcity/paper/InventoryMarketplace.java": "b105607702d2569ba15af5d8969eaef2f5f4cb3e992816d2b2638574033cff39",
+    "plugin/src/main/java/org/agentcity/paper/AgentTaskProtection.java": "53645a90e14a86bbd0472bb4b940b74422f7476a500046814a3ed1be2f7336b5",
+    "scripts/mumbai_city_host.py": "c830731df62df6b614cc0368c101d98f443c6645fb6fe995abb4c54098d8e19d",
+    "tests/maps/mumbai-city-visit.mjs": "8102b578339f30d44ce1287d9280e4551d80d96a4a5a6909fb91ec490f1cbbc2"
+  }
+}

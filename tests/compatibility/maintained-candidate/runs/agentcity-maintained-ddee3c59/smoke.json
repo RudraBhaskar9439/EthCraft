@@ -1,0 +1,131 @@
+{
+  "status": "fail",
+  "scope": "isolated non-token maintained candidate smoke; no adoption",
+  "clientVersion": "1.21.11",
+  "scriptedPlayers": true,
+  "independentHumans": 0,
+  "checks": [],
+  "serverPositions": [
+    {
+      "player": "WorldBuilder",
+      "data": {
+        "teleportId": 1,
+        "x": -22.5,
+        "y": -60,
+        "z": -4.5,
+        "dx": 0,
+        "dy": 0,
+        "dz": 0,
+        "yaw": 0,
+        "pitch": 0,
+        "flags": {
+          "_value": 0,
+          "x": false,
+          "y": false,
+          "z": false,
+          "yaw": false,
+          "pitch": false,
+          "dx": false,
+          "dy": false,
+          "dz": false,
+          "yawDelta": false
+        }
+      }
+    },
+    {
+      "player": "WorldBuilder",
+      "data": {
+        "teleportId": 2,
+        "x": -14.5,
+        "y": 81,
+        "z": 3.5,
+        "dx": 0,
+        "dy": 0,
+        "dz": 0,
+        "yaw": 0,
+        "pitch": 0,
+        "flags": {
+          "_value": 0,
+          "x": false,
+          "y": false,
+          "z": false,
+          "yaw": false,
+          "pitch": false,
+          "dx": false,
+          "dy": false,
+          "dz": false,
+          "yawDelta": false
+        }
+      }
+    }
+  ],
+  "movement": [
+    {
+      "player": "WorldBuilder",
+      "packet": "position_look",
+      "data": {
+        "x": -22.5,
+        "y": -60,
+        "z": -4.5,
+        "yaw": 0,
+        "pitch": 0,
+        "onGround": false,
+        "time": 0,
+        "flags": {
+          "onGround": false
+        }
+      },
+      "nonfinite": []
+    },
+    {
+      "player": "WorldBuilder",
+      "packet": "position_look",
+      "data": {
+        "x": -14.5,
+        "y": 81,
+        "z": 3.5,
+        "yaw": 0,
+        "pitch": 0,
+        "onGround": false,
+        "time": 0,
+        "flags": {
+          "onGround": false
+        }
+      },
+      "nonfinite": []
+    },
+    {
+      "player": "WorldBuilder",
+      "packet": "position",
+      "data": {
+        "x": -14.5,
+        "y": 81,
+        "z": 3.5,
+        "yaw": 0,
+        "pitch": 0,
+        "onGround": false,
+        "time": 0,
+        "flags": {
+          "onGround": false
+        }
+      },
+      "nonfinite": []
+    },
+    {
+      "player": "WorldBuilder",
+      "packet": "flying",
+      "data": {
+        "onGround": true,
+        "flags": {
+          "onGround": true
+        }
+      },
+      "nonfinite": []
+    }
+  ],
+  "connectionError": "WorldBuilder: {\"type\":\"compound\",\"value\":{\"translate\":{\"type\":\"string\",\"value\":\"multiplayer.disconnect.invalid_player_movement\"}}}",
+  "error": {
+    "name": "Error",
+    "message": "Timeout waiting for 24 chunks to load after 10000ms"
+  }
+}

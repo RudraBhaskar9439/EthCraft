@@ -1,0 +1,34 @@
+{
+  "status": "pass",
+  "scope": "Retained TaskTester native collection and agent-inventory sale; no world reset, stock grant, blockchain or independent-human claim",
+  "independentHumansVerified": 0,
+  "publicTransactions": 0,
+  "startedAt": "2026-10-31T07:22:25.358Z",
+  "checks": [
+    {
+      "name": "retained-world-and-real-source-stock-observed-with-ruddy-agent-unchanged",
+      "status": "pass",
+      "sourceCobblestoneBefore": 60,
+      "coinsBefore": 100
+    },
+    {
+      "name": "agent-collects-four-real-cobblestone-into-its-own-inventory",
+      "status": "pass"
+    },
+    {
+      "name": "agent-native-inventory-sale-credits-exactly-four-game-coins",
+      "status": "pass",
+      "coinsAfter": 104
+    },
+    {
+      "name": "new-sale-request-without-carried-stock-pays-zero-additional-coins",
+      "status": "pass"
+    },
+    {
+      "name": "empty-fixture-agent-released-and-all-real-task-history-preserved",
+      "status": "pass"
+    }
+  ],
+  "finishedAt": "2026-10-31T07:23:04.567Z",
+  "lastWorldName": "minecraft:agentcity_play"
+}

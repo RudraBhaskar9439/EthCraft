@@ -1,0 +1,291 @@
+{
+  "phase": "P5",
+  "release": null,
+  "environment": null,
+  "open_defects": [],
+  "review": {
+    "status": "pending",
+    "reviewer": null,
+    "release": null,
+    "evidence": []
+  },
+  "cases": {
+    "P5-001": {
+      "status": "not_run",
+      "case_digest": "f0f8b996f6a74f588d598d8b38b8550ebdbfd845d74d6afc9103d510081f26c7",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P5-002": {
+      "status": "not_run",
+      "case_digest": "e4dfd20576cf2b8b6f95b5930636e644feee1daa3882c250e5aee017d5577acb",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P5-003": {
+      "status": "not_run",
+      "case_digest": "4331a6673d27b0fb3de7badc41b8f5bf17bdc2e452e4d3be200f1257ff07d74c",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P5-004": {
+      "status": "not_run",
+      "case_digest": "f4aa088f869ce76b872d99ce1097a4c3192aa62e6eb8e382cfbb1f60d185db2c",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P5-005": {
+      "status": "not_run",
+      "case_digest": "80dbf01401e8a10c65e6d053e799f77f33020f9fb32f7bff7c22d76c55dce6c2",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P5-006": {
+      "status": "not_run",
+      "case_digest": "1c02483487626b8d00dd9224b7553d628a0882c154516698e7c5f6dc8df1b3c6",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P5-007": {
+      "status": "not_run",
+      "case_digest": "b8fb16022f0f8bc8cd303f075379bd5612ceef4cd472a861e99cf46b78449dc4",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P5-008": {
+      "status": "not_run",
+      "case_digest": "9de9fe9c22e0a31c1a2bd3d3a473b6cdd338a70c94e64ede322841b3a894b953",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P5-009": {
+      "status": "not_run",
+      "case_digest": "fbbf7e5d7944a80269260ba9f3d642b5d16c88fe3494bca4068e572d183e85e2",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P5-010": {
+      "status": "not_run",
+      "case_digest": "3b41e1e0c060a3023c6693f2becdd21429c5c0afc1f311d04e0bd6c072709ae6",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P5-011": {
+      "status": "not_run",
+      "case_digest": "f95b7df6a6012c74ad4dad35fdaaf3ad01dbeaad725448265d1af9c1d21228e5",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P5-012": {
+      "status": "not_run",
+      "case_digest": "83ec7cf1f977f094d0175cd426629f7c74be51ceadbe01051f30ca34135c2a87",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P5-013": {
+      "status": "not_run",
+      "case_digest": "dc0d5f7d3ae664314d8c2df5244ccddda07d6f98b0f65a9250f0bec848dd90f8",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P5-014": {
+      "status": "not_run",
+      "case_digest": "247fb4dd11a1be8fdd8edc03221c9daf3f9c87a49d21af687ccd36b5482deb79",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P5-015": {
+      "status": "not_run",
+      "case_digest": "b13ab7ef1154a1bd7ed50ee871ec815d92b9a3123cc7d0b6f480e4bfbeffd2e2",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P5-016": {
+      "status": "not_run",
+      "case_digest": "b2b5012ee0dbdfc12859f6595d01a71be9917bdd082e81508c29481b61cd03c1",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P5-017": {
+      "status": "not_run",
+      "case_digest": "299ac9dbaf1ff1b8a68741f03fbcff8eb8bcda9e84ffcb93f2eb331b9c975dea",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P5-018": {
+      "status": "not_run",
+      "case_digest": "db3b04fa47c4f1c77eb8f5ca23ab875bc6bcf98145f5c70136de4b4fa0a4d7ec",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P5-019": {
+      "status": "not_run",
+      "case_digest": "d65dc7fe82d1b9d9de5dfca34bf8469f1b578309fbb400ee492f7586c846e42a",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P5-020": {
+      "status": "not_run",
+      "case_digest": "168c77ede909dc4edc0151dde00325a3eb32ab8c53d999ca0376d086b58b5217",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P5-021": {
+      "status": "not_run",
+      "case_digest": "d2bb3e5bd9f4fe44b097a6945d8d9e5562f0f3685181d65245a6c982e613ba56",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P5-022": {
+      "status": "not_run",
+      "case_digest": "e31fdfa43bd98966777b0ed2a2f40b458f263d443addc68fe1cfaf80d3193d35",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P5-023": {
+      "status": "not_run",
+      "case_digest": "135ccd4e30fc1de093c921cf242a208afc42a0f9a8c8f666fd25db70f5dc5809",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P5-024": {
+      "status": "blocked",
+      "case_digest": "1cd72c39b3794cb9863d26abde9595fb298896083710f19286a4df5b75e96110",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      },
+      "reason": "Actual token-linked platform suitability is unproved; no private or testnet exemption assumed."
+    },
+    "P5-025": {
+      "status": "blocked",
+      "case_digest": "bfd59ec7cbbad188473fa8b8cad3e77221e0034cbd2d16c7785e0a3f7234d346",
+      "evidence": [],
+      "subcases": {
+        "required": null,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0
+      },
+      "reason": "Actual selected-chain RPC, wallets, gas, liquidity funding and service-role preflight are not established."
+    }
+  }
+}

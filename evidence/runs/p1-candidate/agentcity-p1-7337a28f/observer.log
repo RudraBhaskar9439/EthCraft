@@ -1,0 +1,17 @@
+{"suite":"normal","case":0,"a":0,"b":0,"expected":0,"actual":2,"passed":false}
+{"suite":"normal","case":1,"a":0,"b":1,"expected":1,"actual":2,"passed":false}
+{"suite":"normal","case":2,"a":0,"b":2,"expected":2,"actual":4,"passed":false}
+{"suite":"normal","case":3,"a":0,"b":3,"expected":3,"actual":4,"passed":false}
+{"suite":"normal","case":4,"a":1,"b":0,"expected":1,"actual":2,"passed":false}
+{"suite":"normal","case":5,"a":1,"b":1,"expected":2,"actual":2,"passed":true}
+{"suite":"normal","case":6,"a":1,"b":2,"expected":3,"actual":4,"passed":false}
+{"suite":"normal","case":7,"a":1,"b":3,"expected":4,"actual":4,"passed":true}
+{"suite":"normal","case":8,"a":2,"b":0,"expected":2,"actual":2,"passed":true}
+{"suite":"normal","case":9,"a":2,"b":1,"expected":3,"actual":2,"passed":false}
+{"suite":"normal","case":10,"a":2,"b":2,"expected":4,"actual":4,"passed":true}
+{"suite":"normal","case":11,"a":2,"b":3,"expected":5,"actual":4,"passed":false}
+{"suite":"normal","case":12,"a":3,"b":0,"expected":3,"actual":2,"passed":false}
+{"suite":"normal","case":13,"a":3,"b":1,"expected":4,"actual":2,"passed":false}
+{"suite":"normal","case":14,"a":3,"b":2,"expected":5,"actual":4,"passed":false}
+{"suite":"normal","case":15,"a":3,"b":3,"expected":6,"actual":4,"passed":false}
+{"status":"fail","cases":16}

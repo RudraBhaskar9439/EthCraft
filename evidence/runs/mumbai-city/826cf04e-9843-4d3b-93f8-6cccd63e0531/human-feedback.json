@@ -1,0 +1,21 @@
+{
+  "schema": "agentcity.mumbai-city-human-feedback.v1",
+  "status": "pass",
+  "timestamp": "2026-11-06T04:14:40.033222+00:00",
+  "scope": "User-reported reachability and menu clarity on the upgraded local server only; no payment, model-quality, independent-human or production qualification.",
+  "sourceHashes": {
+    "companion/src/inventory-shop-flow.mjs": "c101269373f8a2fb3f20c732e3801b2433ac0653c555e0fdf16e21f929de6512",
+    "companion/src/inventory-shop-checkout.jsx": "ac8a897b07a0cb483bc2a4499943f4d064fc2f0a3845d0f5486904ee81477c0f",
+    "companion/inventory-shop-checkout.html": "c13726a0126a0c86c0959f83b3524d0f74952adddd432807aebe3fcb5eaf1400",
+    "plugin/src/main/java/org/agentcity/paper/UniRockBank.java": "0a7ee8ffe8b049d0b7c27f5cd8504a8facd8c9aa8d4c9eba8c4d54e4c92e4d79",
+    "plugin/src/main/java/org/agentcity/paper/InventoryMarketplace.java": "5b1486d32c69f528e4a443bd244dccca3a85225600a11229e8443d90780c139a"
+  },
+  "feedback": "Yes\u2014agents reachable and menu clear",
+  "checks": [
+    "User reports reaching the agents after the bank access update",
+    "User reports the revised marketplace is clear"
+  ],
+  "purchaseVerified": false,
+  "modelCalls": 0,
+  "walletTransactions": 0
+}

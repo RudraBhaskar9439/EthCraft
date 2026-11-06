@@ -1,0 +1,36 @@
+Compiling 2 files with Solc 0.8.26
+Solc 0.8.26 finished in 11.30s
+Compiler run successful!
+2026-10-29T22:12:17.980286Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for /Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/contracts/AgentCity.t.sol
+2026-10-29T22:12:17.991351Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for node_modules/@uniswap/v4-core/lib/forge-std/src/StdAssertions.sol
+2026-10-29T22:12:17.993906Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for node_modules/@uniswap/v4-core/lib/forge-std/src/StdError.sol
+2026-10-29T22:12:17.996707Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for node_modules/@uniswap/v4-core/lib/forge-std/src/StdInvariant.sol
+2026-10-29T22:12:17.997955Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for node_modules/@uniswap/v4-core/lib/forge-std/src/StdToml.sol
+2026-10-29T22:12:17.998499Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for node_modules/@uniswap/v4-core/lib/forge-std/src/Test.sol
+2026-10-29T22:12:18.011367Z  WARN foundry_evm_traces::debug::sources: failed to parse contract definitions for node_modules/@uniswap/v4-core/src/test/PoolSwapTest.sol
+2026-10-29T22:12:18.215973Z  WARN evm::traces::external: etherscan config not found
+Script ran successfully.
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 2.000000001 gwei
+
+Estimated total gas used for script: 14928914
+
+Estimated amount required: 0.029857828014928914 ETH
+
+==========================
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: /Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/contracts/broadcast/LocalDeploy.s.sol/31337/run-latest.json
+
+Sensitive values saved to: /Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/contracts/cache/LocalDeploy.s.sol/31337/run-latest.json
+

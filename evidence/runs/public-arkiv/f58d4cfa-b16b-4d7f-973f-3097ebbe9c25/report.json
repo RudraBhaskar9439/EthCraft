@@ -1,0 +1,38 @@
+{
+  "status": "pass",
+  "scope": "Actual public Arkiv SDK integration with a disclosed synthetic agreement hash; agent-controlled wallets.",
+  "independentHumans": 0,
+  "realMoneySpentUsd": 0,
+  "discovery": {
+    "status": "pass",
+    "chainId": 7738577,
+    "namespace": "agentcity-contract-demo-0x532541a0ad162824498c7454d03e5db846ca54b631d34b1662fe0e04129588e3",
+    "serverId": "0x59579c2e4afc825e918b444d42ce0ea96b1f4361a962d5d850c63e071d79fd58",
+    "jobId": "0x532541a0ad162824498c7454d03e5db846ca54b631d34b1662fe0e04129588e3",
+    "agreementHash": "0x8a90b5c94d11757084b6787ce5253a5882de6313d4982d7a7d8edbf78aaf9d48",
+    "blueprintHash": "0xc8704765464a574ec4c797ad78d5294cc167007f66a0abfebd742e0b06711c49",
+    "entities": {
+      "profile": "0x247936e813100bbe8171ad389d6894be02ab1f7771bc1ce69d135180398544ef",
+      "job": "0x2ad93f17036f5f2ce69bdaf4c6010f0159d47361bfc3dddac03b88214150dd7e",
+      "offer": "0xa0e226566e0c12d469e9ccec6e87edbc56edc78b905e8379d31fcb0e6255bd95"
+    },
+    "transactions": [
+      "0x8a7d612f56c78fa3548f49ffd09d8fe0fc376d89a150ca4c06aaa7c91f33da3e",
+      "0xbb53113898516b69e3ffa740194973e86fae5b9e2cb16ee9fc6e7dec62df2c33",
+      "0xf5d5e4907880a1155bea9e958ab7424d9b02e51b6eded4e7063948aca2454615"
+    ],
+    "checks": [
+      "official SDK public profile, job and offer publication",
+      "actual Arkiv owner and signed agreement binding",
+      "same publication reuses its retained entity"
+    ],
+    "independentHumans": 0,
+    "scope": "Agent-controlled test wallets; independent synthetic contract demonstration"
+  },
+  "lostResultRecovery": {
+    "status": "pass",
+    "originalEntity": "0xa0e226566e0c12d469e9ccec6e87edbc56edc78b905e8379d31fcb0e6255bd95",
+    "sameTransactionHash": "0xf5d5e4907880a1155bea9e958ab7424d9b02e51b6eded4e7063948aca2454615",
+    "extraTransactions": 0
+  }
+}

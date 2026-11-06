@@ -1,0 +1,104 @@
+{
+  "status": "fail",
+  "scope": "Actual isolated Paper native escrow, synthetic Discord registrations and Mineflayer clients; no real human, live-server inventory, Game Coin ledger or blockchain effects",
+  "checks": [
+    {
+      "name": "actual 5-item reservation removes stock once, requires exact financial authority, and immutable retries cannot change quantity",
+      "status": "pass"
+    },
+    {
+      "name": "full-lot native buyer mailbox and exact claim deliver five physical items once; foreign claim and seller double-return refused",
+      "status": "pass"
+    },
+    {
+      "name": "cancelling an unsold lot assigns and returns the same three native items exactly once",
+      "status": "pass"
+    },
+    {
+      "name": "modified native stacks are preserved and cannot satisfy a plain-material escrow listing",
+      "status": "pass"
+    },
+    {
+      "name": "composed actual Paper stock→native escrow→isolated PG seven-coin hold→buyer mailbox→settlement→physical claim conserves 200 coins and two items across lost-reply retries",
+      "status": "pass"
+    }
+  ],
+  "fixtureGrants": [
+    {
+      "actor": "EscSeller",
+      "item": "minecraft:oak_planks",
+      "count": 20,
+      "method": "isolated fixture plugin one-time native stock"
+    },
+    {
+      "actor": "EscSeller",
+      "item": "minecraft:oak_planks",
+      "count": 2,
+      "metadata": "custom_name fixture-modified",
+      "method": "isolated fixture plugin one-time native stock"
+    },
+    {
+      "actor": "CityAgent2",
+      "item": "minecraft:cobblestone",
+      "count": 6,
+      "method": "isolated fixture plugin one-time native stock"
+    }
+  ],
+  "productionWorldMutations": 0,
+  "independentHumansVerified": 0,
+  "pluginSha256": "a7a3771a4e84fa3a484f1cadb4c61f6b883c53a1a11aa2db9d5b4bdd30bd1d26",
+  "container": "agentcity-escrow-fixture-704166b9",
+  "fixtureRuntime": "C:\\Users\\Rudransh Shinghal\\agentcity-minecraft\\.local\\escrow-fixture\\704166b9-7bae-4135-b7f7-8901e4e07db4",
+  "paperSha256": "a836a016be7ac52352eb3a1efb6857bb42ee73a6c78d46e292f7e87742edb0e6",
+  "composedTrade": {
+    "listingId": "88f0e0b6-825d-4b97-af47-db30740603e1",
+    "purchaseId": "fa522cc5-22d6-4d47-bf32-4583e489b81a",
+    "item": "minecraft:oak_planks",
+    "count": 2,
+    "totalPrice": "7",
+    "currency": "GAME_COINS",
+    "fixtureInitialBalances": {
+      "seller": 100,
+      "buyer": 100
+    },
+    "sellerBalance": {
+      "available": "107",
+      "held": "0"
+    },
+    "buyerBalance": {
+      "available": "93",
+      "held": "0"
+    },
+    "coinTotal": "200",
+    "ledgerNet": "0",
+    "lostAssignmentReplyRetried": true,
+    "actualSellerItemDelta": -2,
+    "actualBuyerItemDelta": 2,
+    "consent": "Explicit automated fixture consent; not independent human approval"
+  },
+  "error": {
+    "message": "The input did not match the regular expression /owned_agent_binding_changed/. Input:\n\n'Error: Cannot invoke \"java.nio.file.Path.resolve(String)\" because \"<local7>\" is null'\n",
+    "code": "ERR_ASSERTION"
+  },
+  "clientProfile": {
+    "version": "1.21.11",
+    "tickEndAtPhysicsCadence": true,
+    "fixtureOnlyPort": 25606,
+    "clients": [
+      {
+        "name": "EscSeller",
+        "tickBoundaries": 299
+      },
+      {
+        "name": "EscBuyer",
+        "tickBoundaries": 182
+      },
+      {
+        "name": "CityAgent2",
+        "tickBoundaries": 0
+      }
+    ]
+  },
+  "fixtureInfrastructure": "Fresh isolated PlayableExperience world initialization seeds its disclosed demonstration task-pad chests; the test does not withdraw those stocks.",
+  "finishedAt": "2026-10-31T16:38:34.674Z"
+}

@@ -1,0 +1,210 @@
+{
+  "version": 1,
+  "tasks": [
+    {
+      "id": "3019e53a-7bdd-4e9b-b8f3-555cf6553569",
+      "operationId": "d42def8f-44eb-4c39-a3e9-c021b0da7198",
+      "ownerId": "11111111-1111-4111-8111-111111111111",
+      "ownerName": "DisclosedFixture",
+      "slotName": "CityAgent2",
+      "plan": {
+        "action": "gather",
+        "item": "oak_planks",
+        "count": 2,
+        "positions": [
+          [
+            -40,
+            64,
+            10
+          ],
+          [
+            -39,
+            64,
+            10
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -47,
+            64,
+            2
+          ],
+          "max": [
+            -36,
+            71,
+            13
+          ]
+        },
+        "source": [
+          -47,
+          64,
+          2
+        ]
+      },
+      "planHash": "30e477193b63e6b0d69ba253445d7049056c4f492cd4507a8773b51e877a34ae",
+      "hashVersion": 2,
+      "status": "complete",
+      "completed": [
+        0,
+        1
+      ],
+      "preexisting": [],
+      "receipts": {
+        "d42def8f-44eb-4c39-a3e9-c021b0da7198:gather:0": {
+          "before": {
+            "inventory": {},
+            "block": "oak_planks"
+          },
+          "after": {
+            "inventory": {
+              "oak_planks": 1
+            },
+            "block": "air"
+          },
+          "observedAt": "2026-10-31T10:38:07.932Z"
+        },
+        "d42def8f-44eb-4c39-a3e9-c021b0da7198:gather:1": {
+          "before": {
+            "inventory": {
+              "oak_planks": 1
+            },
+            "block": "oak_planks"
+          },
+          "after": {
+            "inventory": {
+              "oak_planks": 2
+            },
+            "block": "air"
+          },
+          "observedAt": "2026-10-31T10:38:07.941Z"
+        }
+      },
+      "pending": null,
+      "withdrawn": false,
+      "delivered": false,
+      "createdAt": "2026-10-31T10:38:07.907Z",
+      "message": "Harvested and picked up 2 oak_planks from your authorized plot.",
+      "gatherPositions": [
+        [
+          -40,
+          64,
+          10
+        ],
+        [
+          -39,
+          64,
+          10
+        ]
+      ]
+    },
+    {
+      "id": "9a4c3779-1836-4ee4-b49e-db99cd4eb6d5",
+      "operationId": "2e9961e9-5d5e-4ca6-9b3b-379f85bd9593",
+      "ownerId": "11111111-1111-4111-8111-111111111111",
+      "ownerName": "DisclosedFixture",
+      "slotName": "CityAgent2",
+      "plan": {
+        "action": "craft",
+        "item": "stick",
+        "count": 4,
+        "batches": 1,
+        "outputCount": 4,
+        "recipe": {
+          "ingredient": "oak_planks",
+          "input": 2,
+          "output": 4
+        },
+        "source": [
+          -47,
+          64,
+          2
+        ]
+      },
+      "planHash": "edbd08653d44eba3880220929885c5f00759183d5935338f1389638eb6c102fb",
+      "hashVersion": 2,
+      "status": "complete",
+      "completed": [
+        "craft"
+      ],
+      "preexisting": [],
+      "receipts": {
+        "2e9961e9-5d5e-4ca6-9b3b-379f85bd9593:craft": {
+          "before": {
+            "inventory": {
+              "oak_planks": 2
+            }
+          },
+          "after": {
+            "inventory": {
+              "oak_planks": 0,
+              "stick": 4
+            }
+          },
+          "observedAt": "2026-10-31T10:38:07.966Z"
+        }
+      },
+      "pending": null,
+      "withdrawn": false,
+      "delivered": false,
+      "createdAt": "2026-10-31T10:38:07.952Z",
+      "message": "Crafted 4 stick from consumed real ingredients.",
+      "supplyPlans": []
+    },
+    {
+      "id": "8af55c88-3d14-45ae-9506-f6be8d29abb4",
+      "operationId": "f0bfb82f-671d-4eb6-904b-faa4e3df79bc",
+      "ownerId": "11111111-1111-4111-8111-111111111111",
+      "ownerName": "DisclosedFixture",
+      "slotName": "CityAgent2",
+      "plan": {
+        "action": "deliver",
+        "item": "stick",
+        "count": 4,
+        "source": [
+          -47,
+          64,
+          2
+        ],
+        "destination": [
+          -47,
+          64,
+          4
+        ]
+      },
+      "planHash": "b9a61feff699570e6f6d811e003a7e88a4f8e0e974d7dafe1c2a05b772b330cf",
+      "hashVersion": 2,
+      "status": "complete",
+      "completed": [
+        "delivery"
+      ],
+      "preexisting": [],
+      "receipts": {
+        "f0bfb82f-671d-4eb6-904b-faa4e3df79bc:deposit": {
+          "before": {
+            "inventory": {
+              "oak_planks": 0,
+              "stick": 4
+            },
+            "chest": {}
+          },
+          "after": {
+            "inventory": {
+              "oak_planks": 0,
+              "stick": 0
+            },
+            "chest": {
+              "stick": 4
+            }
+          },
+          "observedAt": "2026-10-31T10:38:07.995Z"
+        }
+      },
+      "pending": null,
+      "withdrawn": true,
+      "delivered": true,
+      "createdAt": "2026-10-31T10:38:07.977Z",
+      "message": "Delivered 4 stick into your destination chest.",
+      "deliveryWithdrawCount": 0
+    }
+  ]
+}

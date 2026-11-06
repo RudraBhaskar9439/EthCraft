@@ -1,0 +1,46 @@
+{
+  "status": "pass",
+  "runId": "procurement-202207e6-e5e9-45a1-b018-2eea4e4d1101",
+  "scope": "Actual isolated PostgreSQL and local Anvil procurement; local chain snapshot is restored afterward",
+  "checks": [
+    {
+      "name": "genuine-local-wallet-approvals-and-actual-escrow-funding-before-procurement",
+      "status": "pass"
+    },
+    {
+      "name": "concurrent-reservations-cannot-exceed-aggregate-signed-material-cap",
+      "status": "pass",
+      "reserved": "2000000000000000000"
+    },
+    {
+      "name": "operation-call-binding-fixed-destination-and-requester-authority-refused-before-send",
+      "status": "pass"
+    },
+    {
+      "name": "lost-send-response-keeps-cap-until-canonical-purchased-and-claim-events-settle-actual-spend",
+      "status": "pass",
+      "transactionHash": "0xcae82b2c5f741f1bd53e9100bbd7ff4d7dfa12b9a2f4d8560d9d12208c89fbe6",
+      "claimId": "0x959ac4008acc9556b44ad88e3c888f2d80ff7790b3f5904db2240076e237da34",
+      "actualSpent": "1011266309009353161"
+    },
+    {
+      "name": "canonical-reverted-purchase-releases-only-its-reservation-without-extra-spend",
+      "status": "pass"
+    }
+  ],
+  "liveExternalGatePassed": false,
+  "externalSpendingUsd": 0,
+  "reservationRace": [
+    {
+      "status": "rejected",
+      "code": "MATERIAL_CAP_EXCEEDED",
+      "message": "MATERIAL_CAP_EXCEEDED"
+    },
+    {
+      "status": "fulfilled",
+      "operationId": "be36e16f-d85e-4418-b091-e18cd4beb89c"
+    }
+  ],
+  "snapshotRestored": true,
+  "finishedAt": "2026-10-30T07:02:04.182Z"
+}

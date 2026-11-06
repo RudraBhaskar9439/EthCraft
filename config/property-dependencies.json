@@ -1,0 +1,35 @@
+{
+  "schema": "agentcity.property-dependencies.v1",
+  "minecraft": "26.3",
+  "artifacts": [
+    {
+      "plugin": "WorldGuard",
+      "version": "7.0.20+2410-0b6c3f1",
+      "release": "7.0.20",
+      "file": "worldguard-bukkit-7.0.20.jar",
+      "url": "https://mediafilez.forgecdn.net/files/9219/599/worldguard-bukkit-7.0.20.jar",
+      "releasePage": "https://dev.bukkit.org/projects/worldguard/files/9219599",
+      "sha256": "8768a49bcbecbb7a413ad134ee72d9871cdf967b7d938e6b96bb0ca72bb1467b",
+      "officialReleaseMd5": "cf5da34dcd48d5b286b4a93b68383b93",
+      "license": "LGPL-3.0-or-later",
+      "licenseUrl": "https://github.com/EngineHub/WorldGuard/blob/7.0.20/LICENSE.txt"
+    },
+    {
+      "plugin": "WorldEdit",
+      "version": "7.4.6+7648-00664b0",
+      "release": "7.4.6",
+      "file": "worldedit-bukkit-7.4.6.jar",
+      "url": "https://hangarcdn.papermc.io/plugins/EngineHub/WorldEdit/versions/7.4.6/PAPER/worldedit-bukkit-7.4.6.jar",
+      "releasePage": "https://hangar.papermc.io/EngineHub/WorldEdit/versions/7.4.6",
+      "sha256": "e0ce67d870ad1fef8a40dd9d7926360caf3bb44722438545d6b20b55f82a0c91",
+      "license": "GPL-3.0-or-later",
+      "licenseUrl": "https://github.com/EngineHub/WorldEdit/blob/7.4.6/LICENSE.txt"
+    }
+  ],
+  "qualification": "Actual isolated Paper26.3-231 / Java25 native gear and WorldGuard integration verified with explicitly synthetic private-adapter chain proofs; no independent-human or production qualification claim.",
+  "fixtureEvidence": {
+    "pluginSha256": "c9a108690fad15f8d15702b6d6c67468dab438c6ba5d6837fbf0938b28c02a69",
+    "equipment": "evidence/runs/escrow-native/9c4a18c9-3faa-45f4-9a1a-281a00ea57a4/report.json",
+    "propertyResume": "evidence/runs/escrow-native/b3e74222-af4d-4f2e-806c-c00b3032db74/report.json"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "schema": "agentcity.candidate.operator-termination.v1",
+  "reason": "Intentionally superseded before completion to add monotonic >=500ms interaction spacing in addition to >=10ticks. This is retained partial exploration, never a256matrix pass.",
+  "final_phase_approval": false
+}

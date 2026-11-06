@@ -1,0 +1,517 @@
+{
+  "schema": "agentcity.p1.fault-client.v1",
+  "status": "pass",
+  "phase": "initial",
+  "started_at": "2026-10-29T15:17:52.504Z",
+  "full_phase_gate_passed": false,
+  "steps": [
+    {
+      "name": "typed_preflight_refusal_no_readiness",
+      "at": "2026-10-29T15:18:10.981Z",
+      "payload": {
+        "operationId": "52f80fee-7c5e-43b9-9b78-bc4be702e622",
+        "serverId": "local-inspection-server",
+        "jobId": "agentcity-fault-33c71599",
+        "agreementVersion": 1,
+        "actorId": "563add28-410b-350e-9001-a9be4cc7bd00",
+        "expectedRevision": 0,
+        "authorizationReference": "local-boundary-authorization",
+        "expiresAtMs": 1793287098862,
+        "action": "INSPECT",
+        "params": {}
+      },
+      "response": {
+        "http_status": 200,
+        "body": {
+          "status": "REFUSED",
+          "code": "blueprint_structure_mismatch:-8,88,-5",
+          "operationId": "52f80fee-7c5e-43b9-9b78-bc4be702e622",
+          "revision": 0
+        }
+      },
+      "before": {
+        "state": {
+          "revision": 0,
+          "lockMode": "NONE",
+          "quarantined": false,
+          "readyForReview": false,
+          "passValidUntilMs": 0
+        },
+        "refusals": [
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "awaiting_player_inventory"
+        ]
+      },
+      "after": {
+        "state": {
+          "revision": 0,
+          "lockMode": "NONE",
+          "quarantined": false,
+          "readyForReview": false,
+          "passValidUntilMs": 0
+        },
+        "refusals": [
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "awaiting_player_inventory"
+        ]
+      },
+      "world_before": {
+        "at_ms": 1793287090678,
+        "checker": {},
+        "chunk_snapshot_freeze": false,
+        "fault_applied": true,
+        "players": {
+          "WorldBuilder": {
+            "position": [
+              -14.5,
+              81,
+              3.5
+            ],
+            "uuid": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+            "mode": "SURVIVAL",
+            "items": {}
+          },
+          "WorldInspector": {
+            "position": [
+              12.5,
+              81,
+              5.5
+            ],
+            "uuid": "563add28-410b-350e-9001-a9be4cc7bd00",
+            "mode": "SURVIVAL",
+            "items": {}
+          },
+          "WorldRequester": {
+            "position": [
+              -12.5,
+              81,
+              -6.5
+            ],
+            "uuid": "a56f0418-1cf4-3f1e-a0ab-9b34ba31f192",
+            "mode": "SURVIVAL",
+            "items": {
+              "minecraft:lava_bucket": 1,
+              "minecraft:water_bucket": 1
+            }
+          },
+          "WorldStranger": {
+            "position": [
+              12.5,
+              81,
+              -6.5
+            ],
+            "uuid": "3febf1ac-21e5-394e-bb24-e8731e755afa",
+            "mode": "SURVIVAL",
+            "items": {
+              "minecraft:cobblestone": 1
+            }
+          }
+        },
+        "ports": {
+          "a0": {
+            "position": [
+              -12,
+              85,
+              -4
+            ],
+            "actual": "minecraft:lever[face=floor,facing=north,powered=false]"
+          },
+          "a0_support": {
+            "position": [
+              -12,
+              84,
+              -4
+            ],
+            "actual": "minecraft:stone_bricks"
+          },
+          "a1": {
+            "position": [
+              -8,
+              84,
+              -3
+            ],
+            "actual": "minecraft:lever[face=wall,facing=west,powered=false]"
+          },
+          "b0": {
+            "position": [
+              -12,
+              84,
+              -3
+            ],
+            "actual": "minecraft:lever[face=wall,facing=south,powered=false]"
+          },
+          "b1": {
+            "position": [
+              -8,
+              82,
+              -3
+            ],
+            "actual": "minecraft:lever[face=wall,facing=east,powered=false]"
+          },
+          "c1": {
+            "position": [
+              -1,
+              87,
+              -5
+            ],
+            "actual": "minecraft:redstone_lamp[lit=false]"
+          },
+          "s0": {
+            "position": [
+              -8,
+              88,
+              -5
+            ],
+            "actual": "minecraft:air"
+          },
+          "s1": {
+            "position": [
+              1,
+              90,
+              -2
+            ],
+            "actual": "minecraft:redstone_lamp[lit=false]"
+          }
+        },
+        "scenario": "missing-lamp-s0-preflight",
+        "stock": {
+          "minecraft:lever": 4,
+          "minecraft:redstone": 19,
+          "minecraft:redstone_lamp": 3,
+          "minecraft:redstone_torch": 37,
+          "minecraft:repeater": 16,
+          "minecraft:stone_bricks": 65
+        },
+        "target_chunk_loaded": true,
+        "tick": 374
+      },
+      "world_after": {
+        "at_ms": 1793287090932,
+        "checker": {},
+        "chunk_snapshot_freeze": false,
+        "fault_applied": true,
+        "players": {
+          "WorldBuilder": {
+            "position": [
+              -14.5,
+              81,
+              3.5
+            ],
+            "uuid": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+            "mode": "SURVIVAL",
+            "items": {}
+          },
+          "WorldInspector": {
+            "position": [
+              12.5,
+              81,
+              5.5
+            ],
+            "uuid": "563add28-410b-350e-9001-a9be4cc7bd00",
+            "mode": "SURVIVAL",
+            "items": {}
+          },
+          "WorldRequester": {
+            "position": [
+              -12.5,
+              81,
+              -6.5
+            ],
+            "uuid": "a56f0418-1cf4-3f1e-a0ab-9b34ba31f192",
+            "mode": "SURVIVAL",
+            "items": {
+              "minecraft:lava_bucket": 1,
+              "minecraft:water_bucket": 1
+            }
+          },
+          "WorldStranger": {
+            "position": [
+              12.5,
+              81,
+              -6.5
+            ],
+            "uuid": "3febf1ac-21e5-394e-bb24-e8731e755afa",
+            "mode": "SURVIVAL",
+            "items": {
+              "minecraft:cobblestone": 1
+            }
+          }
+        },
+        "ports": {
+          "a0": {
+            "position": [
+              -12,
+              85,
+              -4
+            ],
+            "actual": "minecraft:lever[face=floor,facing=north,powered=false]"
+          },
+          "a0_support": {
+            "position": [
+              -12,
+              84,
+              -4
+            ],
+            "actual": "minecraft:stone_bricks"
+          },
+          "a1": {
+            "position": [
+              -8,
+              84,
+              -3
+            ],
+            "actual": "minecraft:lever[face=wall,facing=west,powered=false]"
+          },
+          "b0": {
+            "position": [
+              -12,
+              84,
+              -3
+            ],
+            "actual": "minecraft:lever[face=wall,facing=south,powered=false]"
+          },
+          "b1": {
+            "position": [
+              -8,
+              82,
+              -3
+            ],
+            "actual": "minecraft:lever[face=wall,facing=east,powered=false]"
+          },
+          "c1": {
+            "position": [
+              -1,
+              87,
+              -5
+            ],
+            "actual": "minecraft:redstone_lamp[lit=false]"
+          },
+          "s0": {
+            "position": [
+              -8,
+              88,
+              -5
+            ],
+            "actual": "minecraft:air"
+          },
+          "s1": {
+            "position": [
+              1,
+              90,
+              -2
+            ],
+            "actual": "minecraft:redstone_lamp[lit=false]"
+          }
+        },
+        "scenario": "missing-lamp-s0-preflight",
+        "stock": {
+          "minecraft:lever": 4,
+          "minecraft:redstone": 19,
+          "minecraft:redstone_lamp": 3,
+          "minecraft:redstone_torch": 37,
+          "minecraft:repeater": 16,
+          "minecraft:stone_bricks": 65
+        },
+        "target_chunk_loaded": true,
+        "tick": 379
+      }
+    }
+  ],
+  "scenario": "missing-lamp-s0-preflight",
+  "declared_variant_ids": [
+    "P1-004/output-missing-s0"
+  ],
+  "initial_durable_state": {
+    "state": {
+      "revision": 0,
+      "lockMode": "NONE",
+      "quarantined": false,
+      "readyForReview": false,
+      "passValidUntilMs": 0
+    },
+    "refusals": [
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "plot_chunk_unloaded",
+      "awaiting_player_inventory"
+    ]
+  },
+  "initial_actual_observation": {
+    "at_ms": 1793287090678,
+    "checker": {},
+    "chunk_snapshot_freeze": false,
+    "fault_applied": true,
+    "players": {
+      "WorldBuilder": {
+        "position": [
+          -14.5,
+          81,
+          3.5
+        ],
+        "uuid": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+        "mode": "SURVIVAL",
+        "items": {}
+      },
+      "WorldInspector": {
+        "position": [
+          12.5,
+          81,
+          5.5
+        ],
+        "uuid": "563add28-410b-350e-9001-a9be4cc7bd00",
+        "mode": "SURVIVAL",
+        "items": {}
+      },
+      "WorldRequester": {
+        "position": [
+          -12.5,
+          81,
+          -6.5
+        ],
+        "uuid": "a56f0418-1cf4-3f1e-a0ab-9b34ba31f192",
+        "mode": "SURVIVAL",
+        "items": {
+          "minecraft:lava_bucket": 1,
+          "minecraft:water_bucket": 1
+        }
+      },
+      "WorldStranger": {
+        "position": [
+          12.5,
+          81,
+          -6.5
+        ],
+        "uuid": "3febf1ac-21e5-394e-bb24-e8731e755afa",
+        "mode": "SURVIVAL",
+        "items": {
+          "minecraft:cobblestone": 1
+        }
+      }
+    },
+    "ports": {
+      "a0": {
+        "position": [
+          -12,
+          85,
+          -4
+        ],
+        "actual": "minecraft:lever[face=floor,facing=north,powered=false]"
+      },
+      "a0_support": {
+        "position": [
+          -12,
+          84,
+          -4
+        ],
+        "actual": "minecraft:stone_bricks"
+      },
+      "a1": {
+        "position": [
+          -8,
+          84,
+          -3
+        ],
+        "actual": "minecraft:lever[face=wall,facing=west,powered=false]"
+      },
+      "b0": {
+        "position": [
+          -12,
+          84,
+          -3
+        ],
+        "actual": "minecraft:lever[face=wall,facing=south,powered=false]"
+      },
+      "b1": {
+        "position": [
+          -8,
+          82,
+          -3
+        ],
+        "actual": "minecraft:lever[face=wall,facing=east,powered=false]"
+      },
+      "c1": {
+        "position": [
+          -1,
+          87,
+          -5
+        ],
+        "actual": "minecraft:redstone_lamp[lit=false]"
+      },
+      "s0": {
+        "position": [
+          -8,
+          88,
+          -5
+        ],
+        "actual": "minecraft:air"
+      },
+      "s1": {
+        "position": [
+          1,
+          90,
+          -2
+        ],
+        "actual": "minecraft:redstone_lamp[lit=false]"
+      }
+    },
+    "scenario": "missing-lamp-s0-preflight",
+    "stock": {
+      "minecraft:lever": 4,
+      "minecraft:redstone": 19,
+      "minecraft:redstone_lamp": 3,
+      "minecraft:redstone_torch": 37,
+      "minecraft:repeater": 16,
+      "minecraft:stone_bricks": 65
+    },
+    "target_chunk_loaded": true,
+    "tick": 374
+  },
+  "initial_client_port_materials": {
+    "a0": "lever",
+    "a0_support": "stone_bricks",
+    "a1": "lever",
+    "b0": "lever",
+    "b1": "lever",
+    "c1": "redstone_lamp",
+    "s0": "air",
+    "s1": "redstone_lamp"
+  },
+  "finished_at": "2026-10-29T15:18:11.028Z"
+}

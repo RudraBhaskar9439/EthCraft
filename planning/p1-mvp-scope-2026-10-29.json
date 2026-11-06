@@ -1,0 +1,43 @@
+{
+  "approval": "User: dont go for that much edge cases just complete the phase1 asap",
+  "scope": "Local Phase1 functional MVP; no deletion of original specification requirements; expanded sweep no longer blocks this local phase.",
+  "previous_expanded_variant_count": 1041,
+  "previous_additive_regressions": 35,
+  "retained_release_qualification_mapping": {
+    "P1-004": "P9-038",
+    "P1-005": "P9-039",
+    "P1-006": "P9-040",
+    "P1-007": "P9-041",
+    "P1-008": "P9-042",
+    "P1-009": "P9-043",
+    "P1-010": "P9-044",
+    "P1-011": "P9-045",
+    "P1-012": "P9-046",
+    "P1-013": "P9-047",
+    "P1-014": "P9-048",
+    "P1-015": "P9-049",
+    "P1-016": "P9-050",
+    "P1-017": "P9-051",
+    "P1-018": "P9-052",
+    "P1-019": "P9-053",
+    "P1-020": "P9-054",
+    "P1-021": "P9-055",
+    "P1-022": "P9-056",
+    "P1-023": "P9-057",
+    "P1-024": "P9-058"
+  },
+  "local_case_ids": [
+    "P1-001",
+    "P1-002",
+    "P1-003",
+    "P1-004",
+    "P1-005",
+    "P1-006",
+    "P1-007",
+    "P1-008",
+    "P1-009",
+    "P1-010"
+  ],
+  "original_requirement_inventory": 257,
+  "new_focused_cases": 7
+}

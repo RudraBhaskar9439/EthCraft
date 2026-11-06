@@ -1,0 +1,90 @@
+{
+  "schema": "agentcity.laptop-bank-native.v1",
+  "status": "pass",
+  "recordedAt": "2026-11-05T12:55:28.768Z",
+  "serverId": "laptop-bank-1ce53d39d114410b90f72599ebae8b07",
+  "container": "agentcity-playable-1ce53d39",
+  "actors": [
+    {
+      "name": "BankBorrower",
+      "principalId": "144e8782-85d5-4ef4-989e-cb7a26040682",
+      "discordId": "770000000000000001",
+      "disclosure": "Controlled laptop test actor; no human Discord or Privy proof",
+      "minecraftPlayerId": "23d62fe0-1c3f-311e-be1b-8e39156c501b",
+      "connectionId": "74e7e2f6-cf95-46cb-84d7-1e9a65c56dcc"
+    },
+    {
+      "name": "BankSeller",
+      "principalId": "deedae25-b473-4e65-a8df-9610be9c6c83",
+      "discordId": "770000000000000002",
+      "disclosure": "Controlled laptop test actor; no human Discord or Privy proof",
+      "minecraftPlayerId": "6762f7b4-50a9-33f9-a378-c5b0bbf2c2ca",
+      "connectionId": "5987e1cb-8e12-4831-b03d-d545a128be55"
+    },
+    {
+      "name": "BankBidder",
+      "principalId": "fe40d57b-89a0-4eb4-922a-84d320c27609",
+      "discordId": "770000000000000003",
+      "disclosure": "Controlled laptop test actor; no human Discord or Privy proof",
+      "minecraftPlayerId": "cc98e9a3-0b21-30a7-9509-817076d54d80",
+      "connectionId": "95bf2426-804e-4e69-9451-49f05a078500"
+    }
+  ],
+  "observations": [
+    {
+      "name": "BankBorrower",
+      "principalId": "144e8782-85d5-4ef4-989e-cb7a26040682",
+      "minecraftPlayerId": "23d62fe0-1c3f-311e-be1b-8e39156c501b",
+      "fingerprint": "37a461141daaef09a37a94b794eec115cfe05a5998c08476a47fe0a1266d617c",
+      "fingerprintAlgorithm": "canonical_nbt_v1",
+      "descriptor": {
+        "material": "minecraft:diamond_sword",
+        "amount": 1,
+        "maxStackSize": 1,
+        "name": "BankBorrower testnet collateral",
+        "damage": 7,
+        "maxDurability": 1561,
+        "enchantments": {
+          "minecraft:sharpness": 2
+        },
+        "lore": [
+          "Disclosed laptop fixture stock",
+          "Controlled actor and testnet assets only"
+        ]
+      },
+      "worldName": "agentcity_lobby",
+      "worldUUID": "b58ce3c8-e107-4379-8ed7-259bed82a53f"
+    },
+    {
+      "name": "BankSeller",
+      "principalId": "deedae25-b473-4e65-a8df-9610be9c6c83",
+      "minecraftPlayerId": "6762f7b4-50a9-33f9-a378-c5b0bbf2c2ca",
+      "fingerprint": "d41e0d6ac1cd88199dc49e6882ddd3cb117339da474297237e23de07ce4f828a",
+      "fingerprintAlgorithm": "canonical_nbt_v1",
+      "descriptor": {
+        "material": "minecraft:diamond_sword",
+        "amount": 1,
+        "maxStackSize": 1,
+        "name": "BankSeller testnet collateral",
+        "damage": 7,
+        "maxDurability": 1561,
+        "enchantments": {
+          "minecraft:sharpness": 2
+        },
+        "lore": [
+          "Disclosed laptop fixture stock",
+          "Controlled actor and testnet assets only"
+        ]
+      },
+      "worldName": "agentcity_lobby",
+      "worldUUID": "b58ce3c8-e107-4379-8ed7-259bed82a53f"
+    }
+  ],
+  "scope": "Actual native controlled players and fixture equipment preview only. No human, Privy, loan or on-chain custody qualification.",
+  "sourceHashes": {
+    "tests/bank/native-laptop.mjs": "6f8a487ab4a4af8ced3354844536af8d475b0fa47bd11c0ff6b6d67516dadd84",
+    "tests/bank/LaptopBankStock.java": "7c0111326e311c9fdded0fc9cbe5dd8d8b5d8aed693c4c419e454ddd46bd2def"
+  },
+  "paidModelCalls": 0,
+  "publicTransactions": 0
+}

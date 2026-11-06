@@ -1,0 +1,46 @@
+{
+  "status": "fail",
+  "scope": "Actual isolated Paper resource partial-stack backing, preserved equipment and legacy physical recovery. Synthetic canonical proof envelopes only; no live currency, human wallet or production stock mutation.",
+  "checks": [
+    {
+      "name": "on-chain marker blocks every new legacy financial path, replays completed receipts without effects, and returns exact old custody without creating chain backing",
+      "status": "pass"
+    },
+    {
+      "name": "resource default-count preview hashes the reserved portion, privately guards full source quantity, reserves one from three, and delivers once with seller2/buyer1",
+      "status": "pass"
+    },
+    {
+      "name": "equipment remains quantity-one and preserves exact damaged/enchanted/name/lore/PDC bytes through native custody and claim",
+      "status": "pass"
+    }
+  ],
+  "productionMutations": 0,
+  "pluginSha256": "d65503b332a178c9ca501e3369fbb6baff310f6f98f298333ea4100e849644d2",
+  "container": "agentcity-world-assets-seam-a1156fc1",
+  "fixtureGrants": [
+    {
+      "actor": "EscSeller",
+      "count": 3,
+      "item": "minecraft:stick",
+      "slot": 7
+    },
+    {
+      "actor": "EscSeller",
+      "count": 1,
+      "item": "minecraft:diamond_sword",
+      "slot": 8,
+      "damage": 7,
+      "sharpness": 2,
+      "name": "Seam fixture blade",
+      "lore": true,
+      "persistentData": true
+    }
+  ],
+  "error": "The input did not match the regular expression /onchain_only_legacy_financial_action_disabled/. Input:\n\n'Error: NOT_FOUND'\n",
+  "cleanup": {
+    "stopped": true,
+    "container": "agentcity-world-assets-seam-a1156fc1"
+  },
+  "finishedAt": "2026-10-31T19:25:24.840Z"
+}

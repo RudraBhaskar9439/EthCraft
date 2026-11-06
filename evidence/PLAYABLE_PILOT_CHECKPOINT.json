@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-31",
+  "implementationRelease": "3558f9bfb268783862a86a397457e9aaed56484a",
+  "scope": "First local playable milestone; not the completed expanded product or canonical phase approval",
+  "environment": {
+    "paper": "26.3 build231",
+    "javaImage": "eclipse-temurin@sha256:83f4a7fc27df94dcc7b8de04d14cbbba8da14406f921e966969c3b09000aa507",
+    "node": "26.3.1",
+    "pluginSha256": "cecc3bc91f8dd4bf5dc5580be7accf219e743363a0607dad5c4840bcf3524819",
+    "gameAddress": "127.0.0.1:25596",
+    "identityMode": "local_allowlisted_fixture",
+    "blockchainLinked": false
+  },
+  "verified": {
+    "survivalAndNpcAgentLiveChecks": 10,
+    "realGamePaymentChecks": 4,
+    "realPostgresEconomyGroups": 5,
+    "injectedAgentGroups": 4,
+    "planningUnitTests": 56,
+    "planningIntegrity": "pass",
+    "repeatStartup": "same owned world and worker reused",
+    "pluginApi": "unauthorized401; authorized200",
+    "calculatorRevisionPreserved": 144
+  },
+  "limitations": [
+    "No independent-human or Microsoft-authentication proof",
+    "Fresh calculator retained; functional inspection not renewed after plugin changes",
+    "Agent tools currently move/follow/wait/status, hub-bounded",
+    "Delivery, parameterized builds, paid jobs and player web dashboard remain unimplemented",
+    "Friends LAN exposure and additional allowlisted names not configured",
+    "Canonical P0 scope review and original live gates remain pending"
+  ],
+  "artifacts": [
+    {
+      "path": "evidence/runs/playable-live/532bf027-0028-44bd-a26b-ade92c08181b/report.json",
+      "sha256": "0d29c9dab12db87b3274a115915a49550b9c81fbe33cabf5c8f7d85dcfac568b",
+      "status": "fail"
+    },
+    {
+      "path": "evidence/runs/playable-live/e6cb517c-c9ee-4280-9a51-ef2c7bfa52ac/report.json",
+      "sha256": "8556d5fbcc56d375fa380cef191fed4cd90c2435f5d09a83206c9c4ffbecb6cc",
+      "status": "pass"
+    },
+    {
+      "path": "evidence/runs/playable-payment/0a2e760b-58f6-4c66-af21-e1f89686bae7/report.json",
+      "sha256": "9d241e15f3b3024ea8c09c89e1735662b15562547b34a13d046e658f1f0d9d24",
+      "status": "fail"
+    },
+    {
+      "path": "evidence/runs/playable-payment/461b7937-242e-4de6-80b7-aca039a116a6/report.json",
+      "sha256": "e6a6cab312a852d1ec5002a7001ba160be126c43a56a9cff2eaf666862ec3fa6",
+      "status": "fail"
+    },
+    {
+      "path": "evidence/runs/playable-payment/d1923774-0b06-43ef-a5f7-d2fe7facdb78/report.json",
+      "sha256": "fd528ffd8dcbee8598b612d15bc0016c26ae7953ec9d944c3768553cd9da7943",
+      "status": "pass"
+    },
+    {
+      "path": "evidence/runs/playable-economy/4620f9cc-ad5a-4c7d-955f-21855e9ff5a4/report.json",
+      "sha256": "72d51f77a4de91e51f4a5c99cde0d44abb9e6f6a8d2a1ce3fc73cb2d8590028e",
+      "status": "fail"
+    },
+    {
+      "path": "evidence/runs/playable-economy/797e1994-0220-4d3d-a703-2414489fc362/report.json",
+      "sha256": "586fdd0861bb8ff46a5b428a4949ecce720d1774ceada2c6609e5180bbd954b1",
+      "status": "fail"
+    },
+    {
+      "path": "evidence/runs/playable-economy/d6c2728b-7aa9-413c-945e-12de723d12c3/report.json",
+      "sha256": "286bd373d62501ec5aaf04c0854797c472de23f3e98619904617674eb9fb7581",
+      "status": "pass"
+    },
+    {
+      "path": "evidence/runs/playable-economy/f0d1e289-de0a-43e9-bca3-899fe9a03375/report.json",
+      "sha256": "856e545499ec30b19bde39dcf388d1b885399e8df72727e6b2505b83e0e361d5",
+      "status": "pass"
+    }
+  ],
+  "privateStateCommitted": false
+}

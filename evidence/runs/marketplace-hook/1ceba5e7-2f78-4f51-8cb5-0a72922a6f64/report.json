@@ -1,0 +1,65 @@
+{
+  "schema": "agentcity.marketplace-hook.v1",
+  "runId": "1ceba5e7-2f78-4f51-8cb5-0a72922a6f64",
+  "result": "pass",
+  "command": [
+    "forge",
+    "test",
+    "--match-contract",
+    "AgentCityMarketplaceHookTest",
+    "-vv"
+  ],
+  "exitCode": 0,
+  "scope": "Isolated Foundry EVM with actual PoolManager and official V4Quoter plus disclosed payer/token fixtures. No public deployment or RPC transactions.",
+  "checks": [
+    {
+      "name": "testBootstrapCannotBeFabricatedInSameBlock",
+      "status": "pass"
+    },
+    {
+      "name": "testEffectivePriceIncludesFeesAndMarketFeeHasNoUserTiers",
+      "status": "pass"
+    },
+    {
+      "name": "testLiquidityLossResetsCoverageAndPriceImpactIsBounded",
+      "status": "pass"
+    },
+    {
+      "name": "testObservationRingRemainsBoundedWithRealPoolState",
+      "status": "pass"
+    },
+    {
+      "name": "testOfficialQuoteAndBothDecimalDirectionsMatchActualExecution",
+      "status": "pass"
+    },
+    {
+      "name": "testRouterAuthorityPauseAndHealthKeepLPWithdrawalAvailable",
+      "status": "pass"
+    },
+    {
+      "name": "testSizeAndPerBlockCapsRevertWithoutChangingBalancesOrHistory",
+      "status": "pass"
+    },
+    {
+      "name": "testStaleAnchorsFailClosedAndCheckpointRestoresAFullWindow",
+      "status": "pass"
+    },
+    {
+      "name": "testTimeWeightedTicksUseRealElapsedTimeAndFloorNegativeMeans",
+      "status": "pass"
+    }
+  ],
+  "sourceHashes": {
+    "contracts/src/AgentCityMarketplaceHook.sol": "eca22673e987cd9a07e3865dcd3e3d803778aaf0c5f2dbb9994adf1c622444eb",
+    "tests/contracts/AgentCityMarketplaceHook.t.sol": "3cee8f192713cffc09f1b6288f0a5177887cdb2866a58fa0b4c75272b3f8208f"
+  },
+  "publicTransactions": 0,
+  "paidModelCalls": 0,
+  "independentHumansVerified": 0,
+  "limitations": [
+    "Reference is geometric tick TWAP over a selected 300-to-600-second anchor, not an exact five-minute rolling window.",
+    "Raw active-liquidity floor is a disclosed threshold, not dollar liquidity or LP loss protection.",
+    "Sustained manipulation, MEV and LVR remain possible; no attack-free or loss-free guarantee.",
+    "Earlier fixture loop failures used compiler-hoisted block metadata; tests now use explicit Forge block getters."
+  ]
+}

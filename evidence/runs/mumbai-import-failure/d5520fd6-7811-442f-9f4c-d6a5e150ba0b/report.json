@@ -1,0 +1,9 @@
+{
+  "status": "fail",
+  "reason": "mumbai_imported_world_required",
+  "scope": "Isolatedrestartonly; activeprofilehealthy",
+  "rootCause": "PinnedPaper26.3 migrateslegacyfolders into primaryworld/dimensions/minecraft/name, so loadermustrecognizepersistentdimension metadata.",
+  "configuredWorldUuid": "be915875-64ec-4498-ae2a-1a6800dd1e53",
+  "publicTransactions": 0,
+  "oldWorldIdsPreserved": true
+}

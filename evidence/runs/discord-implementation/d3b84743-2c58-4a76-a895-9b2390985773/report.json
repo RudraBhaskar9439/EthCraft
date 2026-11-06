@@ -1,0 +1,164 @@
+{
+  "status": "local_implementation_live_identity_pending",
+  "createdAt": "2026-10-31T12:59:19.901Z",
+  "baseRelease": "27245cdbc49131e3d23985829534b224b55f05b4",
+  "sourceSha256": {
+    "backend/package-lock.json": "9c6f712df2a68a2f2bd48656207415d50375e3430ece1134bcfbac53176b0763",
+    "backend/package.json": "c8b089f72d030d7c74495db2aa2025dbd15220983c1ea7e664cc4f914bb3d1c0",
+    "backend/src/discord/bot.mjs": "c9ad83018688d52dbb7bc4367c9ba2337f289d5328b022bc373e1810dd1a7919",
+    "backend/src/discord/identity.mjs": "2c60c200b6ff4fe4517383c9d33f8145a595249237439f76330cb7011bc090fd",
+    "backend/src/discord/runtime.mjs": "d96c0ec462f05dd03c2cd6cefddcc0f04a96fd6b3c6b1ee1e3f6ba2cf7dc8435",
+    "backend/src/discord/schema.sql": "cbd2b0e4630015b4428fbec8c523d72fce8423fc5734a9daeef2ba6442d99715",
+    "backend/src/discord/settings.mjs": "7bd85f38e7b55f97d60a6aea1b8d704856c338568e3fe4fed71ea08fbfefdf0c",
+    "backend/src/discord/work-orders.mjs": "aa98af9f71c66e3884fe1c05ca4025b5ac8c5d5be1e7df5a7e6b67dd0df5ee38",
+    "backend/src/playable/agents.mjs": "76a2f8bdb20e66ea214850df9ea16a740fe0973e249ae01d9ce6c6aeb16a695f",
+    "backend/src/playable/intent-planner.mjs": "61f0ced8a49f03eeb871608ea786db7f602a707b367d369ca7571135692f0201",
+    "backend/src/playable/task-tools.mjs": "3cae011163ee966439cf1b4878ebff998a65bbd4b67e4f0cc2d26c7c95c18167",
+    "backend/src/playable/world-screenshot.mjs": "26abae7b73f2adfa4e3e5bc2516b9ed18dc5438a2a57f14ef0bf73f895f6a16f",
+    "backend/src/server.mjs": "69e18b6e33859ba88a2c4ecb04e850725ae37649128d9caca8b5b908af4165a3",
+    "companion/build.mjs": "2efc580e68c510bd97fcee0b5f9340e4826f207de76007af461679762b45b673",
+    "companion/discord-setup.html": "fd1e10f2c8ee6e01032e75c9608d0bcdabf7e3c21b70a5b371a37f4a04b86dec",
+    "companion/src/discord-setup.jsx": "6bef02dc44b0d4073d34fa7e1b61f55d50bb22941df21a00c76548d0a1446725",
+    "docs/DISCORD_ONBOARDING.md": "c21da6056e3ad1dfec57265f6e8199d8456c5bd2fd9c94ead3f46ce68ddffb6a",
+    "docs/UPSTREAM_REUSE.md": "9548d06dffe3c45cbda00ea3c79aacef5cb81104f87068d753a15a3b473c3f05",
+    "planning/phases.json": "361baea115fabbc2805d7b53b378421e8881617bd699427e47d1b615e6e0fcea",
+    "planning/scope.json": "c6f06276156308914407a1cda3c03b0d3204a2b1b66abd02b3e6100878872a9f",
+    "plugin/src/main/java/org/agentcity/paper/AgentCityPlugin.java": "79d78e218f4e9cf344400bcb780b69ffcd3b9b42291af1908c9f2fdfaef95504",
+    "plugin/src/main/java/org/agentcity/paper/AgentTaskProtection.java": "47509e606f0a2f3b35f8a9a9bbd007a98186fe20dc1bcdc09e196bebc5e45ca5",
+    "plugin/src/main/java/org/agentcity/paper/DiscordGameAccess.java": "b2ac7c1dd2e423530121ef15bf5efcb4ded2c4ad09f92833a46d6a4c7dbe25d6",
+    "plugin/src/main/java/org/agentcity/paper/PlayableExperience.java": "944ba811d1b99e7aaae82958f87193535fe15c85231555b0853ae5051db1df57",
+    "plugin/src/main/java/org/agentcity/paper/RemoteTaskGrants.java": "7f813346f1df94ece784d94bf9806a0eb568b5f57ac80228c223448cc8fff6a0",
+    "renderer/.dockerignore": "b717b4e094a574ace226f55e587d686a3bb0a0f2a30670ec2abd4db4d519cd0e",
+    "renderer/Dockerfile": "28132a1af01654d9002bc5b91064316a4aad0d974ca155f864a2eebe4e71a7d2",
+    "renderer/README.md": "073b9107d2cd93ceb5cccf87251b6118691e9bc9ff1e998a10c7a89c2a23baab",
+    "renderer/fixture.cjs": "16c44394db7e1681937dee89f4661999d02c62ac91b882117df061393d1ecb35",
+    "renderer/package-lock.json": "4885c5ec4dd3f3cff5b01a43ba3f433114bde7a13fb8379d31d0f75c30a9bb0f",
+    "renderer/package.json": "60fe5328aab6a3b37e9bf005c4efd1e75308e5a9cf958f8950f1a2909a2ed3c9",
+    "renderer/server.cjs": "2f9479c129cd104cba128800f686440e5fd9b73e7ceae3221ac989d8fd8f8d64",
+    "scripts/discord_credentials.py": "bdc23f87597a8cbc7f22b5025519676d08032270d49a407c9154b43f8a7f1b9a",
+    "scripts/discord_setup.mjs": "804bf330488c46e2ffbede7a7adde0d9a44b5b21fef9d80c8da327b2cd0623db",
+    "scripts/playable_host.py": "056cda0c329f55fa28b2eb1784720ffa23ff328b28a6fba783e59ff0d684984f",
+    "scripts/playable_worker.mjs": "5e57371dd515074d874e0b1dbfdcf24bb7ae16b2f289329192ad1133c08ddf67",
+    "tests/inspection/DiscordAccessStateCheck.java": "9da584a894b70425c9d5b23907a75077d69625c06e507b48f9d63f7b4347553b",
+    "tests/playable/discord-access-live.cjs": "fd42726c0937562e38b2ef7b126d5664723e52e967357c07275485e4ba21035f",
+    "tests/playable/discord-agent-live.mjs": "72b04b2296397f757c02161e912f384f99af8d5cf4e39defbf6e2d26687d63de",
+    "tests/playable/discord-agent-recovery-live.mjs": "b805ed5fe5b5990b550d04c6d8d125e9e13c78d68f5dfd7ddc88af87af2d9360",
+    "tests/playable/discord-bot.mjs": "bd5eb89dbc0f2ed72fe1bc2a56a14061578796579b8b7bc6c236793acf77be07",
+    "tests/playable/discord-http.mjs": "3fd7bb2340f701d2e2a70d8cc44f8fe35a5e693698620026001dadc04eea94a5",
+    "tests/playable/discord-identity.mjs": "d4273a5482e56954d320e1ad7a8e88628b01ef1b3fe26a253204602862afe3f0",
+    "tests/playable/discord-work-orders.mjs": "1907826e438ed284c0c8208e44a039b654d1c20d2c7649f117884f2447f5d567",
+    "tests/playable/intent-planner.mjs": "5e17a864b0094b1f921bbf0615d1b7ba6a35d374803b52f6b5d3db71130c0b91",
+    "tests/playable/remote-agents.mjs": "2be6eb364f1899e51948105dcc0b08a7de56e999ff7ef8761e42fa954d750040",
+    "tests/playable/tasks.mjs": "4adceae2743448b721e0af8c6713dae909df1318aa82ca1c3406b6a1457d8f26"
+  },
+  "canonical": {
+    "phase": "P0",
+    "gate": "blocked",
+    "reasons": [
+      "Implementation scope changed since approved release",
+      "P0-015 docs/UPSTREAM_REUSE.md artifact hash mismatch"
+    ],
+    "canonicalEvidenceRewritten": false
+  },
+  "environment": {
+    "ownedContainer": "agentcity-playable-ce946e82",
+    "pluginSha256": "c8161e45ef107c97b868deaf2bce686a0351cbb0ca44f96ed7482993992820e1",
+    "startupAfterRetainedFractionalHold": "pass; same persisted state loaded before native six-case join run",
+    "offlineBuildPluginSha256": "9db918f2b4873721850253966ca39ebb2a305b50b9041b5ccc7c75b8370da8de",
+    "model": "qwen3:4b via local Ollama",
+    "minecraftClient": "1.21.11 through ViaVersion/ViaBackwards 5.12.2",
+    "paper": "26.3 build 231",
+    "discordJs": "14.28.0",
+    "prismarineViewer": "1.33.0",
+    "imageAssets": "1.21.4 semantic mapping; independent overview, not client framebuffer"
+  },
+  "verification": {
+    "discord-identity": {
+      "file": "evidence/runs/discord-identity/86647f9b-cda8-4865-820b-afbef9acb8e6/report.json",
+      "status": "pass",
+      "checks": 5
+    },
+    "discord-work-orders": {
+      "file": "evidence/runs/discord-work-orders/921a3824-4275-438f-8af2-af1c26faac49/report.json",
+      "status": "pass",
+      "checks": 3
+    },
+    "discord-bot": {
+      "file": "evidence/runs/discord-bot/cc561d64-6266-40a8-93e2-2742edc0e1de/report.json",
+      "status": "pass",
+      "checks": 5
+    },
+    "discord-http": {
+      "file": "evidence/runs/discord-http/55ddb5ca-69b9-4bae-9254-46dca5326f67/report.json",
+      "status": "pass",
+      "checks": 2
+    },
+    "discord-game-access": {
+      "file": "evidence/runs/discord-game-access/47bc00b4-795c-4b80-b56b-085bb00b1c41/report.json",
+      "status": "pass",
+      "checks": 6
+    },
+    "discord-access-state": {
+      "file": "evidence/runs/discord-access-state/f65caf44-d1ae-4072-8ac9-092a8a8da246/report.json",
+      "status": "pass"
+    },
+    "discord-startup": {
+      "file": "evidence/runs/discord-startup/41446454-7440-4964-84aa-5dce9a026854/report.json",
+      "status": "fail"
+    },
+    "playable-discord-agent": {
+      "file": "evidence/runs/playable-discord-agent/04baf71e-2394-4d10-a2bb-2924e5851811/report.json",
+      "status": "fail",
+      "checks": 4,
+      "error": "Expected values to be strictly equal:\n\n50 !== 46\n"
+    },
+    "playable-discord-recovery": {
+      "file": "evidence/runs/playable-discord-recovery/515b5a51-e3e1-4379-a60b-5cfd58267d32/report.json",
+      "status": "pass",
+      "checks": 2
+    }
+  },
+  "focusedUnits": {
+    "tasks": 7,
+    "intentPlanner": 13,
+    "remoteAgents": 5,
+    "planningInfrastructure": 56,
+    "checkPlan": "pass; 11 phases, 270 families, 18 upstreams",
+    "companionProductionBuild": "pass"
+  },
+  "retained": {
+    "tasks": 11,
+    "allComplete": true,
+    "taskLocks": {},
+    "agents": [
+      {
+        "name": "CityAgent1",
+        "ownerId": "1f26185f-5e6d-33a1-afd6-59b79b801467",
+        "ownerName": "Ruddy"
+      }
+    ],
+    "source2": {
+      "cobblestone": 46,
+      "oakPlanks": 63,
+      "evidence": "evidence/runs/playable-discord-recovery/515b5a51-e3e1-4379-a60b-5cfd58267d32/report.json"
+    }
+  },
+  "external": {
+    "discordBotConfigured": false,
+    "liveDiscordOAuth": "not_run",
+    "realDiscordPanelAndImageDelivery": "not_run",
+    "actualNewWalletCreation": "not_run",
+    "mixedMicrosoftAuthentication": "unsupported_on_current_offline_mode_host",
+    "independentHumanAcceptance": "not_run",
+    "testnetFundingAndTransactionsThisWork": 0
+  },
+  "remaining": [
+    "Private Discord bot token and guild installation required for Gateway/panel delivery",
+    "User must enable Privy Discord login and link existing account through a fresh private /start challenge",
+    "Reachable HTTPS onboarding origin required for friends on other computers",
+    "Paid work is immutable request/quote/acceptance only; funding, payment and job execution integration remain later work",
+    "Microsoft and TLauncher clients can use Discord-approved local profiles; Microsoft ownership proof requires an authenticated route",
+    "Renderer build-chain dependency advisories remain disclosed; this is not production qualification"
+  ],
+  "history": "Initial HTTP readiness failures, initial whitelist admission failure, actual pending movement failure, actual decimal-state startup failure and completed-build final inspection failure are preserved. Separate successful correction/recovery does not rewrite those runs."
+}

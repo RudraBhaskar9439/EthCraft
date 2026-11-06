@@ -1,0 +1,49 @@
+{
+  "purpose": "isolated physical compatibility spike only",
+  "started_at": "2026-10-29T12:54:33.663831+00:00",
+  "versions": {
+    "purpose": "isolated_non_token_fixture",
+    "bind": "127.0.0.1",
+    "port": 25576,
+    "minecraft": "1.21.11",
+    "paper": {
+      "build": 132,
+      "support": "UNSUPPORTED",
+      "support_ended": "2026-06-15",
+      "sha256": "5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba",
+      "url": "https://fill-data.papermc.io/v1/objects/5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba/paper-1.21.11-132.jar"
+    },
+    "java_image": "eclipse-temurin@sha256:5d90b26c0784ccf55af55f97cbcf7f3969c66a06299c93bdc72649219942a48f",
+    "mineflayer": "4.39.0",
+    "pathfinder": "2.4.5",
+    "authentication": "offline_fixture_only",
+    "independent_human_participants": 0,
+    "token_integration": false,
+    "production_supported": false
+  },
+  "independent_humans": 0,
+  "full_phase_gate_passed": false,
+  "steps": [
+    {
+      "step": "bootstrap",
+      "status": "pass",
+      "container": "acbafb71125f2b9c3c6c5965bd1815e4e57032ae0b0a64da8123b6e47124b427"
+    },
+    {
+      "step": "compile_fixture_plugin",
+      "status": "pass"
+    },
+    {
+      "step": "fixture",
+      "status": "pass",
+      "container": "c29e988fe373d7f1b60e049edb2ca85836d3d4be457dfb247ed32f775609c9ea"
+    }
+  ],
+  "java_runtime": "openjdk version \"21.0.12.1\" 2026-08-18 LTS\nOpenJDK Runtime Environment Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS)\nOpenJDK 64-Bit Server VM Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS, mixed mode, sharing)",
+  "node_runtime": "v26.3.1",
+  "actual_paper_sha256": "5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba",
+  "fixture_plugin_sha256": "564a6bf7e74972003692df84a6f362fe2592a964e75ad55309cdde068d53529c",
+  "status": "fail",
+  "error": "node failed (1): {\"schema\":\"agentcity.p0.compatibility.v1\",\"status\":\"failed\",\"started_at\":\"2026-10-29T12:54:50.289Z\",\"environment\":{\"host\":\"127.0.0.1\",\"port\":25576,\"version\":\"1.21.11\",\"auth\":\"offline\"},\"identities\":\"FixtureBuilder and FixtureObserver are both agent-controlled test fixtures, not independent humans or licensed-account proof.\",\"steps\":[],\"current_step\":\"initial_off\",\"error\":{\"name\":\"AssertionError\",\"message\":\"initial_off: client wire\\n\\n'0' !== 0\\n\"},\"finished_at\":\"2026-10-29T12:54:58.307Z\"}\n",
+  "finished_at": "2026-10-29T12:55:00.338734+00:00"
+}

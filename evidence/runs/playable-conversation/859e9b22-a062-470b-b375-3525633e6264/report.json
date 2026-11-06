@@ -1,0 +1,55 @@
+{
+  "status": "fail",
+  "scope": "Actual local @agent conversation through Ollama and native delivery/collection/Game Coins sale; crypto authentication remains denied for this synthetic player",
+  "independentHumansVerified": 0,
+  "providerIdentitiesVerified": 0,
+  "publicTransactions": 0,
+  "checks": [
+    {
+      "name": "wallet-login-capability-binds-current-connection-and-unauthenticated-swap-adds-no-wallet-request-or-preview-records",
+      "status": "pass",
+      "providerRecordsBefore": {
+        "wallets": 0,
+        "signingRequests": 0,
+        "swapPreviews": 0
+      },
+      "providerRecordsAfter": {
+        "wallets": 0,
+        "signingRequests": 0,
+        "swapPreviews": 0
+      }
+    },
+    {
+      "name": "actual-at-agent-chat-produced-exact-three-step-conversational-plan",
+      "status": "pass",
+      "steps": [
+        {
+          "action": "deliver",
+          "item": "cobblestone",
+          "count": 2
+        },
+        {
+          "action": "collect",
+          "item": "cobblestone",
+          "count": 4
+        },
+        {
+          "action": "sell",
+          "item": "cobblestone",
+          "count": 4
+        }
+      ]
+    }
+  ],
+  "startedAt": "2026-10-31T09:17:32.787Z",
+  "workflowId": "bb07d504-837b-4a4a-b33c-6decf7f5531a",
+  "workflow": {
+    "status": "paused",
+    "completedSteps": 0,
+    "totalSteps": 3,
+    "message": "No safe walking path to the task target."
+  },
+  "error": "No safe walking path to the task target.\n+ actual - expected\n\n+ 'paused'\n- 'complete'\n",
+  "finishedAt": "2026-10-31T09:19:04.999Z",
+  "lastWorldName": "minecraft:agentcity_play"
+}

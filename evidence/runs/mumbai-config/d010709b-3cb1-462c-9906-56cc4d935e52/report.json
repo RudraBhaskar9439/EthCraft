@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "checks": 12,
+  "scope": "Actual pinned plugin compilation and static config/legacy+migrated storage binding assertions; no server/world mutation.",
+  "pluginSha256": "a45cb9ffe94d118a567db7c578107abdcb13754111c31d122a8673566d6e5944",
+  "sources": {
+    "plugin/src/main/java/org/agentcity/paper/MumbaiWorld.java": "0b2ce402fc5de23f7654d383138b84fe83937c3016bb031238eb804b804ce2f6",
+    "plugin/src/main/java/org/agentcity/paper/MumbaiWorldStorage.java": "9e39fed7cb06ed33a3e9bbdb153bb9a7ee9c7f7519b0f68f2cfbf2e38144b827",
+    "plugin/src/main/java/org/agentcity/paper/PlayableExperience.java": "40cbfc8d4d2caa3d1a3eaf579512e2f7e557981bf0c8720f0ff603d9ba3d525a",
+    "plugin/src/main/resources/plugin.yml": "3419a90e6656cfd074ef554dacc57fc83ba31526d45bd8ee35783da27206dad3",
+    "tests/maps/MumbaiWorldConfigTest.java": "5795a5c4a6cb8eaae0c39476103825c8e16e1d67378d3defc9b27c57b9a0975b"
+  }
+}

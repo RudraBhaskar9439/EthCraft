@@ -1,0 +1,722 @@
+{
+  "runId": "cb65790a-a1ab-44ba-a8b7-417fd0562d21",
+  "status": "pass",
+  "scope": "Actual isolated Paper26.3 resource-lot escrow/claim + Anvil31337 contracts + PostgreSQL translation service. Synthetic Discord/Privy principals and unlocked local signers; no real human, live Privy, public-chain or production action.",
+  "checks": [
+    {
+      "name": "REAL Paper selected one-of-three stick portion preview/reserve→actual canonical Anvil NFT mint→REAL native token/custody binding",
+      "status": "pass"
+    },
+    {
+      "name": "Actual NFT listing and exact3CITY atomic purchase transfer canonical ownership to the second fixture principal while exact one-stick lot stays in native custody and seller keeps two",
+      "status": "pass"
+    },
+    {
+      "name": "Actual canonical redemption lock→REAL native asset-release mailbox→Anvil burn→REAL recipient claim preserves byte-exact one-stick resource lot with seller2/buyer1 conservation with zero extra items/transactions on retry",
+      "status": "pass"
+    }
+  ],
+  "publicTransactions": 0,
+  "productionMinecraftWrites": 0,
+  "sourceHashes": {
+    "service.mjs": "1c33c900e4f5bcc93c45558cbdd89c6c1b0eb66dea5bfe008a5796155aa2209c",
+    "canonical.mjs": "49c5a63385e1807dd426db0522f940793cd37f28f7db475b2de8b959d2b12620",
+    "store.mjs": "484501cec1801d989bb7b56263b123f14b92ef23c567c53334cb3953ffe107b3",
+    "managed-policy.mjs": "960bac6a1053c8f3e8595118a79eefbaed0c96d80a1faebae88ee4547808849e",
+    "abis.mjs": "c88114bc728e1014b171b47754329dee474d3830a82d3807fdddc0a94a8d33de"
+  },
+  "ownedAnvil": {
+    "pid": 32526,
+    "address": "127.0.0.1:18559",
+    "chainId": 31337
+  },
+  "manifest": {
+    "schema": "agentcity.world-assets.v1",
+    "environment": "LOCAL_TEST_FIXTURE",
+    "chainId": 31337,
+    "rpcUrl": "http://127.0.0.1:18559",
+    "genesisHash": "0xcb070c1f7f9cf311e41a37c25739c04db30ddb61f56c94571a5c6ee14f32b29f",
+    "serverId": "0x38685fda2563d2067b680f496326986c74111b87b91ed0b6e237e93ac1b178c9",
+    "deploymentId": "0x5c59a3acb7cfd58d48066690cad78564b9338ef10cec3c01aa8a411b9b08409e",
+    "registry": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+    "market": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+    "city": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+    "codeHashes": {
+      "registry": "0x9825094905f226df9f11f142b1f876b56adc56de6215fba350c05d34fb57cc9a",
+      "market": "0x2606a5977585ef49f674127bbfb28563badad4d7b89011b107c9a781e1af866c",
+      "city": "0x4f8a291c047fd92795055b9bfe83fcb8e77058851f1834e0a103f687dea734c1"
+    },
+    "confirmations": 2,
+    "maxPriceBaseUnits": "100000000000000000000",
+    "maxGas": "1000000",
+    "maxNativeCostWei": "8000000000000000"
+  },
+  "paper": {
+    "owner": "world-assets-seam-fixture",
+    "container": "agentcity-world-assets-seam-1bb72455",
+    "runtime": "/mnt/c/Users/Rudransh Shinghal/agentcity-minecraft/.local/world-assets-seam/1bb72455-f438-4d6b-bfca-5f93ee4d6fad",
+    "pluginSha256": "d65503b332a178c9ca501e3369fbb6baff310f6f98f298333ea4100e849644d2",
+    "gamePort": 25606,
+    "apiPort": 25607,
+    "stock": "Exactly three declared plain sticks in the fixture source slot; reserve one and retain two. No other stock introduced by this test.",
+    "infrastructureDisclosure": "New PlayableExperience initializes its disclosed demonstration task-pad chests; seam test must not withdraw them. No original world or inventory was copied.",
+    "fixtureGrant": {
+      "actor": "EscSeller",
+      "count": 3,
+      "item": "minecraft:stick",
+      "slot": 7
+    },
+    "dependencies": [
+      {
+        "plugin": "WorldGuard",
+        "version": "7.0.20+2410-0b6c3f1",
+        "release": "7.0.20",
+        "file": "worldguard-bukkit-7.0.20.jar",
+        "url": "https://mediafilez.forgecdn.net/files/9219/599/worldguard-bukkit-7.0.20.jar",
+        "releasePage": "https://dev.bukkit.org/projects/worldguard/files/9219599",
+        "sha256": "8768a49bcbecbb7a413ad134ee72d9871cdf967b7d938e6b96bb0ca72bb1467b",
+        "officialReleaseMd5": "cf5da34dcd48d5b286b4a93b68383b93",
+        "license": "LGPL-3.0-or-later",
+        "licenseUrl": "https://github.com/EngineHub/WorldGuard/blob/7.0.20/LICENSE.txt"
+      },
+      {
+        "plugin": "WorldEdit",
+        "version": "7.4.6+7648-00664b0",
+        "release": "7.4.6",
+        "file": "worldedit-bukkit-7.4.6.jar",
+        "url": "https://hangarcdn.papermc.io/plugins/EngineHub/WorldEdit/versions/7.4.6/PAPER/worldedit-bukkit-7.4.6.jar",
+        "releasePage": "https://hangar.papermc.io/EngineHub/WorldEdit/versions/7.4.6",
+        "sha256": "e0ce67d870ad1fef8a40dd9d7926360caf3bb44722438545d6b20b55f82a0c91",
+        "license": "GPL-3.0-or-later",
+        "licenseUrl": "https://github.com/EngineHub/WorldEdit/blob/7.4.6/LICENSE.txt"
+      }
+    ]
+  },
+  "originalResource": {
+    "fingerprint": "b4ff1782e2d8b24d86b5d983bbf8fc9be29f669b24bce82bfa03caac36e40202",
+    "descriptor": {
+      "material": "minecraft:stick",
+      "amount": 1,
+      "maxStackSize": 64,
+      "name": "STICK",
+      "damage": 0,
+      "maxDurability": 0,
+      "enchantments": {},
+      "lore": []
+    },
+    "worldName": "agentcity_lobby",
+    "worldUUID": "78955a27-37ce-4f2e-83b5-113da13c4bbe",
+    "selectionSlot": 7
+  },
+  "mint": {
+    "operationId": "real-paper-stick-cb65790a-a1ab-44ba-a8b7-417fd0562d21",
+    "previewId": "7498aa6e-b269-449c-a3c6-05411a3cb716",
+    "action": "mint",
+    "termsDigest": "663c1b65bf3c8d123f93bb4eb81f847bfd12480ca371bb2ba54258f660c0163a",
+    "status": "complete",
+    "expiresAtMs": 1793474831194,
+    "terms": {
+      "kind": "item",
+      "worldId": "0xbb1c338eb01120c7c9b5e07f001dbc5e7e93e1b64c6ac33bdb416cba23991dd1",
+      "custodyId": "0x5b401c21325a89723c7726db761e1a3984d1832a06f28e41052ca4d204a8b760",
+      "inventory": {
+        "sourceId": "e63aeed3-4010-3e23-88e1-19e019f0a248",
+        "sourceKind": "player_inventory",
+        "connectionId": "505b8f2d-648f-4d3c-82ad-25d7c414d693"
+      },
+      "snapshotHash": "0xb4ff1782e2d8b24d86b5d983bbf8fc9be29f669b24bce82bfa03caac36e40202",
+      "nativePreview": {
+        "item": "minecraft:stick",
+        "count": 1,
+        "sellerId": "7a05ec4b-067b-4e33-95e9-4ee4666abea6",
+        "sourceId": "e63aeed3-4010-3e23-88e1-19e019f0a248",
+        "previewId": "7498aa6e-b269-449c-a3c6-05411a3cb716",
+        "worldName": "agentcity_lobby",
+        "worldUUID": "78955a27-37ce-4f2e-83b5-113da13c4bbe",
+        "descriptor": {
+          "lore": [],
+          "name": "STICK",
+          "amount": 1,
+          "damage": 0,
+          "material": "minecraft:stick",
+          "enchantments": {},
+          "maxStackSize": 64,
+          "maxDurability": 0
+        },
+        "sourceKind": "player_inventory",
+        "expiresAtMs": 1793474831194,
+        "fingerprint": "b4ff1782e2d8b24d86b5d983bbf8fc9be29f669b24bce82bfa03caac36e40202",
+        "connectionId": "505b8f2d-648f-4d3c-82ad-25d7c414d693",
+        "ownerPlayerId": "e63aeed3-4010-3e23-88e1-19e019f0a248",
+        "requestedSlot": 7,
+        "selectionSlot": 7,
+        "sellerAccountId": "e63aeed3-4010-3e23-88e1-19e019f0a248"
+      }
+    },
+    "tokenId": "1",
+    "proofs": [
+      {
+        "confirmed": true,
+        "chainId": 31337,
+        "registry": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+        "deploymentId": "0x5c59a3acb7cfd58d48066690cad78564b9338ef10cec3c01aa8a411b9b08409e",
+        "transactionHash": "0x8a2eb4315bc43db228034d820432197e9f069cc25ccb61ca52e2ffe0f922a7af",
+        "blockNumber": "8",
+        "blockHash": "0xbb2ba4714e563c30e312afb8a2af9cccfc509f424173f6c2000cae840e75e61a",
+        "confirmations": 2,
+        "observedAtMs": 1793474531604,
+        "logIndex": 2,
+        "eventName": "AssetRegistered",
+        "args": {
+          "tokenId": "1",
+          "kind": 1,
+          "serverId": "0x38685fda2563d2067b680f496326986c74111b87b91ed0b6e237e93ac1b178c9",
+          "worldId": "0xbb1c338eb01120c7c9b5e07f001dbc5e7e93e1b64c6ac33bdb416cba23991dd1",
+          "custodyId": "0x5b401c21325a89723c7726db761e1a3984d1832a06f28e41052ca4d204a8b760",
+          "snapshotHash": "0xb4ff1782e2d8b24d86b5d983bbf8fc9be29f669b24bce82bfa03caac36e40202",
+          "nativeReceiptId": "0xfbf9cffb4e64c384ee0091702ccba70b2faaf8b4d33965ea4613cb3524506d6d",
+          "parcelKey": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "receiptHash": "ade5aca62b989116e259f74281b00bbcddb33bacd87ce9affbc2c1d961de25d3",
+        "logHash": "3f8987cc013bf2c21ad38a750769c9e17fb823c8f15bc24d770dd46a5480bd63"
+      }
+    ],
+    "message": "Confirmed on the pinned test chain; rights still require a fresh canonical native projection."
+  },
+  "listing": {
+    "operationId": "real-paper-stick-list-cb65790a-a1ab-44ba-a8b7-417fd0562d21",
+    "previewId": "09fa8f18-f7d0-4bfe-a9b7-8758770a228b",
+    "action": "list",
+    "termsDigest": "806891e8336303b3c33620fe8d00a3884a20ff7d15ad2e006d317265f1176c9e",
+    "status": "complete",
+    "expiresAtMs": 1793474831792,
+    "terms": {
+      "asset": {
+        "kind": 1,
+        "cellX": 0,
+        "cellZ": 0,
+        "owner": "0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc",
+        "tokenId": "1",
+        "worldId": "0xbb1c338eb01120c7c9b5e07f001dbc5e7e93e1b64c6ac33bdb416cba23991dd1",
+        "redeemed": false,
+        "revision": "1",
+        "serverId": "0x38685fda2563d2067b680f496326986c74111b87b91ed0b6e237e93ac1b178c9",
+        "custodyId": "0x5b401c21325a89723c7726db761e1a3984d1832a06f28e41052ca4d204a8b760",
+        "parcelKey": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "snapshotHash": "0xb4ff1782e2d8b24d86b5d983bbf8fc9be29f669b24bce82bfa03caac36e40202",
+        "ownershipNonce": "1",
+        "nativeReceiptId": "0xfbf9cffb4e64c384ee0091702ccba70b2faaf8b4d33965ea4613cb3524506d6d",
+        "redemptionPending": false
+      },
+      "price": "3000000000000000000",
+      "expiry": 1793478131,
+      "backing": {
+        "item": "minecraft:stick",
+        "kind": "item",
+        "count": 1,
+        "proof": {
+          "args": {
+            "kind": 1,
+            "tokenId": "1",
+            "worldId": "0xbb1c338eb01120c7c9b5e07f001dbc5e7e93e1b64c6ac33bdb416cba23991dd1",
+            "serverId": "0x38685fda2563d2067b680f496326986c74111b87b91ed0b6e237e93ac1b178c9",
+            "custodyId": "0x5b401c21325a89723c7726db761e1a3984d1832a06f28e41052ca4d204a8b760",
+            "parcelKey": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "snapshotHash": "0xb4ff1782e2d8b24d86b5d983bbf8fc9be29f669b24bce82bfa03caac36e40202",
+            "nativeReceiptId": "0xfbf9cffb4e64c384ee0091702ccba70b2faaf8b4d33965ea4613cb3524506d6d"
+          },
+          "chainId": 31337,
+          "logHash": "3f8987cc013bf2c21ad38a750769c9e17fb823c8f15bc24d770dd46a5480bd63",
+          "logIndex": 2,
+          "registry": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+          "blockHash": "0xbb2ba4714e563c30e312afb8a2af9cccfc509f424173f6c2000cae840e75e61a",
+          "confirmed": true,
+          "eventName": "AssetRegistered",
+          "blockNumber": "8",
+          "receiptHash": "ade5aca62b989116e259f74281b00bbcddb33bacd87ce9affbc2c1d961de25d3",
+          "deploymentId": "0x5c59a3acb7cfd58d48066690cad78564b9338ef10cec3c01aa8a411b9b08409e",
+          "observedAtMs": 1793474531604,
+          "confirmations": 2,
+          "transactionHash": "0x8a2eb4315bc43db228034d820432197e9f069cc25ccb61ca52e2ffe0f922a7af"
+        },
+        "tokenId": "1",
+        "worldId": "0xbb1c338eb01120c7c9b5e07f001dbc5e7e93e1b64c6ac33bdb416cba23991dd1",
+        "parcelId": null,
+        "revision": "1",
+        "descriptor": {
+          "lore": [],
+          "name": "STICK",
+          "amount": 1,
+          "damage": 0,
+          "material": "minecraft:stick",
+          "enchantments": {},
+          "maxStackSize": 64,
+          "maxDurability": 0
+        },
+        "fingerprint": "b4ff1782e2d8b24d86b5d983bbf8fc9be29f669b24bce82bfa03caac36e40202",
+        "termsDigest": "663c1b65bf3c8d123f93bb4eb81f847bfd12480ca371bb2ba54258f660c0163a",
+        "snapshotHash": "0xb4ff1782e2d8b24d86b5d983bbf8fc9be29f669b24bce82bfa03caac36e40202",
+        "nativeListingId": "7498aa6e-b269-449c-a3c6-05411a3cb716",
+        "nativeReceiptId": "0xfbf9cffb4e64c384ee0091702ccba70b2faaf8b4d33965ea4613cb3524506d6d",
+        "catalogTermsDigest": null
+      }
+    },
+    "tokenId": null,
+    "proofs": [
+      {
+        "confirmed": true,
+        "chainId": 31337,
+        "registry": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+        "deploymentId": "0x5c59a3acb7cfd58d48066690cad78564b9338ef10cec3c01aa8a411b9b08409e",
+        "transactionHash": "0x544d25b30f119b747a659e231fc90d3b5b5823dcfbb6bcdb2f46ff6670d69e5b",
+        "blockNumber": "10",
+        "blockHash": "0x1b03a4f841c460de468ec54383a1e34d6778a2990e95c9bf94cce3044f694c53",
+        "confirmations": 2,
+        "observedAtMs": 1793474532043,
+        "logIndex": null,
+        "eventName": null,
+        "args": {},
+        "receiptHash": "bb77fb5b382266638d3d522b831f4d820798c7a43c1393df096ef03ac2eb5ff9",
+        "logHash": null
+      },
+      {
+        "confirmed": true,
+        "chainId": 31337,
+        "registry": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+        "deploymentId": "0x5c59a3acb7cfd58d48066690cad78564b9338ef10cec3c01aa8a411b9b08409e",
+        "transactionHash": "0x8f0741c48d331ac3c2ed6559105d21d34a1476a1dd4a19a7d71176ffd0109ee9",
+        "blockNumber": "12",
+        "blockHash": "0xa241ae509af619ffe12f2430a8d231b431fed9eec1ff03916a8495a8f331d0db",
+        "confirmations": 2,
+        "observedAtMs": 1793474533075,
+        "logIndex": 0,
+        "eventName": "AssetListed",
+        "args": {
+          "tokenId": "1",
+          "seller": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+          "listingNonce": "1",
+          "price": "3000000000000000000",
+          "expiry": "1793478131",
+          "ownershipNonce": "1",
+          "revision": "1"
+        },
+        "receiptHash": "9b2a175950d3205a7b4fbb65912ba449b55e6059a98f6609b9bda1761475a782",
+        "logHash": "86e970d28dd76e68e096f798d5cb03d90f142124ba294769bdabe41155dbc75d"
+      }
+    ],
+    "message": "Confirmed on the pinned test chain; rights still require a fresh canonical native projection."
+  },
+  "purchase": {
+    "operationId": "real-paper-stick-buy-cb65790a-a1ab-44ba-a8b7-417fd0562d21",
+    "previewId": "d6704f75-68d5-4127-a9b8-ee7d97871b1f",
+    "action": "buy",
+    "termsDigest": "89815230b21729051a89f826583d9eacfa82ae2b1d19f7d3264691bdcad19da5",
+    "status": "complete",
+    "expiresAtMs": 1793474833134,
+    "terms": {
+      "asset": {
+        "kind": 1,
+        "cellX": 0,
+        "cellZ": 0,
+        "owner": "0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc",
+        "tokenId": "1",
+        "worldId": "0xbb1c338eb01120c7c9b5e07f001dbc5e7e93e1b64c6ac33bdb416cba23991dd1",
+        "redeemed": false,
+        "revision": "1",
+        "serverId": "0x38685fda2563d2067b680f496326986c74111b87b91ed0b6e237e93ac1b178c9",
+        "custodyId": "0x5b401c21325a89723c7726db761e1a3984d1832a06f28e41052ca4d204a8b760",
+        "parcelKey": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "snapshotHash": "0xb4ff1782e2d8b24d86b5d983bbf8fc9be29f669b24bce82bfa03caac36e40202",
+        "ownershipNonce": "1",
+        "nativeReceiptId": "0xfbf9cffb4e64c384ee0091702ccba70b2faaf8b4d33965ea4613cb3524506d6d",
+        "redemptionPending": false
+      },
+      "backing": {
+        "item": "minecraft:stick",
+        "kind": "item",
+        "count": 1,
+        "proof": {
+          "args": {
+            "kind": 1,
+            "tokenId": "1",
+            "worldId": "0xbb1c338eb01120c7c9b5e07f001dbc5e7e93e1b64c6ac33bdb416cba23991dd1",
+            "serverId": "0x38685fda2563d2067b680f496326986c74111b87b91ed0b6e237e93ac1b178c9",
+            "custodyId": "0x5b401c21325a89723c7726db761e1a3984d1832a06f28e41052ca4d204a8b760",
+            "parcelKey": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "snapshotHash": "0xb4ff1782e2d8b24d86b5d983bbf8fc9be29f669b24bce82bfa03caac36e40202",
+            "nativeReceiptId": "0xfbf9cffb4e64c384ee0091702ccba70b2faaf8b4d33965ea4613cb3524506d6d"
+          },
+          "chainId": 31337,
+          "logHash": "3f8987cc013bf2c21ad38a750769c9e17fb823c8f15bc24d770dd46a5480bd63",
+          "logIndex": 2,
+          "registry": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+          "blockHash": "0xbb2ba4714e563c30e312afb8a2af9cccfc509f424173f6c2000cae840e75e61a",
+          "confirmed": true,
+          "eventName": "AssetRegistered",
+          "blockNumber": "8",
+          "receiptHash": "ade5aca62b989116e259f74281b00bbcddb33bacd87ce9affbc2c1d961de25d3",
+          "deploymentId": "0x5c59a3acb7cfd58d48066690cad78564b9338ef10cec3c01aa8a411b9b08409e",
+          "observedAtMs": 1793474531604,
+          "confirmations": 2,
+          "transactionHash": "0x8a2eb4315bc43db228034d820432197e9f069cc25ccb61ca52e2ffe0f922a7af"
+        },
+        "tokenId": "1",
+        "worldId": "0xbb1c338eb01120c7c9b5e07f001dbc5e7e93e1b64c6ac33bdb416cba23991dd1",
+        "parcelId": null,
+        "revision": "1",
+        "descriptor": {
+          "lore": [],
+          "name": "STICK",
+          "amount": 1,
+          "damage": 0,
+          "material": "minecraft:stick",
+          "enchantments": {},
+          "maxStackSize": 64,
+          "maxDurability": 0
+        },
+        "fingerprint": "b4ff1782e2d8b24d86b5d983bbf8fc9be29f669b24bce82bfa03caac36e40202",
+        "termsDigest": "663c1b65bf3c8d123f93bb4eb81f847bfd12480ca371bb2ba54258f660c0163a",
+        "snapshotHash": "0xb4ff1782e2d8b24d86b5d983bbf8fc9be29f669b24bce82bfa03caac36e40202",
+        "nativeListingId": "7498aa6e-b269-449c-a3c6-05411a3cb716",
+        "nativeReceiptId": "0xfbf9cffb4e64c384ee0091702ccba70b2faaf8b4d33965ea4613cb3524506d6d",
+        "catalogTermsDigest": null
+      },
+      "listing": {
+        "nonce": "1",
+        "price": "3000000000000000000",
+        "expiry": "1793478131",
+        "seller": "0x3c44cdddb6a900fa2b585dd299e03d12fa4293bc",
+        "revision": "1",
+        "ownershipNonce": "1"
+      }
+    },
+    "tokenId": null,
+    "proofs": [
+      {
+        "confirmed": true,
+        "chainId": 31337,
+        "registry": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+        "deploymentId": "0x5c59a3acb7cfd58d48066690cad78564b9338ef10cec3c01aa8a411b9b08409e",
+        "transactionHash": "0xb9813a6e7efaf59f49acd82dc0b6a1a9b72793fd72ce7629edfae52736adb651",
+        "blockNumber": "14",
+        "blockHash": "0x6dc72a725a966ccc1127b1cd3cae7b76f1a0bd86ef66fbf64d32b5caa2cbfb5e",
+        "confirmations": 2,
+        "observedAtMs": 1793474534054,
+        "logIndex": null,
+        "eventName": null,
+        "args": {},
+        "receiptHash": "b3b84dcf96e1a863513e827f7e25e6bb9e5ef0b1fb39084bed553c223ccc26a7",
+        "logHash": null
+      },
+      {
+        "confirmed": true,
+        "chainId": 31337,
+        "registry": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+        "deploymentId": "0x5c59a3acb7cfd58d48066690cad78564b9338ef10cec3c01aa8a411b9b08409e",
+        "transactionHash": "0x6716da7cd6999e5c68ce20d75de91dd612d79dab5b1f1431b20904bfbf55cfa4",
+        "blockNumber": "16",
+        "blockHash": "0x3029214a1fc6bbf1c60280d81b8ffa019be458d4f0edaa8d170f30f855d4be77",
+        "confirmations": 2,
+        "observedAtMs": 1793474535070,
+        "logIndex": 3,
+        "eventName": "AssetPurchased",
+        "args": {
+          "tokenId": "1",
+          "seller": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+          "buyer": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+          "price": "3000000000000000000",
+          "listingNonce": "1",
+          "ownershipNonce": "2",
+          "revision": "1"
+        },
+        "receiptHash": "d3d73a25825dfe18b3bfbfefd759b2eaeacf06f5b00397e5c8e0f1873385c53a",
+        "logHash": "ffd3204c9c790889c03bb7c58dbd9899b8ba3b1f36a68e46246283b115f8f409"
+      }
+    ],
+    "message": "Confirmed on the pinned test chain; rights still require a fresh canonical native projection."
+  },
+  "redemption": {
+    "operationId": "real-paper-stick-redeem-cb65790a-a1ab-44ba-a8b7-417fd0562d21",
+    "previewId": "e054e4b5-82cb-41c0-aee5-322ef7bb584e",
+    "action": "redeem",
+    "termsDigest": "9b88daaaa69896c6ce0d1a918dd57ba4ca0ea78021c68a7e9c5bfb59b1e36b82",
+    "status": "complete",
+    "expiresAtMs": 1793474835153,
+    "terms": {
+      "asset": {
+        "kind": 1,
+        "cellX": 0,
+        "cellZ": 0,
+        "owner": "0x90f79bf6eb2c4f870365e785982e1f101e93b906",
+        "tokenId": "1",
+        "worldId": "0xbb1c338eb01120c7c9b5e07f001dbc5e7e93e1b64c6ac33bdb416cba23991dd1",
+        "redeemed": false,
+        "revision": "1",
+        "serverId": "0x38685fda2563d2067b680f496326986c74111b87b91ed0b6e237e93ac1b178c9",
+        "custodyId": "0x5b401c21325a89723c7726db761e1a3984d1832a06f28e41052ca4d204a8b760",
+        "parcelKey": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "snapshotHash": "0xb4ff1782e2d8b24d86b5d983bbf8fc9be29f669b24bce82bfa03caac36e40202",
+        "ownershipNonce": "2",
+        "nativeReceiptId": "0xfbf9cffb4e64c384ee0091702ccba70b2faaf8b4d33965ea4613cb3524506d6d",
+        "redemptionPending": false
+      },
+      "backing": {
+        "item": "minecraft:stick",
+        "kind": "item",
+        "count": 1,
+        "proof": {
+          "args": {
+            "kind": 1,
+            "tokenId": "1",
+            "worldId": "0xbb1c338eb01120c7c9b5e07f001dbc5e7e93e1b64c6ac33bdb416cba23991dd1",
+            "serverId": "0x38685fda2563d2067b680f496326986c74111b87b91ed0b6e237e93ac1b178c9",
+            "custodyId": "0x5b401c21325a89723c7726db761e1a3984d1832a06f28e41052ca4d204a8b760",
+            "parcelKey": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "snapshotHash": "0xb4ff1782e2d8b24d86b5d983bbf8fc9be29f669b24bce82bfa03caac36e40202",
+            "nativeReceiptId": "0xfbf9cffb4e64c384ee0091702ccba70b2faaf8b4d33965ea4613cb3524506d6d"
+          },
+          "chainId": 31337,
+          "logHash": "3f8987cc013bf2c21ad38a750769c9e17fb823c8f15bc24d770dd46a5480bd63",
+          "logIndex": 2,
+          "registry": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+          "blockHash": "0xbb2ba4714e563c30e312afb8a2af9cccfc509f424173f6c2000cae840e75e61a",
+          "confirmed": true,
+          "eventName": "AssetRegistered",
+          "blockNumber": "8",
+          "receiptHash": "ade5aca62b989116e259f74281b00bbcddb33bacd87ce9affbc2c1d961de25d3",
+          "deploymentId": "0x5c59a3acb7cfd58d48066690cad78564b9338ef10cec3c01aa8a411b9b08409e",
+          "observedAtMs": 1793474531604,
+          "confirmations": 2,
+          "transactionHash": "0x8a2eb4315bc43db228034d820432197e9f069cc25ccb61ca52e2ffe0f922a7af"
+        },
+        "tokenId": "1",
+        "worldId": "0xbb1c338eb01120c7c9b5e07f001dbc5e7e93e1b64c6ac33bdb416cba23991dd1",
+        "parcelId": null,
+        "revision": "1",
+        "descriptor": {
+          "lore": [],
+          "name": "STICK",
+          "amount": 1,
+          "damage": 0,
+          "material": "minecraft:stick",
+          "enchantments": {},
+          "maxStackSize": 64,
+          "maxDurability": 0
+        },
+        "fingerprint": "b4ff1782e2d8b24d86b5d983bbf8fc9be29f669b24bce82bfa03caac36e40202",
+        "termsDigest": "663c1b65bf3c8d123f93bb4eb81f847bfd12480ca371bb2ba54258f660c0163a",
+        "snapshotHash": "0xb4ff1782e2d8b24d86b5d983bbf8fc9be29f669b24bce82bfa03caac36e40202",
+        "nativeListingId": "7498aa6e-b269-449c-a3c6-05411a3cb716",
+        "nativeReceiptId": "0xfbf9cffb4e64c384ee0091702ccba70b2faaf8b4d33965ea4613cb3524506d6d",
+        "catalogTermsDigest": null
+      }
+    },
+    "tokenId": null,
+    "proofs": [
+      {
+        "confirmed": true,
+        "chainId": 31337,
+        "registry": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+        "deploymentId": "0x5c59a3acb7cfd58d48066690cad78564b9338ef10cec3c01aa8a411b9b08409e",
+        "transactionHash": "0xaf38d9ead75afe49bb57b89b81114bce26de2fec979e3b17b418a75ed0ff534f",
+        "blockNumber": "18",
+        "blockHash": "0x693a904056c2e357f3c82b1a9fe5b8b724d04ce0635f5c0dfad78c3d1c7f7fe2",
+        "confirmations": 2,
+        "observedAtMs": 1793474536047,
+        "logIndex": 0,
+        "eventName": "RedemptionRequested",
+        "args": {
+          "tokenId": "1",
+          "claimId": "0x61a488805786dbdaefe744b1a9d81b3274cd8bab78c1f09ae7d5077178ae9b8b",
+          "owner": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+          "ownershipNonce": "3"
+        },
+        "receiptHash": "d5fa8718c19996a1b81afbaa0e22c538800c306e7a7c67e21ceaa412536b0194",
+        "logHash": "dd90dcac9332ddb7d934cdfdc510a9b2c03084f217df1225aa42c3b632272cc9"
+      },
+      {
+        "confirmed": true,
+        "chainId": 31337,
+        "registry": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+        "deploymentId": "0x5c59a3acb7cfd58d48066690cad78564b9338ef10cec3c01aa8a411b9b08409e",
+        "transactionHash": "0x06e6dec6d16d9e3c21cd4994fe35dfee17bb099b30276b3fe6ee7d7da37ef593",
+        "blockNumber": "20",
+        "blockHash": "0x45a673987e0a2f0a7085157b298aacc64869f19ac580da510cbb89f650baeaef",
+        "confirmations": 2,
+        "observedAtMs": 1793474537074,
+        "logIndex": 2,
+        "eventName": "RedemptionFinalized",
+        "args": {
+          "tokenId": "1",
+          "claimId": "0x61a488805786dbdaefe744b1a9d81b3274cd8bab78c1f09ae7d5077178ae9b8b",
+          "nativeDeliveryReceiptId": "0xf8fe04cc84b8fe44faff9f71db47a827528140ad6d4a740471910c0fb6388906",
+          "owner": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+        },
+        "receiptHash": "8f6cc728e0debb666a97009ce28e4016c449e5ff2dc589111b637d85e177f1cb",
+        "logHash": "6cc95a67c920b6e9326c35efca540e352a5e45353d090142f6790c757fe3364a"
+      }
+    ],
+    "message": "Canonical redemption finalized. Exact native items remain backed in the owner mailbox until claimed."
+  },
+  "claim": {
+    "operationId": "53629de0-ad7f-4b4b-9b86-a1ba02adbe69",
+    "mailboxId": "7498aa6e-b269-449c-a3c6-05411a3cb716",
+    "ownerId": "32533df8-8c09-4201-a9b6-33aff15e5717",
+    "playerId": "7bd9f890-10f6-3c18-90ec-5f4d45f465d6",
+    "connectionId": "cf7ca70f-9684-4856-b8f0-3071e329b8b9",
+    "listingId": "7498aa6e-b269-449c-a3c6-05411a3cb716",
+    "custodyId": "7498aa6e-b269-449c-a3c6-05411a3cb716",
+    "fingerprint": "b4ff1782e2d8b24d86b5d983bbf8fc9be29f669b24bce82bfa03caac36e40202",
+    "item": "minecraft:stick",
+    "count": 1,
+    "completedAtMs": 1793474537256,
+    "claimed": true
+  },
+  "finalResource": {
+    "fingerprint": "b4ff1782e2d8b24d86b5d983bbf8fc9be29f669b24bce82bfa03caac36e40202",
+    "descriptor": {
+      "material": "minecraft:stick",
+      "amount": 1,
+      "maxStackSize": 64,
+      "name": "STICK",
+      "damage": 0,
+      "maxDurability": 0,
+      "enchantments": {},
+      "lore": []
+    }
+  },
+  "conservation": {
+    "declaredFixtureSticks": 3,
+    "reservedLotCount": 1,
+    "finalSeller": 2,
+    "finalBuyer": 1,
+    "repeatedClaimAdditionalItems": 0,
+    "sameOperationAdditionalTransactions": 0
+  },
+  "chainTransactions": [
+    {
+      "operationId": "34a578c0-f319-43d3-ad72-61ca231fcd64",
+      "transactionHash": "0x8a2eb4315bc43db228034d820432197e9f069cc25ccb61ca52e2ffe0f922a7af"
+    },
+    {
+      "operationId": "3da31930-40b7-4682-a871-715db9ecef6d",
+      "transactionHash": "0x544d25b30f119b747a659e231fc90d3b5b5823dcfbb6bcdb2f46ff6670d69e5b"
+    },
+    {
+      "operationId": "f8d254fa-6bc5-4260-ad12-c13d80174233",
+      "transactionHash": "0x8f0741c48d331ac3c2ed6559105d21d34a1476a1dd4a19a7d71176ffd0109ee9"
+    },
+    {
+      "operationId": "0c9dca25-4ae9-4cee-af14-4e55045c1ddf",
+      "transactionHash": "0xb9813a6e7efaf59f49acd82dc0b6a1a9b72793fd72ce7629edfae52736adb651"
+    },
+    {
+      "operationId": "4b72b278-4637-4768-a669-99337c93e3c0",
+      "transactionHash": "0x6716da7cd6999e5c68ce20d75de91dd612d79dab5b1f1431b20904bfbf55cfa4"
+    },
+    {
+      "operationId": "1cc8dcaf-978b-47a2-a5aa-39227241296c",
+      "transactionHash": "0xaf38d9ead75afe49bb57b89b81114bce26de2fec979e3b17b418a75ed0ff534f"
+    },
+    {
+      "operationId": "03b97329-2234-4643-ad7f-149edd1dd54a",
+      "transactionHash": "0x06e6dec6d16d9e3c21cd4994fe35dfee17bb099b30276b3fe6ee7d7da37ef593"
+    }
+  ],
+  "nativeCalls": [
+    {
+      "path": "discord/reserve",
+      "operationId": null
+    },
+    {
+      "path": "session?playerId=e63aeed3-4010-3e23-88e1-19e019f0a248",
+      "operationId": null
+    },
+    {
+      "path": "discord/approve",
+      "operationId": null
+    },
+    {
+      "path": "session?playerId=e63aeed3-4010-3e23-88e1-19e019f0a248",
+      "operationId": null
+    },
+    {
+      "path": "discord/reserve",
+      "operationId": null
+    },
+    {
+      "path": "session?playerId=7bd9f890-10f6-3c18-90ec-5f4d45f465d6",
+      "operationId": null
+    },
+    {
+      "path": "discord/approve",
+      "operationId": null
+    },
+    {
+      "path": "session?playerId=7bd9f890-10f6-3c18-90ec-5f4d45f465d6",
+      "operationId": null
+    },
+    {
+      "path": "session?playerId=e63aeed3-4010-3e23-88e1-19e019f0a248",
+      "operationId": null
+    },
+    {
+      "path": "escrow/preview",
+      "operationId": "7498aa6e-b269-449c-a3c6-05411a3cb716"
+    },
+    {
+      "path": "escrow/status",
+      "operationId": "5ba656ba-253a-490e-ad66-8b124304c4a0"
+    },
+    {
+      "path": "escrow/authorize",
+      "operationId": "5ba656ba-253a-490e-ad66-8b124304c4a0"
+    },
+    {
+      "path": "escrow/reserve",
+      "operationId": "5ba656ba-253a-490e-ad66-8b124304c4a0"
+    },
+    {
+      "path": "escrow/asset-configure",
+      "operationId": "3efcfb34-0a2c-41e0-ab8c-0850fd27db92"
+    },
+    {
+      "path": "escrow/asset-bind",
+      "operationId": "5cf2b0f4-f1a1-4f54-a091-d3735b880c45"
+    },
+    {
+      "path": "escrow/asset-configure",
+      "operationId": "3efcfb34-0a2c-41e0-ab8c-0850fd27db92"
+    },
+    {
+      "path": "escrow/asset-release",
+      "operationId": "53cb3af1-6bf5-482c-ab1f-16e092338527"
+    },
+    {
+      "path": "escrow/mailbox",
+      "operationId": null
+    },
+    {
+      "path": "session?playerId=7bd9f890-10f6-3c18-90ec-5f4d45f465d6",
+      "operationId": null
+    },
+    {
+      "path": "escrow/claim",
+      "operationId": "53629de0-ad7f-4b4b-9b86-a1ba02adbe69"
+    },
+    {
+      "path": "escrow/preview",
+      "operationId": "2ea303c9-f6cf-40e9-bdee-88f3053745a8"
+    },
+    {
+      "path": "escrow/claim",
+      "operationId": "53629de0-ad7f-4b4b-9b86-a1ba02adbe69"
+    },
+    {
+      "path": "escrow/status",
+      "operationId": null
+    }
+  ],
+  "localTransactions": 7,
+  "finishedAt": "2026-10-31T19:22:17.867Z"
+}

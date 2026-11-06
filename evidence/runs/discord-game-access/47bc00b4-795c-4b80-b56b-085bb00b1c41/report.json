@@ -1,0 +1,88 @@
+{
+  "status": "pass",
+  "scope": "Disclosed GateTester and MicrosoftTester native fixtures; offline local profile approval is not Microsoft identity or an independent human",
+  "checks": [
+    {
+      "name": "registered-local-profile-frozen-in-adventure-lobby-commands-not-enqueued-inventory-preserved",
+      "status": "pass",
+      "initialInventoryWasEmpty": true
+    },
+    {
+      "name": "wrong-principal-and-stale-connection-refused-without-releasing-gate",
+      "status": "pass"
+    },
+    {
+      "name": "exact-connection-single-use-approval-preserves-inventory-and-completes-normal-onboarding",
+      "status": "pass",
+      "firstOnboarding": true
+    },
+    {
+      "name": "new-connection-requires-new-approval-and-restores-original-play-state",
+      "status": "pass"
+    },
+    {
+      "name": "offline-server-does-not-claim-Microsoft-identity-by-registered-name",
+      "status": "pass"
+    },
+    {
+      "name": "unregistered-name-still-refused-by-native-whitelist",
+      "status": "pass"
+    }
+  ],
+  "independentHumansVerified": 0,
+  "publicTransactions": 0,
+  "worldBlocksChanged": 0,
+  "itemGrants": 0,
+  "heldBaseline": {
+    "world": "minecraft:agentcity-fresh-c5a4bf5a",
+    "position": [
+      -20.5,
+      -60,
+      11.5
+    ],
+    "gameMode": "survival",
+    "inventory": [],
+    "source": "Persisted pre-gate location/mode plus actual pending player inventory",
+    "firstOnboarding": true
+  },
+  "movementDiagnostic": {
+    "serverBefore": {
+      "x": 32.5,
+      "z": 4.5,
+      "world": "agentcity_lobby",
+      "y": 81
+    },
+    "serverAfter": {
+      "x": 32.5,
+      "z": 4.5,
+      "world": "agentcity_lobby",
+      "y": 81
+    },
+    "pendingAnchor": {
+      "x": 32.5,
+      "z": 4.5,
+      "world": "agentcity_lobby",
+      "y": 81
+    },
+    "clientBefore": [
+      32.5,
+      81,
+      4.5
+    ],
+    "clientAfter": [
+      32.5,
+      81,
+      4.5
+    ],
+    "clientDistance": 0,
+    "serverDistance": 0,
+    "priorFailedReport": "evidence/runs/discord-game-access/98bd2f99-3c83-4643-b913-a69951380221/report.json",
+    "priorDiagnosis": "Parent verified persisted native position32.5,81,8.813426939524739 versus pending admission32.5,81,4.5; server actually moved. Replace destination rewrite with native movement cancellation to avoid the pending teleport guard vetoing a correction.",
+    "clientCorrected": [
+      32.5,
+      81,
+      4.5
+    ]
+  },
+  "finishedAt": "2026-10-31T12:58:00.699Z"
+}

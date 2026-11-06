@@ -1,0 +1,9 @@
+name: AgentCity
+version: 0.1.0
+main: org.agentcity.paper.AgentCityPlugin
+api-version: '1.21.11'
+description: Local non-token protected calculator prototype
+commands:
+  agentcity:
+    description: Request the local fixture session credential
+    usage: /agentcity session

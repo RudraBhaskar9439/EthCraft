@@ -1,0 +1,22 @@
+{
+  "status": "fail",
+  "scope": "Focused isolated PostgreSQL fixtures only; no real external identity or wallet creation",
+  "checks": [
+    {
+      "name": "Discord setup requires verified matching Privy OAuth subject consumes opaque challenge once and creates no fake Minecraft identity",
+      "status": "pass"
+    },
+    {
+      "name": "existing funded wallet row address provider ID and legacy owner UUID remain unchanged while Discord adds aliases",
+      "status": "pass"
+    },
+    {
+      "name": "verified Discord owner receives bounded own-agent physical grant before first Minecraft join without inventing a live connection",
+      "status": "pass"
+    }
+  ],
+  "walletWrites": 0,
+  "publicTransactions": 0,
+  "sourceSha256": "795e5403adced71df818c5dd16394e610b3ca4aa468714db0c1a1cee5768d07c",
+  "error": "The input did not match the regular expression /fixture lost join approval reply/. Input:\n\n'Error: MINECRAFT_CONNECTION_BINDING_MISMATCH'\n"
+}

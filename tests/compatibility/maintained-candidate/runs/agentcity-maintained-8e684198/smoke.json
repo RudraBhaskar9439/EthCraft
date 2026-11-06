@@ -1,0 +1,30 @@
+{
+  "status": "fail",
+  "scope": "isolated non-token maintained candidate smoke; no adoption",
+  "clientVersion": "1.21.11",
+  "scriptedPlayers": true,
+  "independentHumans": 0,
+  "checks": [
+    {
+      "name": "three-translated-1.21.11-logins-and-scoped-sessions",
+      "status": "pass"
+    },
+    {
+      "name": "real-fresh-block-and-exact-stock-read",
+      "status": "pass",
+      "circuitBlocks": 0,
+      "stock": 144
+    }
+  ],
+  "worker": {
+    "status": "waiting",
+    "reason": "NAVIGATION_BLOCKED:NAVIGATION_TIMEOUT;goal=[-14,81,4];observed=[-14.5,81,3.5]",
+    "completed": 0,
+    "placedThisRun": 0,
+    "readiness": false
+  },
+  "error": {
+    "name": "AssertionError",
+    "message": "{\"status\":\"waiting\",\"reason\":\"NAVIGATION_BLOCKED:NAVIGATION_TIMEOUT;goal=[-14,81,4];observed=[-14.5,81,3.5]\",\"completed\":0,\"placedThisRun\":0,\"readiness\":false}\n+ actual - expected\n\n+ 'waiting'\n- 'checkpointed'\n"
+  }
+}

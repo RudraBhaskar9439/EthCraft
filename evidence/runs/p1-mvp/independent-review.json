@@ -1,0 +1,436 @@
+{
+  "schema": "agentcity.independent.bounded-milestone-review.v1",
+  "reviewed_at": "2026-10-29T16:07:38.906915+00:00",
+  "reviewer": {
+    "identity": "/root/p0_platform_prereqs",
+    "kind": "AI QA peer separate from Paper/core production implementers; authored the primary harness and integrity review",
+    "independent_human_participant": false
+  },
+  "decision": "approved",
+  "source_context": {
+    "git_commit": "14f0cd9bef36b7b2f69a765af6e46ac5b1ccab37",
+    "binding": "This approval binds the exact committed inputs, retained artifacts and 37 identical executable class entries. Parent must bind phase records and run the gates; this artifact alone does not change gate status."
+  },
+  "phase_decisions": {
+    "P0": {
+      "decision": "approved",
+      "scope": "Unchanged 15-case bounded local non-token readiness, renewed for the shared planning-only scope update.",
+      "prior_review": {
+        "path": "evidence/runs/p0-local-compatibility/renewal-20261029/independent-readiness-review.json",
+        "sha256": "559aea52619322b4122ce7cc5856e55ce96c7cf9f593b4f14d2f764e29d03b2e"
+      },
+      "basis": "All 15 P0 case digests, policy/candidate oracles, five compatibility source/dependency hashes and the prior server-confirmed navigation evidence are unchanged. No physical rerun needed for this planning-only P1 change.",
+      "case_digests": {
+        "P0-001": "e16f1e4a9073dc7f9b203fa7da70c915ba4667623d5862c78e17ae1c02859619",
+        "P0-002": "a4ce99849f0bac79bbd5af4ee42ee1d707a3de34f2a1e7837a028746def5d941",
+        "P0-003": "4346c1619bf46dc34089f68269d19c77b017ab378e10b55f4decf4f54b1d1296",
+        "P0-004": "7a1725bc7f9c62eec870aacd4d409a1f1e109f4fd31d79aa902ce81b6df8b0ee",
+        "P0-005": "52e3eceda285dda093c6d43975dd34cab6b4e0d550cf6dedd6e948f33b40c625",
+        "P0-006": "1622dcf2ecefc2edd913e95c73c3c78169ba26dae187433c7c181786f8ca1bbf",
+        "P0-007": "06b79b439bee42e37dde01b6f299251f9c88a905346116b747bec72261eb8ce3",
+        "P0-008": "c5fc21f73d6a8d5f1c42d9b434eea0fdfc4b5495e438f0442f597ba3aeca7f8b",
+        "P0-009": "143097250f82a497ea1d543e106118cdb832569854b250614c251952ea3e0165",
+        "P0-010": "a810070e12befe897e98d5f9d54035a5a8c2c4f2d6f12f7b77cade69fca89b91",
+        "P0-011": "ed253ef0af35da23db171729811aa08665992f484b1baf7b269de4f58ab16a37",
+        "P0-012": "4edb598f7a68069c54351a6b006d22aaa4c5984a1754485c54eb418788805608",
+        "P0-013": "e7c53c5ead9f4317b1610bce29e3f49a9bbd9559f7aa7ca07db028d333722274",
+        "P0-014": "40ed5189a63d434afc679ea178246c577cee90ece55f2e07c11dd4c4203914fa",
+        "P0-015": "8d6dec0a09519ca198d71a47c22691af960abb65a3bf565164e0bc4d1fcbc5ca"
+      }
+    },
+    "P1": {
+      "decision": "approved",
+      "scope": "User-approved 10-case local functional MVP only. Not the former exhaustive 1041-variant or 35-regression qualification sweep.",
+      "authorization": "Human explicitly requested: dont go for that much edge cases just complete the phase1 asap.",
+      "case_count": 10,
+      "judgments": [
+        {
+          "case_id": "P1-001",
+          "case_digest": "5af99f75752d45266f856a619105823de8b05221594be95e84b02d357e02bf11",
+          "decision": "approved_for_bounded_local_MVP",
+          "required_subcases_reviewed": 16,
+          "passed_subcases_reviewed": 16,
+          "judgment": "All 16 real protected rows pass at revision 1, including zero and maximum sum; actual lamp bits and five stable observations are retained.",
+          "evidence": [
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/retained/reports/66d84186-bedf-49c0-9e38-1401ebcffdd6.json",
+              "sha256": "87a1cf3383a99779cf26ad52aa15a32d0d4758b7e927c9b5fe5f7af4635bc36b"
+            },
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/restart-client.json",
+              "sha256": "b8cdaf98438187099ed4e898b65791e81adb30d4f42a51cb56c1d0811627d7a4"
+            },
+            {
+              "path": "evidence/runs/p1-mvp/executable-binding.json",
+              "sha256": "c3e69665853662d1e61adaefde7cf0e303718744484dae24f0d75bf81e240d8b"
+            },
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/integrity-resolution.json",
+              "sha256": "a2af4b33ce9074e288ac09a9e5a92e7b84089c381e39778a688a85e9ddcc1e92"
+            }
+          ]
+        },
+        {
+          "case_id": "P1-002",
+          "case_digest": "3c093a7b337cba1bd2def5aadc631b7cf1be6b2ce5c595d08d4b942fb064d254",
+          "decision": "approved_for_bounded_local_MVP",
+          "required_subcases_reviewed": 16,
+          "passed_subcases_reviewed": 16,
+          "judgment": "Real carry-feed removal leaves the lamp readable and yields exactly 10/16 with the six declared failures at revision 2; no failed-run readiness.",
+          "evidence": [
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/retained/reports/ff91399e-cdcb-4d64-a32f-772ad34a042d.json",
+              "sha256": "53d5ffcca24a74ca834e98deb02ba1d0f39164e8c9db82091fe5e0a4bef1a168"
+            },
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/restart-client.json",
+              "sha256": "b8cdaf98438187099ed4e898b65791e81adb30d4f42a51cb56c1d0811627d7a4"
+            },
+            {
+              "path": "evidence/runs/p1-mvp/executable-binding.json",
+              "sha256": "c3e69665853662d1e61adaefde7cf0e303718744484dae24f0d75bf81e240d8b"
+            },
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/integrity-resolution.json",
+              "sha256": "a2af4b33ce9074e288ac09a9e5a92e7b84089c381e39778a688a85e9ddcc1e92"
+            }
+          ]
+        },
+        {
+          "case_id": "P1-003",
+          "case_digest": "74a194fa4d142eb9114a2592cadfd9f26c25a118f17ccb5384dc4838d7894857",
+          "decision": "approved_for_bounded_local_MVP",
+          "required_subcases_reviewed": 16,
+          "passed_subcases_reviewed": 16,
+          "judgment": "Actual stock-consuming native carry repair advances to revision 3 and restores 16/16; earlier failed report bytes are retained unchanged.",
+          "evidence": [
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/retained/reports/9e43b6f8-b31e-46dd-b1fa-6c257b717a7a.json",
+              "sha256": "0f66b06722296467df8b2076dd3c3c4ab44ba6bceb6365af67fd21fc4028e686"
+            },
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/restart-client.json",
+              "sha256": "b8cdaf98438187099ed4e898b65791e81adb30d4f42a51cb56c1d0811627d7a4"
+            },
+            {
+              "path": "evidence/runs/p1-mvp/executable-binding.json",
+              "sha256": "c3e69665853662d1e61adaefde7cf0e303718744484dae24f0d75bf81e240d8b"
+            },
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/integrity-resolution.json",
+              "sha256": "a2af4b33ce9074e288ac09a9e5a92e7b84089c381e39778a688a85e9ddcc1e92"
+            }
+          ]
+        },
+        {
+          "case_id": "P1-004",
+          "case_digest": "d3a424886e1659d2d23d6fa4b542dc603ea027803ccab042dd2b4c2087e4920b",
+          "decision": "approved_for_bounded_local_MVP",
+          "required_subcases_reviewed": 3,
+          "passed_subcases_reviewed": 3,
+          "judgment": "Real withdraw/return and Survival wire placement observe actual chest and player stock, one item consumed and one structural revision. Operator seeding is disclosed.",
+          "evidence": [
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/initial-client.json",
+              "sha256": "0e5f1544f7fc91b78a280f63ed6207ca0d93befa0d4807c97595318f35d9b87d"
+            },
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/restart-client.json",
+              "sha256": "b8cdaf98438187099ed4e898b65791e81adb30d4f42a51cb56c1d0811627d7a4"
+            },
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/integrity-resolution.json",
+              "sha256": "a2af4b33ce9074e288ac09a9e5a92e7b84089c381e39778a688a85e9ddcc1e92"
+            },
+            {
+              "path": "evidence/runs/p1-mvp/executable-binding.json",
+              "sha256": "c3e69665853662d1e61adaefde7cf0e303718744484dae24f0d75bf81e240d8b"
+            }
+          ]
+        },
+        {
+          "case_id": "P1-005",
+          "case_digest": "f970d48e3e87f7ab2cf82c4aa63c9dbee1ad422ff0776999b5fb6211ca0a6b0b",
+          "decision": "approved_for_bounded_local_MVP",
+          "required_subcases_reviewed": 6,
+          "passed_subcases_reviewed": 6,
+          "judgment": "Unauthenticated/session refusals, forged display-name placement, unarmed break and requester build/lock violations are refused with retained real event/state evidence.",
+          "evidence": [
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/initial-client.json",
+              "sha256": "0e5f1544f7fc91b78a280f63ed6207ca0d93befa0d4807c97595318f35d9b87d"
+            },
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/restart-client.json",
+              "sha256": "b8cdaf98438187099ed4e898b65791e81adb30d4f42a51cb56c1d0811627d7a4"
+            },
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/integrity-resolution.json",
+              "sha256": "a2af4b33ce9074e288ac09a9e5a92e7b84089c381e39778a688a85e9ddcc1e92"
+            },
+            {
+              "path": "evidence/runs/p1-mvp/executable-binding.json",
+              "sha256": "c3e69665853662d1e61adaefde7cf0e303718744484dae24f0d75bf81e240d8b"
+            }
+          ]
+        },
+        {
+          "case_id": "P1-006",
+          "case_digest": "7e12a2faae966fddfe76b20bf783f2bde1327811edcbc80966ba3e5bbadec943",
+          "decision": "approved_for_bounded_local_MVP",
+          "required_subcases_reviewed": 4,
+          "passed_subcases_reviewed": 4,
+          "judgment": "Serial/concurrent original placement retries and real same-world restart return the original receipt; changed parameters collide without another effect or item charge.",
+          "evidence": [
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/initial-client.json",
+              "sha256": "0e5f1544f7fc91b78a280f63ed6207ca0d93befa0d4807c97595318f35d9b87d"
+            },
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/restart-client.json",
+              "sha256": "b8cdaf98438187099ed4e898b65791e81adb30d4f42a51cb56c1d0811627d7a4"
+            },
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/integrity-resolution.json",
+              "sha256": "a2af4b33ce9074e288ac09a9e5a92e7b84089c381e39778a688a85e9ddcc1e92"
+            },
+            {
+              "path": "evidence/runs/p1-mvp/executable-binding.json",
+              "sha256": "c3e69665853662d1e61adaefde7cf0e303718744484dae24f0d75bf81e240d8b"
+            }
+          ]
+        },
+        {
+          "case_id": "P1-007",
+          "case_digest": "d186762bff39b250b698b51168cc7378d77c875a56acdaf13daebb3c38a514bc",
+          "decision": "approved_for_bounded_local_MVP",
+          "required_subcases_reviewed": 10,
+          "passed_subcases_reviewed": 10,
+          "judgment": "Actual active-checker unlock/edit/input attempts are denied. All four requester Review toggles preserve revision; bucket use and early unlock are denied.",
+          "evidence": [
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/initial-client.json",
+              "sha256": "0e5f1544f7fc91b78a280f63ed6207ca0d93befa0d4807c97595318f35d9b87d"
+            },
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/restart-client.json",
+              "sha256": "b8cdaf98438187099ed4e898b65791e81adb30d4f42a51cb56c1d0811627d7a4"
+            },
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/integrity-resolution.json",
+              "sha256": "a2af4b33ce9074e288ac09a9e5a92e7b84089c381e39778a688a85e9ddcc1e92"
+            },
+            {
+              "path": "evidence/runs/p1-mvp/executable-binding.json",
+              "sha256": "c3e69665853662d1e61adaefde7cf0e303718744484dae24f0d75bf81e240d8b"
+            }
+          ]
+        },
+        {
+          "case_id": "P1-008",
+          "case_digest": "afb4dc204223a878b617b6cb95b7980d036caf4f685c74856f15a4fd899e4c38",
+          "decision": "approved_for_bounded_local_MVP",
+          "required_subcases_reviewed": 4,
+          "passed_subcases_reviewed": 4,
+          "judgment": "Local-only 30-second expiry is observed before explicit unlock. Native carry break/repair advances revisions 1 to 2 to 3 without resurrecting prior readiness. Local plugin refuses external-obligation mode.",
+          "evidence": [
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/initial-client.json",
+              "sha256": "0e5f1544f7fc91b78a280f63ed6207ca0d93befa0d4807c97595318f35d9b87d"
+            },
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/restart-client.json",
+              "sha256": "b8cdaf98438187099ed4e898b65791e81adb30d4f42a51cb56c1d0811627d7a4"
+            },
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/integrity-resolution.json",
+              "sha256": "a2af4b33ce9074e288ac09a9e5a92e7b84089c381e39778a688a85e9ddcc1e92"
+            },
+            {
+              "path": "evidence/runs/p1-mvp/executable-binding.json",
+              "sha256": "c3e69665853662d1e61adaefde7cf0e303718744484dae24f0d75bf81e240d8b"
+            }
+          ]
+        },
+        {
+          "case_id": "P1-009",
+          "case_digest": "6c4260161995d0f37b32f2b258fcceac2e28db3face5619fdc246b2d679ece4f",
+          "decision": "approved_for_bounded_local_MVP",
+          "required_subcases_reviewed": 4,
+          "passed_subcases_reviewed": 4,
+          "judgment": "Three distinct immutable reports bind exact context, 16 supported pairs, lamp-derived values, five stable samples and actual transitions spaced at least 10 ticks and 500000000 ns.",
+          "evidence": [
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/initial-client.json",
+              "sha256": "0e5f1544f7fc91b78a280f63ed6207ca0d93befa0d4807c97595318f35d9b87d"
+            },
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/restart-client.json",
+              "sha256": "b8cdaf98438187099ed4e898b65791e81adb30d4f42a51cb56c1d0811627d7a4"
+            },
+            {
+              "path": "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/integrity-resolution.json",
+              "sha256": "a2af4b33ce9074e288ac09a9e5a92e7b84089c381e39778a688a85e9ddcc1e92"
+            },
+            {
+              "path": "evidence/runs/p1-mvp/executable-binding.json",
+              "sha256": "c3e69665853662d1e61adaefde7cf0e303718744484dae24f0d75bf81e240d8b"
+            }
+          ]
+        },
+        {
+          "case_id": "P1-010",
+          "case_digest": "5f8b8785fcbc766b203ef2ed019ac9d4da569ccbf9d3fc94316396359e66ae97",
+          "decision": "approved_for_bounded_local_MVP",
+          "required_subcases_reviewed": 4,
+          "passed_subcases_reviewed": 4,
+          "judgment": "Four genuine isolated JVM halt/restart cuts are retained with raw journal hashes, actual exit 77, real world/inventory observations and unchanged-payload retries; no duplicate stock or block effect.",
+          "evidence": [
+            {
+              "path": "evidence/runs/p1-faults/agentcity-fault-4c72c42f/run-report.json",
+              "sha256": "4ff8ecc5fb559a1d856cb9dc0a171553a2d22c579dcf7e9bac255b64013addcf"
+            },
+            {
+              "path": "evidence/runs/p1-faults/agentcity-fault-407399bc/run-report.json",
+              "sha256": "22a54a894875a44ec01d0b1c9500c7b7fd4c7f50057775de55b438f16e03b695"
+            },
+            {
+              "path": "evidence/runs/p1-faults/agentcity-fault-e960a531/run-report.json",
+              "sha256": "d3bfaccc793f6ed9039ca50b9977ffc5f6af380df96251ce829c6839276810a2"
+            },
+            {
+              "path": "evidence/runs/p1-faults/agentcity-fault-02dde173/run-report.json",
+              "sha256": "3b577647ef8699ddc7ccb8ddbd3d18e12506ad42a31ccf7f5c80bcdd51167690"
+            },
+            {
+              "path": "evidence/runs/p1-mvp/executable-binding.json",
+              "sha256": "c3e69665853662d1e61adaefde7cf0e303718744484dae24f0d75bf81e240d8b"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "integrity_and_recovery": {
+    "executable_classes_independently_compared": 37,
+    "current_lifecycle_and_four_recovery_class_entries_identical": true,
+    "lifecycle_assertion_groups": [
+      41,
+      41
+    ],
+    "protected_reports": [
+      {
+        "passed_rows": 16,
+        "revision": 1
+      },
+      {
+        "passed_rows": 10,
+        "revision": 2
+      },
+      {
+        "passed_rows": 16,
+        "revision": 3
+      }
+    ],
+    "original_lifecycle_outer_status": "fail; preserved unchanged",
+    "resolution": "Separate integrity-resolution.json confirms restored archived executed source/JAR identity and explicitly excludes later-changed unexecuted auxiliary fault files. No failed wrapper was relabeled.",
+    "four_real_process_cuts": [
+      {
+        "run": "agentcity-fault-4c72c42f",
+        "stage": "before_durable_intent",
+        "actual_exit_code": 77,
+        "retry_status": "REFUSED",
+        "retry_code": "EXPIRED_OR_OVERLONG",
+        "actual_revision_after_retry": 0
+      },
+      {
+        "run": "agentcity-fault-407399bc",
+        "stage": "after_intent_before_native",
+        "actual_exit_code": 77,
+        "retry_status": "REFUSED",
+        "retry_code": "RECORDED_NOT_APPLIED",
+        "actual_revision_after_retry": 0
+      },
+      {
+        "run": "agentcity-fault-e960a531",
+        "stage": "after_native_effect_before_receipt",
+        "actual_exit_code": 77,
+        "retry_status": "REPLAY",
+        "retry_code": "RECORDED_APPLIED",
+        "actual_revision_after_retry": 1
+      },
+      {
+        "run": "agentcity-fault-02dde173",
+        "stage": "after_durable_applied_before_workflow_ack",
+        "actual_exit_code": 77,
+        "retry_status": "REPLAY",
+        "retry_code": "RECORDED_APPLIED",
+        "actual_revision_after_retry": 1
+      }
+    ]
+  },
+  "scope_preservation": {
+    "original_requirements": 257,
+    "current_cases": 264,
+    "added_focused_cases": 7,
+    "extended_former_P1_families_retained_in_P9": 21,
+    "independent_check": "Compared all 257 previous scenarios against commit 80e2766 after the declared ID/phase mapping; all semantic fields match exactly."
+  },
+  "reviewed_file_sha256": {
+    "config/p0-policy.json": "5ccc40514792b3e8079685716b5f616bfe58dad04151b74404bf79205c60e2aa",
+    "docs/P1_MVP_SCOPE.md": "64457a99f6d999e69e422985b80ef0b2751279bd14bb4f7f885c5fd3a3b47391",
+    "evidence/runs/p0-local-compatibility/attempt-08/probe-report.json": "7f8ddd207ff226afdc14e1ca1f06eec679586e2c5d73725e1ff1d6fd645ea84c",
+    "evidence/runs/p0-local-compatibility/renewal-20261029/environment.json": "f02456dcb43764ff9b11f5bc3290a071c772ffbac8ad589dc798068a08b183d3",
+    "evidence/runs/p0-local-compatibility/renewal-20261029/independent-readiness-review.json": "559aea52619322b4122ce7cc5856e55ce96c7cf9f593b4f14d2f764e29d03b2e",
+    "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/initial-client.json": "0e5f1544f7fc91b78a280f63ed6207ca0d93befa0d4807c97595318f35d9b87d",
+    "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/integrity-artifacts/AgentCity.jar": "68e4cd79306b2405ba1822ee4b713f6351983bc65f20f7548ec937c60dac077b",
+    "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/integrity-resolution.json": "a2af4b33ce9074e288ac09a9e5a92e7b84089c381e39778a688a85e9ddcc1e92",
+    "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/restart-client.json": "b8cdaf98438187099ed4e898b65791e81adb30d4f42a51cb56c1d0811627d7a4",
+    "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/retained/reports/66d84186-bedf-49c0-9e38-1401ebcffdd6.json": "87a1cf3383a99779cf26ad52aa15a32d0d4758b7e927c9b5fe5f7af4635bc36b",
+    "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/retained/reports/9e43b6f8-b31e-46dd-b1fa-6c257b717a7a.json": "0f66b06722296467df8b2076dd3c3c4ab44ba6bceb6365af67fd21fc4028e686",
+    "evidence/runs/p1-boundary/agentcity-boundary-130eaeb3/retained/reports/ff91399e-cdcb-4d64-a32f-772ad34a042d.json": "53d5ffcca24a74ca834e98deb02ba1d0f39164e8c9db82091fe5e0a4bef1a168",
+    "evidence/runs/p1-faults/agentcity-fault-02dde173/AgentCity.jar": "c6ba2cf6de2b3f119b0ba23dfd02c54b8f26280b1183ba4ab149c6caf1a4ed9e",
+    "evidence/runs/p1-faults/agentcity-fault-02dde173/actual-process-exit.json": "6ab2d6b54d01914ae4437ff9fa1afa0a020dfc4903e70293e8edee467ace3c0b",
+    "evidence/runs/p1-faults/agentcity-fault-02dde173/before-restart/recovery-point.json": "728142058795871a0fe628dba279253532c5ccf0b2312c0b972e163a09aa57cd",
+    "evidence/runs/p1-faults/agentcity-fault-02dde173/initial-client.json": "ef6feb31d8a4455de8281ac5525dde581474cc5338c278b602880fcd0a1e9bc3",
+    "evidence/runs/p1-faults/agentcity-fault-02dde173/restart-client.json": "471b3b9c019c0ff86db73abe4efa966a3b98d2fcf64411ef179b5e12440b3a02",
+    "evidence/runs/p1-faults/agentcity-fault-02dde173/run-report.json": "3b577647ef8699ddc7ccb8ddbd3d18e12506ad42a31ccf7f5c80bcdd51167690",
+    "evidence/runs/p1-faults/agentcity-fault-407399bc/AgentCity.jar": "44ee1b17506738e43ab9a6403fad4e504bfdef4f83e4452bbd35da1d2baaf26d",
+    "evidence/runs/p1-faults/agentcity-fault-407399bc/actual-process-exit.json": "3e440b68ccee39d7bdc6003e21c8a7c7f19fc1e14f88600803bbfb40e485ad93",
+    "evidence/runs/p1-faults/agentcity-fault-407399bc/before-restart/recovery-point.json": "3502b97bddfa9562a3a0ba09f0bf8cb0b812bef666c83a5a59fb55e07b3074ed",
+    "evidence/runs/p1-faults/agentcity-fault-407399bc/initial-client.json": "4e3583b7129cbb40967742208eb12dcd11572fc62efd5d412ffccbb49771afd9",
+    "evidence/runs/p1-faults/agentcity-fault-407399bc/restart-client.json": "b39b8f8c48f1b58e983902cc46594d32122a74d2b695fc110b7346be1f16a07a",
+    "evidence/runs/p1-faults/agentcity-fault-407399bc/run-report.json": "22a54a894875a44ec01d0b1c9500c7b7fd4c7f50057775de55b438f16e03b695",
+    "evidence/runs/p1-faults/agentcity-fault-4c72c42f/AgentCity.jar": "f8a9ea1a1ad022f0049d2f1777abac76acb79ec8f76b29a8dbbbd761d8aae03b",
+    "evidence/runs/p1-faults/agentcity-fault-4c72c42f/actual-process-exit.json": "879031e6f794793e6353fdea54f0d4df49e785e52514976c275aafc98dae6029",
+    "evidence/runs/p1-faults/agentcity-fault-4c72c42f/before-restart/recovery-point.json": "d8c3122e8962627409b67e2ba3567ba30e84e06458247382e9fb0a9c6a2b76f3",
+    "evidence/runs/p1-faults/agentcity-fault-4c72c42f/initial-client.json": "059ce1f93542ef4f6a99712277fc0ca3b47bf243eb9b0d76a0bd69af389bfd83",
+    "evidence/runs/p1-faults/agentcity-fault-4c72c42f/restart-client.json": "56d19d4ba24b019cd82b9fc2a022e8767fc35f432459cbeaebe5d29fe20571a7",
+    "evidence/runs/p1-faults/agentcity-fault-4c72c42f/run-report.json": "4ff8ecc5fb559a1d856cb9dc0a171553a2d22c579dcf7e9bac255b64013addcf",
+    "evidence/runs/p1-faults/agentcity-fault-e960a531/AgentCity.jar": "983a55f56c8094d7f4c999d5cc727aabfa0d5276f9c200794d2f5e221a12ce8b",
+    "evidence/runs/p1-faults/agentcity-fault-e960a531/actual-process-exit.json": "06bab904e6dccc51a5a07e246a1b3c2758f56155ea64000b67a6e8d9e8fbc9b9",
+    "evidence/runs/p1-faults/agentcity-fault-e960a531/before-restart/recovery-point.json": "cc96f62fe975c9ddad77268af2db477ce3fb5119132af79a2324755f0655d6a1",
+    "evidence/runs/p1-faults/agentcity-fault-e960a531/initial-client.json": "79c2a4b8828ec67b18b9b60bf7a23c9d3b443b19a7d4b9cbe2c68ad1db76947f",
+    "evidence/runs/p1-faults/agentcity-fault-e960a531/restart-client.json": "b519eff0d1922264af1217f389a35b64bdcb4d689751dea7c4ded14fcf3da8e4",
+    "evidence/runs/p1-faults/agentcity-fault-e960a531/run-report.json": "d3bfaccc793f6ed9039ca50b9977ffc5f6af380df96251ce829c6839276810a2",
+    "evidence/runs/p1-mvp/executable-binding.json": "c3e69665853662d1e61adaefde7cf0e303718744484dae24f0d75bf81e240d8b",
+    "evidence/runs/p1-mvp/readiness-assessment.json": "23bbd9a2e5e9f312b0c66092b43f965e13060c971d289bf8739f3cf944e59bcd",
+    "planning/p1-mvp-scope-2026-10-29.json": "00d34272b90a302be03556a330a42c11c85319f2bad447f9ec872d572b3c2aa1",
+    "planning/phases.json": "1914d7d50cb099da3b44111b450ae41ef0a198cede034e727f388850469b6ac8",
+    "planning/verification.json": "ff8f54840fa1d3f166a55a4271644b6c9609f3fff2de697d5d9839cf3b76918d"
+  },
+  "blocking_findings": [],
+  "not_approved": [
+    "Exhaustive boundary/hazard/revocation/race/recovery qualification or unexecuted variants",
+    "Phase 2 full Survival bot construction or any later phase",
+    "Independent humans or genuine licensed-account control",
+    "Maintained production support for historical Paper",
+    "0G provider, Arkiv marketplace, token backing, funded chains, settlement or public deployment"
+  ],
+  "limitations": [
+    "Retained live evidence was inspected; reviewer ran no new product tests.",
+    "World/player saving and journal persistence are separate durability domains; the four observed cuts do not prove every crash outcome.",
+    "All actors are disclosed offline fixtures and much of the calculator/stock is operator-seeded.",
+    "A hash confirms identity rather than independent human custody or truthfulness."
+  ]
+}

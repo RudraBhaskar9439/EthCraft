@@ -1,0 +1,182 @@
+{
+  "runId": "6b90f49e-8a39-4fae-9b06-b959c0a70cdd",
+  "status": "fail",
+  "mode": "PUBLIC_TESTNET_SYNTHETIC_ONLY",
+  "phases": [
+    {
+      "phase": "P4",
+      "detail": "real public signatures, durable wallet links and live Arkiv profile/job/offer discovery",
+      "status": "pass"
+    },
+    {
+      "phase": "P5",
+      "detail": "actual CRED/KIT bytecode and item-level synthetic backing verified",
+      "status": "pass"
+    },
+    {
+      "phase": "P6",
+      "detail": "fresh state and the correctly attached hook permit a real v4 exact-output swap",
+      "status": "pass"
+    },
+    {
+      "phase": "P7",
+      "detail": "one canonical purchase claim supplies the synthetic destination exactly once",
+      "status": "pass"
+    },
+    {
+      "phase": "P3",
+      "detail": "actual local Ollama decision executes only through fresh authority and a fenced receiver",
+      "status": "pass"
+    },
+    {
+      "phase": "P8",
+      "detail": "protected synthetic inspection, requester acceptance and one fixed payment; replay pays zero",
+      "status": "pass"
+    }
+  ],
+  "transactions": [
+    {
+      "operationId": "41aba63d-724f-47df-80f3-64d9cf53000e",
+      "functionName": "fund",
+      "hash": "0x38f35ede4c4fe8139aebd6d527a839b924bf12806136235ccda156d7241510c6",
+      "blockNumber": "66493954"
+    },
+    {
+      "operationId": "dfa72bf5-2341-4dd8-b141-7dfabaea28d9",
+      "functionName": "publish",
+      "hash": "0xe6bb71998993c72d7f9e9859a437b66f9799ad0bd1fbea4be603f9ece910ebb3",
+      "blockNumber": "66494017"
+    }
+  ],
+  "realMoneySpent": 0,
+  "sources": {
+    ".local/public-testnet/deployment.json": "2aa443dbb49d6ecbd50a60ad9e9773f905a78e60aa491772c366e2a7ffcb35fd",
+    "backend/package-lock.json": "02a2b075d16d16e767b5671a64a41936f17152d8c0538e10822c400fc9779c18",
+    "backend/src/agreements/schema.sql": "3ad488a2ab0f50118c4600332ebc633463147d447480a3ee9b3f71bd82f224d3",
+    "backend/src/agreements/service.mjs": "5ced57d1715d6a17633a60bab31bd39f26a09b66e2860c43f5be757b6ec92a0e",
+    "backend/src/bot/checkpoint-store.cjs": "bd857c0b57ca4533c5bde3eb643b99500c35c98fd107b6ce865014c4702654e4",
+    "backend/src/bot/construction-worker.cjs": "4effac5a0100bb9a6c51461b5790e7e0848294304fb6398e849e3f20f2790297",
+    "backend/src/bot/minecraft-adapter.cjs": "23d5bce11bcc64e2f8925d75deafc518085d6128614ea98afe9d4d19b5753b6b",
+    "backend/src/bot/proposal-gate.mjs": "e3ca45fefeaa68623ef8629d1600c628000bae6974304cfcc3805d9635c79078",
+    "backend/src/chain/development-wallets.mjs": "2b9e0af74a6108159daca851c24c95c0ab71f14fddf110856cb426f1c953baa8",
+    "backend/src/chain/durable-evm.mjs": "4bed8c439f463b52f64b848456662d7fec088a77327b46b42ea0f83120494cf9",
+    "backend/src/chain/local-evm.mjs": "cac0f17793e9f77777861f3f66fc2d6eaaa2c7334033cfb0eea5ed0ac50db2a1",
+    "backend/src/chain/public-testnet.mjs": "e47d63acfee6dd8f8e61235058213cc283514c6e9c83089fbe39ade1cc220691",
+    "backend/src/chain/schema.sql": "e0cb642738561e97465ca31ab609993768d79020bdbce941eafedb99b2f143e2",
+    "backend/src/chain/testnet-runtime.mjs": "538ae0d37a002caacd9958fc9ffb765b93fe133d3bd9c6defb5be7c26bcc8109",
+    "backend/src/delivery/evm-claims.mjs": "a7991c4e1e7ce15cc8b0440f60cbc5ee2657beb7689cf65479a86f1df449c816",
+    "backend/src/delivery/schema.sql": "e3a58800fc8f79b26f91cd16a271a172b1533b9cdd71e4cba72c76960ee9651f",
+    "backend/src/delivery/synthetic-inventory.mjs": "410c403662a5a90a30874f481d3244050ab94a839b6decd1905e74c1080321b5",
+    "backend/src/discovery/adapters.mjs": "eaa076926dc57ca82113a5348ad5263a2824707a48122cc932a23cb21ddf158b",
+    "backend/src/discovery/demo-discovery.mjs": "69e631fa9ec75e141538ee53836e83c46ae8784f143d52b5aba0e4308daf6351",
+    "backend/src/discovery/public-testnet.mjs": "c6966d2e34f219273da852a1f525bb35bc6cb8310856f651fca27c80624b8eb2",
+    "backend/src/discovery/schema.sql": "b5a442f008a6a8f128ec368477a5e96bca2fe755cf346c2da9ee110e0698b6af",
+    "backend/src/discovery/service.mjs": "c68399731807b1f18de261ba9c6a794931f99ebbda7204a86923b1b8d8148ae3",
+    "backend/src/identity/schema.sql": "fff60d418a0f689fc57a36eff3eec5a41c1ec6e4d06eb85505053ba4331352fd",
+    "backend/src/identity/service.mjs": "6257e8c9618d9bac4ede1a3f2c39beb5c0b2394286f80ad1ba7b6ece183b08db",
+    "backend/src/inference/decision-service.mjs": "edcb0f476a356b75d8f236309728def53621051f72ab63a60ae95b3cdd5bfdc4",
+    "backend/src/inference/proposal.mjs": "1747c94923e3cced34a84b6dd606c5899f9763c3315f56adeadaf4720d07248b",
+    "backend/src/inference/providers.mjs": "f220fca5300b1befa41819dd843089d6370ecb232e5896304f0c616a42b29df4",
+    "backend/src/inspection/coordinator.mjs": "ac8e741336cd525bdc58c6f07684d11b26fa1db5f6f1e59496ca86a29f0e5891",
+    "backend/src/inspection/schema.sql": "6879658358e272b81c4a252796b9e6b993d2ccc3d503e5054613317ee3c73970",
+    "backend/src/inspection/settlement-service.mjs": "769ccda04405a79294fec760e5109d267e90194b4e058cb91049cc4167c69d7f",
+    "backend/src/inspection/synthetic-world.mjs": "7b71499e59b230be13f7c7cbbb337236e75542f0eef80c285914038f6958ad0f",
+    "backend/src/procurement/README.md": "8cb4130152bd4c3aadfb370a0a2bab4331d36fc8c940f18ec60d746196c0133a",
+    "backend/src/procurement/schema.sql": "b3f31e03be327662ade8d6af9ea96dbf8cac394ccaa01103d30463589fc4b7bd",
+    "backend/src/procurement/service.mjs": "73bb0c3a56d9023005cf7473d370ac05d2870f6dbe783d0b10aa67210f1cc92d",
+    "backend/src/server.mjs": "4fac512b5781307ac07767e960ecbefe7f978ba771e5b48c17194b5eee6d1afe",
+    "backend/src/storage/postgres.mjs": "5271a083481834728f8aacf948747ef5f2eff438c5d93b52d3fb77e5426f5ae9",
+    "backend/src/web/console.css": "c25b92199c50850ddcca003b2edb50a8ed7258e32837a8a26b9dd5acfc4001d2",
+    "backend/src/web/console.html": "5888124fa5655a309f7e91a3f35f78f2333d4b505afe807a9588cd584953ecdc",
+    "backend/src/web/console.mjs": "afee5e00f9f1ae1c015d2d309ee64646d25172779e0c11589b3e73329262acdc",
+    "backend/src/workflow/complete-job.mjs": "be3b05dcbbee1a3c762c6fbcc3ca6dbfeb0ac3a6311f015cf48ac4cc965ec607",
+    "backend/src/workflow/contract-demo.mjs": "98e132e553b6415dffe23a344eaa4ab920ee3db77fa341e2c89fedde02feb903",
+    "backend/src/workflow/recover-public-job.mjs": "f6aea7a4895bfca4b891d837761e2a862a6a183ff0e674aa5172064079765e9f",
+    "backend/src/workflow/repository.mjs": "e4a8b4e1428fe773e54bedc69c2f3a56ce15d2f2a1d18713ff1a08162f72775e",
+    "backend/src/workflow/schema.sql": "b5494fc7b710748d05b2ea2ea30ae5745f75f98df817da43819f2704cce690ab",
+    "contracts/abi/AgentCityHook.json": "27ebd6cde16737992f959e872794a6779230ae2a443ca4694addfbffbfb539b1",
+    "contracts/abi/CreditToken.json": "4c1cfff1f2d34be7d07b091af2d4f897fc8d576d8d520e8cb2a68d22acecb93b",
+    "contracts/abi/JobEscrow.json": "b3ed63e74eeeb1e0d3ebda52366300ea6a9c244a470f2ff2f34795200e5387da",
+    "contracts/abi/KitCustody.json": "fc9b3188eb9ff8fc2ff48ef6f2dbbcc690256eac17ee6e40d291a2757166bca3",
+    "contracts/abi/Procurement.json": "97f4de7ae46c075f2b8717654be4924f6712a1e24acb16838908b4ec96b0167d",
+    "contracts/abi/StateRegistry.json": "d7605d23ef2919809e5c30e61a436c67b545910ca0d1f8ce0f0913760c335dd5",
+    "contracts/package-lock.json": "80312c2b2b961d9094131a38097f043c67d14731a186ba7d91894cea527ebb8c",
+    "fixtures/blueprints/calculator-v1.json": "c8704765464a574ec4c797ad78d5294cc167007f66a0abfebd742e0b06711c49",
+    "fixtures/construction/access-v1.json": "8b08d81a1830d65a9bc404fd1443c95b4dcb94e6665da779d61acfe446d1d2c3",
+    "fixtures/test-manifests/calculator-v1.json": "cfb5986bf2f5bfea89075ffee8e38eb1652f3fad15503935d1f134a776d309cf",
+    "scripts/local_demo.mjs": "318ecd045101ba18b7ccabd9f1f95b332ed6211d1cae6e3305cf52b04b6484d1"
+  },
+  "economyBoundary": "Contract demonstration only. No token balance, claim or payout affects Minecraft.",
+  "limits": [
+    "Actual local Ollama inference; local test wallets and synthetic inventory/world observations.",
+    "No independent humans, live 0G or token-linked Minecraft operation."
+  ],
+  "arkiv": {
+    "status": "pass",
+    "chainId": 7738577,
+    "namespace": "agentcity-contract-demo-0xd5ac13f9d73b0505325dd93a84cdde09c55a889ddfb965ae5f7987b1c41b4cbd",
+    "serverId": "0x59579c2e4afc825e918b444d42ce0ea96b1f4361a962d5d850c63e071d79fd58",
+    "jobId": "0xd5ac13f9d73b0505325dd93a84cdde09c55a889ddfb965ae5f7987b1c41b4cbd",
+    "agreementHash": "0x670ee93861387dfe2c776ac5a452b1eea4e7efff1aedd0e10277f0b3a7957582",
+    "blueprintHash": "0xc8704765464a574ec4c797ad78d5294cc167007f66a0abfebd742e0b06711c49",
+    "entities": {
+      "profile": "0xa31c0988b7c47cf21278b7889bd087adfd84293e3baecd74e61d546db030ba9a",
+      "job": "0x162487a8c4007c66abc002b5dfbaf31effcba7c767e99047016f31abb79a94f0",
+      "offer": "0xeeb53a0dda1e07006bc61b1116a759aac48bcb2bdaf14637a2775c4bd7a5b60a"
+    },
+    "transactions": [
+      "0xf6d8f7ce743c6af7aeedead27cf94ad929cae8765485345376bd1bd267f415c2",
+      "0x4bf7edfaa83951d9281e85c8d7774dfcb10ece989889f44c7e076756d3ed4949",
+      "0xef25194c3dc1d852a9fa2c3352a3d2f7137cd4f2935c7934d02f89d4c4f496c3"
+    ],
+    "checks": [
+      "official SDK public profile, job and offer publication",
+      "actual Arkiv owner and signed agreement binding",
+      "same publication reuses its retained entity"
+    ],
+    "independentHumans": 0,
+    "scope": "Agent-controlled test wallets; independent synthetic contract demonstration"
+  },
+  "inference": {
+    "mode": "ollama_local",
+    "executed": false,
+    "live0GVerified": false,
+    "billingVerified": false,
+    "model": "qwen3:1.7b",
+    "responseId": "2026-10-30T07:47:59.933649Z",
+    "generatedTokens": 13,
+    "paidCalls": 0
+  },
+  "inspectionSource": "local_synthetic_world",
+  "settlement": {
+    "status": "settled",
+    "acceptanceOperationId": "3a44fd9d-9d8a-4dd0-bfb4-e22a6e49f434",
+    "claimOperationId": "3f723d17-f578-492f-98de-552d6c585a08",
+    "claimed": "6000000000000000000",
+    "claimTransactionHash": "0xd5b3e67c6abb5104c7eea94c023c48518a94483b25d62e95f64d034e88257aef"
+  },
+  "deliveryReceipt": "0x55f8fa6a1515f10f71047964c0e09a6776f8d792a591dc8fe99202a7f6ecfd6e",
+  "jobId": "f0145b1c-bd03-4cb8-bd4e-030bfcfb8c1f",
+  "agreementHash": "0x670ee93861387dfe2c776ac5a452b1eea4e7efff1aedd0e10277f0b3a7957582",
+  "schema": "public_testnet_1301",
+  "chainGenesisHash": "0xb7fe0bc9f98ca03294ca0094ff9374cc3e64130b6ec85850d6e260191f48bfe7",
+  "purchase": {
+    "operation_id": "2b1bd654-7826-4c6e-afaf-e64856510eb7",
+    "agreement_hash": "0x670ee93861387dfe2c776ac5a452b1eea4e7efff1aedd0e10277f0b3a7957582",
+    "job_id": "0xd5ac13f9d73b0505325dd93a84cdde09c55a889ddfb965ae5f7987b1c41b4cbd",
+    "requester": "0x93329116335f53bdb335223f6a95ab9355ff37b1",
+    "destination_hash": "0x0119e896cac4ac896eb9ed56488585746a69c274424792d4f9b5c27721934a0b",
+    "kits": "1",
+    "max_cred": "3000000000000000000",
+    "deadline": "1793346509",
+    "status": "confirmed",
+    "transaction_hash": "0x793c2fc51dfe91e61ab23dc211cecd8df5c162876fc6d8a2338cd1c8718bb3cc",
+    "claim_id": "0x43a9ee37a17b9204239a184de53bfb9816711edfb3473163157beccfce99f420",
+    "spent_cred": "1006025090301969036"
+  },
+  "error": {
+    "name": "ReferenceError",
+    "message": "receipt is not defined"
+  },
+  "finishedAt": "2026-10-30T07:48:28.875Z"
+}

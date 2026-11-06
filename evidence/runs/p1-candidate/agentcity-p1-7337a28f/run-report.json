@@ -1,0 +1,38 @@
+{
+  "schema": "agentcity.p1.candidate-run.v1",
+  "status": "fail",
+  "name": "agentcity-p1-7337a28f",
+  "started_at": "2026-10-29T13:54:36.824631+00:00",
+  "manifest_sha256": "bf7a028862ee74c76cab3e205cd0addff896e18cf6f93ee096bc0dc86e0a02e4",
+  "sources": {
+    "fixtures/candidates/redstone-compiler/calculator-candidate-v1.json": "d14cc0956831efeb68df4b9aba588e946bbd3b546d6a2d37be02194378b1922b",
+    "fixtures/candidates/redstone-compiler/calculator-tests-candidate-v1.json": "8ec4afb0f561370cf74fc686a3683a01c6d0758fe6f0c15e33c8e1b5926e5897",
+    "tests/world/plugin/CandidatePlugin.java": "27fce2d04a41db048b0adca614c68a41b3d4613ed897788507a4509af3be5e8e",
+    "tests/world/observe.cjs": "a5946c250082ac6091f3f9759b9071d72c2582b02503bf423a5dc9fcd01ac66c"
+  },
+  "runtime_lock": {
+    "purpose": "isolated_non_token_fixture",
+    "bind": "127.0.0.1",
+    "port": 25576,
+    "minecraft": "1.21.11",
+    "paper": {
+      "build": 132,
+      "support": "UNSUPPORTED",
+      "support_ended": "2026-06-15",
+      "sha256": "5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba",
+      "url": "https://fill-data.papermc.io/v1/objects/5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba/paper-1.21.11-132.jar"
+    },
+    "java_image": "eclipse-temurin@sha256:5d90b26c0784ccf55af55f97cbcf7f3969c66a06299c93bdc72649219942a48f",
+    "mineflayer": "4.39.0",
+    "pathfinder": "2.4.5",
+    "authentication": "offline_fixture_only",
+    "independent_human_participants": 0,
+    "token_integration": false,
+    "production_supported": false
+  },
+  "independent_humans": 0,
+  "full_phase_gate_passed": false,
+  "plugin_sha256": "d3d784018d3d66a829d7b49abc49894f29b63b8c68e55b916a6bcd720dd4cf3c",
+  "error": "node failed (1): {\"suite\":\"normal\",\"case\":0,\"a\":0,\"b\":0,\"expected\":0,\"actual\":2,\"passed\":false}\n{\"suite\":\"normal\",\"case\":1,\"a\":0,\"b\":1,\"expected\":1,\"actual\":2,\"passed\":false}\n{\"suite\":\"normal\",\"case\":2,\"a\":0,\"b\":2,\"expected\":2,\"actual\":4,\"passed\":false}\n{\"suite\":\"normal\",\"case\":3,\"a\":0,\"b\":3,\"expected\":3,\"actual\":4,\"passed\":false}\n{\"suite\":\"normal\",\"case\":4,\"a\":1,\"b\":0,\"expected\":1,\"actual\":2,\"passed\":false}\n{\"suite\":\"normal\",\"case\":5,\"a\":1,\"b\":1,\"expected\":2,\"actual\":2,\"passed\":true}\n{\"suite\":\"normal\",\"case\":6,\"a\":1,\"b\":2,\"expected\":3,\"actual\":4,\"passed\":false}\n{\"suite\":\"normal\",\"case\":7,\"a\":1,\"b\":3,\"expected\":4,\"actual\":4,\"passed\":true}\n{\"suite\":\"normal\",\"case\":8,\"a\":2,\"b\":0,\"expected\":2,\"actual\":2,\"passed\":true}\n{\"suite\":\"normal\",\"case\":9,\"a\":2,\"b\":1,\"expected\":3,\"actual\":2,\"passed\":false}\n{\"suite\":\"normal\",\"case\":10,\"a\":2,\"b\":2,\"expected\":4,\"actual\":4,\"passed\":true}\n{\"suite\":\"normal\",\"case\":11,\"a\":2,\"b\":3,\"expected\":5,\"actual\":4,\"passed\":false}\n{\"suite\":\"normal\",\"case\":12,\"a\":3,\"b\":0,\"expected\":3,\"actual\":2,\"passed\":false}\n{\"suite\":\"normal\",\"case\":13,\"a\":3,\"b\":1,\"expected\":4,\"actual\":2,\"passed\":false}\n{\"suite\":\"normal\",\"case\":14,\"a\":3,\"b\":2,\"expected\":5,\"actual\":4,\"passed\":false}\n{\"suite\":\"normal\",\"case\":15,\"a\":3,\"b\":3,\"expected\":6,\"actual\":4,\"passed\":false}\n{\"status\":\"fail\",\"cases\":16}\n",
+  "finished_at": "2026-10-29T13:56:13.840947+00:00"
+}

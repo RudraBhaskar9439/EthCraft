@@ -1,0 +1,48 @@
+{
+  "schema": "agentcity.inventory-game-agent-restore-final-health.v1",
+  "recordedAt": "2026-11-06T05:28:32.848376+00:00",
+  "status": "pass",
+  "scope": "Read-only Minecraft status ping, native merchant approval and actual worker-start/budget timestamps. No customer wallet operation, model request or user approval was performed.",
+  "checks": {
+    "bothHostedAgentsPresent": true,
+    "merchantApprovedOnline": true,
+    "exactlyOneMumbaiWorker": true,
+    "noProviderBudgetWritesSinceWorkerStart": true
+  },
+  "presence": {
+    "healthy": true,
+    "onlineCount": 3,
+    "zeroGAgentPresent": true,
+    "claudeAgentPresent": true,
+    "merchantPresent": true
+  },
+  "ownerObservation": {
+    "online": false,
+    "approved": false,
+    "humanWalletEnrollmentAndPurchase": "pending actual native user confirmation"
+  },
+  "workerStartedAtUtc": "2026-11-06T05:24:45+00:00",
+  "budgets": {
+    "0g": {
+      "spentUsd": 0.0282027,
+      "completedRequests": 7,
+      "pendingReservations": 4,
+      "ledgerLastModifiedUtc": "2026-11-06T04:43:02.113608+00:00",
+      "ledgerPredatesWorkerStart": true
+    },
+    "claude": {
+      "spentUsd": 0.068162,
+      "completedRequests": 5,
+      "pendingReservations": 0,
+      "ledgerLastModifiedUtc": "2026-11-06T03:24:20.284110+00:00",
+      "ledgerPredatesWorkerStart": true
+    }
+  },
+  "sources": {
+    "scripts/mumbai_agents.mjs": "25ae5ea06dbeaf9d96f4491c21fec71ff27ac3e34a1e859471c44083fba03334",
+    "tests/playable/mumbai-agents.mjs": "1c0762f241321f04fdef9faf2e35846d032f68d53dfc78cf03e5da5042030e00"
+  },
+  "previousObservation": "evidence/runs/inventory-game-privy/58ef5449-33bb-4339-a3da-c90d264b8258/agent-restore-health.json",
+  "previousComparisonLimit": "The earlier budget snapshot was from a prior comparison run, not immediately before this worker restart. Both current ledgers were last modified before this restart.",
+  "humanVerification": "Actual native wallet enrollment, starter-grant confirmation and Pay remain pending human action."
+}

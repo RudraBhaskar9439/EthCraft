@@ -1,0 +1,19 @@
+{
+  "scope": "Isolated PostgreSQL retirement fixtures; no live accounts, inventory, chain or provider effects",
+  "checks": [
+    {
+      "name": "all new monetary actions and unknown routes refuse; historical reads remain available",
+      "status": "pass"
+    },
+    {
+      "name": "only original funded buyer recovery admitted; foreign mailbox ownership and premature cutover refused",
+      "status": "pass"
+    },
+    {
+      "name": "owner withdrawal and settled replay retained; cutover requires authoritative zero unresolved native intents; helper performs no economic writes",
+      "status": "pass"
+    }
+  ],
+  "status": "pass",
+  "sourceSha256": "19312398317e0f23eb580fec7efec2d4817aea473b651dbcce8b79f60b6d43e1"
+}

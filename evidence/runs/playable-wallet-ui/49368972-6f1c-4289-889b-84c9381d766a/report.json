@@ -1,0 +1,36 @@
+{
+  "status": "partial",
+  "scope": "Built pinned official Privy React companion and verified same-origin served assets; no browser authentication or wallet creation performed",
+  "checks": [
+    {
+      "name": "Pinned SDK bundle build",
+      "status": "pass"
+    },
+    {
+      "name": "Public configuration and HTML HTTP200",
+      "status": "pass"
+    },
+    {
+      "name": "Served JS matches built artifact",
+      "status": "pass",
+      "sha256": "5261ba8d2881e7cb699b85703b6d35ff8eac1be0cf6a11bf2c21baa542292c0c"
+    },
+    {
+      "name": "Linked third-party legal notices served",
+      "status": "pass"
+    },
+    {
+      "name": "Credential-free Edge bootstrap",
+      "status": "blocked",
+      "reason": "Automatic approval policy rejected headless browser launch before execution; generic blocked-by-policy reason only"
+    },
+    {
+      "name": "Actual Privy email/passkey identity",
+      "status": "unrun",
+      "reason": "Requires user-controlled authentication and operator UUID-to-subject enrollment"
+    }
+  ],
+  "independentHumansVerified": 0,
+  "providerIdentitiesVerified": 0,
+  "publicTransactions": 0
+}

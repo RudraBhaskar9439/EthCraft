@@ -1,0 +1,38 @@
+{
+  "schema": "agentcity.p1.candidate-run.v1",
+  "status": "fail",
+  "name": "agentcity-p1-479d1a20",
+  "started_at": "2026-10-29T14:00:39.140948+00:00",
+  "manifest_sha256": "b50a39c5779af2529dad7bfa49db58b9d17e5a97c7a6b461d8e60c7db8a3fdcc",
+  "sources": {
+    "fixtures/candidates/redstone-compiler/calculator-candidate-v1.json": "d14cc0956831efeb68df4b9aba588e946bbd3b546d6a2d37be02194378b1922b",
+    "fixtures/candidates/redstone-compiler/calculator-tests-candidate-v1.json": "8ec4afb0f561370cf74fc686a3683a01c6d0758fe6f0c15e33c8e1b5926e5897",
+    "tests/world/plugin/CandidatePlugin.java": "d34dc8853e310438f917592ffe5bf8ef89c428278eff6330bcd770444038e2dc",
+    "tests/world/observe.cjs": "c6730f20b8eddaea7c7f271c6bb3e671d873f6178d4e1bc7fd25b01c77420f71"
+  },
+  "runtime_lock": {
+    "purpose": "isolated_non_token_fixture",
+    "bind": "127.0.0.1",
+    "port": 25576,
+    "minecraft": "1.21.11",
+    "paper": {
+      "build": 132,
+      "support": "UNSUPPORTED",
+      "support_ended": "2026-06-15",
+      "sha256": "5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba",
+      "url": "https://fill-data.papermc.io/v1/objects/5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba/paper-1.21.11-132.jar"
+    },
+    "java_image": "eclipse-temurin@sha256:5d90b26c0784ccf55af55f97cbcf7f3969c66a06299c93bdc72649219942a48f",
+    "mineflayer": "4.39.0",
+    "pathfinder": "2.4.5",
+    "authentication": "offline_fixture_only",
+    "independent_human_participants": 0,
+    "token_integration": false,
+    "production_supported": false
+  },
+  "independent_humans": 0,
+  "full_phase_gate_passed": false,
+  "plugin_sha256": "35d5373ed786d28c8ed3b2a8bb0a20940f5a7571df063115ed381342dea66592",
+  "error": "node failed (1): {\"status\":\"fail\",\"cases\":0,\"error\":\"Error: Observer kicked: [object Object]\\n    at EventEmitter.<anonymous> (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/world/observe.cjs:55:51)\\n    at EventEmitter.emit (node:events:509:20)\\n    at Client.<anonymous> (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/mineflayer/lib/plugins/kick.js:5:9)\\n    at Client.emit (node:events:509:20)\\n    at emitPacket (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/minecraft-protocol/src/client.js:85:12)\\n    at FullPacketParser.<anonymous> (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/minecraft-protocol/src/client.js:114:9)\\n    at FullPacketParser.emit (node:events:509:20)\\n    at addChunk (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/readable-stream/lib/internal/streams/readable.js:323:12)\\n    at readableAddChunk (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/readable-stream/lib/internal/streams/readable.js:300:9)\\n    at Readable.push (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/readable-stream/lib/internal/streams/readable.js:246:10)\"}\n",
+  "finished_at": "2026-10-29T14:01:01.694905+00:00"
+}

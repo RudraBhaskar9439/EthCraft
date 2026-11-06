@@ -1,0 +1,29 @@
+{
+  "status": "fail",
+  "scope": "Same-task shelter recovery: preserve16 observed cells and38 carried planks; no new withdrawal or reset",
+  "independentHumansVerified": 0,
+  "publicTransactions": 0,
+  "startedAt": "2026-10-31T07:48:05.293Z",
+  "checks": [
+    {
+      "name": "original-task-withdrawal-and-pending-placement-preserved",
+      "status": "pass",
+      "completedBeforeResume": 16,
+      "originalSourcePlanksBefore": 124,
+      "recordedSourcePlanksAfterWithdrawal": 74,
+      "recordedCarriedPlanks": 38
+    }
+  ],
+  "originalTaskId": "c3d00d00-5e1b-4531-b1fa-829c8c975b8d",
+  "originalPendingId": "8c07681b-1d3a-4796-9b9c-6604a6a79e6c:place:16",
+  "retainedCompleted": 16,
+  "retainedExpectedCarriedPlanks": 38,
+  "observerParkedAwayFromBuild": {
+    "x": -36.568689761500295,
+    "y": 64,
+    "z": 12.375885797858418
+  },
+  "error": "Prepared source approach timed out",
+  "finishedAt": "2026-10-31T07:52:26.592Z",
+  "lastWorldName": "minecraft:agentcity_play"
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "agentcity.inventory-game-privy-policy.v1",
+  "status": "configuration_verified",
+  "timestamp": "2026-11-06T04:39:58.868861+00:00",
+  "scope": "Actual Privy quorum and buyer-policy GET verification only. No wallet, funding, user purchase or native game qualification.",
+  "chainId": 1301,
+  "policySha256": "a81a90b5944e408afc9bd35b34404686f16398fe38eaec9f93a91586a24153a4",
+  "policyId": "klj0h27rwz5b8fdxyy2cb5kq",
+  "perPurchaseCityCap": "1",
+  "cumulativeWalletGasBudgetWei": "8000000000000000",
+  "methods": [
+    "CITY approval to current market",
+    "buy",
+    "requestRedemption"
+  ],
+  "allowedTargets": [
+    "0xf3037a6d2b68ee5832f53d9ff0bf22c22031af81",
+    "0xb2b515bbbaf0b65a011e1523563601c00fbf0d53",
+    "0x13431952927c79004fc2fc5aab576752552fea12"
+  ],
+  "identityOnlyPreserved": true,
+  "offlineOwnerExcludedFromRuntime": true,
+  "walletsCreated": 0,
+  "walletSignatures": 0,
+  "publicTransactions": 0,
+  "sourceSha256": "15ab4116b6d10669a0d40f3d16b2ea58725cef65b28f3bdaf42b06f4ca7710c1"
+}

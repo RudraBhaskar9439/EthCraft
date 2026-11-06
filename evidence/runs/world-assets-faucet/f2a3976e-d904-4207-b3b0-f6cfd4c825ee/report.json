@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "scope": "Finite-grant injected EVM and actual isolated PG fixtures; no real wallet key, provider, token or native transfers",
+  "checks": [
+    {
+      "name": "fixed grant waits for structured owner confirmation then reconciles lost reply using original two intents with one grant and no repeat authorization or transfer",
+      "status": "pass"
+    },
+    {
+      "name": "canonical Discord Privy wallet and subject hash bind exact recipient; foreign owner forged address and changed durable grant are refused",
+      "status": "pass"
+    },
+    {
+      "name": "ten canonical owners exhaust exactly 1000 existing CITY and bounded test ETH; eleventh grant refused without topping up or minting",
+      "status": "pass"
+    }
+  ],
+  "realPublicTransactions": 0,
+  "sources": {
+    "backend/src/world-assets/faucet.mjs": "d3ec9210e2dfeecaac25887ac2cbf3198049b6780eb548846fd8eeac3c211b34",
+    "scripts/world_asset_faucet_setup.mjs": "3cec608403df6b79dd5db2fab1424f3c151d98a43f0e59a7dc33ab432ff5a490"
+  }
+}

@@ -1,0 +1,24 @@
+# Local credentials and runtimes
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.local/
+# Generated game and build state
+/world/
+/world_nether/
+/world_the_end/
+.minecraft/
+logs/
+target/
+build/
+dist/
+cache/
+broadcast/
+evidence/runs/raw/

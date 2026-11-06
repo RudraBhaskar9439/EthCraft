@@ -1,0 +1,68 @@
+Starting org.bukkit.craftbukkit.Main
+[14:18:23 INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.12.1+1-LTS; Eclipse Adoptium Temurin-21.0.12.1+1) on Linux 6.12.76-linuxkit (aarch64)
+[14:18:23 INFO]: [bootstrap] Loading Paper 1.21.11-132-ver/1.21.11@c5eb079 (2026-05-11T11:43:09Z) for Minecraft 1.21.11
+[14:18:23 INFO]: [PluginInitializerManager] Initializing plugins...
+[14:18:23 INFO]: [PluginInitializerManager] Initialized 1 plugin
+[14:18:23 INFO]: [PluginInitializerManager] Bukkit plugins (1):
+ - AgentCityCandidateFixture (0.1.0)
+[14:18:25 INFO]: [ReobfServer] Remapping server...
+[14:18:31 INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[14:18:31 INFO]: Found new data pack file/bukkit, loading it automatically
+[14:18:31 INFO]: Found new data pack paper, loading it automatically
+[14:18:32 INFO]: No existing world data, creating new world
+[14:18:32 ERROR]: No key layers in MapLike[{}]
+[14:18:33 INFO]: Loaded 1470 recipes
+[14:18:33 INFO]: Loaded 1584 advancements
+[14:18:33 INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Initialising converters for DataConverter...
+[14:18:33 INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Finished initialising converters for DataConverter in 539.2ms
+[14:18:33 INFO]: Starting minecraft server version 1.21.11
+[14:18:33 INFO]: Loading properties
+[14:18:33 INFO]: This server is running Paper version 1.21.11-132-ver/1.21.11@c5eb079 (2026-05-11T11:43:09Z) (Implementing API version 1.21.11-R0.1-SNAPSHOT)
+[14:18:33 INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[14:18:33 INFO]: Server Ping Player Sample Count: 12
+[14:18:33 INFO]: Using 4 threads for Netty based IO
+[14:18:34 INFO]: [ReobfServer] Done remapping server in 9114ms.
+[14:18:34 INFO]: [MoonriseCommon] Paper is using 1 worker threads, 1 I/O threads
+[14:18:34 INFO]: Default game type: SURVIVAL
+[14:18:34 INFO]: Generating keypair
+[14:18:34 INFO]: Starting Minecraft server on *:25565
+[14:18:34 INFO]: Paper: Using libdeflate (Linux aarch64) compression from Velocity.
+[14:18:34 INFO]: Paper: Using OpenSSL 3.x.x (Linux aarch64) cipher from Velocity.
+[14:18:34 INFO]: [AgentCityCandidateFixture] Loading server plugin AgentCityCandidateFixture v0.1.0
+[14:18:34 WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[14:18:34 WARN]: The server will make no attempt to authenticate usernames. Beware.
+[14:18:34 WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[14:18:34 WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[14:18:34 INFO]: Preparing level "agentcity-p1-8fcbe672"
+[14:18:34 ERROR]: No key layers in MapLike[{}]
+[14:18:34 INFO]: Selecting spawn point for world 'minecraft:overworld'...
+[14:18:35 ERROR]: No key layers in MapLike[{}]
+[14:18:35 INFO]: Selecting spawn point for world 'minecraft:the_nether'...
+[14:18:35 ERROR]: No key layers in MapLike[{}]
+[14:18:35 INFO]: Selecting spawn point for world 'minecraft:the_end'...
+[14:18:36 INFO]: Loading 0 persistent chunks for world 'minecraft:overworld'...
+[14:18:36 INFO]: Preparing spawn area: 100%
+[14:18:36 INFO]: Prepared spawn area in 1048 ms
+[14:18:36 INFO]: Loading 0 persistent chunks for world 'minecraft:the_nether'...
+[14:18:36 INFO]: Preparing spawn area: 100%
+[14:18:36 INFO]: Prepared spawn area in 822 ms
+[14:18:36 INFO]: Loading 0 persistent chunks for world 'minecraft:the_end'...
+[14:18:36 INFO]: Preparing spawn area: 100%
+[14:18:36 INFO]: Prepared spawn area in 173 ms
+[14:18:36 INFO]: Done preparing level "agentcity-p1-8fcbe672" (1.192s)
+[14:18:36 INFO]: [AgentCityCandidateFixture] Enabling AgentCityCandidateFixture v0.1.0
+[14:18:36 INFO]: [spark] Starting background profiler...
+[14:18:36 INFO]: Running delayed init tasks
+[14:18:36 INFO]: Done (13.995s)! For help, type "help"
+[14:18:36 INFO]: *************************************************************************************
+[14:18:36 INFO]: This is the first time you're starting this server.
+[14:18:36 INFO]: It's recommended you read our 'Getting Started' documentation for guidance.
+[14:18:36 INFO]: View this and more helpful information here: https://docs.papermc.io/paper/next-steps
+[14:18:36 INFO]: *************************************************************************************
+[14:18:36 WARN]: *************************************************************************************
+[14:18:36 WARN]: You are running the latest build for your Minecraft version (1.21.11)
+[14:18:36 WARN]: However, you are 6 release(s) behind the latest stable release (26.3)!
+[14:18:36 WARN]: It is recommended that you update as soon as possible
+[14:18:36 WARN]: https://papermc.io/downloads/paper
+[14:18:36 WARN]: *************************************************************************************
+2026-10-29T14:18:22.898085169Z ServerMain WARN Advanced terminal features are not available in this environment

@@ -1,0 +1,53 @@
+{
+  "status": "fail",
+  "model": "qwen3:1.7b",
+  "scope": "Actual Ollama language samples only; no Minecraft clients, inventory effects or independent-human proof",
+  "samples": [
+    {
+      "request": "make me a small wooden shelter, put four cobble in destination and sell four more",
+      "status": "fail",
+      "intent": {
+        "kind": "clarify",
+        "message": "Your active task has immutable wooden materials. Stop and reconcile it first; do you want to request a new stone task afterward?",
+        "steps": []
+      },
+      "failure": "Expected values to be strictly equal:\n\n'clarify' !== 'plan'\n"
+    },
+    {
+      "request": "what are you doing?",
+      "status": "pass",
+      "intent": {
+        "kind": "progress",
+        "message": "I will report observed task progress.",
+        "steps": []
+      }
+    },
+    {
+      "request": "stop that",
+      "status": "pass",
+      "intent": {
+        "kind": "stop",
+        "message": "Stopping the active task to reconcile the wooden shelter workflow.",
+        "steps": []
+      }
+    },
+    {
+      "request": "deliver some stuff",
+      "status": "pass",
+      "intent": {
+        "kind": "clarify",
+        "message": "You want to deliver some stuff. What is the exact item and count?",
+        "steps": []
+      }
+    },
+    {
+      "request": "use stone instead",
+      "status": "pass",
+      "intent": {
+        "kind": "clarify",
+        "message": "Your active task has immutable wooden materials. Stop and reconcile it first; do you want to request a new stone task afterward?",
+        "steps": []
+      }
+    }
+  ]
+}

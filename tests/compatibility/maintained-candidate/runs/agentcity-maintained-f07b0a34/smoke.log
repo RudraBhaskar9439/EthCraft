@@ -1,0 +1,1 @@
+{"status":"fail","checks":2,"error":{"name":"AssertionError","message":"{\"status\":\"waiting\",\"reason\":\"NAVIGATION_BLOCKED:NAVIGATION_TIMEOUT;goal=[-14,81,4];observed=[-14.5,81,3.5]\",\"completed\":0,\"placedThisRun\":0,\"readiness\":false}\n+ actual - expected\n\n+ 'waiting'\n- 'checkpointed'\n"}}

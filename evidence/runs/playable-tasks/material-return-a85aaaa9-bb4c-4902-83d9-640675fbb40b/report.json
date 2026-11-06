@@ -1,0 +1,18 @@
+{
+  "scope": "Four actual carried cobblestone returned to registered source via declared clear corridor; no new stock",
+  "status": "pass",
+  "inventoryBefore": [
+    {
+      "name": "cobblestone",
+      "count": 4
+    }
+  ],
+  "sourcePosition": {
+    "x": -44.360954173716536,
+    "y": 64,
+    "z": 2.4297937555627867
+  },
+  "sourceBefore": 56,
+  "sourceAfter": 60,
+  "inventoryAfter": []
+}

@@ -1,0 +1,56 @@
+{
+  "status": "pass",
+  "scope": "Actual isolated Paper resource partial-stack backing, preserved equipment and legacy physical recovery. Synthetic canonical proof envelopes only; no live currency, human wallet or production stock mutation.",
+  "checks": [
+    {
+      "name": "actual escrow readiness, permanent on-chain mode, CITY-only routing and exact resource/gear inventories survive restart without extra effects",
+      "status": "pass"
+    }
+  ],
+  "productionMutations": 0,
+  "pluginSha256": "d65503b332a178c9ca501e3369fbb6baff310f6f98f298333ea4100e849644d2",
+  "container": "agentcity-world-assets-seam-a1156fc1",
+  "fixtureGrants": [
+    {
+      "actor": "EscSeller",
+      "count": 3,
+      "item": "minecraft:stick",
+      "slot": 7
+    },
+    {
+      "actor": "EscSeller",
+      "count": 1,
+      "item": "minecraft:diamond_sword",
+      "slot": 8,
+      "damage": 7,
+      "sharpness": 2,
+      "name": "Seam fixture blade",
+      "lore": true,
+      "persistentData": true
+    }
+  ],
+  "resumedFrom": {
+    "report": "evidence\\runs\\native-onchain-only\\4d602106-c7be-4b8d-a4c9-e07f31823049\\report.json",
+    "sha256": "168106f1b5da91beda2e62076a81712a11603f651cb774880f6705da141a3abe",
+    "samePluginSha256": "d65503b332a178c9ca501e3369fbb6baff310f6f98f298333ea4100e849644d2",
+    "previousPassedChecks": [
+      "on-chain marker blocks every new legacy financial path, replays completed receipts without effects, and returns exact old custody without creating chain backing",
+      "resource default-count preview hashes the reserved portion, privately guards full source quantity, reserves one from three, and delivers once with seller2/buyer1",
+      "equipment remains quantity-one and preserves exact damaged/enchanted/name/lore/PDC bytes through native custody and claim"
+    ],
+    "diagnosis": "Prior readiness poll used playable/status before the escrow field was assigned; this continuation waits on the actual escrow module."
+  },
+  "finalInventory": {
+    "sellerSticks": 2,
+    "buyerSticks": 1,
+    "sellerGear": 0,
+    "buyerGear": 1
+  },
+  "journalUnchanged": true,
+  "newStockGrants": 0,
+  "cleanup": {
+    "stopped": true,
+    "container": "agentcity-world-assets-seam-a1156fc1"
+  },
+  "finishedAt": "2026-10-31T19:30:26.654Z"
+}

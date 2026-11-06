@@ -1,0 +1,9 @@
+name: AgentCityCompatibility
+version: 0.1.0
+main: org.agentcity.compat.CompatibilityPlugin
+api-version: '1.21'
+description: Isolated Phase 0 Paper and Mineflayer compatibility fixture
+commands:
+  compat:
+    description: Read the isolated compatibility fixture state
+    usage: /compat observe

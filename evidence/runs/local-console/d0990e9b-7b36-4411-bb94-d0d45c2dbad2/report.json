@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "checks": [
+    "current six-phase local result is displayed without live-gate claims",
+    "missing local token refused",
+    "foreign origin refused",
+    "foreign host refused"
+  ],
+  "realMoneySpent": 0
+}

@@ -1,0 +1,11 @@
+{
+  "status": "failed",
+  "recordedAt": "2026-11-06T02:18:19.557006+00:00",
+  "isolatedId": "fbf85b21209e4db194ef75566db8d632",
+  "pluginSha256": "f5fa93a9321d31965461e75e2ac906ecd390d7736ff71b9909da511f7f5a37cc",
+  "error": "Removed chain block ID rejected by the real Paper parser before bank intent or block writes.",
+  "bankMarkerCreated": false,
+  "activeCandidateInstalled": false,
+  "fix": "Use the pinned registry iron_chain ID; validate and diagnose all public template descriptors on Paper before construction.",
+  "failedRuntimeRetained": ".local/mumbai-city/isolated/fbf85b21209e4db194ef75566db8d632"
+}

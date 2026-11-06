@@ -1,0 +1,462 @@
+{
+  "version": 1,
+  "recoveryId": "d7e697ae-7688-4cfd-91ec-4e0f46fe3769",
+  "sourceRunId": "27e46dc2-6060-46d8-87c9-827745c4d1fe",
+  "originalReportSha256": "cea3349f374814ba75f87e602b0ffa20159c9b99433a28002c2337c16281c834",
+  "startedAt": "2026-11-05T19:28:26.204Z",
+  "completedAt": "2026-11-05T19:28:59.596Z",
+  "status": "complete",
+  "disclosure": "Inference-disabled recovery of the original Claude-generated immutable bench, not a rerun or a successful original comparison. Controlled owner fixtures; no blockchain actions, new model decisions, material replenishment or block deletion.",
+  "modelCallsAttempted": 0,
+  "taskBefore": {
+    "id": "e0dbefbb-0f53-4f7d-9d3e-1d5890c38ee4",
+    "operationId": "de56ab72-e772-4d70-865e-77c6aa773216:step:0",
+    "status": "reconciliation_required",
+    "completed": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "pending": {
+      "id": "de56ab72-e772-4d70-865e-77c6aa773216:step:0:place:4",
+      "kind": "place",
+      "position": [
+        9,
+        65,
+        32
+      ],
+      "item": "oak_planks",
+      "count": 1,
+      "before": {
+        "inventory": {
+          "oak_planks": 10
+        },
+        "block": "air"
+      },
+      "after": {
+        "inventory": {
+          "oak_planks": 9
+        },
+        "block": "oak_planks"
+      }
+    },
+    "receipts": {
+      "de56ab72-e772-4d70-865e-77c6aa773216:step:0:supply:0": {
+        "before": {
+          "inventory": {},
+          "chest": {
+            "oak_planks": 128,
+            "cobblestone": 51
+          }
+        },
+        "after": {
+          "inventory": {
+            "oak_planks": 14
+          },
+          "chest": {
+            "oak_planks": 114,
+            "cobblestone": 51
+          }
+        },
+        "observedAt": "2026-11-05T19:10:51.871Z"
+      },
+      "de56ab72-e772-4d70-865e-77c6aa773216:step:0:place:0": {
+        "before": {
+          "inventory": {
+            "oak_planks": 14
+          },
+          "block": "air"
+        },
+        "after": {
+          "inventory": {
+            "oak_planks": 13
+          },
+          "block": "oak_planks"
+        },
+        "observedAt": "2026-11-05T19:11:14.232Z"
+      },
+      "de56ab72-e772-4d70-865e-77c6aa773216:step:0:place:1": {
+        "before": {
+          "inventory": {
+            "oak_planks": 13
+          },
+          "block": "air"
+        },
+        "after": {
+          "inventory": {
+            "oak_planks": 12
+          },
+          "block": "oak_planks"
+        },
+        "observedAt": "2026-11-05T19:11:35.743Z"
+      },
+      "de56ab72-e772-4d70-865e-77c6aa773216:step:0:place:2": {
+        "before": {
+          "inventory": {
+            "oak_planks": 12
+          },
+          "block": "air"
+        },
+        "after": {
+          "inventory": {
+            "oak_planks": 11
+          },
+          "block": "oak_planks"
+        },
+        "observedAt": "2026-11-05T19:13:39.941Z"
+      },
+      "de56ab72-e772-4d70-865e-77c6aa773216:step:0:place:3": {
+        "before": {
+          "inventory": {
+            "oak_planks": 11
+          },
+          "block": "air"
+        },
+        "after": {
+          "inventory": {
+            "oak_planks": 10
+          },
+          "block": "oak_planks"
+        },
+        "observedAt": "2026-11-05T19:13:41.209Z"
+      }
+    }
+  },
+  "taskAfter": {
+    "id": "e0dbefbb-0f53-4f7d-9d3e-1d5890c38ee4",
+    "operationId": "de56ab72-e772-4d70-865e-77c6aa773216:step:0",
+    "status": "complete",
+    "completed": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "pending": null,
+    "receipts": {
+      "de56ab72-e772-4d70-865e-77c6aa773216:step:0:supply:0": {
+        "before": {
+          "inventory": {},
+          "chest": {
+            "oak_planks": 128,
+            "cobblestone": 51
+          }
+        },
+        "after": {
+          "inventory": {
+            "oak_planks": 14
+          },
+          "chest": {
+            "oak_planks": 114,
+            "cobblestone": 51
+          }
+        },
+        "observedAt": "2026-11-05T19:10:51.871Z"
+      },
+      "de56ab72-e772-4d70-865e-77c6aa773216:step:0:place:0": {
+        "before": {
+          "inventory": {
+            "oak_planks": 14
+          },
+          "block": "air"
+        },
+        "after": {
+          "inventory": {
+            "oak_planks": 13
+          },
+          "block": "oak_planks"
+        },
+        "observedAt": "2026-11-05T19:11:14.232Z"
+      },
+      "de56ab72-e772-4d70-865e-77c6aa773216:step:0:place:1": {
+        "before": {
+          "inventory": {
+            "oak_planks": 13
+          },
+          "block": "air"
+        },
+        "after": {
+          "inventory": {
+            "oak_planks": 12
+          },
+          "block": "oak_planks"
+        },
+        "observedAt": "2026-11-05T19:11:35.743Z"
+      },
+      "de56ab72-e772-4d70-865e-77c6aa773216:step:0:place:2": {
+        "before": {
+          "inventory": {
+            "oak_planks": 12
+          },
+          "block": "air"
+        },
+        "after": {
+          "inventory": {
+            "oak_planks": 11
+          },
+          "block": "oak_planks"
+        },
+        "observedAt": "2026-11-05T19:13:39.941Z"
+      },
+      "de56ab72-e772-4d70-865e-77c6aa773216:step:0:place:3": {
+        "before": {
+          "inventory": {
+            "oak_planks": 11
+          },
+          "block": "air"
+        },
+        "after": {
+          "inventory": {
+            "oak_planks": 10
+          },
+          "block": "oak_planks"
+        },
+        "observedAt": "2026-11-05T19:13:41.209Z"
+      },
+      "de56ab72-e772-4d70-865e-77c6aa773216:step:0:place:4": {
+        "before": {
+          "inventory": {
+            "oak_planks": 10
+          },
+          "block": "air"
+        },
+        "after": {
+          "inventory": {
+            "oak_planks": 9
+          },
+          "block": "oak_planks"
+        },
+        "observedAt": "2026-11-05T19:28:43.513Z"
+      },
+      "de56ab72-e772-4d70-865e-77c6aa773216:step:0:place:5": {
+        "before": {
+          "inventory": {
+            "oak_planks": 9
+          },
+          "block": "air"
+        },
+        "after": {
+          "inventory": {
+            "oak_planks": 8
+          },
+          "block": "oak_planks"
+        },
+        "observedAt": "2026-11-05T19:28:44.277Z"
+      },
+      "de56ab72-e772-4d70-865e-77c6aa773216:step:0:place:6": {
+        "before": {
+          "inventory": {
+            "oak_planks": 8
+          },
+          "block": "air"
+        },
+        "after": {
+          "inventory": {
+            "oak_planks": 7
+          },
+          "block": "oak_planks"
+        },
+        "observedAt": "2026-11-05T19:28:46.230Z"
+      },
+      "de56ab72-e772-4d70-865e-77c6aa773216:step:0:place:7": {
+        "before": {
+          "inventory": {
+            "oak_planks": 7
+          },
+          "block": "air"
+        },
+        "after": {
+          "inventory": {
+            "oak_planks": 6
+          },
+          "block": "oak_planks"
+        },
+        "observedAt": "2026-11-05T19:28:48.527Z"
+      },
+      "de56ab72-e772-4d70-865e-77c6aa773216:step:0:place:8": {
+        "before": {
+          "inventory": {
+            "oak_planks": 6
+          },
+          "block": "air"
+        },
+        "after": {
+          "inventory": {
+            "oak_planks": 5
+          },
+          "block": "oak_planks"
+        },
+        "observedAt": "2026-11-05T19:28:49.138Z"
+      },
+      "de56ab72-e772-4d70-865e-77c6aa773216:step:0:place:9": {
+        "before": {
+          "inventory": {
+            "oak_planks": 5
+          },
+          "block": "air"
+        },
+        "after": {
+          "inventory": {
+            "oak_planks": 4
+          },
+          "block": "oak_planks"
+        },
+        "observedAt": "2026-11-05T19:28:49.815Z"
+      },
+      "de56ab72-e772-4d70-865e-77c6aa773216:step:0:place:10": {
+        "before": {
+          "inventory": {
+            "oak_planks": 4
+          },
+          "block": "air"
+        },
+        "after": {
+          "inventory": {
+            "oak_planks": 3
+          },
+          "block": "oak_planks"
+        },
+        "observedAt": "2026-11-05T19:28:51.140Z"
+      },
+      "de56ab72-e772-4d70-865e-77c6aa773216:step:0:place:11": {
+        "before": {
+          "inventory": {
+            "oak_planks": 3
+          },
+          "block": "air"
+        },
+        "after": {
+          "inventory": {
+            "oak_planks": 2
+          },
+          "block": "oak_planks"
+        },
+        "observedAt": "2026-11-05T19:28:53.031Z"
+      },
+      "de56ab72-e772-4d70-865e-77c6aa773216:step:0:place:12": {
+        "before": {
+          "inventory": {
+            "oak_planks": 2
+          },
+          "block": "air"
+        },
+        "after": {
+          "inventory": {
+            "oak_planks": 1
+          },
+          "block": "oak_planks"
+        },
+        "observedAt": "2026-11-05T19:28:55.237Z"
+      },
+      "de56ab72-e772-4d70-865e-77c6aa773216:step:0:place:13": {
+        "before": {
+          "inventory": {
+            "oak_planks": 1
+          },
+          "block": "air"
+        },
+        "after": {
+          "inventory": {
+            "oak_planks": 0
+          },
+          "block": "oak_planks"
+        },
+        "observedAt": "2026-11-05T19:28:55.908Z"
+      }
+    }
+  },
+  "before": {
+    "inventory": {
+      "oak_planks": 10
+    },
+    "cells": {
+      "0,0,0": "oak_planks",
+      "0,0,1": "oak_planks",
+      "0,1,0": "air",
+      "0,1,1": "air",
+      "0,2,0": "air",
+      "0,2,1": "air",
+      "1,0,0": "air",
+      "1,0,1": "air",
+      "1,1,0": "air",
+      "1,1,1": "air",
+      "1,2,0": "air",
+      "1,2,1": "air",
+      "2,0,0": "air",
+      "2,0,1": "air",
+      "2,1,0": "air",
+      "2,1,1": "air",
+      "2,2,0": "air",
+      "2,2,1": "air",
+      "3,0,0": "oak_planks",
+      "3,0,1": "oak_planks",
+      "3,1,0": "air",
+      "3,1,1": "air",
+      "3,2,0": "air",
+      "3,2,1": "air"
+    }
+  },
+  "after": {
+    "inventory": {},
+    "source": {
+      "oak_planks": 114,
+      "cobblestone": 51
+    },
+    "destination": {
+      "cobblestone": 6
+    },
+    "cells": {
+      "0,0,0": "oak_planks",
+      "0,0,1": "oak_planks",
+      "0,1,0": "oak_planks",
+      "0,1,1": "oak_planks",
+      "0,2,0": "air",
+      "0,2,1": "oak_planks",
+      "1,0,0": "air",
+      "1,0,1": "air",
+      "1,1,0": "oak_planks",
+      "1,1,1": "air",
+      "1,2,0": "air",
+      "1,2,1": "oak_planks",
+      "2,0,0": "air",
+      "2,0,1": "air",
+      "2,1,0": "oak_planks",
+      "2,1,1": "air",
+      "2,2,0": "air",
+      "2,2,1": "oak_planks",
+      "3,0,0": "oak_planks",
+      "3,0,1": "oak_planks",
+      "3,1,0": "oak_planks",
+      "3,1,1": "oak_planks",
+      "3,2,0": "air",
+      "3,2,1": "oak_planks"
+    }
+  },
+  "checks": {
+    "raisedSeat": true,
+    "endLegs": true,
+    "backPosts": true,
+    "topRail": true,
+    "openBack": true,
+    "boundedMaterialUse": true,
+    "inventoryEmpty": true,
+    "oakConserved": true,
+    "originalReceiptsRetained": true,
+    "originalArchPreserved": true,
+    "noModelsCalled": true,
+    "originalReportUnchanged": true,
+    "budgetsUnchanged": true
+  },
+  "privateRecoverySha256": "8eccdc4ff359a6562b88b79cef98f70b7aab8116fe92b8c1ae21ac2dfb589177"
+}

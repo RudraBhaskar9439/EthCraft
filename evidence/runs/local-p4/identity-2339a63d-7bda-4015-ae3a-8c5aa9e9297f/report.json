@@ -1,0 +1,39 @@
+{
+  "schema": "agentcity.local-p4.identity.v1",
+  "runId": "identity-2339a63d-7bda-4015-ae3a-8c5aa9e9297f",
+  "status": "pass",
+  "checks": [
+    {
+      "name": "real-eip712-signature-and-atomic-single-consumption",
+      "status": "pass",
+      "concurrentAttempts": 2,
+      "accepted": 1
+    },
+    {
+      "name": "consumed-nonce-survives-service-and-connection-recreation",
+      "status": "pass"
+    },
+    {
+      "name": "wrong-signer-refused-without-consuming-valid-challenge",
+      "status": "pass"
+    },
+    {
+      "name": "expiry-equality-refused-by-authority-clock",
+      "status": "pass"
+    },
+    {
+      "name": "changed-session-and-logged-out-player-refused",
+      "status": "pass"
+    },
+    {
+      "name": "unilateral-relink-refused-and-existing-binding-preserved",
+      "status": "pass"
+    }
+  ],
+  "independentHumans": 0,
+  "liveGameSessionVerified": false,
+  "sessionAuthority": "PostgreSQL-backed scripted local session fixture",
+  "startedAt": "2026-10-29T22:10:35.530Z",
+  "database": "PostgreSQL 17.11 on aarch64-unknown-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit",
+  "finishedAt": "2026-10-29T22:10:35.692Z"
+}

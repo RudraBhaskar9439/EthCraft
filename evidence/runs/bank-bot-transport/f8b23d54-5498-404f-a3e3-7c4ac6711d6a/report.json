@@ -1,0 +1,22 @@
+{
+  "schema": "agentcity.bank-bot-transport.v1",
+  "runId": "f8b23d54-5498-404f-a3e3-7c4ac6711d6a",
+  "scope": "In-memory Discord transport and service fixtures only; no credentials, network, database, or actual signatures.",
+  "checks": [
+    {
+      "name": "Bank command is opt-in; existing commands are unchanged and new options are typed and bounded",
+      "status": "pass"
+    }
+  ],
+  "publicDiscordPosts": 0,
+  "gatewayConnections": 0,
+  "publicTransactions": 0,
+  "actualSignatures": 0,
+  "result": "fail",
+  "error": "WORK_ORDERS_CONFIGURATION_REQUIRED",
+  "sourceHashes": {
+    "backend/src/discord/bot.mjs": "565f7448c80d11aa504d5ca5aa25c902a10954f9bd2aebc7be6122eaf44b0bf2",
+    "backend/src/discord/bank-runtime.mjs": "09d801369cb6d57af31eea455ec79a546fbd83f10773ee0a00dcabd2403a8df1",
+    "tests/bank/bot-transport.mjs": "7f4f62b8bc704a5ca15420c2badbc5188ca396a34ead7377a6d291e1f71ca18c"
+  }
+}

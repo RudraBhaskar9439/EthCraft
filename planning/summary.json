@@ -1,0 +1,22 @@
+{
+  "created_on": "2026-10-29",
+  "scenario_count": 270,
+  "counts_by_phase": {
+    "P0": 15,
+    "P1": 10,
+    "P2": 6,
+    "P3": 26,
+    "P4": 29,
+    "P5": 25,
+    "P6": 25,
+    "P7": 24,
+    "P8": 26,
+    "P9": 72,
+    "P10": 12
+  },
+  "technical_mvp_last_phase": "P9",
+  "research_last_phase": "P10",
+  "application_tests_executed": 7,
+  "application_tests_executed_note": "Historical pre-P2 counter retained for provenance; it is not the cumulative count of current run reports or a count of approved phases.",
+  "execution_note": "User approved focused local Phase 1, no-deep-edge-case verification, and on 30 October 2026 local component implementation through Phase 8 while live gates remain pending. Original 257 requirement families and focused P1/P2 cases remain preserved (270 total). P2 has reviewed 137 + 7 same-world construction and a real 16/16 inspection. Local P3-P8 components now execute scripted inference, durable PostgreSQL workflow, actual local Arkiv discovery, real local v4 contracts and synthetic delivery/inspection with requester acceptance and one-time claims. Canonical P3-P8 live records remain unpassed; see the separate local verification record."
+}

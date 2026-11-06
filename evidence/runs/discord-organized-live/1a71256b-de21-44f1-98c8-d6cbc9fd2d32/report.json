@@ -1,0 +1,27 @@
+{
+  "status": "pass",
+  "observedAt": "2026-10-31T15:42:31.354262+00:00",
+  "scope": "Actual Discord server channels, messages and ACL readback after authorized provisioning; no synthetic users, transactions or per-agent applications",
+  "checks": [
+    "managed categories and all player rooms exist",
+    "public service boards read-only",
+    "private room exact owner/coordinator ACL denies other roles",
+    "persistent controls render actual agent name",
+    "public posts omit checked private identity and prompt fields",
+    "managed board markers unique without duplicate cards"
+  ],
+  "messageCounts": {
+    "welcome": 1,
+    "agent-directory": 1,
+    "jobs": 6,
+    "transactions": 3,
+    "general-chat": 0,
+    "cityagent2-private": 1
+  },
+  "transactionReceiptCards": 2,
+  "livePerAgentBotProfiles": 0,
+  "perAgentApplicationsPending": true,
+  "publicTransactionsCreated": 0,
+  "existingHistoryDeleted": 0,
+  "administratorVisibility": true
+}

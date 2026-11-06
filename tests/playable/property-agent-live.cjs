@@ -1,0 +1,34 @@
+'use strict'
+// Focused continuation of an already-owned, stopped native property fixture.
+// Canonical-chain data below is synthetic; no production or public-chain action.
+const assert=require('node:assert/strict'),fs=require('node:fs/promises'),path=require('node:path')
+const {randomUUID,createHash}=require('node:crypto'),{execFileSync}=require('node:child_process'),{once}=require('node:events')
+const root=path.resolve(__dirname,'../..'),runId=randomUUID(),directory=path.join(root,'evidence/runs/property-agent',runId)
+const mineflayer=require(path.join(root,'tests/compatibility/node_modules/mineflayer'))
+const report={status:'fail',scope:'Actual owned-agent native estate entry/denial/eviction in retained isolated Paper fixture, with synthetic private-adapter chain snapshot; no human or live-chain proof',checks:[],productionMutations:0}
+let bot,container,token,started=false
+const delay=ms=>new Promise(resolve=>setTimeout(resolve,ms)),sha=data=>createHash('sha256').update(data).digest('hex')
+function docker(args){return execFileSync('docker',args,{encoding:'utf8',timeout:90000}).trim()}
+async function poll(read,accept,label,ms=20000){const end=Date.now()+ms;do{const value=await read();if(accept(value))return value;await delay(150)}while(Date.now()<end);throw Error('TIMEOUT '+label)}
+async function bounded(promise,ms,label){let timer;try{return await Promise.race([promise,new Promise((_,reject)=>timer=setTimeout(()=>reject(Error(label)),ms))])}finally{clearTimeout(timer)}}
+async function api(action,body){const response=await fetch('http://127.0.0.1:25607/playable/property/'+action,{method:'POST',headers:{Authorization:'Bearer '+token,'Content-Type':'application/json'},body:JSON.stringify(body||{}),signal:AbortSignal.timeout(12000)});const value=await response.json();if(!response.ok)throw Error(value.reason||value.code||'PROPERTY_API_REFUSED');return value}
+;(async()=>{
+ assert.equal(process.argv.length,3,'Pass the retained successful fixture report path')
+ const reference=path.resolve(process.argv[2]);assert(reference.startsWith(path.join(root,'evidence/runs/escrow-native')+path.sep));const bytes=await fs.readFile(reference),parent=JSON.parse(bytes);assert.equal(parent.status,'pass');assert(parent.property&&parent.pluginSha256);container=parent.container;assert(/^agentcity-escrow-fixture-[a-f0-9]{8}$/.test(container))
+ const fixture=path.resolve(parent.fixtureRuntime);assert(fixture.startsWith(path.join(root,'.local/escrow-fixture')+path.sep));const metadata=JSON.parse(docker(['inspect',container]))[0];assert.equal(metadata.Config.Labels['agentcity.owner'],'escrow-native-fixture');assert.equal(metadata.State.Running,false);assert.equal(metadata.HostConfig.PortBindings['25565/tcp'][0].HostPort,'25606');assert.equal(metadata.HostConfig.PortBindings['25578/tcp'][0].HostPort,'25607');token=metadata.Config.Env.find(value=>value.startsWith('AGENTCITY_API_TOKEN=')).slice('AGENTCITY_API_TOKEN='.length);assert.equal(sha(await fs.readFile(path.join(fixture,'plugins/AgentCity.jar'))),parent.pluginSha256)
+ const access=JSON.parse(await fs.readFile(path.join(fixture,'plugins/AgentCity/discord-game-access.json'),'utf8')),principal=access.reservations.escseller.principalId,owners=[...new Set(Object.values(access.receipts).filter(receipt=>receipt.approved&&receipt.principalId===principal).map(receipt=>receipt.playerId))];assert.equal(owners.length,1)
+ const registry={version:1,agents:[{name:'CityAgent2',ownerId:principal,ownerName:'EscSeller',minecraftPlayerId:owners[0]}],operations:{}};const registryFile=path.join(fixture,'personal-agents.json');try{assert.deepEqual(JSON.parse(await fs.readFile(registryFile,'utf8')),registry)}catch(error){if(error.code!=='ENOENT')throw error;await fs.writeFile(registryFile,JSON.stringify(registry,null,2)+'\n')}
+ report.parent={report:path.relative(root,reference),sha256:sha(bytes)};report.pluginSha256=parent.pluginSha256;report.container=container;report.fixtureRuntime=fixture
+ docker(['start',container]);started=true;const prior=await poll(async()=>{try{return await api('status')}catch{return null}},value=>value?.enabled,'retained property fixture boot',120000)
+ const projection={...prior.projection,...prior.source,operationId:randomUUID(),revision:prior.revision+1,blockNumber:prior.blockNumber+1,blockHash:'0x'+'bb'.repeat(32),observedAtMs:Date.now(),expiresAtMs:Date.now()+60000,confirmed:true,confirmations:2};await api('apply',projection)
+ bot=mineflayer.createBot({host:'127.0.0.1',port:25606,username:'CityAgent2',auth:'offline',version:'1.21.11'});bot.on('error',()=>{});bot.on('physicsTick',()=>{if(bot._client.state==='play')bot._client.write('tick_end',{})});const world=packet=>{if(packet.worldState?.name)bot.observedWorld=packet.worldState.name};bot._client.on('login',world);bot._client.on('respawn',world)
+ await bounded(Promise.race([once(bot,'spawn'),once(bot,'kicked').then(([reason])=>{throw Error('Owned fixture agent rejected '+JSON.stringify(reason))})]),45000,'owned agent spawn');await delay(1500)
+ const visited=await api('visit',{playerId:bot._client.uuid,parcelId:1});assert.equal(visited.visited,true);await poll(()=>bot.observedWorld,value=>value?.includes('agentcity_estates'),'actual estate world packet');await poll(()=>bot.entity.position,value=>value.x>=0&&value.x<16&&value.z>=0&&value.z<16,'actual agent position inside owned estate')
+ await assert.rejects(api('visit',{playerId:bot._client.uuid,parcelId:2}),/current_owner_access_required/)
+ report.agent={name:'CityAgent2',playerId:bot._client.uuid,ownerPrincipalId:principal,world:bot.observedWorld,ownedVisitReceipt:visited,positionInside:{x:bot.entity.position.x,y:bot.entity.position.y,z:bot.entity.position.z},fixtureGrant:'One-time six cobblestone from the disclosed isolated stock plugin; not withdrawn, listed, or spent'}
+ await api('invalidate',{operationId:randomUUID(),reason:'canonical_reorg'});await poll(()=>bot.entity.position,value=>value.x<0,'paused ownership evicts actual agent');await assert.rejects(api('visit',{playerId:bot._client.uuid,parcelId:1}),/current_owner_access_required/)
+ report.checks.push({name:'actual owned agent enters its canonical owner parcel, cannot enter another parcel, and loses entry on paused projection',status:'pass'});console.log('PASS '+report.checks[0].name);report.status='pass'
+})().catch(error=>{report.error=error.message;process.exitCode=1}).finally(async()=>{
+ if(bot)try{bot.quit()}catch{};if(started)try{docker(['stop','--time','45',container])}catch(error){report.status='fail';report.cleanupError=error.message;process.exitCode=1}
+ report.finishedAt=new Date().toISOString();await fs.mkdir(directory,{recursive:true});await fs.writeFile(path.join(directory,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({status:report.status,report:path.join(directory,'report.json'),error:report.error}))
+})

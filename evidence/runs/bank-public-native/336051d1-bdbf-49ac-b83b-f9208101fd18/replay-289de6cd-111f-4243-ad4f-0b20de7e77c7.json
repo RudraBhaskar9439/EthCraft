@@ -1,0 +1,38 @@
+{
+  "replayId": "289de6cd-111f-4243-ad4f-0b20de7e77c7",
+  "startedAt": "2026-11-05T13:44:03.085Z",
+  "calls": [
+    {
+      "step": "borrow-1",
+      "request": {
+        "principalId": "144e8782-85d5-4ef4-989e-cb7a26040682",
+        "operationId": "5fe73fe1-ed84-4fd9-b852-497f55e5bca2",
+        "termsDigest": "32dab924e40d9804e36931682b90b10be099b915796a48342ef55e42d9a4b2b0"
+      },
+      "requestedAt": "2026-11-05T13:44:05.345Z"
+    }
+  ],
+  "before": {
+    "borrower": {
+      "nonce": 19,
+      "tokens": {
+        "city": "2000000000000000000",
+        "usdc": "6989000",
+        "gem": "92948827839179742769"
+      }
+    },
+    "bidder": {
+      "nonce": 4,
+      "tokens": {
+        "city": "0",
+        "usdc": "98000000",
+        "gem": "0"
+      }
+    }
+  },
+  "status": "fail",
+  "error": {
+    "code": "ERR_ASSERTION",
+    "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   '0x165466dc25911bd763d0bfbfb7bf441c0f013f6d71b6ee06db48a979b1a8c976',\n    '0xe82937d8ef72ecb8adac80b1ac8da780258a02bdcc7cb125c833f35b164852ef',\n-   '0x165466dc25911bd763d0bfbfb7bf441c0f013f6d71b6ee06db48a979b1a8c976'\n  ]\n"
+  }
+}

@@ -1,0 +1,1199 @@
+{
+  "status": "pass",
+  "scope": "Coordinated actual restart of owned PostgreSQL and loopback backend only, followed by fresh private backup/isolated restore",
+  "checks": [
+    "saved console PID/user/workspace and exact PostgreSQL owner/port verified; UI idle and no active database transaction",
+    "actual PostgreSQL container restart and new backend PID recover every table fingerprint and saved UI result through local_host start/status",
+    "fresh online dump includes current public testnet ledgers; actual isolated pg_restore matches every captured table",
+    "Anvil head, user access-world container and all other running-container start times remain unchanged; no demo or signer action invoked"
+  ],
+  "newDemoInvoked": false,
+  "realMoneySpent": 0,
+  "beforeAndAfterFingerprintSha256": "4f929b2249d926b13407facb0408898e81819028f16855f2a4195154bf93e063",
+  "tablesPreserved": 229,
+  "rowsPreserved": 569,
+  "canonicalLedgerCountsBefore": [
+    {
+      "schema": "local_demo_09db44106f0f4e93a7f82f4a7f343423",
+      "table": "ac_chain_intents",
+      "rows": "6"
+    },
+    {
+      "schema": "local_demo_09db44106f0f4e93a7f82f4a7f343423",
+      "table": "ac_delivery_receipts",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_09db44106f0f4e93a7f82f4a7f343423",
+      "table": "ac_jobs",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_09db44106f0f4e93a7f82f4a7f343423",
+      "table": "ac_outbox",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_09db44106f0f4e93a7f82f4a7f343423",
+      "table": "ac_synthetic_destinations",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_09db44106f0f4e93a7f82f4a7f343423",
+      "table": "ac_synthetic_stock",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_09db44106f0f4e93a7f82f4a7f343423",
+      "table": "agreement_approvals",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_09db44106f0f4e93a7f82f4a7f343423",
+      "table": "agreement_records",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_28780ce1b22d47a098ff63a9850fb357",
+      "table": "ac_chain_intents",
+      "rows": "6"
+    },
+    {
+      "schema": "local_demo_28780ce1b22d47a098ff63a9850fb357",
+      "table": "ac_delivery_receipts",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_28780ce1b22d47a098ff63a9850fb357",
+      "table": "ac_jobs",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_28780ce1b22d47a098ff63a9850fb357",
+      "table": "ac_outbox",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_28780ce1b22d47a098ff63a9850fb357",
+      "table": "ac_synthetic_destinations",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_28780ce1b22d47a098ff63a9850fb357",
+      "table": "ac_synthetic_stock",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_28780ce1b22d47a098ff63a9850fb357",
+      "table": "agreement_approvals",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_28780ce1b22d47a098ff63a9850fb357",
+      "table": "agreement_records",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_43e62ee2919d411f971cf4360bbd584a",
+      "table": "ac_chain_intents",
+      "rows": "6"
+    },
+    {
+      "schema": "local_demo_43e62ee2919d411f971cf4360bbd584a",
+      "table": "ac_delivery_receipts",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_43e62ee2919d411f971cf4360bbd584a",
+      "table": "ac_jobs",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_43e62ee2919d411f971cf4360bbd584a",
+      "table": "ac_outbox",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_43e62ee2919d411f971cf4360bbd584a",
+      "table": "ac_synthetic_destinations",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_43e62ee2919d411f971cf4360bbd584a",
+      "table": "ac_synthetic_stock",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_43e62ee2919d411f971cf4360bbd584a",
+      "table": "agreement_approvals",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_43e62ee2919d411f971cf4360bbd584a",
+      "table": "agreement_records",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_5f01ec540dc94e1fab6041d11840fa42",
+      "table": "ac_chain_intents",
+      "rows": "6"
+    },
+    {
+      "schema": "local_demo_5f01ec540dc94e1fab6041d11840fa42",
+      "table": "ac_delivery_receipts",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_5f01ec540dc94e1fab6041d11840fa42",
+      "table": "ac_jobs",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_5f01ec540dc94e1fab6041d11840fa42",
+      "table": "ac_outbox",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_5f01ec540dc94e1fab6041d11840fa42",
+      "table": "ac_synthetic_destinations",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_5f01ec540dc94e1fab6041d11840fa42",
+      "table": "ac_synthetic_stock",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_5f01ec540dc94e1fab6041d11840fa42",
+      "table": "agreement_approvals",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_5f01ec540dc94e1fab6041d11840fa42",
+      "table": "agreement_records",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_6c006c66fec3413cb3d6f26d3ed26844",
+      "table": "ac_chain_intents",
+      "rows": "6"
+    },
+    {
+      "schema": "local_demo_6c006c66fec3413cb3d6f26d3ed26844",
+      "table": "ac_delivery_receipts",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_6c006c66fec3413cb3d6f26d3ed26844",
+      "table": "ac_jobs",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_6c006c66fec3413cb3d6f26d3ed26844",
+      "table": "ac_outbox",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_6c006c66fec3413cb3d6f26d3ed26844",
+      "table": "ac_synthetic_destinations",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_6c006c66fec3413cb3d6f26d3ed26844",
+      "table": "ac_synthetic_stock",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_6c006c66fec3413cb3d6f26d3ed26844",
+      "table": "agreement_approvals",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_6c006c66fec3413cb3d6f26d3ed26844",
+      "table": "agreement_records",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_84feb68e274148148063dcae9c62504a",
+      "table": "ac_chain_intents",
+      "rows": "6"
+    },
+    {
+      "schema": "local_demo_84feb68e274148148063dcae9c62504a",
+      "table": "ac_delivery_receipts",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_84feb68e274148148063dcae9c62504a",
+      "table": "ac_jobs",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_84feb68e274148148063dcae9c62504a",
+      "table": "ac_outbox",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_84feb68e274148148063dcae9c62504a",
+      "table": "ac_synthetic_destinations",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_84feb68e274148148063dcae9c62504a",
+      "table": "ac_synthetic_stock",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_84feb68e274148148063dcae9c62504a",
+      "table": "agreement_approvals",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_84feb68e274148148063dcae9c62504a",
+      "table": "agreement_records",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_aa81923f9ee546869548ad62971047f5",
+      "table": "ac_chain_intents",
+      "rows": "6"
+    },
+    {
+      "schema": "local_demo_aa81923f9ee546869548ad62971047f5",
+      "table": "ac_delivery_receipts",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_aa81923f9ee546869548ad62971047f5",
+      "table": "ac_jobs",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_aa81923f9ee546869548ad62971047f5",
+      "table": "ac_outbox",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_aa81923f9ee546869548ad62971047f5",
+      "table": "ac_synthetic_destinations",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_aa81923f9ee546869548ad62971047f5",
+      "table": "ac_synthetic_stock",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_aa81923f9ee546869548ad62971047f5",
+      "table": "agreement_approvals",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_aa81923f9ee546869548ad62971047f5",
+      "table": "agreement_records",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_c0d26a0e7791459c92ef5997535ce60f",
+      "table": "ac_chain_intents",
+      "rows": "6"
+    },
+    {
+      "schema": "local_demo_c0d26a0e7791459c92ef5997535ce60f",
+      "table": "ac_delivery_receipts",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_c0d26a0e7791459c92ef5997535ce60f",
+      "table": "ac_jobs",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_c0d26a0e7791459c92ef5997535ce60f",
+      "table": "ac_outbox",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_c0d26a0e7791459c92ef5997535ce60f",
+      "table": "ac_synthetic_destinations",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_c0d26a0e7791459c92ef5997535ce60f",
+      "table": "ac_synthetic_stock",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_c0d26a0e7791459c92ef5997535ce60f",
+      "table": "agreement_approvals",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_c0d26a0e7791459c92ef5997535ce60f",
+      "table": "agreement_records",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_c98f0e817f064733a00d6c858a855456",
+      "table": "ac_chain_intents",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_c98f0e817f064733a00d6c858a855456",
+      "table": "ac_delivery_receipts",
+      "rows": "0"
+    },
+    {
+      "schema": "local_demo_c98f0e817f064733a00d6c858a855456",
+      "table": "ac_jobs",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_c98f0e817f064733a00d6c858a855456",
+      "table": "ac_outbox",
+      "rows": "0"
+    },
+    {
+      "schema": "local_demo_c98f0e817f064733a00d6c858a855456",
+      "table": "ac_synthetic_destinations",
+      "rows": "0"
+    },
+    {
+      "schema": "local_demo_c98f0e817f064733a00d6c858a855456",
+      "table": "ac_synthetic_stock",
+      "rows": "0"
+    },
+    {
+      "schema": "local_demo_c98f0e817f064733a00d6c858a855456",
+      "table": "agreement_approvals",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_c98f0e817f064733a00d6c858a855456",
+      "table": "agreement_records",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_d0c1f7d35f974e4fb73d30c6adc37107",
+      "table": "ac_chain_intents",
+      "rows": "6"
+    },
+    {
+      "schema": "local_demo_d0c1f7d35f974e4fb73d30c6adc37107",
+      "table": "ac_delivery_receipts",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_d0c1f7d35f974e4fb73d30c6adc37107",
+      "table": "ac_jobs",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_d0c1f7d35f974e4fb73d30c6adc37107",
+      "table": "ac_outbox",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_d0c1f7d35f974e4fb73d30c6adc37107",
+      "table": "ac_synthetic_destinations",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_d0c1f7d35f974e4fb73d30c6adc37107",
+      "table": "ac_synthetic_stock",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_d0c1f7d35f974e4fb73d30c6adc37107",
+      "table": "agreement_approvals",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_d0c1f7d35f974e4fb73d30c6adc37107",
+      "table": "agreement_records",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_e7348358a23440f3a84253ce90531729",
+      "table": "ac_chain_intents",
+      "rows": "0"
+    },
+    {
+      "schema": "local_demo_e7348358a23440f3a84253ce90531729",
+      "table": "ac_delivery_receipts",
+      "rows": "0"
+    },
+    {
+      "schema": "local_demo_e7348358a23440f3a84253ce90531729",
+      "table": "ac_jobs",
+      "rows": "0"
+    },
+    {
+      "schema": "local_demo_e7348358a23440f3a84253ce90531729",
+      "table": "ac_outbox",
+      "rows": "0"
+    },
+    {
+      "schema": "local_demo_e7348358a23440f3a84253ce90531729",
+      "table": "ac_synthetic_destinations",
+      "rows": "0"
+    },
+    {
+      "schema": "local_demo_e7348358a23440f3a84253ce90531729",
+      "table": "ac_synthetic_stock",
+      "rows": "0"
+    },
+    {
+      "schema": "local_demo_e7348358a23440f3a84253ce90531729",
+      "table": "agreement_approvals",
+      "rows": "0"
+    },
+    {
+      "schema": "local_demo_e7348358a23440f3a84253ce90531729",
+      "table": "agreement_records",
+      "rows": "0"
+    },
+    {
+      "schema": "local_demo_ead1e7fb2f5b4a3aac1d9da0f5d52f6f",
+      "table": "ac_chain_intents",
+      "rows": "6"
+    },
+    {
+      "schema": "local_demo_ead1e7fb2f5b4a3aac1d9da0f5d52f6f",
+      "table": "ac_delivery_receipts",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_ead1e7fb2f5b4a3aac1d9da0f5d52f6f",
+      "table": "ac_jobs",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_ead1e7fb2f5b4a3aac1d9da0f5d52f6f",
+      "table": "ac_outbox",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_ead1e7fb2f5b4a3aac1d9da0f5d52f6f",
+      "table": "ac_synthetic_destinations",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_ead1e7fb2f5b4a3aac1d9da0f5d52f6f",
+      "table": "ac_synthetic_stock",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_ead1e7fb2f5b4a3aac1d9da0f5d52f6f",
+      "table": "agreement_approvals",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_ead1e7fb2f5b4a3aac1d9da0f5d52f6f",
+      "table": "agreement_records",
+      "rows": "1"
+    },
+    {
+      "schema": "public",
+      "table": "ac_chain_intents",
+      "rows": "2"
+    },
+    {
+      "schema": "public",
+      "table": "ac_delivery_receipts",
+      "rows": "14"
+    },
+    {
+      "schema": "public",
+      "table": "ac_jobs",
+      "rows": "11"
+    },
+    {
+      "schema": "public",
+      "table": "ac_outbox",
+      "rows": "36"
+    },
+    {
+      "schema": "public",
+      "table": "ac_synthetic_destinations",
+      "rows": "6"
+    },
+    {
+      "schema": "public",
+      "table": "ac_synthetic_stock",
+      "rows": "8"
+    },
+    {
+      "schema": "public_testnet_1301",
+      "table": "ac_chain_intents",
+      "rows": "42"
+    },
+    {
+      "schema": "public_testnet_1301",
+      "table": "ac_delivery_receipts",
+      "rows": "3"
+    },
+    {
+      "schema": "public_testnet_1301",
+      "table": "ac_jobs",
+      "rows": "3"
+    },
+    {
+      "schema": "public_testnet_1301",
+      "table": "ac_outbox",
+      "rows": "6"
+    },
+    {
+      "schema": "public_testnet_1301",
+      "table": "ac_synthetic_destinations",
+      "rows": "3"
+    },
+    {
+      "schema": "public_testnet_1301",
+      "table": "ac_synthetic_stock",
+      "rows": "1"
+    },
+    {
+      "schema": "public_testnet_1301",
+      "table": "agreement_approvals",
+      "rows": "6"
+    },
+    {
+      "schema": "public_testnet_1301",
+      "table": "agreement_records",
+      "rows": "3"
+    },
+    {
+      "schema": "public_testnet_7738577",
+      "table": "ac_chain_intents",
+      "rows": "14"
+    }
+  ],
+  "canonicalLedgerCountsAfter": [
+    {
+      "schema": "local_demo_09db44106f0f4e93a7f82f4a7f343423",
+      "table": "ac_chain_intents",
+      "rows": "6"
+    },
+    {
+      "schema": "local_demo_09db44106f0f4e93a7f82f4a7f343423",
+      "table": "ac_delivery_receipts",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_09db44106f0f4e93a7f82f4a7f343423",
+      "table": "ac_jobs",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_09db44106f0f4e93a7f82f4a7f343423",
+      "table": "ac_outbox",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_09db44106f0f4e93a7f82f4a7f343423",
+      "table": "ac_synthetic_destinations",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_09db44106f0f4e93a7f82f4a7f343423",
+      "table": "ac_synthetic_stock",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_09db44106f0f4e93a7f82f4a7f343423",
+      "table": "agreement_approvals",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_09db44106f0f4e93a7f82f4a7f343423",
+      "table": "agreement_records",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_28780ce1b22d47a098ff63a9850fb357",
+      "table": "ac_chain_intents",
+      "rows": "6"
+    },
+    {
+      "schema": "local_demo_28780ce1b22d47a098ff63a9850fb357",
+      "table": "ac_delivery_receipts",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_28780ce1b22d47a098ff63a9850fb357",
+      "table": "ac_jobs",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_28780ce1b22d47a098ff63a9850fb357",
+      "table": "ac_outbox",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_28780ce1b22d47a098ff63a9850fb357",
+      "table": "ac_synthetic_destinations",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_28780ce1b22d47a098ff63a9850fb357",
+      "table": "ac_synthetic_stock",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_28780ce1b22d47a098ff63a9850fb357",
+      "table": "agreement_approvals",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_28780ce1b22d47a098ff63a9850fb357",
+      "table": "agreement_records",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_43e62ee2919d411f971cf4360bbd584a",
+      "table": "ac_chain_intents",
+      "rows": "6"
+    },
+    {
+      "schema": "local_demo_43e62ee2919d411f971cf4360bbd584a",
+      "table": "ac_delivery_receipts",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_43e62ee2919d411f971cf4360bbd584a",
+      "table": "ac_jobs",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_43e62ee2919d411f971cf4360bbd584a",
+      "table": "ac_outbox",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_43e62ee2919d411f971cf4360bbd584a",
+      "table": "ac_synthetic_destinations",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_43e62ee2919d411f971cf4360bbd584a",
+      "table": "ac_synthetic_stock",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_43e62ee2919d411f971cf4360bbd584a",
+      "table": "agreement_approvals",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_43e62ee2919d411f971cf4360bbd584a",
+      "table": "agreement_records",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_5f01ec540dc94e1fab6041d11840fa42",
+      "table": "ac_chain_intents",
+      "rows": "6"
+    },
+    {
+      "schema": "local_demo_5f01ec540dc94e1fab6041d11840fa42",
+      "table": "ac_delivery_receipts",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_5f01ec540dc94e1fab6041d11840fa42",
+      "table": "ac_jobs",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_5f01ec540dc94e1fab6041d11840fa42",
+      "table": "ac_outbox",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_5f01ec540dc94e1fab6041d11840fa42",
+      "table": "ac_synthetic_destinations",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_5f01ec540dc94e1fab6041d11840fa42",
+      "table": "ac_synthetic_stock",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_5f01ec540dc94e1fab6041d11840fa42",
+      "table": "agreement_approvals",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_5f01ec540dc94e1fab6041d11840fa42",
+      "table": "agreement_records",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_6c006c66fec3413cb3d6f26d3ed26844",
+      "table": "ac_chain_intents",
+      "rows": "6"
+    },
+    {
+      "schema": "local_demo_6c006c66fec3413cb3d6f26d3ed26844",
+      "table": "ac_delivery_receipts",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_6c006c66fec3413cb3d6f26d3ed26844",
+      "table": "ac_jobs",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_6c006c66fec3413cb3d6f26d3ed26844",
+      "table": "ac_outbox",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_6c006c66fec3413cb3d6f26d3ed26844",
+      "table": "ac_synthetic_destinations",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_6c006c66fec3413cb3d6f26d3ed26844",
+      "table": "ac_synthetic_stock",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_6c006c66fec3413cb3d6f26d3ed26844",
+      "table": "agreement_approvals",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_6c006c66fec3413cb3d6f26d3ed26844",
+      "table": "agreement_records",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_84feb68e274148148063dcae9c62504a",
+      "table": "ac_chain_intents",
+      "rows": "6"
+    },
+    {
+      "schema": "local_demo_84feb68e274148148063dcae9c62504a",
+      "table": "ac_delivery_receipts",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_84feb68e274148148063dcae9c62504a",
+      "table": "ac_jobs",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_84feb68e274148148063dcae9c62504a",
+      "table": "ac_outbox",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_84feb68e274148148063dcae9c62504a",
+      "table": "ac_synthetic_destinations",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_84feb68e274148148063dcae9c62504a",
+      "table": "ac_synthetic_stock",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_84feb68e274148148063dcae9c62504a",
+      "table": "agreement_approvals",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_84feb68e274148148063dcae9c62504a",
+      "table": "agreement_records",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_aa81923f9ee546869548ad62971047f5",
+      "table": "ac_chain_intents",
+      "rows": "6"
+    },
+    {
+      "schema": "local_demo_aa81923f9ee546869548ad62971047f5",
+      "table": "ac_delivery_receipts",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_aa81923f9ee546869548ad62971047f5",
+      "table": "ac_jobs",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_aa81923f9ee546869548ad62971047f5",
+      "table": "ac_outbox",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_aa81923f9ee546869548ad62971047f5",
+      "table": "ac_synthetic_destinations",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_aa81923f9ee546869548ad62971047f5",
+      "table": "ac_synthetic_stock",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_aa81923f9ee546869548ad62971047f5",
+      "table": "agreement_approvals",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_aa81923f9ee546869548ad62971047f5",
+      "table": "agreement_records",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_c0d26a0e7791459c92ef5997535ce60f",
+      "table": "ac_chain_intents",
+      "rows": "6"
+    },
+    {
+      "schema": "local_demo_c0d26a0e7791459c92ef5997535ce60f",
+      "table": "ac_delivery_receipts",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_c0d26a0e7791459c92ef5997535ce60f",
+      "table": "ac_jobs",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_c0d26a0e7791459c92ef5997535ce60f",
+      "table": "ac_outbox",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_c0d26a0e7791459c92ef5997535ce60f",
+      "table": "ac_synthetic_destinations",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_c0d26a0e7791459c92ef5997535ce60f",
+      "table": "ac_synthetic_stock",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_c0d26a0e7791459c92ef5997535ce60f",
+      "table": "agreement_approvals",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_c0d26a0e7791459c92ef5997535ce60f",
+      "table": "agreement_records",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_c98f0e817f064733a00d6c858a855456",
+      "table": "ac_chain_intents",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_c98f0e817f064733a00d6c858a855456",
+      "table": "ac_delivery_receipts",
+      "rows": "0"
+    },
+    {
+      "schema": "local_demo_c98f0e817f064733a00d6c858a855456",
+      "table": "ac_jobs",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_c98f0e817f064733a00d6c858a855456",
+      "table": "ac_outbox",
+      "rows": "0"
+    },
+    {
+      "schema": "local_demo_c98f0e817f064733a00d6c858a855456",
+      "table": "ac_synthetic_destinations",
+      "rows": "0"
+    },
+    {
+      "schema": "local_demo_c98f0e817f064733a00d6c858a855456",
+      "table": "ac_synthetic_stock",
+      "rows": "0"
+    },
+    {
+      "schema": "local_demo_c98f0e817f064733a00d6c858a855456",
+      "table": "agreement_approvals",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_c98f0e817f064733a00d6c858a855456",
+      "table": "agreement_records",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_d0c1f7d35f974e4fb73d30c6adc37107",
+      "table": "ac_chain_intents",
+      "rows": "6"
+    },
+    {
+      "schema": "local_demo_d0c1f7d35f974e4fb73d30c6adc37107",
+      "table": "ac_delivery_receipts",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_d0c1f7d35f974e4fb73d30c6adc37107",
+      "table": "ac_jobs",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_d0c1f7d35f974e4fb73d30c6adc37107",
+      "table": "ac_outbox",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_d0c1f7d35f974e4fb73d30c6adc37107",
+      "table": "ac_synthetic_destinations",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_d0c1f7d35f974e4fb73d30c6adc37107",
+      "table": "ac_synthetic_stock",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_d0c1f7d35f974e4fb73d30c6adc37107",
+      "table": "agreement_approvals",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_d0c1f7d35f974e4fb73d30c6adc37107",
+      "table": "agreement_records",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_e7348358a23440f3a84253ce90531729",
+      "table": "ac_chain_intents",
+      "rows": "0"
+    },
+    {
+      "schema": "local_demo_e7348358a23440f3a84253ce90531729",
+      "table": "ac_delivery_receipts",
+      "rows": "0"
+    },
+    {
+      "schema": "local_demo_e7348358a23440f3a84253ce90531729",
+      "table": "ac_jobs",
+      "rows": "0"
+    },
+    {
+      "schema": "local_demo_e7348358a23440f3a84253ce90531729",
+      "table": "ac_outbox",
+      "rows": "0"
+    },
+    {
+      "schema": "local_demo_e7348358a23440f3a84253ce90531729",
+      "table": "ac_synthetic_destinations",
+      "rows": "0"
+    },
+    {
+      "schema": "local_demo_e7348358a23440f3a84253ce90531729",
+      "table": "ac_synthetic_stock",
+      "rows": "0"
+    },
+    {
+      "schema": "local_demo_e7348358a23440f3a84253ce90531729",
+      "table": "agreement_approvals",
+      "rows": "0"
+    },
+    {
+      "schema": "local_demo_e7348358a23440f3a84253ce90531729",
+      "table": "agreement_records",
+      "rows": "0"
+    },
+    {
+      "schema": "local_demo_ead1e7fb2f5b4a3aac1d9da0f5d52f6f",
+      "table": "ac_chain_intents",
+      "rows": "6"
+    },
+    {
+      "schema": "local_demo_ead1e7fb2f5b4a3aac1d9da0f5d52f6f",
+      "table": "ac_delivery_receipts",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_ead1e7fb2f5b4a3aac1d9da0f5d52f6f",
+      "table": "ac_jobs",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_ead1e7fb2f5b4a3aac1d9da0f5d52f6f",
+      "table": "ac_outbox",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_ead1e7fb2f5b4a3aac1d9da0f5d52f6f",
+      "table": "ac_synthetic_destinations",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_ead1e7fb2f5b4a3aac1d9da0f5d52f6f",
+      "table": "ac_synthetic_stock",
+      "rows": "1"
+    },
+    {
+      "schema": "local_demo_ead1e7fb2f5b4a3aac1d9da0f5d52f6f",
+      "table": "agreement_approvals",
+      "rows": "2"
+    },
+    {
+      "schema": "local_demo_ead1e7fb2f5b4a3aac1d9da0f5d52f6f",
+      "table": "agreement_records",
+      "rows": "1"
+    },
+    {
+      "schema": "public",
+      "table": "ac_chain_intents",
+      "rows": "2"
+    },
+    {
+      "schema": "public",
+      "table": "ac_delivery_receipts",
+      "rows": "14"
+    },
+    {
+      "schema": "public",
+      "table": "ac_jobs",
+      "rows": "11"
+    },
+    {
+      "schema": "public",
+      "table": "ac_outbox",
+      "rows": "36"
+    },
+    {
+      "schema": "public",
+      "table": "ac_synthetic_destinations",
+      "rows": "6"
+    },
+    {
+      "schema": "public",
+      "table": "ac_synthetic_stock",
+      "rows": "8"
+    },
+    {
+      "schema": "public_testnet_1301",
+      "table": "ac_chain_intents",
+      "rows": "42"
+    },
+    {
+      "schema": "public_testnet_1301",
+      "table": "ac_delivery_receipts",
+      "rows": "3"
+    },
+    {
+      "schema": "public_testnet_1301",
+      "table": "ac_jobs",
+      "rows": "3"
+    },
+    {
+      "schema": "public_testnet_1301",
+      "table": "ac_outbox",
+      "rows": "6"
+    },
+    {
+      "schema": "public_testnet_1301",
+      "table": "ac_synthetic_destinations",
+      "rows": "3"
+    },
+    {
+      "schema": "public_testnet_1301",
+      "table": "ac_synthetic_stock",
+      "rows": "1"
+    },
+    {
+      "schema": "public_testnet_1301",
+      "table": "agreement_approvals",
+      "rows": "6"
+    },
+    {
+      "schema": "public_testnet_1301",
+      "table": "agreement_records",
+      "rows": "3"
+    },
+    {
+      "schema": "public_testnet_7738577",
+      "table": "ac_chain_intents",
+      "rows": "14"
+    }
+  ],
+  "uiResultsPreserved": {
+    "result": {
+      "runId": "5f01ec54-0dc9-4e1f-ab60-41d11840fa42",
+      "jobId": "9a4b02e9-8cf8-47bc-a53b-cf380b09afb3",
+      "status": "pass"
+    },
+    "publicResult": {
+      "runId": "1a477548-69b9-4903-ad6c-2bae54774a5f",
+      "jobId": "4c4a0234-06e6-4571-9cb3-4948f521e198",
+      "status": "pass"
+    }
+  },
+  "consoleBefore": {
+    "pid": 37025,
+    "savedRecord": ".local/ops/console-f4b4ede03b45409da6fce09705bc2db9.json",
+    "uid": 501,
+    "workspaceAndCommandVerified": true
+  },
+  "consoleAfter": {
+    "pid": 41625,
+    "savedRecord": ".local/ops/console-60a47ad2f0754bed85b3ece053015282.json",
+    "uid": 501,
+    "workspaceAndCommandVerified": true
+  },
+  "postgresContainerIdPreserved": true,
+  "postgresStartTimeChanged": true,
+  "protectedContainerStartsPreserved": true,
+  "anvilHeadUnchanged": true,
+  "accessWorldUnchanged": true,
+  "keystoresModified": false,
+  "health": {
+    "ready": true,
+    "scope": "loopback laptop preparation; no public exposure or authenticated-human claim",
+    "services": {
+      "postgres": {
+        "ready": true
+      },
+      "anvil": {
+        "ready": true
+      },
+      "arkiv": {
+        "ready": true
+      },
+      "ollama": {
+        "ready": true
+      },
+      "console": {
+        "ready": true
+      },
+      "minecraft": {
+        "ready": true
+      }
+    }
+  },
+  "freshBackupDirectory": ".local/ops/backups/20261030T080458Z-eebdbd0f8fe549b7b92c7ef64d755133",
+  "isolatedRestore": {
+    "status": "pass",
+    "isolatedDatabase": "agentcity_restore_83f7e1ca633f4d7782d727ad2c9a0bf1",
+    "tablesVerified": 229,
+    "rowsVerified": 569,
+    "archiveSha256": "8d4ea451534b3c30c0962e83cc5da6eed206f047edade76082149e5f53ce0401",
+    "liveDatabaseReplaced": false,
+    "scope": "actual pg_dump/pg_restore and every restored table fingerprint; no restored worker or chain/world rollback"
+  },
+  "finishedAt": "2026-10-30T08:05:00.997197+00:00",
+  "sources": {
+    "ops/restart_recovery.py": "953020899fd77d24bae17fdfb85051129b1d045f23a26a21c55538f4bd48e697",
+    "scripts/local_host.py": "fe8e867a2f7e5077ea0154f907f69ffb33c9d8c516105747782bd606143ff65a",
+    "ops/postgres_snapshot.mjs": "9c8381df1c38ece662fe896ee67f44a72aabc4df24502ae29181e7592dd331ce"
+  }
+}

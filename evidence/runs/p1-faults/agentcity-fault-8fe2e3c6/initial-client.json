@@ -1,0 +1,453 @@
+{
+  "schema": "agentcity.p1.fault-client.v1",
+  "status": "pass",
+  "phase": "initial",
+  "started_at": "2026-10-29T15:38:20.668Z",
+  "full_phase_gate_passed": false,
+  "steps": [
+    {
+      "name": "active_fault_produces_retained_incomplete_no_readiness",
+      "at": "2026-10-29T15:38:55.527Z",
+      "payload": {
+        "operationId": "00a558a9-1911-4eb5-8eb5-dd7a8eac91b3",
+        "serverId": "local-inspection-server",
+        "jobId": "agentcity-fault-8fe2e3c6",
+        "agreementVersion": 1,
+        "actorId": "563add28-410b-350e-9001-a9be4cc7bd00",
+        "expectedRevision": 0,
+        "authorizationReference": "local-boundary-authorization",
+        "expiresAtMs": 1793288327060,
+        "action": "INSPECT",
+        "params": {}
+      },
+      "response": {
+        "http_status": 200,
+        "body": {
+          "status": "APPLIED",
+          "code": "OBSERVED_APPLIED",
+          "operationId": "00a558a9-1911-4eb5-8eb5-dd7a8eac91b3",
+          "revision": 0
+        }
+      },
+      "active": {
+        "refusals": [
+          "awaiting_player_inventory"
+        ],
+        "state": {
+          "revision": 0,
+          "lockMode": "INSPECTION",
+          "quarantined": false,
+          "readyForReview": false,
+          "passValidUntilMs": 0
+        }
+      },
+      "actual_fault": {
+        "at_ms": 1793288335481,
+        "checker": {},
+        "chunk_snapshot_freeze": true,
+        "fault_applied": true,
+        "players": {
+          "WorldBuilder": {
+            "items": {},
+            "position": [
+              512.5,
+              81,
+              513.5
+            ],
+            "uuid": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+            "mode": "SURVIVAL"
+          },
+          "WorldInspector": {
+            "items": {},
+            "position": [
+              514.5,
+              81,
+              513.5
+            ],
+            "uuid": "563add28-410b-350e-9001-a9be4cc7bd00",
+            "mode": "SURVIVAL"
+          },
+          "WorldRequester": {
+            "items": {
+              "minecraft:lava_bucket": 1,
+              "minecraft:water_bucket": 1
+            },
+            "position": [
+              513.5,
+              81,
+              513.5
+            ],
+            "uuid": "a56f0418-1cf4-3f1e-a0ab-9b34ba31f192",
+            "mode": "SURVIVAL"
+          },
+          "WorldStranger": {
+            "items": {
+              "minecraft:cobblestone": 1
+            },
+            "position": [
+              515.5,
+              81,
+              513.5
+            ],
+            "uuid": "3febf1ac-21e5-394e-bb24-e8731e755afa",
+            "mode": "SURVIVAL"
+          }
+        },
+        "ports": {
+          "a0": {
+            "position": [
+              -12,
+              85,
+              -4
+            ],
+            "actual": "UNAVAILABLE_CHUNK"
+          },
+          "a0_support": {
+            "position": [
+              -12,
+              84,
+              -4
+            ],
+            "actual": "UNAVAILABLE_CHUNK"
+          },
+          "a1": {
+            "position": [
+              -8,
+              84,
+              -3
+            ],
+            "actual": "UNAVAILABLE_CHUNK"
+          },
+          "b0": {
+            "position": [
+              -12,
+              84,
+              -3
+            ],
+            "actual": "UNAVAILABLE_CHUNK"
+          },
+          "b1": {
+            "position": [
+              -8,
+              82,
+              -3
+            ],
+            "actual": "UNAVAILABLE_CHUNK"
+          },
+          "c1": {
+            "position": [
+              -1,
+              87,
+              -5
+            ],
+            "actual": "UNAVAILABLE_CHUNK"
+          },
+          "s0": {
+            "position": [
+              -8,
+              88,
+              -5
+            ],
+            "actual": "UNAVAILABLE_CHUNK"
+          },
+          "s1": {
+            "position": [
+              1,
+              90,
+              -2
+            ],
+            "actual": "UNAVAILABLE_CHUNK"
+          }
+        },
+        "scenario": "unloaded-chunk-s1-lamp_measurement",
+        "stock_unavailable": true,
+        "target_actual": "UNAVAILABLE_CHUNK",
+        "target_chunk_loaded": false,
+        "tick": 709
+      },
+      "inspection": {
+        "runId": "13aa526f-a064-4972-872a-4eed6713a2dd",
+        "context": {
+          "serverId": "local-inspection-server",
+          "jobId": "agentcity-fault-8fe2e3c6",
+          "agreementVersion": 1,
+          "blueprintHash": "c8704765464a574ec4c797ad78d5294cc167007f66a0abfebd742e0b06711c49",
+          "testVersion": "cfb5986bf2f5bfea89075ffee8e38eb1652f3fad15503935d1f134a776d309cf"
+        },
+        "revision": 0,
+        "startedAtMs": 1793288319132,
+        "completedAtMs": 1793288335284,
+        "status": "INCOMPLETE",
+        "reason": "plot_chunk_unloaded",
+        "transitions": [
+          {
+            "port": "a0",
+            "before": false,
+            "after": true,
+            "tick": 10,
+            "elapsedNs": 512779667
+          },
+          {
+            "port": "a1",
+            "before": false,
+            "after": true,
+            "tick": 21,
+            "elapsedNs": 1052309542
+          },
+          {
+            "port": "b0",
+            "before": false,
+            "after": true,
+            "tick": 32,
+            "elapsedNs": 1605433084
+          },
+          {
+            "port": "b1",
+            "before": false,
+            "after": true,
+            "tick": 42,
+            "elapsedNs": 2106534167
+          },
+          {
+            "port": "a0",
+            "before": true,
+            "after": false,
+            "tick": 124,
+            "elapsedNs": 6201935419
+          },
+          {
+            "port": "a1",
+            "before": true,
+            "after": false,
+            "tick": 135,
+            "elapsedNs": 6752532086
+          },
+          {
+            "port": "b0",
+            "before": true,
+            "after": false,
+            "tick": 146,
+            "elapsedNs": 7301296003
+          },
+          {
+            "port": "b1",
+            "before": true,
+            "after": false,
+            "tick": 157,
+            "elapsedNs": 7854120337
+          }
+        ],
+        "initialization": [
+          {
+            "tick": 123,
+            "elapsedNs": 6156370128,
+            "controls": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "lamps": [
+              true,
+              false,
+              true
+            ]
+          },
+          {
+            "tick": 238,
+            "elapsedNs": 11901451046,
+            "controls": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "lamps": [
+              false,
+              false,
+              false
+            ]
+          }
+        ],
+        "rows": []
+      },
+      "after": {
+        "refusals": [
+          "awaiting_player_inventory",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "plot_chunk_unloaded",
+          "inspection_report_rejected"
+        ],
+        "state": {
+          "revision": 0,
+          "lockMode": "INSPECTION",
+          "quarantined": false,
+          "readyForReview": false,
+          "passValidUntilMs": 0
+        }
+      },
+      "report_file": "13aa526f-a064-4972-872a-4eed6713a2dd.json",
+      "report_sha256": "1e81b241129fbc839aed5b4b90bb8c94e86dc521a1c46e564af753534889ced3"
+    }
+  ],
+  "scenario": "unloaded-chunk-s1-lamp_measurement",
+  "declared_variant_ids": [
+    "P1-006/unloaded-chunk-s1-lamp_measurement"
+  ],
+  "initial_durable_state": {
+    "refusals": [
+      "awaiting_player_inventory"
+    ],
+    "state": {
+      "revision": 0,
+      "lockMode": "NONE",
+      "quarantined": false,
+      "readyForReview": false,
+      "passValidUntilMs": 0
+    }
+  },
+  "initial_actual_observation": {
+    "at_ms": 1793288318988,
+    "checker": {},
+    "chunk_snapshot_freeze": false,
+    "fault_applied": false,
+    "players": {
+      "WorldBuilder": {
+        "items": {},
+        "position": [
+          512.5,
+          81,
+          513.5
+        ],
+        "uuid": "43a86a2e-ba2e-350a-a576-a65b67aa87d1",
+        "mode": "SURVIVAL"
+      },
+      "WorldInspector": {
+        "items": {},
+        "position": [
+          514.5,
+          81,
+          513.5
+        ],
+        "uuid": "563add28-410b-350e-9001-a9be4cc7bd00",
+        "mode": "SURVIVAL"
+      },
+      "WorldRequester": {
+        "items": {
+          "minecraft:lava_bucket": 1,
+          "minecraft:water_bucket": 1
+        },
+        "position": [
+          513.5,
+          81,
+          513.5
+        ],
+        "uuid": "a56f0418-1cf4-3f1e-a0ab-9b34ba31f192",
+        "mode": "SURVIVAL"
+      },
+      "WorldStranger": {
+        "items": {
+          "minecraft:cobblestone": 1
+        },
+        "position": [
+          515.5,
+          81,
+          513.5
+        ],
+        "uuid": "3febf1ac-21e5-394e-bb24-e8731e755afa",
+        "mode": "SURVIVAL"
+      }
+    },
+    "ports": {
+      "a0": {
+        "position": [
+          -12,
+          85,
+          -4
+        ],
+        "actual": "minecraft:lever[face=floor,facing=north,powered=false]"
+      },
+      "a0_support": {
+        "position": [
+          -12,
+          84,
+          -4
+        ],
+        "actual": "minecraft:stone_bricks"
+      },
+      "a1": {
+        "position": [
+          -8,
+          84,
+          -3
+        ],
+        "actual": "minecraft:lever[face=wall,facing=west,powered=false]"
+      },
+      "b0": {
+        "position": [
+          -12,
+          84,
+          -3
+        ],
+        "actual": "minecraft:lever[face=wall,facing=south,powered=false]"
+      },
+      "b1": {
+        "position": [
+          -8,
+          82,
+          -3
+        ],
+        "actual": "minecraft:lever[face=wall,facing=east,powered=false]"
+      },
+      "c1": {
+        "position": [
+          -1,
+          87,
+          -5
+        ],
+        "actual": "minecraft:redstone_lamp[lit=false]"
+      },
+      "s0": {
+        "position": [
+          -8,
+          88,
+          -5
+        ],
+        "actual": "minecraft:redstone_lamp[lit=false]"
+      },
+      "s1": {
+        "position": [
+          1,
+          90,
+          -2
+        ],
+        "actual": "minecraft:redstone_lamp[lit=false]"
+      }
+    },
+    "scenario": "unloaded-chunk-s1-lamp_measurement",
+    "stock": {
+      "minecraft:lever": 4,
+      "minecraft:redstone": 19,
+      "minecraft:redstone_lamp": 3,
+      "minecraft:redstone_torch": 37,
+      "minecraft:repeater": 16,
+      "minecraft:stone_bricks": 65
+    },
+    "target_actual": "minecraft:redstone_lamp[lit=false]",
+    "target_chunk_loaded": true,
+    "tick": 379
+  },
+  "initial_client_port_materials": {
+    "a0": "UNAVAILABLE_CLIENT_CHUNK",
+    "a0_support": "UNAVAILABLE_CLIENT_CHUNK",
+    "a1": "UNAVAILABLE_CLIENT_CHUNK",
+    "b0": "UNAVAILABLE_CLIENT_CHUNK",
+    "b1": "UNAVAILABLE_CLIENT_CHUNK",
+    "c1": "UNAVAILABLE_CLIENT_CHUNK",
+    "s0": "UNAVAILABLE_CLIENT_CHUNK",
+    "s1": "UNAVAILABLE_CLIENT_CHUNK"
+  },
+  "finished_at": "2026-10-29T15:38:55.575Z"
+}

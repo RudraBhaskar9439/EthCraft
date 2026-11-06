@@ -1,0 +1,48 @@
+{
+  "schema": "agentcity.world-capture.v1",
+  "captureId": "45da90b5-e201-446d-8b6c-bf24bb9c3d2f",
+  "agent": "CityAgent2",
+  "world": "agentcity_play",
+  "clientVersion": "1.21.11",
+  "observedAt": "2026-10-31T12:30:26.522Z",
+  "source": "Actual loaded Mineflayer client world cache; independent overview camera; not a Minecraft client framebuffer",
+  "bounds": {
+    "min": [
+      -47,
+      63,
+      2
+    ],
+    "max": [
+      -36,
+      71,
+      13
+    ]
+  },
+  "chunkHashes": {
+    "-3,0": "0eea2092b6c6b870e2635f606f2a29da6072a592ca0ddb3542afc341bbcc6b94"
+  },
+  "observedBlockHash": "9c112999e3e9ed0df51bc8eb4726ce299245156f0a4dbd4eadd3b8bca09ebdf6",
+  "paletteStates": 5,
+  "observedCells": 1296,
+  "renderer": "Prismarine Viewer 1.33.0 native WebGL/Mesa",
+  "renderedAt": "2026-10-31T12:30:31.116Z",
+  "assetsVersion": "1.21.4",
+  "semanticStateMapping": true,
+  "width": 960,
+  "height": 640,
+  "camera": {
+    "position": [
+      -33.2,
+      75,
+      23.1
+    ],
+    "target": [
+      -44,
+      65,
+      10.5
+    ]
+  },
+  "agentModel": true,
+  "visibleRegionOnly": true,
+  "pngSha256": "f91a07dd58a0836f76051d33e2fe33fe15364b9011431805ad8233b86626c1ba"
+}

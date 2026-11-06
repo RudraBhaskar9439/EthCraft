@@ -1,0 +1,9 @@
+{
+  "name": "agentcity-local-contracts",
+  "private": true,
+  "dependencies": {
+    "@openzeppelin/contracts": "5.4.0",
+    "@uniswap/v4-core": "1.0.2",
+    "@uniswap/v4-periphery": "1.0.3"
+  }
+}

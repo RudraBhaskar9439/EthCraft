@@ -1,0 +1,76 @@
+{
+  "schema": "agentcity.split-route-ollama.v1",
+  "recordedAt": "2026-10-30T06:39:16.682168+00:00",
+  "baseRelease": "eabb9e9b7815fb7fc223d4c8ab5727ebc1b60be5",
+  "status": "local_checkpoint_verified",
+  "route": "Minecraft internal game mechanics; separate synthetic contract demonstration",
+  "phase": "P3 temporary-provider checkpoint on the user-approved local track",
+  "originalCanonicalLiveGates": "P3 through P8 remain pending; original evidence is unchanged",
+  "realMoneySpentUsd": 0,
+  "provider": {
+    "name": "Ollama",
+    "model": "qwen3:1.7b",
+    "live0GVerified": false,
+    "apiKeyRequired": false
+  },
+  "engineeringChecks": {
+    "pythonUnitTests": {
+      "passed": 56,
+      "failed": 0
+    },
+    "planningIntegrity": "pass",
+    "originalInferenceFixture": {
+      "passed": 5,
+      "failed": 0
+    },
+    "ollamaTransportAndModel": {
+      "passed": 6,
+      "failed": 0
+    },
+    "durableWorkflow": {
+      "passed": 6,
+      "failed": 0
+    },
+    "console": {
+      "passed": 5,
+      "failed": 0
+    },
+    "localContractFlow": "six phases passed",
+    "sameJobSettlementResume": "passed with zero new purchases and zero additional payment",
+    "P2Gate": "READY for unchanged local scope"
+  },
+  "review": {
+    "kind": "self-review",
+    "scope": "provider allowlist, secret filtering, permission revalidation, synthetic-only contract scope and retained settlement replay",
+    "independentProductionReview": false
+  },
+  "evidence": {
+    "ollama": {
+      "path": "evidence/runs/local-ollama/99f59805-b3e7-4cc5-83f6-0fe08003c2bd/report.json",
+      "sha256": "e4600f286ecc9479769f9715905c61dd4893c9d4bf9fa08d70f8a9026e8862ab"
+    },
+    "workflow": {
+      "path": "evidence/runs/local-workflow/48afdad0-bf3f-440e-8379-7eb8fedfef00/report.json",
+      "sha256": "4f1814da8bd2e6bbcf47c53f757d9c49696b4994b1291caf3e0f1b524abe9c39"
+    },
+    "contractFlow": {
+      "path": "evidence/runs/local-e2e/09db4410-6f0f-4e93-a7f8-2f4a7f343423/report.json",
+      "sha256": "4667c32aef8428d8233ef51ee4de3f5928ecb4717a0046d85bfc7588b239eb97"
+    },
+    "resume": {
+      "path": "evidence/runs/local-e2e/resume-4a0b8d7f-66a6-4781-9873-635b14d95e56/report.json",
+      "sha256": "cf0460f7c2865c45ee6a725bc1dc92110f8aaffdbd78d3ed605533e0095c73b0"
+    },
+    "console": {
+      "path": "evidence/runs/local-console/7c12e5d4-aad5-4412-8996-c48663eac75b/report.json",
+      "sha256": "4caf35a12ed9f3c4923d4af81a592719d51b04391ae6c54a38b18ac50d49bbf8"
+    }
+  },
+  "remaining": [
+    "Public-testnet Arkiv and settlement adapters/deployments",
+    "Full local AI-driven Minecraft job flow",
+    "Authenticated maintained Minecraft runtime",
+    "Coordinated laptop backup, restore and restart recovery",
+    "Independent-human acceptance and production release qualification"
+  ]
+}

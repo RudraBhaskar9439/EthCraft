@@ -1,0 +1,41 @@
+{
+  "status": "pass",
+  "recorded_at": "2026-10-29T22:45:56.436945+00:00",
+  "environment": "LOCAL_SYNTHETIC_ONLY",
+  "checks": {
+    "forge_tests": {
+      "passed": 12,
+      "failed": 0,
+      "evidence": "forge-tests.json"
+    },
+    "fresh_anvil_deployment": {
+      "successful_canonical_receipts": 19,
+      "evidence": "anvil-deployment-verification.json"
+    },
+    "seven_distinct_fixture_roles": true,
+    "admin_cannot_mint_cred_or_issue_kit": true,
+    "issuer_can_mint_simulation_only": true,
+    "ownership_cannot_merge_admin_with_issuer": true,
+    "active_pointer_bytecode_validation": {
+      "command": "python3 scripts/local_anvil.py",
+      "status": "pass"
+    },
+    "v1_deployment_contracts_and_evidence_preserved": true
+  },
+  "source_sha256": {
+    "contracts/src/CreditToken.sol": "4300ac9c16b03b268c67a5e3d91ea62d70bd5ffeb9ef8da9cd2caf4a4aebd202",
+    "contracts/src/KitCustody.sol": "6c74e42b64650f9ad53fe76fcf17a2312dbae42cf71bdf295ef71734c7cc3156",
+    "contracts/src/StateRegistry.sol": "f0b37057da5e219b7ab85d2dd78657577d17d320749fb28af2f202cbaa19aad3",
+    "contracts/src/AgentCityHook.sol": "3ce6700d7966aebdf7bca19d8a3fe68ab320acc8fbc8c614051b686622b1ce28",
+    "contracts/src/Procurement.sol": "c2790116a21cd710ccd512dbbb1e3a597356644211edcccd055685938ff18781",
+    "contracts/src/JobEscrow.sol": "f3446af01d021c831ff784aaff2f6ed1a68175cc8ca2923164fc3ee7dab37804",
+    "contracts/script/LocalDeploy.s.sol": "10e8b6617fe4f9aea44f7f8b940b57b1d77d39c520b8103e9fda54f11a2c6430",
+    "tests/contracts/AgentCity.t.sol": "a591c4478c41b175ac33635c90235b6a8544b7b8d73eb808e5cf7a29116409a0",
+    "scripts/local_anvil.py": "a9afbc61451d8b4c1c69ac5bcc964869a81b77e077d99cbbf4e1dbb7cee5ae27",
+    "scripts/local_verify_contract_deployment.mjs": "433f60b53f0665f878c15d0d8425b4958284979c7c93e532a4a9cfe2cb9a6174"
+  },
+  "limitations": [
+    "Public network, external independent people and actual Minecraft token integration remain unverified.",
+    "All token issuance and stock are explicitly synthetic local fixtures."
+  ]
+}

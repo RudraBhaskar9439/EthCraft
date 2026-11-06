@@ -1,0 +1,11 @@
+{
+  "status": "fail",
+  "scope": "Actual isolated restored Minecraft world; internal materials only",
+  "checks": [
+    "fresh server observations preserve all 144 structural block states, empty stock and durable revision 144"
+  ],
+  "error": {
+    "type": "AssertionError",
+    "message": "{\"status\":\"RECONCILIATION_REQUIRED\",\"code\":\"RECONCILE\",\"operationId\":\"065f5032-ecb6-4299-a9a6-f9b46e7cec66\",\"revision\":144}\n+ actual - expected\n\n+ 'RECONCILIATION_REQUIRED'\n- 'APPLIED'\n"
+  }
+}

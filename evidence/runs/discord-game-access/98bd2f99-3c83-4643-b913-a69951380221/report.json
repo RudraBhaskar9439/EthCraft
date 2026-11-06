@@ -1,0 +1,23 @@
+{
+  "status": "fail",
+  "scope": "Disclosed GateTester and MicrosoftTester native fixtures; offline local profile approval is not Microsoft identity or an independent human",
+  "checks": [],
+  "independentHumansVerified": 0,
+  "publicTransactions": 0,
+  "worldBlocksChanged": 0,
+  "itemGrants": 0,
+  "heldBaseline": {
+    "world": "minecraft:agentcity-fresh-c5a4bf5a",
+    "position": [
+      -20.5,
+      -60,
+      11.5
+    ],
+    "gameMode": "survival",
+    "inventory": [],
+    "source": "Persisted pre-gate location/mode plus actual pending player inventory",
+    "firstOnboarding": true
+  },
+  "error": "Pending player stays frozen on open lobby floor",
+  "finishedAt": "2026-10-31T12:44:41.262Z"
+}

@@ -1,0 +1,54 @@
+{
+  "schema": "agentcity.p2.restart-input-settings-check.v1",
+  "status": "pass",
+  "checked_at": "2026-10-29T19:29:09.993166+00:00",
+  "server_tick": 880,
+  "approved_native_placements_at_check": 137,
+  "inputs": [
+    {
+      "input": "a0",
+      "position": [
+        -12,
+        85,
+        -4
+      ],
+      "retained_state": "minecraft:lever[face=floor,facing=north,powered=false]",
+      "observed_state": "minecraft:lever[face=floor,facing=north,powered=false]",
+      "exact_equal": true
+    },
+    {
+      "input": "a1",
+      "position": [
+        -8,
+        84,
+        -3
+      ],
+      "retained_state": "minecraft:lever[face=wall,facing=west,powered=false]",
+      "observed_state": "minecraft:lever[face=wall,facing=west,powered=false]",
+      "exact_equal": true
+    },
+    {
+      "input": "b0",
+      "position": [
+        -12,
+        84,
+        -3
+      ],
+      "retained_state": "minecraft:lever[face=wall,facing=south,powered=false]",
+      "observed_state": "minecraft:lever[face=wall,facing=south,powered=false]",
+      "exact_equal": true
+    },
+    {
+      "input": "b1",
+      "position": [
+        -8,
+        82,
+        -3
+      ],
+      "retained_state": "minecraft:lever[face=wall,facing=east,powered=false]",
+      "observed_state": "minecraft:lever[face=wall,facing=east,powered=false]",
+      "exact_equal": true
+    }
+  ],
+  "scope": "Read-only exact lever-state comparison during continuation before deterministic inspection; no source or world changes."
+}

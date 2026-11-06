@@ -1,0 +1,218 @@
+{
+  "schema": "agentcity.p2.independent-review-draft.v1",
+  "reviewer": "/root/p2_scope_review (independent AI engineering peer)",
+  "reviewed_at": "2026-10-29T19:27:32.974373+00:00",
+  "status": "pending_complete_construction_inspection_and_release_binding",
+  "decision": "not_final_approval",
+  "release": null,
+  "reviewed_git_head": "74466c2a4188ffcb96cb331a0f30ab567a2924df",
+  "scope": "Six focused local P2 cases for one cooperative worker on one host; no broad fault grid or distributed task-lease claim.",
+  "current_fixture": {
+    "glass_blocks": 198,
+    "bottom_stone_slabs": 9,
+    "circuit_placements": 144,
+    "material_bill": {
+      "minecraft:stone_bricks": 65,
+      "minecraft:lever": 4,
+      "minecraft:repeater": 16,
+      "minecraft:redstone_torch": 37,
+      "minecraft:redstone": 19,
+      "minecraft:redstone_lamp": 3
+    },
+    "access_manifest": {
+      "path": "fixtures/construction/access-v1.json",
+      "sha256": "8b08d81a1830d65a9bc404fd1443c95b4dcb94e6665da779d61acfe446d1d2c3"
+    }
+  },
+  "reviewed_working_source_sha256": {
+    "backend/src/bot/construction-worker.cjs": "4effac5a0100bb9a6c51461b5790e7e0848294304fb6398e849e3f20f2790297",
+    "backend/src/bot/checkpoint-store.cjs": "bd857c0b57ca4533c5bde3eb643b99500c35c98fd107b6ce865014c4702654e4",
+    "backend/src/bot/minecraft-adapter.cjs": "3bd86142c1679cd68a7755a7357bbc12313f18ffcfc30f07bf958d6cde32413a",
+    "plugin/src/main/java/org/agentcity/paper/AgentCityPlugin.java": "6655659c050c13202616284cb52ead31011c4d06d89b2a7827a19e500b91de78",
+    "plugin/src/main/java/org/agentcity/paper/ConstructionAccessPlan.java": "d426dfc8aef8c0af81f3f0a1b1e298ff56039f9b3d32cd56b64213bbd98e84ef",
+    "tests/construction/probe.cjs": "f14d8b425e1af8bc014986eca3ce4c3b50c4bb628a42287f72a8a9e00e3153d2",
+    "tests/construction/fixture/ConstructionFixture.java": "7abfd2fc40d0f5353ffed8d743ef9883c53889b0da406f74cfba068de7d5a515",
+    "tests/construction/run.py": "55524249af3f01334a901ca364b825cbecbd1e5b170ccdd1753670a04dc0bfee"
+  },
+  "case_mapping": [
+    {
+      "case_id": "P2-001",
+      "case_digest": "0a0320980eb7819696f00225f5277122e55f2d51999dca2dbee21a643b7c7eeb",
+      "minimum_subcases": 16,
+      "assessment": "pending_same_world_final_seven_placements_and_actual_inspection",
+      "observed": "Build 5b3f8a44 completed 137 actual native placements across the initial and resumed clients, then stopped because remaining stone targets had only thin repeater/wire references. Seven materials remain. A final same-world continuation and real 16-row inspection are pending.",
+      "evidence": [
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-5b3f8a44/run-report.json",
+          "sha256": "76912eaee624a1ead27957637a60ac2ea7bdf79e580a0961fb4c6c7028efdbbe"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-5b3f8a44/initial-client.json",
+          "sha256": "e1137d8fec20d609eb759cf3dfe188138ea5722396b2de60b44844f6cbd42b8c"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-5b3f8a44/resume-client.json",
+          "sha256": "e02e6af190a1f1d49b36c19f0357df09580bd2ead4b9c7c8c6f870a219e02d80"
+        }
+      ]
+    },
+    {
+      "case_id": "P2-002",
+      "case_digest": "17bef6413c0f943ce35a7501bff25cba76d09fc75ff8f70745b82e844823fd02",
+      "minimum_subcases": 1,
+      "assessment": "pending_same_checkpoint_continuation_to_completed_build",
+      "observed": "The initial process checkpointed 12 placements; a new process continued the same job to 137. Final continuation must compare the persisted baseline, place only the remaining seven items and establish complete conservation without duplicate effects.",
+      "evidence": [
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-5b3f8a44/initial-client.json",
+          "sha256": "e1137d8fec20d609eb759cf3dfe188138ea5722396b2de60b44844f6cbd42b8c"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-5b3f8a44/resume-client.json",
+          "sha256": "e02e6af190a1f1d49b36c19f0357df09580bd2ead4b9c7c8c6f870a219e02d80"
+        }
+      ]
+    },
+    {
+      "case_id": "P2-003",
+      "case_digest": "95f866825d8dceed313a814db013c7df3fa73e44b1da6263f18108cdeb8bfc10",
+      "minimum_subcases": 2,
+      "assessment": "evidence_available_for_final_review_with_explicit_dependency_reuse",
+      "observed": "Actual shortage run 1b755aff waits with0 placements/0 receipts while65 stone bricks remain in a separate operator reserve. Actual occupied run ef6dfdc3 waits on wrong glass with0 placements/0 receipts and144 stock items unchanged. The worker core/checkpoint/store/observation/wait paths are unchanged; the source deltas are narrowly reviewed below.",
+      "evidence": [
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-1b755aff/run-report.json",
+          "sha256": "6dfbd82c4da1cd18d0d8db4efd0cb17297248e27c14faca94093b14fbc129689"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-1b755aff/initial-client.json",
+          "sha256": "d020cab1f42874b9bd472a551101cd29b13b14bfd66d37de5b631c9ec32bedde"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-ef6dfdc3/run-report.json",
+          "sha256": "91c103ef920ec5f832222fb4f39105df448c43d036b346d748e86e6bb43ec86e"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-ef6dfdc3/initial-client.json",
+          "sha256": "9bf86005c22219bd24441c378b7f085ba83c1bcaa516ca08dcbe8d0e46e4f30a"
+        }
+      ]
+    },
+    {
+      "case_id": "P2-004",
+      "case_digest": "087b053479d66442dcafe04d45405c22178cd68447d79205c05e866106a08036",
+      "minimum_subcases": 1,
+      "assessment": "physical_evidence_available_with_explicit_unchanged_navigation_reuse",
+      "observed": "The blocked run 4d581bae fixture places actual glass at the declared west/north ground crossing[-2,0,-3]. Navigation refuses within its bound; all144 stock items, structure and player inventories remain unchanged, with0 placements,revision 0 and no readiness. Its old source and compiled-plugin hashes remain retained. The subsequent source changes affect native placement references, not navigation, observation or the zero-effect blocked scenario.",
+      "evidence": [
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-4d581bae/run-report.json",
+          "sha256": "cfb8f292f5714cdd676e022a3febea338d99cad994fb3977fd1637200041d893"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-4d581bae/initial-client.json",
+          "sha256": "09417a4946701e2a1cdda9f47cbdcbc602940a5c88995d760ef05e3d99315e56"
+        }
+      ]
+    },
+    {
+      "case_id": "P2-005",
+      "case_digest": "9ada9df5569754ff092ffd1351eca7c82cf511f57c6869f88a5006faa17e4d51",
+      "minimum_subcases": 2,
+      "assessment": "constructor_evidence_available_with_unchanged_worker_reuse",
+      "observed": "The finalized initial client from current build 5b3f8a44 refuses unsupported rotation and blueprint hash before effects. These are live-fixture invocation checks of the worker constructor, not physical rotated builds.",
+      "evidence": [
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-5b3f8a44/initial-client.json",
+          "sha256": "e1137d8fec20d609eb759cf3dfe188138ea5722396b2de60b44844f6cbd42b8c"
+        }
+      ]
+    },
+    {
+      "case_id": "P2-006",
+      "case_digest": "c5b6c79db7eb247e3a8611184728b949539251aeae3f625ae03a2ce3e3b6395b",
+      "minimum_subcases": 5,
+      "assessment": "guard_evidence_available_with_narrow_unchanged_path_reuse",
+      "observed": "The finalized 5b3f8a44 initial client rejected wrong session, unauthorized role, stale revision, expiry and lock; its real expired PLACE borrowed, equipped and returned one legitimate redstone item with exact final no-effects. These prepare-time paths are unchanged by thin-reference native interaction handling. Fresh b0f1eaa4 current-source primitives also renew the native permission boundary.",
+      "evidence": [
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-5b3f8a44/initial-client.json",
+          "sha256": "e1137d8fec20d609eb759cf3dfe188138ea5722396b2de60b44844f6cbd42b8c"
+        },
+        {
+          "path": "evidence/runs/p1-boundary/agentcity-boundary-b0f1eaa4/run-report.json",
+          "sha256": "2c3a2ee7e8bcbd650b7b39203ec732d6b222693476cf7cd30319bfa93c59e332"
+        }
+      ]
+    }
+  ],
+  "shortage_occupied_reuse_review": {
+    "unchanged_behavior": "ConstructionWorker and checkpoint persistence are unchanged. Blueprint, access manifest, loader, inventory projection, journal, stock transfer and wait checks are unchanged. The main plugin gains only a valid-armed thin-reference interaction branch; neither waiting execution performs such an interaction.",
+    "adapter_delta": "Floor-lever yaw was corrected; the later upgrade adds thin-reference fallback behind existing solid references and bounded sneak/restore only in native placement. Both actual shortage and occupied waits occur before reference selection or placement, so these new branches are unreachable in their executions. Observation, inventory, stock retrieval and navigation methods are unchanged.",
+    "fixture_delta": "Adds an optional blocked-access glass obstruction. The new runner sets this field null for shortage and occupied; original stock/reserve/wrong-target setup is unchanged.",
+    "probe_delta": "Adds the separate blocked scenario and a legitimate-item expired PLACE loan/return check in build guards. The shortage and occupied scenario branches are unchanged.",
+    "runner_delta": "Adds blocked-only separate loopback ports and blocked fixture metadata/CLI option. Existing shortage/occupied ports and scenarios remain unchanged.",
+    "qualification": "Older reports retain their exact executed source hashes and are not called reruns. The narrowly added placement, blocked-profile and continuation branches are not executed by the shortage/occupied waits. Final release binding still requires verification of the exact complete delta.",
+    "changed_paths_by_run": {
+      "1b755aff": [
+        "backend/src/bot/minecraft-adapter.cjs",
+        "plugin/src/main/java/org/agentcity/paper/AgentCityPlugin.java",
+        "tests/construction/fixture/ConstructionFixture.java",
+        "tests/construction/probe.cjs",
+        "tests/construction/run.py"
+      ],
+      "ef6dfdc3": [
+        "backend/src/bot/minecraft-adapter.cjs",
+        "plugin/src/main/java/org/agentcity/paper/AgentCityPlugin.java",
+        "tests/construction/fixture/ConstructionFixture.java",
+        "tests/construction/probe.cjs",
+        "tests/construction/run.py"
+      ]
+    }
+  },
+  "expired_placement_source_review": {
+    "held_item_boundary": "A real successful WITHDRAW supplies one redstone item; the bot equips it before the expired PLACE request so missing item cannot mask expiry.",
+    "expected_refusal": "EXPIRED_OR_OVERLONG",
+    "restoration": "The item returns using a real RETURN operation; fresh authoritative observation confirms stock and player inventory equal their baseline, while revision, lock, quarantine and pending-operation state remain unchanged.",
+    "trust_limit": "This is an expired request at prepare time. It is not a claim of every expiry race after a native arm or a distributed stage lease."
+  },
+  "pending_before_final_approval": [
+    "Prove identical saved world, deployment, manifest, checkpoint, 137 structural blocks, seven carried materials, chest stock, revision and operation outcomes before starting the new source segment. No restoration, reseeding, checkpoint reset, deadline extension or unexplained effect is permitted.",
+    "Observe exactly seven new native placements and complete per-material conservation in the same job; preserve both source segments and failed history.",
+    "Retain the current protected real checker result with 16 distinct passing rows and the final structural revision.",
+    "Review the final source-integrity and cleanup outcome, match segment sources to their retained snapshots, and bind the final committed implementation through explicit narrow dependency reuse.",
+    "Renew affected P1 approval and then bind P2 release, environment, case evidence and review. Disclose that a clean 144-placement run of the final source was not executed."
+  ],
+  "limitations": [
+    "No complete P2 approval, case status update or evidence/P2.json mutation is made by this draft.",
+    "Scripted domain/adapter checks and constructor refusals are distinguished from actual Paper observations.",
+    "Historical unsupported Paper, offline agent-controlled fixtures and operator-seeded infrastructure remain disclosed.",
+    "No task-lease epoch enforcement, independent humans, live 0G/Arkiv calls, token integration, wallet signatures or settlement is established."
+  ],
+  "source_upgrade_scope": "The original actual 137-placement build remains a failed run. A controlled observation-only restart of the same saved world, deployment, checkpoint and inventory is being prepared for seven final placements using a narrowly reviewed reference/sneak upgrade. No final approval is given.",
+  "retained_failures": [
+    {
+      "evidence": {
+        "path": "evidence/runs/p2-construction/agentcity-construction-9e47cccc/run-report.json",
+        "sha256": "c6753359eea0feddf0516c070036d47c6dc776e23bef9d74c7a4ed046861f180"
+      },
+      "observed": "The earlier run failed at 49 placements because a floor lever faced south. Later build 5b3f8a44 physically passed that target and reached 137; the original failed report remains unchanged."
+    },
+    {
+      "evidence": {
+        "path": "evidence/runs/p2-construction/agentcity-construction-5b3f8a44/run-report.json",
+        "sha256": "76912eaee624a1ead27957637a60ac2ea7bdf79e580a0961fb4c6c7028efdbbe"
+      },
+      "observed": "Build 5b3f8a44 failed at 137 actual placements with seven materials remaining because thin references were unavailable to the adapter. Source correction and controlled same-world continuation remain under verification."
+    }
+  ],
+  "blocked_navigation_reuse_review": {
+    "changed_paths": [
+      "backend/src/bot/minecraft-adapter.cjs",
+      "plugin/src/main/java/org/agentcity/paper/AgentCityPlugin.java",
+      "tests/construction/fixture/ConstructionFixture.java",
+      "tests/construction/probe.cjs"
+    ],
+    "basis": "The actual blocked crossing run remains valid evidence for unchanged go/navigation, observation, inventory and no-effect behavior. Later thin-reference/sneak placement handling is not executed by this zero-placement navigation case. Original source and artifact hashes remain retained; final release reuse requires the final exact delta review."
+  }
+}

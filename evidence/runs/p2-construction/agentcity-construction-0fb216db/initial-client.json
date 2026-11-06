@@ -1,0 +1,42 @@
+{
+  "schema": "agentcity.p2.construction-client.v1",
+  "phase": "initial",
+  "status": "fail",
+  "started_at": "2026-10-29T17:48:54.680Z",
+  "independent_humans": 0,
+  "scripted_roles": true,
+  "checks": [
+    {
+      "name": "fresh-empty-circuit-and-exact-controlled-stock",
+      "final_blocks_seeded": 0,
+      "stock_total": 144,
+      "operator_glass": 185,
+      "status": "pass",
+      "at": "2026-10-29T17:49:08.219Z"
+    },
+    {
+      "name": "unsupported-orientation-and-blueprint-hash-refused-before-effects",
+      "refused": 2,
+      "status": "pass",
+      "at": "2026-10-29T17:49:08.221Z"
+    },
+    {
+      "name": "bounded-obstructed-navigation-preserves-stock-and-structure",
+      "target_relative": [
+        0,
+        0,
+        0
+      ],
+      "status": "pass",
+      "at": "2026-10-29T17:49:08.497Z"
+    }
+  ],
+  "live0GVerified": false,
+  "spending": 0,
+  "error": {
+    "name": "AssertionError",
+    "message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- null\n",
+    "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ undefined\n- null\n\n    at guards (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/evidence/runs/p2-construction/agentcity-construction-0fb216db/source/tests/construction/probe.cjs:137:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async run (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/evidence/runs/p2-construction/agentcity-construction-0fb216db/source/tests/construction/probe.cjs:211:5)"
+  },
+  "finished_at": "2026-10-29T17:49:13.620Z"
+}

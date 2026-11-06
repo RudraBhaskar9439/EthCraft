@@ -1,0 +1,43 @@
+{
+  "schema": "agentcity.p1.candidate-run.v1",
+  "status": "pass",
+  "name": "agentcity-p1-09e7b43b",
+  "started_at": "2026-10-29T14:26:49.500419+00:00",
+  "manifest_sha256": "c0d704a289d21c07217b8e5e934f0c3b831bb0c963905ded98b3b45e2438e1b7",
+  "sources": {
+    "fixtures/candidates/redstone-compiler/calculator-candidate-v1.json": "d14cc0956831efeb68df4b9aba588e946bbd3b546d6a2d37be02194378b1922b",
+    "fixtures/candidates/redstone-compiler/calculator-tests-candidate-v1.json": "8ec4afb0f561370cf74fc686a3683a01c6d0758fe6f0c15e33c8e1b5926e5897",
+    "tests/world/plugin/CandidatePlugin.java": "56b5e6b138247c66c017f8c9eae6f69177825c7421c06a746373c52b7541c3c7",
+    "tests/world/plugin/plugin.yml": "d20d196039ab5e03e13c4a22e593d529c7255b5ad476504408cd85bd60f7a26c",
+    "tests/world/observe.cjs": "a5897d40cf913934fbd423628918460be356a808e4155898762a227451792bf6",
+    "tests/world/run_candidate.py": "b93647571bff95a8020728c03a9e817859645a620d472ea558f82e7e4ff9b8bc",
+    "tests/compatibility/versions.json": "f9ee9617748df8545cadd5469d383b11f68ec43af6c9181d4259fcd1bb913502"
+  },
+  "runtime_lock": {
+    "purpose": "isolated_non_token_fixture",
+    "bind": "127.0.0.1",
+    "port": 25576,
+    "minecraft": "1.21.11",
+    "paper": {
+      "build": 132,
+      "support": "UNSUPPORTED",
+      "support_ended": "2026-06-15",
+      "sha256": "5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba",
+      "url": "https://fill-data.papermc.io/v1/objects/5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba/paper-1.21.11-132.jar"
+    },
+    "java_image": "eclipse-temurin@sha256:5d90b26c0784ccf55af55f97cbcf7f3969c66a06299c93bdc72649219942a48f",
+    "mineflayer": "4.39.0",
+    "pathfinder": "2.4.5",
+    "authentication": "offline_fixture_only",
+    "independent_human_participants": 0,
+    "token_integration": false,
+    "production_supported": false
+  },
+  "loopback_port": 25577,
+  "expected_inspection_status": "incomplete",
+  "independent_humans": 0,
+  "full_phase_gate_passed": false,
+  "plugin_sha256": "ded4cdcf1e4661f91e682238e23c262aa8e932f48e840b2c92562a55b496f77f",
+  "observed_inspection_status": "incomplete",
+  "finished_at": "2026-10-29T14:27:42.068074+00:00"
+}

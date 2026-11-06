@@ -1,0 +1,4 @@
+{"check":"same-world-restart-matches-retained-structure-and-all-real-inventories","status":"pass"}
+{"check":"unsneaked-thin-reference-refused-with-original-operation-reconciled","status":"pass"}
+{"check":"new-process-reconnect-preserves-real-carried-stock","status":"pass"}
+{"status":"fail","checks":3,"error":{"name":"AssertionError","message":"{\"status\":\"waiting\",\"reason\":\"NATIVE_OPERATION_NOT_APPLIED\",\"completed\":137,\"placedThisRun\":0,\"readiness\":false}\n\n'waiting' !== 'built'\n","stack":"AssertionError [ERR_ASSERTION]: {\"status\":\"waiting\",\"reason\":\"NATIVE_OPERATION_NOT_APPLIED\",\"completed\":137,\"placedThisRun\":0,\"readiness\":false}\n\n'waiting' !== 'built'\n\n    at run (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/evidence/runs/p2-construction/agentcity-continuation-48ecbd0d/source/tests/construction/probe.cjs:390:12)"}}

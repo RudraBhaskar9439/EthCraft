@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "observedAt": "2026-10-31T16:48:55.260751+00:00",
+  "scope": "Actual live host native API, installed plugin hash, Discord channel/command/ACL readback; no user inventory or coin mutations, no independent-human trade",
+  "checks": [
+    "native escrow API ready with no unresolved inventory effects",
+    "installed plugin hash recorded",
+    "actual marketplace channel exists and is read-only",
+    "one persistent browse guide without duplicate cards",
+    "live bazaar slash command offers all five actions",
+    "checked public posts contain no private identity or credential fields"
+  ],
+  "nativeEscrow": {
+    "pendingCount": 0,
+    "custodyCount": 0,
+    "catalog": [
+      "minecraft:cobblestone",
+      "minecraft:dirt",
+      "minecraft:oak_log",
+      "minecraft:oak_planks",
+      "minecraft:sand",
+      "minecraft:stick",
+      "minecraft:stone",
+      "minecraft:stone_bricks"
+    ]
+  },
+  "installedJarSha256": "bf285997b2e5569888a25c7cd51907558bb2c6e4e637923686d806c1c9091840",
+  "marketplaceChannelId": "1566131784847196160",
+  "liveListings": 0,
+  "publicTransactionsCreated": 0,
+  "playerItemsMoved": 0
+}

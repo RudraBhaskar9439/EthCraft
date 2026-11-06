@@ -1,0 +1,174 @@
+{
+  "schema": "agentcity.local-components-p3-p8.v1",
+  "release": "194ceb3bccea87d42548012e830d80a3bdfe3816",
+  "status": "local_components_verified",
+  "recordedOn": "2026-10-30",
+  "timezone": "Asia/Calcutta",
+  "realMoneySpentUsd": 0,
+  "review": {
+    "status": "approved",
+    "reviewer": "/root/p2_harness (requester-side AI engineering peer; not an independent human participant)",
+    "release": "194ceb3bccea87d42548012e830d80a3bdfe3816",
+    "evidence": [
+      {
+        "path": "evidence/runs/local-review/final-review.json",
+        "sha256": "5eada06010b1b90319563b40ea5f02b84d435de17d81d1ab69837de64afc27fb"
+      }
+    ]
+  },
+  "phases": {
+    "P3": {
+      "localStatus": "verified",
+      "canonicalLiveStatus": "pending",
+      "scope": "Strict proposals, durable budgets and fresh fenced execution using scripted inference.",
+      "evidence": [
+        {
+          "path": "evidence/runs/local-inference/smoke.json",
+          "sha256": "d1316d35d1324bbb479a92c4357dec611f5b332bc7214176d9b6464dc7d20bce"
+        },
+        {
+          "path": "evidence/runs/local-workflow/614d08a0-1130-40cc-b522-a087a5513747/report.json",
+          "sha256": "4f1814da8bd2e6bbcf47c53f757d9c49696b4994b1291caf3e0f1b524abe9c39"
+        },
+        {
+          "path": "evidence/runs/local-e2e/84feb68e-2741-4814-8063-dcae9c62504a/report.json",
+          "sha256": "3237d4c92f90d5e1ed793279334724f9e309f8f6a8610f39685fa255193abbed"
+        }
+      ]
+    },
+    "P4": {
+      "localStatus": "verified",
+      "canonicalLiveStatus": "pending",
+      "scope": "Actual PostgreSQL wallet/approval checks and actual official-SDK writes/queries on owned local Arkiv1337.",
+      "evidence": [
+        {
+          "path": "evidence/runs/local-p4/identity-0e3b2abf-e78b-45db-a932-e6b42b2dd0ba/report.json",
+          "sha256": "cbe5e9deed273c7764e4ad1f0338732df489072a6cdb247e891753c3f6ebf4a6"
+        },
+        {
+          "path": "evidence/runs/local-p4/agreements-d9c09492-1902-4f8b-bb63-51582ec3fd41/report.json",
+          "sha256": "e3ad9f0693ceca0303b014a474bf4c9adce35f8f924c03272f313e4106fe775b"
+        },
+        {
+          "path": "evidence/runs/local-p4/discovery-254d9187-8790-4fa1-9eb7-b809a1cccec3/report.json",
+          "sha256": "94c09bd712189b7a482f235a8a2046f4a356bb27768c2a31582941976d25fbf0"
+        },
+        {
+          "path": "evidence/runs/local-e2e/84feb68e-2741-4814-8063-dcae9c62504a/report.json",
+          "sha256": "3237d4c92f90d5e1ed793279334724f9e309f8f6a8610f39685fa255193abbed"
+        }
+      ]
+    },
+    "P5": {
+      "localStatus": "verified",
+      "canonicalLiveStatus": "pending",
+      "scope": "Real local EVM controlled issuance with seven separate role addresses and synthetic item backing.",
+      "evidence": [
+        {
+          "path": "evidence/runs/local-p5-p8-v2/contract-checks.json",
+          "sha256": "1f8690f529d7de7410cf782356a8233bbb58087a2f826f56da73237a56bd74e1"
+        },
+        {
+          "path": "evidence/runs/local-p5-p8-v2/anvil-deployment-verification.json",
+          "sha256": "f5eedc1e375a8e2f02efb554c0afbed8655120f05c81534b284b5ff16cbed12e"
+        },
+        {
+          "path": "evidence/runs/local-e2e/84feb68e-2741-4814-8063-dcae9c62504a/report.json",
+          "sha256": "3237d4c92f90d5e1ed793279334724f9e309f8f6a8610f39685fa255193abbed"
+        }
+      ]
+    },
+    "P6": {
+      "localStatus": "verified",
+      "canonicalLiveStatus": "pending",
+      "scope": "Actual local v4 pool, correctly mined hook, symmetric freshness halt and disclosed LP test liquidity.",
+      "evidence": [
+        {
+          "path": "evidence/runs/local-p5-p8-v2/contract-checks.json",
+          "sha256": "1f8690f529d7de7410cf782356a8233bbb58087a2f826f56da73237a56bd74e1"
+        },
+        {
+          "path": "evidence/runs/local-p6-liquidity/0xc6e7df5e7b4f2a278906862b61205850344d4e7d/seed.json",
+          "sha256": "e566a2081131fcda3bfeaa0bddb3b22f89c153fbe5b6f4ecb77ad211da581ea3"
+        },
+        {
+          "path": "evidence/runs/local-p6-liquidity/0xc6e7df5e7b4f2a278906862b61205850344d4e7d/replay.json",
+          "sha256": "14f92cd23688ee6eca53d0723c02ee315ab331a53495f71fc05abb768e0f6ffa"
+        },
+        {
+          "path": "evidence/runs/local-e2e/84feb68e-2741-4814-8063-dcae9c62504a/report.json",
+          "sha256": "3237d4c92f90d5e1ed793279334724f9e309f8f6a8610f39685fa255193abbed"
+        }
+      ]
+    },
+    "P7": {
+      "localStatus": "verified",
+      "canonicalLiveStatus": "pending",
+      "scope": "Canonical local transaction intents, aggregate cap and one atomic synthetic delivery receipt.",
+      "evidence": [
+        {
+          "path": "evidence/runs/local-procurement/verification.json",
+          "sha256": "98244d796fd7073ca10da7278046d4e3ae067fc1ae1f159f10e48a933d787f89"
+        },
+        {
+          "path": "evidence/runs/local-workflow/614d08a0-1130-40cc-b522-a087a5513747/report.json",
+          "sha256": "4f1814da8bd2e6bbcf47c53f757d9c49696b4994b1291caf3e0f1b524abe9c39"
+        },
+        {
+          "path": "evidence/runs/local-e2e/84feb68e-2741-4814-8063-dcae9c62504a/report.json",
+          "sha256": "3237d4c92f90d5e1ed793279334724f9e309f8f6a8610f39685fa255193abbed"
+        }
+      ]
+    },
+    "P8": {
+      "localStatus": "verified",
+      "canonicalLiveStatus": "pending",
+      "scope": "Actual local funding, typed synthetic inspection, protected pass lifetime, requester acceptance and one-time claim/recovery.",
+      "evidence": [
+        {
+          "path": "evidence/runs/local-p5-p8-v2/contract-checks.json",
+          "sha256": "1f8690f529d7de7410cf782356a8233bbb58087a2f826f56da73237a56bd74e1"
+        },
+        {
+          "path": "evidence/runs/local-settlement/f13bc146-d5f0-47b4-abb9-2923af8969bb/report.json",
+          "sha256": "d8efd454e363ef01c834ef6af61345db12aad4014d70dcb4bf24d6aa7ccdd290"
+        },
+        {
+          "path": "evidence/runs/local-e2e/84feb68e-2741-4814-8063-dcae9c62504a/report.json",
+          "sha256": "3237d4c92f90d5e1ed793279334724f9e309f8f6a8610f39685fa255193abbed"
+        },
+        {
+          "path": "evidence/runs/local-e2e/resume-178f3176-8e3d-459e-a359-77c8529a9954/report.json",
+          "sha256": "297488ae4fb79e969239835558c08bcdff7e9a078f4934c0ae01961ee474a551"
+        },
+        {
+          "path": "evidence/runs/local-e2e/resume-7ada59d1-efeb-4fb8-bc78-da35c64440ec/report.json",
+          "sha256": "f523e0fc83a7773336bc04ca1d0fce8fff7d1cc6dc3a85767fcb51082fa68c04"
+        }
+      ]
+    }
+  },
+  "console": {
+    "url": "http://127.0.0.1:8789",
+    "evidence": [
+      {
+        "path": "evidence/runs/local-console/a85bd46a-62f8-4a4d-bb61-1a1ca4b7c20f/report.json",
+        "sha256": "1a4365ad6ec5936b4e7c400c989a47e22cb887a28b254743a221cb7fcd4b4f55"
+      }
+    ]
+  },
+  "canonicalLiveGatesPassed": false,
+  "pendingLiveRequirements": [
+    "actual funded/free-credit 0G Router access, model capability/billing/provenance",
+    "independently controlled human participants and genuine game authentication",
+    "Minecraft token-platform suitability before any token-linked game integration",
+    "public-chain route/deployment/finality/roles/liquidity and real requester consent/funding/acceptance"
+  ],
+  "limitations": [
+    "Inference, inventory, construction and inspection in the token flow are explicit local fixtures.",
+    "Arkiv1337 and Anvil31337 are actual local nodes, not public-network evidence.",
+    "Fresh service bootstrap branches are implemented and inspected but not all exercised on a fresh machine.",
+    "Selected prior tests are reused with explicit source-delta qualifications in the independent review.",
+    "No broader adversarial sweep or production/security-audit claim."
+  ]
+}

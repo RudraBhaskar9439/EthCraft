@@ -1,0 +1,52 @@
+{
+  "status": "pass",
+  "scope": "Actual managed Privy delegate signing of one authorized 1CITY operator smoke grant; not an inventory sale, player spend, or human trade",
+  "tests": [
+    {
+      "name": "actual Privy delegate signs only after durable bound nonce; exact signed bytes persist before broadcast",
+      "status": "pass"
+    },
+    {
+      "name": "canonical ERC20 transfer calldata logs and exact 1CITY balance deltas match authorized treasury grant",
+      "status": "pass"
+    },
+    {
+      "name": "same operation replay signs zero additional requests and moves zero additional coins or nonce",
+      "status": "pass"
+    }
+  ],
+  "publicTransactionsAuthorized": 1,
+  "realMoneySpentUsd": 0,
+  "operationId": "045f3a5f-7229-44b5-984e-21728d7d8df5",
+  "binding": {
+    "chainId": 1301,
+    "genesisHash": "0xb7fe0bc9f98ca03294ca0094ff9374cc3e64130b6ec85850d6e260191f48bfe7",
+    "role": "treasury",
+    "treasury": "0x245167cc2cd6ddb264adb83b49f1b3d910a51f67",
+    "recipient": "0x27f53660a409d14a3acc5f2e82ba9a7077090c96",
+    "token": "0x789dab2f22f0161401523ebe858ce88a3b14fae8",
+    "amountBaseUnits": "1000000000000000000",
+    "data": "0xa9059cbb00000000000000000000000027f53660a409d14a3acc5f2e82ba9a7077090c960000000000000000000000000000000000000000000000000de0b6b3a7640000",
+    "value": "0",
+    "maxNativeCostWei": "2000000000000000",
+    "maxGas": 100000
+  },
+  "transactionHash": "0x8c9844a700bb3bbd3dc10a2825a45dc71a3b7e7adaf0ab1739496ae425429924",
+  "blockHash": "0x3cd6b4cbf0442181c09a53cc16ddf03027bc89065cf49e04a281836c4dfadec6",
+  "blockNumber": "66587061",
+  "before": {
+    "treasuryCITY": "10000000000000000000000",
+    "recipientCITY": "20000000000000000000",
+    "treasuryNativeWei": "2000000000000000",
+    "nonce": 0
+  },
+  "after": {
+    "treasuryCITY": "9999000000000000000000",
+    "recipientCITY": "21000000000000000000",
+    "treasuryNativeWei": "1999948492999866",
+    "nonce": 1
+  },
+  "signRequests": 1,
+  "globalBroadcastEnabled": false,
+  "publicTransactions": 1
+}

@@ -1,0 +1,37 @@
+{
+  "schema": "agentcity.local-p4.agreements.v1",
+  "runId": "agreements-d9c09492-1902-4f8b-bb63-51582ec3fd41",
+  "status": "pass",
+  "checks": [
+    {
+      "name": "canonical-json-key-order-and-actual-evm-eip712-digest-match",
+      "status": "pass",
+      "digest": "0x59b2f9d9f7e21b470986e4c422b1b1a3d8db4de85673e24c3b18c96821e4035a",
+      "contract": "0x7a2088a1bFc9d81c55368AE168C2C02570cB814F"
+    },
+    {
+      "name": "both-real-wallet-approvals-required-and-duplicates-do-not-count",
+      "status": "pass"
+    },
+    {
+      "name": "changed-signed-material-cap-invalidates-existing-approval",
+      "status": "pass"
+    },
+    {
+      "name": "funded-terms-immutable-in-service-and-postgresql",
+      "status": "pass"
+    },
+    {
+      "name": "unfunded-successor-version-cannot-reuse-old-approvals",
+      "status": "pass"
+    },
+    {
+      "name": "approval-expiry-equality-refused",
+      "status": "pass"
+    }
+  ],
+  "liveFundingVerified": false,
+  "fundingVerifier": "scripted trusted receipt fixture for backend freezing; no token transfer",
+  "startedAt": "2026-10-29T22:46:23.658Z",
+  "finishedAt": "2026-10-29T22:46:24.033Z"
+}

@@ -1,0 +1,128 @@
+{
+  "status": "local-checkpoint-pass-live-retake-pending",
+  "observedAt": "2026-10-31T15:05:54.283Z",
+  "scope": "Discord account recovery, hosted player access and paused-task usability; canonical phase approval unchanged",
+  "ancestorRelease": "21294d0a1dff938d0b1ae4be1fbb51efcf105477",
+  "sourceSha256": {
+    "backend/src/discord/game-wallet-view.mjs": "5e2a97d8889e879f47fbc9851c035646360d51f705e6345ada5a4adc398bff38",
+    "backend/src/discord/runtime.mjs": "1cbcd5bdb4916b6acb40a26b174783ae99e78bc72aa176acbdbf9a4b79e8129d",
+    "backend/src/playable/agents.mjs": "dac7437bddb3dac3995d388a9054880a90115cdd565a2f2f00b0345f15f08b58",
+    "backend/src/playable/intent-planner.mjs": "ecdaa0efb85f07364b37542ce9ba263b56b823e1b69a27b922335349774954a1",
+    "backend/src/playable/task-tools.mjs": "0078327f36ba7dace4a05acdabbf88a09d0ee7de6e86a01fbfc544a558d0d2dc",
+    "scripts/playable_worker.mjs": "5f445a7698d59f00d6967e57a1e514b6f94948b6d901ebd3302d40678716827e",
+    "scripts/host_node.py": "5824eefb157076eef6a5fbacb348b98f3f8455f72400013d33f05ae77fc0f046",
+    "tests/playable/intent-planner.mjs": "d5400cb277dcaecbacfba49735ec4a51520d6e4c797cfa67427ff9939d77f050",
+    "tests/playable/tasks.mjs": "ca39ed54fd0a387611c4494c19d582cb6081f7e3418f1bbfd3d89ac8867af152"
+  },
+  "tests": {
+    "gameWalletView": {
+      "groups": 3,
+      "status": "pass",
+      "environment": "isolated actual PostgreSQL with explicit identity/native-session fixtures"
+    },
+    "discordBot": {
+      "groups": 6,
+      "status": "pass",
+      "environment": "isolated PostgreSQL, simulated Discord interactions"
+    },
+    "discordIdentity": {
+      "groups": 5,
+      "status": "pass"
+    },
+    "privySdkWire": {
+      "groups": 2,
+      "status": "pass",
+      "environment": "official installed SDK against explicit local HTTP fixture"
+    },
+    "minecraftIngress": {
+      "groups": 6,
+      "status": "pass",
+      "environment": "protocol and authorization fixtures"
+    },
+    "publicHttps": {
+      "groups": 3,
+      "status": "pass",
+      "environment": "actual current Cloudflare edge"
+    },
+    "hostShutdown": {
+      "status": "pass",
+      "environment": "isolated real tmux and Node process; no orphan or respawn"
+    },
+    "intentPlanner": {
+      "groups": 14,
+      "status": "pass",
+      "environment": "controlled planner/manager fixtures"
+    },
+    "taskTools": {
+      "groups": 8,
+      "status": "pass",
+      "environment": "controlled physical adapter fixtures"
+    },
+    "agents": {
+      "groups": 5,
+      "status": "pass",
+      "environment": "controlled bot fixtures"
+    },
+    "remoteAgents": {
+      "groups": 5,
+      "status": "pass",
+      "environment": "controlled scoped-authority fixtures"
+    },
+    "planningUnitTests": {
+      "tests": 56,
+      "status": "pass",
+      "productVerification": false
+    },
+    "planningIntegrity": {
+      "status": "pass",
+      "phases": 11,
+      "scenarioFamilies": 270,
+      "upstreams": 18,
+      "productVerification": false
+    }
+  },
+  "deployment": {
+    "workerReloadedAtQuiescentBoundary": true,
+    "materialTaskJournalUnchanged": true,
+    "worldAndTunnelsNotRestarted": true,
+    "initialReadinessProbe": "25-second probe timed out during WSL dependency loading; preserved in tool history",
+    "subsequentReadiness": "worker ready, authenticated Discord guild/commands accessible, native game API ready",
+    "minecraftAddress": "159.223.110.159:51967"
+  },
+  "actualPrimaryUser": {
+    "durableDiscordPrivyLink": true,
+    "existingWalletAndApprovedMinecraftJoin": true,
+    "name": "Ruddy2",
+    "agent": "CityAgent2",
+    "newAccountAddress": "0x1a2f1d1e98a52c3a5b17e641c47a4fbd1472c726",
+    "oldRuddyAccountPreserved": true
+  },
+  "authority": {
+    "walletView": "SELECT-only, requires current approved native connection plus matching stored owner/provider alias",
+    "walletCreationByChecks": 0,
+    "signatures": 0,
+    "publicTransactions": 0,
+    "cancellation": "Explicit owner action only; no pending effect, no task receipts and verified empty carried inventory; retains original workflow/task records",
+    "actualUserTaskCancelledByAgent": false
+  },
+  "pending": [
+    "Primary user is offline at the actual /wallet probe; live retry after worker reload is pending. The historical native approval is proven separately.",
+    "Live owner use of the new cancel control and conversational screenshot query is pending; fixture checks are not a live world pass.",
+    "Independent second participant, Microsoft authentication, 0G and original integrated canonical live gates remain unproved."
+  ],
+  "canonicalGate": {
+    "phase": "P0",
+    "status": "blocked",
+    "reasons": [
+      "implementation scope changed since approved release",
+      "P0-015 upstream-document artifact hash mismatch"
+    ],
+    "noCanonicalEvidenceRewritten": true
+  },
+  "evidence": [
+    "evidence/runs/discord-enrollment/af150326-137c-425d-b999-5811666963a8/report.json",
+    "evidence/runs/game-wallet-view/6965a06a-60ae-41c3-acc9-df5142d67516/report.json",
+    "evidence/runs/discord-bot/f4533fbe-187a-4809-9ee7-1526675d8981/report.json",
+    "evidence/runs/public-tunnel/5cea49cd-c904-416f-8048-623000e183a1/report.json"
+  ]
+}

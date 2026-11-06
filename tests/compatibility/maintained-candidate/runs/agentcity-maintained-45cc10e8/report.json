@@ -1,0 +1,72 @@
+{
+  "status": "fail",
+  "name": "agentcity-maintained-45cc10e8",
+  "owner": "503db994c0d04d91a6929e2adfc349dd",
+  "purpose": "isolated maintained non-token compatibility candidate, not adoption",
+  "started_at": "2026-10-30T08:08:34.420649+00:00",
+  "matrix": {
+    "purpose": "isolated_maintained_candidate_not_adopted",
+    "artifacts": {
+      "paper": {
+        "version": "26.3",
+        "build": 231,
+        "sha256": "a836a016be7ac52352eb3a1efb6857bb42ee73a6c78d46e292f7e87742edb0e6",
+        "url": "https://fill-data.papermc.io/v1/objects/a836a016be7ac52352eb3a1efb6857bb42ee73a6c78d46e292f7e87742edb0e6/paper-26.3-231.jar"
+      },
+      "ViaVersion": {
+        "version": "5.12.2",
+        "sha256": "24e4876fefe73e08a4c87cd6c457ee0916e62dd69656631caf41e26f909d504b",
+        "url": "https://github.com/ViaVersion/ViaVersion/releases/download/5.12.2/ViaVersion-5.12.2.jar"
+      },
+      "ViaBackwards": {
+        "version": "5.12.2",
+        "sha256": "9a148a80ea22074f4bd1626cdbe254a4cd998bf44e7ceaff4e285a1b6b35da42",
+        "url": "https://github.com/ViaVersion/ViaBackwards/releases/download/5.12.2/ViaBackwards-5.12.2.jar"
+      }
+    },
+    "server_java_minimum": 25,
+    "client": "1.21.11",
+    "mineflayer": "4.39.0",
+    "pathfinder": "2.4.5",
+    "bind": "127.0.0.1",
+    "ports": [
+      25596,
+      25597
+    ],
+    "non_token": true,
+    "production_adopted": false,
+    "official_source_sha256": {
+      "Paper-LICENSE.md": "fc5629be761124cb418bed11c70b2cd2aeff136c52ca8b80caf8fdf7474c3bc8",
+      "ViaBackwards-LICENSE": "8b1ba204bb69a0ade2bfcf65ef294a920f6bb361b317dba43c7ef29d96332b9b",
+      "ViaBackwards-platform.java": "6b5a3b0476b086f7b0e40cafe818e0ca42adb3676b5919d7f8c47f75a0282e90",
+      "ViaBackwards-release.json": "b6593f50fc04d660e96187d1e528cacabd0ebc7806cec9501a5324edcc83baa9",
+      "ViaVersion-API-MIT.md": "53b23ab831428ec5b9126eff80de5a31f24c2393e6e8bbade3cab7e3717d3f8f",
+      "ViaVersion-GPL.md": "0e1372769c3ea4ce2a8fb0955a02adf8e88d1804c6143518dee9f969eb0911f7",
+      "ViaVersion-release.json": "ea29473eb9dd336743d9691f99dc9edf38e1d5e5ad2d21e27596e4745c4376d8",
+      "paper-build.json": "f779a1b79506a557d2bba8b07cc88ea37197191e499d78127a2ac6303051bcc6",
+      "paper-version.json": "2aaffaa283dbffa64f33ab450eaae45f0daefeb95362cb4000e3344165d8d14d"
+    },
+    "java_image": "eclipse-temurin@sha256:83f4a7fc27df94dcc7b8de04d14cbbba8da14406f921e966969c3b09000aa507"
+  },
+  "independent_humans": 0,
+  "real_spend_usd": 0,
+  "used_source_sha256": {
+    "backend/src/bot/construction-worker.cjs": "4effac5a0100bb9a6c51461b5790e7e0848294304fb6398e849e3f20f2790297",
+    "backend/src/bot/minecraft-adapter.cjs": "23d5bce11bcc64e2f8925d75deafc518085d6128614ea98afe9d4d19b5753b6b",
+    "backend/src/bot/checkpoint-store.cjs": "bd857c0b57ca4533c5bde3eb643b99500c35c98fd107b6ce865014c4702654e4"
+  },
+  "unchanged_plugin_sha256": "a8ec21a9858659f806c06c7f9e4b7eac9daac80c8d3d3e784717151956abc008",
+  "error": "Unchanged plugin failed startup; retained server.log contains the cause.",
+  "owned_container_removed": true,
+  "finished_at": "2026-10-30T08:10:28.343296+00:00",
+  "evidence_sha256": {
+    "compile-native-probe.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "deployment.json": "9a1c9f7805e412a36a932ade1340ecd7e18f64c9c81ab8bae1741064a5134066",
+    "final-server-remove.log": "b05219286c996a3e309f0c3d92dbda2ebc38ebb6685a40515514e0c37d3457b5",
+    "final-server-stop.log": "1a5f3c0fb790ede75c77fe5dcf6d61271c4bda2b6ad95edb530b068144e33588",
+    "final-server.log": "707d3c9e161ff15ef361440d79db3054d5059f45316841feeddb150ea556ecde",
+    "package-native-probe.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "server-start.log": "4c78488f3e404165df144c6b1892ab8aee680aba657f33d346883e0be959fa0c",
+    "server.log": "83132f82cfab5a2d1e9e5b25f8782e4ae87356b9d3bcda1026054fce59a7f5e6"
+  }
+}

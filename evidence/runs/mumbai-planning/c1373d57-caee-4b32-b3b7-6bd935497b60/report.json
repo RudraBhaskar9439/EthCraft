@@ -1,0 +1,33 @@
+{
+  "schema": "agentcity.mumbai-planning-checks.v1",
+  "recordedAt": "2026-11-05T18:58:32.017785+00:00",
+  "status": "pass",
+  "scope": "Planning infrastructure tests only; does not qualify original canonical product or production gates.",
+  "checks": [
+    {
+      "name": "planningUnitTests",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "status": "pass",
+      "exitCode": 0,
+      "log": "evidence/runs/mumbai-planning/c1373d57-caee-4b32-b3b7-6bd935497b60/planningUnitTests.log"
+    },
+    {
+      "name": "planningGateConsistency",
+      "command": [
+        "python3",
+        "scripts/check_plan.py"
+      ],
+      "status": "pass",
+      "exitCode": 0,
+      "log": "evidence/runs/mumbai-planning/c1373d57-caee-4b32-b3b7-6bd935497b60/planningGateConsistency.log"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "schema": 1,
+  "recordedAt": "2026-10-30T09:14:33.794170+00:00",
+  "status": "verified_private_developer_pilot",
+  "scope": "User-approved private laptop pilot through Phase 8; Minecraft internal materials and a separate synthetic blockchain demonstration.",
+  "canonicalOriginalGatesPassed": false,
+  "originalEvidencePreserved": true,
+  "realMoneySpentUsd": 0,
+  "independentHumanParticipantsVerified": 0,
+  "inference": {
+    "provider": "ollama",
+    "model": "qwen3:1.7b",
+    "live0GVerified": false,
+    "0GRequiredForCurrentRoute": false
+  },
+  "economyBoundary": {
+    "minecraftUsesInternalGameMaterials": true,
+    "blockchainMayAffectMinecraftItemsAccessRewards": false,
+    "contractStockAndInspection": "synthetic"
+  },
+  "phases": [
+    {
+      "phase": "P0",
+      "verification": "verified",
+      "result": "Revised scope, separate game/contract boundary, pinned supported candidate and zero real-money budget."
+    },
+    {
+      "phase": "P1",
+      "verification": "verified",
+      "result": "Actual protected 16/16 calculator inspection on the maintained candidate."
+    },
+    {
+      "phase": "P2",
+      "verification": "verified",
+      "result": "144 real Survival placements and receipts; exact materials; original lost placement reply reconciled once."
+    },
+    {
+      "phase": "P3",
+      "verification": "verified_with_ollama",
+      "result": "Actual local model decisions behind receiving-boundary authority; no 0G claim."
+    },
+    {
+      "phase": "P4",
+      "verification": "developer_verified_human_pending",
+      "result": "Real developer signatures and public Arkiv profile/job/offer discovery; actual independent humans remain unverified."
+    },
+    {
+      "phase": "P5",
+      "verification": "verified_synthetic_testnet",
+      "result": "Real testnet token/custody contracts and item-level synthetic backing; no Minecraft token backing."
+    },
+    {
+      "phase": "P6",
+      "verification": "verified_synthetic_testnet",
+      "result": "Official Uniswap v4 contracts, permissioned hook and actual public-testnet swap."
+    },
+    {
+      "phase": "P7",
+      "verification": "verified_synthetic_testnet",
+      "result": "Canonical purchase claim and one-time simulated delivery; original intent reused during recovery."
+    },
+    {
+      "phase": "P8",
+      "verification": "developer_verified_human_pending",
+      "result": "Protected simulated inspection, developer requester acceptance, fixed claim and zero repeated payment; human acceptance remains unverified."
+    }
+  ],
+  "evidence": {
+    "minecraft": {
+      "path": "evidence/runs/minecraft-internal/verification.json",
+      "sha256": "16036799a59e68d977bda7394dd2f9ac201eafc833e86e4b6055763069b06186"
+    },
+    "maintainedQualification": {
+      "path": "tests/compatibility/maintained-candidate/runs/agentcity-maintained-4b4bb938/report.json",
+      "sha256": "c0b4daa7143772b5a4c1dfec3e3b3c5dcf17dddc4b9b25f6be64468fc4a78d7c"
+    },
+    "publicWorkflow": {
+      "path": "evidence/runs/public-testnet-e2e/1a477548-69b9-4903-ad6c-2bae54774a5f/report.json",
+      "sha256": "8b34b631960bb61c2dbb2c996b316629cbe9249ccd364f6c0bfe29d012a70e47"
+    },
+    "publicRecovery": {
+      "path": "evidence/runs/public-testnet-e2e/recovery-9f3418d6-66ed-4254-97b3-9dd9ed87c93b/report.json",
+      "sha256": "6e351e508dab793086b601dd727b5503f669c0eb5d93f26feae173d0c689c684"
+    },
+    "arkivRecovery": {
+      "path": "evidence/runs/public-arkiv/f58d4cfa-b16b-4d7f-973f-3097ebbe9c25/report.json",
+      "sha256": "4ff15a3c09b4e8cb24b695275cd9dfb924946b01409f4629718bdf10ce86a996"
+    },
+    "databaseRestore": {
+      "path": "tests/recovery/runs/restore-08fcb5978a5c4b6999359806a823679b/report.json",
+      "sha256": "44a245d4d2c43573094bfdce26e9c51013fdbb108cae971f11cb8ebe13ed74ee"
+    },
+    "serviceRestart": {
+      "path": "tests/recovery/runs/restart-9b086d7733af4c7893eaff04b515916f/report.json",
+      "sha256": "32599688e8668ab9f477dabb55717b21a4cdec62a9a5096677ab8bc4c31a50c0"
+    },
+    "walletHandoff": {
+      "path": "tests/identity/runs/handoff-613b6d1a-2beb-44b1-b5bd-cbd6113122a3/report.json",
+      "sha256": "d362a6149b1734e51b089779153b8ea029b827742ae0ee46ff1fdaee793fc35d"
+    },
+    "unsignedPreparation": {
+      "path": "tests/identity/runs/preparation-fdbcece7-30c0-4e6d-9ca1-55c938d11bc0/report.json",
+      "sha256": "c0ed97f5ff8897713cb68312384a2a9dba608bb35247d7cc8f78976911911d62"
+    },
+    "maintainedAdoption": {
+      "path": "evidence/MAINTAINED_RUNTIME.json",
+      "sha256": "73bb4ed082dbb77dd0c0fd9e5649407910102b4cd307ece22fb7c67983808b88"
+    },
+    "maintainedHostedWorld": {
+      "path": "evidence/runs/maintained-host/b553ae1bcf404d62956318f77b0ba0ef/report.json",
+      "sha256": "575461b16d5c895e03232c6c42c2dcfb5317990e930c095d90b3b76a8950f603"
+    },
+    "finalConsole": {
+      "path": "evidence/runs/local-console/3a4677c5-f688-4284-bb1d-828622b5b96e/report.json",
+      "sha256": "4caf35a12ed9f3c4923d4af81a592719d51b04391ae6c54a38b18ac50d49bbf8"
+    }
+  },
+  "productionRelease": {
+    "ready": false,
+    "remaining": [
+      "Both participant public addresses are supplied. Genuine human wallet control, Java sessions and final human approval/funding/acceptance remain unverified.",
+      "Microsoft-authenticated human Java sessions and shared multiplayer verification; offline bot sessions are not that evidence.",
+      "Real authentication and roles before sharing or forwarding the developer operator console; current host stays loopback only.",
+      "A user-controlled off-laptop backup destination and actual restore from that copy before disaster-recovery claims."
+    ]
+  },
+  "limits": [
+    "No full computer reboot was tested.",
+    "The isolated local-chain restore preserves current state; historical account state requires reconciliation.",
+    "Focused functional, authority, accounting and retry checks only; no expanded edge-case sweep."
+  ],
+  "host": {
+    "console": "http://127.0.0.1:8789/",
+    "minecraft": "127.0.0.1:25596",
+    "historicalMinecraftAccess": "127.0.0.1:25588",
+    "maintainedHostReady": true,
+    "allSixServicesHealthyAfterConsoleRestart": true,
+    "scope": "loopback only; trusted local operator"
+  },
+  "infrastructureVerification": {
+    "pythonUnitTests": 56,
+    "planningIntegrity": "11 phases, 270 scenario families, 18 upstreams; not product approval",
+    "walletHttpBoundaries": "passed after final console restart"
+  },
+  "humanVerificationPreparation": {
+    "path": "evidence/HUMAN_VERIFICATION_PREPARATION.json",
+    "sha256": "25b47cc68c550255a54e840cdbe632b3e71a2be1ed96a2d1d0e18e29b5b49515"
+  }
+}

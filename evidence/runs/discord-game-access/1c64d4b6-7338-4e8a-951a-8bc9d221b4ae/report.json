@@ -1,0 +1,11 @@
+{
+  "status": "fail",
+  "scope": "Disclosed GateTester and MicrosoftTester native fixtures; offline local profile approval is not Microsoft identity or an independent human",
+  "checks": [],
+  "independentHumansVerified": 0,
+  "publicTransactions": 0,
+  "worldBlocksChanged": 0,
+  "itemGrants": 0,
+  "error": "GateTester spawn timeout",
+  "finishedAt": "2026-10-31T12:39:05.932Z"
+}

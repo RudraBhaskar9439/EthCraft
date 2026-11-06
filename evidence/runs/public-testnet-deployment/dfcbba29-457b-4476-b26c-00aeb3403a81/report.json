@@ -1,0 +1,200 @@
+{
+  "status": "pass",
+  "deployment": {
+    "chainId": 1301,
+    "environment": "PUBLIC_TESTNET_SYNTHETIC_ONLY",
+    "rpcUrl": "https://sepolia.unichain.org",
+    "genesisHash": "0xb7fe0bc9f98ca03294ca0094ff9374cc3e64130b6ec85850d6e260191f48bfe7",
+    "admin": "0xb46334D7786Cd6C288949E1D21642Df0D2395498",
+    "warehouse": "0xFFb08B95dFF49953d8c9f4e75e24993549A807F1",
+    "publisher": "0x5a262B9621eD0F00Fe776bb85084E9561cF18608",
+    "attestor": "0x62838D2A2a9C03F492317A61D528A1e544A5bc5d",
+    "requester": "0x93329116335F53bdb335223f6A95aB9355ff37b1",
+    "builder": "0x2091117cf9EC654bA48beb2Adf731d7099CaE77e",
+    "issuer": "0x0740369C70baDe71B3DF30243D9D00F8c3BEFA3A",
+    "creditToken": "0xb7f284315c88fed7e8bf3a0a1208fe8afc35abcd",
+    "kitCustody": "0xda2ec869cc3d95e75ef6b48edb34e965e0980dd5",
+    "stateRegistry": "0xf035f2570dc6cb85fbcc1449e1455e128043d5f5",
+    "poolManager": "0x9cB26A7183B2F4515945Dc52CB4195B0d2D06C95",
+    "hook": "0xAaf77897b884B593A9c2a085A411C6495119C080",
+    "procurement": "0xfd48750b087e441b9fabb3f19e828a4aa6d005c2",
+    "jobEscrow": "0x29a1b8f2408ba8fc7bef17d1d75f10a133328d01",
+    "positionManager": "0x12A98709BB5D0641D61458f85dcAFbE17AC2d05c",
+    "serverId": "0x59579c2e4afc825e918b444d42ce0ea96b1f4361a962d5d850c63e071d79fd58",
+    "bundleHash": "0x2dd1ccf5bbf53c26cd372608ebb14c153ec57f76067dbbf4de1a93eac7857dbb",
+    "poolKey": {
+      "currency0": "0xb7f284315c88fed7e8bf3a0a1208fe8afc35abcd",
+      "currency1": "0xda2ec869cc3d95e75ef6b48edb34e965e0980dd5",
+      "fee": 3000,
+      "tickSpacing": 60,
+      "hooks": "0xAaf77897b884B593A9c2a085A411C6495119C080"
+    },
+    "official": {
+      "PoolManager": {
+        "address": "0x9cB26A7183B2F4515945Dc52CB4195B0d2D06C95",
+        "codeHash": "0x2566e42d45723eef05d7253a7b7c140a6da61992594525fc66d06b4a973b5d0b",
+        "sourceRef": "77d52a7"
+      },
+      "PositionManager": {
+        "address": "0x12A98709BB5D0641D61458f85dcAFbE17AC2d05c",
+        "codeHash": "0xb2c86861af8fd6940106d15098ac04383d121b388044878a0d7d9117535f6885",
+        "sourceRef": "77d52a7"
+      },
+      "Permit2": {
+        "address": "0x000000000022D473030F116dDEE9F6B43aC78BA3",
+        "codeHash": "0x6df9d9804d74bce5ad57c8145936ec9cdb3d91a655da68b9b1b1c4ea8e001433",
+        "sourceRef": "permit2@1.0.0"
+      }
+    },
+    "scope": "Separate synthetic contract demonstration; no token effects in Minecraft",
+    "confirmations": 2
+  },
+  "operations": {
+    "fund-role-warehouse": {
+      "id": "9eb8cfad-3c57-495a-b4d4-029294d3fde8",
+      "hash": "0x580a7083348e7e80708566367edbdd776a2b65274a84641c63513520f8f1b636",
+      "blockNumber": "66491584",
+      "gasUsed": "21000"
+    },
+    "fund-role-publisher": {
+      "id": "c40351cd-f391-490a-94a5-eff2f3c33048",
+      "hash": "0x523b21778627d2472bf01e70c3f6c092b95c1f57013f93f2a97acf2e7c1d6fd2",
+      "blockNumber": "66491593",
+      "gasUsed": "21000"
+    },
+    "fund-role-attestor": {
+      "id": "12030a8c-84aa-4fa1-afe4-56b2541245e6",
+      "hash": "0x50168511164c0cdc619cb9e8b347c7b4c501555b89188027f2333e86a9b7b855",
+      "blockNumber": "66491601",
+      "gasUsed": "21000"
+    },
+    "fund-role-requester": {
+      "id": "72b1482e-11cb-4974-9226-f4f381ff8dab",
+      "hash": "0x2802576c1a6aa1b55674580956683f6761d864f4400810e31d4203c50855b305",
+      "blockNumber": "66491610",
+      "gasUsed": "21000"
+    },
+    "fund-role-builder": {
+      "id": "31123aba-2559-42ea-995c-6cad8cf1e5e0",
+      "hash": "0x35d35a8674cd09bbd7f647730e9da5ffedb0de0f9a64791f6130f8664dafd22a",
+      "blockNumber": "66491618",
+      "gasUsed": "21000"
+    },
+    "fund-role-issuer": {
+      "id": "7e77cd20-bddc-4858-a998-0ae1d5919964",
+      "hash": "0xf8dabc8164359fd499a17e59befcb5502608af8d033fbf192e49d8591f9d9d7d",
+      "blockNumber": "66491627",
+      "gasUsed": "21000"
+    },
+    "deploy-CreditToken": {
+      "id": "39729d45-54b6-4bc3-b4c8-8514b4400fab",
+      "hash": "0x1befa1c2961bcb2be1174b96c93e3e44d6eaae81472d091fa3080784e46d27cb",
+      "blockNumber": "66491636",
+      "gasUsed": "640198"
+    },
+    "deploy-KitCustody": {
+      "id": "c2c55d58-4dcc-4e76-8b86-263c8670c19b",
+      "hash": "0x8e1f05c96f47be380d54706e61104bc73ac77f25b4860cf39380a277b3b69e87",
+      "blockNumber": "66491645",
+      "gasUsed": "1250268"
+    },
+    "deploy-StateRegistry": {
+      "id": "83a984b1-fcd8-40e0-88b5-ae42ef931d8d",
+      "hash": "0x1266e34cd97355a115a4283e48a4cb84e99b526bd3d7db432a1cbfa6223894bb",
+      "blockNumber": "66491655",
+      "gasUsed": "272335"
+    },
+    "deploy-DemoHookFactory": {
+      "id": "b5daf0dd-c8be-451c-bb60-9554f37cf8f1",
+      "hash": "0x6346510caae1932d3648a2602d371bf8b9bd8835053b7a8774deb4ebbfc12b63",
+      "blockNumber": "66491664",
+      "gasUsed": "176566"
+    },
+    "deploy-hook": {
+      "id": "8eda4930-c76f-4406-a32e-818b1d673ce6",
+      "hash": "0x219c9a3190a33f698c5d2a2f68ef7569bad8510a2658f86aa40ca4d0d411603c",
+      "blockNumber": "66491674",
+      "gasUsed": "644407"
+    },
+    "initialize-pool": {
+      "id": "ed904f11-6ce4-4a74-ba2c-b3909dc57e01",
+      "hash": "0x90c7a94630be61d16d6c8f695ced2fe3962274935cd776ebfbbd9fe8ddc54e7f",
+      "blockNumber": "66491683",
+      "gasUsed": "51763"
+    },
+    "deploy-Procurement": {
+      "id": "2049a8a6-25ec-40f0-b68d-da8690e4aa0d",
+      "hash": "0x3632d5fdd07705b68eaf6eb0721224454c167f3383d33d51222e33ffcdd9bc8c",
+      "blockNumber": "66491693",
+      "gasUsed": "739627"
+    },
+    "deploy-JobEscrow": {
+      "id": "1658e496-a7d9-4d1e-b225-41462ebef5fa",
+      "hash": "0x4e74b71a812e99a725c8f93d38c65291ac3587de58ba45c0fd02ca71270a4f58",
+      "blockNumber": "66491704",
+      "gasUsed": "1978914"
+    },
+    "mint-admin-demo-credit": {
+      "id": "5b464bce-4e97-451d-93c1-83bf196b809e",
+      "hash": "0x0b62f70f94ca58085d0f9230e8c39fb2eefcc41dc2e44eed41e446c5c1ee948f",
+      "blockNumber": "66491712",
+      "gasUsed": "68188"
+    },
+    "mint-requester-demo-credit": {
+      "id": "7231e93e-57b7-43ef-a43c-94323fbbd686",
+      "hash": "0xb79aa0347cae75eaee24e0d360dfe02a75c870a31cb56087bb83e41258e8219f",
+      "blockNumber": "66491721",
+      "gasUsed": "51076"
+    },
+    "issue-synthetic-kits": {
+      "id": "5a06cd2e-7e12-4860-8ae1-4160c64fe0ac",
+      "hash": "0x7f639c44de6d602cb9444fa4cdd6667a81c9f17bbaf3a3977838b86c456baf43",
+      "blockNumber": "66491730",
+      "gasUsed": "247389"
+    },
+    "approve-permit2-0xb7f284315c88fed7e8bf3a0a1208fe8afc35abcd": {
+      "id": "68a7daaa-da11-4060-acaa-3cf0d18b38e0",
+      "hash": "0x9d0fc882b500ec3d5f19acc1429642ef108abb22764d9e213034f44e3f80ce7e",
+      "blockNumber": "66491739",
+      "gasUsed": "45909"
+    },
+    "approve-position-0xb7f284315c88fed7e8bf3a0a1208fe8afc35abcd": {
+      "id": "11dda52a-2d2b-47fc-8f49-afa89777d62f",
+      "hash": "0xdc327a88bda8fd918b06b6c48a7c9568444ce7684bf34c3c2cbfdafaf84ff703",
+      "blockNumber": "66491748",
+      "gasUsed": "47638"
+    },
+    "approve-permit2-0xda2ec869cc3d95e75ef6b48edb34e965e0980dd5": {
+      "id": "89d629ae-cb14-4661-bdff-e7aed9072b43",
+      "hash": "0x27c08e9d1f90ac0d5611e9c66869a3bb2e67bc8a9e8f807bd52f9296c5a539a1",
+      "blockNumber": "66491757",
+      "gasUsed": "45931"
+    },
+    "approve-position-0xda2ec869cc3d95e75ef6b48edb34e965e0980dd5": {
+      "id": "ebeea5de-a829-4d70-8d59-2a4cac4a2ec9",
+      "hash": "0x8cdd03c08399305723941d85a41187c35de6e486eb6548aea1f0a46ab8cb109e",
+      "blockNumber": "66491765",
+      "gasUsed": "47638"
+    },
+    "seed-position": {
+      "id": "8357c77c-fe95-47d1-8626-a8f1094105af",
+      "hash": "0x0a1a60892e9827f254ad422c8b6d4e5dbdbe81ca30690e619e89306432ed2b8a",
+      "blockNumber": "66491773",
+      "gasUsed": "452491"
+    },
+    "approve-requester-procurement": {
+      "id": "2bbc657e-7f20-4227-82c2-5c248a5f53b8",
+      "hash": "0xc8b228e9ac1e47ef63acc6b6644a8f205abb731fe51d3d7e5782f85d65fe8fff",
+      "blockNumber": "66491781",
+      "gasUsed": "45969"
+    },
+    "approve-requester-escrow": {
+      "id": "36414efd-0dc7-475d-9473-095163ef99aa",
+      "hash": "0x1d3eb59fa38d10dbabd46a404fdd5f4ed1e2c541046885292b4acb43637d46e1",
+      "blockNumber": "66491789",
+      "gasUsed": "45969"
+    }
+  },
+  "realMoneySpentUsd": 0,
+  "independentHumans": 0
+}

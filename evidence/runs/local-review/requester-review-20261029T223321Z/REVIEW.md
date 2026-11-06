@@ -1,0 +1,11 @@
+# Requester-side local review draft
+
+The focused local review is complete with no open finding in the reviewed scope. The expired-pass recovery finding is resolved: uncertain acceptance stays locked, a confirmed failed attempt can be reconciled without unlocking a usable pass, and an expired pass can then release. The three retained lock checks use actual PostgreSQL with an explicitly scripted outcome verifier. The combined flow separately records actual successful local EVM acceptance and one-time labor payment.
+
+The new local E2E report passes six component flows: identities and agreement funding, backed synthetic custody, a real local v4 exact-output swap, durable delivery, a scripted authorized builder decision, and inspection/acceptance/claim. Same-job recovery records zero new purchases and zero extra labor claimed on replay. Individual reports and exact source hashes are listed in review.json. This review inspected those reports; it did not rerun every suite.
+
+The ancestor dependency review compares 76 tracked game/runtime/fixture files with 5adbc827d000f24424678586142ac6ce369431c2 and verifies 50 retained evidence files against their recorded hashes. No difference or evidence mismatch was found. The bot stays in its unchanged CommonJS path with dependencies resolved from the unchanged compatibility package. New ESM dependencies, workflow modules and contract ABIs do not enter that runtime. Shared scope changes still require renewed review bindings after the final release commit.
+
+The earlier physical Minecraft result is retained exactly: 137 original placements plus seven continuation placements, followed by an inspection-only segment with zero new placements and a real protected 16/16 result at revision 144. This is reviewed reuse of historical physical evidence. No new physical P2 run was performed.
+
+Final release binding remains pending. The canonical live gates remain unproved: funded 0G, independent humans and authenticated game accounts, public Arkiv, platform suitability, chosen-chain funding/deployment, real requester approval, and physical custody/delivery linked to settlement. The current local economic world and stock are synthetic. No public-chain transaction, paid inference or user-wallet signing was performed by this review.

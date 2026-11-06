@@ -1,0 +1,19 @@
+{
+  "status": "fail",
+  "scope": "Interrupted disclosed TaskTester observer preflight; no native task or material transfer reached",
+  "release": "14632fc711434fa7cc5f0a4e8efdc916c5ac0378",
+  "observedFirstCheck": {
+    "name": "existing-owner-and-task-history-preflight",
+    "status": "pass",
+    "ruddyAgent": "CityAgent1",
+    "fixtureSlot": "free CityAgent2",
+    "retainedTasks": 6
+  },
+  "lastObservedServerCommands": [
+    "/play",
+    "/agent create"
+  ],
+  "result": "TaskTester bound CityAgent2. Observer chest navigation did not return; operator stopped the single exact matching fixture process before the second material/space preflight. No resource placement, withdrawal, model physical task, reset or replenishment was reached.",
+  "requiredCorrection": "Bound all observer navigation/chest/login waits and use the prepared corridor and north/west chest access strips.",
+  "finishedAt": "2026-10-31T10:49:30.393Z"
+}

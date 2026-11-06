@@ -1,0 +1,12 @@
+{
+  "status": "pass",
+  "isolatedDatabase": "agentcity_restore_3ddc50e093cf4009b01c82d78e4a2384",
+  "tablesVerified": 381,
+  "rowsVerified": 801,
+  "archiveSha256": "e554630e37607f3fd3e44b51ea515d2d221980dc5fa866034a92fa1634bbba84",
+  "liveDatabaseReplaced": false,
+  "scope": "actual pg_dump/pg_restore and every restored table fingerprint; no restored worker or chain/world rollback",
+  "publicTransactionsSubmitted": 0,
+  "offLaptopCopyVerified": false,
+  "fullMachineRebootVerified": false
+}

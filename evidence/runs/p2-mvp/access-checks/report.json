@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "scope": "Fixed construction glass manifest hash, bounds, collisions and duplicates; no physical build claim",
+  "checks": [
+    {
+      "command": "javac",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "java",
+      "exit_code": 0,
+      "output": "ConstructionAccessCheck PASS: 7 checks\n"
+    }
+  ],
+  "plugin_sha256": "367ebc80767b2d249517750fae6ac58801a9d2f102c81fde2c17cb79c8b80b49"
+}

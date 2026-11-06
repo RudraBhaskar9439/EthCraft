@@ -1,0 +1,385 @@
+{
+  "anchor": "5adbc827d000f24424678586142ac6ce369431c2",
+  "files": [
+    {
+      "path": "backend/src/bot/checkpoint-store.cjs",
+      "sha256": "bd857c0b57ca4533c5bde3eb643b99500c35c98fd107b6ce865014c4702654e4",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "backend/src/bot/construction-worker.cjs",
+      "sha256": "4effac5a0100bb9a6c51461b5790e7e0848294304fb6398e849e3f20f2790297",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "backend/src/bot/minecraft-adapter.cjs",
+      "sha256": "3bd86142c1679cd68a7755a7357bbc12313f18ffcfc30f07bf958d6cde32413a",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "config/p0-policy.json",
+      "sha256": "5ccc40514792b3e8079685716b5f616bfe58dad04151b74404bf79205c60e2aa",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "fixtures/blueprints/calculator-v1.json",
+      "sha256": "c8704765464a574ec4c797ad78d5294cc167007f66a0abfebd742e0b06711c49",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "fixtures/candidates/redstone-compiler/LICENSE",
+      "sha256": "61feb77f116e6e3a9a505863a9388749d3413df7ec0aef41927c7b9da7b0a083",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "fixtures/candidates/redstone-compiler/README.md",
+      "sha256": "90fee7c0eef727fca59ead49b2a54548650b68b66a86d9dcfdd516b354460a5a",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "fixtures/candidates/redstone-compiler/adder2-exact-2x14x10.nbt",
+      "sha256": "3afc99266a741d203c7c62a7ee7e773c1ff3ef510917b8454c3ad0dc16f7a483",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "fixtures/candidates/redstone-compiler/adder2-exact-2x14x10.outputs.json",
+      "sha256": "2bb2035da3dadc4fb9ef642d28c318d2274e89646d94298f79f58ece2229d21b",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "fixtures/candidates/redstone-compiler/adder2-exact-2x14x10.rcell",
+      "sha256": "33d84d213d308dc50d2978c2a4b8bead957e69d82cc88f9458eec1ab31a2ca67",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "fixtures/candidates/redstone-compiler/calculator-candidate-v1.json",
+      "sha256": "d14cc0956831efeb68df4b9aba588e946bbd3b546d6a2d37be02194378b1922b",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "fixtures/candidates/redstone-compiler/calculator-tests-candidate-v1.json",
+      "sha256": "8ec4afb0f561370cf74fc686a3683a01c6d0758fe6f0c15e33c8e1b5926e5897",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "fixtures/construction/access-v1.json",
+      "sha256": "8b08d81a1830d65a9bc404fd1443c95b4dcb94e6665da779d61acfe446d1d2c3",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "fixtures/policy/authority.json",
+      "sha256": "0d9be53f124480de53f77ee6e84eb4cb7cff303bea8081d5b4cbba33421b786d",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "fixtures/policy/transitions.json",
+      "sha256": "2497603144aa1de01021386664698743b47fbe7b648e9df69f4a8b3874775a81",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "fixtures/test-manifests/calculator-v1.json",
+      "sha256": "cfb5986bf2f5bfea89075ffee8e38eb1652f3fad15503935d1f134a776d309cf",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "planning/upstreams.json",
+      "sha256": "473584224ebf19aa058c8062d5c9006979754c64cc4aaabefb102294865d46ba",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "plugin/src/main/java/org/agentcity/core/Command.java",
+      "sha256": "d3163d022003ba9910be1b637ea5af42931ba6906a9934fbd7342354d40d2bd6",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "plugin/src/main/java/org/agentcity/core/DurableJournal.java",
+      "sha256": "ba72304c0ff74da6c62f55413a2c02eb642b61154297d16361982e9eedbba311",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "plugin/src/main/java/org/agentcity/core/InspectionReport.java",
+      "sha256": "430d4460c193191ef2c24c551f7c50b0739ba097b9e0fe8e3072335085e22a92",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "plugin/src/main/java/org/agentcity/core/JobEngine.java",
+      "sha256": "973eb4dabfba976d5370b506ff7d498d59c61ca9fc41c2790ce031150672cbde",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "plugin/src/main/java/org/agentcity/paper/AgentCityPlugin.java",
+      "sha256": "1a7f4b51af67b78aac0bea58cf64a7f1459fbf44278b93d54ecfd89430f490a6",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "plugin/src/main/java/org/agentcity/paper/CalculatorInspector.java",
+      "sha256": "9bb59c890234247c1acbc7b032a5346385c62105e85eebf6e1ba875e895dee56",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "plugin/src/main/java/org/agentcity/paper/ConstructionAccessPlan.java",
+      "sha256": "d426dfc8aef8c0af81f3f0a1b1e298ff56039f9b3d32cd56b64213bbd98e84ef",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "plugin/src/main/java/org/agentcity/paper/NativeLever.java",
+      "sha256": "9d26227261cd1f0e1b959d249fc3334ffa0ebce770d0ba5a1b9919515ba2a2a0",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "plugin/src/main/java/org/agentcity/paper/PlotProtection.java",
+      "sha256": "df08585916684efc6d0f9762bd60984e6c78571e84d9f09451356395a22228db",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "plugin/src/main/java/org/agentcity/paper/StrictJson.java",
+      "sha256": "581cd27a7fb4f31165400e29dc9127af4b54692d37749947b48880f0ffe47ad8",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "plugin/src/main/java/org/agentcity/paper/WorldProjection.java",
+      "sha256": "43e17a086da02ae7f07e806c25e91debe331c27f79890e024e586fb4453c2a19",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "plugin/src/main/resources/META-INF/MANIFEST.MF",
+      "sha256": "d05e74fefa839172bf1ace743da687d2a2a7ba0c862a4a5b349aa50ac77a6a0a",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "plugin/src/main/resources/plugin.yml",
+      "sha256": "33d9fc2c72d120facdc85ef635979a25cb1a73c8eee54aed1e44a86e2c803afc",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/bot/adapter-self-check.cjs",
+      "sha256": "2ac84bb59ddaab0671bd8e0a189b4fd1fc13418cebbedd794edb0343dae5c638",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/bot/worker-self-check.cjs",
+      "sha256": "cc130c28fdb5f0d535825a5068f2bf8ea136161d636a3d5e1ddba5d0b6e81704",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/compatibility/README.md",
+      "sha256": "1ec72d51bd80f42f868745ea3e4eef285baadf943ffc04bf38c0e37ce9658a69",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/compatibility/package-lock.json",
+      "sha256": "644d0168c7bd3d406eeb489e55469fdf2f0e70fe40debcdbe18c9f0b1a1fa915",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/compatibility/package.json",
+      "sha256": "f495f1b08d7579a45ee9ae7ec7758cdebfc6cb4fc5ed10928c01f42cdcb0dfbd",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/compatibility/plugin/CompatibilityPlugin.java",
+      "sha256": "d5f1c5e5598cd6b39bf456cd0fe7ccba63836c7135e68d8c0bc15ded423cce7e",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/compatibility/plugin/plugin.yml",
+      "sha256": "7442cd56b0615fe88610db2e1d5afe1624cd9d97e31e5bd9d34dc9b61cdf9701",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/compatibility/probe.cjs",
+      "sha256": "269a4480b58e10a019c658cf5969c55bf0a5f5230c092a996e2d8f3d0ee24ff1",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/compatibility/run.py",
+      "sha256": "9854d303a4158b268fd6c54d630927195705693af06c2268a0a970fd6f403889",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/compatibility/versions.json",
+      "sha256": "f9ee9617748df8545cadd5469d383b11f68ec43af6c9181d4259fcd1bb913502",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/construction/ConstructionAccessCheck.java",
+      "sha256": "c7423c7f7963d61f494c1fbba0a49b12df7a770a5028eb39577d7d16f548cd16",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/construction/continue.py",
+      "sha256": "dea970026025ce9a72882cb42d0ef6a9631199b314ed683a24b93ba96e1b614b",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/construction/fixture/ConstructionFixture.java",
+      "sha256": "7abfd2fc40d0f5353ffed8d743ef9883c53889b0da406f74cfba068de7d5a515",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/construction/fixture/plugin.yml",
+      "sha256": "da60368d7c6b1050938f005b0479e1d6c6e35af1f74a8990a82493524b2e3dcb",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/construction/probe.cjs",
+      "sha256": "8a065668cf408af44d5f5356bddc343aa0d518dbe74a237c98109d0fe3b6bc84",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/construction/run.py",
+      "sha256": "55524249af3f01334a901ca364b825cbecbd1e5b170ccdd1753670a04dc0bfee",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/inspection/build.py",
+      "sha256": "40404f386ba70204b089ffb63485abffdd428e43aa46798b15542751290574d7",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/inspection/core/CoreCoverageCheck.java",
+      "sha256": "d575220c6756b9a40469add390dc2dffe5fbd6f53228a322fdbf6ad65dee4af5",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/inspection/core/CoreSelfCheck.java",
+      "sha256": "8f1c712b495d89edef6c7849e8a8565bb990b60b33f87b50ced6b00c7a6bf128",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/inspection/core/coverage-mapping.json",
+      "sha256": "8a72da0f9bff13563e840aed1036fb29acca5f5f960151ec55da285ced2e8e14",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/inspection/core/coverage-results.json",
+      "sha256": "675b22cee2dcb40ce0e47b6d3def3fcd74d41b7be01c6c0b188e2b927bd822f3",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/inspection/core/paper-integration-review.json",
+      "sha256": "8aa860f933a933984341e556c218d38a3dea7be55277dc170ed5233e7a86931e",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/inspection/core/run_coverage.py",
+      "sha256": "936fbff02cce56edff1f9aa8e0c371532ecefea18b0c1799a67698838cea6950",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/inspection/coverage.json",
+      "sha256": "024dfff0a05b9b62996016b6871026e5355e67f67933ba17260e2c57855afe78",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/inspection/faults/Recovery.java.inc",
+      "sha256": "47f79f29c677eb638418b3dba7693bdaafa1cfd638909ecb63a0ad7920114e51",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/inspection/faults/SealedFaults.java.inc",
+      "sha256": "f3155b0ff59631fb155157f10d3fa6b23397fc66b91721dc75d29cbc5ffb2d33",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/inspection/faults/augment.py",
+      "sha256": "ad13a64bbfb48157496157d09fda76d3562da466ee0422329b4a59dfde5b50d2",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/inspection/faults/probe.cjs",
+      "sha256": "33dbd6502e0935d1f39bfa78a2b2ebfd283cf1882248d10348f359f5dba7c754",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/inspection/faults/recovery.cjs",
+      "sha256": "769472226e06785a4218b84f98cb2dd5113f30fe20f3ba078d394deab571813f",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/inspection/faults/run.py",
+      "sha256": "2f5e0683037c3c3607019b8ee122f64030f937175f2a470cfdb1cf7e5c483116",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/inspection/fixture/WorldFixture.java",
+      "sha256": "ff8325a1a8b02906f7d9dbb7d5f32f669b2b8908857f3cf26d0b1a9c98e2c9fd",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/inspection/fixture/plugin.yml",
+      "sha256": "dd2faba16a40ac78dec5cfe98ee6b2a5a292606330a9b9a9936e93baa7659c3e",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/inspection/paper/InspectorMappingCheck.java",
+      "sha256": "6c00654e5964c2c18636424028a80efacd9314fc76f8c293346e7e77005ad520",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/inspection/paper/StrictJsonCheck.java",
+      "sha256": "84630b3159fc24dcee4c1667391ba5e2b4396f7a5950093a937d4e4d10b7b96e",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/inspection/probe.cjs",
+      "sha256": "71de6e8c61936192611be262665de244b9b1318939059a82c0111956d9f088b7",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/inspection/regressions.json",
+      "sha256": "d351d67964660921b7f13747a77d93b43ab0ba58537f7474a72b26b82645ec12",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/inspection/run.py",
+      "sha256": "14fddfe73a8c770641ac8bfe640e87ebec38348645b15aa640b06c32498c9fc3",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/inspection/run_checks.py",
+      "sha256": "8fe2954a961f1171525cc2908a72a2941b80583907beb0aa600f056f3b1138b4",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/world/README.md",
+      "sha256": "55b58bc110d07e50c4b36fd1687b11932ad475ab8de65eae921a713ce1e93a97",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/world/__init__.py",
+      "sha256": "af2e668dacd94475a2ba88abec638234325e19a26e3bde034d507ef2d63a72c7",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/world/coverage-mapping.json",
+      "sha256": "17f2a7187450a918e94936871c510b678ea6843665eeacd017b9311bf5c24c8b",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/world/observe.cjs",
+      "sha256": "a5897d40cf913934fbd423628918460be356a808e4155898762a227451792bf6",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/world/plugin/CandidatePlugin.java",
+      "sha256": "cf44ca889edb2378ea2bae280f08b05fff03813c3156ea05ef9c6caba367c370",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/world/plugin/plugin.yml",
+      "sha256": "d20d196039ab5e03e13c4a22e593d529c7255b5ad476504408cd85bd60f7a26c",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/world/run_candidate.py",
+      "sha256": "479c19c81ee870f66f2449d52d4f40e4afe2752a6704aebdc26713169a41fe91",
+      "unchangedFromAnchor": true
+    },
+    {
+      "path": "tests/world/test_plan.py",
+      "sha256": "db0822412159d051663d9d04f65266de82e23f9059ca0db6145e411f7f97e284",
+      "unchangedFromAnchor": true
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "agentcity.p1.candidate-run.v1",
+  "status": "fail",
+  "name": "agentcity-p1-fa7fcccc",
+  "started_at": "2026-10-29T14:11:42.757271+00:00",
+  "manifest_sha256": "1657683ab2a73373a1d510c3382138d7348cb84a3d6acd148157c6e6c80a3725",
+  "sources": {
+    "fixtures/candidates/redstone-compiler/calculator-candidate-v1.json": "d14cc0956831efeb68df4b9aba588e946bbd3b546d6a2d37be02194378b1922b",
+    "fixtures/candidates/redstone-compiler/calculator-tests-candidate-v1.json": "8ec4afb0f561370cf74fc686a3683a01c6d0758fe6f0c15e33c8e1b5926e5897",
+    "tests/world/plugin/CandidatePlugin.java": "0d71c4e87f4cc5c918370c91107620dc5a7cf28c4f333f018e50559f7c6325e3",
+    "tests/world/plugin/plugin.yml": "d20d196039ab5e03e13c4a22e593d529c7255b5ad476504408cd85bd60f7a26c",
+    "tests/world/observe.cjs": "d97e6295e3ad5665c82575eac7ea8fe2de461aff71948c9ef690397a0eff0987",
+    "tests/world/run_candidate.py": "699912b8f19f77e6879b894d86dec89c9f964282737c0c584611cf0f96b3f48b",
+    "tests/compatibility/versions.json": "f9ee9617748df8545cadd5469d383b11f68ec43af6c9181d4259fcd1bb913502"
+  },
+  "runtime_lock": {
+    "purpose": "isolated_non_token_fixture",
+    "bind": "127.0.0.1",
+    "port": 25576,
+    "minecraft": "1.21.11",
+    "paper": {
+      "build": 132,
+      "support": "UNSUPPORTED",
+      "support_ended": "2026-06-15",
+      "sha256": "5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba",
+      "url": "https://fill-data.papermc.io/v1/objects/5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba/paper-1.21.11-132.jar"
+    },
+    "java_image": "eclipse-temurin@sha256:5d90b26c0784ccf55af55f97cbcf7f3969c66a06299c93bdc72649219942a48f",
+    "mineflayer": "4.39.0",
+    "pathfinder": "2.4.5",
+    "authentication": "offline_fixture_only",
+    "independent_human_participants": 0,
+    "token_integration": false,
+    "production_supported": false
+  },
+  "loopback_port": 25579,
+  "independent_humans": 0,
+  "full_phase_gate_passed": false,
+  "plugin_sha256": "74ef24d566dfa625bfd7bc993abdb8e9ebfba116ba6e8316a02055cc784d5be7",
+  "error": "node failed (1): {\"suite\":\"transitions-from-0-0\",\"case\":0,\"a\":0,\"b\":0,\"expected\":0,\"actual\":0,\"passed\":true}\n{\"suite\":\"transitions-from-0-0\",\"case\":1,\"a\":0,\"b\":1,\"expected\":1,\"actual\":1,\"passed\":true}\n{\"suite\":\"transitions-from-0-0\",\"case\":2,\"a\":0,\"b\":2,\"expected\":2,\"actual\":2,\"passed\":true}\n{\"suite\":\"transitions-from-0-0\",\"case\":3,\"a\":0,\"b\":3,\"expected\":3,\"actual\":3,\"passed\":true}\n{\"suite\":\"transitions-from-0-0\",\"case\":4,\"a\":1,\"b\":0,\"expected\":1,\"actual\":1,\"passed\":true}\n{\"suite\":\"transitions-from-0-0\",\"case\":5,\"a\":1,\"b\":1,\"expected\":2,\"actual\":2,\"passed\":true}\n{\"suite\":\"transitions-from-0-0\",\"case\":6,\"a\":1,\"b\":2,\"expected\":3,\"actual\":3,\"passed\":true}\n{\"suite\":\"transitions-from-0-0\",\"case\":7,\"a\":1,\"b\":3,\"expected\":4,\"actual\":4,\"passed\":true}\n{\"suite\":\"transitions-from-0-0\",\"case\":8,\"a\":2,\"b\":0,\"expected\":2,\"actual\":2,\"passed\":true}\n{\"suite\":\"transitions-from-0-0\",\"case\":9,\"a\":2,\"b\":1,\"expected\":3,\"actual\":3,\"passed\":true}\n{\"suite\":\"transitions-from-0-0\",\"case\":10,\"a\":2,\"b\":2,\"expected\":4,\"actual\":4,\"passed\":true}\n{\"suite\":\"transitions-from-0-0\",\"case\":11,\"a\":2,\"b\":3,\"expected\":5,\"actual\":5,\"passed\":true}\n{\"suite\":\"transitions-from-0-0\",\"case\":12,\"a\":3,\"b\":0,\"expected\":3,\"actual\":3,\"passed\":true}\n{\"status\":\"fail\",\"cases\":13,\"error\":\"Error: Observer kicked: {\\\"type\\\":\\\"string\\\",\\\"value\\\":\\\"Server closed\\\"}\\n    at EventEmitter.<anonymous> (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/world/observe.cjs:57:51)\\n    at EventEmitter.emit (node:events:509:20)\\n    at Client.<anonymous> (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/mineflayer/lib/plugins/kick.js:5:9)\\n    at Client.emit (node:events:509:20)\\n    at emitPacket (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/minecraft-protocol/src/client.js:85:12)\\n    at FullPacketParser.<anonymous> (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/minecraft-protocol/src/client.js:114:9)\\n    at FullPacketParser.emit (node:events:509:20)\\n    at addChunk (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/readable-stream/lib/internal/streams/readable.js:323:12)\\n    at readableAddChunk (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/readable-stream/lib/internal/streams/readable.js:300:9)\\n    at Readable.push (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/readable-stream/lib/internal/streams/readable.js:246:10)\"}\n",
+  "finished_at": "2026-10-29T14:13:22.619870+00:00"
+}

@@ -1,0 +1,162 @@
+{
+  "schema": "agentcity.mumbai-city-native-check.v1",
+  "runId": "bcf164cc-c4a3-432c-893c-3aa3e48b2cce",
+  "status": "fail",
+  "isolatedId": "f8f77500f7cb485d9d5e5c30b479b645",
+  "executedTestSha256": "74018bf5d83be13abc8b9e788ce436479c91fd7ce186d76f73956998fc952fae",
+  "eventParserSourceSha256": "e21ce4291a25d5a0e67495ab34e7769bef62a6474e0a9d646aad4e5eebd735d4",
+  "pluginSha256": "be9280ddc4ae3f0db55231970c066e9dc69d103633a5a05c888014652bc97d92",
+  "serverId": "laptop-bank-1ce53d39d114410b90f72599ebae8b07",
+  "scope": "Actual isolated Paper and disclosed offline controlled native clients; no real user or independent-human qualification",
+  "publicTransactions": 0,
+  "walletSignatures": 0,
+  "paidModelCalls": 0,
+  "checks": [
+    {
+      "name": "Installed v1 bank migrated through bound intent/ready journal with archived marker and preserved world UUID",
+      "status": "pass",
+      "previousMarkerSha256": "91b32b2b7bb46f8bac67529745c3215ecd76618f418056cccbbba85982b4fe06",
+      "previousBlueprintSha256": "155deeb4fdb983a76e648570d8be5377ca9897a4748954952968f694ad15915a",
+      "blueprintSha256": "afcf848e9cc3d6a3b5c439702e703b04586197689ef2498cb0f5bff2995a1ab9",
+      "phase": "ready",
+      "worldUuid": "be915875-64ec-4498-ae2a-1a6800dd1e53"
+    },
+    {
+      "name": "Actual Paper parses the template block states; seven world identities, economic namespace and three legacy task regions are preserved with separate new Mumbai slots",
+      "status": "pass",
+      "nativeValidatedBlockStates": 22
+    },
+    {
+      "name": "Unapproved visitor remains frozen in the Mumbai arrival gate without an agent request or inventory change",
+      "status": "pass"
+    },
+    {
+      "name": "Approved visitor defaults to UniRock on a solid floor right of the agent concierge pads; existing items survive and one tagged shop compass is present",
+      "status": "pass",
+      "arrival": {
+        "z": 2808.5,
+        "x": 1698.5,
+        "y": 69,
+        "world": "agentcity_mumbai"
+      },
+      "buttonAddedThisRun": true
+    },
+    {
+      "name": "Both new native agent clients idle in Survival at the safe Mumbai bank pads; no model call or inventory effect occurs",
+      "status": "pass"
+    },
+    {
+      "name": "Each task lock teleports only its named new agent to its assigned Mumbai work area and unlock returns it to the bank without items or block effects",
+      "status": "pass"
+    },
+    {
+      "name": "An approved visitor without child-agent ownership cannot open another agent source chest or take its demo stock",
+      "status": "pass"
+    },
+    {
+      "name": "UniRock has its actual quartz and gold facade and five distinct seated professional NPCs; each real service menu opens without taking menu items",
+      "status": "pass",
+      "roles": [
+        "Guide",
+        "Agent Desk",
+        "Job Board",
+        "Wallet & Market",
+        "Play"
+      ],
+      "professions": [
+        9,
+        13,
+        3,
+        4,
+        1
+      ],
+      "seated": 5
+    }
+  ],
+  "messages": [],
+  "fixtureShopResponses": true,
+  "bankMigration": {
+    "previousMarkerSha256": "91b32b2b7bb46f8bac67529745c3215ecd76618f418056cccbbba85982b4fe06",
+    "previousBlueprintSha256": "155deeb4fdb983a76e648570d8be5377ca9897a4748954952968f694ad15915a",
+    "blueprintSha256": "afcf848e9cc3d6a3b5c439702e703b04586197689ef2498cb0f5bff2995a1ab9",
+    "phase": "ready",
+    "worldUuid": "be915875-64ec-4498-ae2a-1a6800dd1e53"
+  },
+  "arrivalDiagnostic": {
+    "native": {
+      "z": 2808.5,
+      "x": 1698.5,
+      "y": 69,
+      "world": "agentcity_mumbai"
+    },
+    "client": {
+      "x": 1698.5,
+      "y": 69,
+      "z": 2808.5
+    },
+    "floor": {
+      "name": "smooth_quartz",
+      "boundingBox": "block",
+      "position": {
+        "x": 1698,
+        "y": 68,
+        "z": 2808
+      }
+    }
+  },
+  "lastNavigation": {
+    "status": "success",
+    "pathLength": 11,
+    "cost": 11,
+    "position": {
+      "x": 1702.0369086066735,
+      "y": 69,
+      "z": 2845.499815086842
+    }
+  },
+  "shopWireActions": [
+    {
+      "action": "catalog",
+      "operationId": "5e556056-8b06-4c1a-91b4-c986452f0956"
+    },
+    {
+      "action": "quote",
+      "operationId": "2aca8a59-59bc-4d6b-b69a-13468dabaa13"
+    },
+    {
+      "action": "quote",
+      "operationId": "93f33cd0-1572-4920-b6c3-62d6d19fafb9"
+    },
+    {
+      "action": "quote",
+      "operationId": "838a32a7-59a3-4743-a321-573024b27a70"
+    },
+    {
+      "action": "checkout",
+      "operationId": "4ac1d5dc-707c-4620-bfa2-4069b91d973d"
+    },
+    {
+      "action": "quote",
+      "operationId": "81b96eea-cb9e-4ad2-8c86-6de3acb0176e"
+    },
+    {
+      "action": "checkout",
+      "operationId": "27077e9d-909a-480a-ace4-ae063f745b1a"
+    }
+  ],
+  "error": "Unexpected window title: expected Checking Your Order, received {\"type\":\"string\",\"value\":\"UniRock | Please Try Again\"}",
+  "finishedAt": "2026-11-06T04:52:22.370Z",
+  "sources": {
+    "plugin/src/main/java/org/agentcity/paper/UniRockBank.java": "0a7ee8ffe8b049d0b7c27f5cd8504a8facd8c9aa8d4c9eba8c4d54e4c92e4d79",
+    "plugin/src/main/java/org/agentcity/paper/MumbaiWorld.java": "377eafd37a9795f0141530a53cc249e3cab20829f6ac43bc6501bcdff7f63d62",
+    "plugin/src/main/java/org/agentcity/paper/PlayableExperience.java": "61d58ca0a4be83eff7d42547808bf2046dc674553371276591b18e21f20f11e1",
+    "plugin/src/main/java/org/agentcity/paper/InventoryMarketplace.java": "00d0329bb3743550e9838a8be66eb281ba1266d470892794d88646ae09f60dcd",
+    "plugin/src/main/java/org/agentcity/paper/AgentTaskProtection.java": "53645a90e14a86bbd0472bb4b940b74422f7476a500046814a3ed1be2f7336b5",
+    "plugin/src/main/java/org/agentcity/paper/InventoryEscrow.java": "a495aecbfc29e1c9f88c12dfd6590415c4ff3d0b363becb2b87eecda7959d41e",
+    "backend/src/playable/inventory-shop-runtime.mjs": "e21ce4291a25d5a0e67495ab34e7769bef62a6474e0a9d646aad4e5eebd735d4",
+    "scripts/laptop_host.py": "50a8e731c58e916a79ebb14ac693e5288ccccb3b8d39614827061986d3563b1b",
+    "scripts/mumbai_city_host.py": "abf6ad65481c2b1e981ab67792a8b422f078e9509c4ed8fa1f4e302124c09f52",
+    "tests/test_mumbai_city_host.py": "f18fdc58c0f1333117312f2e66b9f676fd7922e0d02d0675667865bc224aceaf",
+    "tests/maps/mumbai-city-visit.mjs": "74018bf5d83be13abc8b9e788ce436479c91fd7ce186d76f73956998fc952fae"
+  }
+}

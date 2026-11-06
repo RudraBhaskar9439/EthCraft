@@ -1,0 +1,9 @@
+{
+  "status": "fail",
+  "scope": "Actual isolated restored Minecraft world; internal materials only",
+  "checks": [],
+  "error": {
+    "type": "AssertionError",
+    "message": "Expected values to be strictly equal:\n\nundefined !== 144\n"
+  }
+}

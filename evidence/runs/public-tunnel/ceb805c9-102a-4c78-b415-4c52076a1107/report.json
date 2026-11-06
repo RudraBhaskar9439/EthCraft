@@ -1,0 +1,20 @@
+{
+  "status": "pass",
+  "scope": "Actual public Cloudflare HTTPS only; no human OAuth, provider wallet creation or Minecraft login",
+  "origin": "https://assessing-catalogs-acute-oasis.trycloudflare.com",
+  "checks": [
+    {
+      "name": "actual-HTTPS-serves-current-compiled-signin-and-preserves-callback-query-and-public-origin",
+      "status": "pass"
+    },
+    {
+      "name": "operator-index-financial-demo-and-native-control-routes-unavailable-through-public-tunnel",
+      "status": "pass"
+    },
+    {
+      "name": "foreign-origin-wallet-call-refused-without-identity-or-wallet-effects",
+      "status": "pass"
+    }
+  ],
+  "publicBundleSha256": "4a2284dfb6facb1bd457dbeac9b56e4dcf8da06ea6478eab42e2542545709868"
+}

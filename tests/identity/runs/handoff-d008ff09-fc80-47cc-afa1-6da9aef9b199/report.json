@@ -1,0 +1,24 @@
+{
+  "status": "pass",
+  "checks": [
+    "immutable prepared request pins deployed contracts, chain, exact amounts and scoped access",
+    "provider account/network changes, declined consent and arbitrary schemas cannot submit approval",
+    "server verifies exact signer and domain, delegates to agreement service and retains one approval across retries",
+    "two fixture-wallet approvals produce the canonical approved agreement without funding or sending a transaction",
+    "existing identity service verifies and consumes a session-bound fixture wallet challenge once",
+    "expired handoffs and changed escrow context cannot authorize terms or create approval"
+  ],
+  "scope": "Actual isolated PostgreSQL with local fixture signatures and a scripted EIP-1193 provider; no public RPC call, transaction, human approval or Brave signing performed.",
+  "independentHumanVerified": false,
+  "realWalletApprovalPending": true,
+  "transactionsSubmitted": 0,
+  "realMoneySpent": 0,
+  "finishedAt": "2026-10-30T08:18:40.238Z",
+  "sources": {
+    "backend/src/identity/handoff.mjs": "27d7d25ea3cc6cdbab6de81be4aea47185604ad4a0754d92e33c6f13379b0054",
+    "backend/src/web/wallet.mjs": "1ee18226c8860568ff2cc43a8e98d904e11c3127940b143cd54fa4794f93bc3d",
+    "tests/identity/handoff.mjs": "eb9d2571d6e23c0076079bd471acf6058e22f1c7c4cc11f08a38100978e499ce",
+    "backend/src/identity/service.mjs": "6257e8c9618d9bac4ede1a3f2c39beb5c0b2394286f80ad1ba7b6ece183b08db",
+    "backend/src/agreements/service.mjs": "5ced57d1715d6a17633a60bab31bd39f26a09b66e2860c43f5be757b6ec92a0e"
+  }
+}

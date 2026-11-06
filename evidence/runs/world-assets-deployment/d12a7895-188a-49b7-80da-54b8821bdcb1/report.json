@@ -1,0 +1,195 @@
+{
+  "status": "pass",
+  "scope": "Actual faucet-funded Unichain Sepolia asset contracts and a new official v4 hooked pool with seeded developer fixture liquidity; no player asset registration or native ownership activation",
+  "manifest": {
+    "schema": "agentcity.world-assets.v1",
+    "environment": "UNICHAIN_SEPOLIA_WORLD_ASSETS",
+    "chainId": 1301,
+    "rpcUrl": "https://sepolia.unichain.org",
+    "genesisHash": "0xb7fe0bc9f98ca03294ca0094ff9374cc3e64130b6ec85850d6e260191f48bfe7",
+    "deploymentId": "0x4f8c1d547fa50f97587e5ea629816be74dbe8e82e0c039323feeb37fc0fac8ce",
+    "serverId": "0xf59ef3fecd7a340e4b9a54c25e69dfa06e29cf88963d54bc806ee6882b0d8010",
+    "registry": "0x8cf4192b9846990f5fef4576d5b0a76f520023a8",
+    "market": "0x98bb35196507528a3855e4980d4e845a970ed289",
+    "city": "0x789dab2f22f0161401523ebe858ce88a3b14fae8",
+    "codeHashes": {
+      "registry": "0x9825094905f226df9f11f142b1f876b56adc56de6215fba350c05d34fb57cc9a",
+      "market": "0xd13ac22d2aa21ba155a71e5302e86cec771c914e6e8b03d9280ed42f390d2780",
+      "city": "0xf9eebf13f96d7b246e30cadd39bbfcf908086d15fdb328ac522e52fa71fb2821"
+    },
+    "confirmations": 2,
+    "maxPriceBaseUnits": "100000000000000000000",
+    "maxGas": "1000000",
+    "maxNativeCostWei": "2000000000000000",
+    "paymentManifest": {
+      "schema": "agentcity.playable-market.v2",
+      "environment": "UNICHAIN_SEPOLIA_PLAYABLE",
+      "chainId": 1301,
+      "rpcUrl": "https://sepolia.unichain.org",
+      "genesisHash": "0xb7fe0bc9f98ca03294ca0094ff9374cc3e64130b6ec85850d6e260191f48bfe7",
+      "poolManager": "0x9cb26a7183b2f4515945dc52cb4195b0d2d06c95",
+      "quoter": "0xb2b34025a07af3925313b6b46f8046ee8ffba30b",
+      "router": "0x3378ee4a7930797865370140ce24517651e37069",
+      "tokens": {
+        "CITY": {
+          "address": "0x789dab2f22f0161401523ebe858ce88a3b14fae8",
+          "decimals": 18
+        },
+        "GEM": {
+          "address": "0x83ea7c33c6787e80ad6a0a78c66eb36ee355344d",
+          "decimals": 18
+        }
+      },
+      "poolKey": {
+        "currency0": "0x789dab2f22f0161401523ebe858ce88a3b14fae8",
+        "currency1": "0x83ea7c33c6787e80ad6a0a78c66eb36ee355344d",
+        "fee": 3000,
+        "tickSpacing": 60,
+        "hooks": "0x3c98B8B484a303DeCC9321ee0e944742dFDbC080"
+      },
+      "codeHashes": {
+        "poolManager": "0x2566e42d45723eef05d7253a7b7c140a6da61992594525fc66d06b4a973b5d0b",
+        "quoter": "0x7fd1ee3f8e9172cb587fd1c8a190271615ca7e5d4c874ee3f4bd46ceb8c334da",
+        "router": "0x566322aa3736236510b4c9ee98d93326e1fa0a7f71ae83c58dbe34132d3ee0cf",
+        "CITY": "0xf9eebf13f96d7b246e30cadd39bbfcf908086d15fdb328ac522e52fa71fb2821",
+        "GEM": "0xf9eebf13f96d7b246e30cadd39bbfcf908086d15fdb328ac522e52fa71fb2821",
+        "hook": "0x732d5e04001b65d1e4d6a1641c0219678f5fe7cb89824cfcee482cd3e6739fe4",
+        "stateRegistry": "0x3228cb288284b1e2c6713824548222ee73edab6ef986993b366ac263d1069998"
+      },
+      "maxInputBaseUnits": "100000000000000000000",
+      "maxNativeCostWei": "2000000000000000",
+      "official": {
+        "PoolManager": {
+          "address": "0x9cb26a7183b2f4515945dc52cb4195b0d2d06c95",
+          "codeHash": "0x2566e42d45723eef05d7253a7b7c140a6da61992594525fc66d06b4a973b5d0b",
+          "sourceRef": "77d52a7"
+        },
+        "PositionManager": {
+          "address": "0x12a98709bb5d0641d61458f85dcafbe17ac2d05c",
+          "codeHash": "0xb2c86861af8fd6940106d15098ac04383d121b388044878a0d7d9117535f6885",
+          "sourceRef": "77d52a7"
+        },
+        "Permit2": {
+          "address": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+          "codeHash": "0x6df9d9804d74bce5ad57c8145936ec9cdb3d91a655da68b9b1b1c4ea8e001433",
+          "sourceRef": "permit2@1.0.0"
+        },
+        "V4Quoter": {
+          "address": "0xb2b34025a07af3925313b6b46f8046ee8ffba30b",
+          "codeHash": "0x7fd1ee3f8e9172cb587fd1c8a190271615ca7e5d4c874ee3f4bd46ceb8c334da",
+          "sourceRef": "77d52a7"
+        }
+      },
+      "sourceHashes": {
+        "contracts/src/PlayableMarketToken.sol": "264f6f933e1e2b376708e53d37723d436893bbb34199d75e304e5e706ac74ddd",
+        "contracts/src/PlayableMarketRouter.sol": "ce5ce6247d197fc58ecaac63f93b1ed166a0322a0860e107f01ad29102947c38",
+        "contracts/package-lock.json": "80312c2b2b961d9094131a38097f043c67d14731a186ba7d91894cea527ebb8c",
+        "contracts/out/PlayableMarketToken.sol/PlayableMarketToken.json": "b0af40b2f2250b1623a539ab0cadd4d4913c5c0288bcbaf51840a10f3561e7f6",
+        "contracts/out/PlayableMarketRouter.sol/PlayableMarketRouter.json": "97235a8d273cc337a6cd6f3ae64863d7e049b9598f0fe3dd0a6f8eac698661be"
+      },
+      "developer": "0x5cAEC1fD260Ad8bB747A3984752D7943BcDc4A54",
+      "issuer": "0x38A0E8e276c9D4EeB8dE2bB2f438a0814fD54448",
+      "positionManager": "0x12a98709bb5d0641d61458f85dcafbe17ac2d05c",
+      "permit2": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+      "gameCoinsBacked": false,
+      "minecraftInventoryBacked": false,
+      "confirmations": 2,
+      "deploymentRunId": "a8248484-c129-4325-b593-159a9d713506",
+      "maxGas": 1000000,
+      "hook": "0x3c98b8b484a303decc9321ee0e944742dfdbc080",
+      "stateRegistry": "0x5db0cf0721c4b2f98de3f079d13a956dc922a3e4",
+      "marketId": "0x1be02d3ca5e2c5aabfa7986c084960ec9f91acd3e77dc1dccae9beef43898834"
+    },
+    "roles": {
+      "administrator": "0x5cAEC1fD260Ad8bB747A3984752D7943BcDc4A54",
+      "registrar": "0x24115c9D84b3413d449EdCbcB401c90cB194384c",
+      "publisher": "0x8BdE4D7eFeb35ea1b90933D50c0169B7546cbA4f"
+    },
+    "deploymentRunId": "d12a7895-188a-49b7-80da-54b8821bdcb1"
+  },
+  "sourceHashes": {
+    "contracts/src/WorldAssetRegistry.sol": "394a1159fcd1c06d589e84f46502987e402346ce3dbec69ed217d7d498245ce5",
+    "contracts/src/WorldAssetMarket.sol": "63b79da91e7fff2eeb15ee400bcf43e22334b08388cf00fbceb968ca38113f77",
+    "contracts/src/WorldAssetSwapRouter.sol": "4e0006bfc72fd63d7c2bee46c287214bc6ec706c3a8e28c80c406bd7497a2f7a",
+    "contracts/src/AgentCityHook.sol": "3ce6700d7966aebdf7bca19d8a3fe68ab320acc8fbc8c614051b686622b1ce28",
+    "contracts/src/StateRegistry.sol": "f0b37057da5e219b7ab85d2dd78657577d17d320749fb28af2f202cbaa19aad3",
+    "contracts/package-lock.json": "80312c2b2b961d9094131a38097f043c67d14731a186ba7d91894cea527ebb8c"
+  },
+  "operations": {
+    "fund-registrar": {
+      "id": "6d7d62e4-fdb5-4ab9-8c80-57aa80c18c14",
+      "hash": "0x57f52cce0e373310f36ccff6aefc294e6536bc44c111b89cef7564678a34619a",
+      "blockNumber": "66614648"
+    },
+    "fund-state-publisher": {
+      "id": "6109a615-e538-4a4f-8ffe-69a798005137",
+      "hash": "0x28649bd69608aaaa1b2b4328ce4fc912947b9436ebbca9651f95011dcea55432",
+      "blockNumber": "66614656"
+    },
+    "deploy-registry": {
+      "id": "005f6466-baab-4b59-8f26-aec9c9ad6549",
+      "hash": "0xba4808a335b5715a9fe794410b19c7ccbdcd10ce200572ef0580ade9bf724b81",
+      "blockNumber": "66614663"
+    },
+    "deploy-market": {
+      "id": "1eebb799-bce5-4682-9f3a-c706e97f1507",
+      "hash": "0x8a083dd399c493b2ef8193bcfdb86c9138eac91066aeaf74eb2dca55ea620b3f",
+      "blockNumber": "66614671"
+    },
+    "deploy-state-registry": {
+      "id": "b1254ceb-b38a-47b2-bb6b-174587b43546",
+      "hash": "0x31fea441cd7d62fa1545f26fae32b814f5aeab41b7d37ac5d115daead0d702c6",
+      "blockNumber": "66614679"
+    },
+    "deploy-hook-factory": {
+      "id": "d20c45fc-858b-43bf-9a8e-59a3368b3c6e",
+      "hash": "0x644e5600d5c981d44896514a8e6ebc24fa62b32a56e179480865bb8ac1fe2dec",
+      "blockNumber": "66614687"
+    },
+    "deploy-hook": {
+      "id": "ea7a3b0b-783f-494f-ab7a-b8f8539b8c80",
+      "hash": "0x9ba791d60c99cc92a981acb6dde3e0a3d80b7bc8d3faec1c9480faa9ff1a685f",
+      "blockNumber": "66614697"
+    },
+    "initialize-hooked-pool": {
+      "id": "adfc77c1-504c-4cde-9dc7-ec930c6fedd4",
+      "hash": "0xefc1ba8e1c07962938ada170f394e8ae80bcc45c7c5c92d2daaccb7648cf3b71",
+      "blockNumber": "66614705"
+    },
+    "deploy-payment-router": {
+      "id": "fff824cd-5d9d-4832-a248-0bb65172905e",
+      "hash": "0xf158d4e7aebc76b6e3890c74b05cc4c5cd9b9237e9887afcee80f3a6f00d8579",
+      "blockNumber": "66614713"
+    },
+    "approve-permit2-0x789dab2f22f0161401523ebe858ce88a3b14fae8": {
+      "id": "1d3cdaa0-98a5-4ac2-87d4-14042f2a1cbf",
+      "hash": "0xfa8d7fc6974510583b1d04ca85f65eeebef7fc7a526766dcd7c46e54a9f753b8",
+      "blockNumber": "66614721"
+    },
+    "approve-position-0x789dab2f22f0161401523ebe858ce88a3b14fae8": {
+      "id": "e0980ad6-e685-41a2-99dc-df6256e1dbe7",
+      "hash": "0xeb9eccd8bfbdedc92c485e3210e64a754a3e53496b07d1e7e93f0e9c3ed2bbba",
+      "blockNumber": "66614729"
+    },
+    "approve-permit2-0x83ea7c33c6787e80ad6a0a78c66eb36ee355344d": {
+      "id": "3eb5731e-cc51-47f8-a16c-bfb27024b3f4",
+      "hash": "0xb0e427a126493418057d279ce11600e079260824879258f1c482f1026c38b98e",
+      "blockNumber": "66614736"
+    },
+    "approve-position-0x83ea7c33c6787e80ad6a0a78c66eb36ee355344d": {
+      "id": "0f13e79e-4f4f-4679-87b8-51d97a54d6df",
+      "hash": "0x873bb942e4f5f1dba1c834cfe341ec2d58d3891c9cef6b38443d3dcb0a7389ef",
+      "blockNumber": "66614744"
+    },
+    "seed-hooked-position": {
+      "id": "67b508e0-a1fd-41d9-a9b1-226c2f730795",
+      "hash": "0x897edcd600055cdcf2970a7f3c4b17a7dada0040988adfdda6c8ff2f6d02bba9",
+      "blockNumber": "66614751"
+    }
+  },
+  "worldAssetsIssued": 0,
+  "playerPayments": 0,
+  "productionWorldMutations": 0,
+  "realMoneySpentUsd": 0,
+  "maximumNativeBudgetWei": "8000000000000000"
+}

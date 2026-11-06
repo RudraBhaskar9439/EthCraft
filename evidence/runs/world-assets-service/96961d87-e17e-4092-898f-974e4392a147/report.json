@@ -1,0 +1,62 @@
+{
+  "runId": "96961d87-e17e-4092-898f-974e4392a147",
+  "status": "pass",
+  "scope": "Actual isolated Anvil31337 + PostgreSQL; injected native/identity/unlocked-local-wallet fixtures. No public transactions, actual equipment, human identities or live Privy signing.",
+  "checks": [
+    {
+      "name": "Actual EVM equipment mint binds exact native fixture backing once, waits canonical2conf, preserves replay and refuses missing consent/foreign preview owner",
+      "status": "pass"
+    },
+    {
+      "name": "Actual parcel NFT projection binds registered MC identity and exact house snapshot; lost native pre-sale lock reply resumes the same freeze before any listing transaction",
+      "status": "pass"
+    },
+    {
+      "name": "Actual CITY/NFT atomic house purchase updates canonical owner projection; real Anvil reorganization invalidates native fixture rights instead of granting from stale ownership",
+      "status": "pass"
+    },
+    {
+      "name": "Actual irreversible canonical item redemption lock precedes exact native fixture mailbox assignment and registrar burn; replay never releases backing twice",
+      "status": "pass"
+    }
+  ],
+  "publicTransactions": 0,
+  "actualMinecraftWrites": 0,
+  "ownedAnvil": {
+    "pid": 21635,
+    "address": "127.0.0.1:18559",
+    "chainId": 31337
+  },
+  "manifest": {
+    "schema": "agentcity.world-assets.v1",
+    "environment": "LOCAL_TEST_FIXTURE",
+    "chainId": 31337,
+    "rpcUrl": "http://127.0.0.1:18559",
+    "genesisHash": "0xe8d4aaea39cd919d3dc9162a049c09c9646b4d430c631e827b0f916dac3c38c4",
+    "serverId": "0x38685fda2563d2067b680f496326986c74111b87b91ed0b6e237e93ac1b178c9",
+    "deploymentId": "0x03420edf1ab3598a2b63b3519f6459433224fe6a5ce43eae3328921d30cb173d",
+    "registry": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+    "market": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+    "city": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+    "codeHashes": {
+      "registry": "0x9825094905f226df9f11f142b1f876b56adc56de6215fba350c05d34fb57cc9a",
+      "market": "0x2606a5977585ef49f674127bbfb28563badad4d7b89011b107c9a781e1af866c",
+      "city": "0x4f8a291c047fd92795055b9bfe83fcb8e77058851f1834e0a103f687dea734c1"
+    },
+    "confirmations": 2,
+    "maxPriceBaseUnits": "100000000000000000000",
+    "maxGas": "2000000",
+    "maxNativeCostWei": "8000000000000000"
+  },
+  "localTransactions": 8,
+  "nativeFixtureReservations": 1,
+  "nativeFixtureReleases": 1,
+  "finishedAt": "2026-10-31T17:33:01.686Z",
+  "sourceHashes": {
+    "service.mjs": "b7bd8aadedd40ec1e8ea4daf5c29db5cb95c9c4a2eb485a175e0d55e87797b26",
+    "canonical.mjs": "14a074b18ddff1120ca3cd7ab362b7957b93f7c632ccfc4a6d8b411fc65e2908",
+    "store.mjs": "484501cec1801d989bb7b56263b123f14b92ef23c567c53334cb3953ffe107b3",
+    "managed-policy.mjs": "960bac6a1053c8f3e8595118a79eefbaed0c96d80a1faebae88ee4547808849e",
+    "abis.mjs": "c88114bc728e1014b171b47754329dee474d3830a82d3807fdddc0a94a8d33de"
+  }
+}

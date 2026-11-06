@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "runId": "b6f4cae4-56ad-4efc-95f9-c3ef94d381e3",
+  "scope": "In-memory publisher fault fixtures; no chain transactions, browser access or keys.",
+  "checks": [
+    "Lost submitted reply and recreation reuse the original signed report and expiry.",
+    "A sufficiently fresh report does not sign another publication.",
+    "A report at exact expiry is displayed unavailable.",
+    "A canonical revert is retained and a later explicit retry has a distinct operation identity."
+  ],
+  "sourceHashes": {
+    "backend/src/bank/health-publisher.mjs": "2dd5d1a0319c8bd2196a4d222e9696951d534cc825d840451b685208362faf04"
+  }
+}

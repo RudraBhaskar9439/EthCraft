@@ -1,0 +1,41 @@
+{
+  "scope": "Local component development findings; earlier failed reports remain unchanged.",
+  "findings": [
+    {
+      "id": "LOCAL-D001",
+      "status": "resolved",
+      "problem": "Combined fixture supplied a 66-character encoded contract server hash to the bounded logical game server-id field.",
+      "failure": "evidence/runs/local-e2e/e7348358-a234-40f3-a842-53ce90531729/report.json",
+      "fix": "Use the logical server id and assert its keccak hash equals the contract server id."
+    },
+    {
+      "id": "LOCAL-D002",
+      "status": "resolved",
+      "problem": "A pass-lock check raised unknown_transaction_intent when an acceptance UUID had been persisted before signed transaction preparation.",
+      "failure": "evidence/runs/local-e2e/c0d26a0e-7791-459c-92ef-5997535ce60f/report.json",
+      "fix": "Unknown or not-yet-prepared acceptance remains locked and waits; the same funded job resumed without another purchase and paid exactly once."
+    },
+    {
+      "id": "LOCAL-D003",
+      "status": "resolved",
+      "problem": "Confirmed reverted acceptance prevented an expired pass lock from releasing.",
+      "failure": "Independent requester review reproduced the lock transition with an expired pass, pending operation and accepted=false.",
+      "fix": "The trusted canonical verifier distinguishes a confirmed revert from an unknown outcome; a usable pass stays locked, and explicit recovery clears only the failed attempt.",
+      "verification": "tests/settlement/local-locks.mjs: three focused actual-PostgreSQL checks with a declared scripted outcome verifier."
+    },
+    {
+      "id": "LOCAL-D004",
+      "status": "resolved",
+      "problem": "Initial local token fixture combined issuer and administrator accounts.",
+      "fix": "Separate immutable issuer and administrator authority; deploy v2 with seven distinct roles on the same owned chain; retain old contracts and settled jobs.",
+      "verification": "evidence/runs/local-p5-p8-v2/anvil-deployment-verification.json"
+    },
+    {
+      "id": "LOCAL-D005",
+      "status": "resolved",
+      "problem": "Fixed workflow-test destination accumulated valid deliveries across repeated isolated tests.",
+      "fix": "Use a unique destination per test run; product accounting was unchanged.",
+      "verification": "evidence/runs/local-workflow/fixture-reuse-defect.json"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{"check":"same-world-restart-matches-retained-structure-and-all-real-inventories","status":"pass"}
+{"check":"unsneaked-thin-reference-refused-with-original-operation-reconciled","status":"pass"}
+{"check":"new-process-reconnect-preserves-real-carried-stock","status":"pass"}
+{"check":"complete-native-build-consumes-exact144-items-once","status":"pass"}
+{"status":"fail","checks":4,"error":{"name":"AssertionError","message":"Expected values to be strictly equal:\n\n429 !== 200\n","stack":"AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n429 !== 200\n\n    at inspect (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/evidence/runs/p2-construction/agentcity-continuation-88033ad1/source/tests/construction/probe.cjs:216:10)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async run (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/evidence/runs/p2-construction/agentcity-continuation-88033ad1/source/tests/construction/probe.cjs:416:5)"}}

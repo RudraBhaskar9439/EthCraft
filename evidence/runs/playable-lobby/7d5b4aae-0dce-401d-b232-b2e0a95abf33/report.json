@@ -1,0 +1,11 @@
+{
+  "scope": "Actual local lobby/play-world fixture; no independently authenticated human or blockchain action",
+  "username": "LobbyTester",
+  "status": "fail",
+  "independentHumansVerified": 0,
+  "startedAt": "2026-10-31T06:52:27.603Z",
+  "checks": [],
+  "worldHistory": [],
+  "error": "Timed out waiting for first-join lobby world",
+  "finishedAt": "2026-10-31T06:52:49.198Z"
+}

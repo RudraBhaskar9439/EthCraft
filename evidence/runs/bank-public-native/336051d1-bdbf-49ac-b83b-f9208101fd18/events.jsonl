@@ -1,0 +1,63 @@
+{"at":"2026-11-05T13:17:25.325Z","step":"register-original-collateral","stage":"preview","operationId":"324ae398-c608-4651-9e23-776d98ba23d1"}
+{"at":"2026-11-05T13:17:45.506Z","step":"register-original-collateral","stage":"confirm","operationId":"324ae398-c608-4651-9e23-776d98ba23d1","status":"complete","transactions":["0x91ebb84ad0b28c0543f899dc52473679c2c12b381e2a04434b1c8ee6e951f1a5"]}
+{"at":"2026-11-05T13:17:48.515Z","step":"register-seller-sword","stage":"preview","operationId":"d20e4d58-7a85-499a-a2f9-d18d2f2babab"}
+{"at":"2026-11-05T13:18:06.387Z","step":"register-seller-sword","stage":"confirm","operationId":"d20e4d58-7a85-499a-a2f9-d18d2f2babab","status":"complete","transactions":["0xa44c69033d909fae0ad2af722788a7e9912577cfd50ffe9778e304c8f491cb58"]}
+{"at":"2026-11-05T13:18:17.263Z","step":"offer-1","stage":"preview","operationId":"b06ea814-71d4-48b8-9707-dcecf9e8ad27"}
+{"at":"2026-11-05T13:18:51.123Z","step":"offer-1","stage":"confirm","operationId":"b06ea814-71d4-48b8-9707-dcecf9e8ad27","status":"complete","transactions":["0xd0863b90fe1ebbf36cfe0b743e0ffc739ff58ce1760fb48727f96a6505b2915c","0x00e56517cd58d5e37f5d97a7e0cefde54b917db982a9f0d7a65717345947a931"]}
+{"at":"2026-11-05T13:19:01.788Z","step":"borrow-1","stage":"preview","operationId":"5fe73fe1-ed84-4fd9-b852-497f55e5bca2"}
+{"at":"2026-11-05T13:19:37.304Z","step":"borrow-1","stage":"confirm","operationId":"5fe73fe1-ed84-4fd9-b852-497f55e5bca2","status":"complete","transactions":["0xe82937d8ef72ecb8adac80b1ac8da780258a02bdcc7cb125c833f35b164852ef","0x165466dc25911bd763d0bfbfb7bf441c0f013f6d71b6ee06db48a979b1a8c976"]}
+{"at":"2026-11-05T13:19:40.888Z","step":"list-seller-sword","stage":"preview","operationId":"008f8a93-e104-456a-a1c5-12f6eef24600"}
+{"at":"2026-11-05T13:20:14.073Z","step":"list-seller-sword","stage":"confirm","operationId":"008f8a93-e104-456a-a1c5-12f6eef24600","status":"complete","transactions":["0x9890c239419e5f29b064bb7bf407b1e896e433cd7462f75b854084140fdfe1e4","0xb2165ba9b22e9f65164cb258c0a4c9a4a960eea87aa554595a7985c56a831729"]}
+{"at":"2026-11-05T13:20:38.394Z","step":"gem-checkout","stage":"preview","operationId":"f856587a-720b-4c69-aaad-bcba453bae7f"}
+{"at":"2026-11-05T13:21:17.425Z","step":"gem-checkout","stage":"confirm","operationId":"f856587a-720b-4c69-aaad-bcba453bae7f","status":"complete","transactions":["0xb544a1176284240228e17bc8b0fe0085bb0dcdd4dc760037a11af7f9316d033e","0xc5e6cba6ba8188d1f158f8e1c7987f525df86d5e908f23c3da50bd121702f642"]}
+{"at":"2026-11-05T13:21:21.203Z","step":"redeem-purchased-sword","stage":"preview","operationId":"001a49c6-8505-4aa7-b25c-74710e2a1469"}
+{"at":"2026-11-05T13:21:53.048Z","step":"redeem-purchased-sword","stage":"confirm","operationId":"001a49c6-8505-4aa7-b25c-74710e2a1469","status":"complete","transactions":["0x2ca260afd956dd361aba845cf66c4cbdc17c719f37edf4ff92db1b039e70d938","0xa4c8c07abb393d0785a00fd1ce7ce84aa2c886fad2c4e40bb7fbfa28965f9b09"]}
+{"at":"2026-11-05T13:21:53.067Z","milestone":"actual_seller_sword_delivered_to_borrower","tokenId":"2","fingerprint":"d41e0d6ac1cd88199dc49e6882ddd3cb117339da474297237e23de07ce4f828a"}
+{"at":"2026-11-05T13:22:05.575Z","step":"repay-1","stage":"preview","operationId":"bd1319f5-b94a-4831-bba3-f196362a794b"}
+{"at":"2026-11-05T13:22:40.163Z","step":"repay-1","stage":"confirm","operationId":"bd1319f5-b94a-4831-bba3-f196362a794b","status":"complete","transactions":["0x65af73679d6b3b1cfa6b61a5319795bef337200545db5ef79378d5d946d55fdb","0x2519e103b1a8fd167529d3a62b9ff632fe16d65683609ff029f1d3a33dd93b64"]}
+{"at":"2026-11-05T13:22:51.114Z","step":"claim-collateral-1","stage":"preview","operationId":"ebb54047-981f-4e34-823c-1060ad72cf8a"}
+{"at":"2026-11-05T13:23:13.030Z","step":"claim-collateral-1","stage":"confirm","operationId":"ebb54047-981f-4e34-823c-1060ad72cf8a","status":"complete","transactions":["0x91c3b8be479135190a35b70792347542dcba1ed8c0db599a9ebf0bf73113ad78"]}
+{"at":"2026-11-05T13:23:24.920Z","step":"offer-2","stage":"preview","operationId":"1b9ff696-a890-4c4f-9aff-ee3a1cebc1ad"}
+{"at":"2026-11-05T13:23:59.959Z","step":"offer-2","stage":"confirm","operationId":"1b9ff696-a890-4c4f-9aff-ee3a1cebc1ad","status":"complete","transactions":["0x82f3a09682c7c21a003983c3e6f6d02701f5ab334b9d8cbf0ecc22de555dc077","0x27c3e45f84f69d00e4fb49686f3278ac667900763988a85a48fa4a89485d7b99"]}
+{"at":"2026-11-05T13:24:10.998Z","step":"borrow-2","stage":"preview","operationId":"04652f6d-c2ea-4882-be46-10444a7d4bb6"}
+{"at":"2026-11-05T13:24:47.342Z","step":"borrow-2","stage":"confirm","operationId":"04652f6d-c2ea-4882-be46-10444a7d4bb6","status":"complete","transactions":["0x99aefeeba6fc37e8f901bcbd1cb104feb84deb7c6ecd231056e919499ae15fc2","0x6b90c22d3a0dd03f3c55006557daea5bcb21755f8f734cd5568f93e62a5025f3"]}
+{"at":"2026-11-05T13:24:58.329Z","step":"seller-auction-funds","stage":"preview","operationId":"5f6d3830-e84f-4ab1-bde2-b753eef6121b"}
+{"at":"2026-11-05T13:25:34.031Z","step":"seller-auction-funds","stage":"confirm","operationId":"5f6d3830-e84f-4ab1-bde2-b753eef6121b","status":"complete","transactions":["0x9216f01b62b578630da6e230b7feb5e1daa28ae6fb6e8430556bf4257e531449","0x5974cc28ef7a85e5b5ea78ea79be9736fbba5bb34b26012f7275782bd5f23030"]}
+{"at":"2026-11-05T13:25:34.255Z","stage":"waiting_for_chain_time","reason":"Loan2 minimum qualifying observed duration","remainingSeconds":7}
+{"at":"2026-11-05T13:25:55.015Z","step":"repay-2","stage":"preview","operationId":"9679d8f5-b3f6-47ba-9679-e9ec5033b69d"}
+{"at":"2026-11-05T13:26:28.563Z","step":"repay-2","stage":"confirm","operationId":"9679d8f5-b3f6-47ba-9679-e9ec5033b69d","status":"complete","transactions":["0xc11ce334e6285010ca06fe29be5608f9954a0da1a6b69d0f73ddcc50e5fe761b","0xc6f4e2b5ae3c756e3cf359aa7646c67522bcdbcd308d1b1161cfd51668366902"]}
+{"at":"2026-11-05T13:26:41.444Z","step":"claim-collateral-2","stage":"preview","operationId":"6cda94cb-f736-4fe6-b317-e6c4f88a8da4"}
+{"at":"2026-11-05T13:27:02.657Z","step":"claim-collateral-2","stage":"confirm","operationId":"6cda94cb-f736-4fe6-b317-e6c4f88a8da4","status":"complete","transactions":["0xd65170d62c31bc2cceb0d4f43fa45118f060b91d7599afcf5d90f62a52dfdb06"]}
+{"at":"2026-11-05T13:27:27.739Z","step":"swap-discount-proof","stage":"preview","operationId":"cdc799f1-1f01-4dd1-a82e-8b2f3e895825"}
+{"at":"2026-11-05T13:27:59.727Z","step":"swap-discount-proof","stage":"confirm","operationId":"cdc799f1-1f01-4dd1-a82e-8b2f3e895825","status":"complete","transactions":["0x0c8f5144310a807604099d60c48e391b29583c78ac3eb6515eec2b8a60189f88","0xee4af0e64e3ea0378b895e8f0acfa51349b88cee80595e4b3c284e8626839541"]}
+{"at":"2026-11-05T13:28:10.796Z","step":"offer-3","stage":"preview","operationId":"4e144806-71bc-410f-966e-29dc050d2682"}
+{"at":"2026-11-05T13:28:45.371Z","step":"offer-3","stage":"confirm","operationId":"4e144806-71bc-410f-966e-29dc050d2682","status":"complete","transactions":["0xb204115eb0519cd11a608b8302467b5790db22deed4defb940cadc6acacc17cc","0xb6604a6f86131d93dba3ef031361131ed7ccc19818486b98a1001259af18b34a"]}
+{"at":"2026-11-05T13:28:57.675Z","step":"borrow-3","stage":"preview","operationId":"252c08d4-e973-47fd-a545-f574a9c42ef5"}
+{"at":"2026-11-05T13:29:32.745Z","step":"borrow-3","stage":"confirm","operationId":"252c08d4-e973-47fd-a545-f574a9c42ef5","status":"complete","transactions":["0x233a13e0f972a3caa4efc7339a680d74aae6f4678266163b0332a7d50318f4d1","0x0be2970538a528b4d034f8cc24fae56b6a1d22621422f6450fd15c9c4e6d0ae3"]}
+{"at":"2026-11-05T13:29:33.192Z","stage":"waiting_for_chain_time","reason":"Disclosed short testnet loan becomes overdue","remainingSeconds":116}
+{"at":"2026-11-05T13:30:05.588Z","stage":"waiting_for_chain_time","reason":"Disclosed short testnet loan becomes overdue","remainingSeconds":84}
+{"at":"2026-11-05T13:30:37.996Z","stage":"waiting_for_chain_time","reason":"Disclosed short testnet loan becomes overdue","remainingSeconds":51}
+{"at":"2026-11-05T13:31:12.492Z","stage":"waiting_for_chain_time","reason":"Disclosed short testnet loan becomes overdue","remainingSeconds":19}
+{"at":"2026-11-05T13:31:43.353Z","step":"start-default-auction","stage":"preview","operationId":"10d143a7-abe4-4f6d-ba46-d5ce55a1a420"}
+{"at":"2026-11-05T13:32:05.004Z","step":"start-default-auction","stage":"confirm","operationId":"10d143a7-abe4-4f6d-ba46-d5ce55a1a420","status":"complete","transactions":["0x41020f84a62b7236a266b27197fcce54735625e3533b6a5aed8ce1f5b0e5827b"]}
+{"at":"2026-11-05T13:32:19.162Z","step":"seller-bid-one","stage":"preview","operationId":"addf09f3-79da-457b-b1a2-c86233b523a8"}
+{"at":"2026-11-05T13:32:58.695Z","step":"seller-bid-one","stage":"confirm","operationId":"addf09f3-79da-457b-b1a2-c86233b523a8","status":"complete","transactions":["0x67755fff92ae77904f59146c5ac7fa567339c448f6ecb0c63cc83d7ef0cb7da6","0x36444dcd44f442bc3d199773cc2a31225c59bff05fb890b5d3ce719edd5fe7ff"]}
+{"at":"2026-11-05T13:33:10.998Z","step":"bidder-outbids-two","stage":"preview","operationId":"d27b7780-032f-4547-843a-36639a61a205"}
+{"at":"2026-11-05T13:33:47.794Z","step":"bidder-outbids-two","stage":"confirm","operationId":"d27b7780-032f-4547-843a-36639a61a205","status":"complete","transactions":["0xa5ed5712d62bc57dd71130bb2dc75f46845fefa239b246b46263f888692d5a2d","0xa15cf58f3e988d9c0d62f5f7767b6e213882f70133f777ea599e8ec9c4a4ac55"]}
+{"at":"2026-11-05T13:33:48.682Z","stage":"waiting_for_chain_time","reason":"Actual funded auction reaches its disclosed end","remainingSeconds":72}
+{"at":"2026-11-05T13:34:20.663Z","stage":"waiting_for_chain_time","reason":"Actual funded auction reaches its disclosed end","remainingSeconds":40}
+{"at":"2026-11-05T13:34:53.570Z","stage":"waiting_for_chain_time","reason":"Actual funded auction reaches its disclosed end","remainingSeconds":7}
+{"at":"2026-11-05T13:35:12.086Z","step":"settle-default-auction","stage":"preview","operationId":"9131c0bc-7ca3-4c00-9176-3c395db56e2c"}
+{"at":"2026-11-05T13:35:33.067Z","step":"settle-default-auction","stage":"confirm","operationId":"9131c0bc-7ca3-4c00-9176-3c395db56e2c","status":"complete","transactions":["0x854dcf7a38a108720ff73992f664c60edd6c46f39bb2dbc3351d3fe3e3a79dbb"]}
+{"at":"2026-11-05T13:35:46.613Z","step":"withdraw-outbid-refund","stage":"preview","operationId":"d8641264-3e8b-48af-9202-44e79d979ac6"}
+{"at":"2026-11-05T13:36:11.991Z","step":"withdraw-outbid-refund","stage":"confirm","operationId":"d8641264-3e8b-48af-9202-44e79d979ac6","status":"complete","transactions":["0x8fc2b7d75f012dc655589809543eca5f71e145a2faebed6e188daf8166dff621"]}
+{"at":"2026-11-05T13:36:22.934Z","step":"withdraw-lender-proceeds","stage":"preview","operationId":"32aa03a6-67e5-404a-b441-2f6cab7ce2cf"}
+{"at":"2026-11-05T13:36:44.527Z","step":"withdraw-lender-proceeds","stage":"confirm","operationId":"32aa03a6-67e5-404a-b441-2f6cab7ce2cf","status":"complete","transactions":["0xeac5c021fb802ded5c07a116225d657f8aa53664f94e2a0af48232f4d31d1c89"]}
+{"at":"2026-11-05T13:36:56.895Z","step":"claim-auction-collateral","stage":"preview","operationId":"d1f0b4c0-6ac5-4bf6-9b5d-1ecc0a2660a5"}
+{"at":"2026-11-05T13:37:18.272Z","step":"claim-auction-collateral","stage":"confirm","operationId":"d1f0b4c0-6ac5-4bf6-9b5d-1ecc0a2660a5","status":"complete","transactions":["0x1328a19a98419793b4cd040dd29ba1b57744480c57f66e3244f57ad9a9f6cef2"]}
+{"at":"2026-11-05T13:37:22.072Z","step":"redeem-auctioned-original","stage":"preview","operationId":"089e0dfd-f982-4bb5-b543-e093a0db87b0"}
+{"at":"2026-11-05T13:37:54.510Z","step":"redeem-auctioned-original","stage":"confirm","operationId":"089e0dfd-f982-4bb5-b543-e093a0db87b0","status":"complete","transactions":["0x1311e66e1ce95d6a2cf8dc65e669783d2a66e88c553955e3c0b858a8942e6a4f","0x9a644f7fc36d1fbf129f72a3c61e0ed489f4b70287afb63fc0a4b4c60654da29"]}
+{"at":"2026-11-05T13:37:54.526Z","milestone":"actual_original_sword_delivered_to_bidder","tokenId":"1","fingerprint":"37a461141daaef09a37a94b794eec115cfe05a5998c08476a47fe0a1266d617c"}
+{"at":"2026-11-05T13:38:19.246Z","step":"swap-default-proof","stage":"preview","operationId":"3c7fdd75-5019-4c9a-803c-e173b9855675"}
+{"at":"2026-11-05T13:38:55.490Z","step":"swap-default-proof","stage":"confirm","operationId":"3c7fdd75-5019-4c9a-803c-e173b9855675","status":"complete","transactions":["0x03ea4a6be8c7d2ec248a4473941e25fbaa3431699524f015fb4330192a0bb670","0x6a6d7258ad6e8b2938a7f3caf0f53f96c8b8f0770c3d69bb92dd924040f3f7dd"]}
+{"at":"2026-11-05T13:39:00.596Z","status":"pass","evidence":"/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/evidence/runs/bank-public-native/336051d1-bdbf-49ac-b83b-f9208101fd18","completeSteps":26}

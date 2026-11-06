@@ -1,0 +1,53 @@
+# Optional storage/game topology; migration and supported-server qualification remain manual gates.
+services:
+  database:
+    image: postgres:18.1-bookworm@sha256:cc9f4143a8d2fa8cf3749d0cb4d26ecf2d53a77a2ac807e9ebd67ae22426221a
+    user: "999:999"
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    network_mode: host
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: agentcity
+      POSTGRES_USER: agentcity_owner
+      POSTGRES_PASSWORD_FILE: /run/agentcity-database/password
+      PGDATA: /var/lib/postgresql/18/docker
+    command: [postgres, -c, listen_addresses=127.0.0.1, -p, "55434"]
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,nodev,size=32m,uid=999,gid=999,mode=0700
+      - /var/run/postgresql:rw,noexec,nosuid,nodev,size=4m,uid=999,gid=999,mode=0700
+    volumes:
+      - database-journal:/var/lib/postgresql
+      - type: bind
+        source: ${DATABASE_PASSWORD_FILE:?Provide private database initialization password file}
+        target: /run/agentcity-database/password
+        read_only: true
+  paper:
+    # Existing compatibility release: unsupported upstream; this pin is NOT production qualification.
+    image: eclipse-temurin@sha256:5d90b26c0784ccf55af55f97cbcf7f3969c66a06299c93bdc72649219942a48f
+    user: "10001:10001"
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    restart: unless-stopped
+    stop_grace_period: 60s
+    working_dir: /server
+    ports: ["127.0.0.1:25596:25565", "127.0.0.1:25597:25578"]
+    tmpfs: ["/tmp:rw,noexec,nosuid,nodev,size=64m,uid=10001,gid=10001,mode=0700"]
+    entrypoint: [/bin/sh, -ec]
+    command:
+      - 'export AGENTCITY_API_TOKEN="$$(cat /run/agentcity-plugin/api-token)"; exec java -Xms512M -Xmx1536M -Dagentcity.localFixture=true -Dagentcity.localConstructionResume=true -Dagentcity.playable=true -jar paper.jar --nogui'
+    volumes:
+      - plugin-journal:/server
+      - type: bind
+        source: ${PLUGIN_TOKEN_FILE:?Provide private plugin token file}
+        target: /run/agentcity-plugin/api-token
+        read_only: true
+volumes:
+  database-journal:
+    external: true
+    name: ${DATABASE_VOLUME:?Provide pre-provisioned private persistent database volume}
+  plugin-journal:
+    external: true
+    name: ${PLUGIN_VOLUME:?Provide pre-provisioned private persistent plugin/world volume}

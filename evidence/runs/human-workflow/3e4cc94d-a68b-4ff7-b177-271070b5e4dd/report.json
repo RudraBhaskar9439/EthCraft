@@ -1,0 +1,50 @@
+{
+  "status": "pass",
+  "runId": "3e4cc94d-a68b-4ff7-b177-271070b5e4dd",
+  "checks": [
+    {
+      "name": "distinct consumed WalletLink fixtures must precede the immutable agreement; missing and late links fail",
+      "status": "pass"
+    },
+    {
+      "name": "one durable human job pins exact 6/3 CRED terms, roles, historical identities and stable operation IDs",
+      "status": "pass"
+    },
+    {
+      "name": "explicit operator provisioning persists one bounded test deficit before fixture sends; replay never tops up spent balances",
+      "status": "pass"
+    },
+    {
+      "name": "canonical funding freezes terms; read-only balances and unknown purchase retries preserve the same ID and cap",
+      "status": "pass"
+    },
+    {
+      "name": "only canonical two-confirmation purchase and exact claim/job/bundle/destination authorize synthetic delivery",
+      "status": "pass"
+    },
+    {
+      "name": "actual local Ollama proposes one fenced synthetic construction; exact material use, one delivery and protected 16-case inspection replay",
+      "status": "pass"
+    },
+    {
+      "name": "manual acceptance remains pending and locked through an unknown outcome; only canonical acceptance unlocks the manual builder claim",
+      "status": "pass"
+    }
+  ],
+  "scope": "Actual isolated PostgreSQL, actual ephemeral fixture signatures and actual local Ollama; chain receipts/events and online sessions are explicitly scripted fixtures.",
+  "genuineHumanIdentitiesVerified": false,
+  "publicTransactionsSubmitted": 0,
+  "realMoneySpent": 0,
+  "economicBridge": false,
+  "inference": {
+    "mode": "ollama_local",
+    "executed": false,
+    "live0GVerified": false,
+    "billingVerified": false,
+    "model": "qwen3:1.7b",
+    "responseId": "2026-10-30T15:32:52.517643Z",
+    "generatedTokens": 13,
+    "paidCalls": 0
+  },
+  "finishedAt": "2026-10-30T15:32:52.645Z"
+}

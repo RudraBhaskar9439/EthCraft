@@ -1,0 +1,60 @@
+
+        ▄████████    ▄████████ ███▄▄▄▄    ▄█     ▄████████
+        ███    ███   ███    ███ ███▀▀▀██▄ ███    ███    ███
+        ███    ███   ███    ███ ███   ███ ███▌   ███    █▀
+        ███    ███  ▄███▄▄▄▄██▀ ███   ███ ███▌   ███
+      ▀███████████ ▀▀███▀▀▀▀▀   ███   ███ ███▌ ▀███████████
+        ███    ███ ▀███████████ ███   ███ ███           ███
+        ███    ███   ███    ███ ███   ███ ███     ▄█    ███
+        ███    █▀    ███    ███  ▀█   █▀  █▀    ▄████████▀
+                     ███    ███
+
+                          version 3.4.0
+                https://github.com/louis-e/arnis
+        
+Created new world at: /Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/.local/mumbai/generation/aa2f2ee0-d00e-49dc-90cd-e89935b39a38/worlds/Arnis World 1
+  [+] Fetching Overture Maps data...
+[1/7] Fetching data from the tile archive...
+[3/7] Fetching elevation...
+Fetching canopy height data (Meta/WRI 1m global canopy height)...
+Fetching land cover data (ESA WorldCover 2021)...
+Shoreline reconstruction: 51 rings, 11469 cells to water, 11809 cells to land
+Land cover data loaded successfully
+Using Mapterhorn terrain tiles (global; high-res where available)
+Downloading 30 elevation tiles from Mapterhorn at z16 (up to 8 concurrent)...
+Mapterhorn: 30 of 30 tiles absent at z16 (coarser region or ocean); sampling parent tiles...
+Sampling 1 Mapterhorn tiles into 2630x3225 grid...
+Land cover repair: leveled 36 water component(s), 2755827 surface cells flattened, 6661 off-surface cells kept as terrain
+Land cover repair: leveled 4 reach(es) below or above a waterfall at their own level
+Land cover repair: reclassified 6661 LC_WATER cells not on the water surface (embankments / piers / shoreline walls)
+Land cover repair: built-up Gaussian smoothing σ=30.00 cells applied to 5723661 built-up + feathered cells (4553842 core built-up cells)
+Land cover repair: pulled 350862 coastal land cells toward water (within 25 cells); kept 0 cells above 15 m as real cliffs
+Completed 1 relations that reach past the bbox's tiles
+Read 2 tiles (0.5 MB) from the archive, built 2026-10-25
+Steep detail: roughened 0.0% of the terrain, steep ground with only coarse elevation data
+Realistic elevation: 29.4m range fits in 242 available blocks
+Canopy height data loaded: 1 tile, canopy over 3m on 16.0% of the area, mean 8.4m, tallest 41m
+[2/7] Parsing data...
+Bounding box: LLBBox { min: LLPoint { lat: 18.918, lng: 72.818 }, max: LLPoint { lat: 18.947, lng: 72.843 } }
+  Added 2167 buildings from Overture Maps
+OSM water override: reclassified 691 cells to LC_WATER inside OSM water polygons/lines
+OSM water override: sank 103 overridden cells onto the adjacent water surface
+OSM land override: 36524 cells reclassified from ESA water to land
+Bridge LC repair: 5508 cells reclassified (0 to water)
+[4/7] Transforming map...
+Region tree pack loaded: realm ind - 386 regional trees (28 communities) + 520 vanilla sprinkle trees (13 communities)
+  ecoregions: 1 mapped, 2 extra communities (10 trees)
+  size tiers [schems]: small 202 [on], medium 260 [on], big 260 [on], tall 133 [on], giant 61 [on]
+  ecoregion: Malabar Coast moist forests
+[4/7] Processing data...
+[5/7] Generating area...
+  Processing 42 tiles across 9 threads...
+  [+] Placing 1 stadium model...
+  Placed 1 stadium model (124163 blocks)
+  [+] Placing 1 stadium model...
+  Placed 1 stadium model (220056 blocks)
+  [+] Placing 1 stadium model...
+  Placed 1 stadium model (292130 blocks)
+Generating world for: Java Edition (Anvil)
+[7/7] Saving world...
+Map preview saved to: /Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/.local/mumbai/generation/aa2f2ee0-d00e-49dc-90cd-e89935b39a38/worlds/Arnis World 1/arnis_world_map.png

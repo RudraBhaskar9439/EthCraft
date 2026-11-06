@@ -1,0 +1,29 @@
+{
+  "schema": "agentcity.testnet-bank-checkpoint.v1",
+  "recordedAt": "2026-11-05T13:48:32.496479+00:00",
+  "status": "historical_demonstration_verified",
+  "scope": "Laptop-only Unichain Sepolia banking prototype; operator-controlled wallets and native clients. No independent-human or production qualification.",
+  "deployment": "contracts/bank-public-testnet-deployment.json",
+  "runbook": "docs/UNISWAP_BANK_RUNBOOK.md",
+  "realMoneySpentUsd": 0,
+  "paidModelCalls": 0,
+  "originalCanonicalPhases": "Not passed by this extension; preserved required live gates remain unqualified.",
+  "pending": [],
+  "limitations": [
+    "Only CITY, GEM and mock tUSDC; no arbitrary-token or cross-chain conversion",
+    "Equipment collateral only; gold/diamond lots require separate qualification",
+    "Native paid work is one fixed 2-by-2 oak platform per registered origin",
+    "Discord bank consumer runtime and live Privy policy are not activated",
+    "Independent human acceptance, 0G and public platform permission remain pending",
+    "Browser visual verification was denied and not bypassed",
+    "Full-host backup restore qualification remains pending"
+  ],
+  "supersededBy": "docs/TESTNET_MARKETPLACE.md",
+  "evidence": {
+    "publicFinance26Steps": "evidence/runs/bank-public-native/336051d1-bdbf-49ac-b83b-f9208101fd18/report.json",
+    "sameOperationReplay": "evidence/runs/bank-public-native/336051d1-bdbf-49ac-b83b-f9208101fd18/replay-28d4959a-26c5-4444-997e-9c803944d412.json",
+    "actualPaidNativeWork": "evidence/runs/bank-native-work/cd5aa76c-d53b-41bd-9bd4-15ab81c75d16/report.json",
+    "finalHistoricalFees": "evidence/runs/bank-final-fees/ba922b1c-831b-4605-9eb6-0e3b47cc51e9/report.json"
+  },
+  "activeProduct": "This banking route is retired. All three test loans settled before scope changed. Do not expose its lending features in the marketplace."
+}

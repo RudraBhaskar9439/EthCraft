@@ -1,0 +1,290 @@
+{
+  "schema": "agentcity.onchain-only-checkpoint.v1",
+  "status": "implemented-installed-acceptance-pending",
+  "recordedAt": "2026-10-31T19:37:45.992Z",
+  "userAuthorization": {
+    "date": "2026-11-01",
+    "request": "I dont want Game coins at all now , for testnet move to on chain only",
+    "fiatBudget": 0,
+    "existingTestnetGuidelineExceptionRetained": true
+  },
+  "activeEconomy": {
+    "mode": "ONCHAIN_ONLY",
+    "chainId": 1301,
+    "settlementCurrency": "CITY",
+    "swapAssets": [
+      "CITY",
+      "GEM"
+    ],
+    "gasAsset": "test ETH",
+    "newCoinAccounts": false,
+    "starterCoinGrants": false,
+    "internalPayments": false,
+    "legacyShopPayouts": false,
+    "newLegacyListings": false,
+    "legacyPurchases": false,
+    "priceConversion": false
+  },
+  "implementation": [
+    "exact native plain-resource lots of1–64 plus exact single equipment retain native backing through NFT sale and redemption",
+    "partial source stack snapshot/substitution guard preserves seller remainder and buyer exact lot",
+    "core/transport/native default deny old currency actions; historical compatibility tests explicitly opt in",
+    "same Discord/Minecraft canonical owner and managed wallet for current CITY balances, swap previews and explicit human confirmations",
+    "agent financial tools prepare registration or swap previews only; stale coin-sale workflows do not get rewritten",
+    "clean CITY command/menu/feed surfaces and owner-withdraw-only cards for old backed stock",
+    "new native readiness and cutover scripts check real escrow/catalog modules rather than only early HTTP availability"
+  ],
+  "evidence": [
+    {
+      "name": "retiredCore",
+      "path": "evidence/runs/coin-retirement/ac023c4b-cafd-4c47-bf5d-9bfc328276c8/report.json",
+      "sha256": "9ed7b8749a844874c226c66944327f8785bf1e6da6ebd337071f0682310b8f83",
+      "status": "pass",
+      "scope": "Isolated PostgreSQL retirement fixtures; no live accounts, inventory, chain or provider effects",
+      "checks": 3
+    },
+    {
+      "name": "historicalEconomy",
+      "path": "evidence/runs/playable-economy/9b3791db-6aad-4dad-bf36-c3bf4a3d551f/report.json",
+      "sha256": "6231295c839f8ffffdad5a9516a1f44d80607c8ee09efa26f3367ecfa974a00e",
+      "status": "pass",
+      "scope": "Real isolated PostgreSQL; player events, inventory removal receipts and depleted-treasury state are explicit fixtures, no real wallets or Minecraft inventory/payment proof",
+      "checks": 10
+    },
+    {
+      "name": "historicalMarketplace",
+      "path": "evidence/runs/game-marketplace/dedc3242-490e-4021-81cc-7eca1e05f00d/report.json",
+      "sha256": "4c34c34215f43527bca62640f93fdd46679b9c941904f8624ae4bb9e7afa06a0",
+      "status": "pass",
+      "scope": "Focused isolated PostgreSQL Game Coin accounting with fixture native escrow/mailbox receipts; no live inventory or balances mutated, no blockchain",
+      "checks": 3
+    },
+    {
+      "name": "coordinator",
+      "path": "evidence/runs/discord-bot/6cecffb2-0851-43c2-8d4f-9f397d202b14/report.json",
+      "sha256": "b20af267ce9c8c5d7c7b7cc3f2bfb3cf6f94fa38b6ea75c8f660e25512abbc8c",
+      "status": "pass",
+      "scope": "Actual isolated PostgreSQL plus explicitly simulated Discord REST/Gateway/interactions; zero external posts, provider wallets or human verification",
+      "checks": 12
+    },
+    {
+      "name": "feeds",
+      "path": "evidence/runs/discord-activity-feed/0f6a82ba-267e-4f15-b895-2653ae6fb4c7/report.json",
+      "sha256": "1584d53da0fb6af895c0b91c8db499bf854c87f6740951e1252799215ad07290",
+      "status": "pass",
+      "scope": "Focused isolated PostgreSQL and Discord-adapter fixtures; no actual posting, financial writes or live blockchain verification",
+      "checks": 6
+    },
+    {
+      "name": "layout",
+      "path": "evidence/runs/discord-layout/72e97f17-6f43-4d58-b3bd-ae135872bbf8/report.json",
+      "sha256": "b1c291b6cf276f3fb0903904e67d35e3b43809be2ba3a37e8a491b42c09bbced",
+      "status": "pass",
+      "scope": "Actual isolated PostgreSQL; simulated Discord guild/API only; zero external channel writes or Gateway connections",
+      "checks": 7
+    },
+    {
+      "name": "cityWorkQuotes",
+      "path": "evidence/runs/discord-work-orders/5b87c4da-f370-49ec-91dc-c7f394565432/report.json",
+      "sha256": "d58c66537025de8104d87a98068fb4c816b303e0067802927cf2ee0cc2822654",
+      "status": "pass",
+      "scope": "Three focused terms-only isolated PostgreSQL fixtures; no external messages, execution, funding, escrow or payment",
+      "checks": 4
+    },
+    {
+      "name": "canonicalGearParcelRegression",
+      "path": "evidence/runs/world-assets-service/2a893006-cb85-489e-8677-5fc6ff98239d/report.json",
+      "sha256": "2f8e5889300b8f8b02b2eed37eb8acdc73506567f46fa9ffd5f16e28a73f3341",
+      "status": "pass",
+      "scope": "Actual isolated Anvil31337 + PostgreSQL; injected native/identity/unlocked-local-wallet fixtures. No public transactions, actual equipment, human identities or live Privy signing.",
+      "checks": 4
+    },
+    {
+      "name": "realResourcePaperAnvil",
+      "path": "evidence/runs/world-assets-resource/cb65790a-a1ab-44ba-a8b7-417fd0562d21/report.json",
+      "sha256": "4971d005c27ef5d83ebf223fd1cf1ad13b27dcbeff1566f9d875fa6d688c75cd",
+      "status": "pass",
+      "scope": "Actual isolated Paper26.3 resource-lot escrow/claim + Anvil31337 contracts + PostgreSQL translation service. Synthetic Discord/Privy principals and unlocked local signers; no real human, live Privy, public-chain or production action.",
+      "checks": 3
+    },
+    {
+      "name": "nativePhysicalAndRetirementPartial",
+      "path": "evidence/runs/native-onchain-only/4d602106-c7be-4b8d-a4c9-e07f31823049/report.json",
+      "sha256": "168106f1b5da91beda2e62076a81712a11603f651cb774880f6705da141a3abe",
+      "status": "fail",
+      "scope": "Actual isolated Paper resource partial-stack backing, preserved equipment and legacy physical recovery. Synthetic canonical proof envelopes only; no live currency, human wallet or production stock mutation.",
+      "checks": 3
+    },
+    {
+      "name": "nativeRestartContinuation",
+      "path": "evidence/runs/native-onchain-only/219b8422-b846-431c-bb09-fd23a9a66f6c/report.json",
+      "sha256": "2f11940066ad1d183f8b45c5ed5dca4b72cdd246fa1a3f9413da1af08d54a62c",
+      "status": "pass",
+      "scope": "Actual isolated Paper resource partial-stack backing, preserved equipment and legacy physical recovery. Synthetic canonical proof envelopes only; no live currency, human wallet or production stock mutation.",
+      "checks": 1
+    },
+    {
+      "name": "actualCutoverPreflight",
+      "path": "evidence/runs/onchain-cutover-preflight/a52b1e1c-4e0a-4a63-9878-7cfe8c103f51/report.json",
+      "sha256": "a878e2524e82fdd527b2ef4380ee5bf8157a94c9e272c66693720ef3830d4f3c",
+      "status": "pass",
+      "scope": "Actual read-only PostgreSQL/native cutover readiness; zero funds, stock or blockchain changes",
+      "checks": null
+    },
+    {
+      "name": "actualInstalledHost",
+      "path": "evidence/runs/onchain-host/1b45a67c-ef50-46af-ab7b-b2dd25a7490d/report.json",
+      "sha256": "17db439d8fc5f77873b90b8f6fa484d82b90282b06a94e1032513174e942a7d3",
+      "status": "pass",
+      "scope": "Actual on-chain-only plugin/Discord/ledger/custody readback; negative retired-action requests have no effects. No player mint, purchase, withdrawal or wallet signature.",
+      "checks": 6
+    }
+  ],
+  "sourceSha256": {
+    "backend/src/discord/activity-feed.mjs": "b9863e7b4ebb61601a2bf21d9ccb99b783227d0da524dc84e0b96d30d3d140da",
+    "backend/src/discord/bot.mjs": "47f65ed7264e3417be17d669203aeab2d78dd8a6b7dadbfc80fdbdf7f0610cfb",
+    "backend/src/discord/marketplace-runtime.mjs": "788c686f04eedf91fa5e12ef082997d00b724c6a98fe59de792effb73f4b6c01",
+    "backend/src/discord/onchain-game.mjs": "07a13fd59bb75f0e388d330ff1d10c1b0281d76b5e6800fe101e03778b851b25",
+    "backend/src/discord/server-experience.mjs": "c220bc405320f464fbd46dd6c03f25dc3f9073bd0694996f059377d1b5924ad2",
+    "backend/src/discord/work-orders.mjs": "f9eac1032982596ef8b1a03cb8d6634308dfedb11fd7a9a542f92c5fbcf46059",
+    "backend/src/discord/world-assets-runtime.mjs": "0b71d23ec905229531c3f96b05151e6914295a8d918fc18756e8eb6aee00d96d",
+    "backend/src/playable/coin-retirement.mjs": "19312398317e0f23eb580fec7efec2d4817aea473b651dbcce8b79f60b6d43e1",
+    "backend/src/playable/economy.mjs": "01b951b3e3a13318a744b24202bf37404a74ac04e2f45973f9c7bd6192fea7a8",
+    "backend/src/playable/game-marketplace.mjs": "4b18cb4c5d4d3186a5e0f963f361acc3f926aa466ee0da5dd981b07e9a7fd87c",
+    "backend/src/playable/intent-planner.mjs": "10b5e5eb29a68de7b866d8903750797ea233c00beab700057a33f2dac33585b5",
+    "backend/src/world-assets/service.mjs": "1c33c900e4f5bcc93c45558cbdd89c6c1b0eb66dea5bfe008a5796155aa2209c",
+    "config/playable-release.json": "8713a6180b4890b5bcfbbf2dae53c70ebeb48ec01d499a4ddf215adeee822a4f",
+    "docs/AGENT_CAPABILITIES.md": "c3b1c634826b6779d2b5214092e11d553d1a05f09f944d88c5427b3372f8c882",
+    "docs/BLOCKCHAIN_ASSETS.md": "9029c719e463ca7631e788a658cfea585c96d9936a1239278e6e2e4751debb0c",
+    "docs/DEPLOYMENT_ROUTE.md": "4362f7d10f1ca4bdde5f04823cac4a5f0548c4396ecc734f123e36765bb20c8a",
+    "docs/DISCORD_ONBOARDING.md": "d8dc8c10638f6834e6fd9cdac4fa46903b41e33e51d8ceaf48e767753ebe104b",
+    "docs/GAME_MARKETPLACE.md": "ddbc81dfc378f4afb3f4a03208c629bb1ba640c67b1e77dba8d909d07cc6275b",
+    "planning/phases.json": "5c4ce4f103d2135eaffa96b3693a9b63f5bddb10b323f5d021b5c152f8722a03",
+    "planning/scope.json": "e6abe223cbbf6a3e95d2b812f33db5b60eda8f034c8ee9ab8585a84df633ecda",
+    "plugin/src/main/java/org/agentcity/paper/AgentCityPlugin.java": "bc1a527bb8571621595ce53b4d6a818134d740181ead74470e56409fcbb311e0",
+    "plugin/src/main/java/org/agentcity/paper/EconomyMode.java": "c0e7aeb9f8c73fc39d483edd48f30de7622bb0b33122e63e27f35565b3bbeb1e",
+    "plugin/src/main/java/org/agentcity/paper/InventoryEscrow.java": "120e134817ee4c76b06cb25baaec522bd6024c196c98f4b731f56195304ff483",
+    "plugin/src/main/java/org/agentcity/paper/InventorySales.java": "03f36f56abaed5cc455c967da8b995d3f7c2c9af46f924e2d70b88c84033527f",
+    "plugin/src/main/java/org/agentcity/paper/PlayableExperience.java": "954cd71120d5d82d10d06408cbf7143d15299004fbaeeadfb353b9bd6321c696",
+    "plugin/src/main/resources/plugin.yml": "fe547878b8f0e7a08df2d0f6d6b80a91beb41c37c434a2178b0c3ea02735f96e",
+    "scripts/onchain_cutover_check.mjs": "cd29bf6b0e70807f8504dcda665590fd7ba85b6701088dc8e06a5f4e6bdf1232",
+    "scripts/onchain_host_verify.mjs": "d6a10fc2b2b2a399271849da81b0ebde0f649c2c8ffd3cf13d2d59b1e5a489ec",
+    "scripts/playable_worker.mjs": "acc23845f7fbeafc92d3857c2fcfbea19f4ae0041f0690f5c6c978b49357cd3d",
+    "tests/playable/activity-feed.mjs": "2db142ba5a024c4d7d12a9049afbc3b138392f1b1df4d8ba367f868ca5565155",
+    "tests/playable/coin-retirement.mjs": "21f45578ca7faa7a4cc50bc3caaff795eba491cd9771d7f95113352b07145eda",
+    "tests/playable/discord-bot.mjs": "d9df94314b4b7b2e843abc724123a98f5cc519ab01e85d89e4f7f3c4b725890c",
+    "tests/playable/discord-marketplace-runtime.mjs": "8e08927800a24c47cb83cd64a6a92a3bcb933fc748110c9ff490566378147d44",
+    "tests/playable/discord-work-orders.mjs": "c817a8834efc65f027436ea011c034e00661921e96e8f57f599e9662dde9dc8f",
+    "tests/playable/economy.mjs": "9a948fcc2ab62187c4d1d5a029df9f44e144065583c7a346d6801a632f3c4d6c",
+    "tests/playable/game-marketplace.mjs": "38f0fad35964b26116b1ff9f62242165d582a31685f0aec6d16abc6a8a480ec6",
+    "tests/playable/intent-planner.mjs": "6e00edb20d55d10baecc7b9603a0e9f0583e51454b4b79108c744afa31ca043d",
+    "tests/playable/onchain-game.mjs": "f6aa9b4ab8d9db64185e8b6cf402020f0b4cba6ffba829acdc34b119718f86a6",
+    "tests/playable/onchain-mailbox.mjs": "bc941adefed8f830e819b77fdbe64f5e7cc7afc2e5c96f765c98d19bb044007f",
+    "tests/world-assets/SeamEquipmentStock.java": "c73430dd7c1d4bf41f5f1661e73e7e022922ba3534a45cf5079959593a02f794",
+    "tests/world-assets/anvil-live.mjs": "a3d791460045e8e60a1a9d9d1820bd7ea85ccebbc3cf6d430d71a74b93859021",
+    "tests/world-assets/discord.mjs": "dd52a80ec9a35f3365d3c2c38a572b326b468ebdb42a6d7664757cb1e3020250",
+    "tests/world-assets/minecraft-resource-live.mjs": "7cec89d20b687645ba5668f3d69531aecac4a77515c7ecb48d9810b0ba09120a",
+    "tests/world-assets/native-onchain-only.cjs": "93a52a6576d1fca77951676de29425f7162e6440b063cb9118b6e696e966cd3c",
+    "tests/world-assets/paper-fixture.cjs": "14ff92ffb388104a05e1b1a9121b03e2ddc66eb53299bcf568fc9c118ca2ef5d",
+    "tests/world-assets/unit.mjs": "03b94296ceecdb8a2885d6ef448e6eefd0656563bbc339e9c1914cbc0eb095a7"
+  },
+  "focusedStdoutChecks": [
+    {
+      "command": "node tests/world-assets/unit.mjs",
+      "passed": 4,
+      "scope": "isolated typed policy/canonical/store/resource binding fixtures"
+    },
+    {
+      "command": "node tests/playable/onchain-game.mjs",
+      "passed": 4,
+      "scope": "identity/native/chain-service transport fixtures; no actual signing"
+    },
+    {
+      "command": "node tests/playable/onchain-mailbox.mjs",
+      "passed": 1,
+      "scope": "injected verified alias/session/mailbox fixture with no internal currency account"
+    },
+    {
+      "command": "node tests/world-assets/discord.mjs",
+      "passed": 2,
+      "scope": "bound agent/item/quantity and explicit on-chain confirmation transport fixtures"
+    },
+    {
+      "command": "node tests/playable/discord-marketplace-runtime.mjs",
+      "passed": 6,
+      "scope": "explicitly historical currency adapter fixtures"
+    },
+    {
+      "command": "node tests/playable/intent-planner.mjs",
+      "passed": 15,
+      "scope": "bounded plan/receiving fixtures, not live LLM quality"
+    }
+  ],
+  "planning": {
+    "unitCommand": "python3 -m unittest discover -s tests -v",
+    "passed": 56,
+    "planCommand": "python3 scripts/check_plan.py",
+    "planResult": "PASS 11 phases,270 scenario families,18 upstreams",
+    "productQualification": false
+  },
+  "canonicalPhase": {
+    "phase": "P0",
+    "gate": "blocked",
+    "command": "python3 scripts/check_phase.py P0",
+    "exitCode": 1,
+    "reasons": [
+      "implementation scope changed since approved release",
+      "P0-015 docs/UPSTREAM_REUSE.md artifact hash mismatch"
+    ],
+    "originalEvidenceRewritten": false
+  },
+  "livePreservation": {
+    "legacyAccounts": {
+      "accounts": 7,
+      "available": "712",
+      "held": "0"
+    },
+    "allCoinTableSnapshotsRetained": true,
+    "originalBackedStickLots": 2,
+    "originalUnbackedDrafts": 2,
+    "nativeJournalRetainedByteForByte": true,
+    "newHumanSignaturesByAgent": 0,
+    "newUserAssetsMintedByDeployment": 0,
+    "operatorHealthPublisherMayRenewWithinExistingBudget": true,
+    "paperRestartedGracefully": true,
+    "worldsAndTunnelsPreserved": true,
+    "workerPid": 33512,
+    "workerReadyObserved": true
+  },
+  "privateCoordinatedBackup": {
+    "worldArchiveSha256": "f856306dc104feafafb192a2ffe211e5825da8b1149b2eb3a53dd2ed788cb68b",
+    "databaseSha256": "8d078509ec2f5fe8f0b385dfa601016d1b9c029a658c51a34bdc376738b63869",
+    "databaseBytes": 728863,
+    "encryptedRoleStorage": true,
+    "backupMode": "0700 private WSL directory",
+    "restoreTested": false
+  },
+  "retainedFailures": [
+    "coordinator9a22218c initial on-chain schema test caught a remaining Game Coin work-quote choice; removed and rerun passed",
+    "native4d602106 wrapper failed final restart probe before escrow HTTP module ready after three real guard/stock/equipment checks passed; same artifact/world continuation219b8422 passed without new stock or reset",
+    "owned worker stop helper raced with worker exit and reported unverified PID; subsequent read-only process/supervisor checks confirmed both stopped, no unverified process killed",
+    "earlier retirement helper fixture attempts remain beside final passing reports"
+  ],
+  "qualification": {
+    "actualResourceFlow": "Actual isolated Paper+PostgreSQL+Anvil NFT/3CITY purchase/burn/claim; seller2/buyer1, original fingerprint retained, retry zero new items/transactions",
+    "identityAndSigning": "Combined-chain and receiver proofs use explicitly synthetic identity/local unlocked signers; public Privy trade acceptance remains unverified",
+    "nativeRestart": "same d655 artifact and retained world/inventory/journals, durable mode marker and no new effects",
+    "historicalCurrency": "old test-only behavior retained for research and recovery, never enabled on live host",
+    "independentHumans": 0,
+    "newProductionQualification": false
+  },
+  "remaining": [
+    "human-confirmed Privy registration/purchase/redemption on public testnet",
+    "second independent player acceptance and actual item/estate delivery/access",
+    "extended coordinated crash-window and restore qualification",
+    "funded work-order execution/settlement; CITY quotes remain unfunded proposals",
+    "dedicated per-agent bot applications/live DM checks, Microsoft and0G live evidence",
+    "original canonical research/platform gates"
+  ],
+  "nextStep": "Owner withdraws and claims any earlier stick lot, explicitly registers the actual stick with /assets action:register_item source:player count:1, then sets and confirms a CITY listing price. A second independent player purchases and redeems the exact lot."
+}

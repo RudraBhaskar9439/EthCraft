@@ -1,0 +1,83 @@
+{
+  "status": "pass",
+  "scope": "Actual isolated Paper native escrow and isolated PG composition; synthetic Discord registrations and Mineflayer clients; no independent human, production inventory/ledger or blockchain effects",
+  "checks": [
+    {
+      "name": "exact failed fixture retained completed trades and native inventories; no reset or restock",
+      "status": "pass"
+    },
+    {
+      "name": "offline registered owner escrows two actual owned-agent items once; foreign owner denied and the same two items return to the approved owner",
+      "status": "pass"
+    },
+    {
+      "name": "restart preserves custody history and stable completed claim across a newly approved connection without extra items",
+      "status": "pass"
+    }
+  ],
+  "fixtureGrants": [],
+  "productionWorldMutations": 0,
+  "independentHumansVerified": 0,
+  "resumedFrom": {
+    "report": "evidence\\runs\\escrow-native\\704166b9-7bae-4135-b7f7-8901e4e07db4\\report.json",
+    "reportSha256": "3fddd01f1f2727d33a9a862a2ba12048fdb72377449032e94920eaab70da4728",
+    "previousPluginSha256": "a7a3771a4e84fa3a484f1cadb4c61f6b883c53a1a11aa2db9d5b4bdd30bd1d26",
+    "previousPassedChecks": [
+      "actual 5-item reservation removes stock once, requires exact financial authority, and immutable retries cannot change quantity",
+      "full-lot native buyer mailbox and exact claim deliver five physical items once; foreign claim and seller double-return refused",
+      "cancelling an unsold lot assigns and returns the same three native items exactly once",
+      "modified native stacks are preserved and cannot satisfy a plain-material escrow listing",
+      "composed actual Paper stock→native escrow→isolated PG seven-coin hold→buyer mailbox→settlement→physical claim conserves 200 coins and two items across lost-reply retries"
+    ],
+    "qualification": "These five checks remain evidence for the predecessor JAR; this resumed run separately verifies the corrected agent path and restart behavior."
+  },
+  "pluginSha256": "bf285997b2e5569888a25c7cd51907558bb2c6e4e637923686d806c1c9091840",
+  "container": "agentcity-escrow-fixture-704166b9",
+  "fixtureRuntime": "C:\\Users\\Rudransh Shinghal\\agentcity-minecraft\\.local\\escrow-fixture\\704166b9-7bae-4135-b7f7-8901e4e07db4",
+  "paperSha256": "a836a016be7ac52352eb3a1efb6857bb42ee73a6c78d46e292f7e87742edb0e6",
+  "retainedInventoryBefore": {
+    "sellerOakPlanks": 15,
+    "buyerOakPlanks": 7,
+    "sellerCobblestone": 0
+  },
+  "journal": {
+    "beforeSha256": "d02ba1fa8cda625c72ea37f0f6a7e8dfb81a643c1ecaa57714a7f24ebfbeec8e",
+    "afterSha256": "4dc3d1f261ea4143a292ff051ac3ae2968444ec50ea59414bf2d97cd775ce8f2",
+    "previousHistoryRetainedAsExactPrefix": true
+  },
+  "agentConservation": {
+    "before": 6,
+    "remainingAgent": 4,
+    "returnedHuman": 2,
+    "newGrants": 0
+  },
+  "clientProfile": {
+    "version": "1.21.11",
+    "tickEndAtPhysicsCadence": true,
+    "fixtureOnlyPort": 25606,
+    "clients": [
+      {
+        "name": "EscSeller",
+        "tickBoundaries": 288
+      },
+      {
+        "name": "EscBuyer",
+        "tickBoundaries": 307
+      },
+      {
+        "name": "CityAgent2",
+        "tickBoundaries": 122
+      },
+      {
+        "name": "EscSeller",
+        "tickBoundaries": 11
+      },
+      {
+        "name": "EscBuyer",
+        "tickBoundaries": 14
+      }
+    ]
+  },
+  "fixtureInfrastructure": "Fresh isolated PlayableExperience world initialization seeds its disclosed demonstration task-pad chests; the test does not withdraw those stocks.",
+  "finishedAt": "2026-10-31T16:44:10.907Z"
+}

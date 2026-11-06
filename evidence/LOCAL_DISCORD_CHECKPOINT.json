@@ -1,0 +1,216 @@
+{
+  "schema": "agentcity.local-discord-checkpoint.v1",
+  "recordedAt": "2026-11-05T22:04:10.278788+00:00",
+  "status": "local_discord_privy_minecraft_approval_verified",
+  "productionReady": false,
+  "canonicalPhasesPassed": false,
+  "localService": {
+    "origin": "http://127.0.0.1:8789",
+    "setupPath": "/discord/setup",
+    "setupHttpStatus": 200,
+    "bundleHttpStatus": 200,
+    "configHttpStatus": 200,
+    "providerConfigured": true,
+    "publicTunnelStarted": false
+  },
+  "identityVerification": [
+    {
+      "scope": "isolated PostgreSQL fixtures; no live user",
+      "path": "evidence/runs/discord-identity/99c41a29-e637-4b91-925c-2ce863cee063/report.json",
+      "passedChecks": 5,
+      "sha256": "30a409d3b7307ab8cbb4bb8926ebe2b68cfd19ba7db72122c3f0394cba145290"
+    },
+    {
+      "scope": "official Privy SDK against local fake provider; no live provider requests",
+      "path": "evidence/runs/privy-discord-wire/d0270b27-eaac-4f8a-a504-86a38dbe1924/report.json",
+      "passedChecks": 2,
+      "sha256": "1825998e3b37da43594be617b90840072c6e5fa133593ea0518510d9349fea9e"
+    },
+    {
+      "scope": "isolated PostgreSQL fixtures; no live user",
+      "path": "evidence/runs/discord-identity/58f36cff-93d2-4c61-9656-4303afe724e2/report.json",
+      "passedChecks": 5,
+      "sha256": "30a409d3b7307ab8cbb4bb8926ebe2b68cfd19ba7db72122c3f0394cba145290"
+    },
+    {
+      "scope": "official Privy SDK against local fake provider; no live provider requests",
+      "path": "evidence/runs/privy-discord-wire/9b361ee4-6fce-472f-9e00-ba12b018e1e6/report.json",
+      "passedChecks": 2,
+      "sha256": "19a95e0eaa591ff94d595c3431614b6fd0c354386b42257166c853c854c84fd0"
+    },
+    {
+      "path": "evidence/runs/discord-identity/768a4370-81bf-4543-97db-4bb4e5347af4/report.json",
+      "scope": "isolated PostgreSQL fixtures including the reproduced reserved-name case regression; no live user",
+      "passedChecks": 5,
+      "sha256": "0786aa5f6d0041008c395660c6520f39b4fb7b817b8a7401b7a9657fb766ce20"
+    },
+    {
+      "path": "evidence/runs/privy-discord-wire/9e8f8f40-f51c-4bb9-94c2-b31aec06e48a/report.json",
+      "scope": "official Privy SDK against local fake provider; no live provider requests",
+      "passedChecks": 2,
+      "sha256": "92055af676b39e1819c8eeb62b647439d8335311bc30f26eea9db1fd141985aa"
+    }
+  ],
+  "checks": {
+    "privateSetupHelperUnitTests": 7,
+    "privateSetupHelperUnitTestsPassed": true,
+    "planningInfrastructureTests": 72,
+    "planningInfrastructureTestsPassed": true,
+    "planIntegrityPassed": true,
+    "liveOAuthPassed": true,
+    "liveDiscordBotConnected": true,
+    "privyPrivateApiAuthenticationPassed": true,
+    "privyDiscordLoginEnabled": true,
+    "localLoginButtonsReady": true,
+    "liveDiscordCommandRegistrationPassed": true,
+    "identityOnlyGuardsPassed": true,
+    "identityOnlySetupUiPassed": true,
+    "liveMinecraftApprovalPassed": true,
+    "humanConfirmedNormalWalking": true,
+    "nameCaseRegressionPassed": true
+  },
+  "pending": [
+    "This identity-only coordinator does not start or reassign agents, enable paid inference, expose financial controls or provision managed wallets.",
+    "Adapt and verify current USDC/CITY Discord managed-wallet policies separately; old CITY/GEM manifests and signing policies were not fabricated.",
+    "Original phase, independent-human, platform-suitability and production qualification requirements remain pending where their required evidence is absent.",
+    "Before enabling wallet access or relying on reservation-based whitelist admission, review their remaining exact display-name comparisons; these paths were not enabled or changed by the connected-user approval fix."
+  ],
+  "preservation": {
+    "comparisonRecoveryDaemonLeftRunning": true,
+    "existingSlotOwnersAndBuildsPreserved": true,
+    "walletsAndSigningPoliciesChanged": false,
+    "apiBudgetsChanged": false,
+    "realCredentialsStored": true,
+    "realMoneySpentUsd": 0,
+    "credentialsStoredOnlyInIgnoredEnvAndPrivateAdapterFiles": true
+  },
+  "sources": [
+    {
+      "path": "backend/src/discord/runtime.mjs",
+      "sha256": "460e93e7e9ac5c816ebe69cb90205073d5c5e7ff5a721e13c156c7d31286f633"
+    },
+    {
+      "path": "backend/src/discord/settings.mjs",
+      "sha256": "e1da64d3666bba5d60ba04ea31465ebcdc591a0833e63a397519cf9f4c056f69"
+    },
+    {
+      "path": "scripts/local_discord.mjs",
+      "sha256": "9a21107093a000b0489f4c5558185a9f3ed0d1d4b0b60e79ee6f5c18f2ee615b"
+    },
+    {
+      "path": "scripts/local_discord_setup.py",
+      "sha256": "5497cbf06f737d23493cf031f0be7d383587abd9874a22082ff966cbfc477cd8"
+    },
+    {
+      "path": "companion/src/discord-setup.jsx",
+      "sha256": "ae23680957790a863b5eaa54977daa2e898d3d1cbcb85b6793d270ebbe99566a"
+    },
+    {
+      "path": "tests/playable/discord-setup-ui.mjs",
+      "sha256": "9f91b4c98df8bf47064e6b41c90dffbf6f98dabd68fa98163c86db84f8180e72"
+    },
+    {
+      "path": "tests/playable/privy-discord-wire.mjs",
+      "sha256": "82605661244e0254a145d2de68a5cbe419db03170e2baced246d17c0a1350b3c"
+    },
+    {
+      "path": "tests/test_local_discord_setup.py",
+      "sha256": "6f68a3bbb081eeb80232dd48c8dbd85c7c56c6f5991e9b647c43d9a256429d1d"
+    },
+    {
+      "path": "backend/src/playable/wallet-auth.mjs",
+      "sha256": "1be90d684440733ed1f92b7113827302dcd1a498fce46ff9adc98a9a9d9bfa8a"
+    },
+    {
+      "path": "docs/DISCORD_ONBOARDING.md",
+      "sha256": "87783a0a884cb8b2489c0dd4277d277b87a76f1dcb5e41ff50dd9b9f9407be4b"
+    },
+    {
+      "path": "backend/src/discord/identity.mjs",
+      "sha256": "bb752a3c158dd1c63e61ef9a8edb84b24ce8c30f6ee219390c940bd0f4c9a8a4"
+    },
+    {
+      "path": "backend/src/discord/bot.mjs",
+      "sha256": "7807f24bf63bfef1c46bcdff862ec6e49cedbd128140ea3f749cda0aaaa78c06"
+    },
+    {
+      "path": "tests/playable/discord-identity.mjs",
+      "sha256": "1d51e236e62ddadf52d77a35bc95900d6799f204f6c9bca8215c059c61dca623"
+    },
+    {
+      "path": "tests/playable/discord-identity-only.mjs",
+      "sha256": "ee527c51a52b7229b1682ad86aa30c75fe5b46114f4339f39e9d30135438fb6f"
+    }
+  ],
+  "selectedGuild": {
+    "id": "1566060288111943722",
+    "choice": "existing AgentCity guild, actual name Ruddy\u2019s server; supplied coordinator runs on this Mac only"
+  },
+  "privyAppId": "cmvw5jylz00330fkxvvgfzxw5",
+  "discordApplication": {
+    "name": "AgentCity",
+    "termsCreationApprovedByUser": true,
+    "created": false,
+    "attemptResult": "Discord refused creation: account email must be verified.",
+    "status": "Existing supplied coordinator token authenticated; four identity-only guild commands registered. No new application created.",
+    "id": "1566059596865609758"
+  },
+  "localEnvironment": {
+    "path": ".local/discord/local.env",
+    "mode": "0600",
+    "gitIgnored": true,
+    "suppliedPublicIdsStored": true,
+    "suppliedDiscordCredentialStored": true,
+    "discordBotReadOnlyAuthHttpStatus": 200,
+    "privyAppSecretPresent": true,
+    "importResult": "Verified existing AgentCity coordinator and Privy credentials; dedicated identity-only gateway is running."
+  },
+  "privyLiveReadOnlyVerification": {
+    "path": "evidence/runs/local-privy-config/180346dc-1b5d-448b-890e-1f261c186d19/report.json",
+    "sha256": "c51e049b96943b8fc7deb6b73101f24b25ee03ffaea23fd3eeffccbe4959beb4"
+  },
+  "history": [
+    {
+      "recordedAt": "2026-11-06T02:47:22.032126+05:30",
+      "status": "privy_server_authenticated_discord_bot_credential_blocked",
+      "note": "Earlier supplied Discord credential returned 401; gateway was disabled. Replaced by a separately supplied, verified AgentCity coordinator token. Actual failure history is retained."
+    }
+  ],
+  "identityOnlyRuntime": {
+    "entrypoint": "scripts/local_discord.mjs",
+    "commands": [
+      "start",
+      "profile",
+      "join",
+      "agents"
+    ],
+    "agentsReadOnly": true,
+    "walletSetupAvailable": false,
+    "organizedServer": false,
+    "secondaryAgentBot": {
+      "applicationId": "1566125923667812354",
+      "status": "valid credential stored privately; not installed in selected guild or activated"
+    }
+  },
+  "runtimeVerification": {
+    "path": "evidence/runs/local-discord-runtime/673ef272-ae0e-4704-8565-fec02e54635c/report.json",
+    "sha256": "7342b7bdc63e23345cf432f29439986ce721d9cfeea57b870ab91da8e11b9e7e",
+    "userReportAloneAcceptedAsProof": false,
+    "latestObservedStatus": "Actual online Micro session has pendingAuthentication:false and discord_approved_local_profile; current approved connection, principal and alias match. User independently confirms walking works."
+  },
+  "runtimeVerificationHistory": [
+    {
+      "path": "evidence/runs/local-discord-runtime/458ce778-6a29-488d-8675-66b5df55e9b8/report.json",
+      "sha256": "7d980bae899360dffee4a7318278fa995b6b53a0a0b31af75d55054388a02db0",
+      "userReportAloneAcceptedAsProof": false,
+      "latestObservedStatus": "Account and Micro reservation recorded; native player disconnected and no join approval recorded."
+    }
+  ],
+  "regressionHistory": [
+    {
+      "failure": "evidence/runs/discord-identity/51deb02d-d788-4c87-96b9-2f471fad96f8/report.json",
+      "rootCause": "Reserved micro was compared case-sensitively to native Micro. The regression failed before the fix. Shared approval now uses the existing normalized reservation name; exact UUID/connection/server/principal and receipt checks remain.",
+      "pass": "evidence/runs/discord-identity/768a4370-81bf-4543-97db-4bb4e5347af4/report.json"
+    }
+  ]
+}

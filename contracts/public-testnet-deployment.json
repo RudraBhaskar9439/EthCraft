@@ -1,0 +1,49 @@
+{
+  "chainId": 1301,
+  "environment": "PUBLIC_TESTNET_SYNTHETIC_ONLY",
+  "rpcUrl": "https://sepolia.unichain.org",
+  "genesisHash": "0xb7fe0bc9f98ca03294ca0094ff9374cc3e64130b6ec85850d6e260191f48bfe7",
+  "admin": "0xb46334D7786Cd6C288949E1D21642Df0D2395498",
+  "warehouse": "0xFFb08B95dFF49953d8c9f4e75e24993549A807F1",
+  "publisher": "0x5a262B9621eD0F00Fe776bb85084E9561cF18608",
+  "attestor": "0x62838D2A2a9C03F492317A61D528A1e544A5bc5d",
+  "requester": "0x93329116335F53bdb335223f6A95aB9355ff37b1",
+  "builder": "0x2091117cf9EC654bA48beb2Adf731d7099CaE77e",
+  "issuer": "0x0740369C70baDe71B3DF30243D9D00F8c3BEFA3A",
+  "creditToken": "0xb7f284315c88fed7e8bf3a0a1208fe8afc35abcd",
+  "kitCustody": "0xda2ec869cc3d95e75ef6b48edb34e965e0980dd5",
+  "stateRegistry": "0xf035f2570dc6cb85fbcc1449e1455e128043d5f5",
+  "poolManager": "0x9cB26A7183B2F4515945Dc52CB4195B0d2D06C95",
+  "hook": "0xAaf77897b884B593A9c2a085A411C6495119C080",
+  "procurement": "0xfd48750b087e441b9fabb3f19e828a4aa6d005c2",
+  "jobEscrow": "0x29a1b8f2408ba8fc7bef17d1d75f10a133328d01",
+  "positionManager": "0x12A98709BB5D0641D61458f85dcAFbE17AC2d05c",
+  "serverId": "0x59579c2e4afc825e918b444d42ce0ea96b1f4361a962d5d850c63e071d79fd58",
+  "bundleHash": "0x2dd1ccf5bbf53c26cd372608ebb14c153ec57f76067dbbf4de1a93eac7857dbb",
+  "poolKey": {
+    "currency0": "0xb7f284315c88fed7e8bf3a0a1208fe8afc35abcd",
+    "currency1": "0xda2ec869cc3d95e75ef6b48edb34e965e0980dd5",
+    "fee": 3000,
+    "tickSpacing": 60,
+    "hooks": "0xAaf77897b884B593A9c2a085A411C6495119C080"
+  },
+  "official": {
+    "PoolManager": {
+      "address": "0x9cB26A7183B2F4515945Dc52CB4195B0d2D06C95",
+      "codeHash": "0x2566e42d45723eef05d7253a7b7c140a6da61992594525fc66d06b4a973b5d0b",
+      "sourceRef": "77d52a7"
+    },
+    "PositionManager": {
+      "address": "0x12A98709BB5D0641D61458f85dcAFbE17AC2d05c",
+      "codeHash": "0xb2c86861af8fd6940106d15098ac04383d121b388044878a0d7d9117535f6885",
+      "sourceRef": "77d52a7"
+    },
+    "Permit2": {
+      "address": "0x000000000022D473030F116dDEE9F6B43aC78BA3",
+      "codeHash": "0x6df9d9804d74bce5ad57c8145936ec9cdb3d91a655da68b9b1b1c4ea8e001433",
+      "sourceRef": "permit2@1.0.0"
+    }
+  },
+  "scope": "Separate synthetic contract demonstration; no token effects in Minecraft",
+  "confirmations": 2
+}

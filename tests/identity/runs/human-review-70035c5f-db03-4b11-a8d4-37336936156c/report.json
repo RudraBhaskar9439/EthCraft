@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "scope": "Actual local operator preparation and reuse only; no wallet signature or transaction submitted",
+  "checks": [
+    "missing operator capability and foreign origin refused",
+    "oversized body and arbitrary participant input refused",
+    "repeat preparation retains the same immutable agreement and two requests",
+    "each scoped private link returns the correct wallet and separate-contract boundary"
+  ],
+  "agreementHash": "0x7607d1d0fec2f98f4f5f25b6b110be38f7bcf21e3152b148c2b7f965ba6c60f3",
+  "transactionsSubmitted": 0,
+  "sources": {
+    "backend/src/identity/human-review.mjs": "e519c91f29599efd49717b78d169ce8bf558fb677795b8218ffbf3b21ae04791",
+    "backend/src/server.mjs": "6f1886f14dae4653c014a44bff12b403a6a54aa0339c71ef2c5aecf2924edf3c",
+    "backend/src/web/console.mjs": "086e897c7cccb4e746291da06280810b06381a54ffe02422a2d23d156d8ab6e4",
+    "scripts/prepare_human_approval.mjs": "ba0eaedf2ea4e5d315e4a10f08c829c3ae7c1218b0a3a8ed3a4d91511d4a133f"
+  }
+}

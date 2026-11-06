@@ -1,0 +1,132 @@
+{
+  "status": "local_candidate_verified_live_deployment_pending",
+  "recordedAtUtc": "2026-11-01T05:53:32.204656+00:00",
+  "baseRelease": "5278b04f4a9360238697ceb4add32c9550324e87",
+  "capacity": {
+    "previous": 2,
+    "candidate": 3,
+    "names": [
+      "CityAgent1",
+      "CityAgent2",
+      "CityAgent3"
+    ]
+  },
+  "scope": "Third personal-agent slot; no current host, wallet, inventory, owner or live task modified.",
+  "implemented": [
+    "Three durable manager slots and shared Discord name admission",
+    "Three named native agents across task protection, grants, custody, property access and onboarding",
+    "Separate third work area; legacy two-pad coordinates and initialized state preserved",
+    "Upgrade refuses occupied new work-area cells rather than clearing an existing build",
+    "Existing walkway and original chests are skipped during expansion",
+    "Worker refuses an older or incomplete plugin capacity response; fresh-host whitelist includes CityAgent3"
+  ],
+  "verification": [
+    {
+      "command": "node tests/playable/agents.mjs",
+      "status": "pass",
+      "groups": 7,
+      "scope": "Simulated bots; three owners, fourth-owner refusal, restart, exact old-owner preservation and replay; worker rejects unavailable or incompletely upgraded plugin state"
+    },
+    {
+      "command": "node tests/playable/discord-bot.mjs",
+      "status": "pass",
+      "groups": 13,
+      "scope": "Actual isolated PostgreSQL; simulated Discord and grants; no external Discord operations",
+      "artifact": "evidence/runs/discord-bot/c5259bab-54e1-4a8e-9b92-7a50569d1c2c/report.json",
+      "sha256": "e4d771d0f8a90108646cdcff9a8f9a98bd3f5cb1b62ea9b6dc2eb2787d6e6eee"
+    },
+    {
+      "command": "node tests/playable/remote-agents.mjs",
+      "status": "pass",
+      "groups": 6,
+      "scope": "Remote authority fixtures; no independent-human claim"
+    },
+    {
+      "command": "node tests/playable/intent-planner.mjs",
+      "status": "pass",
+      "groups": 15,
+      "scope": "Focused planner/workflow fixtures"
+    },
+    {
+      "command": "javac --release 21 with pinned Java25 image and WorldGuard/WorldEdit dependencies",
+      "status": "pass",
+      "scope": "All plugin Java sources compiled and packaged"
+    },
+    {
+      "command": "org.agentcity.paper.AgentCapacityCheck",
+      "status": "pass",
+      "scope": "Exact admitted names, legacy pad count and stable non-overlapping plot layout; no real-world mutation"
+    },
+    {
+      "command": "org.agentcity.paper.DiscordAccessStateCheck",
+      "status": "pass",
+      "scope": "Private-state parsing and decimal location round-trip"
+    },
+    {
+      "command": "python3 scripts/check_plan.py",
+      "status": "pass",
+      "scope": "Planning infrastructure only"
+    },
+    {
+      "command": "python3 -m unittest discover -s tests -v",
+      "status": "pass",
+      "tests": 56,
+      "scope": "Planning infrastructure only"
+    },
+    {
+      "command": "python3 -m py_compile scripts/playable_host.py; node --check scripts/playable_worker.mjs; git diff --check",
+      "status": "pass",
+      "scope": "Syntax and whitespace"
+    }
+  ],
+  "candidatePlugin": {
+    "sha256": "58b56388943f9153f8a385b9ba3702a7273e35d807fee1cacb58b369a680557d",
+    "javaImage": "eclipse-temurin@sha256:83f4a7fc27df94dcc7b8de04d14cbbba8da14406f921e966969c3b09000aa507",
+    "release": 21,
+    "dependencyPins": "config/property-dependencies.json",
+    "installedOnLiveHost": false
+  },
+  "canonicalGate": {
+    "phase": "P0",
+    "status": "blocked",
+    "reasons": [
+      "Implementation scope differs from approved release",
+      "Retained P0-015 upstream-review artifact hash mismatch"
+    ],
+    "historyRewritten": false
+  },
+  "unrun": [
+    "Native world upgrade and third-bot login on the teammate host",
+    "Real third-slot construction and material accounting",
+    "Third-agent native custody/redemption and estate access",
+    "Host load/capacity measurement and independent-human acceptance"
+  ],
+  "deploymentRequired": [
+    "Coordinate an idle window and back up runtime and database",
+    "Build and install the plugin from this same source; preserve the world and existing private files",
+    "Merge CityAgent3 into the existing native whitelist with its offline UUID",
+    "Confirm private playable status reports capacity 3, initializedTaskPads 3, and three task regions before starting the updated worker",
+    "Verify old owners and inventories unchanged, then let Micro create the third agent"
+  ],
+  "sourceSha256": {
+    "backend/src/discord/bot.mjs": "637468f70663d3c51ed4eb25b88432628d3d6f2cf36bf751529ecf1e07a071b1",
+    "backend/src/discord/runtime.mjs": "e2505a4381d44f8494d5b437e3fcefd062823b168a2bc183158bd3d53a68ded0",
+    "backend/src/playable/agents.mjs": "d91401600c492763feb46065a8b05a919b2889fd2dcfb4e6bc80f6926f57c7b6",
+    "docs/AGENT_CAPABILITIES.md": "31d09ca67955650aec9b58c016c1fef62bac970119a0ef20b397746041ee98ff",
+    "docs/DISCORD_ONBOARDING.md": "1264f15522917e4cd906efeaa1189591ec6c1ce410130eaabca89e71961fcec9",
+    "planning/phases.json": "e8ffcce8c855be72240be42a57699ebecade1efadd587051ac2e4528489a61af",
+    "planning/scope.json": "0c885924970164a6ec3fa09d7ad4204cf3080725c85958b788d25406e1bf1b03",
+    "plugin/src/main/java/org/agentcity/paper/AgentTaskProtection.java": "27ce74cba7ef8000faaa0bef6fd87a1d75eb8d2bb6d2949a4eb268057cf39588",
+    "plugin/src/main/java/org/agentcity/paper/DiscordGameAccess.java": "14021c34fd4914e84485bb8104b9712308bd0a3a6c167e2a2a48faec4cb546f5",
+    "plugin/src/main/java/org/agentcity/paper/InventoryEscrow.java": "e9cce6a09acccf3b84c66ca776edc92040d88708a35af6b0338645b35f04d66f",
+    "plugin/src/main/java/org/agentcity/paper/InventorySales.java": "fd5f5bca8ffd0c4238101701eacd2e4add9968dc0c0c239ec53305a7960ad883",
+    "plugin/src/main/java/org/agentcity/paper/PlayableExperience.java": "0827afde8107f8de7c624d0852a7d3cb99ac77b2e9dd22c01de4c8f24652225d",
+    "plugin/src/main/java/org/agentcity/paper/PropertyProtection.java": "41a82d699774de676aa7f8205eab75b7d40571ebc3ff578f413c7949a2d9db99",
+    "plugin/src/main/java/org/agentcity/paper/RemoteTaskGrants.java": "b4407a8b8849376c9388e342176d6b63a80d78235a7b7ea23dcd899cf35e0dc5",
+    "scripts/playable_host.py": "ef7a23797e8c182fe3f5c884040a26ba949dc155c639876d39a0796425e6487c",
+    "scripts/playable_worker.mjs": "7ddbbfdc0345d2235bce3701e794ec7bef8f5fe60ffdfb20f6a5afe9f2c252ce",
+    "tests/playable/agents.mjs": "d960a70c733fbfb181b617cf8f09a73640684da25d604be0f161ba340cc188db",
+    "tests/playable/discord-bot.mjs": "a40410cc96a0f4e15cb5d9157b3886a554bfce3b547430c142ce4d6f610031bd",
+    "tests/inspection/AgentCapacityCheck.java": "e264a04c5cc219c4d4a14af9a88b6fe7928b08c0377856e58de7f6d20bad6e7a"
+  }
+}

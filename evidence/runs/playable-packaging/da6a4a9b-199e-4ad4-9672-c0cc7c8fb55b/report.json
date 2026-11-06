@@ -1,0 +1,172 @@
+{
+  "status": "pass",
+  "runId": "da6a4a9b-199e-4ad4-9672-c0cc7c8fb55b",
+  "scope": "Credential-free Docker container loopback HTTP packaging fixture only",
+  "tests": [
+    {
+      "name": "pinned-image-nonroot-readonly-no-credentials-no-docker-socket-no-published-ports",
+      "status": "pass"
+    },
+    {
+      "name": "actual-player-page-built-bundle-config-and-foreign-host-rejection",
+      "status": "pass",
+      "result": {
+        "uid": 10001,
+        "node": "v26.3.1",
+        "responses": [
+          {
+            "path": "/player-wallet",
+            "status": 200,
+            "bytes": 306
+          },
+          {
+            "path": "/player-wallet.js",
+            "status": 200,
+            "bytes": 5972910
+          },
+          {
+            "path": "/api/player-wallet/config",
+            "status": 200,
+            "bytes": 77
+          }
+        ],
+        "foreignHostStatus": 403
+      }
+    }
+  ],
+  "databaseWrites": 0,
+  "providerWallets": 0,
+  "publicTransactions": 0,
+  "realMoneySpentUsd": 0,
+  "independentHumans": 0,
+  "image": "sha256:b39c53090f5e95a59d009b832f9af31fb19469cd7286fc2fa13103e94e67206f",
+  "sourceHashes": {
+    "Dockerfile": "c98a33e1994656ab3dd57dcc58e67f4702f0cbc1d84849e498644effd17af87d",
+    "Dockerfile.dockerignore": "c78b2d2c99bd1254887dc64d943637113019ca4354d0c47651c5b814719dcfd7",
+    "entrypoint.mjs": "0ce43c8de82a1a9f8e9344081e90d70dbf8ac95f95d7ed6846f312e7d133c619",
+    "compose.yaml": "fd0ac4c3d08ba647826211ac1c90fd0f88e32766285e3b95273a2b0e8d1c33a8",
+    "compose.infrastructure.yaml": "aef9309aeb99ade0624e0b39874b7795249e4c230eac0aeafd8c191ecddc5142",
+    "nginx.conf.example": "fc648b81fe79901287cde61137e1e536bb8c7718f62788f263bd63d473a18b90",
+    "wallet-upstream.conf": "e24b88c46e89f88adc9a121c75ff414a106aa5722951b40e17b59e2f70133da1"
+  },
+  "buildFindings": {
+    "botDependencyAudit": "npm ci reported 6 moderate vulnerabilities in existing lockfile",
+    "companionBefore": {
+      "info": 0,
+      "low": 0,
+      "moderate": 11,
+      "high": 20,
+      "critical": 0,
+      "total": 31
+    },
+    "companionAfter": {
+      "info": 0,
+      "low": 0,
+      "moderate": 7,
+      "high": 23,
+      "critical": 0,
+      "total": 30
+    },
+    "compatibleFix": "Only ws8.18.0 and8.18.3 overridden to8.21.0; no force or SDK major changes",
+    "unresolved": "Zod3->4 API major, decode-uri-component CJS->ESM and UUID buffer bounds; production release remains blocked pending supported upstream fixes and authentication verification"
+  },
+  "containerLog": "AgentCity laptop console: http://127.0.0.1:18789",
+  "currentSourceBinding": {
+    "status": "pass",
+    "scope": "Exact runtime source and ABI bytes compared between current frozen host tree and final image using a credential-free non-networked container",
+    "files": {
+      "backend/package.json": "abcd789cb4888b8e71656762edb2377d40fad20b34f8a3e91f92822c6d6961a0",
+      "backend/src/agreements/schema.sql": "3ad488a2ab0f50118c4600332ebc633463147d447480a3ee9b3f71bd82f224d3",
+      "backend/src/agreements/service.mjs": "5ced57d1715d6a17633a60bab31bd39f26a09b66e2860c43f5be757b6ec92a0e",
+      "backend/src/bot/checkpoint-store.cjs": "bd857c0b57ca4533c5bde3eb643b99500c35c98fd107b6ce865014c4702654e4",
+      "backend/src/bot/client-protocol.cjs": "1127043a435511d544398214c69812050f0573007edf9486894b22bd854e5e63",
+      "backend/src/bot/construction-worker.cjs": "4effac5a0100bb9a6c51461b5790e7e0848294304fb6398e849e3f20f2790297",
+      "backend/src/bot/minecraft-adapter.cjs": "23d5bce11bcc64e2f8925d75deafc518085d6128614ea98afe9d4d19b5753b6b",
+      "backend/src/bot/proposal-gate.mjs": "e3ca45fefeaa68623ef8629d1600c628000bae6974304cfcc3805d9635c79078",
+      "backend/src/chain/development-wallets.mjs": "2b9e0af74a6108159daca851c24c95c0ab71f14fddf110856cb426f1c953baa8",
+      "backend/src/chain/durable-evm.mjs": "4bed8c439f463b52f64b848456662d7fec088a77327b46b42ea0f83120494cf9",
+      "backend/src/chain/external-wallet.mjs": "728f5f9cf508cc4bf075a2d9c52d7b2f1d607aea52a822ecb5b3085326721cc9",
+      "backend/src/chain/external-wallet.sql": "5ee36401cf02f033d1268b9c0db45893531ba3a7e8c45c4f33f4126404d9820a",
+      "backend/src/chain/local-evm.mjs": "cac0f17793e9f77777861f3f66fc2d6eaaa2c7334033cfb0eea5ed0ac50db2a1",
+      "backend/src/chain/public-testnet.mjs": "e47d63acfee6dd8f8e61235058213cc283514c6e9c83089fbe39ade1cc220691",
+      "backend/src/chain/schema.sql": "e0cb642738561e97465ca31ab609993768d79020bdbce941eafedb99b2f143e2",
+      "backend/src/chain/testnet-runtime.mjs": "538ae0d37a002caacd9958fc9ffb765b93fe133d3bd9c6defb5be7c26bcc8109",
+      "backend/src/delivery/evm-claims.mjs": "a7991c4e1e7ce15cc8b0440f60cbc5ee2657beb7689cf65479a86f1df449c816",
+      "backend/src/delivery/schema.sql": "e3a58800fc8f79b26f91cd16a271a172b1533b9cdd71e4cba72c76960ee9651f",
+      "backend/src/delivery/synthetic-inventory.mjs": "410c403662a5a90a30874f481d3244050ab94a839b6decd1905e74c1080321b5",
+      "backend/src/discovery/adapters.mjs": "eaa076926dc57ca82113a5348ad5263a2824707a48122cc932a23cb21ddf158b",
+      "backend/src/discovery/demo-discovery.mjs": "69e631fa9ec75e141538ee53836e83c46ae8784f143d52b5aba0e4308daf6351",
+      "backend/src/discovery/public-testnet.mjs": "c6966d2e34f219273da852a1f525bb35bc6cb8310856f651fca27c80624b8eb2",
+      "backend/src/discovery/schema.sql": "b5a442f008a6a8f128ec368477a5e96bca2fe755cf346c2da9ee110e0698b6af",
+      "backend/src/discovery/service.mjs": "c68399731807b1f18de261ba9c6a794931f99ebbda7204a86923b1b8d8148ae3",
+      "backend/src/identity/handoff.mjs": "08e4c4e8aca6e095382b77f8f2a1c33ce234afc8b4cae8f5789e10a153a32fe6",
+      "backend/src/identity/http-runtime.mjs": "2282d2928f93341cecec91c2714da2e49c81b7aab668eb76041c16b0f696d1f0",
+      "backend/src/identity/human-review.mjs": "e519c91f29599efd49717b78d169ce8bf558fb677795b8218ffbf3b21ae04791",
+      "backend/src/identity/minecraft-sessions.mjs": "47fc451f3f9c732e5331b2b8a6ce068a8cbfaf8636993553768682c6afe9a3e6",
+      "backend/src/identity/schema.sql": "fff60d418a0f689fc57a36eff3eec5a41c1ec6e4d06eb85505053ba4331352fd",
+      "backend/src/identity/service.mjs": "6257e8c9618d9bac4ede1a3f2c39beb5c0b2394286f80ad1ba7b6ece183b08db",
+      "backend/src/inference/decision-service.mjs": "edcb0f476a356b75d8f236309728def53621051f72ab63a60ae95b3cdd5bfdc4",
+      "backend/src/inference/proposal.mjs": "1747c94923e3cced34a84b6dd606c5899f9763c3315f56adeadaf4720d07248b",
+      "backend/src/inference/providers.mjs": "f220fca5300b1befa41819dd843089d6370ecb232e5896304f0c616a42b29df4",
+      "backend/src/inspection/coordinator.mjs": "ac8e741336cd525bdc58c6f07684d11b26fa1db5f6f1e59496ca86a29f0e5891",
+      "backend/src/inspection/schema.sql": "6879658358e272b81c4a252796b9e6b993d2ccc3d503e5054613317ee3c73970",
+      "backend/src/inspection/settlement-service.mjs": "769ccda04405a79294fec760e5109d267e90194b4e058cb91049cc4167c69d7f",
+      "backend/src/inspection/synthetic-world.mjs": "7b71499e59b230be13f7c7cbbb337236e75542f0eef80c285914038f6958ad0f",
+      "backend/src/playable/agents.mjs": "be5c5d3e8fbf15f88b1eecf6de135ea54ce38075398a6e10d84d931138bac431",
+      "backend/src/playable/crypto-sales.mjs": "ae18875d07288a107b7da5baffdc51c38cd962b7ac298407644019c718dbd52d",
+      "backend/src/playable/economy.mjs": "2c22d7c23723151028256812f44b9f5dbfebc8f5c07b2cd96a284755ec4bb634",
+      "backend/src/playable/economy.sql": "77fa9cbfa966643781fea1dc11db445b5102876026bcd1b295e4ebe8a127de61",
+      "backend/src/playable/intent-planner.mjs": "65f2c123397f97b2c28a7189174f0c10998606b6a35c1749d1922fd7d7a5956c",
+      "backend/src/playable/market-runtime.mjs": "446a4c57de7490a6ff443e245253ba9dc6cb8ff93a77be1ce2ecdc53fd84a6fb",
+      "backend/src/playable/task-tools.mjs": "d89af682392fd307e32d50c7d3df894df462c584563011b37b3cf3969c86bae9",
+      "backend/src/playable/testnet-wallets.mjs": "4846a7d5dd9252caa17f21d4147ea1062f1dff46eeb6bf934ea384643a102667",
+      "backend/src/playable/uniswap-market.mjs": "9ef6eb5d1ed310da3049155afc88feecf53ff0dd7bdb9d2e49a4e582d5c2cae7",
+      "backend/src/playable/uniswap-market.sql": "c310b6376d687d284755dc9a08f29e3af935595079de2ce7213e88f5184a41f6",
+      "backend/src/playable/wallet-auth.mjs": "1be90d684440733ed1f92b7113827302dcd1a498fce46ff9adc98a9a9d9bfa8a",
+      "backend/src/playable/wallet-http-runtime.mjs": "000d72a1068cb9c5b52dc502d7379dbe553e669ce6201cb7365fba4e3495f935",
+      "backend/src/procurement/README.md": "8cb4130152bd4c3aadfb370a0a2bab4331d36fc8c940f18ec60d746196c0133a",
+      "backend/src/procurement/schema.sql": "b3f31e03be327662ade8d6af9ea96dbf8cac394ccaa01103d30463589fc4b7bd",
+      "backend/src/procurement/service.mjs": "73bb0c3a56d9023005cf7473d370ac05d2870f6dbe783d0b10aa67210f1cc92d",
+      "backend/src/server.mjs": "4d4ec0d43efb78ee615117fd30abc37a48bab69c9e58a24ec84e7c29eacb3f75",
+      "backend/src/storage/postgres.mjs": "5271a083481834728f8aacf948747ef5f2eff438c5d93b52d3fb77e5426f5ae9",
+      "backend/src/web/console.css": "c25b92199c50850ddcca003b2edb50a8ed7258e32837a8a26b9dd5acfc4001d2",
+      "backend/src/web/console.html": "902677f7ee5b899bdb9f658ffa2736a4f45e3c3fd7c87e59f5175b6c65f02520",
+      "backend/src/web/console.mjs": "ee5d511c94cabb3151663d6beeab04a49d9b384241f89120028cfba0d1d94917",
+      "backend/src/web/human.css": "d1096e9b291d0afb1e8f7b04f68f8e3c570e0ddfd7637355b2fc8b0272d62005",
+      "backend/src/web/human.html": "3cd4f5f5082eac31dbcbef2f360970688f8432c9ce651624e06091d6fc6a4fac",
+      "backend/src/web/human.mjs": "5aa9493a0b12a55889b6bc6f588852c4b95ec9b6d0cba111e9f8fa2b0c57a83e",
+      "backend/src/web/wallet.css": "62561d5229d3527c392154c570d2ef11fb0408cdefead46d2700b0959ac2bfe4",
+      "backend/src/web/wallet.html": "e2f5a888da5820635b9665020fa7c31404cf51f0dfc4e1a5ec11dd3b50be80d5",
+      "backend/src/web/wallet.mjs": "fb32119d9fff1dd2fb8d21cc3b3028fd26237db2d497a80c498be833fa76533d",
+      "backend/src/workflow/complete-job.mjs": "be3b05dcbbee1a3c762c6fbcc3ca6dbfeb0ac3a6311f015cf48ac4cc965ec607",
+      "backend/src/workflow/contract-demo.mjs": "a8259c04fb9372f9f5e3e2485c84c527a48a7411e88aeeeef88226fb686667e6",
+      "backend/src/workflow/human-demo-operator.mjs": "02a53ebddd21e74b955f90242a97c6890448bfc57aea82c52948a7c3371013a1",
+      "backend/src/workflow/human-demo-operator.sql": "af6e575fe83b0bc902542e647fba217432b4ad9bbf5effaa1faa5c6b60d540ba",
+      "backend/src/workflow/human-demo-runtime.mjs": "d1e13a177aba95091aa608f351db275ef4d1a9bc1c307f830f9fe08a63d6ff1f",
+      "backend/src/workflow/human-demo.mjs": "db59c264689076f61920d387e1239f7d4c92409e4b5504d10e76f1543ec70be2",
+      "backend/src/workflow/human-demo.sql": "27484a25fb8b9167bc146fc88f597b6220d9ba7ddafa1e86d1c567b7268e6170",
+      "backend/src/workflow/human-session.mjs": "41eba70e78520ee442e5c4b32835af71aedfd1646d2c7c831a8523655acde471",
+      "backend/src/workflow/recover-public-job.mjs": "cd9ce12c767b77e657291fe35e507f65cfd7e63277474981c104f44d78e4e013",
+      "backend/src/workflow/repository.mjs": "e4a8b4e1428fe773e54bedc69c2f3a56ce15d2f2a1d18713ff1a08162f72775e",
+      "backend/src/workflow/schema.sql": "b5494fc7b710748d05b2ea2ea30ae5745f75f98df817da43819f2704cce690ab",
+      "companion/player-wallet.html": "f53a3eaf1daf2d7e9e912a50b836237fb7009699d41e39acd40d9863392cea10",
+      "contracts/abi/AgentCityHook.json": "27ebd6cde16737992f959e872794a6779230ae2a443ca4694addfbffbfb539b1",
+      "contracts/abi/CreditToken.json": "4c1cfff1f2d34be7d07b091af2d4f897fc8d576d8d520e8cb2a68d22acecb93b",
+      "contracts/abi/JobEscrow.json": "b3ed63e74eeeb1e0d3ebda52366300ea6a9c244a470f2ff2f34795200e5387da",
+      "contracts/abi/KitCustody.json": "fc9b3188eb9ff8fc2ff48ef6f2dbbcc690256eac17ee6e40d291a2757166bca3",
+      "contracts/abi/Procurement.json": "97f4de7ae46c075f2b8717654be4924f6712a1e24acb16838908b4ec96b0167d",
+      "contracts/abi/StateRegistry.json": "d7605d23ef2919809e5c30e61a436c67b545910ca0d1f8ce0f0913760c335dd5",
+      "ops/playable-production/entrypoint.mjs": "0ce43c8de82a1a9f8e9344081e90d70dbf8ac95f95d7ed6846f312e7d133c619",
+      "scripts/playable_testnet_setup.mjs": "0a13b549a527960fc9e1e74f748c612aff2dc21672df2e65486956cc59248fc4",
+      "scripts/playable_wallet_enroll.mjs": "84fdd8233e53511214aa56b7088e39b7cb016bbf487fb72b8be7231f634442fb",
+      "scripts/playable_worker.mjs": "2421391b2d1f4ed8121b492f596adb19947622d03ede42283d9f79d19b947f58"
+    },
+    "buildInputHashes": {
+      "backend/package-lock.json": "324141583b1d4ba5c7e3a10ec8b23bc6dc94cc022d16a92a4dea4710846fb919",
+      "tests/compatibility/package-lock.json": "644d0168c7bd3d406eeb489e55469fdf2f0e70fe40debcdbe18c9f0b1a1fa915",
+      "companion/package-lock.json": "cfcbde738bfda0b5ef6173d5a8a837dd8317337cd72a2e8f1fe5f74dd50aff8f",
+      "companion/package.json": "87b47a51f7a16f007f2d4cfd0ef41fd8e3029d99ed6c02928cc159d6e39d2ef4",
+      "companion/build.mjs": "90788fb961cf7a3a5eafe3b01d336f96c3aa62538515bf92697ae3f939a15398"
+    }
+  }
+}

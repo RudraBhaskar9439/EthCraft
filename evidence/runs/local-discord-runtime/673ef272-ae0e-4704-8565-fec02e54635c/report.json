@@ -1,0 +1,86 @@
+{
+  "schema": "agentcity.local-discord-runtime.v1",
+  "recordedAt": "2026-11-05T22:03:47.611Z",
+  "scope": "Actual read-only local services and Discord command registration; user approval is not simulated",
+  "services": {
+    "setup": {
+      "http": 200
+    },
+    "bundle": {
+      "http": 200
+    },
+    "config": {
+      "http": 200,
+      "configured": true,
+      "walletSetupAvailable": false
+    },
+    "marketplace": {
+      "http": 200
+    }
+  },
+  "identity": {
+    "principals": 1,
+    "identities": 1,
+    "setup_challenges": 2,
+    "name_reservations": 1,
+    "join_approvals": 1,
+    "minecraft_aliases": 1,
+    "challengesConsumed": 2
+  },
+  "preservation": {
+    "discordApprovalRequired": true,
+    "identityOnly": true,
+    "secondaryBotInactive": true,
+    "modelCallsMade": 0,
+    "financialActionsMade": 0,
+    "teammateComputerAccessed": false
+  },
+  "discord": {
+    "applicationId": "1566059596865609758",
+    "guildId": "1566060288111943722",
+    "http": 200,
+    "commands": [
+      "agents",
+      "join",
+      "profile",
+      "start"
+    ]
+  },
+  "minecraft": {
+    "http": 200,
+    "playerName": "Micro",
+    "online": true,
+    "pendingAuthentication": false,
+    "authenticationKind": "discord_approved_local_profile",
+    "principalPresent": true,
+    "currentApprovalAliasPrincipalBindingMatches": true
+  },
+  "userReportedSetupCompleted": true,
+  "userReportVerifiedByServer": true,
+  "status": "actual_local_approval_verified",
+  "movement": {
+    "userConfirmedNormalWalking": true,
+    "serverRestrictionCleared": true,
+    "automatedMovementPerformed": false
+  },
+  "previousAttempt": "evidence/runs/local-discord-runtime/458ce778-6a29-488d-8675-66b5df55e9b8/report.json",
+  "rootCause": "Reserved display name micro was compared case-sensitively with native player name Micro. Shared approval now uses the existing normalized reservation name while exact connection, player UUID, server, principal and receipt checks remain.",
+  "sources": [
+    {
+      "path": "backend/src/discord/identity.mjs",
+      "sha256": "bb752a3c158dd1c63e61ef9a8edb84b24ce8c30f6ee219390c940bd0f4c9a8a4"
+    },
+    {
+      "path": "backend/src/discord/bot.mjs",
+      "sha256": "7807f24bf63bfef1c46bcdff862ec6e49cedbd128140ea3f749cda0aaaa78c06"
+    },
+    {
+      "path": "backend/src/discord/runtime.mjs",
+      "sha256": "460e93e7e9ac5c816ebe69cb90205073d5c5e7ff5a721e13c156c7d31286f633"
+    },
+    {
+      "path": "scripts/local_discord.mjs",
+      "sha256": "9a21107093a000b0489f4c5558185a9f3ed0d1d4b0b60e79ee6f5c18f2ee615b"
+    }
+  ]
+}

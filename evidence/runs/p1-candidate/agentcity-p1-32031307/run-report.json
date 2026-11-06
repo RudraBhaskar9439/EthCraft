@@ -1,0 +1,38 @@
+{
+  "schema": "agentcity.p1.candidate-run.v1",
+  "status": "fail",
+  "name": "agentcity-p1-32031307",
+  "started_at": "2026-10-29T13:53:03.660006+00:00",
+  "manifest_sha256": "4c4ada999623d553a4c6128bc2baea78dda4892cd60fb4c0faee15932fd8bf4f",
+  "sources": {
+    "fixtures/candidates/redstone-compiler/calculator-candidate-v1.json": "d14cc0956831efeb68df4b9aba588e946bbd3b546d6a2d37be02194378b1922b",
+    "fixtures/candidates/redstone-compiler/calculator-tests-candidate-v1.json": "8ec4afb0f561370cf74fc686a3683a01c6d0758fe6f0c15e33c8e1b5926e5897",
+    "tests/world/plugin/CandidatePlugin.java": "2f811f89a749b7e72439a2180ad7958892ff1fe591a8b23fff5d96fd6ab776af",
+    "tests/world/observe.cjs": "a5946c250082ac6091f3f9759b9071d72c2582b02503bf423a5dc9fcd01ac66c"
+  },
+  "runtime_lock": {
+    "purpose": "isolated_non_token_fixture",
+    "bind": "127.0.0.1",
+    "port": 25576,
+    "minecraft": "1.21.11",
+    "paper": {
+      "build": 132,
+      "support": "UNSUPPORTED",
+      "support_ended": "2026-06-15",
+      "sha256": "5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba",
+      "url": "https://fill-data.papermc.io/v1/objects/5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba/paper-1.21.11-132.jar"
+    },
+    "java_image": "eclipse-temurin@sha256:5d90b26c0784ccf55af55f97cbcf7f3969c66a06299c93bdc72649219942a48f",
+    "mineflayer": "4.39.0",
+    "pathfinder": "2.4.5",
+    "authentication": "offline_fixture_only",
+    "independent_human_participants": 0,
+    "token_integration": false,
+    "production_supported": false
+  },
+  "independent_humans": 0,
+  "full_phase_gate_passed": false,
+  "plugin_sha256": "ca2160a333baf7ee0048106eea8ad7c9c08629eef3df8e8d58926d6591175a6d",
+  "error": "node failed (1): {\"status\":\"fail\",\"cases\":0,\"error\":\"SyntaxError: Unterminated string in JSON at position 4083 (line 1 column 4084)\\n    at JSON.parse (<anonymous>)\\n    at EventEmitter.<anonymous> (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/world/observe.cjs:60:24)\\n    at EventEmitter.emit (node:events:521:24)\\n    at Client.<anonymous> (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/mineflayer/lib/plugins/chat.js:141:9)\\n    at Client.emit (node:events:509:20)\\n    at Client.<anonymous> (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/minecraft-protocol/src/client/chat.js:163:12)\\n    at Client.emit (node:events:509:20)\\n    at emitPacket (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/minecraft-protocol/src/client.js:85:12)\\n    at FullPacketParser.<anonymous> (/Users/rudrabhaskar/Documents/Codex/agentcity-minecraft/tests/compatibility/node_modules/minecraft-protocol/src/client.js:114:9)\\n    at FullPacketParser.emit (node:events:509:20)\"}\n",
+  "finished_at": "2026-10-29T13:53:34.826134+00:00"
+}

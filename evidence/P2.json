@@ -1,0 +1,183 @@
+{
+  "phase": "P2",
+  "release": "194ceb3bccea87d42548012e830d80a3bdfe3816",
+  "environment": "Pinned loopback-only non-token local fixture: Paper 1.21.11 build 132 (unsupported for production), Java 21 Docker, Node 26.3.1, Mineflayer 4.39.0 and pathfinder 2.4.5. Same-world source-segment composition: 137 original native placements plus 7 corrected placements plus 0 inspection-segment placements; exact 144-item bill and fixed 198-glass/9-slab operator access. No restoration, deadline extension, paid API use or independent-human claim. Dependency renewal: unchanged historical game runtime and retained observations reviewed after additive local backend/contracts setup; no new physical Minecraft run is claimed.",
+  "open_defects": [],
+  "review": {
+    "status": "approved",
+    "reviewer": "/root/p2_harness (requester-side AI engineering peer; not an independent human participant)",
+    "release": "194ceb3bccea87d42548012e830d80a3bdfe3816",
+    "evidence": [
+      {
+        "path": "evidence/runs/local-review/final-review.json",
+        "sha256": "5eada06010b1b90319563b40ea5f02b84d435de17d81d1ab69837de64afc27fb"
+      }
+    ]
+  },
+  "cases": {
+    "P2-001": {
+      "status": "pass",
+      "case_digest": "0a0320980eb7819696f00225f5277122e55f2d51999dca2dbee21a643b7c7eeb",
+      "evidence": [
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-5b3f8a44/run-report.json",
+          "sha256": "76912eaee624a1ead27957637a60ac2ea7bdf79e580a0961fb4c6c7028efdbbe"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-5b3f8a44/resume-client.json",
+          "sha256": "e02e6af190a1f1d49b36c19f0357df09580bd2ead4b9c7c8c6f870a219e02d80"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-continuation-88033ad1/run-report.json",
+          "sha256": "5f9363dd3b00712696a1461c72d3fd5af1b83b1e1c94bc11803622df734030c0"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-continuation-88033ad1/resume-client.json",
+          "sha256": "40834636c4c1a1ecec56b55d3e78030688c39aeb71495edb8cae968357eeec71"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-continuation-53847de4/run-report.json",
+          "sha256": "1cfa30da8d18dccbd0af49f69e6cd99749a5f5999526dc938fd3767d754a9202"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-continuation-53847de4/resume-client.json",
+          "sha256": "cb16248496a88ee411cb317efddcabf1b6ed750db030ab36df57da36b5a03798"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-continuation-53847de4/retained/reports/1d764720-4f55-4a69-bb64-acb8c3c6b3c2.json",
+          "sha256": "3b8f8529e396b5065daf39a5abcc34ceeb5665f564f541ad9b7a269a353b0455"
+        }
+      ],
+      "subcases": {
+        "required": 16,
+        "passed": 16,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P2-002": {
+      "status": "pass",
+      "case_digest": "17bef6413c0f943ce35a7501bff25cba76d09fc75ff8f70745b82e844823fd02",
+      "evidence": [
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-5b3f8a44/initial-client.json",
+          "sha256": "e1137d8fec20d609eb759cf3dfe188138ea5722396b2de60b44844f6cbd42b8c"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-5b3f8a44/resume-client.json",
+          "sha256": "e02e6af190a1f1d49b36c19f0357df09580bd2ead4b9c7c8c6f870a219e02d80"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-continuation-88033ad1/resume-client.json",
+          "sha256": "40834636c4c1a1ecec56b55d3e78030688c39aeb71495edb8cae968357eeec71"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-continuation-53847de4/resume-client.json",
+          "sha256": "cb16248496a88ee411cb317efddcabf1b6ed750db030ab36df57da36b5a03798"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-continuation-53847de4/retained/construction-checkpoint.json",
+          "sha256": "03e5f173e766480254f89771dca1ee8873f52af6e3de386c87fcfef08ecd7ee1"
+        }
+      ],
+      "subcases": {
+        "required": 1,
+        "passed": 1,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P2-003": {
+      "status": "pass",
+      "case_digest": "95f866825d8dceed313a814db013c7df3fa73e44b1da6263f18108cdeb8bfc10",
+      "evidence": [
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-1b755aff/run-report.json",
+          "sha256": "6dfbd82c4da1cd18d0d8db4efd0cb17297248e27c14faca94093b14fbc129689"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-1b755aff/initial-client.json",
+          "sha256": "d020cab1f42874b9bd472a551101cd29b13b14bfd66d37de5b631c9ec32bedde"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-ef6dfdc3/run-report.json",
+          "sha256": "91c103ef920ec5f832222fb4f39105df448c43d036b346d748e86e6bb43ec86e"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-ef6dfdc3/initial-client.json",
+          "sha256": "9bf86005c22219bd24441c378b7f085ba83c1bcaa516ca08dcbe8d0e46e4f30a"
+        }
+      ],
+      "subcases": {
+        "required": 2,
+        "passed": 2,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P2-004": {
+      "status": "pass",
+      "case_digest": "087b053479d66442dcafe04d45405c22178cd68447d79205c05e866106a08036",
+      "evidence": [
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-4d581bae/run-report.json",
+          "sha256": "cfb8f292f5714cdd676e022a3febea338d99cad994fb3977fd1637200041d893"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-4d581bae/initial-client.json",
+          "sha256": "09417a4946701e2a1cdda9f47cbdcbc602940a5c88995d760ef05e3d99315e56"
+        }
+      ],
+      "subcases": {
+        "required": 1,
+        "passed": 1,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P2-005": {
+      "status": "pass",
+      "case_digest": "9ada9df5569754ff092ffd1351eca7c82cf511f57c6869f88a5006faa17e4d51",
+      "evidence": [
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-5b3f8a44/initial-client.json",
+          "sha256": "e1137d8fec20d609eb759cf3dfe188138ea5722396b2de60b44844f6cbd42b8c"
+        },
+        {
+          "path": "evidence/runs/p2-mvp/worker-checks-final.json",
+          "sha256": "db23d42d20a83088107f8ff8d4800cac024f0a09f338bc9fce0595bae60aa975"
+        }
+      ],
+      "subcases": {
+        "required": 2,
+        "passed": 2,
+        "failed": 0,
+        "blocked": 0
+      }
+    },
+    "P2-006": {
+      "status": "pass",
+      "case_digest": "c5b6c79db7eb247e3a8611184728b949539251aeae3f625ae03a2ce3e3b6395b",
+      "evidence": [
+        {
+          "path": "evidence/runs/p2-construction/agentcity-construction-5b3f8a44/initial-client.json",
+          "sha256": "e1137d8fec20d609eb759cf3dfe188138ea5722396b2de60b44844f6cbd42b8c"
+        },
+        {
+          "path": "evidence/runs/p1-boundary/agentcity-boundary-bad12f21/initial-client.json",
+          "sha256": "9b462b21cc20233328b97413522db024f40c9b65291e1748f7ebf3e7eaa27a4a"
+        },
+        {
+          "path": "evidence/runs/p2-construction/agentcity-continuation-88033ad1/resume-client.json",
+          "sha256": "40834636c4c1a1ecec56b55d3e78030688c39aeb71495edb8cae968357eeec71"
+        }
+      ],
+      "subcases": {
+        "required": 5,
+        "passed": 5,
+        "failed": 0,
+        "blocked": 0
+      }
+    }
+  }
+}

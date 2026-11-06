@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "observedAt": "2026-10-31T15:16:08.538Z",
+  "scope": "Actual stored Discord grant and linked Minecraft alias through real runtime/native lease validation only; no user command or task executed",
+  "sourceSha256": "40e882077ca6c2d3fed6c6024413aafe034c79a7c2be0fac0f7362c08a002f6e",
+  "checks": [],
+  "canonicalOwnerDiffersFromMinecraftUuid": true,
+  "currentGrantAcceptedForCancelScope": true,
+  "nativeLeaseRenewedForExistingGrant": true,
+  "materialTaskJournalUnchanged": true,
+  "actualCancellationExecuted": false,
+  "newGrantsCreated": 0,
+  "walletOperations": 0,
+  "independentHumanAcceptance": false
+}

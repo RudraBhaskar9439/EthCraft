@@ -1,0 +1,16 @@
+{
+  "schema": "agentcity.inventory-game-nullable-response-regression.v1",
+  "status": "pass",
+  "scope": "Isolated PostgreSQL and injected Privy/chain/native fixtures. No customer wallet or purchase qualification.",
+  "cause": "An absent starter grant was encoded as JSON null; Minecraft Map.copyOf rejects null top-level values.",
+  "beforeFix": "New wire-contract assertion failed",
+  "afterFix": "Complete focused game checkout suite passed; absent starter grant omitted",
+  "sourceHashes": {
+    "backend/src/playable/inventory-shop-game.mjs": "2b515acfb7fd3760663b1367e09e02d984367cfcff8a73cf58ecfbc3009b1860",
+    "tests/playable/inventory-shop-game.mjs": "8c9139c33b18fea5a0b44541fc776a660a1747ff8d85d1a9ed0a1b489065f57a"
+  },
+  "publicTransactions": 0,
+  "customerWalletsCreated": 0,
+  "minecraftRestarted": false,
+  "customerPurchaseVerified": false
+}

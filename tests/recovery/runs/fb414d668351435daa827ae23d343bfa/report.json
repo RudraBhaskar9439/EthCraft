@@ -1,0 +1,14 @@
+{
+  "status": "fail",
+  "startedAt": "2026-10-30T07:05:02.240339+00:00",
+  "checks": [],
+  "scope": "Actual owned laptop services and online PostgreSQL dump/isolated restore; no live database replacement or chain/world rollback",
+  "realMoneySpent": 0,
+  "liveJobsExecutedByRestore": 0,
+  "serviceRestartPerformed": false,
+  "error": {
+    "type": "AssertionError",
+    "message": "A required loopback host service is unavailable."
+  },
+  "finishedAt": "2026-10-30T07:05:07.566342+00:00"
+}

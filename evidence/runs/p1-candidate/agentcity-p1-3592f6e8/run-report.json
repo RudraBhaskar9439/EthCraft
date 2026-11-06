@@ -1,0 +1,41 @@
+{
+  "schema": "agentcity.p1.candidate-run.v1",
+  "status": "pass",
+  "name": "agentcity-p1-3592f6e8",
+  "started_at": "2026-10-29T14:15:08.240980+00:00",
+  "manifest_sha256": "5f394e3a0a08421c924a9cfed599486ff9c2549968d525dedb51ec1776829313",
+  "sources": {
+    "fixtures/candidates/redstone-compiler/calculator-candidate-v1.json": "d14cc0956831efeb68df4b9aba588e946bbd3b546d6a2d37be02194378b1922b",
+    "fixtures/candidates/redstone-compiler/calculator-tests-candidate-v1.json": "8ec4afb0f561370cf74fc686a3683a01c6d0758fe6f0c15e33c8e1b5926e5897",
+    "tests/world/plugin/CandidatePlugin.java": "026097ad4970d6778bd24cd32963be542ec7c5271a607b60ce46cf506b92bced",
+    "tests/world/plugin/plugin.yml": "d20d196039ab5e03e13c4a22e593d529c7255b5ad476504408cd85bd60f7a26c",
+    "tests/world/observe.cjs": "d97e6295e3ad5665c82575eac7ea8fe2de461aff71948c9ef690397a0eff0987",
+    "tests/world/run_candidate.py": "164c1744bd283e43570d50a15c9b3a95383941cd5c6b12d9d3022138be0ee900",
+    "tests/compatibility/versions.json": "f9ee9617748df8545cadd5469d383b11f68ec43af6c9181d4259fcd1bb913502"
+  },
+  "runtime_lock": {
+    "purpose": "isolated_non_token_fixture",
+    "bind": "127.0.0.1",
+    "port": 25576,
+    "minecraft": "1.21.11",
+    "paper": {
+      "build": 132,
+      "support": "UNSUPPORTED",
+      "support_ended": "2026-06-15",
+      "sha256": "5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba",
+      "url": "https://fill-data.papermc.io/v1/objects/5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba/paper-1.21.11-132.jar"
+    },
+    "java_image": "eclipse-temurin@sha256:5d90b26c0784ccf55af55f97cbcf7f3969c66a06299c93bdc72649219942a48f",
+    "mineflayer": "4.39.0",
+    "pathfinder": "2.4.5",
+    "authentication": "offline_fixture_only",
+    "independent_human_participants": 0,
+    "token_integration": false,
+    "production_supported": false
+  },
+  "loopback_port": 25580,
+  "independent_humans": 0,
+  "full_phase_gate_passed": false,
+  "plugin_sha256": "5427dc5171fa3b9994f34d334ab32cbdf2976c0dc2afbfc5065c51e74289cdc1",
+  "finished_at": "2026-10-29T14:21:53.759202+00:00"
+}

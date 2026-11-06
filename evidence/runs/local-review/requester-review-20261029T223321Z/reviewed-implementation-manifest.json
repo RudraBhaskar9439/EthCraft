@@ -1,0 +1,56 @@
+{
+  "files": [
+    {
+      "path": "backend/src/inference/decision-service.mjs",
+      "sha256": "edcb0f476a356b75d8f236309728def53621051f72ab63a60ae95b3cdd5bfdc4"
+    },
+    {
+      "path": "backend/src/inference/proposal.mjs",
+      "sha256": "2438786f63fe1e1f337152b0c8f37d4de8448c38ffdabe91d2e3175e275878a6"
+    },
+    {
+      "path": "backend/src/workflow/repository.mjs",
+      "sha256": "038d16c47370e463ff5b3bf2f09f5a9812632c3ec7456284006f2ac50cd4c521"
+    },
+    {
+      "path": "backend/src/chain/local-evm.mjs",
+      "sha256": "40bbe1b88dd201d4c80a9ca82859a154a5c2fba487c78b0018c2f43f518d02c7"
+    },
+    {
+      "path": "backend/src/delivery/evm-claims.mjs",
+      "sha256": "55490a12eca92a72ece640230b4673064a05030d80ba4254f3da9d331d108e99"
+    },
+    {
+      "path": "backend/src/delivery/synthetic-inventory.mjs",
+      "sha256": "410c403662a5a90a30874f481d3244050ab94a839b6decd1905e74c1080321b5"
+    },
+    {
+      "path": "backend/src/inspection/coordinator.mjs",
+      "sha256": "ac8e741336cd525bdc58c6f07684d11b26fa1db5f6f1e59496ca86a29f0e5891"
+    },
+    {
+      "path": "backend/src/inspection/synthetic-world.mjs",
+      "sha256": "7b71499e59b230be13f7c7cbbb337236e75542f0eef80c285914038f6958ad0f"
+    },
+    {
+      "path": "backend/src/inspection/settlement-service.mjs",
+      "sha256": "96eb1fdf34e7444826f527b588f501fcc88d04ba668e6f4a1cf250d0bd13e40d"
+    },
+    {
+      "path": "backend/src/server.mjs",
+      "sha256": "fa19d2bc647ed33769d8f401fc4f7c6192b34dbaa315ce1a0e7a59bf69e4ade7"
+    },
+    {
+      "path": "scripts/local_demo.mjs",
+      "sha256": "ca81bbb39cf9baa9c6e62870398928c0b8c9fb06d5b489efda6e44d8ab43cecf"
+    },
+    {
+      "path": "scripts/resume_local_settlement.mjs",
+      "sha256": "28bff610af08a0b0540e18c392c00b7727265fc1041d8c17a8d3a68c68fe8fc5"
+    },
+    {
+      "path": "tests/settlement/local-locks.mjs",
+      "sha256": "97aa16e96af47a18eaa3be43e314ed4fc9af93c23ca2b977afbf55eaa5cce92e"
+    }
+  ]
+}

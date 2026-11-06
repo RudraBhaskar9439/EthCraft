@@ -1,0 +1,30 @@
+{
+  "runId": "89119e67-22db-450e-89b2-70dc1061b5c2",
+  "status": "ready",
+  "mode": "read_only_preflight",
+  "scope": "Existing encrypted developer account only; fixed0.01CITY→GEM through the new hooked v4 pool. No player wallet, NFT mint, human-consent claim or Game Coins.",
+  "allocationWei": "100000000000000",
+  "amountIn": "0.01",
+  "tokenIn": "CITY",
+  "tokenOut": "GEM",
+  "slippageBps": 100,
+  "realMoneySpentUsd": 0,
+  "playerWallets": 0,
+  "tests": [],
+  "preflight": {
+    "chainId": 1301,
+    "router": "0x3378ee4a7930797865370140ce24517651e37069",
+    "hook": "0x3c98b8b484a303decc9321ee0e944742dfdbc080",
+    "stateRegistry": "0x5db0cf0721c4b2f98de3f079d13a956dc922a3e4",
+    "marketId": "0x1be02d3ca5e2c5aabfa7986c084960ec9f91acd3e77dc1dccae9beef43898834",
+    "blockNumber": "66617160",
+    "blockHash": "0x9c670dd7f1cff4524c7c3c3b1567be7c51cd381623615768efc1d69b442e9f82",
+    "confirmations": 2,
+    "healthy": true,
+    "available": true,
+    "currentlyAvailable": true,
+    "validUntil": "1793469743",
+    "sequence": "1",
+    "ready": true
+  }
+}

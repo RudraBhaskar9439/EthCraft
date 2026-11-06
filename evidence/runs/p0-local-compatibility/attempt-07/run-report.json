@@ -1,0 +1,49 @@
+{
+  "purpose": "isolated physical compatibility spike only",
+  "status": "fail",
+  "started_at": "2026-10-29T14:33:01.973153+00:00",
+  "versions": {
+    "purpose": "isolated_non_token_fixture",
+    "bind": "127.0.0.1",
+    "port": 25576,
+    "minecraft": "1.21.11",
+    "paper": {
+      "build": 132,
+      "support": "UNSUPPORTED",
+      "support_ended": "2026-06-15",
+      "sha256": "5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba",
+      "url": "https://fill-data.papermc.io/v1/objects/5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba/paper-1.21.11-132.jar"
+    },
+    "java_image": "eclipse-temurin@sha256:5d90b26c0784ccf55af55f97cbcf7f3969c66a06299c93bdc72649219942a48f",
+    "mineflayer": "4.39.0",
+    "pathfinder": "2.4.5",
+    "authentication": "offline_fixture_only",
+    "independent_human_participants": 0,
+    "token_integration": false,
+    "production_supported": false
+  },
+  "independent_humans": 0,
+  "full_phase_gate_passed": false,
+  "steps": [
+    {
+      "step": "bootstrap",
+      "status": "pass",
+      "container": "54fc4dc0b495246f694f3a19903f689ad21fd79f8f74329a6c01dacc731253ba"
+    },
+    {
+      "step": "compile_fixture_plugin",
+      "status": "pass"
+    },
+    {
+      "step": "fixture",
+      "status": "pass",
+      "container": "9b405df346d6cc44d598f0af6ea9dc985d7eae9e0c2e2f8ec0876cdbc8a3cc72"
+    }
+  ],
+  "java_runtime": "openjdk version \"21.0.12.1\" 2026-08-18 LTS\nOpenJDK Runtime Environment Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS)\nOpenJDK 64-Bit Server VM Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS, mixed mode, sharing)",
+  "node_runtime": "v26.3.1",
+  "actual_paper_sha256": "5ffef465eeeb5f2a3c23a24419d97c51afd7dbb4923ff42df9a3f58bba1ccfba",
+  "fixture_plugin_sha256": "9ec584165dfa8ef76c5921b61693093fed73075cb4fa552415b8cace36d8f851",
+  "error": "node failed (1): {\"schema\":\"agentcity.p0.compatibility.v1\",\"status\":\"failed\",\"started_at\":\"2026-10-29T14:33:26.173Z\",\"environment\":{\"host\":\"127.0.0.1\",\"port\":25576,\"version\":\"1.21.11\",\"auth\":\"offline\"},\"identities\":\"FixtureBuilder and FixtureObserver are both agent-controlled test fixtures, not independent humans or licensed-account proof.\",\"steps\":[{\"name\":\"initial_off\",\"passed\":true,\"observations\":[{\"builder_position\":[0,81,0],\"lever\":false,\"lamp\":false,\"wire\":0,\"stock\":2,\"target\":\"AIR\",\"server\":\"1.21.11-132-c5eb079 (MC: 1.21.11)\",\"plugin\":\"0.1.0\"},{\"builder_position\":[0,81,0],\"lever\":false,\"lamp\":false,\"wire\":0,\"stock\":2,\"target\":\"AIR\",\"server\":\"1.21.11-132-c5eb079 (MC: 1.21.11)\",\"plugin\":\"0.1.0\"}],\"client_blocks\":[{\"player\":\"FixtureBuilder\",\"lever\":{\"powered\":false,\"facing\":\"east\",\"face\":\"floor\"},\"wire\":{\"west\":\"none\",\"south\":\"none\",\"power\":\"0\",\"north\":\"none\",\"east\":\"none\"},\"lamp\":{\"lit\":false}},{\"player\":\"FixtureObserver\",\"lever\":{\"powered\":false,\"facing\":\"east\",\"face\":\"floor\"},\"wire\":{\"west\":\"none\",\"south\":\"none\",\"power\":\"0\",\"north\":\"none\",\"east\":\"none\"},\"lamp\":{\"lit\":false}}]},{\"name\":\"lever_on\",\"passed\":true,\"observations\":[{\"builder_position\":[0,81,0],\"lever\":true,\"lamp\":true,\"wire\":15,\"stock\":2,\"target\":\"AIR\",\"server\":\"1.21.11-132-c5eb079 (MC: 1.21.11)\",\"plugin\":\"0.1.0\"},{\"builder_position\":[0,81,0],\"lever\":true,\"lamp\":true,\"wire\":15,\"stock\":2,\"target\":\"AIR\",\"server\":\"1.21.11-132-c5eb079 (MC: 1.21.11)\",\"plugin\":\"0.1.0\"}],\"client_blocks\":[{\"player\":\"FixtureBuilder\",\"lever\":{\"powered\":true,\"facing\":\"east\",\"face\":\"floor\"},\"wire\":{\"west\":\"side\",\"south\":\"none\",\"power\":\"15\",\"north\":\"none\",\"east\":\"side\"},\"lamp\":{\"lit\":true}},{\"player\":\"FixtureObserver\",\"lever\":{\"powered\":true,\"facing\":\"east\",\"face\":\"floor\"},\"wire\":{\"west\":\"side\",\"south\":\"none\",\"power\":\"15\",\"north\":\"none\",\"east\":\"side\"},\"lamp\":{\"lit\":true}}]},{\"name\":\"lever_off_again\",\"passed\":true,\"observations\":[{\"builder_position\":[0,81,0],\"lever\":false,\"lamp\":false,\"wire\":0,\"stock\":2,\"target\":\"AIR\",\"server\":\"1.21.11-132-c5eb079 (MC: 1.21.11)\",\"plugin\":\"0.1.0\"},{\"builder_position\":[0,81,0],\"lever\":false,\"lamp\":false,\"wire\":0,\"stock\":2,\"target\":\"AIR\",\"server\":\"1.21.11-132-c5eb079 (MC: 1.21.11)\",\"plugin\":\"0.1.0\"}],\"client_blocks\":[{\"player\":\"FixtureBuilder\",\"lever\":{\"powered\":false,\"facing\":\"east\",\"face\":\"floor\"},\"wire\":{\"west\":\"side\",\"south\":\"none\",\"power\":\"0\",\"north\":\"none\",\"east\":\"side\"},\"lamp\":{\"lit\":false}},{\"player\":\"FixtureObserver\",\"lever\":{\"powered\":false,\"facing\":\"east\",\"face\":\"floor\"},\"wire\":{\"west\":\"side\",\"south\":\"none\",\"power\":\"0\",\"north\":\"none\",\"east\":\"side\"},\"lamp\":{\"lit\":false}}]},{\"name\":\"one_item_withdrawn\",\"passed\":true,\"observations\":[{\"builder_position\":[0,81,0],\"lever\":false,\"lamp\":false,\"wire\":0,\"stock\":1,\"target\":\"AIR\",\"server\":\"1.21.11-132-c5eb079 (MC: 1.21.11)\",\"plugin\":\"0.1.0\"},{\"builder_position\":[0,81,0],\"lever\":false,\"lamp\":false,\"wire\":0,\"stock\":1,\"target\":\"AIR\",\"server\":\"1.21.11-132-c5eb079 (MC: 1.21.11)\",\"plugin\":\"0.1.0\"}],\"client_blocks\":[{\"player\":\"FixtureBuilder\",\"lever\":{\"powered\":false,\"facing\":\"east\",\"face\":\"floor\"},\"wire\":{\"west\":\"side\",\"south\":\"none\",\"power\":\"0\",\"north\":\"none\",\"east\":\"side\"},\"lamp\":{\"lit\":false}},{\"player\":\"FixtureObserver\",\"lever\":{\"powered\":false,\"facing\":\"east\",\"face\":\"floor\"},\"wire\":{\"west\":\"side\",\"south\":\"none\",\"power\":\"0\",\"north\":\"none\",\"east\":\"side\"},\"lamp\":{\"lit\":false}}]},{\"name\":\"one_item_consumed_in_world\",\"passed\":true,\"observations\":[{\"builder_position\":[0,81,0],\"lever\":false,\"lamp\":false,\"wire\":0,\"stock\":1,\"target\":\"COBBLESTONE\",\"server\":\"1.21.11-132-c5eb079 (MC: 1.21.11)\",\"plugin\":\"0.1.0\"},{\"builder_position\":[0,81,0],\"lever\":false,\"lamp\":false,\"wire\":0,\"stock\":1,\"target\":\"COBBLESTONE\",\"server\":\"1.21.11-132-c5eb079 (MC: 1.21.11)\",\"plugin\":\"0.1.0\"}],\"client_blocks\":[{\"player\":\"FixtureBuilder\",\"lever\":{\"powered\":false,\"facing\":\"east\",\"face\":\"floor\"},\"wire\":{\"west\":\"side\",\"south\":\"none\",\"power\":\"0\",\"north\":\"none\",\"east\":\"side\"},\"lamp\":{\"lit\":false}},{\"player\":\"FixtureObserver\",\"lever\":{\"powered\":false,\"facing\":\"east\",\"face\":\"floor\"},\"wire\":{\"west\":\"side\",\"south\":\"none\",\"power\":\"0\",\"north\":\"none\",\"east\":\"side\"},\"lamp\":{\"lit\":false}}]}],\"current_step\":\"bounded_navigation\",\"last_readings\":[{\"builder_position\":[0,81,0],\"lever\":false,\"lamp\":false,\"wire\":0,\"stock\":1,\"target\":\"COBBLESTONE\",\"server\":\"1.21.11-132-c5eb079 (MC: 1.21.11)\",\"plugin\":\"0.1.0\"},{\"builder_position\":[0,81,0],\"lever\":false,\"lamp\":false,\"wire\":0,\"stock\":1,\"target\":\"COBBLESTONE\",\"server\":\"1.21.11-132-c5eb079 (MC: 1.21.11)\",\"plugin\":\"0.1.0\"}],\"error\":{\"name\":\"ReferenceError\",\"message\":\"observer is not defined\"},\"finished_at\":\"2026-10-29T14:33:38.590Z\"}\n",
+  "finished_at": "2026-10-29T14:33:41.504173+00:00"
+}

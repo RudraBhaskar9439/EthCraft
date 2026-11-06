@@ -1,0 +1,13 @@
+{
+  "runId": "3f3b9a23-cec5-487f-8d95-595bf71908d6",
+  "status": "fail",
+  "recordedAt": "2026-11-05T13:49:14.914Z",
+  "scope": "Actual Unichain Sepolia funded native2x2platform, forged-result refusal and lost-reply recovery using operator-controlled wallets. No human/Privy/0G qualification.",
+  "checks": [],
+  "paidModelCalls": 0,
+  "error": "BANK_NATIVE_OWNER_CONNECTION_REQUIRED",
+  "sources": {
+    "backend/src/bank/native-work.mjs": "c7d4fc84ff85b9c8b84c18e8763aadcf46ca3dc42751ff180f1953e074590d02",
+    "tests/bank/native-work.mjs": "510eab7a23297f20d3acb9651b555144e10bdb7ea183bc293c25c00be5925684"
+  }
+}

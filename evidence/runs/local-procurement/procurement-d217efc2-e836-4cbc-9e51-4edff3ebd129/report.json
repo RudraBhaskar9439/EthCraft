@@ -1,0 +1,19 @@
+{
+  "status": "fail",
+  "runId": "procurement-d217efc2-e836-4cbc-9e51-4edff3ebd129",
+  "scope": "Actual isolated PostgreSQL and local Anvil procurement; local chain snapshot is restored afterward",
+  "checks": [
+    {
+      "name": "genuine-local-wallet-approvals-and-actual-escrow-funding-before-procurement",
+      "status": "pass"
+    }
+  ],
+  "liveExternalGatePassed": false,
+  "externalSpendingUsd": 0,
+  "error": {
+    "code": "ERR_ASSERTION",
+    "message": "Expected values to be strictly equal:\n\n0 !== 1\n"
+  },
+  "snapshotRestored": true,
+  "finishedAt": "2026-10-29T22:21:20.724Z"
+}

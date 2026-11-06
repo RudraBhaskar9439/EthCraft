@@ -1,0 +1,34 @@
+{
+  "schema": "agentcity.mumbai-city-post-upgrade-stock.v1",
+  "recordedAt": "2026-11-06T04:12:52.348Z",
+  "status": "pass",
+  "scope": "Read-only native merchant stock and Minecraft server-list ping after plugin upgrade. No bootstrap field, game login, model call, wallet action or transaction.",
+  "previousObservation": "evidence/runs/mumbai-city/f5a67463-a935-46d9-831f-489e41b63a7a/post-upgrade.json",
+  "merchantApprovedOnline": true,
+  "finiteEightStackStockVerified": true,
+  "stock": {
+    "http": 200,
+    "sourceBindingMatches": true,
+    "provenance": "operator_supplied_demo",
+    "bootstrapPreviouslyGranted": true,
+    "itemCounts": {
+      "cobblestone": 64,
+      "dirt": 64,
+      "oak_log": 64,
+      "oak_planks": 64,
+      "sand": 64,
+      "stick": 64,
+      "stone": 64,
+      "stone_bricks": 64
+    },
+    "inventoryFingerprintSha256": "b89661d171ec196b54c100f767e8e1d3a000fd857b5ac5a0c61c30090cac2cde"
+  },
+  "presence": {
+    "ok": true,
+    "onlineCount": 4,
+    "zeroGAgentPresent": true,
+    "claudeAgentPresent": true,
+    "merchantPresent": true
+  },
+  "humanApproval": "The real user must approve the new game connection separately."
+}

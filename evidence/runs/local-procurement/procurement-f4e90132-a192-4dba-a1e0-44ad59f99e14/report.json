@@ -1,0 +1,31 @@
+{
+  "status": "fail",
+  "runId": "procurement-f4e90132-a192-4dba-a1e0-44ad59f99e14",
+  "scope": "Actual isolated PostgreSQL and local Anvil procurement; local chain snapshot is restored afterward",
+  "checks": [
+    {
+      "name": "genuine-local-wallet-approvals-and-actual-escrow-funding-before-procurement",
+      "status": "pass"
+    }
+  ],
+  "liveExternalGatePassed": false,
+  "externalSpendingUsd": 0,
+  "reservationRace": [
+    {
+      "status": "rejected",
+      "code": "MATERIAL_CAP_EXCEEDED",
+      "message": "MATERIAL_CAP_EXCEEDED"
+    },
+    {
+      "status": "rejected",
+      "code": "22P02",
+      "message": "invalid input syntax for type uuid: \"procurement-f4e90132-a192-4dba-a1e0-44ad59f99e14-two\""
+    }
+  ],
+  "error": {
+    "code": "ERR_ASSERTION",
+    "message": "Expected values to be strictly equal:\n\n0 !== 1\n"
+  },
+  "snapshotRestored": true,
+  "finishedAt": "2026-10-29T22:23:53.462Z"
+}

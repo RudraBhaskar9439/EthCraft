@@ -1,0 +1,64 @@
+{
+  "status": "pass",
+  "runId": "db3c9b1e-6cf0-4e5e-8000-3588d909da42",
+  "scope": "Real PostgreSQL scoped signer refusals, plus read-only public code checks for immutable retained bindings.",
+  "publicTransactions": 0,
+  "privateKeysOpened": 0,
+  "signatures": 0,
+  "paidModelCalls": 0,
+  "realMoneySpentUsd": 0,
+  "checks": [
+    {
+      "name": "unknown actor and unexpected contract target are denied before chain or key access",
+      "status": "pass"
+    },
+    {
+      "name": "player cannot mint payment tokens or native-backed NFTs",
+      "status": "pass"
+    },
+    {
+      "name": "token and NFT approvals enforce permitted spender and finite amount caps",
+      "status": "pass"
+    },
+    {
+      "name": "native value and per-call gas budget escapes are denied",
+      "status": "pass"
+    },
+    {
+      "name": "registrar publisher inspector and lender privileges remain separated",
+      "status": "pass"
+    },
+    {
+      "name": "retained intent rejects changed owner and calldata before key access",
+      "status": "pass"
+    },
+    {
+      "name": "all test operations produced zero signed intents and only the deliberately retained fixture binding",
+      "status": "pass"
+    }
+  ],
+  "testOperationIds": [
+    "2c671cc4-8b59-47e4-a065-477997747cbe",
+    "5eab4df5-07e3-4bc3-ba09-f5ae6cc3ff61",
+    "7409b578-8b24-4397-9c61-1bdf4ed4b947",
+    "56a5839f-3e2d-481a-87c6-62bc18d252a3",
+    "9cf5052a-d18c-409e-8606-3304fffb0b4a",
+    "f5bd63dc-a0a1-4c9c-b3ae-8b3b4cb097bc",
+    "0705be40-4cda-44b3-ad4d-797078eacc97",
+    "70cb9733-0b31-4d77-b92b-9569d93bc6cb",
+    "e53d0a56-3538-4192-a1bf-3b276d141f60",
+    "a3cca01d-2bed-4284-a531-5e5f70c42001",
+    "7247a0ba-c5ad-4377-a5a5-1ad4af42fd8c",
+    "e3345dde-f543-4e4d-a6dc-b2e16f96cfa1",
+    "c9dae4c2-6a9a-4366-990d-23e0361fa69b",
+    "2ffe842e-6074-47bf-99cf-f49e436a2708",
+    "6d47f71f-cc18-4b2a-9020-f5721bec3064",
+    "df9e64c5-af83-4307-98f6-f14f3905a5c1"
+  ],
+  "invalidGuardRpcCalls": 0,
+  "readOnlyRpcCalls": 6,
+  "sourceHashes": {
+    "backend/src/bank/operator-wallets.mjs": "706b8a21920360dd1896554f3baac6aa5e0d5e7e9da3132d1667dd2bebb502d8",
+    "tests/bank/operator-wallets.mjs": "1198395400b23c67ad808f0d227e83fd12ffa4b4ec752e5844f446941c265889"
+  }
+}

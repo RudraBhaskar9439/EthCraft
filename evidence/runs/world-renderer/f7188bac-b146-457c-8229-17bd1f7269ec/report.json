@@ -1,0 +1,36 @@
+{
+  "status": "pass",
+  "scope": "Synthetic native renderer fixture ONLY; no Minecraft live capture",
+  "metadata": {
+    "captureId": "f7188bac-b146-457c-8229-17bd1f7269ec",
+    "agent": "RenderFixture",
+    "world": "SYNTHETIC_RENDERER_FIXTURE_NOT_SERVER",
+    "observedAt": "2026-10-31T12:04:35.311Z",
+    "source": "Disclosed deterministic synthetic renderer fixture; no server/client observation",
+    "observedBlockHash": "172d4fdf1f94b7840701d8586cf701d085a332012c98c27745866b8b219c2967",
+    "chunkHashes": {},
+    "fixture": true,
+    "renderer": "Prismarine Viewer 1.33.0 native WebGL/Mesa",
+    "renderedAt": "2026-10-31T12:04:38.340Z",
+    "assetsVersion": "1.21.4",
+    "semanticStateMapping": true,
+    "width": 960,
+    "height": 640,
+    "camera": {
+      "position": [
+        22,
+        78,
+        25
+      ],
+      "target": [
+        7,
+        64.8,
+        7
+      ]
+    },
+    "agentModel": false,
+    "visibleRegionOnly": true,
+    "pngSha256": "205c8040224ebd15f54a312fbbe1b08bf34780a00eb84557f66cd06d15d0be97"
+  },
+  "bytes": 41773
+}

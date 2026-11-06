@@ -1,0 +1,8 @@
+{
+  "status": "fail",
+  "scope": "Initial integrated public deployment preparation; no transaction was prepared or sent",
+  "error": "development_keystore_unlock_failed",
+  "diagnosis": "The shared keystore helper invokes cast by name. The deployment tried to unlock the existing developer before the checked key-setup helper pinned cast on PATH. Reorder preparation so the existing checked helper pins the executable first.",
+  "publicTransactions": 0,
+  "productionWorldMutations": 0
+}

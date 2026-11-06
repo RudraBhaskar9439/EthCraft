@@ -1,0 +1,118 @@
+{
+  "status": "fail",
+  "kind": "actual_local_uniswap_v4_market",
+  "runId": "edb13198-cc68-4d65-9897-3734d8465a09",
+  "schema": "market_test_edb13198cc684d6598973734d8465a09",
+  "publicTransactions": 0,
+  "realSpending": 0,
+  "gameCoinsCredited": false,
+  "independentHumansVerified": 0,
+  "scope": "Dedicated8559CITY/GEMtestpool; no old8547market, Minecraft, custody backing or humanwalletsignoff claim",
+  "checks": [
+    {
+      "name": "actual-new-v4-pool-code-roles-and-funded-disposable-wallet",
+      "status": "pass",
+      "chainId": 31337
+    },
+    {
+      "name": "strict-owner-bound-quote-preview-never-signs-or-sends",
+      "status": "pass",
+      "quotedOut": "9.960069810399032164",
+      "minimumOut": "9.860469112295041842"
+    },
+    {
+      "name": "actual-erc20-approval-v4-exact-input-and-canonical-event-transfer-proof",
+      "status": "pass",
+      "transactionHash": "0xf83959552fa8aed16ee951f711317e8f1f77e8cd80484db67ba156711329175c",
+      "amountOutBaseUnits": "9960069810399032164"
+    },
+    {
+      "name": "same-preview-replay-reuses-original-purchase-and-pays-zero-extra",
+      "status": "pass"
+    },
+    {
+      "name": "actual-reverse-GEM-to-CITY-swap",
+      "status": "pass",
+      "transactionHash": "0xb48d6503ce129b0a21ac80daf75ced4fb6239847f9f057735caeb0d85f3d0da2"
+    },
+    {
+      "name": "existing-exact-input-quote-survives-actual-column-migration-and-confirmation",
+      "status": "pass",
+      "transactionHash": "0x23dd52d009ce297fa3bba7235afea185041d920af1aa2a5b37ef00e420917d0e"
+    }
+  ],
+  "manifest": {
+    "schema": "agentcity.playable-market.v1",
+    "environment": "LOCAL_TEST_FIXTURE",
+    "chainId": 31337,
+    "rpcUrl": "http://127.0.0.1:8559",
+    "genesisHash": "0xc84a8cbfcd63c290082682e80a3bf9bacf121e9f06fe6cc942e3d9bcc3fda3ae",
+    "poolManager": "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0",
+    "quoter": "0xdc64a140aa3e981100a9beca4e685f962f0cf6c9",
+    "router": "0x5fc8d32690cc91d4c39d9d3abcbd16989f875707",
+    "tokens": {
+      "CITY": {
+        "address": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+        "decimals": 18
+      },
+      "GEM": {
+        "address": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+        "decimals": 18
+      }
+    },
+    "poolKey": {
+      "currency0": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      "currency1": "0xe7f1725e7734ce288f8367e1bb143e90bb3f0512",
+      "fee": 3000,
+      "tickSpacing": 60,
+      "hooks": "0x0000000000000000000000000000000000000000"
+    },
+    "codeHashes": {
+      "poolManager": "0xccabfb6b6eb6f2d776a498b923d3706fe6b35f59f9106b03cc2e81618318afb6",
+      "quoter": "0xa521ac45344d609d8700dfb23e43b87d7112c7f2df7bbf6cf70530eb50abf4d0",
+      "router": "0x4da570e773508c63a050c7fcd9b09cdcc8fa9d81d473fb8cb80224de66c38e2e",
+      "CITY": "0xf9eebf13f96d7b246e30cadd39bbfcf908086d15fdb328ac522e52fa71fb2821",
+      "GEM": "0xf9eebf13f96d7b246e30cadd39bbfcf908086d15fdb328ac522e52fa71fb2821"
+    },
+    "exactOutputEnabled": true,
+    "maxInputBaseUnits": "100000000000000000000",
+    "maxNativeCostWei": "2000000000000000",
+    "localFixture": {
+      "administrator": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+      "issuer": "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+      "liquidityHelper": "0x0165878A594ca255338adfa4d48449f69242Eb8F",
+      "issuedEachToken": "100000000000000000000000",
+      "liquidity": "10000000000000000000000",
+      "ticks": [
+        -600,
+        600
+      ],
+      "testOnly": true
+    },
+    "sourceHashes": {
+      "contracts/src/PlayableMarketRouter.sol": "0f990250303dd9d9e8accff4946c431707a7416779357bb35928737aea990af1",
+      "contracts/src/PlayableMarketToken.sol": "264f6f933e1e2b376708e53d37723d436893bbb34199d75e304e5e706ac74ddd",
+      "contracts/script/PlayableMarketLocal.s.sol": "3c00b4d530c7a92463e6f1c5a69edb853030621974e5bd862048d2bb8fa5e54d",
+      "contracts/package-lock.json": "80312c2b2b961d9094131a38097f043c67d14731a186ba7d91894cea527ebb8c"
+    },
+    "gameCoinsBacked": false,
+    "minecraftInventoryBacked": false,
+    "confirmations": 1,
+    "maxGas": 1000000
+  },
+  "playerFixture": {
+    "playerId": "2b061c12-592b-4f4d-a090-62702bbe4818",
+    "address": "0x792ab316a26969a153c6ff0597db385fde26e071",
+    "custody": "server_managed_testnet"
+  },
+  "fundingTransactions": [
+    "0x56a82a19b86546d6a148bf27b9c37d4f1d0189e734c985ec81d0b1bed886d087",
+    "0x9bdd4098bbc9f0815e36fd60080a9d9fba5d78a4ec56009c0f47e9ce7f083460",
+    "0x5b95113cbea363d3fb4d63f7f46a6605d77b9225ee24d2e70e1b19e7bcb7d623"
+  ],
+  "error": {
+    "name": "AssertionError",
+    "message": "The input did not match the regular expression /immutable/. Input:\n\n'error: PLAYABLE_MARKET_PREVIEW_IMMUTABLE'\n"
+  },
+  "finishedAt": "2026-11-04T03:50:22.522Z"
+}

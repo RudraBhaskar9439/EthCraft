@@ -1,0 +1,44 @@
+{
+  "schema": "agentcity.bank-deployment-verification.v1",
+  "runId": "2cb40aa7-68b4-4f71-8e64-050e1bb66e34",
+  "chainId": 31337,
+  "manifestSha256": "3d884f2bc5091965c6bbfcc533b4b15a4dba46cb7168733031518c89184356cf",
+  "publicTransactions": 0,
+  "walletSignatures": 0,
+  "nativeItemsRegistered": 0,
+  "independentHumans": 0,
+  "realMoneySpentUsd": 0,
+  "checks": [
+    {
+      "name": "Pinned chain and genesis",
+      "status": "pass"
+    },
+    {
+      "name": "All manifest runtime code hashes",
+      "status": "pass"
+    },
+    {
+      "name": "Bank, marketplace, authenticated router and publisher bindings",
+      "status": "pass"
+    },
+    {
+      "name": "Mock USDC6 and CITY/GEM18 identities",
+      "status": "pass"
+    },
+    {
+      "name": "Official quotes reflect18/6decimal seed price without requiring native health for exits",
+      "status": "pass"
+    }
+  ],
+  "quotes": {
+    "CITY": {
+      "amountInBaseUnits": "1003109338015045237",
+      "outputMockUsdcBaseUnits": "1000000"
+    },
+    "GEM": {
+      "amountInBaseUnits": "1003109338015045237",
+      "outputMockUsdcBaseUnits": "1000000"
+    }
+  },
+  "status": "pass"
+}

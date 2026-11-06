@@ -1,0 +1,113 @@
+{
+  "status": "pass",
+  "observedAt": "2026-11-05T13:41:56.023Z",
+  "scope": "Read-only saved actual Paper player NBT after native delivery saveData; no session changes or independent human qualification.",
+  "observations": [
+    {
+      "role": "borrower",
+      "playerId": "23d62fe0-1c3f-311e-be1b-8e39156c501b",
+      "savedAt": "2026-11-05T13:40:17.747Z",
+      "entries": [
+        {
+          "Slot": 0,
+          "id": "minecraft:diamond_sword",
+          "count": 1,
+          "components": {
+            "minecraft:lore": [
+              {
+                "extra": [
+                  "Disclosed laptop fixture stock"
+                ],
+                "text": ""
+              },
+              {
+                "extra": [
+                  "Controlled actor and testnet assets only"
+                ],
+                "text": ""
+              }
+            ],
+            "minecraft:enchantments": {
+              "minecraft:sharpness": 2
+            },
+            "minecraft:custom_name": {
+              "extra": [
+                "BankSeller testnet collateral"
+              ],
+              "text": ""
+            },
+            "minecraft:custom_data": {
+              "PublicBukkitValues": {
+                "agentcityworldfixture:native_proof": "BankSeller"
+              }
+            },
+            "minecraft:damage": 7
+          },
+          "fingerprint": "d41e0d6ac1cd88199dc49e6882ddd3cb117339da474297237e23de07ce4f828a"
+        }
+      ]
+    },
+    {
+      "role": "seller",
+      "playerId": "6762f7b4-50a9-33f9-a378-c5b0bbf2c2ca",
+      "savedAt": "2026-11-05T13:40:22.586Z",
+      "entries": []
+    },
+    {
+      "role": "bidder",
+      "playerId": "cc98e9a3-0b21-30a7-9509-817076d54d80",
+      "savedAt": "2026-11-05T13:40:27.439Z",
+      "entries": [
+        {
+          "Slot": 0,
+          "id": "minecraft:diamond_sword",
+          "count": 1,
+          "components": {
+            "minecraft:lore": [
+              {
+                "extra": [
+                  "Disclosed laptop fixture stock"
+                ],
+                "text": ""
+              },
+              {
+                "extra": [
+                  "Controlled actor and testnet assets only"
+                ],
+                "text": ""
+              }
+            ],
+            "minecraft:enchantments": {
+              "minecraft:sharpness": 2
+            },
+            "minecraft:custom_name": {
+              "extra": [
+                "BankBorrower testnet collateral"
+              ],
+              "text": ""
+            },
+            "minecraft:custom_data": {
+              "PublicBukkitValues": {
+                "agentcityworldfixture:native_proof": "BankBorrower"
+              }
+            },
+            "minecraft:damage": 7
+          },
+          "fingerprint": "37a461141daaef09a37a94b794eec115cfe05a5998c08476a47fe0a1266d617c"
+        }
+      ]
+    }
+  ],
+  "checks": [
+    "Bidder holds exactly the auctioned original borrower sword",
+    "Borrower holds exactly the purchased seller sword; no original duplicate",
+    "Seller inventory is empty",
+    "Both full canonical NBT fingerprints match actual delivery receipts"
+  ],
+  "publicTransactions": 0,
+  "paidModelCalls": 0,
+  "serverId": "laptop-bank-1ce53d39d114410b90f72599ebae8b07",
+  "sources": {
+    "tests/bank/native-delivery.mjs": "989bdd0a35b0975d0424dbb0d6154210f80a340ac9d918d08ac6c7eb2c686ad7"
+  }
+}

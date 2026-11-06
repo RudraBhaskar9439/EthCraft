@@ -1,0 +1,15 @@
+{
+  "name": "agentcity-native-world-renderer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Credential-free native offscreen rendering of observed Mineflayer world snapshots",
+  "dependencies": {
+    "prismarine-viewer": "1.33.0",
+    "node-canvas-webgl": "0.3.0",
+    "canvas": "3.2.0",
+    "gl": "8.1.6"
+  },
+  "overrides": {
+    "node-canvas-webgl": { "canvas": "3.2.0", "gl": "8.1.6" }
+  }
+}

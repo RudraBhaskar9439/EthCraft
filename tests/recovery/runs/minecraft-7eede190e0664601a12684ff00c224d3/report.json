@@ -1,0 +1,25 @@
+{
+  "status": "fail",
+  "sourceRun": "agentcity-construction-750b0aae",
+  "scope": "Cold restore of a completed isolated internal-material Minecraft fixture; no blockchain link",
+  "checks": [
+    "complete stopped source archived and extracted; all saved file fingerprints match before first boot"
+  ],
+  "sourceOwner": "6d4af3c1c8824374b78de953c374ee27",
+  "userAccessWorldTouched": false,
+  "sourceWorldModified": false,
+  "realMoneySpent": 0,
+  "error": {
+    "type": "RuntimeError",
+    "message": "Local operation failed: node ops/inspect_restored_world.cjs"
+  },
+  "ownedCloneRemoved": true,
+  "finishedAt": "2026-10-30T07:27:02.996723+00:00",
+  "sources": {
+    "ops/world_recovery.py": "573146bd5c6a0f6f38bfe90b47c6cff8f75b40efa6ca2c8c2482340228419da9",
+    "ops/inspect_restored_world.cjs": "ef076fcf2cdba21df8f03d058e69feac0ad3155396bbe3da33120d43a0ab6fd5",
+    "scripts/local_host.py": "fe8e867a2f7e5077ea0154f907f69ffb33c9d8c516105747782bd606143ff65a",
+    "backend/src/bot/construction-worker.cjs": "4effac5a0100bb9a6c51461b5790e7e0848294304fb6398e849e3f20f2790297",
+    "tests/compatibility/package-lock.json": "644d0168c7bd3d406eeb489e55469fdf2f0e70fe40debcdbe18c9f0b1a1fa915"
+  }
+}
