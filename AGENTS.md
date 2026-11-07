@@ -1,6 +1,6 @@
 # Working on EthCraft
 
-EthCraft is a private Minecraft/AI marketplace with an optional Uniswap v4 investment flow. Start with [README.md](README.md), then [the Uniswap review guide](docs/UNISWAP_REVIEW.md). The current repository is the publication/development checkout; it does not contain the enrolled laptop's private runtime state.
+EthCraft is a Minecraft/AI marketplace with an optional Uniswap v4 investment flow. Start with [README.md](README.md), then [the Uniswap review guide](docs/UNISWAP_REVIEW.md). The current repository is the publication/development checkout; it does not contain the enrolled laptop's private runtime state.
 
 ## Review without credentials
 
@@ -24,7 +24,7 @@ These checks use isolated fixtures and no real wallets. Do not inspect `.local/`
 - Run focused checks for changed code. Install the existing NBT fixture graph with `npm ci --prefix tests/compatibility --ignore-scripts --no-audit --no-fund`, then run `python3 -m unittest discover -s tests -v` and `python3 scripts/check_plan.py` for planning/doc cleanup. These validate planning infrastructure, not product acceptance.
 - Preserve `planning/`, source manifests, the verification matrix, immutable evidence, failed attempts and required attributions. Update actual shared component/dependency paths in `planning/scope.json` when introducing them. Do not edit requirements or case digests to hide a failed gate.
 - The historical phase plan remains in [IMPLEMENTATION_PLAN](docs/IMPLEMENTATION_PLAN.md), [DECISIONS](docs/DECISIONS.md), [TESTING](docs/TESTING.md) and `planning/phases.json`. Before advancing a canonical phase, check its previous phase with `python3 scripts/check_phase.py PREVIOUS_PHASE`. Local technical work is authorized through Phase 8, but fixtures do not pass outstanding live gates.
-- Prefer one meaningful completed commit. Keep commit messages provider-neutral as requested by the owner. Do not rewrite published history again, fabricate activity, backdate work or remove attribution. Publish to private EthCraft only within the current task; the previous scheduled synchronization window has ended.
+- Prefer one meaningful completed commit. Keep commit messages provider-neutral as requested by the owner. Do not rewrite published history again, fabricate activity, backdate work or remove attribution. Publish to EthCraft only within the current task; the previous scheduled synchronization window has ended.
 - Report changed behavior, actual pass/fail checks, remaining uncertainty and the commit link. Distinguish fixture, read-only public-chain, controlled live and independently operated human results. Do not claim production readiness from component tests.
 
 ## Financial boundaries
@@ -51,4 +51,4 @@ These checks use isolated fixtures and no real wallets. Do not inspect `.local/`
 
 Arkiv progress/work orders are opt-in, expiring, runtime-attested public coordination records. Keep private objectives, identities, reasoning, audio and financial permissions local. Two-stage claims require fresh reads and exact registered-chest/tool receipts. No work-order payments or purchases are enabled. Reconcile the same uncertain publication instead of replacing it.
 
-The full repository stays private. Only the separately authorized read-only Arkiv viewer/component may be public; never expose local files, control APIs, credentials or signing routes. Respect `docs/UPSTREAM_REUSE.md`, `docs/THIRD_PARTY_INVESTMENTS.md` and per-file licenses. Independent humans, public token-platform suitability, funded-chain preflight and original source qualification remain separate gates. Earlier code/assets and AI assistance must be disclosed; condensed Git history does not establish Build-from-Scratch eligibility.
+The owner authorized public EthCraft source on 7 November 2026. Source visibility does not authorize exposing private runtime state, credentials, databases, player journals or live control/signing endpoints. The separate Arkiv viewer remains read-only. Respect `docs/UPSTREAM_REUSE.md`, `docs/THIRD_PARTY_INVESTMENTS.md` and per-file licenses. Independent humans, public token-platform suitability, funded-chain preflight and original source qualification remain separate gates. Earlier code/assets and AI assistance must be disclosed; condensed Git history does not establish Build-from-Scratch eligibility.

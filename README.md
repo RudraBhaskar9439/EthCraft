@@ -112,7 +112,7 @@ The extra compatibility dependency installation supplies the NBT parser used by 
 
 The [latest repository review](evidence/runs/uniswap-review/3ba5fa06-a54d-4aa0-bc2e-32ca79b34365/report.json) records a fresh-checkout command run, link/address validation and read-only verification of all 12 listed contract code hashes. It made no public transactions.
 
-Evidence is scoped to its recorded source and environment. This is a test-token prototype, not a security audit or mainnet qualification. Pinned dependencies have recorded transitive audit advisories. Independent-human acceptance and public Minecraft/token platform suitability remain separate, unresolved release requirements. A private repository does not establish platform permission.
+Evidence is scoped to its recorded source and environment. This is a test-token prototype, not a security audit or mainnet qualification. Pinned dependencies have recorded transitive audit advisories. Independent-human acceptance and public Minecraft/token platform suitability remain separate, unresolved release requirements. Repository visibility does not establish platform permission.
 
 ## Other integrations
 
