@@ -1,0 +1,46 @@
+{
+  "schema": "ethcraft.merchant-recovery.v1",
+  "recordedAt": "2026-11-07T00:38:56.499Z",
+  "status": "pass",
+  "scope": "Existing controlled BankSeller recovery; actual native stock read and actual owner-reported catalog reopening. No purchase or payment qualification.",
+  "before": {
+    "merchantOnline": false,
+    "menu": "Stock Changed"
+  },
+  "after": {
+    "merchantOnline": true,
+    "merchantApproved": true,
+    "sameRegisteredSource": true,
+    "provenance": "operator_supplied_demo",
+    "items": {
+      "stone": 64,
+      "stone_bricks": 64
+    },
+    "userReport": "The item list opens"
+  },
+  "checks": [
+    {
+      "command": "python3 -m unittest discover -s tests -p test_local_worker_supervisor.py -v",
+      "status": "pass",
+      "tests": 4
+    },
+    {
+      "command": "python3 -m unittest discover -s tests -q",
+      "status": "pass",
+      "tests": 86
+    },
+    {
+      "command": "python3 scripts/check_plan.py",
+      "status": "pass",
+      "scope": "Planning integrity only"
+    }
+  ],
+  "recoveryActions": {
+    "existingMerchantReconnect": true,
+    "newStockBootstrap": false,
+    "walletSignatures": 0,
+    "tokenTransactions": 0,
+    "realOwnerApprovalChanged": false
+  },
+  "unverified": "A new material purchase was not attempted."
+}

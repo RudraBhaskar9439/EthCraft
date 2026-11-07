@@ -87,3 +87,13 @@ The online database test does not establish world or chain recovery. The isolate
 ## Local Discord availability
 
 Run `python3 scripts/local_discord_supervisor.py` to keep the identity-only bot available after a Discord WebSocket crash. A private filesystem lease prevents duplicate supervisors; child failure restarts after at least 15 seconds. A clean exit or supervisor SIGTERM stops it. The current child and supervisor PIDs are in ignored `.local/mumbai/local_discord-process.json`; private logs remain in `.local/mumbai/local_discord.log`. Credentials and approvals are unchanged. Do not start `scripts/local_discord.mjs` separately while the supervisor runs. This is a local session service; it does not install a system boot service.
+
+For the shop merchant, run `python3 scripts/local_discord_supervisor.py merchant`.
+It reconnects the existing controlled BankSeller after normal disconnects or
+crashes, waiting 15 seconds between attempts. It never passes `--bootstrap`,
+grants materials or signs payments. Its distinct lease and
+`.local/mumbai/mumbai_merchant-process.json` retain the child/supervisor PIDs.
+Do not start a second BankSeller process. Stop the recorded supervisor PID to
+stop recovery deliberately. A merchant that is offline makes the catalog
+unavailable; reopening `/market` after it reconnects reads its actual remaining
+stock. A successful stock read does not authorize a purchase.
