@@ -1,3 +1,5 @@
+> **Historical map-import checkpoint.** The original read-only sightseeing scope below was superseded by [editable Mumbai Survival](AGENT_SURVIVAL.md) and the [UniRock city hub](MUMBAI_CITY.md). Retain the import evidence and world identities; do not apply the old restrictions to current gameplay.
+
 # South Mumbai on the laptop server
 
 The Mumbai world covers roughly 8.5 square kilometres around Gateway of India,

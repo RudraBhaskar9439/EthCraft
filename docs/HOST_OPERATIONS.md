@@ -1,6 +1,6 @@
 # Laptop host operations
 
-> **Historical environment.** The active Discord-first playable host and on-chain-only testnet economy use the [1 November 2026 operator runbook](HANDOFF_2026-11-01.md#operator-runbook). The loopback split-demonstration setup below is retained for its original checkpoint; do not use it to restart or reconfigure the current player host.
+> **Historical environment.** For the current Mumbai/UniRock host, start with the [current documentation index](README.md) and [Mumbai operator qualification](MUMBAI_CITY.md#operation-and-verification). The loopback split-demonstration setup below is retained for its original checkpoint; do not use it to restart or reconfigure the current player host.
 
 The laptop hosts the current preparation environment on loopback only. Minecraft uses internal game materials. The blockchain demonstration uses separate synthetic stock and inspection. Starting services or restoring a database never grants Minecraft items or access.
 

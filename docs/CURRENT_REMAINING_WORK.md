@@ -1,3 +1,5 @@
+> **Historical status snapshot.** This file is retained because its original checkpoint references it. Use the current [README verification table](../README.md#what-is-actually-verified) and [documentation index](README.md) for active behavior and remaining proof.
+
 # Current delivery and remaining work
 
 Snapshot: 6 November 2026. This describes the **current laptop marketplace**,

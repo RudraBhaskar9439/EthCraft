@@ -1,0 +1,235 @@
+{
+  "schema": "ethcraft.uniswap-repository-review.v1",
+  "recordedAt": "2026-11-07T02:30:18.286069+00:00",
+  "status": "pass_local_and_read_only",
+  "basePublicationCommit": "731e068fee04de9bb105e7495563e89583a6e8e5",
+  "latestCompletedSourceCommit": "edb1e6468e57a89a4696f4c8d4b5775e8597b5dd",
+  "scope": "Documentation, public deployment pins and CI prerequisites; runtime source and live services unchanged.",
+  "checks": {
+    "node": [
+      "node tests/investments/v4.mjs",
+      "node tests/investments/swaps.mjs",
+      "node tests/investments/privy.mjs"
+    ],
+    "nodeStatus": "pass_fixture_only",
+    "forge": {
+      "command": "forge test --root contracts --match-contract '^MarketplaceInvestmentsTest$' -vv",
+      "passed": 12,
+      "failed": 0,
+      "skipped": 0,
+      "environment": "isolated EVM, official PoolManager/PositionManager and disclosed Permit2 fixture"
+    },
+    "python": {
+      "command": "python3 -m unittest discover -s tests -v",
+      "passed": 86,
+      "failed": 0
+    },
+    "planning": {
+      "command": "python3 scripts/check_plan.py",
+      "status": "pass",
+      "phases": 11,
+      "scenarioFamilies": 270,
+      "upstreams": 19
+    },
+    "documentation": {
+      "status": "pass",
+      "allReadmeAddressesMatchManifest": true,
+      "addressCount": 12,
+      "poolIdMatches": true,
+      "localLinksAndAnchorsChecked": true
+    }
+  },
+  "liveReadOnly": {
+    "checkedAt": "2026-11-07T02:26:57.380Z",
+    "status": "pass_read_only_bindings",
+    "chainId": 1301,
+    "genesisHash": "0xb7fe0bc9f98ca03294ca0094ff9374cc3e64130b6ec85850d6e260191f48bfe7",
+    "blockNumber": "67165982",
+    "blockHash": "0x04bc8d7f20bb540a3a30063ba68a7110ef0d812d854928b3d976a6b0b5a914cb",
+    "contracts": {
+      "registry": {
+        "address": "0xf3037a6d2b68ee5832f53d9ff0bf22c22031af81",
+        "codeHash": "0x9825094905f226df9f11f142b1f876b56adc56de6215fba350c05d34fb57cc9a"
+      },
+      "market": {
+        "address": "0xb2b515bbbaf0b65a011e1523563601c00fbf0d53",
+        "codeHash": "0x2c351bb797938b213b0979619d1374cac616fc38d5a3586d455d610b2a2a03fc"
+      },
+      "router": {
+        "address": "0x6d00ad99e68508cd4cae4fe93eab8b03af8efcaf",
+        "codeHash": "0xefc386abe89a76c52b2127a9abfea1db71d2b32d8fac18e2a6d27e932df67237"
+      },
+      "hook": {
+        "address": "0x6faf5918c8fd0af9716d300ce8f7e9310cc11fc0",
+        "codeHash": "0xa7faff8b09faf6b6fc521a251959386f003975788204ed22e66e264b18c3e8f6"
+      },
+      "workEscrow": {
+        "address": "0x33f627279ffb9e87253a5635fa76da748a76d050",
+        "codeHash": "0x336826c1ab37ac67371732e8e95e42232c537f783eb325038d45086cf8fef861"
+      },
+      "poolManager": {
+        "address": "0x9cb26a7183b2f4515945dc52cb4195b0d2d06c95",
+        "codeHash": "0x2566e42d45723eef05d7253a7b7c140a6da61992594525fc66d06b4a973b5d0b"
+      },
+      "quoter": {
+        "address": "0xb2b34025a07af3925313b6b46f8046ee8ffba30b",
+        "codeHash": "0x7fd1ee3f8e9172cb587fd1c8a190271615ca7e5d4c874ee3f4bd46ceb8c334da"
+      },
+      "positionManager": {
+        "address": "0x12a98709bb5d0641d61458f85dcafbe17ac2d05c",
+        "codeHash": "0xb2c86861af8fd6940106d15098ac04383d121b388044878a0d7d9117535f6885"
+      },
+      "permit2": {
+        "address": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+        "codeHash": "0x6df9d9804d74bce5ad57c8145936ec9cdb3d91a655da68b9b1b1c4ea8e001433"
+      },
+      "stateRegistry": {
+        "address": "0x421c5e824038048ae6bc8dc7c19d02b74959112f",
+        "codeHash": "0x9cd52d7c2be101ac01bca81ef3798731e742aa554c05b39efb666e8e2a0b160f"
+      },
+      "city": {
+        "address": "0x13431952927c79004fc2fc5aab576752552fea12",
+        "codeHash": "0xf9eebf13f96d7b246e30cadd39bbfcf908086d15fdb328ac522e52fa71fb2821"
+      },
+      "usdc": {
+        "address": "0x9caa79a2b1e4420e45f0cf3bd47a90770136b3a4",
+        "codeHash": "0xbad597e8112aba7f7e29880b1128fffe0e7ed71e29c6f8133ad33988d0dcea38"
+      }
+    },
+    "pool": {
+      "id": "0x1417774f1f970721329cfb44701537d8bb36296d05a18810cb3771705e590897",
+      "tick": -276321,
+      "activeLiquidity": "10000000000000000"
+    },
+    "reference": {
+      "ready": true,
+      "meanTick": -276321,
+      "anchorTimestamp": "1794018072",
+      "ageSeconds": "338"
+    },
+    "seedPosition": {
+      "tokenId": "21",
+      "owner": "0xb25898f5e4907e6925741B10DeA46F351104a0e4"
+    },
+    "publicTransactions": 0,
+    "apiKeysUsed": false,
+    "privateFilesRead": false
+  },
+  "documentedCastCommands": [
+    {
+      "command": [
+        "cast",
+        "chain-id",
+        "--rpc-url",
+        "https://sepolia.unichain.org"
+      ],
+      "status": "pass",
+      "stdout": "1301"
+    },
+    {
+      "command": [
+        "cast",
+        "call",
+        "0x6faf5918c8fd0af9716d300ce8f7e9310cc11fc0",
+        "poolManager()(address)",
+        "--rpc-url",
+        "https://sepolia.unichain.org"
+      ],
+      "status": "pass",
+      "stdout": "0x9cB26A7183B2F4515945Dc52CB4195B0d2D06C95"
+    },
+    {
+      "command": [
+        "cast",
+        "call",
+        "0x12a98709bb5d0641d61458f85dcafbe17ac2d05c",
+        "poolManager()(address)",
+        "--rpc-url",
+        "https://sepolia.unichain.org"
+      ],
+      "status": "pass",
+      "stdout": "0x9cB26A7183B2F4515945Dc52CB4195B0d2D06C95"
+    },
+    {
+      "command": [
+        "cast",
+        "call",
+        "0x12a98709bb5d0641d61458f85dcafbe17ac2d05c",
+        "permit2()(address)",
+        "--rpc-url",
+        "https://sepolia.unichain.org"
+      ],
+      "status": "pass",
+      "stdout": "0x000000000022D473030F116dDEE9F6B43aC78BA3"
+    },
+    {
+      "command": [
+        "cast",
+        "call",
+        "0x6faf5918c8fd0af9716d300ce8f7e9310cc11fc0",
+        "marketReference()(bool,int24,uint64,uint64)",
+        "--rpc-url",
+        "https://sepolia.unichain.org"
+      ],
+      "status": "pass",
+      "stdout": "true\n-276321 [-2.763e5]\n1794018265 [1.794e9]\n307"
+    },
+    {
+      "command": [
+        "cast",
+        "call",
+        "0x12a98709bb5d0641d61458f85dcafbe17ac2d05c",
+        "ownerOf(uint256)(address)",
+        "21",
+        "--rpc-url",
+        "https://sepolia.unichain.org"
+      ],
+      "status": "pass",
+      "stdout": "0xb25898f5e4907e6925741B10DeA46F351104a0e4"
+    }
+  ],
+  "initialFailureAndResolution": {
+    "check": "Python host-safety NBT UUID fixture",
+    "result": "85 passed, 1 error before its existing Node dependency graph was installed",
+    "cause": "Fresh checkout lacked tests/compatibility/node_modules/prismarine-nbt",
+    "fix": "Install the committed tests/compatibility dependency graph with lifecycle scripts disabled; document the prerequisite and add it to planning CI. No runtime or test assertions were weakened."
+  },
+  "removedObsoleteGuides": [
+    "docs/TEAMMATE_HANDOFF.md",
+    "docs/HANDOFF_2026-11-01.md",
+    "docs/WINDOWS_WSL_QUICKSTART.md",
+    "docs/FRESH_WINDOWS_WORLD.md",
+    "docs/P1_CHECKPOINT.md",
+    "docs/P2_CHECKPOINT.md",
+    "docs/P1_IMPLEMENTATION.md",
+    "docs/PLAYABLE_PILOT.md",
+    "docs/HUMAN_ACCEPTANCE.md"
+  ],
+  "sourceSha256": {
+    "README.md": "e95b514bdfe5746634ffc822f56e6e2ac2dbeae2ee510acde37d8ee5852f90f2",
+    "AGENTS.md": "750083b976a1e99be691411212cf8cbab9acec168d10fb132bbe002c85c7f0e2",
+    "feedback.md": "fce87ddf28afb2b9d9b1ce775661213bd8b8fc890a27dabe9582ace37a8e6434",
+    "docs/README.md": "de589f5e289587672130a37463dba2ba6497a12eec49d66bea00f61e4cd6dec3",
+    "docs/UNISWAP_REVIEW.md": "6f7351e2d10a71bc392d8e4edd1767f96abe5f340bb662a647a823cde7f92719",
+    ".github/workflows/planning.yml": "cf3cf5c86e1a75b6450f84ca4eb8f405b230ffd7a6b8e018ec3c23b2affedaf8",
+    "planning/scope.json": "867bd35b8394a5c217454bbc996bc637e471cfd8f26f45cddaac4162a7f96dec",
+    "config/marketplace-public-deployment.json": "9f02db6cbc44d0db2119e7904c8d3dc3fe9cedc5938912056386869a6aa43c47",
+    "contracts/src/AgentCityMarketplaceHook.sol": "eca22673e987cd9a07e3865dcd3e3d803778aaf0c5f2dbb9994adf1c622444eb",
+    "contracts/src/BankPaymentRouter.sol": "fc3db20b9b3f7eab14a8b35986bd964c1f66f34aa72735651ec349d32f77666e",
+    "backend/src/investments/v4.mjs": "51bed5faf976f61aef7e24df05705ddad712be471afd46ad58fccba7efd0159a",
+    "backend/src/investments/swaps.mjs": "2ab2ecaee83400c2c19496b8e36cdfbb600708d0f2684a29f87e8173c8a4021a",
+    "backend/src/investments/service.mjs": "2e1b537d91c63e6d8d2cc10e8f8ed261ff56f41a51ed4a10bcc72940c63dbe16",
+    "backend/src/investments/policy.mjs": "dca6171056a3546fcd82356c32fba409123c7a542fd27ad7e261deb5cfdc8181",
+    "backend/src/investments/uniswap-api.mjs": "06d40d26e8b1d73ae54775cb322f857f6b289d07560f45ea05fef77745ae8e83",
+    "tests/contracts/MarketplaceInvestments.t.sol": "860d42e1ce55c8d8d60cfe5729523f657cf4c14af3fc2bd65540a686d3faf03b"
+  },
+  "publicTransactions": 0,
+  "paidInferenceRequests": 0,
+  "limitations": [
+    "This is not a contract security audit or a new product-phase certification.",
+    "No new live Privy LP deposit/fee/withdraw lifecycle or protected multi-pool execution was performed.",
+    "No Minecraft, Discord or Privy live service was restarted or reconfigured.",
+    "The CI commands passed locally; remote GitHub Actions result is checked separately after publication.",
+    "Earlier immutable evidence remains scoped to its original source/environment; condensed history and new documentation do not establish prize eligibility."
+  ]
+}

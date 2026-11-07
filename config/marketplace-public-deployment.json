@@ -38,7 +38,10 @@
     "hook": "0x6faf5918c8fd0af9716d300ce8f7e9310cc11fc0",
     "workEscrow": "0x33f627279ffb9e87253a5635fa76da748a76d050",
     "poolManager": "0x9cb26a7183b2f4515945dc52cb4195b0d2d06c95",
-    "quoter": "0xb2b34025a07af3925313b6b46f8046ee8ffba30b"
+    "quoter": "0xb2b34025a07af3925313b6b46f8046ee8ffba30b",
+    "positionManager": "0x12a98709bb5d0641d61458f85dcafbe17ac2d05c",
+    "permit2": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+    "stateRegistry": "0x421c5e824038048ae6bc8dc7c19d02b74959112f"
   },
   "poolKey": {
     "currency0": "0x13431952927c79004fc2fc5aab576752552fea12",
@@ -59,7 +62,9 @@
     "stateRegistry": "0x9cd52d7c2be101ac01bca81ef3798731e742aa554c05b39efb666e8e2a0b160f",
     "workEscrow": "0x336826c1ab37ac67371732e8e95e42232c537f783eb325038d45086cf8fef861",
     "poolManager": "0x2566e42d45723eef05d7253a7b7c140a6da61992594525fc66d06b4a973b5d0b",
-    "quoter": "0x7fd1ee3f8e9172cb587fd1c8a190271615ca7e5d4c874ee3f4bd46ceb8c334da"
+    "quoter": "0x7fd1ee3f8e9172cb587fd1c8a190271615ca7e5d4c874ee3f4bd46ceb8c334da",
+    "positionManager": "0xb2c86861af8fd6940106d15098ac04383d121b388044878a0d7d9117535f6885",
+    "permit2": "0x6df9d9804d74bce5ad57c8145936ec9cdb3d91a655da68b9b1b1c4ea8e001433"
   },
   "marketplace": {
     "guard": {
@@ -82,7 +87,7 @@
       "CITY"
     ],
     "activeCreditFeatures": false,
-    "average": "Geometric time-weighted mean tick over a matured300–600second anchor interval; not an arithmetic average or manipulation-proof price.",
+    "average": "Geometric time-weighted mean tick over a matured300\u2013600second anchor interval; not an arithmetic average or manipulation-proof price.",
     "checkpointIntervalSeconds": 30,
     "sourceHook": "AgentCityMarketplaceHook",
     "initialLiquidity": {
@@ -102,5 +107,29 @@
   },
   "mockUSDC": true,
   "circleIssuedUSDC": false,
-  "disclosure": "Operator-controlled testnet marketplace; lending/borrowing/auctions/credit reputation are archived and disabled in the active application."
+  "disclosure": "Operator-controlled testnet marketplace; lending/borrowing/auctions/credit reputation are archived and disabled in the active application.",
+  "genesisHash": "0xb7fe0bc9f98ca03294ca0094ff9374cc3e64130b6ec85850d6e260191f48bfe7",
+  "poolId": "0x1417774f1f970721329cfb44701537d8bb36296d05a18810cb3771705e590897",
+  "official": {
+    "PoolManager": {
+      "address": "0x9cb26a7183b2f4515945dc52cb4195b0d2d06c95",
+      "codeHash": "0x2566e42d45723eef05d7253a7b7c140a6da61992594525fc66d06b4a973b5d0b",
+      "sourceRef": "77d52a7"
+    },
+    "PositionManager": {
+      "address": "0x12a98709bb5d0641d61458f85dcafbe17ac2d05c",
+      "codeHash": "0xb2c86861af8fd6940106d15098ac04383d121b388044878a0d7d9117535f6885",
+      "sourceRef": "77d52a7"
+    },
+    "V4Quoter": {
+      "address": "0xb2b34025a07af3925313b6b46f8046ee8ffba30b",
+      "codeHash": "0x7fd1ee3f8e9172cb587fd1c8a190271615ca7e5d4c874ee3f4bd46ceb8c334da",
+      "sourceRef": "77d52a7"
+    },
+    "Permit2": {
+      "address": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+      "codeHash": "0x6df9d9804d74bce5ad57c8145936ec9cdb3d91a655da68b9b1b1c4ea8e001433",
+      "sourceRef": "permit2@1.0.0"
+    }
+  }
 }

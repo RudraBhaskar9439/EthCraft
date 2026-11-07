@@ -1,150 +1,147 @@
-# AgentCity
+# EthCraft
 
-## EthCraft Arkiv task progress — 6 November 2026
+**A Minecraft city where players use AI workers, buy materials with CITY, and optionally provide liquidity through Uniswap v4.** UniRock is the in-game bank and marketplace in a geographic recreation of South Mumbai. Wallet reviews and confirmations stay inside Minecraft through an explicitly enrolled Privy-managed game wallet.
 
-The [public Arkiv demo](https://ethcraft-arkiv.quiet-buddy-9104.chatgpt.site) shows real worker progress and Agent-to-0G handoffs without a login or local backend. Its [public source component](https://github.com/RudraBhaskar9439/EthCraft-Arkiv) includes the SDK reader, durable publisher and handoff adapter. The original [local task board](http://127.0.0.1:8789/arkiv) remains available. [Setup, commands and track documentation](arkiv/README.md) include the verified owner test. Current Mumbai behavior follows [Survival and objective agents](docs/AGENT_SURVIVAL.md), superseding the earlier sightseeing restrictions below.
+This repository contains the game, backend, custom contracts, tests and retained evidence. The active economy uses **Unichain Sepolia, chain 1301, and test tokens only**. tUSDC is a six-decimal project mock, not Circle-issued USDC. No real-money, lending, leverage or autonomous investment feature is enabled.
 
-Rabdi chain **7794095**; entity writer **0x5a262B9621eD0F00Fe776bb85084E9561cF18608**. Query the committed deployment namespace without the game or backend:
+## Start reviewing
 
-```sh
-npm ci --prefix backend --ignore-scripts
-node scripts/arkiv_tasks.mjs --query
+- **AI agents and Uniswap judges:** follow [the review guide](docs/UNISWAP_REVIEW.md) and [repository instructions](AGENTS.md). Core checks need no wallet, API keys, Discord account or Minecraft server.
+- **Players:** see [the Minecraft walkthrough](#play-the-hosted-minecraft-demo).
+- **Integration experience:** [feedback.md](feedback.md).
+- **Technical documentation:** [documentation index](docs/README.md).
+
+## Why Uniswap is central
+
+CITY is the settlement token for the marketplace. Uniswap provides a real AMM exchange between test USDC and CITY rather than an application-defined conversion rate. A player can request an exact CITY amount with a maximum tUSDC spend, then use CITY for materials or separately approved work. The application also supports a bounded atomic swap-and-equipment-purchase path. Physical item delivery follows the confirmed payment and has its own durable receipt.
+
+Our v4 hook adds application-specific execution checks to the pool. Optional liquidity provision uses real v4 position NFTs, with range selection, token caps, ownership checks, fee accounting and withdrawals. These are contract transactions when confirmed, not simulated balance updates.
+
+```mermaid
+flowchart LR
+    Player[Player in UniRock] --> Review[Exact in-game review and confirmation]
+    Review --> Wallet[Scoped Privy game wallet]
+    Wallet --> Swap[Bounded swap / purchase router]
+    Swap --> Pool[Uniswap v4 PoolManager + custom hook]
+    Pool --> CITY[CITY for marketplace payments]
+    CITY --> Delivery[Confirmed receipt then native item delivery]
+    Wallet --> LP[PositionManager LP NFT]
+    LP --> Pool
 ```
 
-AI assisted this integration's research, code, tests and documentation. Earlier project code/assets are retained and disclosed. The extracted Arkiv component is public and MIT licensed; the full game remains private. Build-from-Scratch eligibility is still unresolved because this is an existing project; see the [eligibility notes](arkiv/README.md).
+### What we built and what we reused
 
-The [South Mumbai sightseeing world](docs/MUMBAI_WORLD.md) adds a separate,
-read-only geographic recreation with `/mumbai` and `/lobby` return. Existing
-gameplay, player inventory and marketplace identities remain separate.
+| Component | Role |
+| --- | --- |
+| [AgentCityMarketplaceHook](contracts/src/AgentCityMarketplaceHook.sol) | Our custom hook: elapsed-time price history, liquidity qualification, pre/post execution limits, bounded dynamic fees and circuit breakers. |
+| [BankPaymentRouter](contracts/src/BankPaymentRouter.sol) | Our bounded exact-output and atomic equipment-checkout integration with official v4 callbacks. Its name reflects an earlier prototype; lending is disabled in the active product. |
+| [Investment backend](backend/src/investments) | Our SDK-based LP builder, portfolio/fee reads, scoped consent, approvals and restart recovery. |
+| [Minecraft investment menu](plugin/src/main/java/org/agentcity/paper/InvestmentMenu.java) | Our native review, confirmation, pending-operation recovery and position actions. |
+| Official Uniswap components | PoolManager, PositionManager, V4Quoter, Permit2, v4 core/periphery and SDKs. We reuse these implementations and preserve their notices. |
+| Official Uniswap APIs | Chain/pool support checks and allowlisted route comparison. API quotes never authorize arbitrary calldata. |
 
-The [laptop marketplace](docs/TESTNET_MARKETPLACE.md) exchanges test USDC and
-CITY through a guarded Uniswap v4 pool, purchases deposited equipment and funds
-requester-approved native agent work. Its new hook enforces time-weighted price
-checks, trade limits and minimum active liquidity. Lending and borrowing were
-removed from the active product; earlier bank contracts and evidence are
-historical. The testnet deployment uses mock tUSDC and controlled developer
-wallets. These protections do not guarantee zero LVR or qualify a public release.
+The pinned SDKs are `@uniswap/v4-sdk` **2.4.6** and `@uniswap/sdk-core` **7.21.0**; contract dependencies are v4-core **1.0.2** and v4-periphery **1.0.3**. See [upstream reuse](docs/UPSTREAM_REUSE.md) and [SDK attribution](docs/THIRD_PARTY_INVESTMENTS.md).
 
-The [conversational-agent and managed-wallet update](docs/PLAYABLE_MARKET.md)
-adds natural multi-step requests, verified Privy identity linking and a dedicated
-Uniswap v4 CITY/GEM testnet market. Managed-player end-to-end verification and
-production qualification are tracked separately from developer swap evidence.
-See the [managed-market checkpoint](evidence/MANAGED_MARKET_CHECKPOINT.json)
-for actual results, retained failures and production blockers.
+### Current execution routes
 
-The [personal agent tools](docs/AGENT_CAPABILITIES.md) extend the playable pilot
-with natural-language structure plans, custom block layouts, bounded gathering,
-recipe crafting and delivery using real materials. The separate NPC lobby and
-Survival world remain the starting flow. Unrestricted exploration, combat, paid
-jobs and the player web dashboard remain in development.
-The [autonomy checkpoint](evidence/AUTONOMY_CHECKPOINT.json) records actual native
-construction/material results, retained failed attempts and model limitations.
+- **CITY / tUSDC swaps:** official V4Quoter plus our existing guarded pool/router. Exact output, maximum input, fixed 0.5% investment-swap slippage and deadlines are enforced. The route uses public RPC; no private-ordering or sandwich-immunity guarantee is claimed.
+- **Optional LP:** create, increase, collect fees and withdraw through the existing deployed PositionManager, using official SDK liquidity/slippage math. Each action needs its own explicit player confirmation. Material-purchase delegation does not authorize investments.
+- **Other pools:** the API advertises chain 1301, but lookup returned no entry for this custom hooked pool and CITY/tUSDC API quotes returned no route. The API registry also references a different v4 deployment. We keep existing pools/NFTs intact. Multi-pool execution stays blocked until each pool, token, target and protected submission route is verified; there is no silent unprotected fallback.
 
-The original calculator route builds and verifies a fixed calculator with actual
-internal game materials and a controlled bot. Its separate contract demonstration
-uses synthetic inventory and does not affect Minecraft gameplay. The preserved
-[deployment route](docs/DEPLOYMENT_ROUTE.md) describes that checkpoint; subsequent
-user-authorized playable and testnet market work is described above and does not
-establish platform approval or production qualification.
+### Pool protections and their limits
 
-The repository contains the implementation plan, 270 verification scenario families, focused local phase gates, tested phase tooling, and actual Paper/Mineflayer construction. The [Phase 1 checkpoint](docs/P1_CHECKPOINT.md) and [Phase 2 construction checkpoint](docs/P2_CHECKPOINT.md) preserve earlier milestones. Historical local fixtures alone do not establish independent human participation, token-platform permission or public-chain readiness; current public-testnet evidence is recorded separately below.
+The deployed hook maintains a 64-observation ring, sampling at most every 30 seconds. Its reference uses a genuine **300–600-second** historical anchor and rejects stale data. It requires sustained raw active liquidity of at least `1000000000000000`, checks spot/reference deviation before and after execution, limits swap impact to **50 ticks**, spot/reference deviation to **200 ticks**, and effective execution deviation to **2%**. Output caps are **10 tokens per trade** and **20 per block**, separately for each pool currency. LP fees vary between **0.30% and 1.00%**. Pause/health checks can block applicable swaps while retaining LP withdrawal access.
 
-## Local implementation through Phase 8
+Same-pool averaging is **not an independent fair-value oracle**. Smaller sandwiches, sustained manipulation, adverse selection, impermanent loss and LVR remain possible within these bounds. The raw liquidity floor is not a dollar-depth promise. There is no guaranteed yield, protected principal or zero-MEV claim. [Implementation and custody details](docs/UNIROCK_INVESTMENTS.md#guards-and-custody).
 
-The user-approved local track includes inference controls, PostgreSQL identities and agreements, official-SDK local Arkiv discovery, actual local Uniswap v4 contracts, bounded procurement, synthetic delivery and one-time settlement. New demonstration runs use actual local Ollama inference. The separate contract flow is now verified on Unichain Sepolia and Arkiv Tiramisu, including same-job recovery without another purchase or payment. Final human acceptance and production release checks remain pending. See the [current phase-by-phase status and proof references](evidence/REVISED_PHASE8_CHECKPOINT.json); the original integrated-spec gates remain preserved separately.
+## Deployed contracts: Unichain Sepolia
 
-- [Open the local console](http://127.0.0.1:8789)
-- [Implementation, verification and setup](docs/LOCAL_P3_P8_IMPLEMENTATION.md)
-- [Live testnet deployment and operator commands](docs/PUBLIC_TESTNET.md)
-- [Host startup, backup and recovery](docs/HOST_OPERATIONS.md)
-- [Inputs and final acceptance requirements](docs/INTEGRATION_REQUIREMENTS.md)
+All addresses below belong to **chain 1301**. Explorer links are for inspection, not a request to transact. [Machine-readable active manifest](config/marketplace-public-deployment.json) includes the PoolKey, source hashes, runtime code hashes and guard constants. Historical deployments remain separately labelled in `contracts/*deployment.json`; their pools are not automatically approved routes.
 
-The console uses Ollama and developer-controlled test wallets. The blockchain demonstration uses synthetic inventory and inspection. Minecraft construction uses actual internal game materials; blockchain balances and payouts do not affect the game. Historical evidence that says scripted inference describes the earlier implementation.
+| Contract we deployed | Address | Purpose |
+| --- | --- | --- |
+| Marketplace hook | [0x6faf5918c8fd0af9716d300ce8f7e9310cc11fc0](https://sepolia.uniscan.xyz/address/0x6faf5918c8fd0af9716d300ce8f7e9310cc11fc0) | Current CITY/tUSDC v4 checks and dynamic fees. |
+| Payment router | [0x6d00ad99e68508cd4cae4fe93eab8b03af8efcaf](https://sepolia.uniscan.xyz/address/0x6d00ad99e68508cd4cae4fe93eab8b03af8efcaf) | Exact-output swaps and atomic equipment checkout. |
+| CITY token | [0x13431952927c79004fc2fc5aab576752552fea12](https://sepolia.uniscan.xyz/address/0x13431952927c79004fc2fc5aab576752552fea12) | Project test token, 18 decimals. |
+| Mock tUSDC | [0x9caa79a2b1e4420e45f0cf3bd47a90770136b3a4](https://sepolia.uniscan.xyz/address/0x9caa79a2b1e4420e45f0cf3bd47a90770136b3a4) | Project mock, 6 decimals; no dollar backing. |
+| StateRegistry | [0x421c5e824038048ae6bc8dc7c19d02b74959112f](https://sepolia.uniscan.xyz/address/0x421c5e824038048ae6bc8dc7c19d02b74959112f) | Expiring world-health attestations. |
+| WorldAssetRegistry | [0xf3037a6d2b68ee5832f53d9ff0bf22c22031af81](https://sepolia.uniscan.xyz/address/0xf3037a6d2b68ee5832f53d9ff0bf22c22031af81) | Registered deposited equipment and custody ownership. |
+| WorldAssetMarket | [0xb2b515bbbaf0b65a011e1523563601c00fbf0d53](https://sepolia.uniscan.xyz/address/0xb2b515bbbaf0b65a011e1523563601c00fbf0d53) | CITY-priced equipment listings. |
+| Work escrow | [0x33f627279ffb9e87253a5635fa76da748a76d050](https://sepolia.uniscan.xyz/address/0x33f627279ffb9e87253a5635fa76da748a76d050) | Separately authorized, bounded work settlement. |
 
-Two people sharing this computer can open the console in Brave and select **Prepare approval pages** when ready. The separate Microsoft-authenticated Java probe on `127.0.0.1:25598` provides a real, player-initiated identity-link path; [human-verification preparation](evidence/HUMAN_VERIFICATION_PREPARATION.json) records its checks and the remaining human actions. Empty-server health and fixture signatures do not establish human participation.
+| Uniswap contract reused by this deployment | Address |
+| --- | --- |
+| PoolManager | [0x9cb26a7183b2f4515945dc52cb4195b0d2d06c95](https://sepolia.uniscan.xyz/address/0x9cb26a7183b2f4515945dc52cb4195b0d2d06c95) |
+| PositionManager | [0x12a98709bb5d0641d61458f85dcafbe17ac2d05c](https://sepolia.uniscan.xyz/address/0x12a98709bb5d0641d61458f85dcafbe17ac2d05c) |
+| V4Quoter | [0xb2b34025a07af3925313b6b46f8046ee8ffba30b](https://sepolia.uniscan.xyz/address/0xb2b34025a07af3925313b6b46f8046ee8ffba30b) |
+| Permit2 | [0x000000000022d473030f116ddee9f6b43ac78ba3](https://sepolia.uniscan.xyz/address/0x000000000022d473030f116ddee9f6b43ac78ba3) |
 
-## Start here
+These are the existing deployed Uniswap implementations used by this project, not a claim that they are the API's current canonical deployment addresses.
 
-- [Teammate handoff and remaining implementation](docs/TEAMMATE_HANDOFF.md)
-- [Complete phase implementation plan](docs/IMPLEMENTATION_PLAN.md)
-- [Architecture and trust boundaries](docs/ARCHITECTURE.md)
-- [Official upstream repositories and reuse](docs/UPSTREAM_REUSE.md)
-- [Verification matrix](docs/VERIFICATION_MATRIX.md)
-- [Testing and phase approval](docs/TESTING.md)
-- [Decisions required before implementation](docs/DECISIONS.md)
-- [Version 3 research protocol](docs/RESEARCH_PROTOCOL.md)
+**CITY/tUSDC PoolId:** `0x1417774f1f970721329cfb44701537d8bb36296d05a18810cb3771705e590897`. A v4 PoolId identifies state inside PoolManager; it is not a separate pool contract. Currency0 is CITY, currency1 is tUSDC, tick spacing is **60**, and fee flag `8388608` enables dynamic fees. Retained seed position NFT **21** belongs to this pool; older positions **19/20** are preserved.
 
-## Access and local inference preparation
+## Reproduce the Uniswap checks
 
-- [What is needed through Phase8, including the updated economics document](docs/INTEGRATION_REQUIREMENTS.md)
-- [Five-check local inference preparation without0G access](tests/inference/README.md)
-
-## Build sequence
-
-| Phase | Deliverable | Planned scenarios |
-| --- | --- | ---: |
-| P0 | Confirm scope policies and test foundations | 15 |
-| P1 | Protected calculator local MVP | 10 |
-| P2 | Make the bot construct and resume safely | 6 |
-| P3 | Connect real AI decisions behind tool policy | 26 |
-| P4 | Add verified identities agreements and discovery | 29 |
-| P5 | Establish custody and backed token issuance | 25 |
-| P6 | Deploy the state registry hook and final pool | 25 |
-| P7 | Connect bounded purchase redemption and delivery | 24 |
-| P8 | Enforce inspection acceptance and one time settlement | 26 |
-| P9 | Complete experience, recovery and retained qualification | 72 |
-| P10 | Evaluate mechanisms against controlled baselines | 12 |
-
-## Initial scope
-
-One server/version, one protected plot, one calculator blueprint, one material KIT definition, one requester, one paid builder and bot, one CRED/KIT pool and one settlement chain. The calculator adds A and B, each 0 to 3, with all 16 combinations checked against real lamp block states. A disclosed missing high carry output produces 10/16; repair restores 16/16.
-
-## Repository checks
+Use Node **26.3.1+**, npm, Python 3 and Foundry **1.7.1**. The commands below install pinned dependencies and run local fixtures only. They need no credentials or public transactions.
 
 ```sh
+npm ci --prefix backend --ignore-scripts --no-audit --no-fund
+npm ci --prefix contracts --ignore-scripts --no-audit --no-fund
+node tests/investments/v4.mjs
+node tests/investments/swaps.mjs
+node tests/investments/privy.mjs
+forge test --root contracts --match-contract '^MarketplaceInvestmentsTest$' -vv
+npm ci --prefix tests/compatibility --ignore-scripts --no-audit --no-fund
 python3 -m unittest discover -s tests -v
 python3 scripts/check_plan.py
-python3 scripts/check_phase.py P0
 ```
 
-The first two commands validate planning infrastructure. The last command reports the actual P0 local technical gate from its retained evidence and review. A green planning workflow is not a working product or a passing phase.
+The Foundry suite uses the actual official PoolManager/PositionManager in an isolated EVM, including a disclosed Permit2 allowance fixture. It covers deposit, increase, fee accrual/collection, full withdrawal, deadline/ownership/minimum-output failures, stale/manipulated prices, thin liquidity, large sandwich front-leg rejection and withdrawal during pause. Node checks cover SDK arithmetic, encoded recipients/caps, quote bounds, allowlist filtering and scoped Privy delegation. Planning checks validate retained requirements and links; they are not product acceptance tests.
 
-## Source and policy
+The extra compatibility dependency installation supplies the NBT parser used by the Python host-safety tests; it does not launch Minecraft. The [review guide](docs/UNISWAP_REVIEW.md) adds credential-free live chain reads, source navigation, database recovery tests and an evidence checklist. Do not run deployment, funding, delegate-maintenance or native-server upgrade scripts as a review shortcut.
 
-- [Version 3 mechanism and research design](docs/references/agentcity-research-design-v3.md)
-- [Version 2 detailed functional specification](docs/references/agentcity-system-specification-v2.pdf)
+### What is actually verified
 
-V3 adds comparative evaluation E1 to E8, explicit 0G trust/accounting distinctions, market-depth and LP-risk analysis, and honest negative/null findings. It does not expand the first build to an autonomous city or arbitrary commissions.
+| Scope | Evidence and boundary |
+| --- | --- |
+| Testnet swaps, equipment checkout, native collection and same-operation replay | [Marketplace checkpoint](evidence/MARKETPLACE_CHECKPOINT.json), using disclosed controlled actors and real canonical receipts. |
+| Official PositionManager lifecycle and attack/authority checks | [Isolated contract and backend verification](evidence/runs/investments/00d2c901-8bd4-46d7-a3df-ba2057872c41/verification.json); local EVM and provider fixtures, not a human LP deposit. |
+| Investment UI expiry, automatic progress and retained signed requests | [Latest review/recovery report](evidence/runs/investment-review-lifecycle/6c7dd9bb-928a-4e36-a6aa-37facfdc7b60/report.json), including isolated native menus and a real read-only quote. |
+| New player Privy LP deposit through fees to withdrawal | **Still requires actual owner confirmations and a retained live lifecycle.** Funding alone is not this proof. |
+| Protected multi-pool execution | **Unavailable.** Unsupported API routes fail closed. |
 
-Token-linked Minecraft compatibility, honest server custody/inspection and requester-refusal risk remain explicit design constraints. The private repository does not establish public deployment permission. No CRED peg, guaranteed yield or sustainable economy is assumed.
+The [latest repository review](evidence/runs/uniswap-review/3ba5fa06-a54d-4aa0-bc2e-32ca79b34365/report.json) records a fresh-checkout command run, link/address validation and read-only verification of all 12 listed contract code hashes. It made no public transactions.
 
-## Local technical scope approval
+Evidence is scoped to its recorded source and environment. This is a test-token prototype, not a security audit or mainnet qualification. Pinned dependencies have recorded transitive audit advisories. Independent-human acceptance and public Minecraft/token platform suitability remain separate, unresolved release requirements. A private repository does not establish platform permission.
 
-The user approved local Phases 0 to 2 first. Actual independent participants remain required at P4-029, and the original token-platform and funded-chain requirements remain preserved at P5-024/P5-025. The revised route keeps blockchain separate from Minecraft and records its own public-testnet results. On 30 October 2026 the user revoked the pause-after-push rule: continue implementing and verifying through Phase 8 after checkpoint pushes.
+## Other integrations
 
-## Phase1 local MVP scope
+| Integration | How EthCraft uses it |
+| --- | --- |
+| [Privy + Discord](docs/DISCORD_ONBOARDING.md) | Identity linking, approval of the current Minecraft connection and separately scoped managed-wallet signing. Account setup does not fund or authorize an investment. |
+| [0G and advanced-model agents](docs/AGENT_SURVIVAL.md) | Objective-driven Survival tools, adaptive model routing and receipt-based advisory review. Models cannot grant financial authority. |
+| [Arkiv](arkiv/README.md) | Opt-in public progress, discovery, owner-requested provider handoffs and server-attested two-stage work orders. Public records are not wallet permissions. [Public read-only demo](https://ethcraft-arkiv.quiet-buddy-9104.chatgpt.site). |
+| [Voice](docs/VOICE.md) | Simple Voice Chat plus 0G transcription/speech through the same owner-validated tools. Voice cannot confirm investments. |
+| [Minecraft + Mumbai](docs/MUMBAI_CITY.md) | Paper plugin, Mineflayer workers, editable Survival city and UniRock service NPCs. [Map attribution](config/mumbai-map.json). |
+| [Calculator](docs/CALCULATOR_WORKSHOP.md) | Editable Survival workshop alongside the preserved protected reference and physical verification history. |
 
-The user approved finishing the working local Phase1 without the expanded edge-case sweep. See [the exact scope](docs/P1_MVP_SCOPE.md). Real protected reports show16/10/16, actual item-consuming placement, permission guards, replay and bounded restart recovery. Phase2 survival construction is separate; no token or production readiness is claimed.
+## Play the hosted Minecraft demo
 
-## Phase 2 construction
+A new clone supports the tests above; it does **not** contain private credentials, enrolled wallets, saved worlds or transaction journals. Full gameplay requires an operator-provisioned host, Discord/Privy applications and approved testnet resources. Do not copy secrets into this repository or reset an existing host to make a demo fresh.
 
-The worker has completed all 144 native Survival placements and passed the protected real 16-case calculator inspection. Verification used a preserved world: 137 placements, a reviewed source correction, then seven remaining placements and a separate inspection restart. The [construction checkpoint](docs/P2_CHECKPOINT.md) records the exact composition and limits; the [focused scope](docs/P2_MVP_SCOPE.md) retains broader release qualification.
+On the currently provisioned laptop:
 
-- `backend/src/bot/construction-worker.cjs` plans work, reconciles observations and records progress.
-- `backend/src/bot/minecraft-adapter.cjs` handles navigation, controlled stock retrieval and native Survival placement.
-- `backend/src/bot/checkpoint-store.cjs` persists checkpoints and excludes concurrent cooperating workers on one host.
+1. Join Minecraft Java **1.21.11** at `127.0.0.1:25596`. In Discord use `/start`, complete the private setup, then `/profile name:<your Minecraft name> login:local`.
+2. Stay connected to Minecraft. Use Discord `/join` and approve the **new connection**. Approval must be repeated after reconnects; a reserved name alone is insufficient.
+3. In Minecraft type `/mumbai` to visit UniRock. Type `/wallet` for the linked game-wallet balance and `/market` for material selection, quantity, review, CITY payment and collection.
+4. Type `/invest` alone, then click **New CITY / tUSDC Position** and a size such as **0.01**. Read all pages and confirm only the exact intended investment. Both tokens plus test ETH for the displayed gas reserve are needed. Funding an external wallet does not fund the separate Privy game wallet.
+5. Keep the confirmed operation open; it checks the **same operation** automatically. Use **Resume Latest Investment** after closing it. An expired unsigned quote requires a new review and consent. Never create another order to recover a delayed one.
+6. Open the resulting NFT for add, fee collection or withdrawal reviews. Each is a new, separate confirmation. For agents, use `/agent agent task <objective>` or `/agent 0g task <objective>`. Their approved material-shopping permission cannot invest.
 
-The local world contains fixed, hash-bound access infrastructure: 198 glass blocks and nine bottom stone slabs. The bot must retrieve and consume the entire 144-item circuit bill; operator access is disclosed infrastructure, not circuit stock. A completion receipt never substitutes for the real lamp checker.
+Commands are typed alone; menu labels and navigation arrows are not part of a command. [Full LP/swap usage and recovery](docs/UNIROCK_INVESTMENTS.md).
 
-```sh
-node tests/bot/worker-self-check.cjs
-node tests/bot/adapter-self-check.cjs
-python3 tests/construction/run.py --scenario build
-python3 tests/construction/run.py --scenario shortage
-python3 tests/construction/run.py --scenario occupied
-python3 tests/construction/run.py --scenario blocked
-```
+## Repository map and provenance
 
-The Node commands use scripted domain and adapter fixtures. The Minecraft commands require the existing pinned local Docker/Paper runtime and retained dependencies; they create fresh worlds, retain observations and remove only their own containers. They spend no API credits or tokens. Full phase readiness is reported separately by `python3 scripts/check_phase.py P2`.
+`contracts/` holds Solidity and public deployment records; `backend/` holds services; `plugin/` holds the Paper integration; `scripts/` holds explicitly scoped operator/test tools; `tests/` and `evidence/` hold checks and retained results. `config/` holds public settings; private host state stays ignored under `.local/`.
 
-Exact-output Uniswap v4 swaps are implemented and verified locally. See [usage, bounds and rollout requirements](docs/UNISWAP_EXACT_OUTPUT.md); existing deployed routers require an explicit upgrade before this feature is enabled.
+AgentCity remains in internal namespaces, source filenames and historical evidence. AI assisted implementation, testing and documentation. Existing project-specific code/assets are retained; a new repository or condensed history does not make them newly created for a prize track. Original source documents, qualification requirements, failed evidence and third-party notices remain intact. See [the documentation index](docs/README.md) for the retained research plan and component licenses.

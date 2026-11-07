@@ -14,6 +14,12 @@ jobs:
     steps:
       - name: Check out reviewed source
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # verified v4 tag
+      - name: Set up the pinned Node runtime
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # verified v4 tag
+        with:
+          node-version: '26.3.1'
+      - name: Install the NBT fixture dependency graph
+        run: npm ci --prefix tests/compatibility --ignore-scripts --no-audit --no-fund
       - name: Test phase evidence validator
         run: python3 -m unittest discover -s tests -v
       - name: Check plan sources cases and links

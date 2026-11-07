@@ -1,4 +1,17 @@
-# Local P5–P8 contracts
+# EthCraft smart contracts
+
+## Current Uniswap implementation
+
+Review [the project README](../README.md#why-uniswap-is-central) for active Unichain Sepolia addresses, supported routes and limits. Start with `src/AgentCityMarketplaceHook.sol`, `src/BankPaymentRouter.sol` and `../tests/contracts/MarketplaceInvestments.t.sol`. The complete [judge/AI guide](../docs/UNISWAP_REVIEW.md) separates public chain reads from isolated test transactions.
+
+```sh
+npm ci --prefix contracts --ignore-scripts --no-audit --no-fund
+forge test --root contracts --match-contract '^MarketplaceInvestmentsTest$' -vv
+```
+
+Run those commands from the repository root. They exercise real official v4 contracts in an isolated EVM, including the LP lifecycle, bounded execution and pause-safe withdrawal. No public wallet or API key is used. Full live player LP acceptance and protected multi-pool execution remain pending. Current custom-hook fees and protections are documented separately from the older static-fee demonstration below.
+
+## Historical P5–P8 fixture
 
 This is an isolated synthetic-inventory demonstration on chain **31337**. It uses real EVM transactions and the official Uniswap v4 PoolManager, not a constant-product simulator. It does not deploy to a public network, spend real funds, establish physical custody, connect tokens to Minecraft, or pass the pending live integration gates.
 

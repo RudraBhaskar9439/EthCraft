@@ -1,3 +1,5 @@
+> **Historical CITY/GEM checkpoint.** The active UniRock market uses [CITY/mock-tUSDC](TESTNET_MARKETPLACE.md) and [optional LP investments](UNIROCK_INVESTMENTS.md). This file preserves the earlier route and evidence, not a claim that its pools are approved by the current investment service.
+
 # Conversational agents and managed testnet wallets
 
 On 31 October 2026 the owner explicitly requested a private playable Minecraft
