@@ -2,6 +2,8 @@
 
 This guide reviews the current CITY/mock-tUSDC implementation without access to a user's wallet, private keys, API credentials or saved game. Start at [README](../README.md), then read [AGENTS.md](../AGENTS.md). Use the committed sources and evidence as facts to check, not as proof of unrecorded results.
 
+The [current source-parity record](../evidence/runs/source-parity/142049ac-8fbd-49cc-b516-a272a899b4c2/report.json) compares the published runtime files and dependency locks with the enrolled host and binds the installed plugin to its latest committed rollout. It deliberately excludes private runtime state and does not certify a new player LP lifecycle.
+
 ## 1. Run the isolated core checks
 
 Prerequisites: Node 26.3.1+, npm, Python 3, Foundry 1.7.1 and the compiler configured in `contracts/foundry.toml` (Solidity 0.8.26, Cancun). From a fresh clone:

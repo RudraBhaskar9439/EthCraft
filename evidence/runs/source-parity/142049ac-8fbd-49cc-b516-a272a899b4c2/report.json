@@ -1,0 +1,102 @@
+{
+  "schema": "ethcraft.runtime-source-parity.v1",
+  "status": "pass_source_and_installed_plugin",
+  "checkedAt": "2026-11-07T02:53:52.523475+00:00",
+  "latestCompletedHostSourceCommit": "edb1e6468e57a89a4696f4c8d4b5775e8597b5dd",
+  "publicationBaseCommit": "35d38a2f9cbd7176359f8ee1639c1e13767ce503",
+  "trackedRuntimeFileCount": 912,
+  "runtimeGroups": {
+    "backend/": {
+      "files": 151,
+      "identicalGitBlobsAndModes": true,
+      "pathModeBlobDigestSha256": "68b2ba46d77d8cc1c2e5bc1a235302391f31f424e7fe53804f34411d5bfd79c1"
+    },
+    "plugin/": {
+      "files": 30,
+      "identicalGitBlobsAndModes": true,
+      "pathModeBlobDigestSha256": "e0678555266cea58ad320b87a64b5c5cb14f268acddec45357226c792ddb6cea"
+    },
+    "scripts/": {
+      "files": 76,
+      "identicalGitBlobsAndModes": true,
+      "pathModeBlobDigestSha256": "f942036d8e74f342166e2d11f22608bcade3dda1cd1c620ad1e8b513bdd648c2"
+    },
+    "companion/": {
+      "files": 11,
+      "identicalGitBlobsAndModes": true,
+      "pathModeBlobDigestSha256": "1d418054f4ed2d8a37b564126acca07f622ca36bcc00c645d0418799a9fd6024"
+    },
+    "renderer/": {
+      "files": 6,
+      "identicalGitBlobsAndModes": true,
+      "pathModeBlobDigestSha256": "eb901f86f5a603c424c1d876c86804a704f0f5317a23b36e4147a5d150fc7bf1"
+    },
+    "contracts/": {
+      "files": 35,
+      "identicalGitBlobsAndModes": true,
+      "pathModeBlobDigestSha256": "03523add5ab4c00964fb712e4b5c794e4460536a600303695357955536b37faa"
+    },
+    "ops/": {
+      "files": 13,
+      "identicalGitBlobsAndModes": true,
+      "pathModeBlobDigestSha256": "7c5b95e006a7c06fbdbb1d69a99a3791a288dd62da1f58cd5a37378948cf6f4a"
+    },
+    "arkiv/": {
+      "files": 2,
+      "identicalGitBlobsAndModes": true,
+      "pathModeBlobDigestSha256": "23ab601b54fb1a3e785c92b64aad1f816a52d9a81fb31e03ac7ebe3671680627"
+    },
+    "tests/": {
+      "files": 569,
+      "identicalGitBlobsAndModes": true,
+      "pathModeBlobDigestSha256": "f55dd23a4ad933e1bdc126cd7072681154f4cc83004e37e7db680b8a6566715a"
+    },
+    "fixtures/": {
+      "files": 11,
+      "identicalGitBlobsAndModes": true,
+      "pathModeBlobDigestSha256": "dc9e6102160b90ae40fe575df8edb0084b4b568d8890f57d77f4eb40172b6c38"
+    },
+    "config/": {
+      "files": 6,
+      "identicalGitBlobsAndModes": true,
+      "pathModeBlobDigestSha256": "76475fbcba8ba358990ec243301902efa29fe213e98a63c4768a11365eede47d"
+    },
+    "tools/": {
+      "files": 2,
+      "identicalGitBlobsAndModes": true,
+      "pathModeBlobDigestSha256": "d2ced03c3addbc9c92b11d24fd31d2c3433fa463045f587127c8d3c7f9d53f2e"
+    }
+  },
+  "publicDeployment": {
+    "matchesActiveHostAddresses": true,
+    "originalTokenPoolAndContractPinsPreserved": true,
+    "publicationOnlyAdditions": [
+      "PositionManager/Permit2/StateRegistry public addresses",
+      "PositionManager/Permit2 runtime code hashes",
+      "genesis, PoolId and official provenance"
+    ]
+  },
+  "installedMinecraftPlugin": {
+    "sha256": "f4b1f5bd3d8f87cd6b1cdc86d4f10560b6b0e8627d77a7556a6d54dfb3d3d407",
+    "matchesHostRecord": true,
+    "matchesLatestCommittedRollout": true,
+    "rolloutEvidence": "evidence/runs/investment-review-lifecycle/6c7dd9bb-928a-4e36-a6aa-37facfdc7b60/report.json",
+    "containerRunning": true
+  },
+  "excluded": [
+    "Private configuration, credentials, saved worlds, database/native journals, balances and signed transaction recovery data",
+    "Ignored dependencies, compiler output and private one-off operator files",
+    "Uncommitted evidence attempts; no tracked application-source changes were pending"
+  ],
+  "intentionalPublicationDifferences": [
+    "Current README, AGENTS, feedback and judge guide; nine obsolete standalone Markdown guides removed",
+    "Pinned CI setup and existing NBT prerequisite; planning scope includes their dependency paths",
+    "Expanded public deployment metadata and new review evidence"
+  ],
+  "limitations": [
+    "Source parity verifies tracked files and installed-plugin/rollout identity, not new gameplay acceptance or every already-loaded JavaScript module.",
+    "A fresh clone still needs operator provisioning for Discord/Privy, saved worlds and testnet signing; isolated core tests need no credentials.",
+    "No player investment, API spending, server restart or deployment occurred.",
+    "Original canonical phase gates, live player LP acceptance and protected multi-pool execution remain unchanged."
+  ]
+}

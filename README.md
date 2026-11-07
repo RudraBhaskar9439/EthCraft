@@ -11,6 +11,12 @@ This repository contains the game, backend, custom contracts, tests and retained
 - **Integration experience:** [feedback.md](feedback.md).
 - **Technical documentation:** [documentation index](docs/README.md).
 
+## Current runtime source
+
+The [source-parity record](evidence/runs/source-parity/142049ac-8fbd-49cc-b516-a272a899b4c2/report.json) verifies **912 tracked non-Markdown runtime/dependency/test files** against the enrolled host checkout at source commit `edb1e6468e57`. Application code and dependency locks match; the publication adds review documentation, CI prerequisites and public deployment metadata. The installed Minecraft plugin matches the latest committed rollout: SHA-256 `f4b1f5bd3d8f87cd6b1cdc86d4f10560b6b0e8627d77a7556a6d54dfb3d3d407`. This is a source/artifact identity check, not a new gameplay or live LP acceptance result.
+
+Private credentials, saved worlds and transaction journals are intentionally excluded. A fresh clone can run the isolated Uniswap checks below; full gameplay needs the operator-provisioned environment. `config/playable-release.json` retains an earlier cutover snapshot; use the linked parity record for the inspected current plugin, without rewriting that historical evidence.
+
 ## Why Uniswap is central
 
 CITY is the settlement token for the marketplace. Uniswap provides a real AMM exchange between test USDC and CITY rather than an application-defined conversion rate. A player can request an exact CITY amount with a maximum tUSDC spend, then use CITY for materials or separately approved work. The application also supports a bounded atomic swap-and-equipment-purchase path. Physical item delivery follows the confirmed payment and has its own durable receipt.
