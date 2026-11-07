@@ -1,0 +1,29 @@
+{
+  "schema": "ethcraft.investment-deployment-comparison.v1",
+  "checkedAt": "2026-11-07T01:24:23.686Z",
+  "issue": "PostgreSQL jsonb reordered unchanged deployment pins; serialized-key-order comparison rejected real owner confirmation",
+  "fix": "Compare canonicalized values using the existing stable serializer; preserve all immutable operation terms and actual deployment checks",
+  "liveChecks": {
+    "sameDeploymentValues": true,
+    "serializedOrderDiffers": true,
+    "currentChainId": 1301,
+    "rpcContractGraphVerified": true,
+    "attemptedSwapSignedStages": 0
+  },
+  "tests": {
+    "reproducedBeforeFix": "INVEST_DEPLOYMENT_CHANGED with matching pins after real PostgreSQL jsonb round trip",
+    "afterFix": [
+      "Unchanged multi-field pins pass after jsonb storage",
+      "Changed hook pin rejects signing and broadcasting",
+      "Restart and unknown-signature recovery preserve transaction IDs",
+      "Owner/session, immutable terms, expiry and stale reference checks pass",
+      "Guarded swap quote and Privy scope tests pass",
+      "git diff --check"
+    ]
+  },
+  "limitations": [
+    "No actual user swap signed or broadcast during diagnosis",
+    "Fresh in-game quote and owner confirmation still required; prior review expired",
+    "Canonical project phase gates remain unqualified by these focused local checks"
+  ]
+}

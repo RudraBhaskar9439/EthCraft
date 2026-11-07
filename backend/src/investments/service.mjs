@@ -2,6 +2,7 @@ import {randomUUID,randomBytes,createHash} from 'node:crypto'
 import {keccak256,parseEventLogs,parseAbi,zeroAddress,formatUnits,formatEther} from 'viem'
 import {buildLp,lpApprovalCalls,displayAmounts,positionAbi,readPool,readPosition,tokenAbi} from './v4.mjs'
 import {previewGuardedSwap} from './swaps.mjs'
+import {stable} from '../world-assets/canonical.mjs'
 
 const UUID=/^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/i
 const fail=code=>{throw Object.assign(Error(code),{code})}
@@ -110,7 +111,7 @@ export async function createInvestmentService({pool,manifest,client,identity,ser
   }
   async function advance(row,actor,signer,allowNew) {
     const pins=await verifyDeployment()
-    if(JSON.stringify(pins)!==JSON.stringify(row.terms.pins))fail('INVEST_DEPLOYMENT_CHANGED')
+    if(stable(pins)!==stable(row.terms.pins))fail('INVEST_DEPLOYMENT_CHANGED')
     const t=row.terms;row.state.stages||=[]
     for(let index=0;index<t.calls.length;index++) {
       const operationId=stageId(row.operation_id,index),call=t.calls[index]

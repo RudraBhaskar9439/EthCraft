@@ -12,7 +12,7 @@ const schema='test_invest_'+randomUUID().replaceAll('-',''),admin=new Pool({conn
 const pool=new Pool({connectionString:env.databaseUrl,options:'-c search_path='+schema,max:6})
 const playerId=randomUUID(),principal=randomUUID(),connectionId=randomUUID(),wallet=address('7'),subject='did:privy:fixtureinvest'
 const owner={ownerId:principal,ownerName:'Micro',minecraftPlayerId:playerId,privySubject:subject}
-let time=2000000000000,approved=true,policy=false,loseSignature=false,reorganized=false,ready=true,signatures=0,broadcasts=0
+let time=2000000000000,approved=true,policy=false,loseSignature=false,reorganized=false,ready=true,changedPins=false,signatures=0,broadcasts=0
 const intents=new Map(),bindings=new Map()
 const manifest={chainId:1301,mode:'marketplace',rpcUrl:'https://sepolia.unichain.org',deploymentId:'0x'+'a'.repeat(64),maxGas:1000000,maxNativeCostWei:'500000000000000',city:address('1'),usdc:address('2'),positionManager:address('3'),permit2:address('4'),poolManager:address('5'),hook:address('6'),pools:{cityUsdc:{currency0:address('1'),currency1:address('2'),fee:8388608,tickSpacing:60,hooks:address('6')}}}
 const sqrt=(1n<<96n)/1000000n,tick=-276325
@@ -38,7 +38,8 @@ const signer={
 }
 const options={pool,manifest,client,identity:{getMinecraftOwner:async()=>owner},serverId:'fixture',now:()=>time,
   gameSession:async()=>({online:true,pendingAuthentication:!approved,playerId,connectionId,principalId:principal,playerName:'Micro',authenticationKind:'discord_approved_local_profile'}),
-  verifyDeployment:async()=>({fixed:'fixture-pins'}),getSigner:async()=>{if(!policy)throw Error('INVEST_SEPARATE_PRIVY_POLICY_REQUIRED');return signer}}
+  verifyDeployment:async()=>({deploymentId:manifest.deploymentId,positionManager:hash('manager'),permit2:hash('permit'),hook:hash(changedPins?'changed-hook':'hook'),router:hash('router')}),
+  getSigner:async()=>{if(!policy)throw Error('INVEST_SEPARATE_PRIVY_POLICY_REQUIRED');return signer}}
 const actor={playerId,connectionId},input={...actor,action:'deposit',amount0:'1000000000000000000',amount1:'1000000',tickLower:-276960,tickUpper:-275760}
 try{
   await admin.query('CREATE SCHEMA '+schema)
@@ -55,7 +56,14 @@ try{
   await assert.rejects(api.confirm({...op,confirmationId:randomUUID(),consentNonce:preview.consentNonce}),/SEPARATE_PRIVY_POLICY/)
   assert.equal((await api.status(op)).confirmed,false);assert.equal(signatures,0)
   console.log('PASS preview/status/invalid consent/shop-only policy cannot authorize investments')
-  policy=true;loseSignature=true
+  const storedPins=(await pool.query('SELECT terms FROM ac_investment_operations WHERE operation_id=$1',[op.operationId])).rows[0].terms.pins
+  assert.deepEqual(storedPins,await options.verifyDeployment())
+  assert.notEqual(JSON.stringify(storedPins),JSON.stringify(await options.verifyDeployment()))
+  policy=true;changedPins=true
+  await assert.rejects(api.confirm({...op,confirmationId:randomUUID(),consentNonce:preview.consentNonce}),/INVEST_DEPLOYMENT_CHANGED/)
+  assert.equal(signatures,0);assert.equal(broadcasts,0)
+  console.log('PASS genuinely changed deployment pins block signing and broadcasting')
+  changedPins=false;loseSignature=true
   await assert.rejects(api.confirm({...op,confirmationId:randomUUID(),consentNonce:preview.consentNonce}),/FIXTURE_PROVIDER_REPLY_LOST/)
   assert.equal(signatures,1)
   api=await createInvestmentService(options)
@@ -63,6 +71,7 @@ try{
   for(let i=0;i<10&&result.status!=='complete';i++)result=await api.status(op)
   assert.equal(result.status,'complete');assert.equal(result.tokenId,'42');assert.equal(signatures,7)
   await api.status(op);assert.equal(signatures,7);assert.equal(broadcasts,7)
+  console.log('PASS unchanged deployment pins survive PostgreSQL jsonb key ordering')
   console.log('PASS restart after lost signing reply resumes the same seven immutable stages without duplicate signatures or deposits')
   api=await createInvestmentService({...options,getSigner:async()=>{throw Error('FIXTURE_SIGNER_OFFLINE')},getRecoverySigner:async()=>signer})
   assert.equal((await api.status(op)).status,'complete');assert.equal(signatures,7)
