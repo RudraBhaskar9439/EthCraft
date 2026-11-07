@@ -51,6 +51,7 @@ public final class PlayableExperience implements Listener {
     private boolean playSpawnKnown, lobbyInitialized, taskPadsInitialized;
     private int initializedTaskPads;
     private final int[] plotMin, plotMax;
+    private final CalculatorWorkshop calculator;
     private final Path stateFile;
     private final NamespacedKey npcKey;
     private final Set<String> onboarded = new HashSet<>();
@@ -64,6 +65,7 @@ public final class PlayableExperience implements Listener {
         this.plugin = Objects.requireNonNull(plugin);
         this.world = Objects.requireNonNull(world);
         this.plotMin = plotMin.clone(); this.plotMax = plotMax.clone();
+        calculator = new CalculatorWorkshop(plugin,world,plotMin,plotMax);
         stateFile = plugin.getDataFolder().toPath().resolve("playable-state.json");
         npcKey = new NamespacedKey(plugin, "playable_npc");
     }
@@ -442,6 +444,14 @@ public final class PlayableExperience implements Listener {
         agent.setGameMode(GameMode.SURVIVAL);
     }
     private void travel(Player player,String target) {
+        if(target.equals("calculator")){
+            try{
+                Location entrance=calculator.entrance();player.setOp(false);player.setGameMode(GameMode.SURVIVAL);player.closeInventory();
+                if(player.teleport(entrance))player.sendMessage(ChatColor.GREEN+"Entered the editable calculator workshop. Build and break in Survival; your changes are saved. /mumbai returns to UniRock.");
+                else player.sendMessage("Calculator travel did not complete. Your inventory is unchanged.");
+            }catch(Exception error){player.sendMessage("The calculator workshop could not open safely. Your existing blocks and inventory are preserved.");plugin.getLogger().warning("Calculator workshop unavailable: "+error.getClass().getSimpleName());}
+            return;
+        }
         if(mumbai!=null&&Set.of("play","lobby").contains(target)){mumbai.visit(player);return;}
         if (target.equals("mumbai")) {
             if (mumbai == null) player.sendMessage("The Mumbai map is not installed on this host.");
@@ -505,7 +515,7 @@ public final class PlayableExperience implements Listener {
             menu.inventory.setItem(12,item(Material.COMPASS,"Talk to your agent","/agent <your request> or @agent <request>","Ask questions, give several steps, or say stop."));
             menu.inventory.setItem(14,item(Material.EMERALD,"CITY inventory marketplace","Use your Marketplace compass or /market.","Choose stocked material and quantity.","Review the total and confirm in your own wallet."));
             menu.inventory.setItem(16,item(Material.OAK_SIGN,"Supported tasks and materials","/jobs lists the supported task catalog.","/agent status reports current progress.","Paid job contracts are not enabled."));
-            menu.inventory.setItem(22,item(Material.REDSTONE_LAMP,"Optional calculator museum","The old calculator world is preserved.","Click to visit; /lobby returns here."));
+            menu.inventory.setItem(22,item(Material.REDSTONE_LAMP,"Editable calculator workshop","Build and break in Survival.","Your edits persist. /calculator opens it."));
             if (mumbai != null) menu.inventory.setItem(24,item(Material.FILLED_MAP,"Visit South Mumbai","Real geographic data, read-only sightseeing.","Arnis · © OpenStreetMap contributors (ODbL)","Click to visit; /lobby returns here."));
         } else if (page.equals("agents")) {
             if(mumbai!=null){
@@ -542,7 +552,7 @@ public final class PlayableExperience implements Listener {
             menu.inventory.setItem(16,item(Material.ENDER_CHEST,"Your wallet","Continue through the shop checkout page.","No operator wallet is assigned to you."));
         } else {
             menu.inventory.setItem(11,item(Material.GRASS_BLOCK,"Enter Survival","A separate natural world with resources.","Your agent works in its assigned task area."));
-            menu.inventory.setItem(15,item(Material.REDSTONE_LAMP,"Optional museum","Visit the preserved calculator example."));
+            menu.inventory.setItem(15,item(Material.REDSTONE_LAMP,"Editable calculator","Build and break here in Survival."));
         }
         player.openInventory(menu.inventory);
     }
@@ -571,9 +581,9 @@ public final class PlayableExperience implements Listener {
             else if(slot==10||slot==12||slot==16){player.closeInventory();if(inventoryMarket!=null)inventoryMarket.open(player);}
             else if(slot==14){player.closeInventory();player.sendMessage("Only real merchant stock can be bought. Review and confirm the exact CITY amount in your own wallet.");}
         } else if (menu.page.equals("guide")) {
-            if(slot==10) travel(player,"play"); else if(slot==22) travel(player,"museum"); else if(slot==24&&mumbai!=null) travel(player,"mumbai"); else { player.closeInventory(); help(player); }
+            if(slot==10) travel(player,"play"); else if(slot==22) travel(player,"calculator"); else if(slot==24&&mumbai!=null) travel(player,"mumbai"); else { player.closeInventory(); help(player); }
         } else if(menu.page.equals("play")) {
-            if(slot==11) travel(player,"play"); else if(slot==15) travel(player,"museum");
+            if(slot==11) travel(player,"play"); else if(slot==15) travel(player,"calculator");
         }
     }
     @EventHandler(priority=EventPriority.HIGHEST) public void drag(InventoryDragEvent event) { if (event.getView().getTopInventory().getHolder() instanceof Menu) event.setCancelled(true); }
@@ -586,7 +596,7 @@ public final class PlayableExperience implements Listener {
             player.sendMessage("Your agents work in the two plots east of UniRock. The bank and generated city are protected.");
             return;
         }
-        player.sendMessage(ChatColor.GOLD + "AgentCity: /play enters Survival, /lobby returns to the NPCs, /museum visits the old calculator.");
+        player.sendMessage(ChatColor.GOLD + "AgentCity: /play enters Survival, /lobby returns to the NPCs, /calculator opens the editable calculator. /museum keeps the reference demo.");
         if (mumbai != null) player.sendMessage("/mumbai visits the read-only South Mumbai map. Your inventory is retained.");
         player.sendMessage("/agent create | follow | come | wait | status | inspect | capabilities | release | task <request>");
         player.sendMessage("/agent build platform <width> <depth> [material] | /agent collect <item> <count> | /agent deliver <item> <count>");
@@ -599,7 +609,7 @@ public final class PlayableExperience implements Listener {
         if(discordAccess!=null&&discordAccess.isPending(player)){player.sendMessage("Approve this connection in Discord to play.");return true;}
         String[] parts = raw.trim().replaceFirst("^/", "").split("\\s+");
         String command = parts[0].toLowerCase(Locale.ROOT);
-        if (!Set.of("agent","jobs","wallet","balance","pay","accept","play","lobby","museum","mumbai","sell","market","swap","bazaar","estate","assets","invest").contains(command)) return false;
+        if (!Set.of("agent","jobs","wallet","balance","pay","accept","play","lobby","museum","calculator","mumbai","sell","market","swap","bazaar","estate","assets","invest").contains(command)) return false;
         if ((!player.getWorld().equals(world) && !player.getWorld().equals(lobbyWorld) && !player.getWorld().equals(playWorld)&&!player.getWorld().getName().equals(PropertyProtection.WORLD)&&(mumbai==null||!mumbai.contains(player.getWorld()))) || AGENTS.contains(player.getName()) || FIXTURES.contains(player.getName())) { player.sendMessage("Player actions are available to local human players in AgentCity worlds."); return true; }
         if (raw.length() > 1000) { player.sendMessage("That request is too long."); return true; }
         switch(command) {
@@ -611,7 +621,7 @@ public final class PlayableExperience implements Listener {
                 else if(parts.length==3&&parts[1].equalsIgnoreCase("visit")&&parts[2].matches("[1-4]")){try{properties.visit(Map.of("playerId",player.getUniqueId().toString(),"parcelId",Long.parseLong(parts[2])));}catch(Exception error){player.sendMessage("This parcel needs current verified ownership before you can enter. /estate visit reaches the public road.");}}
                 else player.sendMessage("Use /estate ownership, /estate visit for the public road, or /estate visit <1..4> for your verified parcel.");
             }
-            case "play","lobby","museum","mumbai" -> { if(parts.length==1) travel(player,command); else player.sendMessage("Use /"+command+"."); }
+            case "play","lobby","museum","calculator","mumbai" -> { if(parts.length==1) travel(player,command); else player.sendMessage("Use /"+command+"."); }
             case "agent" -> {
                 if (parts.length == 1) { openMenu(player,"agents"); break; }
                 String action = parts[1].toLowerCase(Locale.ROOT);
@@ -764,6 +774,7 @@ public final class PlayableExperience implements Listener {
         value.put("economyMode",EconomyMode.onchainOnly(plugin)?"ONCHAIN_ONLY":"LEGACY_FIXTURE_ONLY"); value.put("retiredPendingRequests",events.values().stream().filter(event->!dispatchable(event)).count()); value.put("onboardedPlayers",onboarded.size()); value.put("pendingRequests",events.size()); value.put("npcCount",5);
         value.put("currency","CITY"); value.put("blockchainLinked",true);
         value.put("lobbyWorld",lobbyWorld.getName()); value.put("playWorld",playWorld.getName()); value.put("museumWorld",world.getName());
+        value.put("calculatorWorkshop",calculator.status());
         if (mumbai != null) {
             value.put("mumbai", mumbai.status()); value.put("defaultWorld",MumbaiWorld.NAME);
             value.put("mumbaiAgentSpawn",Map.of("x",1698.5,"y",69,"z",2815.5));

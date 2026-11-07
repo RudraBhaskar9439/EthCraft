@@ -1,3 +1,15 @@
+## Editable calculator — user update 7 November 2026
+
+The user requested ordinary player construction and block changes in the
+calculator area. Adventure mode normally prevents those actions; the local
+implementation provides `/calculator` as a Survival workshop copied outside
+the protected reference plot. Preserve the original `/museum`, job engine,
+stock and inspection history. Copy only block layout, never inventory contents
+or entities. Initialize only an empty destination and preserve workshop edits
+on visits and restarts. Keep actual Discord approval and all wallet guards.
+Qualify physical block changes and restart persistence on an isolated copy
+before updating the live plugin.
+
 ## Natural movement and current-goal prompts — user update 6 November 2026
 
 Treat follow me, come here and stop/wait variants as direct observed movement controls for both Mumbai workers, without model inference or material requirements. Do not inject an unrelated crafting example into the active planning prompt. Preserve the exact current objective, real observations and owner guards. Movement may pause an older saved workflow without replacing its steps or receipts; unresolved receiving-tool tasks remain fenced. A delayed cancelled planner must not execute tools, overwrite the pause message or stop a newer movement controller.

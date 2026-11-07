@@ -37,6 +37,9 @@ commands:
     description: Return to onboarding and the NPC menus
   museum:
     description: Visit the preserved calculator demonstration
+  calculator:
+    description: Build and break blocks in the editable Survival calculator workshop
+    usage: /calculator
   mumbai:
     description: Visit the read-only South Mumbai map
     usage: /mumbai

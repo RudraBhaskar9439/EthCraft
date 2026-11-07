@@ -211,7 +211,9 @@
       "tests/voice_transport_test.py",
       "docs/VOICE.md",
       "tests/inference/zero-g-speech-live.mjs",
-      "tests/test_voice_setup.py"
+      "tests/test_voice_setup.py",
+      "tests/playable/calculator-workshop-native.mjs",
+      "docs/CALCULATOR_WORKSHOP.md"
     ],
     "paths_status": "Actual local component paths adopted; canonical live phase approval remains separate."
   },
@@ -347,7 +349,9 @@
       "tests/voice_transport_test.py",
       "docs/VOICE.md",
       "tests/inference/zero-g-speech-live.mjs",
-      "tests/test_voice_setup.py"
+      "tests/test_voice_setup.py",
+      "tests/playable/calculator-workshop-native.mjs",
+      "docs/CALCULATOR_WORKSHOP.md"
     ],
     "paths_status": "Actual local component paths adopted; canonical live phase approval remains separate."
   },

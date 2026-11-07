@@ -1,0 +1,31 @@
+{
+  "status": "deployed_human_check_pending",
+  "pluginSha256": "f2598c8f7f74158465e3880e52587ab2add95edc5c112caf6103b5ce012ef23e",
+  "serverNamespacePreserved": true,
+  "worldIdsPreserved": true,
+  "nativeReport": "evidence/runs/calculator-workshop/0e49deea-1b2a-406a-ab1b-80d614bca4b2/report.json",
+  "tests": {
+    "pluginCompilation": "pass",
+    "planningAndHostTests": 82,
+    "planningIntegrity": "pass",
+    "isolatedPhysicalBreakAndPlace": "pass",
+    "emptyCopiedChest": "pass",
+    "leverInteraction": "pass",
+    "canonicalJobStatePreserved": "pass",
+    "realRestartPersistence": "pass",
+    "sevenWorldIdsPreserved": "pass"
+  },
+  "liveCalculatorCommand": "/calculator",
+  "mode": "SURVIVAL",
+  "generatedContainerContents": 0,
+  "inferenceRequests": 0,
+  "limits": [
+    "Human client test after fresh Discord approval is pending.",
+    "Reference /museum travel timed out in an earlier controlled fixture and is not qualified here.",
+    "Original phase gates remain unchanged; no independent-human acceptance claim."
+  ],
+  "correctedDuringVerification": [
+    "The controlled fixture initially held its Marketplace compass and opened the shop instead of the physical chest; the interaction test now selects an empty hand.",
+    "A separate reference museum UI check timed out; its failure report is retained, and workshop qualification checks canonical job-state preservation without claiming museum UI success."
+  ]
+}

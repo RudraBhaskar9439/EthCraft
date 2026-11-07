@@ -198,7 +198,9 @@
     "tests/voice_transport_test.py",
     "docs/VOICE.md",
     "tests/inference/zero-g-speech-live.mjs",
-    "tests/test_voice_setup.py"
+    "tests/test_voice_setup.py",
+    "tests/playable/calculator-workshop-native.mjs",
+    "docs/CALCULATOR_WORKSHOP.md"
   ],
   "rule": "Use this common scope plus each phase implementation_paths. Add shared interfaces and actual build/dependency locations before adoption. Changes reopen affected evidence; no path list independently proves all transitive dependencies."
 }

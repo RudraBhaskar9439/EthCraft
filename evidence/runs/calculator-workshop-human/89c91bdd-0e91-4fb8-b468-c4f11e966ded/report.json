@@ -1,0 +1,26 @@
+{
+  "status": "pass_user_reported",
+  "scope": "Project owner confirms calculator block breaking and placement in their real Minecraft client; no independent-human or full calculator truth-table qualification.",
+  "reportedBy": "project owner (Micro)",
+  "userReport": "I can break and place blocks",
+  "recordedAt": "2026-11-07T00:27:44.240850+00:00",
+  "testedSourceRelease": "10112feb51476edf74a586b58d974602b04d7301",
+  "publishedRelease": "520be4f52700ae6763deef901125ef33f4480128",
+  "nativeSessionAtRecording": {
+    "online": true,
+    "pendingAuthentication": false,
+    "serverPosition": {
+      "x": 121.09120139414291,
+      "y": 81.0,
+      "world": "agentcity_laptop_bank",
+      "z": 4.693700915889636
+    }
+  },
+  "checks": {
+    "playerReportedBlockBreaking": "pass",
+    "playerReportedBlockPlacement": "pass"
+  },
+  "independentHumanQualification": false,
+  "voiceMicrophoneVerified": false,
+  "originalPhaseGates": "unchanged"
+}
