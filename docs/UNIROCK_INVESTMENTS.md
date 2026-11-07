@@ -24,7 +24,7 @@ No official liquidity API transaction is signed for an unindexed pool. Current C
 2. Go to `/mumbai`. In UniRock, open the economy NPC's **Optional LP investments** button, or run `/invest`.
 3. **New CITY / tUSDC Position** offers two-sided maximum deposits of 0.01, 0.1, 1 or 5 tokens and a default range of +/-600 ticks around the current tick-spacing-aligned center. Custom review: `/invest deposit 0.1 0.1`; optionally append lower and upper ticks, both multiples of 60. Maximum is 10 CITY and 10 tUSDC per operation, including slippage.
 4. Read every review page. It shows the recipient wallet, maximum deposits or minimum withdrawal outputs, range and units, fee snapshot, gas ceiling, slippage and expiry. **Confirm This Investment** appears only on the final page of a funded review. **Test Funds Needed** shows the shortfall without authorizing anything.
-5. Check the same operation until its canonical receipts confirm. There are multiple bounded approval and execution transactions. **Resume Latest Investment** prioritizes an unfinished consented operation over a newer unconfirmed preview; never create another deposit to recover a delayed one.
+5. Keep the review window open after confirmation. It checks the same operation automatically until canonical receipts confirm, then shows **Transaction Confirmed**. Swap approvals already satisfied on-chain are skipped; zero allowances do not need a redundant reset transaction. **Resume Latest Investment** resumes an unfinished consented operation after closing the window; never create another deposit to recover a delayed one.
 6. Open the resulting position: **Preview Add**, **Preview Collect Fees** or **Preview Withdraw All**. Each produces another independent review and confirmation. Fees can be zero. Full withdrawal preserves the empty NFT.
 
 Existing position: `/invest position 42` (replace 42 with your NFT ID; foreign positions are refused).
@@ -36,6 +36,8 @@ Swap example, receiving exactly 1 tUSDC and spending at most 2 CITY:
 ```
 
 Amounts in the swap and route commands are **base units**: CITY has 18 decimals; tUSDC has 6. The review displays human-readable amounts. The actual maximum is the lower effective ceiling implied by the fixed slippage and your specified maximum; the system never widens slippage.
+
+If a quote expires before execution, the same workflow opens a fresh review with a new price, deadline and confirmation nonce. Review its pages and confirm again; old consent never approves the refreshed terms. Original terms and approval receipts remain intact. An unknown signed execution is reconciled before any replacement can be offered. Slow menu replies remain attached to the original request beyond thirty seconds.
 
 Compare API routes without spending:
 

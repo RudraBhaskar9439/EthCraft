@@ -39,7 +39,8 @@ public final class InvestmentMenu implements Listener {
         String id=queue.submit(p,action,fields);if(id==null){loading.remove(p.getUniqueId());p.sendMessage("Investment request was not queued. Nothing new was authorized.");return;}
         pending.put(id,new Pending(p.getUniqueId(),connection.apply(p),show));Menu m=menu(p,"Checking Investment");m.request=id;
         m.inventory.setItem(22,icon(Material.CLOCK,"Checking the same operation","No automatic slippage changes or new payment.","A timeout does not mean a transaction failed."));p.openInventory(m.inventory);
-        Bukkit.getScheduler().runTaskLater(plugin,()->{Pending old=pending.remove(id);if(old!=null){loading.remove(old.player);if(p.isOnline()&&current(p,m)){Menu e=menu(p,"Check Again");e.inventory.setItem(22,icon(Material.CLOCK,"Request still pending","Use /invest to resume the same operation.","Do not create another deposit to recover."));p.openInventory(e.inventory);}}},600L);
+        Bukkit.getScheduler().runTaskLater(plugin,()->{if(pending.containsKey(id)&&p.isOnline()&&current(p,m))m.inventory.setItem(22,icon(Material.CLOCK,"Still checking your request","Keep this window open; the reply will appear here.","Existing payments and transaction IDs are preserved."));},600L);
+        Bukkit.getScheduler().runTaskLater(plugin,()->{Pending old=pending.remove(id);if(old!=null){loading.remove(old.player);if(p.isOnline()&&current(p,m)){Menu e=menu(p,"Check Again");e.inventory.setItem(22,icon(Material.CLOCK,"Request still pending","Resume the same operation; do not pay again."));if(fields.get("operationId")!=null)button(e,49,Material.CLOCK,"Resume Same Operation",()->request(p,"invest_status",Map.of("operationId",fields.get("operationId")),v->review(p,v,0)));p.openInventory(e.inventory);}}},2400L);
     }
     private boolean current(Player p,Menu m){return allowed(p)&&m.owner.equals(p.getUniqueId())&&Objects.equals(m.connection,connection.apply(p))&&p.getOpenInventory().getTopInventory()==m.inventory;}
     public boolean complete(String id,Map<String,Object> value){
@@ -72,10 +73,13 @@ public final class InvestmentMenu implements Listener {
         if(page>0)button(m,37,Material.ARROW,"Previous Details",()->review(p,v,page-1));
         if(page+1<pages)button(m,43,Material.ARROW,"Next Details",()->review(p,v,page+1));
         String id=String.valueOf(v.get("operationId")),nonce=String.valueOf(v.get("consentNonce"));
-        if("preview".equals(v.get("status"))&&Boolean.FALSE.equals(v.get("canConfirm")))m.inventory.setItem(49,icon(Material.BARRIER,"Test Funds Needed",wrap(String.valueOf(v.get("blocker")))));
+        if(v.get("deadline")!=null){long seconds=Math.max(0,Long.parseLong(String.valueOf(v.get("deadline")))-System.currentTimeMillis()/1000);m.inventory.setItem(31,icon(Material.CLOCK,"Quote time remaining",seconds+" seconds","Expired quotes open a fresh review.","Changed terms always need confirmation."));}
+        if("complete".equals(v.get("status")))m.inventory.setItem(49,icon(Material.EMERALD_BLOCK,"Transaction Confirmed","All reviewed transactions are confirmed.","No further payment is needed."));
+        else if("preview".equals(v.get("status"))&&Boolean.FALSE.equals(v.get("canConfirm")))m.inventory.setItem(49,icon(Material.BARRIER,"Test Funds Needed",wrap(String.valueOf(v.get("blocker")))));
         else if("preview".equals(v.get("status"))&&page+1>=pages)button(m,49,Material.LIME_CONCRETE,"Confirm This Investment",()->request(p,"invest_confirm",Map.of("operationId",id,"consentNonce",nonce),r->review(p,r,0)),"Explicitly authorize only the reviewed operation.","This is separate from agent shop permission.","No automatic fallback or slippage increase.");
         else if(!"preview".equals(v.get("status")))button(m,49,Material.CLOCK,"Check Same Operation",()->request(p,"invest_status",Map.of("operationId",id),r->review(p,r,0)),"Reconcile existing signed bytes only.");
         p.openInventory(m.inventory);
+        if("pending".equals(v.get("status")))Bukkit.getScheduler().runTaskLater(plugin,()->{if(p.isOnline()&&current(p,m))request(p,"invest_status",Map.of("operationId",id),r->review(p,r,0));},40L);
     }
     private String[] wrap(String text){List<String> lines=new ArrayList<>();for(int i=0;i<text.length();i+=65)lines.add(text.substring(i,Math.min(i+65,text.length())));return lines.toArray(String[]::new);}
     public void command(Player p,String[] parts){
@@ -90,4 +94,5 @@ public final class InvestmentMenu implements Listener {
     }
     @EventHandler(priority=EventPriority.HIGHEST) public void click(InventoryClickEvent e){if(!(e.getWhoClicked() instanceof Player p)||!(e.getView().getTopInventory().getHolder() instanceof Menu m))return;e.setCancelled(true);if(current(p,m)){Runnable action=m.buttons.get(e.getRawSlot());if(action!=null)action.run();}}
     @EventHandler(priority=EventPriority.HIGHEST) public void drag(InventoryDragEvent e){if(owns(e.getView().getTopInventory()))e.setCancelled(true);}
+    @EventHandler public void closed(InventoryCloseEvent e){if(e.getInventory().getHolder() instanceof Menu m&&m.request!=null){Pending old=pending.remove(m.request);if(old!=null)loading.remove(old.player);}}
 }

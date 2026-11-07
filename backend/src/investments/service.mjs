@@ -12,7 +12,7 @@ const stageId=(id,index)=>{const h=hash(id+':investment:'+index);return `${h.sli
 const transferAbi=parseAbi(['event Transfer(address indexed from,address indexed to,uint256 value)'])
 export const investmentRisk='Optional testnet investment. Fees are variable; LP principal can lose value through price movement, adverse selection and LVR. Same-pool TWAP is not an independent fair-price oracle. Public submission is not sandwich-proof.'
 
-/** Native confirmation is the only entry to signing. Read/status calls only reconcile existing bytes. */
+/** Native consent authorizes immutable stages; refreshed terms always require new consent. */
 export async function createInvestmentService({pool,manifest,client,identity,serverId,gameSession,verifyDeployment,getSigner,getRecoverySigner=getSigner,now=Date.now}) {
   if(manifest.chainId!==1301||manifest.mode!=='marketplace'||manifest.rpcUrl!=='https://sepolia.unichain.org')fail('INVEST_TESTNET_ONLY')
   await pool.query(`CREATE TABLE IF NOT EXISTS ac_investment_operations(
@@ -60,7 +60,7 @@ export async function createInvestmentService({pool,manifest,client,identity,ser
   function view(row) {
     const t=row.terms
     return {mode:'investment',operationId:row.operation_id,action:t.action,chainId:1301,walletAddress:row.wallet.address,consentNonce:row.consent_nonce,
-      status:row.state.complete?'complete':row.state.reverted?'reverted':row.consent?'pending':'preview',confirmed:!!row.consent,
+      status:row.state.replacementOperationId?'refreshed':row.state.complete?'complete':row.state.reverted?'reverted':row.consent?'pending':'preview',confirmed:!!row.consent,
       tokenId:row.state.tokenId||t.tokenId,lines:[...t.lines,...(row.state.actualFeesCollected?[`Actual fees collected (token/base units): ${JSON.stringify(row.state.actualFeesCollected)}`]:[]),
         ...(row.state.received&&t.action==='withdraw'?[`Actual principal plus fees received (base units): ${JSON.stringify(row.state.received)}`]:[])],risk:investmentRisk,deadline:t.deadline,stages:row.state.stages||[],
       canConfirm:!t.fundingIssues?.length,blocker:row.state.blocker||t.fundingIssues?.[0]||null,realTransaction:!!row.consent&&Boolean(row.state.stages?.some(s=>s.hash)),simulated:false}
@@ -89,6 +89,7 @@ export async function createInvestmentService({pool,manifest,client,identity,ser
     const label=i=>snap.pool.key['currency'+i].toLowerCase()===manifest.usdc.toLowerCase()?'tUSDC':'CITY'
     const maxTotalGas=BigInt(maxNativeCostWei)*BigInt(calls.length)
     terms.calls=calls;terms.pins=snap.pins;terms.limits={maxGas,maxNativeCostWei};terms.deploymentId=manifest.deploymentId
+    terms.reviewInput=Object.fromEntries(['action','tokenId','amount0','amount1','tickLower','tickUpper','withdrawBps','tokenIn','tokenOut','amountOut','maximumInput','slippageBps'].filter(key=>input[key]!==undefined).map(key=>[key,input[key]]))
     terms.lines=terms.lines||[`Action: ${terms.action}`,`Wallet: ${actor.wallet.address}`,`Pool: CITY / tUSDC (chain 1301)`,
       `${['deposit','increase'].includes(terms.action)?'Maximum deposits':'Minimum principal outputs'}: ${amountLabels.map((a,i)=>a+' '+label(i)).join(' + ')}`,
       `Range: ${terms.range.join(' to ')} ${label(1)} / ${label(0)}`,`Ticks: ${terms.tickLower} to ${terms.tickUpper}`,
@@ -108,6 +109,19 @@ export async function createInvestmentService({pool,manifest,client,identity,ser
     const db=await pool.connect()
     try{await db.query('SELECT pg_advisory_lock(hashtextextended($1,0))',['invest:'+input.operationId]);return await work(await owned(input))}
     finally{await db.query('SELECT pg_advisory_unlock(hashtextextended($1,0))',['invest:'+input.operationId]);db.release()}
+  }
+  async function freshReview(row,input) {
+    if(row.state.replacementOperationId){
+      const {row:next}=await owned({...input,operationId:row.state.replacementOperationId})
+      return !next.consent&&now()>=Number(next.terms.deadline)*1000?freshReview(next,input):view(next)
+    }
+    const t=row.terms
+    const request=t.reviewInput||(t.action==='swap'?{action:t.action,tokenIn:t.tokenIn,tokenOut:t.tokenOut,amountOut:t.amountOut,maximumInput:t.maximumInput}:
+      ['deposit','increase','collect'].includes(t.action)?{action:t.action,tokenId:t.tokenId,amount0:t.amounts[0],amount1:t.amounts[1],tickLower:t.tickLower,tickUpper:t.tickUpper,slippageBps:t.slippageBps}:null)
+    if(!request)return {...view(row),status:'expired',canConfirm:false,blocker:'Open this LP position to review a fresh withdrawal.'}
+    const next=await preview({...request,playerId:input.playerId,connectionId:input.connectionId})
+    row.state.replacementOperationId=next.operationId;await save(row)
+    return {...next,lines:['Quote refreshed. Review the new terms and confirm again; no new payment is authorized.',...next.lines]}
   }
   async function advance(row,actor,signer,allowNew) {
     const pins=await verifyDeployment()
@@ -168,23 +182,30 @@ export async function createInvestmentService({pool,manifest,client,identity,ser
   async function execute(input,confirm) {
     return locked(input,async actor=>{
       const {row}=actor
+      try{
       if(confirm&&!row.consent) {
-        if(input.consentNonce!==row.consent_nonce||!UUID.test(input.confirmationId||'')||row.connection_id!==input.connectionId.toLowerCase()||now()>=Number(row.terms.deadline)*1000)fail('INVEST_FRESH_NATIVE_CONFIRMATION_REQUIRED')
+        if(input.consentNonce!==row.consent_nonce||!UUID.test(input.confirmationId||'')||row.connection_id!==input.connectionId.toLowerCase())fail('INVEST_FRESH_NATIVE_CONFIRMATION_REQUIRED')
+        if(now()>=Number(row.terms.deadline)*1000)return freshReview(row,input)
         // A missing wallet policy must fail before marking consent or reserving a transaction.
         const signer=await getSigner(actor)
         if((await funding(row.terms,row.wallet.address)).length)fail('INVEST_INSUFFICIENT_TEST_FUNDS')
         row.consent={confirmationId:input.confirmationId,connectionId:input.connectionId,at:now(),purpose:'optional-investment-only'}
         await pool.query('UPDATE ac_investment_operations SET consent=$2 WHERE operation_id=$1',[row.operation_id,row.consent])
-        return advance(row,actor,signer,true)
+        return await advance(row,actor,signer,true)
       }
-      if(!row.consent)return view(row)
-      return advance(row,actor,await getRecoverySigner(actor),true)
+      if(!row.consent)return now()>=Number(row.terms.deadline)*1000?freshReview(row,input):view(row)
+      return await advance(row,actor,await getRecoverySigner(actor),true)
+      }catch(error){
+        if(error.code==='INVEST_EXPIRED_REVIEW_NEW_TERMS_REQUIRED')return freshReview(row,input)
+        throw error
+      }
     })
   }
   async function portfolio(input) {
     const actor=await account(input),snap=await snapshot(input.tokenId,actor.wallet.address)
     const rows=(await pool.query(`SELECT * FROM ac_investment_operations WHERE principal_id=$1
-      ORDER BY (consent IS NOT NULL AND state->>'complete' IS DISTINCT FROM 'true' AND state->>'reverted' IS DISTINCT FROM 'true') DESC,created_at DESC LIMIT 30`,[actor.owner.ownerId])).rows
+      ORDER BY (consent IS NOT NULL AND state->>'complete' IS DISTINCT FROM 'true' AND state->>'reverted' IS DISTINCT FROM 'true' AND state->>'replacementOperationId' IS NULL
+        AND ((terms->>'deadline')::bigint>$2 OR jsonb_array_length(COALESCE(state->'stages','[]'::jsonb))>0)) DESC,created_at DESC LIMIT 30`,[actor.owner.ownerId,Math.floor(now()/1000)])).rows
     const ids=[...new Set([input.tokenId,...rows.map(r=>r.state.tokenId||r.terms.tokenId)].filter(Boolean))]
     const positions=[]
     for(const id of ids)try{

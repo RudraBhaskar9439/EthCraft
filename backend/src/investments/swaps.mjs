@@ -18,7 +18,6 @@ export async function previewGuardedSwap({manifest,client,snapshot,input,owner,o
   const reference=await client.readContract({address:manifest.hook,abi:hookAbi,functionName:'marketReference',blockNumber:snapshot.blockNumber})
   if(!reference[0])fail('INVEST_REFERENCE_NOT_READY')
   const fee=await client.readContract({address:manifest.hook,abi:hookAbi,functionName:'feeFor',args:[owner],blockNumber:snapshot.blockNumber})
-  const {encodeAbiParameters,parseAbiParameters}=await import('viem')
   const quote=await client.simulateContract({address:manifest.quoter,abi:quoterAbi,functionName:'quoteExactOutputSingle',account:owner,
     args:[{poolKey:key,zeroForOne,exactAmount:amountOut,hookData:encodeAbiParameters(parseAbiParameters('address'),[owner])}],blockNumber:snapshot.blockNumber})
   const expected=BigInt(quote.result[0]),maxInput=(expected*10050n+9999n)/10000n
@@ -26,10 +25,12 @@ export async function previewGuardedSwap({manifest,client,snapshot,input,owner,o
   const deadline=snapshot.timestamp+110
   const call={to:manifest.router.toLowerCase(),value:'0',data:encodeFunctionData({abi:swapAbi,functionName:'swapExactOutput',args:[keccak256(stringToHex(operationId)),a.address,b.address,amountOut,maxInput,deadline]})}
   const approval=value=>({to:a.address.toLowerCase(),value:'0',data:encodeFunctionData({abi:tokenAbi,functionName:'approve',args:[manifest.router,value]})})
+  const allowance=await client.readContract({address:a.address,abi:tokenAbi,functionName:'allowance',args:[owner,manifest.router],blockNumber:snapshot.blockNumber})
+  const approvals=allowance>=maxInput?[]:[...(allowance>0n?[approval(0n)]:[]),approval(maxInput)]
   // The exact fixed 0.5% maximum is reviewable; agents have no parameter to widen it.
   const spotInput=zeroForOne?amountOut*(1n<<192n)/(snapshot.pool.sqrtPriceX96**2n):amountOut*snapshot.pool.sqrtPriceX96**2n/(1n<<192n)
   const impact=spotInput?Number((expected-spotInput)*10000n/spotInput)/100:null
-  return {action:'swap',owner:owner.toLowerCase(),deadline:String(deadline),call,calls:[approval(0n),approval(maxInput),call],
+  return {action:'swap',owner:owner.toLowerCase(),deadline:String(deadline),call,calls:[...approvals,call],
     tokenIn:input.tokenIn,tokenOut:input.tokenOut,expectedInput:String(expected),maximumInput:String(maxInput),amountOut:String(amountOut),
     slippageBps:50,lines:[`Swap ${input.tokenIn} to ${input.tokenOut}`,`Wallet / recipient: ${owner}`,`Receive exactly: ${formatUnits(amountOut,b.decimals)} ${input.tokenOut}`,
       `Expected input: ${formatUnits(expected,a.decimals)} ${input.tokenIn}`,`Maximum spend: ${formatUnits(maxInput,a.decimals)} ${input.tokenIn}`,

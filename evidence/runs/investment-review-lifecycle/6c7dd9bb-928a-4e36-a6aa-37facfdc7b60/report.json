@@ -1,0 +1,62 @@
+{
+  "schema": "ethcraft.investment-review-lifecycle.v1",
+  "checkedAt": "2026-11-07T01:51:38.652Z",
+  "rootCause": "Manual status clicks between approval transactions consumed the bounded swap quote lifetime; thirty-second native timeouts also discarded slow replies",
+  "changes": [
+    "Pending native reviews check the same operation automatically",
+    "Expired unsigned stages produce fresh unconfirmed reviews, preserving old terms and approval receipts",
+    "Unknown final transactions retain their operation and signed bytes for reconciliation",
+    "Swap approval transactions are omitted when zero reset or a new allowance is unnecessary",
+    "Slow native replies remain attached to the original menu request; completion has an explicit confirmed screen",
+    "Refreshed and expired unsigned records stop shadowing the current review; uncertain signed transactions retain recovery priority"
+  ],
+  "backendTests": {
+    "pass": [
+      "Investment service: actual PostgreSQL key ordering, genuine deployment changes, owner/nonce guards, repeated expiry refresh, partial-approval expiry and unknown final transaction retention",
+      "Guarded swaps: observed allowance reuse, exact owner hook data, capped amounts and stale-reference rejection",
+      "Privy policy: separate opt-in delegation and recipient scope",
+      "Official v4 math/call bounds",
+      "Native event parser authority guards",
+      "Changed module syntax and git diff --check",
+      "Actual PostgreSQL portfolio priority retains unknown signed execution and promotes the fresh replacement review"
+    ]
+  },
+  "isolatedGameTests": {
+    "investmentMenu": {
+      "checks": 7,
+      "report": "evidence/runs/investments/87616e31-a685-4b86-a147-926714032f59/native.json",
+      "includes": "Actual thirty-one-second delayed reply, automatic status events, fresh nonce and page review, confirmed state stops polling"
+    },
+    "mumbai": {
+      "checks": 16,
+      "report": "evidence/runs/mumbai-city/a039306c-3789-4e5f-88d6-2534f75072c3/report.json"
+    }
+  },
+  "liveRollout": {
+    "ready": true,
+    "pluginSha256": "f4b1f5bd3d8f87cd6b1cdc86d4f10560b6b0e8627d77a7556a6d54dfb3d3d407",
+    "backupCreated": true,
+    "serverNamespacePreserved": true,
+    "allSevenWorldIdsPreserved": true
+  },
+  "liveReadOnlyQuote": {
+    "block": "67163272",
+    "receiveCITY": "0.005",
+    "expectedTUSDC": "0.005019",
+    "maximumTUSDC": "0.005045",
+    "balanceTUSDC": "0.01",
+    "transactionCount": 2,
+    "slippageBps": 50
+  },
+  "limitsUnchanged": [
+    "On-chain quote expiry and hook price-history checks",
+    "Maximum spend and fixed swap slippage",
+    "Cumulative wallet gas reservations and investment-policy expiry",
+    "Discord approval and new native confirmation for refreshed terms"
+  ],
+  "limitations": [
+    "No live player financial action was invoked by the repair tools",
+    "Actual owner confirmation and live swap settlement remain to be demonstrated",
+    "Isolated fixtures do not qualify original canonical project phase gates"
+  ]
+}
