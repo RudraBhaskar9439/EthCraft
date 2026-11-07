@@ -7,6 +7,7 @@ const release=await checkpoints.acquireLocalLease('ethcraft-investment-observati
 const runtime=await createBankLaptopRuntime({rootDirectory:fileURLToPath(new URL('../',import.meta.url)),manifestFile:'.local/marketplace/public-deployment.json'})
 try{
   for(let i=0;i<12;i++){
+    await runtime.publishHealth()
     const observation=await runtime.publishReference()
     console.log(JSON.stringify({observation:i+1,pending:observation.pending,transactionHash:observation.proof?.transactionHash||observation.proof?.hash||null}))
     if(i<11)await new Promise(resolve=>setTimeout(resolve,30000))

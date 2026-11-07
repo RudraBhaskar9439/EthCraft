@@ -1,4 +1,4 @@
-import {encodeFunctionData,parseAbi,keccak256,stringToHex,formatUnits} from 'viem'
+import {encodeFunctionData,encodeAbiParameters,parseAbiParameters,parseAbi,keccak256,stringToHex,formatUnits} from 'viem'
 import {tokenAbi} from './v4.mjs'
 
 export const swapAbi=parseAbi(['function swapExactOutput(bytes32 operationId,address tokenIn,address tokenOut,uint128 amountOut,uint128 maxAmountIn,uint48 deadline) returns(uint256)'])

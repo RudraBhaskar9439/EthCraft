@@ -66,6 +66,7 @@ export async function openInventoryShopRuntime({rootDirectory,identityRuntime}={
       if(config.enabled!==true||config.chainId!==1301||!Number.isSafeInteger(config.expiresAt)||Date.now()>=config.expiresAt*1000)fail('INVEST_DELEGATION_EXPIRED')
       const runtime=await getOperatorRuntime()
       if(runtime.manifest.mode!=='marketplace'||runtime.manifest.chainId!==1301||runtime.manifest.deploymentId!==config.deploymentId)fail('INVEST_OBSERVATION_BINDING_CHANGED')
+      await runtime.publishHealth()
       return runtime.publishReference()
     }
   })

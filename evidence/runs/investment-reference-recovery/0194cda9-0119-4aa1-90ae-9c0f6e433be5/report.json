@@ -1,0 +1,65 @@
+{
+  "schema": "ethcraft.investment-reference-recovery.v1",
+  "checkedAt": "2026-11-07T01:18:29.572Z",
+  "chainId": 1301,
+  "issues": [
+    "Publisher test ETH depleted; pool reference stale",
+    "Expired world health report blocked CITY purchases",
+    "Missing ABI encoder imports blocked guarded swap quotes"
+  ],
+  "changes": [
+    "Funded existing publisher with 0.0001 test ETH through original capped durable journal",
+    "Maintain actual world health alongside real price checkpoints in live worker and manual warm-up",
+    "Import ABI encoders for the quoted payer address; cover guarded swap preview"
+  ],
+  "funding": {
+    "status": "confirmed",
+    "testEth": "0.0001",
+    "transactionHash": "0x69ee2a1c95ce278e3080f5891f0bb784aa077bcdb0365e321764f80fdf002641"
+  },
+  "worldHealth": {
+    "status": "confirmed",
+    "healthy": true,
+    "validUntil": 1794014499,
+    "transactionHash": "0xaebd7791427b14062e4f20c1a8c00a0e55b5ea9fbef3243d0a8b6afbd460ce5a"
+  },
+  "keeper": {
+    "status": "running",
+    "error": null,
+    "transactionHash": "0xd1cce33c751aee4eaecc11e81cb8e56642915ae431c7f6bd9c79a517102afb66"
+  },
+  "liveReadOnlyQuote": {
+    "block": "67161829",
+    "blockTimestamp": 1794014257,
+    "referenceReady": true,
+    "referenceAgeSeconds": 303,
+    "receiveCITY": "0.005",
+    "expectedTUSDC": "0.005019",
+    "maximumTUSDC": "0.005045",
+    "balanceTUSDC": "0.01",
+    "slippageBps": 50,
+    "affordable": true
+  },
+  "passed": [
+    "node tests/investments/swaps.mjs",
+    "node tests/investments/v4.mjs",
+    "node tests/investments/service.mjs",
+    "node tests/investments/privy.mjs",
+    "node tests/bank/health-publisher.mjs",
+    "node tests/bank/pool-observations.mjs",
+    "node tests/bank/pool-observation-keeper.mjs",
+    "Changed module syntax checks",
+    "git diff --check"
+  ],
+  "limitations": [
+    "Native GUI fixture was offline on ports 25986/25987: GUI_TIMEOUT_SERVER, zero GUI checks; live game was not restarted",
+    "No player swap signed or submitted; user confirmation remains required",
+    "Same-pool time average is not independent fair value or attack immunity"
+  ],
+  "guardsUnchanged": {
+    "windowSeconds": 300,
+    "maxReferenceAgeSeconds": 600,
+    "slippageBps": 50
+  },
+  "playerTransactions": 0
+}
